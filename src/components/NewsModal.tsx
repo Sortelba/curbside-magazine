@@ -99,37 +99,15 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
                             {/* Content */}
                             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                                 {paragraphs.map((para: string, i: number) => {
-                                    // Basic link detection replacement for Markdown style [text](url)
                                     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-                                    const parts = para.split(linkRegex);
-
-                                    if (parts.length > 1) {
-                                        // This is a naive implementation, good enough for simple scraped links
-                                        // Matches come in groups of 3 (pre-match, link-text, link-url, post-match...)
-                                        // Actually split keeps the separators if grouped, so:
-                                        // "Source: [Name](url)" -> ["Source: ", "Name", "url", ""]
-                                        // Let's just use a dangerouslySetInnerHTML or a simpler approach if we trust the source.
-                                        // For safety, let's just render text. But user wants links.
-                                        // Let's do a simple recursive render or map.
-                                        return (
-                                            <p key={i}>
-                                                {para.split(linkRegex).map((part, idx, arr) => {
-                                                    // If this part matches a URL from the previous split... 
-                                                    // Actually split with capture groups inserts the Captures into the array.
-                                                    // [text, capture1, capture2, text, ...]
-                                                    // We know 1 and 2 are link info.
-                                                    // so we need to iterate carefully.
-                                                    // A simpler way for this snippet:
-                                                    return <span key={idx} dangerouslySetInnerHTML={{
-                                                        __html: para.replace(linkRegex, '<a href="$2" target="_blank" class="text-primary hover:underline font-bold">$1</a>')
-                                                    }} />
-                                                })}
-                                            </p>
-                                        );
-                                    }
-                                    return <p key={i} dangerouslySetInnerHTML={{
-                                        __html: para.replace(linkRegex, '<a href="$2" target="_blank" class="text-primary hover:underline font-bold">$1</a>')
-                                    }} />;
+                                    return (
+                                        <p
+                                            key={i}
+                                            dangerouslySetInnerHTML={{
+                                                __html: para.replace(linkRegex, '<a href="$2" target="_blank" class="text-primary hover:underline font-bold">$1</a>')
+                                            }}
+                                        />
+                                    );
                                 })}
                             </div>
 

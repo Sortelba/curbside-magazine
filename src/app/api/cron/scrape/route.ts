@@ -69,11 +69,11 @@ export async function GET(request: Request) {
                     translations: {
                         de: {
                             title: rewritten.de?.title || article.title,
-                            content: (rewritten.de?.content || article.text.substring(0, 200)) + `\n\nSource: [${article.source}](${article.url})`
+                            content: rewritten.de?.content || article.text.substring(0, 200)
                         },
                         en: {
                             title: rewritten.en?.title || article.title,
-                            content: (rewritten.en?.content || article.text.substring(0, 200)) + `\n\nSource: [${article.source}](${article.url})`
+                            content: rewritten.en?.content || article.text.substring(0, 200)
                         }
                     },
                     // If the scraper found a video, use it. Otherwise use image. Fallback to just text.

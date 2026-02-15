@@ -17,6 +17,8 @@ interface Event {
     flyerUrl?: string;
 }
 
+import eventsData from "@/data/events.json";
+
 export default function EventsSidebar() {
     const { t, locale } = useLanguage();
     const [events, setEvents] = useState<Event[]>([]);
@@ -28,21 +30,34 @@ export default function EventsSidebar() {
     const [currentMonth, setCurrentMonth] = useState(new Date());
 
     useEffect(() => {
-        fetch('/api/events')
-            .then(res => res.json())
-            .then(data => {
-                if (Array.isArray(data)) {
-                    // Sort by date if possible
-                    const sorted = [...data].sort((a, b) => {
-                        if (!a.startDateUtc) return 1;
-                        if (!b.startDateUtc) return -1;
-                        return new Date(a.startDateUtc).getTime() - new Date(b.startDateUtc).getTime();
-                    });
-                    setEvents(sorted);
-                }
-            })
-            .catch(err => console.error("Error fetching events:", err))
-            .finally(() => setLoading(false));
+        // Use imported data directly for better static support
+        const data = eventsData as Event[];
+        if (Array.isArray(data)) {
+            const sorted = [...data].sort((a, b) => {
+                if (!a.startDateUtc) return 1;
+                if (!b.startDateUtc) return -1;
+                return new Date(a.startDateUtc).getTime() - new Date(b.startDateUtc).getTime();
+            });
+            setEvents(sorted);
+            setLoading(false);
+        }
+
+        // Optional: Re-fetch in dev mode for live updates, but don't block
+        if (process.env.NODE_ENV === 'development') {
+            fetch('/api/events')
+                .then(res => res.json())
+                .then(data => {
+                    if (Array.isArray(data)) {
+                        const sorted = [...data].sort((a, b) => {
+                            if (!a.startDateUtc) return 1;
+                            if (!b.startDateUtc) return -1;
+                            return new Date(a.startDateUtc).getTime() - new Date(b.startDateUtc).getTime();
+                        });
+                        setEvents(sorted);
+                    }
+                })
+                .catch(err => console.error("Error fetching live events:", err));
+        }
     }, []);
 
     const nextMonth = () => {
@@ -113,60 +128,85 @@ export default function EventsSidebar() {
         </div>
     );
 
-    const limitedEvents = events.slice(0, 5);
+    const renderMiniCalendar = () => {
+        const year = currentMonth.getFullYear();
+        const month = currentMonth.getMonth();
+        const daysInMonth = getDaysInMonth(year, month);
+        const firstDay = getFirstDayOfMonth(year, month);
+
+        const days = [];
+        // Empty slots
+        for (let i = 0; i < firstDay; i++) {
+            days.push(<div key={`mini-empty-${i}`} className="h-8 w-full" />);
+        }
+
+        // Days
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const hasEvent = events.some(e => e.startDateUtc === dateStr);
+            const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
+
+            days.push(
+                <div
+                    key={`mini-${day}`}
+                    className={cn(
+                        "h-8 w-full flex items-center justify-center text-[10px] font-bold rounded-lg relative transition-all",
+                        isToday ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:bg-muted"
+                    )}
+                >
+                    {day}
+                    {hasEvent && !isToday && (
+                        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary" />
+                    )}
+                </div>
+            );
+        }
+
+        return days;
+    };
+
+    if (loading) return (
+        <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-xl animate-pulse">
+            <div className="h-6 w-32 bg-muted rounded mb-6" />
+            <div className="h-48 bg-muted rounded-xl" />
+        </div>
+    );
 
     return (
-        <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-xl">
-            <h2 className="text-2xl font-black uppercase italic tracking-tighter mb-6 flex items-center gap-2">
-                <Calendar className="text-primary" />
-                {t("events.title")}
-            </h2>
-
-            <div className="space-y-4 mb-6">
-                {limitedEvents.length > 0 ? (
-                    limitedEvents.map((event, index) => (
-                        <motion.div
-                            key={event.id || index}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            onClick={() => setSelectedEvent(event)}
-                            className="group p-4 bg-muted/30 border border-border rounded-2xl hover:border-primary/50 transition-all hover:shadow-md cursor-pointer relative"
-                        >
-                            <h3 className="font-bold text-lg leading-tight mb-2 group-hover:text-primary transition-colors pr-6">
-                                {event.title}
-                            </h3>
-
-                            <div className="space-y-1 text-sm text-muted-foreground">
-                                <div className="flex items-center gap-2">
-                                    <Calendar className="h-3 w-3" />
-                                    <span>{event.date}</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <MapPin className="h-3 w-3" />
-                                    <span>{event.location}</span>
-                                </div>
-                            </div>
-
-                            <div className="absolute top-4 right-4 text-muted-foreground/30 group-hover:text-primary/50 transition-colors">
-                                <Info size={16} />
-                            </div>
-                        </motion.div>
-                    ))
-                ) : (
-                    <p className="text-center py-8 text-muted-foreground italic text-sm">
-                        {t("events.no_events")}
-                    </p>
-                )}
+        <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-xl flex flex-col gap-6">
+            <div className="flex items-center justify-between">
+                <h2 className="text-xl font-black uppercase italic tracking-tighter flex items-center gap-2">
+                    <Calendar className="text-primary w-5 h-5" />
+                    {t("events.title")}
+                </h2>
             </div>
 
-            <button
+            {/* Mini Calendar Widget */}
+            <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setShowCalendar(true)}
-                className="w-full py-4 bg-muted border-2 border-border rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] italic hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all flex items-center justify-center gap-2"
+                className="bg-muted/30 border border-border rounded-2xl p-4 cursor-pointer hover:border-primary/50 transition-all hover:shadow-lg group"
             >
-                <Calendar className="h-4 w-4" />
-                {t("events.show_calendar")}
-            </button>
+                <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-black uppercase italic text-muted-foreground">
+                        {currentMonth.toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-US', { month: 'long', year: 'numeric' })}
+                    </span>
+                    <Info size={12} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+
+                <div className="grid grid-cols-7 gap-1">
+                    {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+                        <div key={i} className="text-[8px] font-black text-muted-foreground/50 text-center mb-1">{d}</div>
+                    ))}
+                    {renderMiniCalendar()}
+                </div>
+
+                <div className="mt-4 flex items-center justify-center gap-2 text-[8px] font-black uppercase tracking-widest text-primary animate-pulse">
+                    <span>{t("events.show_calendar")}</span>
+                    <ExternalLink size={8} />
+                </div>
+            </motion.div>
 
             {/* Event Detail Modal */}
             <AnimatePresence>

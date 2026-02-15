@@ -78,7 +78,16 @@ async function scrapeDetail(url: string, selector: string): Promise<{ text: stri
             image = $('meta[property="og:image"]').attr('content');
         }
         if (!image) {
-            image = $('img').first().attr('src');
+            // Filter out tracking pixels or icons
+            image = $('img').filter((i, el) => {
+                const src = $(el).attr('src') || '';
+                return src.startsWith('http') && (src.includes('.jpg') || src.includes('.png') || src.includes('.webp') || src.includes('.jpeg'));
+            }).first().attr('src');
+        }
+
+        // Final validation: ensure it's a full URL and not a generic page
+        if (image && !image.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i)) {
+            image = undefined;
         }
 
         return { text, video, image };

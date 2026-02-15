@@ -59,20 +59,53 @@ export default function PostCard({ type, title, content, date, description, tags
 
     // Function to render main content media for the grid card
     const renderMedia = () => {
+        // Fallback placeholder image for news if no image is found
+        const fallbackNewsImage = "https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=1000&auto=format&fit=crop";
+
         if (type === 'image' || (type === 'video' && onClick)) {
             // For video in grid, if it's a YT video, we can try to get thumb.
-            if (type === 'video' && (content.includes('youtube') || content.includes('youtu.be'))) {
-                const videoId = content.match(/v=([^&]+)/)?.[1] || content.match(/shorts\/([^?]+)/)?.[1] || content.split('/').pop();
-                const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
-                if (thumb) {
+            if (content.includes('youtube') || content.includes('youtu.be')) {
+                const videoId = content.match(/v=([^&]+)/)?.[1] || content.match(/shorts\/([^?]+)/)?.[1] || content.split('/').pop()?.split('?')[0];
+
+                if (videoId) {
+                    // Start with high res, but usually hqdefault is safest fallback
+                    const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                     // eslint-disable-next-line @next/next/no-img-element
-                    return <img src={thumb} alt={displayTitle} className="w-full h-48 object-cover transition-transform group-hover:scale-105" loading="lazy" />
+                    return (
+                        <div className="w-full h-48 relative overflow-hidden">
+                            <img
+                                src={thumb}
+                                alt={displayTitle}
+                                className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                                loading="lazy"
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = fallbackNewsImage;
+                                }}
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                                <Play className="w-12 h-12 text-white/80 drop-shadow-lg" />
+                            </div>
+                        </div>
+                    );
                 }
             }
+
             // Fallback for image
             if (type === 'image') {
+                // If content doesn't look like an image URL, use fallback
+                const isLikelyUrlOnly = !content.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i);
+                const imgSrc = isLikelyUrlOnly ? fallbackNewsImage : content;
+
                 // eslint-disable-next-line @next/next/no-img-element
-                return <img src={content} alt={displayTitle} className="w-full h-48 object-cover transition-transform group-hover:scale-105" loading="lazy" />
+                return <img
+                    src={imgSrc}
+                    alt={displayTitle}
+                    className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                    loading="lazy"
+                    onError={(e) => {
+                        (e.target as HTMLImageElement).src = fallbackNewsImage;
+                    }}
+                />
             }
         }
         return null;
