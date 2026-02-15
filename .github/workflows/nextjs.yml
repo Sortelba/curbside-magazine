@@ -81,11 +81,10 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          # Hide api folder from Next.js build to avoid static export errors
-          if [ -d "src/app/api" ]; then mv src/app/api src/app/_api; fi
+          # Delete api folder from Next.js build to avoid static export errors
+          # The Admin API only runs locally on your Mac, not on GitHub
+          rm -rf src/app/api
           ${{ steps.detect-package-manager.outputs.runner }} next build
-          # Restore api folder
-          if [ -d "src/app/_api" ]; then mv src/app/_api src/app/api; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
