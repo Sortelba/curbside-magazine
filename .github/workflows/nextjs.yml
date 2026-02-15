@@ -81,9 +81,17 @@ jobs:
 
       - name: Build with Next.js
         run: |
+          # Clean any existing build artifacts
+          rm -rf .next out
+          
           # Delete api folder from Next.js build to avoid static export errors
-          # The Admin API only runs locally on your Mac, not on GitHub
-          rm -rf src/app/api
+          # This ensures Next.js won't find any dynamic API routes during build
+          if [ -d "src/app/api" ]; then
+            echo "Removing API routes for static build..."
+            rm -rf src/app/api
+          fi
+          
+          # Run build (output: export is handled via next.config.ts GITHUB_ACTIONS check)
           ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
