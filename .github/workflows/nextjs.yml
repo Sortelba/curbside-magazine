@@ -70,20 +70,8 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          # COMPLETELY remove any trace of the api folder before build
-          # We move it to /tmp to be 100% sure Next.js doesn't find it
-          if [ -d "src/app/api" ]; then
-            echo "Moving API out of src/app..."
-            mv src/app/api /tmp/api_backup
-          fi
-          
-          # Clean build cache
-          rm -rf .next out
-          
-          # Diagnostic: Ensure it's gone
-          echo "Checking src/app for any api leftovers:"
-          find src/app -name "*api*"
-          
+          # Remove API routes to allow static export (Dashboard only runs locally)
+          rm -rf src/app/api
           ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact

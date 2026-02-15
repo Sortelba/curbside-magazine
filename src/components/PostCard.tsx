@@ -1,3 +1,5 @@
+"use client";
+
 import { ExternalLink, Play, Image as ImageIcon, FileText, Instagram } from "lucide-react";
 import { cn, getYoutubeEmbedUrl } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";

@@ -6,6 +6,26 @@ import { ArrowLeft } from "lucide-react";
 
 // export const dynamic = 'force-dynamic';
 
+export async function generateStaticParams() {
+    const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');
+    if (!fs.existsSync(filePath)) return [];
+
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const allPosts = JSON.parse(fileContents);
+
+    const slugs = new Set<string>();
+    allPosts.forEach((post: any) => {
+        if (!post.date) return;
+        const d = new Date(post.date);
+        if (isNaN(d.getTime())) return;
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        slugs.add(`${year}-${month}`);
+    });
+
+    return Array.from(slugs).map(slug => ({ slug }));
+}
+
 async function getPostsForMonth(slug: string) {
     const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');
     if (!fs.existsSync(filePath)) return [];
