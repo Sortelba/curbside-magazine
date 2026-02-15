@@ -81,9 +81,8 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          # COMPLETELY move api folder out of src/app so Next.js doesn't see it
-          # This is necessary because GitHub Pages is a static host and can't use these APIs
-          if [ -d "src/app/api" ]; then mv src/app/api ./api_backup; fi
+          # Aggressively remove api folder to ensure static export succeeds
+          rm -rf src/app/api
           ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
