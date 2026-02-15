@@ -175,19 +175,28 @@ function AdminDashboardContent() {
                 body: JSON.stringify({ key })
             });
 
-            const data = await res.json();
+            let data;
+            const contentType = res.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                data = await res.json();
+            } else {
+                const text = await res.text();
+                throw new Error(`Non-JSON response (${res.status}): ${text.substring(0, 100)}`);
+            }
 
             if (res.ok) {
                 alert(data.message || "Published successfully!");
                 setStatus("Last publish: " + new Date().toLocaleTimeString());
             } else {
-                alert("Publish failed: " + (data.details || data.error));
+                const errorDetail = data.details || data.error || "Unknown error";
+                const stderr = data.stderr ? `\n\nDetails: ${data.stderr}` : "";
+                alert("Publish failed (HTTP " + res.status + "): " + errorDetail + stderr);
                 setStatus("Publish failed.");
             }
-        } catch (error) {
+        } catch (error: any) {
             console.error("Publish error:", error);
-            alert("An error occurred during publishing.");
-            setStatus("Publish error.");
+            alert("Error during publishing: " + error.message);
+            setStatus("Publish error: " + error.message);
         } finally {
             setIsPublishing(false);
         }

@@ -7,9 +7,11 @@ const execPromise = util.promisify(exec);
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
+    console.log('--- PUBLISH API HIT ---');
     try {
         const body = await request.json();
         const { key } = body;
+        console.log('Key received:', key ? 'YES' : 'NO');
 
         // Security check
         if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
@@ -48,7 +50,9 @@ export async function POST(request: Request) {
         console.error('Publish failed:', error);
         return NextResponse.json({
             error: 'Publish failed.',
-            details: error.message || String(error)
+            details: error.message || String(error),
+            stdout: error.stdout,
+            stderr: error.stderr
         }, { status: 500 });
     }
 }
