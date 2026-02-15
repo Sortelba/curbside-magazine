@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import HomeContent from "@/components/HomeContent";
 
-// Force dynamic rendering to ensure we always get the latest posts from the JSON file
-export const dynamic = 'force-dynamic';
+// Static rendering is used for GitHub Pages
+// export const dynamic = 'force-dynamic';
 
 async function getPosts() {
   const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');

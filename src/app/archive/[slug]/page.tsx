@@ -4,7 +4,7 @@ import path from 'path';
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 async function getPostsForMonth(slug: string) {
     const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');

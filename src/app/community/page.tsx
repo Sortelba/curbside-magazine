@@ -3,7 +3,7 @@ import path from 'path';
 import CommunityContent from '@/components/CommunityContent';
 
 // Force dynamic rendering
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 async function getCommunityData() {
     const filePath = path.join(process.cwd(), 'src', 'data', 'community.json');

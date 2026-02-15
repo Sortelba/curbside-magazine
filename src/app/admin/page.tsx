@@ -23,6 +23,7 @@ function AdminDashboardContent() {
     const [activeTab, setActiveTab] = useState<string>("news");
     const [skatemapSub, setSkatemapSub] = useState<"pending" | "remove">("pending");
     const [pendingCount, setPendingCount] = useState(0);
+    const [isPublishing, setIsPublishing] = useState(false);
 
     // Settings State
     const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [] });
@@ -161,6 +162,37 @@ function AdminDashboardContent() {
         setDrafts(newDrafts);
     };
 
+    const handlePublish = async () => {
+        if (!confirm("Are you sure you want to push all changes to the live website on GitHub?")) return;
+
+        setIsPublishing(true);
+        setStatus("Publishing to GitHub... Please wait.");
+
+        try {
+            const res = await fetch('/api/publish', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ key })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                alert(data.message || "Published successfully!");
+                setStatus("Last publish: " + new Date().toLocaleTimeString());
+            } else {
+                alert("Publish failed: " + (data.details || data.error));
+                setStatus("Publish failed.");
+            }
+        } catch (error) {
+            console.error("Publish error:", error);
+            alert("An error occurred during publishing.");
+            setStatus("Publish error.");
+        } finally {
+            setIsPublishing(false);
+        }
+    };
+
     const tabs = [
         { id: "news", label: "News & Scraper", icon: Newspaper },
         { id: "custom", label: "Neuer Post", icon: PlusCircle },
@@ -188,6 +220,20 @@ function AdminDashboardContent() {
                             <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{key.substring(0, 4)}**** active</p>
                         </div>
                     </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                    <button
+                        onClick={handlePublish}
+                        disabled={isPublishing}
+                        className={cn(
+                            "flex items-center gap-2 px-6 py-3 bg-black text-white font-black uppercase italic text-xs rounded-2xl transition-all shadow-xl hover:scale-105 active:scale-95 disabled:opacity-50",
+                            isPublishing ? "animate-pulse" : "hover:bg-primary"
+                        )}
+                    >
+                        {isPublishing ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}
+                        {isPublishing ? "Publishing..." : "Publish Website"}
+                    </button>
                 </div>
 
                 <nav className="flex flex-wrap gap-2">

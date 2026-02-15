@@ -80,7 +80,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: |
+          # Hide api folder from Next.js build to avoid static export errors
+          if [ -d "src/app/api" ]; then mv src/app/api src/app/_api; fi
+          ${{ steps.detect-package-manager.outputs.runner }} next build
+          # Restore api folder
+          if [ -d "src/app/_api" ]; then mv src/app/_api src/app/api; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
