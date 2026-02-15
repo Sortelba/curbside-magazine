@@ -1,0 +1,431 @@
+{
+  "sections": [
+    {
+      "id": "sec_shops",
+      "title": "Support Skate Shops",
+      "items": [
+        {
+          "id": "shop_bw_1",
+          "name": "Titus Karlsruhe",
+          "url": "https://www.titus.de/shops/karlsruhe/",
+          "description": "Baden-Württemberg",
+          "address": "Ritterstraße 5, 76133 Karlsruhe",
+          "hours": "Mo-Sa: 11:00–19:00",
+          "state": "Baden-Württemberg",
+          "image": ""
+        },
+        {
+          "id": "shop_by_2",
+          "name": "Titus Bamberg",
+          "url": "https://www.titus.de/shops/bamberg/",
+          "description": "Bayern",
+          "address": "Luitpoldstraße 20, 96052 Bamberg",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Bayern",
+          "image": ""
+        },
+        {
+          "id": "shop_be_2",
+          "name": "Titus Berlin",
+          "url": "https://www.titus.de/shops/berlin/",
+          "description": "Berlin",
+          "address": "Karl-Liebknecht-Straße 9, 10178 Berlin",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Berlin",
+          "image": ""
+        },
+        {
+          "id": "shop_be_3",
+          "name": "Titus Berlin Zoopreme",
+          "url": "https://www.titus.de/shops/berlin-zoopreme/",
+          "description": "Berlin",
+          "address": "Meinekestraße 2, 10719 Berlin",
+          "hours": "Mo-Sa: 10:00–20:00",
+          "state": "Berlin",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_3",
+          "name": "Titus Bonn",
+          "url": "https://www.titus.de/shops/bonn/",
+          "description": "NRW",
+          "address": "Acherstraße 26-28, 53111 Bonn",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_hb_2",
+          "name": "Titus Bremen",
+          "url": "https://www.titus.de/shops/bremen/",
+          "description": "Bremen",
+          "address": "Ostertorsteinweg 1, 28203 Bremen",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Bremen",
+          "image": ""
+        },
+        {
+          "id": "shop_sn_2",
+          "name": "Titus Dresden",
+          "url": "https://www.titus.de/shops/dresden/",
+          "description": "Sachsen",
+          "address": "Ringstraße 5, 01067 Dresden",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Sachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_4",
+          "name": "Titus Düsseldorf",
+          "url": "https://www.titus.de/shops/duesseldorf/",
+          "description": "NRW",
+          "address": "Benrather Str. 7B, 40213 Düsseldorf",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:30–19:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_ni_2",
+          "name": "Titus Hannover",
+          "url": "https://www.titus.de/shops/hannover/",
+          "description": "Niedersachsen",
+          "address": "Goseriede 13a, 30159 Hannover",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Niedersachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_he_2",
+          "name": "Titus Kassel",
+          "url": "https://www.titus.de/shops/kassel/",
+          "description": "Hessen",
+          "address": "Treppenstraße 8, 34117 Kassel",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Hessen",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_5",
+          "name": "Titus Köln",
+          "url": "https://www.titus.de/shops/koeln/",
+          "description": "NRW",
+          "address": "Cäcilienstraße 30, 50667 Köln",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_sn_3",
+          "name": "Titus Leipzig",
+          "url": "https://www.titus.de/shops/leipzig/",
+          "description": "Sachsen",
+          "address": "Hainstraße 10, 04109 Leipzig",
+          "hours": "Mo-Fr: 10:00–20:00, Sa: 10:00–19:00",
+          "state": "Sachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_6",
+          "name": "Titus Mönchengladbach",
+          "url": "https://www.titus.de/shops/moenchengladbach/",
+          "description": "NRW",
+          "address": "Hindenburgstraße 60, 41061 Mönchengladbach",
+          "hours": "Mo-Sa: 10:00–19:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_by_3",
+          "name": "Titus München",
+          "url": "https://www.titus.de/shops/muenchen/",
+          "description": "Bayern",
+          "address": "Färbergraben 20, 80331 München",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
+          "state": "Bayern",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_7",
+          "name": "Titus Münster",
+          "url": "https://www.titus.de/shops/muenster/",
+          "description": "NRW",
+          "address": "Königsstraße 32-33, 48143 Münster",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_8",
+          "name": "Titus Münster Outlet",
+          "url": "https://www.titus.de/shops/muenster-outlet/",
+          "description": "NRW",
+          "address": "Hammer Str. 453, 48153 Münster",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_ni_3",
+          "name": "Titus Osnabrück",
+          "url": "https://www.titus.de/shops/osnabrueck/",
+          "description": "Niedersachsen",
+          "address": "Große Hamkenstraße 32, 49074 Osnabrück",
+          "hours": "Mo-Sa: 10:00–18:00",
+          "state": "Niedersachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_9",
+          "name": "Titus Paderborn Pop-Up",
+          "url": "https://www.titus.de/shops/paderborn-pop-up/",
+          "description": "NRW",
+          "address": "Westernstraße 34, 33098 Paderborn",
+          "hours": "Mo-Sa: 10:00–19:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_st_1",
+          "name": "Titus Magdeburg",
+          "url": "https://www.titus.de/shops/magdeburg/",
+          "description": "Sachsen-Anhalt",
+          "address": "Breiter Weg 175, 39104 Magdeburg",
+          "hours": "Mo-Sa: 10:00–19:00",
+          "state": "Sachsen-Anhalt",
+          "image": ""
+        },
+        {
+          "id": "shop_by_1",
+          "name": "SHRN (SooHotRightNow)",
+          "url": "https://soohotrightnow.com/",
+          "description": "Bayern",
+          "address": "Baaderstr. 66, 80469 München",
+          "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–18:00",
+          "state": "Bayern",
+          "image": ""
+        },
+        {
+          "id": "shop_be_1",
+          "name": "Civilist",
+          "url": "https://civilistberlin.com/",
+          "description": "Berlin",
+          "address": "Brunnenstraße 13, 10119 Berlin",
+          "hours": "Mo-Sa: 12:00–19:00",
+          "state": "Berlin",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_2",
+          "name": "Black Heaven",
+          "url": "https://blackheavenshop.com/",
+          "description": "NRW",
+          "address": "Wolbecker Str. 38, 48155 Münster",
+          "hours": "Mo-Fr: 11:00–18:00, Sa: 11:00–15:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_bw_2",
+          "name": "Lifeboy Skateshop",
+          "url": "https://lifeboy-skateshop.de/",
+          "description": "Baden-Württemberg",
+          "address": "Flöttlinstorstraße 9-11, 78628 Rottweil",
+          "hours": "Mo-Fr: 08:00–17:00, Sa: 10:00–14:00",
+          "state": "Baden-Württemberg",
+          "image": ""
+        },
+        {
+          "id": "shop_bw_3",
+          "name": "Rollbrett Mission",
+          "url": "https://www.rollbrett-mission.de/",
+          "description": "Baden-Württemberg",
+          "address": "Am Gemeindegarten, 79359 Riegel",
+          "hours": "Mo-Fr: 14:00–17:00, Sa: 10:00–14:00",
+          "state": "Baden-Württemberg",
+          "image": ""
+        },
+        {
+          "id": "shop_hb_1",
+          "name": "Skateshop Bremen",
+          "url": "https://skateshop-bremen.de/",
+          "description": "Bremen",
+          "address": "Waller Heerstr. 293a, 28219 Bremen",
+          "hours": "variierend (nach Vereinbarung)",
+          "state": "Bremen",
+          "image": ""
+        },
+        {
+          "id": "shop_hh_1",
+          "name": "Mantis Skateshop",
+          "url": "https://mantis-skateshop.de/",
+          "description": "Hamburg",
+          "address": "Große Theaterstraße 42, 20354 Hamburg",
+          "hours": "Mo-Sa: 11:00–19:00",
+          "state": "Hamburg",
+          "image": ""
+        },
+        {
+          "id": "shop_he_1",
+          "name": "Bonkers",
+          "url": "https://bonkers-shop.com/de",
+          "description": "Hessen",
+          "address": "Sandgasse 4, 60311 Frankfurt am Main",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
+          "state": "Hessen",
+          "image": ""
+        },
+        {
+          "id": "shop_mv_1",
+          "name": "Supreme Surf (Skate Dept.)",
+          "url": "https://supremesurf.de/",
+          "description": "Meckl.-Vorpommern",
+          "address": "Am Strande 2e, 18055 Rostock",
+          "hours": "Mo-Sa: 10:00–19:00",
+          "state": "Meckl.-Vorpommern",
+          "image": ""
+        },
+        {
+          "id": "shop_ni_1",
+          "name": "Feed My Soul",
+          "url": "https://feedmysoul.de/",
+          "description": "Niedersachsen",
+          "address": "Obernstraße 30, 33602 Bielefeld*",
+          "hours": "Mo-Sa: 11:00–19:00",
+          "state": "Niedersachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_nw_1",
+          "name": "Pivot Skateshop",
+          "url": "https://pivotskateshop.de/",
+          "description": "NRW",
+          "address": "Brückstraße 20-22, 50667 Köln",
+          "hours": "Mo-Sa: 11:00–19:00",
+          "state": "NRW",
+          "image": ""
+        },
+        {
+          "id": "shop_rp_1",
+          "name": "Hungry Hills Boardshop",
+          "url": "https://hungryhills.de/",
+          "description": "Rheinland-Pfalz",
+          "address": "Casinostraße 41, 56068 Koblenz",
+          "hours": "Do-Fr: 13-18, Sa: 12-17",
+          "state": "Rheinland-Pfalz",
+          "image": ""
+        },
+        {
+          "id": "shop_sl_1",
+          "name": "iMAGE Skateshop",
+          "url": "https://image-skateshop.de/",
+          "description": "Saarland",
+          "address": "Poststraße 60, 66663 Merzig",
+          "hours": "Mo-Fr: 10:00–18:30, Sa: 10:00–14:00",
+          "state": "Saarland",
+          "image": ""
+        },
+        {
+          "id": "shop_sn_1",
+          "name": "Feed My Soul (Leipzig)",
+          "url": "https://feedmysoul.de/",
+          "description": "Sachsen",
+          "address": "Karl-Liebknecht-Str. 12, 04107 Leipzig",
+          "hours": "Mo-Sa: 12:00–19:00",
+          "state": "Sachsen",
+          "image": ""
+        },
+        {
+          "id": "shop_sh_1",
+          "name": "Kailua Skateshop",
+          "url": "https://kailua-skateshop.de/",
+          "description": "Schleswig-Holstein",
+          "address": "Fleischhauer Straße 31, 23552 Lübeck",
+          "hours": "Mo-Fr: 10:00–18:00, Sa: 10:00–16:00",
+          "state": "Schleswig-Holstein",
+          "image": ""
+        },
+        {
+          "id": "shop_th_1",
+          "name": "Orange Jungle",
+          "url": "https://orangejungle.de/",
+          "description": "Thüringen",
+          "address": "Peterstraße 3, 99084 Erfurt",
+          "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
+          "state": "Thüringen",
+          "image": ""
+        },
+        {
+          "id": "shop_rp_2",
+          "name": "Pippos Vintage & Skateshop",
+          "url": "https://www.pippos-shop.de/",
+          "description": "Rheinland-Pfalz",
+          "address": "Korngasse 4, 67346 Speyer",
+          "hours": "Di-Sa: 13:00–18:00",
+          "state": "Rheinland-Pfalz",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "sec_projects",
+      "title": "Projects to Support",
+      "items": [
+        {
+          "id": "proj_1",
+          "name": "Skateistan",
+          "url": "https://skateistan.org/",
+          "description": "Empowering children through skateboarding and education.",
+          "image": ""
+        },
+        {
+          "id": "proj_2",
+          "name": "DIY Spot Project",
+          "url": "#",
+          "description": "Building our own spots.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "youtubeskateboarding",
+      "title": "YouTube Skateboarding",
+      "items": [
+        {
+          "id": "yt_1",
+          "name": "Freeling Kim",
+          "url": "https://www.youtube.com/@FreelingSkateboard",
+          "description": "Skateboard sessions and style.",
+          "image": "https://yt3.googleusercontent.com/WUZg8zrsPYJOn0IjaG0dUEPH94a1L371xQITcXnRUHL70MJyCMCPE2ElL1cQx22mepeNlvpS_zg=s240-c-k-c0x00ffffff-no-rj"
+        },
+        {
+          "id": "yt_2",
+          "name": "De Brecher",
+          "url": "https://www.youtube.com/@de_brecher",
+          "description": "Skateboarding passion from Germany.",
+          "image": "https://yt3.googleusercontent.com/xb2CkkIujLSvhpG9RGZaDHZ8_Pd1ynaaQo-aad1QVnyJrUVkkRLS-xwxTYi9F_FsDvuoelZc=s800-c-k-c0x00ffffff-no-rj"
+        },
+        {
+          "id": "yt_3",
+          "name": "TomCat Skateboards",
+          "url": "https://www.youtube.com/@TomCatSkateboarding",
+          "description": "Tutorials, reviews and travel.",
+          "image": "https://yt3.googleusercontent.com/j-kaUruD1zzaqcIkM0wMvKOZQLgnBAfA0PO-qNSlfPsiaSrIVPSfc8g_WALAe5AiyJCrMogfwmQ=s240-c-k-c0x00ffffff-no-rj"
+        },
+        {
+          "id": "yt_4",
+          "name": "Jason SkateHam",
+          "url": "https://www.youtube.com/@Jasonskateham",
+          "description": "Skate / Love / Life.",
+          "image": "https://yt3.googleusercontent.com/GYxj8-PbKcvJ2dNX2Ief7IF8K-j7eyvI2XmmNNVr2H7BxcV8EsRDUeJBZr_fY7-FiFELpum3kqA=s800-c-k-c0x00ffffff-no-rj"
+        },
+        {
+          "id": "yt_5",
+          "name": "RedLuk",
+          "url": "https://www.youtube.com/@RedLuk",
+          "description": "Urban skating and sessions.",
+          "image": "https://yt3.googleusercontent.com/r3XMzM1lcL0GjT-h_k8bLd2xwH7KmH3xBng3HyJq22HzniygG_DbMQnVBNlrediAhfdfhxsH=s240-c-k-c0x00ffffff-no-rj"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+    "de": {
+        "nav": {
+            "news": "News",
+            "map": "Skatemap",
+            "community": "Community",
+            "learn": "Lernen",
+            "about": "About",
+            "learn_basics": "Grundlagen",
+            "learn_coach": "Skateboard Coach",
+            "learn_randomizer": "Trick Randomizer",
+            "learn_channels": "Lern Kanäle",
+            "coach_search_placeholder": "Coach in deiner Nähe suchen...",
+            "randomizer_generate": "Trick vorschlagen",
+            "difficulty_beginner": "Anfänger",
+            "difficulty_intermediate": "Fortgeschritten",
+            "difficulty_pro": "Profi"
+        },
+        "about": {
+            "title": "About",
+            "p1": "Skateboarding war für mich schon immer mehr als nur ein Hobby. Es ist Ausdruck, Freiheit, Kreativität – und vor allem Community. Genau deshalb habe ich diese Homepage ins Leben gerufen.",
+            "p2": "In den 2000ern hatte Skateboarding einen ganz besonderen Stellenwert. Man kannte die Spots, die Skater, die Shops. Man hat sich gegenseitig gepusht, inspiriert und unterstützt. Heute ist vieles schnelllebiger geworden – Trends kommen und gehen, Informationen sind verstreut, die Szene wirkt kleiner und weniger verbunden.",
+            "p3": "Mit dieser Plattform möchte ich genau das ändern.",
+            "p4": "Hier findest du aktuelle News aus der Skate-Welt, Infos zu Shops in ganz Deutschland und eine Lernsektion für alle, die mit dem Skaten anfangen oder sich weiterentwickeln wollen. Egal ob durch Videos oder mit einem Coach, den man buchen kann – jeder soll die Möglichkeit bekommen, Teil dieser Kultur zu werden und sich sicher weiterzuentwickeln.",
+            "p5": "Mir geht es dabei nicht um Profit. Es geht um Leidenschaft. Um den Zusammenhalt einer Community, die ohnehin nicht riesig ist. Um Vernetzung statt Konkurrenz. Um Respekt vor der Kultur.",
+            "p6": "Ich möchte einen Ort schaffen, an dem sich Skater informieren, austauschen und gegenseitig inspirieren können. Einen digitalen Spot – wie früher die Treffpunkte am Skatepark – nur eben online.",
+            "p7": "Wenn du Skateboarding fühlst, dann bist du hier richtig."
+        },
+        "hero": {
+            "title": "News",
+            "description": "Tägliche Updates rund um Skateboarding."
+        },
+        "footer": {
+            "follow": "Folge uns",
+            "learn": "Skaten lernen mit Curbside",
+            "archive": "Archiv",
+            "rights": "Alle Rechte vorbehalten."
+        },
+        "community": {
+            "shops": "Support Skate Shops",
+            "projects": "Unterstützenswerte Projekte",
+            "youtube": "YouTube Skateboarding",
+            "find_shop": "Finde deinen Shop",
+            "search_placeholder": "Suche nach PLZ oder Stadt...",
+            "all_states": "Alle Bundesländer",
+            "opening_hours": "Öffnungszeiten",
+            "address": "Anschrift",
+            "show_more": "Alle Shops anzeigen",
+            "show_less": "Weniger anzeigen"
+        },
+        "buttons": {
+            "load_more": "Mehr laden",
+            "publish": "Veröffentlichen",
+            "save": "Speichern",
+            "delete": "Löschen"
+        },
+        "events": {
+            "title": "Anstehende Events",
+            "location": "Ort",
+            "no_events": "Keine anstehenden Events.",
+            "show_calendar": "Kalender anzeigen",
+            "close_calendar": "Kalender schließen",
+            "prev_month": "Vorheriger Monat",
+            "next_month": "Nächster Monat"
+        }
+    },
+    "en": {
+        "nav": {
+            "news": "News",
+            "map": "Skatemap",
+            "community": "Community",
+            "learn": "Learn",
+            "about": "About",
+            "learn_basics": "Basics",
+            "learn_coach": "Skateboard Coach",
+            "learn_randomizer": "Trick Randomizer",
+            "learn_channels": "Learn Channels",
+            "coach_search_placeholder": "Search for coaches nearby...",
+            "randomizer_generate": "Suggest Trick",
+            "difficulty_beginner": "Beginner",
+            "difficulty_intermediate": "Intermediate",
+            "difficulty_pro": "Pro"
+        },
+        "about": {
+            "title": "About",
+            "p1": "Skateboarding has always been more than just a hobby for me. It is expression, freedom, creativity – and above all, community. That is exactly why I brought this homepage to life.",
+            "p2": "In the 2000s, skateboarding had a very special significance. People knew the spots, the skaters, the shops. They pushed, inspired, and supported each other. Today, everything has become much faster-paced – trends come and go, information is scattered, the scene seems smaller and less connected.",
+            "p3": "With this platform, I want to change exactly that.",
+            "p4": "Here you will find current news from the skate world, information about shops across Germany, and a learning section for everyone who wants to start skating or further develop their skills. Whether through videos or with a coach who can be booked – everyone should get the opportunity to become part of this culture and grow safely.",
+            "p5": "For me, it's not about profit. It's about passion. About the cohesion of a community that isn't huge anyway. About networking instead of competition. About respect for the culture.",
+            "p6": "I want to create a place where skaters can inform themselves, exchange ideas, and inspire each other. A digital spot – just like the meeting points at the skatepark used to be – but online.",
+            "p7": "If you feel skateboarding, then you are in the right place."
+        },
+        "hero": {
+            "title": "News",
+            "description": "Daily updates, clips, and thoughts from the underground."
+        },
+        "footer": {
+            "follow": "Follow Us",
+            "learn": "Learn to skate with Curbside",
+            "archive": "Archive",
+            "rights": "All rights reserved."
+        },
+        "community": {
+            "shops": "Support Skate Shops",
+            "projects": "Projects to Support",
+            "youtube": "YouTube Skateboarding",
+            "find_shop": "Find your Shop",
+            "search_placeholder": "Search by PLZ or City...",
+            "all_states": "All States",
+            "opening_hours": "Opening Hours",
+            "address": "Address",
+            "show_more": "Show all shops",
+            "show_less": "Show less"
+        },
+        "buttons": {
+            "load_more": "Load More",
+            "publish": "Publish",
+            "save": "Save",
+            "delete": "Delete"
+        },
+        "events": {
+            "title": "Upcoming Events",
+            "location": "Location",
+            "no_events": "No upcoming events."
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+  "basics": [
+    {
+      "id": "basic_1",
+      "title": "The Ollie",
+      "description": "The foundation of street skating. Pop, slide, level out.",
+      "videoUrl": "https://www.youtube.com/embed/j_kaUruD1zz"
+    },
+    {
+      "id": "basic_2",
+      "title": "Pushing",
+      "description": "Get comfortable on your board. Learn to push with your back foot.",
+      "videoUrl": "https://www.youtube.com/embed/pushing_placeholder"
+    }
+  ],
+  "coaches": [
+    {
+      "id": "coach_1",
+      "name": "Skate Coach Max",
+      "location": "Berlin",
+      "state": "Berlin",
+      "contact": "max@skatecoach.de",
+      "description": "Expert in transition and street basics."
+    }
+  ],
+  "randomizer": {
+    "beginner": [
+      "Ollie",
+      "Shove-it",
+      "Frontside 180",
+      "Backside 180",
+      "Manual",
+      "BS Bigspin"
+    ],
+    "intermediate": [
+      "Kickflip",
+      "Heelflip",
+      "50-50 Grind",
+      "Boardslide",
+      "Pop Shove-it",
+      "BS FLIP",
+      "Varial Kickflip"
+    ],
+    "pro": [
+      "Tre Flip",
+      "Fakie Bigspin Kickflip",
+      "Hardflip ",
+      "Crooked Grind",
+      "Double Kickflip",
+      "5-0 BS Shove-it out",
+      "KFBSTS ;)",
+      "K Grind Flip out",
+      "New Trick"
+    ]
+  },
+  "channels": [
+    {
+      "id": "chan_1",
+      "name": "VLSkate",
+      "description": "Best trick tips on YouTube.",
+      "url": "https://www.youtube.com/@vlskate"
+    }
+  ]
+}

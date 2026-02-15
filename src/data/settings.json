@@ -1,0 +1,123 @@
+{
+  "youtubeChannels": [
+    {
+      "name": "Thrasher Magazine",
+      "id": "UCqhnX4jA0A5paBd1bDD-EtA"
+    },
+    {
+      "name": "Berrics",
+      "id": "UCkvhF-yZc4d6o_VjG7w6xAw"
+    },
+    {
+      "name": "SLS",
+      "id": "UC9C3Vz_H1e4Z8l7c3q5k15g"
+    },
+    {
+      "name": "Jason Skateham",
+      "id": "UCLx63CHXwbKl4fRyJX-wWEg"
+    },
+    {
+      "name": "Skate Paparazzi",
+      "id": "UC0NqEb6rU6GleGI_nr-dMEg"
+    },
+    {
+      "name": "Skate IQ",
+      "id": "UC-Pk-TTaSrDOjkPKQ7C8HXQ"
+    },
+    {
+      "name": "Koloss Skateboards",
+      "id": "UClWjlJ6lHfLKdT-M1CwrbBg"
+    },
+    {
+      "name": "esskateboarding",
+      "id": "UCt16NSYjauKclK67LCXvQyA"
+    },
+    {
+      "name": "X Games",
+      "id": "UCxFt75OIIvoN4AaL7lJxtTg"
+    },
+    {
+      "name": "Dan Corrigan",
+      "id": "UCLrCJv26KngfkFetglZTqsg"
+    },
+    {
+      "name": "Santa Cruz Skateboarding",
+      "id": "UCeYD-UW581AkBD_uWGaMpUA"
+    },
+    {
+      "name": "latte_alter",
+      "id": "UC_o4AuYZP4fZgyAahJSVWHw"
+    },
+    {
+      "name": "De Brecher",
+      "id": "UC-HRRlV4E2P9aOkE1HRyKwg"
+    },
+    {
+      "name": "Habit TV",
+      "id": "UC8fwiAWvNE3L9E1kEyvZb3Q"
+    },
+    {
+      "name": "Webz",
+      "id": "UCke7CUOPnzp1dYwI0keZYmQ"
+    },
+    {
+      "name": "RedBull Skateboarding",
+      "id": "UC_0R4YgI6a_42lXk0CRo1EA"
+    },
+    {
+      "name": "TomCat Skateboards",
+      "id": "UC9lw2YpAq_rjE3Hvy9w-6BA"
+    },
+    {
+      "name": "RedLuk",
+      "id": "UCkO_wLKmQWbQ1mtLze3TprA"
+    },
+    {
+      "name": "Freeling Kim",
+      "id": "UCt8TjjgfwVaJcIUQNxO-oAw"
+    }
+  ],
+  "newsSources": [
+    {
+      "name": "Boardstation",
+      "url": "https://www.boardstation.de/feed/",
+      "selector": "item",
+      "type": "rss"
+    },
+    {
+      "name": "Shredder News",
+      "url": "https://shredder.news/feed/",
+      "selector": "item",
+      "type": "rss"
+    },
+    {
+      "name": "Jenkem Mag",
+      "url": "http://www.jenkemmag.com/home/feed/",
+      "selector": "item",
+      "type": "rss"
+    },
+    {
+      "name": "Concrete Wave",
+      "url": "https://www.concretewave.de/feed/",
+      "selector": "item",
+      "type": "rss"
+    },
+    {
+      "name": "Thrasher",
+      "url": "https://www.thrashermagazine.com/",
+      "selector": ".post-wrapper",
+      "type": "html"
+    },
+    {
+      "name": "Bubble Skate Mag",
+      "url": "https://bubbleskatemag.com/",
+      "selector": "article",
+      "type": "html"
+    }
+  ],
+  "instagramHashtags": [
+    "skateboarding",
+    "skatelife",
+    "skater"
+  ]
+}
