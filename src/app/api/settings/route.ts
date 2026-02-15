@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Prevent caching
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);

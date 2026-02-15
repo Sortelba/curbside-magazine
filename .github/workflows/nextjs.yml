@@ -81,17 +81,9 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          # Clean any existing build artifacts
-          rm -rf .next out
-          
-          # Delete api folder from Next.js build to avoid static export errors
-          # This ensures Next.js won't find any dynamic API routes during build
-          if [ -d "src/app/api" ]; then
-            echo "Removing API routes for static build..."
-            rm -rf src/app/api
-          fi
-          
-          # Run build (output: export is handled via next.config.ts GITHUB_ACTIONS check)
+          # COMPLETELY move api folder out of src/app so Next.js doesn't see it
+          # This is necessary because GitHub Pages is a static host and can't use these APIs
+          if [ -d "src/app/api" ]; then mv src/app/api ./api_backup; fi
           ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact

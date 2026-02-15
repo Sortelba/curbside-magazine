@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Prevent vercel/next from caching this route
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
     try {

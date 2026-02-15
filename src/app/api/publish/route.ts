@@ -4,7 +4,7 @@ import util from 'util';
 
 const execPromise = util.promisify(exec);
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
     console.log('--- PUBLISH API HIT ---');
