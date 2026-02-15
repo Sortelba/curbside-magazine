@@ -65,19 +65,18 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
 
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: |
-          # Diagnostic: Check files before removal
-          echo "Files before removal:"
-          ls -R src/app | grep api || true
-          
-          # Aggressively remove api folder and build cache
+          # Aggressively remove api folder and build cache before Next.js scans
           rm -rf src/app/api
           rm -rf .next
           
-          # Diagnostic: Check files after removal
-          echo "Files after removal:"
-          ls -R src/app | grep api || true
+          # Diagnostic: Verify api is gone
+          echo "Verifying API removal:"
+          ls -R src/app | grep api || echo "API folder successfully removed."
           
           ${{ steps.detect-package-manager.outputs.runner }} next build
 
