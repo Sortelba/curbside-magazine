@@ -63,21 +63,31 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
                             <X className="h-6 w-6" />
                         </button>
 
-                        {/* Header Image (if available) */}
-                        {post.type === 'image' && (
-                            <div className="w-full h-64 md:h-80 overflow-hidden relative">
-                                <img src={post.content} alt={displayTitle} className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                            </div>
-                        )}
-                        {post.type === 'video' && (
+                        {/* Header Media (Prioritize Video then Images) */}
+                        {(post.media?.videoUrl || (post.type === 'video' && post.content)) && (
                             <div className="w-full aspect-video bg-black">
                                 <iframe
-                                    src={post.content.replace('watch?v=', 'embed/')}
+                                    src={(post.media?.videoUrl || post.content).replace('watch?v=', 'embed/')}
                                     className="w-full h-full"
                                     allowFullScreen
                                     title={displayTitle}
                                 />
+                            </div>
+                        )}
+
+                        {/* Multiple Images Support */}
+                        {post.media?.images?.length > 0 ? (
+                            <div className="flex flex-col gap-4 bg-muted/5 border-b border-border">
+                                {post.media.images.map((img: string, i: number) => (
+                                    <div key={i} className="w-full max-h-[500px] overflow-hidden">
+                                        <img src={img} alt={`${displayTitle} - ${i + 1}`} className="w-full h-full object-contain bg-black/5" />
+                                    </div>
+                                ))}
+                            </div>
+                        ) : post.type === 'image' && (
+                            <div className="w-full h-64 md:h-80 overflow-hidden relative">
+                                <img src={post.content} alt={displayTitle} className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
                             </div>
                         )}
 
@@ -116,12 +126,12 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
                             {/* Footer / Original Link */}
                             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                                 <a
-                                    href={post.originalUrl || post.content}
+                                    href={post.media?.externalLink || post.originalUrl || post.content}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold uppercase text-sm hover:opacity-90 transition-opacity"
                                 >
-                                    Read Original <ExternalLink className="h-4 w-4" />
+                                    {post.type === 'link' || post.media?.externalLink ? 'Visit Link' : 'Read Original'} <ExternalLink className="h-4 w-4" />
                                 </a>
 
                                 {/* Share Buttons (Mock) */}

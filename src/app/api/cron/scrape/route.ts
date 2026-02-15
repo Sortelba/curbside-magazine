@@ -55,36 +55,49 @@ export async function GET(request: Request) {
                     continue;
                 }
 
-                // Rewrite with Gemini
+                // Rewrite with Gemini (now strictly bilingual)
                 const rewritten = await rewriteNews({
                     title: article.title,
                     text: article.text,
                     source: article.source
                 });
 
-                // Construct Post Object
+                // Generate Unique ID
+                const uniqueId = `post_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+
+                // Ensure we have both languages, fallback to original if missing
+                const deTitle = rewritten.de?.title || rewritten.title || article.title;
+                const deContent = rewritten.de?.content || rewritten.content || article.text.substring(0, 500);
+                const enTitle = rewritten.en?.title || rewritten.title || article.title;
+                const enContent = rewritten.en?.content || rewritten.content || article.text.substring(0, 500);
+
+                // Construct Post Object with Multi-Media support
                 const post = {
-                    title: rewritten.de?.title || article.title,
-                    description: rewritten.de?.content || article.text.substring(0, 200),
+                    id: uniqueId,
+                    title: deTitle, // Default to German for the main title field
+                    description: deContent.substring(0, 200) + "...",
                     translations: {
                         de: {
-                            title: rewritten.de?.title || article.title,
-                            content: rewritten.de?.content || article.text.substring(0, 200)
+                            title: deTitle,
+                            content: deContent
                         },
                         en: {
-                            title: rewritten.en?.title || article.title,
-                            content: rewritten.en?.content || article.text.substring(0, 200)
+                            title: enTitle,
+                            content: enContent
                         }
                     },
-                    // If the scraper found a video, use it. Otherwise use image. Fallback to just text.
                     type: article.mediaType,
-                    // For 'link' type, content is the URL. For 'video'/'image', it's the media URL.
-                    content: article.mediaUrl || article.url,
-
+                    content: article.mediaUrl || article.url, // Legacy fallback
+                    media: {
+                        images: article.media?.images || [],
+                        videoUrl: article.media?.videoUrl || "",
+                        externalLink: article.url
+                    },
                     source: article.source,
                     originalUrl: article.url,
                     date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-                    tags: rewritten.tags || []
+                    tags: rewritten.tags || [],
+                    status: "published"
                 };
 
                 newPosts.push(post);

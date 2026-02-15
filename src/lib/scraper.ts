@@ -21,12 +21,16 @@ export interface ScrapedArticle {
     title: string;
     url: string;
     mediaType: 'video' | 'image' | 'text';
-    mediaUrl?: string; // YouTube URL or Image URL
+    mediaUrl?: string; // Main image or video URL
     text: string; // Full body text
     source: string;
+    media?: {
+        images?: string[];
+        videoUrl?: string;
+    };
 }
 
-function getNewsSources(): NewsSource[] {
+async function getNewsSources(): Promise<NewsSource[]> {
     try {
         const filePath = path.join(process.cwd(), 'src', 'data', 'settings.json');
         if (fs.existsSync(filePath)) {
@@ -51,7 +55,7 @@ async function fetchWithHeaders(url: string) {
 }
 
 // Extract content from HTML Detail Page
-async function scrapeDetail(url: string, selector: string): Promise<{ text: string; video?: string; image?: string }> {
+async function scrapeDetail(url: string, selector: string): Promise<{ text: string; video?: string; image?: string; images: string[] }> {
     try {
         const response = await fetchWithHeaders(url);
         const html = await response.text();
@@ -72,28 +76,58 @@ async function scrapeDetail(url: string, selector: string): Promise<{ text: stri
             video = $('iframe[src*="youtube"]').first().attr('src');
         }
 
-        // Look for main image
-        let image = container.find('img').first().attr('src');
-        if (!image) {
-            image = $('meta[property="og:image"]').attr('content');
-        }
-        if (!image) {
-            // Filter out tracking pixels or icons
-            image = $('img').filter((i, el) => {
-                const src = $(el).attr('src') || '';
-                return src.startsWith('http') && (src.includes('.jpg') || src.includes('.png') || src.includes('.webp') || src.includes('.jpeg'));
-            }).first().attr('src');
+        // --- Improved Image Recognition ---
+        // 1. Prioritize OpenGraph and Twitter meta tags for the main image
+        let mainImage = $('meta[property="og:image"]').attr('content') ||
+            $('meta[name="twitter:image"]').attr('content') ||
+            $('meta[property="og:image:url"]').attr('content');
+
+        // 2. Collect all images from the article body
+        const images: string[] = [];
+        container.find('img').each((i, el) => {
+            const src = $(el).attr('src') || $(el).attr('data-src');
+            if (src && src.startsWith('http')) {
+                // Filter out small icons or tracking pixels
+                const isLikelyImage = src.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i) || src.includes('wp-content/uploads');
+                if (isLikelyImage && !images.includes(src)) {
+                    images.push(src);
+                }
+            }
+        });
+
+        // 3. If no main image from meta tags, pick the first body image
+        if (!mainImage && images.length > 0) {
+            mainImage = images[0];
         }
 
-        // Final validation: ensure it's a full URL and not a generic page
-        if (image && !image.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i)) {
-            image = undefined;
+        // Ensure mainImage is in the images array
+        if (mainImage && !images.includes(mainImage)) {
+            images.unshift(mainImage);
         }
 
-        return { text, video, image };
+        // Make URLs absolute if they are relative (though many are already absolute from scraper logic)
+        const baseUrl = new URL(url).origin;
+        const finalizedImages = images.map(img => {
+            if (img.startsWith('//')) return `https:${img}`;
+            if (img.startsWith('/')) return `${baseUrl}${img}`;
+            return img;
+        });
+
+        let finalMainImage = mainImage;
+        if (finalMainImage) {
+            if (finalMainImage.startsWith('//')) finalMainImage = `https:${finalMainImage}`;
+            else if (finalMainImage.startsWith('/')) finalMainImage = `${baseUrl}${finalMainImage}`;
+        }
+
+        return {
+            text,
+            video,
+            image: finalMainImage,
+            images: finalizedImages.slice(0, 10) // Limit to 10 images
+        };
     } catch (e) {
         console.error(`Failed to scrape detail: ${url}`, e);
-        return { text: "" };
+        return { text: "", images: [] };
     }
 }
 
@@ -108,39 +142,33 @@ async function scrapeRssSource(source: NewsSource): Promise<ScrapedArticle[]> {
         const articles: ScrapedArticle[] = [];
         const items = $('item').slice(0, 3); // Get top 3 items
 
-        items.each((i, el) => {
+        for (const el of items.toArray()) {
             const item = $(el);
             const title = item.find('title').text().trim();
             const url = item.find('link').text().trim();
 
-            if (!url) return;
+            if (!url) continue;
 
-            // Content might be in content:encoded, description, or body
-            const contentEncoded = item.find('content\\:encoded').text();
-            let rawContent = contentEncoded || item.find('description').text();
+            // --- Deep Scraping: Always follow the link to get high-quality images and full text ---
+            const details = await scrapeDetail(url, 'article, .post-content, .entry-content, body');
 
-            // Use cheerio to parse the HTML *inside* the RSS content/description to find images/text
-            const $content = cheerio.load(rawContent);
-            const text = $content.text().trim();
-            const img = $content('img').attr('src');
-            const video = $content('iframe[src*="youtube"]').attr('src');
-
-            // Look for enclosure if no image found in content
-            let mediaUrl = img;
-            if (!mediaUrl) {
-                const enclosure = item.find('enclosure[type^="image"]').attr('url');
-                if (enclosure) mediaUrl = enclosure;
-            }
+            const video = details.video;
+            const images = details.images;
+            const mainImage = details.image;
 
             articles.push({
                 title,
                 url,
                 mediaType: video ? 'video' : 'image',
-                mediaUrl: video || mediaUrl,
-                text: text.substring(0, 5000), // Limit text length
-                source: source.name
+                mediaUrl: video || mainImage,
+                text: details.text || title,
+                source: source.name,
+                media: {
+                    images: images,
+                    videoUrl: video
+                }
             });
-        });
+        }
 
         return articles;
 
@@ -180,11 +208,10 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
         const details = await scrapeDetail(url, 'article, .post-content, .entry-content, body');
 
         let mediaType: 'video' | 'image' | 'text' = 'text';
-        let mediaUrl = details.image;
+        const mediaUrl = details.video || details.image;
 
         if (details.video) {
             mediaType = 'video';
-            mediaUrl = details.video;
         } else if (details.image) {
             mediaType = 'image';
         }
@@ -195,7 +222,11 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
             mediaType,
             mediaUrl,
             text: details.text || title,
-            source: source.name
+            source: source.name,
+            media: {
+                images: details.images,
+                videoUrl: details.video
+            }
         }];
 
     } catch (error) {
@@ -212,11 +243,11 @@ export async function scrapeGenericSource(source: NewsSource): Promise<ScrapedAr
 }
 
 export async function scrapeAllSources(): Promise<ScrapedArticle[]> {
-    const sources = getNewsSources();
+    const sources = await getNewsSources();
     console.log(`Scraping ${sources.length} sources...`);
 
-    const results = await Promise.all(sources.map(source => scrapeGenericSource(source)));
+    const results = await Promise.all(sources.map((source: NewsSource) => scrapeGenericSource(source)));
 
     // Check if results are null/empty and filter them out, then flatten
-    return results.flat().filter(article => article !== null);
+    return results.flat().filter((article: ScrapedArticle) => article !== null);
 }

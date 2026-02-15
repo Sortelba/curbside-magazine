@@ -7,7 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 interface PostCardProps {
     type: 'text' | 'image' | 'video' | 'link' | 'instagram-mix';
     title: string;
-    content: string; // URL for image/video/link, text for text, comma-separated URLs or JSON for instagram-mix
+    content: string; // fallback URL for image/video/link
     date: string;
     description?: string;
     tags?: string[];
@@ -17,12 +17,17 @@ interface PostCardProps {
         en: { title: string; content: string };
     };
     source?: string;
+    media?: {
+        images?: string[];
+        videoUrl?: string;
+        externalLink?: string;
+    };
     onClick?: () => void;
 }
 
-export default function PostCard({ type, title, content, date, description, tags, originalUrl, translations, source, onClick }: PostCardProps) {
+export default function PostCard({ type, title, content, date, description, tags, originalUrl, translations, source, media, onClick }: PostCardProps) {
     const { locale } = useLanguage();
-    const linkUrl = originalUrl || (type === 'link' ? content : undefined);
+    const linkUrl = originalUrl || media?.externalLink || (type === 'link' ? content : undefined);
 
     // Dynamic content based on locale
     const displayTitle = translations?.[locale]?.title || title;
@@ -62,52 +67,49 @@ export default function PostCard({ type, title, content, date, description, tags
         // Fallback placeholder image for news if no image is found
         const fallbackNewsImage = "https://images.unsplash.com/photo-1547447134-cd3f5c716030?q=80&w=1000&auto=format&fit=crop";
 
-        if (type === 'image' || (type === 'video' && onClick)) {
-            // For video in grid, if it's a YT video, we can try to get thumb.
-            if (content.includes('youtube') || content.includes('youtu.be')) {
-                const videoId = content.match(/v=([^&]+)/)?.[1] || content.match(/shorts\/([^?]+)/)?.[1] || content.split('/').pop()?.split('?')[0];
+        // Prioritize media object if available
+        const videoSrc = media?.videoUrl || (type === 'video' ? content : null);
+        const imageSrc = media?.images?.[0] || (type === 'image' ? content : null);
 
-                if (videoId) {
-                    // Start with high res, but usually hqdefault is safest fallback
-                    const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                    // eslint-disable-next-line @next/next/no-img-element
-                    return (
-                        <div className="w-full h-48 relative overflow-hidden">
-                            <img
-                                src={thumb}
-                                alt={displayTitle}
-                                className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                                loading="lazy"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = fallbackNewsImage;
-                                }}
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
-                                <Play className="w-12 h-12 text-white/80 drop-shadow-lg" />
-                            </div>
+        if (videoSrc && (videoSrc.includes('youtube') || videoSrc.includes('youtu.be'))) {
+            const videoId = videoSrc.match(/v=([^&]+)/)?.[1] || videoSrc.match(/shorts\/([^?]+)/)?.[1] || videoSrc.split('/').pop()?.split('?')[0];
+
+            if (videoId) {
+                const thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                return (
+                    <div className="w-full h-48 relative overflow-hidden">
+                        <img
+                            src={thumb}
+                            alt={displayTitle}
+                            className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                            loading="lazy"
+                            onError={(e) => {
+                                (e.target as HTMLImageElement).src = fallbackNewsImage;
+                            }}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                            <Play className="w-12 h-12 text-white/80 drop-shadow-lg" />
                         </div>
-                    );
-                }
-            }
-
-            // Fallback for image
-            if (type === 'image') {
-                // If content doesn't look like an image URL, use fallback
-                const isLikelyUrlOnly = !content.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i);
-                const imgSrc = isLikelyUrlOnly ? fallbackNewsImage : content;
-
-                // eslint-disable-next-line @next/next/no-img-element
-                return <img
-                    src={imgSrc}
-                    alt={displayTitle}
-                    className="w-full h-48 object-cover transition-transform group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => {
-                        (e.target as HTMLImageElement).src = fallbackNewsImage;
-                    }}
-                />
+                    </div>
+                );
             }
         }
+
+        if (imageSrc) {
+            const isLikelyUrlOnly = !imageSrc.match(/\.(jpg|jpeg|png|webp|gif|avif|auto=format)($|\?|&)/i);
+            const imgSrc = isLikelyUrlOnly && !imageSrc.includes('unsplash') ? fallbackNewsImage : imageSrc;
+
+            return <img
+                src={imgSrc}
+                alt={displayTitle}
+                className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                loading="lazy"
+                onError={(e) => {
+                    (e.target as HTMLImageElement).src = fallbackNewsImage;
+                }}
+            />
+        }
+
         return null;
     };
 

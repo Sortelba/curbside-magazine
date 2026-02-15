@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -752,11 +752,11 @@ function AdminDashboardContent() {
 
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div>
-                                                    <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Typ</label>
+                                                    <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Primärer Typ</label>
                                                     <select id="new-post-type" className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl font-bold outline-none cursor-pointer">
-                                                        <option value="text">Reiner Text</option>
-                                                        <option value="image">Bild-Post</option>
+                                                        <option value="image">Bild-Post (oder Multi-Media)</option>
                                                         <option value="video">YouTube Video</option>
+                                                        <option value="text">Reiner Text</option>
                                                         <option value="link">Externer Link</option>
                                                     </select>
                                                 </div>
@@ -771,12 +771,54 @@ function AdminDashboardContent() {
                                                 </div>
                                             </div>
 
+                                            {/* Multi-Media Section */}
+                                            <div className="p-6 bg-muted/10 border-2 border-dashed border-border rounded-2xl space-y-6">
+                                                <h4 className="text-sm font-black uppercase tracking-widest border-b border-border pb-2">Multi-Media Assets</h4>
+
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                    <div>
+                                                        <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Bild URLs (kommagetrennt)</label>
+                                                        <textarea
+                                                            id="new-post-media-images"
+                                                            className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl font-mono text-xs outline-none focus:border-primary/50"
+                                                            placeholder="https://... , https://..."
+                                                            rows={2}
+                                                        />
+                                                    </div>
+                                                    <div className="space-y-4">
+                                                        <div>
+                                                            <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Video URL (YouTube)</label>
+                                                            <input
+                                                                type="text"
+                                                                id="new-post-media-video"
+                                                                className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl text-xs font-mono outline-none focus:border-primary/50"
+                                                                placeholder="https://youtube.com/watch?v=..."
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Dazugehöriger Link</label>
+                                                            <input
+                                                                type="text"
+                                                                id="new-post-media-link"
+                                                                className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl text-xs font-mono outline-none focus:border-primary/50"
+                                                                placeholder="https://..."
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p className="text-[10px] text-muted-foreground italic">
+                                                    Hinweis: Wenn du hier Media-Assets angibst, werden diese bevorzugt verwendet.
+                                                    Das Feld "Inhalt" unten kann dann für zusätzlichen Text genutzt werden.
+                                                </p>
+                                            </div>
+
                                             <div>
-                                                <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Inhalt (URL oder Text)</label>
+                                                <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Inhalt (Zusatztext)</label>
                                                 <textarea
                                                     id="new-post-content"
-                                                    className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl h-32 font-mono text-sm outline-none focus:border-primary/50 transition-all"
-                                                    placeholder="https://... ODER Dein Text hier..."
+                                                    className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl h-48 font-mono text-sm outline-none focus:border-primary/50 transition-all"
+                                                    placeholder="Dein Text hier..."
                                                 />
                                             </div>
 
@@ -799,18 +841,34 @@ function AdminDashboardContent() {
                                                         const description = (document.getElementById('new-post-description') as HTMLInputElement).value;
                                                         const tagsStr = (document.getElementById('new-post-tags') as HTMLInputElement).value;
 
-                                                        if (!title || !content) {
-                                                            alert("Titel und Inhalt sind Pflichtfelder!");
+                                                        // Media items
+                                                        const images = (document.getElementById('new-post-media-images') as HTMLTextAreaElement).value.split(',').map(s => s.trim()).filter(s => s);
+                                                        const videoUrl = (document.getElementById('new-post-media-video') as HTMLInputElement).value;
+                                                        const externalLink = (document.getElementById('new-post-media-link') as HTMLInputElement).value;
+
+                                                        if (!title) {
+                                                            alert("Titel ist ein Pflichtfeld!");
                                                             return;
                                                         }
 
                                                         const newPost = {
+                                                            id: `post_${Date.now()}`,
                                                             title,
                                                             type,
-                                                            content,
+                                                            content: content || (images[0] || videoUrl || externalLink || ""),
                                                             description,
                                                             tags: tagsStr.split(',').map(t => t.trim()).filter(t => t),
-                                                            date: new Date().toLocaleDateString('de-DE', { month: 'short', day: 'numeric', year: 'numeric' })
+                                                            date: new Date().toLocaleDateString('de-DE', { month: 'short', day: 'numeric', year: 'numeric' }),
+                                                            status: 'published',
+                                                            media: {
+                                                                images,
+                                                                videoUrl,
+                                                                externalLink
+                                                            },
+                                                            translations: {
+                                                                de: { title, content: content || description },
+                                                                en: { title, content: content || description }
+                                                            }
                                                         };
 
                                                         fetch(`/api/posts/create`, {
@@ -820,10 +878,11 @@ function AdminDashboardContent() {
                                                         }).then(res => {
                                                             if (res.ok) {
                                                                 alert("Post wurde veröffentlicht! 🛹");
-                                                                (document.getElementById('new-post-title') as HTMLInputElement).value = '';
-                                                                (document.getElementById('new-post-content') as HTMLTextAreaElement).value = '';
-                                                                (document.getElementById('new-post-description') as HTMLInputElement).value = '';
-                                                                (document.getElementById('new-post-tags') as HTMLInputElement).value = '';
+                                                                // Clear fields
+                                                                ['new-post-title', 'new-post-content', 'new-post-description', 'new-post-tags', 'new-post-media-images', 'new-post-media-video', 'new-post-media-link'].forEach(id => {
+                                                                    const el = document.getElementById(id) as HTMLInputElement | HTMLTextAreaElement;
+                                                                    if (el) el.value = '';
+                                                                });
                                                             } else {
                                                                 alert("Fehler beim Veröffentlichen.");
                                                             }
@@ -1889,6 +1948,10 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
     const [filterType, setFilterType] = useState("all");
     const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest');
 
+    // Editing state
+    const [editingPost, setEditingPost] = useState<any | null>(null);
+    const [showEditModal, setShowEditModal] = useState(false);
+
     const fetchPosts = async () => {
         setLoading(true);
         try {
@@ -1925,6 +1988,50 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
         } catch (e) {
             console.error(e);
             alert("Error deleting post.");
+        }
+    };
+
+    const handleEditPost = (post: any) => {
+        // Ensure post has the new media structure for editing convenience
+        const postToEdit = {
+            ...post,
+            media: post.media || {
+                images: post.type === 'image' ? [post.content] : [],
+                videoUrl: post.type === 'video' ? post.content : '',
+                externalLink: post.type === 'link' ? post.content : ''
+            }
+        };
+        setEditingPost(postToEdit);
+        setShowEditModal(true);
+    };
+
+    const updateEditingPost = (field: string, value: any) => {
+        if (editingPost) {
+            setEditingPost({ ...editingPost, [field]: value });
+        }
+    };
+
+    const saveEditedPost = async () => {
+        if (!editingPost) return;
+
+        try {
+            const res = await fetch('/api/posts/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ post: editingPost, key: keyStr })
+            });
+
+            if (res.ok) {
+                alert("Post updated!");
+                setShowEditModal(false);
+                setEditingPost(null);
+                fetchPosts();
+            } else {
+                alert("Update failed.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Error updating post.");
         }
     };
 
@@ -2000,9 +2107,9 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
                 {filteredPosts.map((post, idx) => (
                     <div key={idx} className="flex items-center justify-between p-3 bg-card border border-border rounded-xl hover:border-primary/30 transition-colors group">
                         <div className="flex items-center gap-4 overflow-hidden">
-                            {post.type === 'image' || (post.type === 'video' && post.content?.includes('youtube')) ? (
+                            {(post.media?.images?.[0] || post.type === 'image' || (post.type === 'video' && post.content?.includes('youtube'))) ? (
                                 <img
-                                    src={post.type === 'video' ? `https://img.youtube.com/vi/${post.content.split('v=')[1]?.split('&')[0]}/default.jpg` : post.content}
+                                    src={post.media?.images?.[0] || (post.type === 'video' ? `https://img.youtube.com/vi/${post.content.split('v=')[1]?.split('&')[0]}/default.jpg` : post.content)}
                                     className="w-12 h-12 object-cover rounded-lg bg-muted border border-border"
                                     alt="thumbnail"
                                     onError={(e) => (e.currentTarget.style.display = 'none')}
@@ -2023,6 +2130,13 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
                         </div>
                         <div className="flex items-center gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
+                                onClick={() => handleEditPost(post)}
+                                className="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors"
+                                title="Edit Post"
+                            >
+                                <Edit className="h-4 w-4" />
+                            </button>
+                            <button
                                 onClick={() => deletePost(post.title)}
                                 className="p-2 text-destructive hover:bg-destructive/10 rounded-lg transition-colors"
                                 title="Delete Post"
@@ -2039,9 +2153,144 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
                     </div>
                 )}
             </div>
+
+            {/* Edit Post Modal */}
+            {showEditModal && editingPost && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[100] p-4">
+                    <div className="bg-background border-2 border-border rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                        <div className="flex justify-between items-center mb-6">
+                            <h3 className="text-xl font-black uppercase italic">Post bearbeiten</h3>
+                            <button
+                                onClick={() => {
+                                    setShowEditModal(false);
+                                    setEditingPost(null);
+                                }}
+                                className="p-2 hover:bg-muted rounded-lg transition-colors"
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                        </div>
+
+                        <div className="space-y-4">
+                            <div>
+                                <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Titel</label>
+                                <input
+                                    type="text"
+                                    value={editingPost.title}
+                                    onChange={(e) => updateEditingPost('title', e.target.value)}
+                                    className="w-full p-2 bg-muted/20 border border-input rounded-lg font-bold"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Beschreibung</label>
+                                <textarea
+                                    value={editingPost.description || ''}
+                                    onChange={(e) => updateEditingPost('description', e.target.value)}
+                                    className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm h-20"
+                                />
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Typ</label>
+                                    <select
+                                        value={editingPost.type}
+                                        onChange={(e) => updateEditingPost('type', e.target.value)}
+                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
+                                    >
+                                        <option value="image">Image</option>
+                                        <option value="video">Video</option>
+                                        <option value="text">Text</option>
+                                        <option value="link">Link</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Datum</label>
+                                    <input
+                                        type="text"
+                                        value={editingPost.date}
+                                        onChange={(e) => updateEditingPost('date', e.target.value)}
+                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Media Section */}
+                            <div className="p-4 bg-muted/10 border border-border rounded-xl space-y-4">
+                                <h4 className="text-xs font-black uppercase tracking-widest border-b border-border pb-2">Media Assets</h4>
+
+                                <div>
+                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Bild URLs (kommagetrennt)</label>
+                                    <input
+                                        type="text"
+                                        value={editingPost.media?.images?.join(', ') || ''}
+                                        onChange={(e) => {
+                                            const images = e.target.value.split(',').map(s => s.trim()).filter(s => s);
+                                            updateEditingPost('media', { ...editingPost.media, images });
+                                        }}
+                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-xs font-mono"
+                                        placeholder="https://... , https://..."
+                                    />
+                                    {editingPost.media?.images?.length > 0 && (
+                                        <div className="flex gap-2 mt-2 overflow-x-auto py-2">
+                                            {editingPost.media.images.map((img: string, i: number) => (
+                                                <img key={i} src={img} className="h-16 w-16 object-cover rounded border border-border flex-shrink-0" alt="preview" />
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div>
+                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Video URL (YouTube)</label>
+                                    <input
+                                        type="text"
+                                        value={editingPost.media?.videoUrl || ''}
+                                        onChange={(e) => updateEditingPost('media', { ...editingPost.media, videoUrl: e.target.value })}
+                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-xs font-mono"
+                                        placeholder="https://youtube.com/watch?v=..."
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Externer Link</label>
+                                    <input
+                                        type="text"
+                                        value={editingPost.media?.externalLink || ''}
+                                        onChange={(e) => updateEditingPost('media', { ...editingPost.media, externalLink: e.target.value })}
+                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-xs font-mono"
+                                        placeholder="https://..."
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Tags (kommagetrennt)</label>
+                                <input
+                                    type="text"
+                                    value={editingPost.tags?.join(', ') || ''}
+                                    onChange={(e) => updateEditingPost('tags', e.target.value.split(',').map(s => s.trim()).filter(s => s))}
+                                    className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex gap-3 mt-6">
+                            <button
+                                onClick={saveEditedPost}
+                                className="flex-1 py-3 bg-primary text-primary-foreground font-black uppercase italic rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+                            >
+                                <Save className="inline h-4 w-4 mr-2" />
+                                Speichern
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
+
 
 function ManageLearn({ keyStr }: { keyStr: string }) {
     const { t } = useLanguage();
