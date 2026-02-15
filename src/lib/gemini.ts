@@ -57,7 +57,7 @@ export async function rewriteNews(article: { title: string; text: string; source
 function fallbackResponse(article: { title: string; text: string; source: string }, error: string) {
   // Very basic "Skater" adaptation for German if Gemini fails
   const deTitle = `[News] ${article.title}`;
-  const deContent = `${article.text.substring(0, 500)}... \n\n(Note: Automatische Übersetzung fehlgeschlagen. Originalquelle: ${article.source})`;
+  const deContent = `${article.text.substring(0, 500)}... (Originalquelle: ${article.source})`;
 
   return {
     de: { title: deTitle, content: deContent },
