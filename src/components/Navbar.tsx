@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -9,7 +9,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const { locale, setLocale, t } = useLanguage();
+    const { t } = useLanguage();
 
     const navLinks = [
         { name: t("nav.news"), href: "/" },
@@ -43,27 +43,6 @@ export default function Navbar() {
                         <div className="flex items-center gap-3">
                             <ThemeToggle />
 
-                            {/* Right side Language Switcher */}
-                            <div className="flex bg-muted rounded-md p-0.5 border border-border">
-                                <button
-                                    onClick={() => setLocale("de")}
-                                    className={cn(
-                                        "px-2 py-1 text-[10px] font-bold uppercase rounded transition-colors",
-                                        locale === "de" ? "bg-foreground text-background shadow-sm" : "text-muted-foreground hover:text-foreground"
-                                    )}
-                                >
-                                    DE
-                                </button>
-                                <button
-                                    onClick={() => setLocale("en")}
-                                    className={cn(
-                                        "px-2 py-1 text-[10px] font-bold uppercase rounded transition-colors",
-                                        locale === "en" ? "bg-foreground text-background shadow-sm" : "text-muted-foreground hover:text-foreground"
-                                    )}
-                                >
-                                    EN
-                                </button>
-                            </div>
                         </div>
                     </div>
 
@@ -98,29 +77,6 @@ export default function Navbar() {
                             <div className="flex items-center justify-between">
                                 <span className="text-xs font-bold uppercase text-muted-foreground">Appearance:</span>
                                 <ThemeToggle />
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <span className="text-xs font-bold uppercase text-muted-foreground">Language:</span>
-                                <div className="flex bg-muted rounded-md p-0.5 border border-border">
-                                    <button
-                                        onClick={() => { setLocale("de"); setIsOpen(false); }}
-                                        className={cn(
-                                            "px-4 py-2 text-xs font-bold uppercase rounded transition-colors",
-                                            locale === "de" ? "bg-foreground text-background shadow-sm" : "text-muted-foreground hover:text-foreground"
-                                        )}
-                                    >
-                                        DE
-                                    </button>
-                                    <button
-                                        onClick={() => { setLocale("en"); setIsOpen(false); }}
-                                        className={cn(
-                                            "px-4 py-2 text-xs font-bold uppercase rounded transition-colors",
-                                            locale === "en" ? "bg-foreground text-background shadow-sm" : "text-muted-foreground hover:text-foreground"
-                                        )}
-                                    >
-                                        EN
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
