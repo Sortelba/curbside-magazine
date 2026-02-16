@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import LearnContent from '@/components/LearnContent';
 
 // Force dynamic rendering to always get the latest learning data
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 async function getLearnData() {
     const filePath = path.join(process.cwd(), 'src', 'data', 'learn.json');

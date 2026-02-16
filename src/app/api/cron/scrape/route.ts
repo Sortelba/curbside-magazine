@@ -51,7 +51,9 @@ export async function GET(request: Request) {
 
             if (!exists) {
                 // Validation: Skip if text is too short or looks like error/garbage
-                if (!article.text || article.text.length < 100 || article.text.includes("JavaScript is required") || article.text.includes("Skip to content")) {
+                // Exception: allow short text for social media sources
+                const isSocial = article.source === 'Instagram' || article.source.includes('YouTube') || article.mediaType === 'video';
+                if (!isSocial && (!article.text || article.text.length < 100 || article.text.includes("JavaScript is required") || article.text.includes("Skip to content"))) {
                     console.log(`Skipping invalid article: ${article.title}`);
                     continue;
                 }

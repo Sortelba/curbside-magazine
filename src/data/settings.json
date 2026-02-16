@@ -1,66 +1,88 @@
 {
-  "youtubeChannels": [],
+  "youtubeChannels": [
+    {
+      "name": "The Nine Club",
+      "id": "UCke7CUOPnzp1dYwI0keZYmQ"
+    },
+    {
+      "name": "Red Bull Skateboarding",
+      "id": "UC_0R4YgI6a_42lXk0CRo1EA"
+    },
+    {
+      "name": "Thrasher Magazine",
+      "id": "UC8RreA1V7A9z_X9F3N8Tf0w"
+    },
+    {
+      "name": "Skate IQ",
+      "id": "UCp8S24-TM3O7848xMTCyAbA"
+    }
+  ],
   "newsSources": [
     {
       "name": "Boardstation",
-      "url": "http://www.boardstation.de/category/news/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "Monster Skateboard Magazine",
-      "url": "https://skateboardmsm.de/feed/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "Place Skateboarding",
-      "url": "https://place.tv/feed/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "SOLO Skateboardmag",
-      "url": "https://soloskatemag.com/feed/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "Bubble Skate Mag",
-      "url": "https://bubbleskatemag.com/feed/",
-      "selector": "",
+      "url": "http://www.boardstation.de/feed/",
+      "selector": "article",
       "type": "rss"
     },
     {
       "name": "Limited Skateboarding",
-      "url": "https://limitedmag.de/feed/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "Skateboard Deutschland",
-      "url": "https://skateboarddeutschland.de/feed/",
-      "selector": "",
-      "type": "rss"
-    },
-    {
-      "name": "TITUS Magazin",
-      "url": "https://www.titus.de/blog/feed/",
-      "selector": "",
+      "url": "https://www.limitedmag.de/feed/",
+      "selector": "article",
       "type": "rss"
     },
     {
       "name": "Irregular Magazin",
       "url": "https://irregular-magazin.de/feed/",
-      "selector": "",
+      "selector": "article",
       "type": "rss"
     },
     {
-      "name": "Boardjunkies",
-      "url": "https://boardjunkies.de/feed/",
-      "selector": "",
+      "name": "Shredder News",
+      "url": "https://shredder.news/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Jenkem Mag",
+      "url": "https://www.jenkemmag.com/home/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Thrasher News",
+      "url": "https://www.thrashermagazine.com/articles/rss/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Transworld",
+      "url": "https://skateboarding.transworld.net/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Solo Skate Mag",
+      "url": "https://soloskatemag.com/feed",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Pocket Skate Mag",
+      "url": "https://pocketskatemag.com/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Place Magazine",
+      "url": "https://placemag.com/feed",
+      "selector": "article",
       "type": "rss"
     }
   ],
-  "instagramHashtags": []
+  "instagramHashtags": [
+    "skateboarding",
+    "berics",
+    "thrasher"
+  ],
+  "showLearnCenter": true
 }

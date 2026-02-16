@@ -4,11 +4,23 @@ import { useLanguage } from "@/context/LanguageContext";
 import PostCard from "@/components/PostCard";
 import EventsSidebar from "@/components/EventsSidebar";
 import NewsModal from "@/components/NewsModal";
+import BasicsSection from "@/components/learn/BasicsSection";
+import CoachesSection from "@/components/learn/CoachesSection";
+import RandomizerSection from "@/components/learn/RandomizerSection";
+import ChannelsSection from "@/components/learn/ChannelsSection";
 import { useState, useMemo } from "react";
 import { MoveLeft, MoveRight, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function HomeContent({ posts }: { posts: any[] }) {
+interface Settings {
+    showLearnBasics?: boolean;
+    showLearnCoaches?: boolean;
+    showLearnRandomizer?: boolean;
+    showLearnChannels?: boolean;
+    [key: string]: any;
+}
+
+export default function HomeContent({ posts, learnData, settings }: { posts: any[], learnData: any, settings: Settings }) {
     const { t } = useLanguage();
     const [selectedPost, setSelectedPost] = useState<any>(null);
     const [isExpanded, setIsExpanded] = useState(false);

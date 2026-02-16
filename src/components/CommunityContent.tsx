@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users } from "lucide-react";
+import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function CommunityContent({ data }: { data: any }) {
@@ -16,7 +16,8 @@ export default function CommunityContent({ data }: { data: any }) {
         { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
         { id: "sec_clubs", name: t("community.clubs"), icon: Users },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
-        { id: "youtubeskateboarding", name: t("community.youtube"), icon: Youtube }
+        { id: "youtubeskateboarding", name: t("community.youtube"), icon: Youtube },
+        { id: "sec_learn", name: t("community.skaten_lernen"), icon: GraduationCap }
     ];
 
     const getTranslation = (id: string, defaultTitle: string) => {
@@ -76,26 +77,34 @@ export default function CommunityContent({ data }: { data: any }) {
 
             {/* Circles Navigation */}
             <div className="flex flex-wrap justify-center gap-16 md:gap-24 items-center">
-                {sections.map((section) => (
-                    <motion.button
-                        key={section.id}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setActiveSection(section.id)}
-                        className="group flex flex-col items-center gap-8 cursor-pointer"
-                    >
-                        <div className={cn(
-                            "w-32 h-32 md:w-48 md:h-48 rounded-full flex items-center justify-center shadow-2xl relative transition-all duration-300",
-                            "bg-card border-4 border-foreground hover:bg-foreground hover:text-background",
-                            "after:content-[''] after:absolute after:inset-0 after:rounded-full after:bg-foreground/5 group-hover:after:scale-110 group-hover:after:opacity-0 after:transition-all"
-                        )}>
-                            <section.icon size={48} className="md:size-20" />
-                        </div>
-                        <span className="text-lg md:text-xl font-black uppercase italic tracking-wider text-center max-w-[200px] leading-tight">
-                            {section.name}
-                        </span>
-                    </motion.button>
-                ))}
+                {sections.map((section) => {
+                    const isLearnSection = section.id === "sec_learn";
+                    const Component = isLearnSection ? "a" : motion.button;
+
+                    return (
+                        <Component
+                            key={section.id}
+                            {...(isLearnSection ? { href: "/learn" } : {})}
+                            {...(!isLearnSection ? {
+                                whileHover: { scale: 1.1, rotate: 5 },
+                                whileTap: { scale: 0.95 },
+                                onClick: () => setActiveSection(section.id)
+                            } : {})}
+                            className="group flex flex-col items-center gap-8 cursor-pointer"
+                        >
+                            <div className={cn(
+                                "w-32 h-32 md:w-48 md:h-48 rounded-full flex items-center justify-center shadow-2xl relative transition-all duration-300",
+                                "bg-card border-4 border-foreground hover:bg-foreground hover:text-background",
+                                "after:content-[''] after:absolute after:inset-0 after:rounded-full after:bg-foreground/5 group-hover:after:scale-110 group-hover:after:opacity-0 after:transition-all"
+                            )}>
+                                <section.icon size={48} className="md:size-20" />
+                            </div>
+                            <span className="text-lg md:text-xl font-black uppercase italic tracking-wider text-center max-w-[200px] leading-tight">
+                                {section.name}
+                            </span>
+                        </Component>
+                    );
+                })}
             </div>
 
             {/* Modal Overlay */}
@@ -279,10 +288,16 @@ export default function CommunityContent({ data }: { data: any }) {
                                                 className="group bg-muted p-6 rounded-3xl border border-border hover:border-foreground transition-all flex items-center justify-between shadow-sm hover:shadow-xl"
                                             >
                                                 <div className="flex items-center gap-6">
-                                                    <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 border-border shrink-0 bg-background relative flex items-center justify-center text-2xl font-black italic uppercase">
-                                                        <span className="text-muted-foreground/30 absolute">{chan.name.substring(0, 1)}</span>
-                                                        {chan.image && (
-                                                            <img src={chan.image} alt="" className="w-full h-full object-cover relative z-10" />
+                                                    <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 border-border shrink-0 bg-background relative flex items-center justify-center">
+                                                        {chan.image ? (
+                                                            <img
+                                                                src={chan.image}
+                                                                alt={chan.name}
+                                                                className="w-full h-full object-cover"
+                                                                referrerPolicy="no-referrer"
+                                                            />
+                                                        ) : (
+                                                            <span className="text-muted-foreground/30 text-2xl font-black italic uppercase">{chan.name.substring(0, 1)}</span>
                                                         )}
                                                     </div>
                                                     <div>

@@ -16,11 +16,11 @@
   "coaches": [
     {
       "id": "coach_1",
-      "name": "Skate Coach Max",
-      "location": "Berlin",
-      "state": "Berlin",
-      "contact": "max@skatecoach.de",
-      "description": "Expert in transition and street basics."
+      "name": "Skate Coach Steffen",
+      "location": "Karlsruhe",
+      "state": "BW",
+      "contact": "sorteba.de",
+      "description": "20+ Jahre Erfahrung. Fokus auf Flatground tricks, Manuals und "
     }
   ],
   "randomizer": {
@@ -125,6 +125,12 @@
       "name": "VLSkate",
       "description": "Best trick tips on YouTube.",
       "url": "https://www.youtube.com/@vlskate"
+    },
+    {
+      "name": "Skate IQ",
+      "url": "https://www.youtube.com/@Skateiq",
+      "description": "Founded by Mitchi Brusco (14x XGames Madalist) Mission/Ziel ist es Lebensverändernde Durchbrüche in skateboarding erleben zu können",
+      "id": "channels_1771259572678"
     }
   ]
 }

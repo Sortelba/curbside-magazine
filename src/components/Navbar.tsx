@@ -15,8 +15,6 @@ export default function Navbar() {
         { name: t("nav.news"), href: "/" },
         { name: t("nav.map"), href: "/map" },
         { name: t("nav.community"), href: "/community" },
-        { name: t("nav.learn"), href: "/learn" },
-        { name: t("nav.about"), href: "/about" },
     ];
 
     return (

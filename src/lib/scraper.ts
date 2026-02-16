@@ -2,6 +2,8 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { Agent, fetch } from 'undici';
+import { fetchLatestYoutubeVideos } from './youtube';
+import { searchInstagramHashtag } from './instagram';
 
 // Create an agent that ignores SSL errors for Boardstation etc.
 const dispatcher = new Agent({
@@ -36,6 +38,19 @@ async function getNewsSources(): Promise<NewsSource[]> {
         if (fs.existsSync(filePath)) {
             const settings = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             return settings.newsSources || [];
+        }
+    } catch (e) {
+        console.error("Error reading settings.json", e);
+    }
+    return [];
+}
+
+async function getInstagramHashtags(): Promise<string[]> {
+    try {
+        const filePath = path.join(process.cwd(), 'src', 'data', 'settings.json');
+        if (fs.existsSync(filePath)) {
+            const settings = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            return settings.instagramHashtags || [];
         }
     } catch (e) {
         console.error("Error reading settings.json", e);
@@ -84,7 +99,7 @@ async function scrapeDetail(url: string, selector: string): Promise<{ text: stri
         }
 
         // Remove junk
-        container.find('script, style, iframe:not([src*="youtube"]), .ad, .advertisement, nav, footer, header, .related, .comments, .sidebar').remove();
+        container.find('script, style, iframe:not([src*="youtube"]), .ad, .advertisement, nav, footer, header, .related, .comments, .sidebar, .wp-caption-text').remove();
 
         // Get text blocks to preserve some structure (Gemini likes paragraphs)
         const paragraphs = container.find('p, h1, h2, h3, h4').map((i, el) => $(el).text().trim()).get().filter(t => t.length > 20).join('\n\n');
@@ -112,9 +127,11 @@ async function scrapeDetail(url: string, selector: string): Promise<{ text: stri
                 $(el).attr('data-srcset')?.split(' ')[0];
 
             if (src && (src.startsWith('http') || src.startsWith('/'))) {
-                // Filter out small icons or tracking pixels
-                const isLikelyImage = src.match(/\.(jpg|jpeg|png|webp|gif|avif)($|\?|&)/i) || src.includes('wp-content/uploads');
-                if (isLikelyImage && !images.includes(src)) {
+                // Filter out small icons or tracking pixels or avatars
+                const isLikelyImage = src.match(/\.(jpg|jpeg|png|webp|avif)($|\?|&)/i) || src.includes('wp-content/uploads');
+                const isTooSmall = src.includes('avatar') || src.includes('150x150') || src.includes('icon');
+
+                if (isLikelyImage && !isTooSmall && !images.includes(src)) {
                     images.push(src);
                 }
             }
@@ -183,50 +200,32 @@ async function scrapeRssSource(source: NewsSource): Promise<ScrapedArticle[]> {
         const xml = await response.text();
         const $ = cheerio.load(xml, { xmlMode: true });
 
-        const articles: ScrapedArticle[] = [];
-        const items = $('item').slice(0, 10); // Get top 10 items instead of 3
-
-        // Calculate date threshold (4 days ago)
+        const items = $('item').slice(0, 5); // Scrape fewer items per source for better speed
         const fourDaysAgo = new Date();
-        fourDaysAgo.setDate(fourDaysAgo.getDate() - 4);
+        fourDaysAgo.setDate(fourDaysAgo.getDate() - 7); // Increased window slightly
 
-        console.log(`Found ${items.length} items in RSS feed for ${source.name}`);
-
-        for (const el of items.toArray()) {
+        // Parallel detail scraping
+        const articlePromises = items.toArray().map(async (el) => {
             const item = $(el);
             const title = cleanTitle(item.find('title').text().trim());
             const url = item.find('link').text().trim();
             const pubDateStr = item.find('pubDate').text().trim();
 
-            if (!url) {
-                console.log(`Skipping item without URL: ${title}`);
-                continue;
-            }
+            if (!url) return null;
 
-            // Parse and check publication date
             if (pubDateStr) {
                 const pubDate = new Date(pubDateStr);
-                if (!isNaN(pubDate.getTime()) && pubDate < fourDaysAgo) {
-                    console.log(`Skipping old article from ${source.name}: ${title} (${pubDateStr})`);
-                    continue;
-                }
+                if (!isNaN(pubDate.getTime()) && pubDate < fourDaysAgo) return null;
             }
 
-            console.log(`Scraping detail for: ${title}`);
-
-            // --- Deep Scraping: Always follow the link to get high-quality images and full text ---
             const details = await scrapeDetail(url, 'article, .post-content, .entry-content, body');
+            if (!details.text || details.text.length < 100) return null;
 
             const video = details.video;
             const images = details.images;
             const mainImage = details.image;
 
-            if (!details.text || details.text.length < 100) {
-                console.log(`Skipping article with insufficient text: ${title}`);
-                continue;
-            }
-
-            articles.push({
+            return {
                 title,
                 url,
                 mediaType: video ? 'video' : 'image',
@@ -237,13 +236,11 @@ async function scrapeRssSource(source: NewsSource): Promise<ScrapedArticle[]> {
                     images: images,
                     videoUrl: video
                 }
-            });
+            } as ScrapedArticle;
+        });
 
-            console.log(`✓ Successfully scraped: ${title} from ${source.name}`);
-        }
-
-        console.log(`Completed ${source.name}: ${articles.length} articles found`);
-        return articles;
+        const results = await Promise.all(articlePromises);
+        return results.filter((a): a is ScrapedArticle => a !== null);
 
     } catch (e) {
         console.error(`Error scraping RSS ${source.name}:`, e);
@@ -265,14 +262,11 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
         const html = await response.text();
         const $ = cheerio.load(html);
 
-        const articles: ScrapedArticle[] = [];
-        const items = $(source.selector).slice(0, 10); // Get up to 10 items
+        const items = $(source.selector).slice(0, 5);
 
-        console.log(`Found ${items.length} items in HTML for ${source.name}`);
-
-        for (const el of items.toArray()) {
+        // Parallel detail scraping
+        const articlePromises = items.toArray().map(async (el) => {
             const item = $(el);
-
             let title = cleanTitle(item.find('h1, h2, h3, h4').first().text().trim());
             let url = item.find('a').attr('href');
 
@@ -283,34 +277,19 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
                 }
             }
 
-            if (!url) {
-                console.log(`Skipping HTML item without URL`);
-                continue;
-            }
-
+            if (!url) return null;
             if (!url.startsWith('http')) {
                 const baseUrl = new URL(source.url).origin;
                 url = new URL(url, baseUrl).toString();
             }
 
-            console.log(`Scraping HTML detail for: ${title}`);
             const details = await scrapeDetail(url, 'article, .post-content, .entry-content, body');
+            if (!details.text || details.text.length < 100) return null;
 
-            if (!details.text || details.text.length < 100) {
-                console.log(`Skipping HTML article with insufficient text: ${title}`);
-                continue;
-            }
-
-            let mediaType: 'video' | 'image' | 'text' = 'text';
             const mediaUrl = details.video || details.image;
+            const mediaType: 'video' | 'image' | 'text' = details.video ? 'video' : (details.image ? 'image' : 'text');
 
-            if (details.video) {
-                mediaType = 'video';
-            } else if (details.image) {
-                mediaType = 'image';
-            }
-
-            articles.push({
+            return {
                 title,
                 url,
                 mediaType,
@@ -321,13 +300,11 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
                     images: details.images,
                     videoUrl: details.video
                 }
-            });
+            } as ScrapedArticle;
+        });
 
-            console.log(`✓ Successfully scraped HTML: ${title} from ${source.name}`);
-        }
-
-        console.log(`Completed HTML ${source.name}: ${articles.length} articles found`);
-        return articles;
+        const results = await Promise.all(articlePromises);
+        return results.filter((a): a is ScrapedArticle => a !== null);
 
     } catch (error) {
         console.error(`Error scraping HTML ${source.name}:`, error);
@@ -344,10 +321,55 @@ export async function scrapeGenericSource(source: NewsSource): Promise<ScrapedAr
 
 export async function scrapeAllSources(): Promise<ScrapedArticle[]> {
     const sources = await getNewsSources();
-    console.log(`Scraping ${sources.length} sources...`);
+    const instaTags = await getInstagramHashtags();
 
-    const results = await Promise.all(sources.map((source: NewsSource) => scrapeGenericSource(source)));
+    console.log(`Scraping ${sources.length} news sources, YouTube, and ${instaTags.length} Instagram tags...`);
 
-    // Check if results are null/empty and filter them out, then flatten
-    return results.flat().filter((article: ScrapedArticle) => article !== null);
+    // 1. News Sources (Parallel per source, and parallel within source)
+    const newsResults = await Promise.all(sources.map((source: NewsSource) => scrapeGenericSource(source)));
+
+    // 2. YouTube Videos
+    let youtubeArticles: ScrapedArticle[] = [];
+    try {
+        const videos = await fetchLatestYoutubeVideos();
+        youtubeArticles = videos.map(v => ({
+            title: v.title,
+            url: v.url || `https://www.youtube.com/watch?v=${v.videoId}`,
+            mediaType: 'video' as const,
+            mediaUrl: `https://www.youtube.com/embed/${v.videoId}`,
+            text: `Neues Video von ${v.channel} auf YouTube!`,
+            source: v.channel,
+            media: {
+                videoUrl: `https://www.youtube.com/embed/${v.videoId}`,
+                images: [v.thumbnail]
+            }
+        }));
+    } catch (e) {
+        console.error("YouTube scraping failed:", e);
+    }
+
+    // 3. Instagram Tags
+    let instaArticles: ScrapedArticle[] = [];
+    try {
+        const instaResults = await Promise.all(instaTags.map(tag => searchInstagramHashtag(tag)));
+        instaArticles = instaResults.flat().map(p => ({
+            title: `Insta Clip von ${p.author}`,
+            url: p.url,
+            mediaType: p.type as 'video' | 'image',
+            mediaUrl: p.url,
+            text: p.caption || "Instagram Post",
+            source: "Instagram",
+            media: {
+                images: p.thumbnail ? [p.thumbnail] : [],
+                videoUrl: p.type === 'video' ? p.url : ""
+            }
+        }));
+    } catch (e) {
+        console.error("Instagram scraping failed:", e);
+    }
+
+    const allArticles = [...newsResults.flat(), ...youtubeArticles, ...instaArticles];
+
+    // Filter and unique check
+    return allArticles.filter((article: ScrapedArticle) => article !== null);
 }

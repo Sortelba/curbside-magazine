@@ -1,5 +1,6 @@
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import fs from 'fs';
 import path from 'path';
 
@@ -35,6 +36,9 @@ export async function POST(request: Request) {
         }
 
         fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+
+        // Invalidate homepage cache
+        revalidatePath('/');
 
         return NextResponse.json({ success: true });
     } catch (error) {

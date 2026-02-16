@@ -91,7 +91,7 @@ function AdminDashboardContent() {
     };
 
     // Settings State
-    const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [] });
+    const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [], showLearnCenter: false });
     const [settingsLoading, setSettingsLoading] = useState(false);
 
     // Edit State
@@ -122,7 +122,11 @@ function AdminDashboardContent() {
     const loadSettings = async () => {
         try {
             setSettingsLoading(true);
-            const res = await fetch(`/api/settings?key=${key}`);
+            // Add timestamp to prevent caching
+            const res = await fetch(`/api/settings?key=${key}&t=${Date.now()}`, {
+                cache: 'no-store',
+                headers: { 'Pragma': 'no-cache' }
+            });
             if (res.ok) {
                 const data = await res.json();
                 setSettings(data);
@@ -245,7 +249,7 @@ function AdminDashboardContent() {
         { id: "events", label: "Events", icon: Calendar },
         { id: "submissions", label: "Skatemap", icon: MapPin, badge: pendingCount },
         { id: "messages", label: "Messages", icon: MessageSquare },
-        { id: "settings", label: "Scanner Settings", icon: Settings },
+        { id: "settings", label: "Einstellungen", icon: Settings },
         { id: "about", label: "About", icon: FileText },
         { id: "posts", label: "Live Posts", icon: FileText }
     ];
@@ -317,13 +321,19 @@ function AdminDashboardContent() {
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
                                     <header className="flex justify-between items-end mb-8">
                                         <div>
-                                            <h2 className="text-3xl font-black uppercase italic tracking-tighter">Scanner Settings</h2>
+                                            <h2 className="text-3xl font-black uppercase italic tracking-tighter">Einstellungen</h2>
                                             <p className="text-muted-foreground">Konfiguration der News-Scraper und YouTube-Kanäle.</p>
                                         </div>
                                         <button onClick={loadSettings} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
                                             <RefreshCw size={20} className={cn(settingsLoading && "animate-spin")} />
                                         </button>
                                     </header>
+
+                                    {/* General Settings */}
+                                    <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm">
+                                        <h3 className="text-xl font-black uppercase italic tracking-tight mb-4">Allgemein</h3>
+                                        {/* Learn Center Toggle Removed - Use Learn Tab */}
+                                    </div>
 
                                     <div className="space-y-6">
                                         {/* YouTube Channels */}
@@ -1157,7 +1167,7 @@ function AdminDashboardContent() {
 
                             {activeTab === "learn" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                                    <ManageLearn keyStr={key || ''} />
+                                    <ManageLearn keyStr={key || ''} settings={settings} onSaveSettings={saveSettings} />
                                 </motion.div>
                             )}
 
@@ -2554,7 +2564,7 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
 }
 
 
-function ManageLearn({ keyStr }: { keyStr: string }) {
+function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; settings?: any; onSaveSettings?: (newSettings: any) => void }) {
     const { t } = useLanguage();
     const [data, setData] = useState<any>({ basics: [], coaches: [], randomizer: { beginner: [], intermediate: [], pro: [] }, channels: [] });
     const [loading, setLoading] = useState(false);
