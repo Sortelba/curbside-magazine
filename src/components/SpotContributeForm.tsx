@@ -50,20 +50,27 @@ export function SpotContributeForm() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+
         try {
-            const res = await fetch('/api/map/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
-            if (res.ok) {
-                setIsSuccess(true);
-            } else {
-                alert("Fehler beim Senden. Bitte versuche es später erneut.");
-            }
+            // Build the email body
+            const subject = `Spot Submission: ${formData.name}`;
+            const body = `
+Spot/Shop Name: ${formData.name}
+Contributor: ${formData.contributor}
+Category: ${formData.category}
+Location/Address: ${formData.location}
+Description: ${formData.description}
+Media URL: ${formData.mediaUrl}
+YouTube URL: ${formData.youtubeUrl}
+            `.trim();
+
+            const mailtoUrl = `mailto:sortelba@online.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+
+            setIsSuccess(true);
         } catch (error) {
             console.error("Submission error:", error);
-            alert("Netzwerkfehler. Bitte prüfe deine Verbindung.");
+            alert("Fehler beim Vorbereiten der E-Mail.");
         } finally {
             setIsSubmitting(false);
         }
@@ -105,8 +112,8 @@ export function SpotContributeForm() {
                                 <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <CheckCircle2 size={40} />
                                 </div>
-                                <h2 className="text-3xl font-black uppercase italic tracking-tighter mb-4">Danke Bru!</h2>
-                                <p className="text-muted-foreground text-lg mb-8">Dein Spot wurde eingereicht und wird bald geprüft.</p>
+                                <h2 className="text-3xl font-black uppercase italic tracking-tighter mb-4">Fast geschafft!</h2>
+                                <p className="text-muted-foreground text-lg mb-8">Dein E-Mail Programm sollte sich nun öffnen. Sende die Mail einfach ab, damit wir deinen Spot prüfen können.</p>
                                 <div className="flex flex-col gap-3">
                                     <button
                                         onClick={handleReset}
@@ -285,7 +292,7 @@ export function SpotContributeForm() {
                                     </div>
 
                                     <p className="text-[10px] text-center text-muted-foreground uppercase tracking-widest font-medium">
-                                        Mit dem Abschicken erklärst du dich bereit, dass dein Beitrag öffentlich sichtbar wird.
+                                        Durch das Absenden öffnet sich dein E-Mail Programm. Wir speichern keine Daten direkt auf dem Server.
                                     </p>
                                 </form>
                             </>

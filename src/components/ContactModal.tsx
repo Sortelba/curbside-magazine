@@ -42,7 +42,7 @@ export default function ContactModal() {
 
         // Mailto fallback for static hosting
         const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        window.location.href = `mailto:skatelife@sortelba.de?subject=${formData.subject}&body=${body}`;
+        window.location.href = `mailto:sortelba@online.de?subject=${formData.subject}&body=${body}`;
 
         setIsOpen(false);
     };
