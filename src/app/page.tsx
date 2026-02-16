@@ -4,7 +4,6 @@ import { unstable_noStore as noStore } from 'next/cache';
 import HomeContent from "@/components/HomeContent";
 
 // Static rendering is used for GitHub Pages
-export const dynamic = 'force-dynamic';
 
 async function getPosts() {
   const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');
@@ -29,7 +28,6 @@ async function getLearnData() {
 }
 
 export default async function Home() {
-  noStore();
   const allPosts = await getPosts();
   const learnData = await getLearnData();
 

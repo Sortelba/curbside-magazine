@@ -329,11 +329,6 @@ function AdminDashboardContent() {
                                         </button>
                                     </header>
 
-                                    {/* General Settings */}
-                                    <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm">
-                                        <h3 className="text-xl font-black uppercase italic tracking-tight mb-4">Allgemein</h3>
-                                        {/* Learn Center Toggle Removed - Use Learn Tab */}
-                                    </div>
 
                                     <div className="space-y-6">
                                         {/* YouTube Channels */}
