@@ -1,19 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Upload, MapPin, Youtube, Link as LinkIcon, Info } from "lucide-react";
 
-interface SpotContributeFormProps {
-    isOpen: boolean;
-    onClose: () => void;
-}
-
-export function SpotContributeForm({ isOpen, onClose }: SpotContributeFormProps) {
+export function SpotContributeForm() {
+    const [isOpen, setIsOpen] = useState(false);
     const [step, setStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+
+    useEffect(() => {
+        const handleOpen = () => {
+            setIsOpen(true);
+            setStep(1);
+            setIsSuccess(false);
+        };
+        window.addEventListener('open-spot-contribute', handleOpen);
+        return () => window.removeEventListener('open-spot-contribute', handleOpen);
+    }, []);
     const [isPicking, setIsPicking] = useState(false);
 
     const initialFormState = {
@@ -72,7 +78,7 @@ export function SpotContributeForm({ isOpen, onClose }: SpotContributeFormProps)
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    onClick={onClose}
+                    onClick={() => setIsOpen(false)}
                     className="absolute inset-0 bg-background/80 backdrop-blur-sm"
                 />
 
@@ -83,7 +89,7 @@ export function SpotContributeForm({ isOpen, onClose }: SpotContributeFormProps)
                     className={`relative w-full ${isPicking ? 'max-w-4xl' : 'max-w-lg'} bg-card border border-border rounded-[2.5rem] shadow-2xl overflow-hidden transition-all duration-500`}
                 >
                     <button
-                        onClick={onClose}
+                        onClick={() => setIsOpen(false)}
                         className="absolute top-6 right-6 p-2 rounded-full bg-muted text-muted-foreground hover:text-foreground transition-colors z-[100]"
                     >
                         <X size={20} />
@@ -109,7 +115,7 @@ export function SpotContributeForm({ isOpen, onClose }: SpotContributeFormProps)
                                         Noch einen Spot eintragen
                                     </button>
                                     <button
-                                        onClick={onClose}
+                                        onClick={() => setIsOpen(false)}
                                         className="px-8 py-4 bg-foreground text-background font-black uppercase italic rounded-2xl hover:translate-y-[-2px] transition-transform"
                                     >
                                         Zurück zur Karte

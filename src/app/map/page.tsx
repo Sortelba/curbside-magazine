@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Loader2, Plus } from "lucide-react";
-import { SpotContributeForm } from "@/components/SpotContributeForm";
+import { Loader2 } from "lucide-react";
 
 // Dynamically import the map component to avoid SSR issues with Leaflet
 const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
@@ -17,8 +15,6 @@ const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
 });
 
 export default function MapPage() {
-    const [isContributeOpen, setIsContributeOpen] = useState(false);
-
     return (
         <div className="min-h-[calc(100vh-64px)] bg-background">
             <div className="container mx-auto py-12 px-4 max-w-7xl">
@@ -39,17 +35,6 @@ export default function MapPage() {
                                 </div>
                             </div>
                         </div>
-
-                        <button
-                            onClick={() => setIsContributeOpen(true)}
-                            className="group relative px-8 py-4 bg-foreground text-background font-black uppercase italic rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-xl whitespace-nowrap"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                            <div className="relative flex items-center gap-3">
-                                <Plus size={20} className="stroke-[3]" />
-                                <span>Spot eintragen</span>
-                            </div>
-                        </button>
                     </div>
                 </header>
 
@@ -57,11 +42,6 @@ export default function MapPage() {
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
                     <LeafletMap />
                 </section>
-
-                <SpotContributeForm
-                    isOpen={isContributeOpen}
-                    onClose={() => setIsContributeOpen(false)}
-                />
 
                 <footer className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="p-6 rounded-2xl bg-muted/30 border border-border/50">
@@ -74,7 +54,7 @@ export default function MapPage() {
                     </div>
                     <div className="p-6 rounded-2xl bg-muted/30 border border-border/50">
                         <h3 className="font-black uppercase italic text-lg mb-2">Contribute</h3>
-                        <p className="text-sm text-muted-foreground">Found a new spot? Share it with the community through our admin dashboard.</p>
+                        <p className="text-sm text-muted-foreground">Found a new spot? Share it with the community through the button in our footer.</p>
                     </div>
                 </footer>
             </div>

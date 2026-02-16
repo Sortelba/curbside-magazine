@@ -51,12 +51,20 @@ export default function Footer() {
                                 <Github className="h-6 w-6" />
                             </a>
                         </div>
-                        <button
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
-                            className="bg-foreground text-background px-6 py-2 rounded-full text-xs font-black uppercase italic tracking-wider hover:scale-105 transition-all"
-                        >
-                            {t("footer.contact")}
-                        </button>
+                        <div className="flex flex-wrap gap-3 justify-center md:justify-end">
+                            <button
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-spot-contribute'))}
+                                className="bg-muted text-foreground border border-border px-6 py-2 rounded-full text-xs font-black uppercase italic tracking-wider hover:bg-background transition-all"
+                            >
+                                {t("footer.contribute_spot")}
+                            </button>
+                            <button
+                                onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
+                                className="bg-foreground text-background px-6 py-2 rounded-full text-xs font-black uppercase italic tracking-wider hover:scale-105 transition-all"
+                            >
+                                {t("footer.contact")}
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-12 border-t border-border pt-8 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/50">
