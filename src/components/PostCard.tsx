@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Play, Image as ImageIcon, FileText, Instagram } from "lucide-react";
+import { ExternalLink, Play, Image as ImageIcon, FileText, LayoutGrid } from "lucide-react";
 import { cn, getYoutubeEmbedUrl } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -124,7 +124,7 @@ export default function PostCard({ type, title, content, date, description, tags
                     <div className="w-full h-48 flex items-center justify-center text-muted-foreground/20">
                         {type === 'text' && <FileText className="h-12 w-12" />}
                         {type === 'link' && <ExternalLink className="h-12 w-12" />}
-                        {type === 'instagram-mix' && <Instagram className="h-12 w-12" />}
+                        {type === 'instagram-mix' && <LayoutGrid className="h-12 w-12" />}
                         {type === 'video' && !onClick && <Play className="h-12 w-12" />} {/* Should not happen in grid usually */}
                     </div>
                 )}
@@ -135,7 +135,7 @@ export default function PostCard({ type, title, content, date, description, tags
                     {type === 'image' && <ImageIcon className="h-4 w-4" />}
                     {type === 'video' && <Play className="h-4 w-4" />}
                     {type === 'link' && <ExternalLink className="h-4 w-4" />}
-                    {type === 'instagram-mix' && <Instagram className="h-4 w-4" />}
+                    {type === 'instagram-mix' && <LayoutGrid className="h-4 w-4" />}
                 </div>
             </Wrapper>
 

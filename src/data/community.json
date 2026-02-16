@@ -368,20 +368,48 @@
     },
     {
       "id": "sec_projects",
-      "title": "Projects to Support",
+      "title": "Unterstützenswerte Projekte",
       "items": [
         {
           "id": "proj_1",
-          "name": "Skateistan",
-          "url": "https://skateistan.org/",
-          "description": "Empowering children through skateboarding and education.",
+          "name": "skate-aid e.V.",
+          "url": "https://www.skate-aid.org",
+          "description": "Deutschland / international: Sozialprojekt – nutzt Skateboarding in Jugendhilfe & Bildung",
           "image": ""
         },
         {
           "id": "proj_2",
-          "name": "DIY Spot Project",
-          "url": "#",
-          "description": "Building our own spots.",
+          "name": "Skateistan",
+          "url": "https://www.skateistan.org",
+          "description": "International (u.a. Berlin): Bildung & Empowerment für Kinder durch Skateboarding",
+          "image": ""
+        },
+        {
+          "id": "proj_3",
+          "name": "Concrete Jungle Foundation",
+          "url": "https://concretejunglefoundation.org",
+          "description": "weltweit: Baut Skateparks & Jugendprogramme in benachteiligten Regionen",
+          "image": ""
+        },
+        {
+          "id": "proj_4",
+          "name": "Make Life Skate Life",
+          "url": "https://makelifeskatelife.org",
+          "description": "weltweit: Crowdfunding & Bau von DIY-Skateparks",
+          "image": ""
+        },
+        {
+          "id": "proj_5",
+          "name": "Longboard Girls Crew",
+          "url": "https://longboardgirlscrew.com",
+          "description": "weltweit: Community & Empowerment-Projekt für Frauen im Skateboarding",
+          "image": ""
+        },
+        {
+          "id": "proj_6",
+          "name": "Goodpush",
+          "url": "https://goodpush.org",
+          "description": "international: Netzwerk & Förderprogramm für soziale Skate-Projekte",
           "image": ""
         }
       ]
@@ -428,9 +456,73 @@
       ]
     },
     {
-      "id": "sec_1771195336245",
+      "id": "sec_clubs",
       "title": "Deutsche Skateboard Vereine",
-      "items": []
+      "items": [
+        {
+          "id": "club_1",
+          "name": "1. Berliner Skateboardverein e.V.",
+          "city": "Berlin",
+          "state": "Berlin",
+          "url": "https://www.skateboardverein-berlin.de"
+        },
+        {
+          "id": "club_2",
+          "name": "Skateboard e.V.",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "url": "https://skateboardev.de"
+        },
+        {
+          "id": "club_3",
+          "name": "1. Skateboardverein Kassel e.V. („Mr. Wilson“)",
+          "city": "Kassel",
+          "state": "Hessen",
+          "url": "https://www.mister-wilson.de"
+        },
+        {
+          "id": "club_4",
+          "name": "OG Skateboard e.V.",
+          "city": "Offenburg",
+          "state": "Baden-Württemberg",
+          "url": "https://og-skateboard.de"
+        },
+        {
+          "id": "club_5",
+          "name": "KNallbrett e.V.",
+          "city": "Konstanz",
+          "state": "Baden-Württemberg",
+          "url": "https://knallbrett.de"
+        },
+        {
+          "id": "club_6",
+          "name": "spot Regensburg e.V.",
+          "city": "Regensburg",
+          "state": "Bayern",
+          "url": "https://spot-ev.de"
+        },
+        {
+          "id": "club_7",
+          "name": "Skate`n`Rock e.V.",
+          "city": "Nordheim am Main (Würzburg)",
+          "state": "Bayern",
+          "url": "https://www.skate-n-rock.com"
+        },
+        {
+          "id": "club_8",
+          "name": "Peiner Skateboardverein e.V.",
+          "city": "Peine",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_9",
+          "name": "Skate-Aid Kevelaer e.V.",
+          "city": "Kevelaer",
+          "state": "Nordrhein-Westfalen",
+          "url": ""
+        }
+      ]
     }
   ]
 }

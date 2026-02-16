@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink } from "lucide-react";
+import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function CommunityContent({ data }: { data: any }) {
@@ -14,12 +14,14 @@ export default function CommunityContent({ data }: { data: any }) {
 
     const sections = [
         { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
+        { id: "sec_clubs", name: t("community.clubs"), icon: Users },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
         { id: "youtubeskateboarding", name: t("community.youtube"), icon: Youtube }
     ];
 
     const getTranslation = (id: string, defaultTitle: string) => {
         if (id === "sec_shops") return t("community.shops");
+        if (id === "sec_clubs") return t("community.clubs");
         if (id === "sec_projects") return t("community.projects");
         if (id === "youtubeskateboarding") return t("community.youtube");
         return defaultTitle;
@@ -192,31 +194,76 @@ export default function CommunityContent({ data }: { data: any }) {
                                 )}
 
                                 {activeSection === "sec_projects" && (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        {activeSectionData?.items.map((item: any) => (
-                                            <a
-                                                key={item.id}
-                                                href={item.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="group bg-muted rounded-3xl overflow-hidden border border-border hover:border-foreground transition-all flex flex-col shadow-sm hover:shadow-xl"
-                                            >
-                                                {item.image && (
-                                                    <div className="aspect-video bg-black overflow-hidden relative">
-                                                        <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                                                            <h3 className="text-2xl font-black uppercase italic tracking-tighter text-white">{item.name}</h3>
+                                    <div className="space-y-12">
+                                        <div className="text-center max-w-2xl mx-auto mb-12">
+                                            <p className="text-lg text-muted-foreground italic">Diese Projekte nutzen Skateboarding, um die Welt ein Stück besser zu machen. Support is everything!</p>
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            {activeSectionData?.items.map((item: any) => (
+                                                <a
+                                                    key={item.id}
+                                                    href={item.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="group bg-muted rounded-3xl overflow-hidden border border-border hover:border-foreground transition-all flex flex-col shadow-sm hover:shadow-xl"
+                                                >
+                                                    {item.image && (
+                                                        <div className="aspect-video bg-black overflow-hidden relative">
+                                                            <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                                                <h3 className="text-2xl font-black uppercase italic tracking-tighter text-white">{item.name}</h3>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                    <div className="p-8 flex flex-col flex-1">
+                                                        {!item.image && <h3 className="text-2xl font-black uppercase italic tracking-tighter mb-4 group-hover:text-primary transition-colors">{item.name}</h3>}
+                                                        <p className="text-muted-foreground mb-6 leading-relaxed text-sm flex-1">{item.description}</p>
+                                                        <div className="flex items-center gap-2 text-xs font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform mt-auto">
+                                                            Mehr erfahren <ChevronRight size={16} />
                                                         </div>
                                                     </div>
-                                                )}
-                                                <div className="p-8">
-                                                    {!item.image && <h3 className="text-2xl font-black uppercase italic tracking-tighter mb-4">{item.name}</h3>}
-                                                    <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
-                                                    <div className="flex items-center gap-2 text-sm font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform">
-                                                        Mehr erfahren <ChevronRight size={18} />
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {activeSection === "sec_clubs" && (
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {activeSectionData?.items.map((item: any) => (
+                                            <div
+                                                key={item.id}
+                                                className="group bg-muted p-8 rounded-3xl border border-border hover:border-foreground transition-all flex flex-col justify-between shadow-sm hover:shadow-xl"
+                                            >
+                                                <div>
+                                                    <div className="flex justify-between items-start gap-4 mb-4">
+                                                        <h3 className="text-2xl font-black uppercase italic tracking-tighter group-hover:text-primary transition-colors">{item.name}</h3>
+                                                        {item.url && (
+                                                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-background rounded-full transition-colors">
+                                                                <ExternalLink size={20} />
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                    <div className="space-y-3 font-bold uppercase tracking-widest text-muted-foreground text-sm">
+                                                        <div className="flex items-center gap-2">
+                                                            <MapPin size={16} className="text-primary" />
+                                                            <span>{item.city}, {item.state}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                                {item.url ? (
+                                                    <a
+                                                        href={item.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="mt-8 flex items-center gap-2 text-sm font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform"
+                                                    >
+                                                        Zur Website <ChevronRight size={18} />
+                                                    </a>
+                                                ) : (
+                                                    <p className="mt-8 text-sm italic text-muted-foreground">Keine offizielle Website bekannt</p>
+                                                )}
+                                            </div>
                                         ))}
                                     </div>
                                 )}

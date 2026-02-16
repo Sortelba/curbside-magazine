@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { fetchLatestYoutubeVideos } from '@/lib/youtube';
 import fs from 'fs';
@@ -6,6 +7,7 @@ import path from 'path';
 const CRON_SECRET = process.env.CRON_SECRET || 'skatelife-secret';
 
 export async function GET(request: Request) {
+    if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json({ articles: [] });
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
 

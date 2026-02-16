@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Calendar, Facebook, Twitter, Linkedin } from "lucide-react";
+import { X, ExternalLink, Calendar } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useEffect } from "react";
 
@@ -134,18 +134,6 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
                                     {post.type === 'link' || post.media?.externalLink ? 'Visit Link' : 'Read Original'} <ExternalLink className="h-4 w-4" />
                                 </a>
 
-                                {/* Share Buttons (Mock) */}
-                                <div className="flex gap-4">
-                                    <button className="p-2 bg-muted rounded-full hover:bg-background border border-transparent hover:border-border transition-all">
-                                        <Facebook className="h-4 w-4" />
-                                    </button>
-                                    <button className="p-2 bg-muted rounded-full hover:bg-background border border-transparent hover:border-border transition-all">
-                                        <Twitter className="h-4 w-4" />
-                                    </button>
-                                    <button className="p-2 bg-muted rounded-full hover:bg-background border border-transparent hover:border-border transition-all">
-                                        <Linkedin className="h-4 w-4" />
-                                    </button>
-                                </div>
                             </div>
 
                         </div>

@@ -1,9 +1,11 @@
+export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { searchInstagramHashtag } from '@/lib/instagram';
 
 // export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
+    if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json({ articles: [] });
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
     const hashtag = searchParams.get('hashtag');

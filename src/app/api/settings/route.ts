@@ -2,10 +2,11 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-// Prevent caching
-// export const dynamic = 'force-dynamic';
+// Force dynamic rendering so env vars work at runtime
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
+    if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json({});
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
 

@@ -10,21 +10,36 @@ export async function rewriteNews(article: { title: string; text: string; source
   }
 
   const prompt = `
-    You are a passionate skateboarder and senior editor for "CURBSIDE".
-    Rewrite the following article content into engaging blog posts in both **GERMAN** and **ENGLISH**.
-    
-    GERMAN must be authentic "skater speak" ( casual, informal, use Du).
-    ENGLISH must be professional blog style.
+    You are a passionate skateboarder and senior editor for "CURBSIDE", the most authentic German skate platform.
+    Your task is to rewrite news content from a given source into two distinct blog versions: a German one for our core audience and an English one for the global community.
+
+    CRITICAL INSTRUCTIONS:
+    1. **GERMAN VERSION**: 
+       - Must be authentic "skater speak". Use terms like "Sick", "Gnarly", "Spot", "Session", "Pushen".
+       - Use "Du" (informal). 
+       - Tone: energetic, community-focused, "from skaters for skaters".
+       - DO NOT translate literally. Retell the story in a way a local skater would tell it to a friend.
+
+    2. **ENGLISH VERSION**:
+       - Professional skate journalism style (think Thrasher or Jenkem).
+       - Engaging, clear, and informative.
+       - Global appeal.
+
+    3. **OUTPUT**:
+       - You MUST return a valid JSON object.
+       - BOTH "de" and "en" fields must be fully populated with unique content in their respective languages.
+       - If the source is in English, translate it to German first, then refine the English version.
+       - Title should be catchy and uppercase/italic where appropriate (handled by UI, but keep it punchy).
 
     Original Title: ${article.title}
     Source: ${article.source}
-    Content: ${article.text.substring(0, 2500)}
+    Content: ${article.text.substring(0, 3000)}
 
-    Output valid JSON:
+    JSON Structure:
     {
-      "de": { "title": "German Title", "content": "German content" },
-      "en": { "title": "English Title", "content": "English content" },
-      "tags": ["news"]
+      "de": { "title": "Deutscher Titel", "content": "Deutscher Text im Skater-Slang..." },
+      "en": { "title": "English Title", "content": "English professional skate blog text..." },
+      "tags": ["news", "kultur"]
     }
   `;
 

@@ -6,13 +6,73 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 
 const SubmissionMapPreview = dynamic(() => import("@/components/SubmissionMapPreview"), { ssr: false });
 const MapPinManager = dynamic(() => import("@/components/MapPinManager"), { ssr: false });
+
+function CollapsibleSection({
+    title,
+    icon: Icon,
+    children,
+    isOpen,
+    onToggle,
+    badge
+}: {
+    title: string;
+    icon: any;
+    children: React.ReactNode;
+    isOpen: boolean;
+    onToggle: () => void;
+    badge?: number;
+}) {
+    return (
+        <div className="bg-card border-2 border-border rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div
+                className={cn(
+                    "p-6 cursor-pointer transition-colors flex items-center justify-between",
+                    isOpen ? "bg-primary/5 border-b-2 border-border" : "hover:bg-muted/30"
+                )}
+                onClick={onToggle}
+            >
+                <div className="flex items-center gap-4">
+                    <div className={cn(
+                        "p-2 rounded-xl transition-colors",
+                        isOpen ? "bg-primary text-primary-foreground" : "bg-muted"
+                    )}>
+                        <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                        <h3 className="text-xl font-black uppercase italic tracking-tight leading-tight">{title}</h3>
+                        {badge !== undefined && badge > 0 && <span className="text-[10px] font-mono text-muted-foreground uppercase">{badge} Items</span>}
+                    </div>
+                </div>
+                <div className={cn("p-2 transition-transform", isOpen && "rotate-180")}>
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+            </div>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <div className="p-8 border-t border-border">
+                            {children}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 function AdminDashboardContent() {
     const searchParams = useSearchParams();
@@ -23,6 +83,12 @@ function AdminDashboardContent() {
     const [activeTab, setActiveTab] = useState<string>("news");
     const [skatemapSub, setSkatemapSub] = useState<"pending" | "remove">("pending");
     const [pendingCount, setPendingCount] = useState(0);
+
+    // Collapsible Categories State
+    const [expandedSettings, setExpandedSettings] = useState<string[]>(["youtube"]);
+    const toggleSetting = (id: string) => {
+        setExpandedSettings(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+    };
 
     // Settings State
     const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [] });
@@ -38,6 +104,14 @@ function AdminDashboardContent() {
     const [newsUrl, setNewsUrl] = useState("");
     const [newsSelector, setNewsSelector] = useState("");
     const [newsType, setNewsType] = useState<"rss" | "html">("rss");
+
+    // Nested Collapsible States for Settings
+    const [showExistingYoutube, setShowExistingYoutube] = useState(false);
+    const [showExistingNews, setShowExistingNews] = useState(false);
+    const [showExistingInstagram, setShowExistingInstagram] = useState(false);
+
+    const [instaHashtag, setInstaHashtag] = useState("");
+    const [editingInstagramIndex, setEditingInstagramIndex] = useState<number | null>(null);
 
     useEffect(() => {
         if (activeTab === 'settings') {
@@ -170,6 +244,7 @@ function AdminDashboardContent() {
         { id: "community", label: "Community", icon: Globe },
         { id: "events", label: "Events", icon: Calendar },
         { id: "submissions", label: "Skatemap", icon: MapPin, badge: pendingCount },
+        { id: "messages", label: "Messages", icon: MessageSquare },
         { id: "settings", label: "Scanner Settings", icon: Settings },
         { id: "about", label: "About", icon: FileText },
         { id: "posts", label: "Live Posts", icon: FileText }
@@ -239,308 +314,489 @@ function AdminDashboardContent() {
                             className="space-y-8"
                         >
                             {activeTab === "settings" && (
-                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
-                                    <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                                        <h2 className="text-2xl font-black uppercase italic tracking-tighter mb-6 flex items-center gap-2">
-                                            <Settings className="h-6 w-6 text-primary" /> Scanner Settings
-                                        </h2>
+                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
+                                    <header className="flex justify-between items-end mb-8">
+                                        <div>
+                                            <h2 className="text-3xl font-black uppercase italic tracking-tighter">Scanner Settings</h2>
+                                            <p className="text-muted-foreground">Konfiguration der News-Scraper und YouTube-Kanäle.</p>
+                                        </div>
+                                        <button onClick={loadSettings} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
+                                            <RefreshCw size={20} className={cn(settingsLoading && "animate-spin")} />
+                                        </button>
+                                    </header>
 
+                                    <div className="space-y-6">
                                         {/* YouTube Channels */}
-                                        <div className="mb-8">
-                                            <h3 className="text-lg font-bold uppercase mb-4 flex items-center gap-2 text-red-500">
-                                                <Youtube className="h-5 w-5" /> YouTube Channels
-                                            </h3>
-                                            <div className="grid gap-3 mb-4">
-                                                {settings.youtubeChannels?.map((channel: any, idx: number) => (
-                                                    <div key={idx} className={cn(
-                                                        "flex items-center justify-between bg-muted/30 p-3 rounded-lg border transition-all",
-                                                        editingYoutubeIndex === idx ? "border-primary bg-primary/5" : "border-border"
-                                                    )}>
-                                                        <div className="flex-1">
-                                                            <div className="font-bold">{channel.name}</div>
-                                                            <div className="text-xs font-mono text-muted-foreground">{channel.id}</div>
-                                                        </div>
-                                                        <div className="flex gap-2">
-                                                            <button
-                                                                onClick={() => {
-                                                                    setEditingYoutubeIndex(idx);
-                                                                    setYtName(channel.name);
-                                                                    setYtId(channel.id);
-                                                                    document.getElementById('yt-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                                }}
-                                                                className="p-2 hover:bg-primary/10 text-primary rounded-full transition-colors"
-                                                            >
-                                                                <Settings className="h-4 w-4" />
-                                                            </button>
-                                                            <button
-                                                                onClick={() => {
-                                                                    if (confirm("Delete this channel?")) {
-                                                                        const newChannels = settings.youtubeChannels.filter((_: any, i: number) => i !== idx);
-                                                                        saveSettings({ ...settings, youtubeChannels: newChannels });
-                                                                        if (editingYoutubeIndex === idx) {
-                                                                            setEditingYoutubeIndex(null);
-                                                                            setYtName("");
-                                                                            setYtId("");
-                                                                        }
-                                                                    }
-                                                                }}
-                                                                className="p-2 hover:bg-destructive/10 text-destructive rounded-full transition-colors"
-                                                            >
-                                                                <Trash2 className="h-4 w-4" />
-                                                            </button>
-                                                        </div>
+                                        <CollapsibleSection
+                                            title="YouTube Kanäle"
+                                            icon={Youtube}
+                                            isOpen={expandedSettings.includes("youtube")}
+                                            onToggle={() => toggleSetting("youtube")}
+                                            badge={settings.youtubeChannels?.length}
+                                        >
+                                            <div className="space-y-6">
+                                                {/* Add Form First */}
+                                                <div id="yt-form-container" className={cn(
+                                                    "flex flex-col md:flex-row gap-4 items-end bg-card p-6 rounded-2xl border-2 transition-all shadow-sm",
+                                                    editingYoutubeIndex !== null ? "border-primary ring-4 ring-primary/10" : "border-border bg-muted/5"
+                                                )}>
+                                                    <div className="flex-1 w-full grid gap-2">
+                                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Channel Name</label>
+                                                        <input
+                                                            value={ytName}
+                                                            onChange={(e) => setYtName(e.target.value)}
+                                                            placeholder="Name (z.B. Nine Club)"
+                                                            className="w-full p-3 bg-muted/30 border border-input rounded-xl text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                                        />
                                                     </div>
-                                                ))}
-                                            </div>
-                                            <div id="yt-form-container" className={cn(
-                                                "flex gap-2 items-end bg-card p-4 rounded-xl border transition-all shadow-sm",
-                                                editingYoutubeIndex !== null ? "border-primary ring-2 ring-primary/20" : "border-border"
-                                            )}>
-                                                <div className="flex-1 grid gap-2">
-                                                    <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Channel Name</label>
-                                                    <input
-                                                        value={ytName}
-                                                        onChange={(e) => setYtName(e.target.value)}
-                                                        placeholder="Channel Name"
-                                                        className="w-full p-2 bg-muted/50 border border-input rounded text-sm font-bold"
-                                                    />
-                                                </div>
-                                                <div className="flex-1 grid gap-2">
-                                                    <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Channel ID</label>
-                                                    <input
-                                                        value={ytId}
-                                                        onChange={(e) => setYtId(e.target.value)}
-                                                        placeholder="Channel ID"
-                                                        className="w-full p-2 bg-muted/50 border border-input rounded font-mono text-sm"
-                                                    />
-                                                </div>
-                                                <div className="flex gap-2">
-                                                    {editingYoutubeIndex !== null && (
+                                                    <div className="flex-1 w-full grid gap-2">
+                                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Channel ID</label>
+                                                        <input
+                                                            value={ytId}
+                                                            onChange={(e) => setYtId(e.target.value)}
+                                                            placeholder="YouTube Channel ID"
+                                                            className="w-full p-3 bg-muted/30 border border-input rounded-xl font-mono text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                                        />
+                                                    </div>
+                                                    <div className="flex gap-2 w-full md:w-auto">
+                                                        {editingYoutubeIndex !== null && (
+                                                            <button
+                                                                onClick={() => {
+                                                                    setEditingYoutubeIndex(null);
+                                                                    setYtName("");
+                                                                    setYtId("");
+                                                                }}
+                                                                className="flex-1 md:flex-none px-4 py-3 hover:bg-muted text-muted-foreground rounded-xl font-black uppercase italic text-xs tracking-widest"
+                                                            >
+                                                                Abbrechen
+                                                            </button>
+                                                        )}
                                                         <button
                                                             onClick={() => {
-                                                                setEditingYoutubeIndex(null);
-                                                                setYtName("");
-                                                                setYtId("");
-                                                            }}
-                                                            className="px-4 py-2 hover:bg-muted text-muted-foreground rounded font-bold text-sm uppercase"
-                                                        >
-                                                            Cancel
-                                                        </button>
-                                                    )}
-                                                    <button
-                                                        onClick={() => {
-                                                            if (ytName && ytId) {
-                                                                let newChannels = [...(settings.youtubeChannels || [])];
-                                                                if (editingYoutubeIndex !== null) {
-                                                                    newChannels[editingYoutubeIndex] = { name: ytName, id: ytId };
-                                                                } else {
-                                                                    newChannels.push({ name: ytName, id: ytId });
+                                                                if (ytName && ytId) {
+                                                                    let newChannels = [...(settings.youtubeChannels || [])];
+                                                                    if (editingYoutubeIndex !== null) {
+                                                                        newChannels[editingYoutubeIndex] = { name: ytName, id: ytId };
+                                                                    } else {
+                                                                        newChannels.push({ name: ytName, id: ytId });
+                                                                    }
+                                                                    saveSettings({ ...settings, youtubeChannels: newChannels });
+                                                                    setEditingYoutubeIndex(null);
+                                                                    setYtName("");
+                                                                    setYtId("");
                                                                 }
-                                                                saveSettings({ ...settings, youtubeChannels: newChannels });
-                                                                setEditingYoutubeIndex(null);
-                                                                setYtName("");
-                                                                setYtId("");
-                                                            }
-                                                        }}
-                                                        className="px-6 py-2 bg-primary text-primary-foreground rounded hover:opacity-90 font-bold text-sm uppercase shadow-lg shadow-primary/20"
+                                                            }}
+                                                            className="flex-1 md:flex-none px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
+                                                        >
+                                                            {editingYoutubeIndex !== null ? "Aktualisieren" : "Hinzufügen"}
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                {/* Collapsible List of Existing Items */}
+                                                <div className="border border-border rounded-2xl overflow-hidden">
+                                                    <div
+                                                        onClick={() => setShowExistingYoutube(!showExistingYoutube)}
+                                                        className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
                                                     >
-                                                        {editingYoutubeIndex !== null ? "Update" : "Add"}
-                                                    </button>
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Kanäle</span>
+                                                            <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{settings.youtubeChannels?.length || 0}</span>
+                                                        </div>
+                                                        <div className={cn("transition-transform duration-200", showExistingYoutube && "rotate-180")}>
+                                                            <ChevronDown size={16} />
+                                                        </div>
+                                                    </div>
+                                                    <AnimatePresence>
+                                                        {showExistingYoutube && (
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: "auto", opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                className="overflow-hidden bg-background/50 border-t border-border"
+                                                            >
+                                                                <div className="p-4 grid gap-3">
+                                                                    {settings.youtubeChannels?.map((channel: any, idx: number) => (
+                                                                        <div key={idx} className={cn(
+                                                                            "flex items-center justify-between bg-muted/20 p-4 rounded-xl border transition-all",
+                                                                            editingYoutubeIndex === idx ? "border-primary bg-primary/5" : "border-border hover:border-primary/20"
+                                                                        )}>
+                                                                            <div className="flex-1">
+                                                                                <div className="font-bold text-lg italic uppercase">{channel.name}</div>
+                                                                                <div className="text-[10px] text-muted-foreground font-mono truncate max-w-[300px]">{channel.id}</div>
+                                                                            </div>
+                                                                            <div className="flex gap-2">
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        setEditingYoutubeIndex(idx);
+                                                                                        setYtName(channel.name);
+                                                                                        setYtId(channel.id);
+                                                                                        document.getElementById('yt-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-primary/10 text-primary rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Edit className="h-5 w-5" />
+                                                                                </button>
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        if (confirm("Kanal wirklich löschen?")) {
+                                                                                            const newChannels = settings.youtubeChannels.filter((_: any, i: number) => i !== idx);
+                                                                                            saveSettings({ ...settings, youtubeChannels: newChannels });
+                                                                                            if (editingYoutubeIndex === idx) {
+                                                                                                setEditingYoutubeIndex(null);
+                                                                                                setYtName("");
+                                                                                                setYtId("");
+                                                                                            }
+                                                                                        }
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-destructive/10 text-destructive rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Trash2 className="h-5 w-5" />
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    ))}
+                                                                    {(!settings.youtubeChannels || settings.youtubeChannels.length === 0) && (
+                                                                        <div className="text-center py-4 text-[10px] font-black uppercase text-muted-foreground italic">Keine Kanäle hinterlegt</div>
+                                                                    )}
+                                                                </div>
+                                                            </motion.div>
+                                                        )}
+                                                    </AnimatePresence>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div className="w-full h-px bg-border my-8" />
+                                        </CollapsibleSection>
 
                                         {/* News Sources */}
-                                        <div className="mb-8">
-                                            <h3 className="text-lg font-bold uppercase mb-4 flex items-center gap-2 text-blue-500">
-                                                <Newspaper className="h-5 w-5" /> News Sources
-                                            </h3>
-                                            <div className="grid gap-3 mb-4">
-                                                {settings.newsSources?.map((source: any, idx: number) => (
-                                                    <div key={idx} className={cn(
-                                                        "flex items-center justify-between bg-muted/30 p-3 rounded-lg border transition-all",
-                                                        editingNewsIndex === idx ? "border-primary bg-primary/5" : "border-border"
-                                                    )}>
-                                                        <div className="flex-1">
-                                                            <div className="flex items-center gap-2">
-                                                                <div className="font-bold">{source.name}</div>
-                                                                <span className="text-[9px] uppercase font-black px-1.5 py-0.5 bg-background rounded border border-border">{source.type || 'rss'}</span>
-                                                            </div>
-                                                            <div className="text-xs text-muted-foreground truncate max-w-[300px]">{source.url}</div>
-                                                            {source.selector && <div className="text-[10px] font-mono text-muted-foreground bg-muted p-1 rounded inline-block mt-1">{source.selector}</div>}
+                                        <CollapsibleSection
+                                            title="News Quellen"
+                                            icon={Newspaper}
+                                            isOpen={expandedSettings.includes("news")}
+                                            onToggle={() => toggleSetting("news")}
+                                            badge={settings.newsSources?.length}
+                                        >
+                                            <div className="space-y-6">
+                                                {/* Add Form First */}
+                                                <div id="news-form-container" className={cn(
+                                                    "flex flex-col gap-6 bg-card p-6 rounded-2xl border-2 transition-all shadow-sm",
+                                                    editingNewsIndex !== null ? "border-primary ring-4 ring-primary/10" : "border-border bg-muted/5"
+                                                )}>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        <div className="grid gap-2">
+                                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Quellname</label>
+                                                            <input
+                                                                value={newsName}
+                                                                onChange={(e) => setNewsName(e.target.value)}
+                                                                placeholder="Z.B. Thrasher News"
+                                                                className="w-full p-3 bg-muted/30 border border-input rounded-xl text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                                            />
                                                         </div>
-                                                        <div className="flex gap-2">
-                                                            <button
-                                                                onClick={() => {
-                                                                    setEditingNewsIndex(idx);
-                                                                    setNewsName(source.name);
-                                                                    setNewsUrl(source.url);
-                                                                    setNewsSelector(source.selector || "");
-                                                                    setNewsType(source.type || "rss");
-                                                                    document.getElementById('news-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                                }}
-                                                                className="p-2 hover:bg-primary/10 text-primary rounded-full transition-colors"
+                                                        <div className="grid gap-2">
+                                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Typ</label>
+                                                            <select
+                                                                value={newsType}
+                                                                onChange={(e) => setNewsType(e.target.value as "rss" | "html")}
+                                                                className="w-full p-3 bg-muted/30 border border-input rounded-xl text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none cursor-pointer"
                                                             >
-                                                                <Settings className="h-4 w-4" />
-                                                            </button>
-                                                            <button
-                                                                onClick={() => {
-                                                                    if (confirm("Delete this source?")) {
-                                                                        const newSources = settings.newsSources.filter((_: any, i: number) => i !== idx);
-                                                                        saveSettings({ ...settings, newsSources: newSources });
-                                                                        if (editingNewsIndex === idx) {
-                                                                            setEditingNewsIndex(null);
-                                                                            setNewsName("");
-                                                                            setNewsUrl("");
-                                                                            setNewsSelector("");
-                                                                            setNewsType("rss");
-                                                                        }
-                                                                    }
-                                                                }}
-                                                                className="p-2 hover:bg-destructive/10 text-destructive rounded-full transition-colors"
-                                                            >
-                                                                <Trash2 className="h-4 w-4" />
-                                                            </button>
+                                                                <option value="rss">RSS Feed</option>
+                                                                <option value="html">HTML Scraper</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                ))}
-                                            </div>
-                                            <div id="news-form-container" className={cn(
-                                                "flex flex-col gap-4 bg-card p-4 rounded-xl border transition-all shadow-sm",
-                                                editingNewsIndex !== null ? "border-primary ring-2 ring-primary/20" : "border-border"
-                                            )}>
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                     <div className="grid gap-2">
-                                                        <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Source Name</label>
+                                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">URL</label>
                                                         <input
-                                                            value={newsName}
-                                                            onChange={(e) => setNewsName(e.target.value)}
-                                                            placeholder="Source Name"
-                                                            className="w-full p-2 bg-muted/50 border border-input rounded text-sm font-bold"
+                                                            value={newsUrl}
+                                                            onChange={(e) => setNewsUrl(e.target.value)}
+                                                            placeholder="Z.B. https://site.com/rss"
+                                                            className="w-full p-3 bg-muted/30 border border-input rounded-xl text-sm font-mono focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                                                         />
                                                     </div>
-                                                    <div className="grid gap-2">
-                                                        <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Type</label>
-                                                        <select
-                                                            value={newsType}
-                                                            onChange={(e) => setNewsType(e.target.value as "rss" | "html")}
-                                                            className="w-full p-2 bg-muted/50 border border-input rounded text-sm font-bold"
-                                                        >
-                                                            <option value="rss">RSS Feed</option>
-                                                            <option value="html">HTML Scraper</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="grid gap-2">
-                                                    <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">URL</label>
-                                                    <input
-                                                        value={newsUrl}
-                                                        onChange={(e) => setNewsUrl(e.target.value)}
-                                                        placeholder="URL (e.g. https://site.com/rss)"
-                                                        className="w-full p-2 bg-muted/50 border border-input rounded text-sm font-mono"
-                                                    />
-                                                </div>
-                                                {newsType === 'html' && (
-                                                    <div className="grid gap-2">
-                                                        <label className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">CSS Selector</label>
-                                                        <input
-                                                            value={newsSelector}
-                                                            onChange={(e) => setNewsSelector(e.target.value)}
-                                                            placeholder="CSS Selector (e.g. article)"
-                                                            className="w-full p-2 bg-muted/50 border border-input rounded font-mono text-sm"
-                                                        />
-                                                    </div>
-                                                )}
-                                                <div className="flex gap-2 justify-end mt-2">
-                                                    {editingNewsIndex !== null && (
+                                                    {newsType === 'html' && (
+                                                        <div className="grid gap-2">
+                                                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">CSS Selector</label>
+                                                            <input
+                                                                value={newsSelector}
+                                                                onChange={(e) => setNewsSelector(e.target.value)}
+                                                                placeholder="Z.B. article"
+                                                                className="w-full p-3 bg-muted/30 border border-input rounded-xl font-mono text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                                            />
+                                                        </div>
+                                                    )}
+                                                    <div className="flex gap-2 justify-end pt-2 border-t border-border/50">
+                                                        {editingNewsIndex !== null && (
+                                                            <button
+                                                                onClick={() => {
+                                                                    setEditingNewsIndex(null);
+                                                                    setNewsName("");
+                                                                    setNewsUrl("");
+                                                                    setNewsSelector("");
+                                                                    setNewsType("rss");
+                                                                }}
+                                                                className="px-6 py-3 hover:bg-muted text-muted-foreground rounded-xl font-black uppercase italic text-xs tracking-widest"
+                                                            >
+                                                                Abbrechen
+                                                            </button>
+                                                        )}
                                                         <button
                                                             onClick={() => {
-                                                                setEditingNewsIndex(null);
-                                                                setNewsName("");
-                                                                setNewsUrl("");
-                                                                setNewsSelector("");
-                                                                setNewsType("rss");
-                                                            }}
-                                                            className="px-4 py-2 hover:bg-muted text-muted-foreground rounded font-bold text-sm uppercase"
-                                                        >
-                                                            Cancel
-                                                        </button>
-                                                    )}
-                                                    <button
-                                                        onClick={() => {
-                                                            if (newsName && newsUrl) {
-                                                                let newSources = [...(settings.newsSources || [])];
-                                                                const newSource = {
-                                                                    name: newsName,
-                                                                    url: newsUrl,
-                                                                    selector: newsSelector,
-                                                                    type: newsType
-                                                                };
+                                                                if (newsName && newsUrl) {
+                                                                    let newSources = [...(settings.newsSources || [])];
+                                                                    const newSource = {
+                                                                        name: newsName,
+                                                                        url: newsUrl,
+                                                                        selector: newsSelector,
+                                                                        type: newsType
+                                                                    };
 
-                                                                if (editingNewsIndex !== null) {
-                                                                    newSources[editingNewsIndex] = newSource;
-                                                                } else {
-                                                                    newSources.push(newSource);
+                                                                    if (editingNewsIndex !== null) {
+                                                                        newSources[editingNewsIndex] = newSource;
+                                                                    } else {
+                                                                        newSources.push(newSource);
+                                                                    }
+                                                                    saveSettings({ ...settings, newsSources: newSources });
+                                                                    setEditingNewsIndex(null);
+                                                                    setNewsName("");
+                                                                    setNewsUrl("");
+                                                                    setNewsSelector("");
+                                                                    setNewsType("rss");
                                                                 }
-                                                                saveSettings({ ...settings, newsSources: newSources });
-                                                                setEditingNewsIndex(null);
-                                                                setNewsName("");
-                                                                setNewsUrl("");
-                                                                setNewsSelector("");
-                                                                setNewsType("rss");
-                                                            }
-                                                        }}
-                                                        className="px-6 py-2 bg-primary text-primary-foreground rounded hover:opacity-90 font-bold text-sm uppercase shadow-lg shadow-primary/20"
+                                                            }}
+                                                            className="px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
+                                                        >
+                                                            {editingNewsIndex !== null ? "Aktualisieren" : "Hinzufügen"}
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                {/* Collapsible List of Existing Items */}
+                                                <div className="border border-border rounded-2xl overflow-hidden">
+                                                    <div
+                                                        onClick={() => setShowExistingNews(!showExistingNews)}
+                                                        className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
                                                     >
-                                                        {editingNewsIndex !== null ? "Update Source" : "Add Source"}
-                                                    </button>
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Quellen</span>
+                                                            <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{settings.newsSources?.length || 0}</span>
+                                                        </div>
+                                                        <div className={cn("transition-transform duration-200", showExistingNews && "rotate-180")}>
+                                                            <ChevronDown size={16} />
+                                                        </div>
+                                                    </div>
+                                                    <AnimatePresence>
+                                                        {showExistingNews && (
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: "auto", opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                className="overflow-hidden bg-background/50 border-t border-border"
+                                                            >
+                                                                <div className="p-4 grid gap-3">
+                                                                    {settings.newsSources?.map((source: any, idx: number) => (
+                                                                        <div key={idx} className={cn(
+                                                                            "flex items-center justify-between bg-muted/20 p-4 rounded-xl border transition-all",
+                                                                            editingNewsIndex === idx ? "border-primary bg-primary/5" : "border-border hover:border-primary/20"
+                                                                        )}>
+                                                                            <div className="flex-1">
+                                                                                <div className="flex items-center gap-2 mb-1">
+                                                                                    <div className="font-bold text-lg italic uppercase">{source.name}</div>
+                                                                                    <span className="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-background rounded-md border-2 border-border">{source.type || 'rss'}</span>
+                                                                                </div>
+                                                                                <div className="text-xs text-muted-foreground truncate max-w-[400px] font-mono">{source.url}</div>
+                                                                                {source.selector && <div className="text-[10px] font-mono text-muted-foreground bg-muted/50 px-2 py-1 rounded inline-block mt-2 font-bold">{source.selector}</div>}
+                                                                            </div>
+                                                                            <div className="flex gap-2">
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        setEditingNewsIndex(idx);
+                                                                                        setNewsName(source.name);
+                                                                                        setNewsUrl(source.url);
+                                                                                        setNewsSelector(source.selector || "");
+                                                                                        setNewsType(source.type || "rss");
+                                                                                        document.getElementById('news-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-primary/10 text-primary rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Edit className="h-5 w-5" />
+                                                                                </button>
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        if (confirm("Quelle wirklich löschen?")) {
+                                                                                            const newSources = settings.newsSources.filter((_: any, i: number) => i !== idx);
+                                                                                            saveSettings({ ...settings, newsSources: newSources });
+                                                                                            if (editingNewsIndex === idx) {
+                                                                                                setEditingNewsIndex(null);
+                                                                                                setNewsName("");
+                                                                                                setNewsUrl("");
+                                                                                                setNewsSelector("");
+                                                                                                setNewsType("rss");
+                                                                                            }
+                                                                                        }
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-destructive/10 text-destructive rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Trash2 className="h-5 w-5" />
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    ))}
+                                                                    {(!settings.newsSources || settings.newsSources.length === 0) && (
+                                                                        <div className="text-center py-4 text-[10px] font-black uppercase text-muted-foreground italic">Keine Quellen hinterlegt</div>
+                                                                    )}
+                                                                </div>
+                                                            </motion.div>
+                                                        )}
+                                                    </AnimatePresence>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div className="w-full h-px bg-border my-8" />
+                                        </CollapsibleSection>
 
                                         {/* Instagram Hashtags */}
-                                        <div>
-                                            <h3 className="text-lg font-bold uppercase mb-4 flex items-center gap-2 text-pink-500">
-                                                <Instagram className="h-5 w-5" /> Instagram Hashtags
-                                            </h3>
-                                            <div className="flex flex-wrap gap-2 mb-4">
-                                                {settings.instagramHashtags?.map((tag: string, idx: number) => (
-                                                    <div key={idx} className="flex items-center gap-2 bg-muted/30 px-3 py-1.5 rounded-full border border-border">
-                                                        <span className="font-bold">#{tag}</span>
+                                        <CollapsibleSection
+                                            title="Instagram Hashtags"
+                                            icon={Instagram}
+                                            isOpen={expandedSettings.includes("instagram")}
+                                            onToggle={() => toggleSetting("instagram")}
+                                            badge={settings.instagramHashtags?.length}
+                                        >
+                                            <div className="space-y-6">
+                                                {/* Add Form First */}
+                                                <div id="insta-form-container" className={cn(
+                                                    "flex flex-col md:flex-row gap-4 items-end bg-card p-6 rounded-2xl border-2 transition-all shadow-sm",
+                                                    editingInstagramIndex !== null ? "border-primary ring-4 ring-primary/10" : "border-border bg-muted/5"
+                                                )}>
+                                                    <div className="flex-1 w-full grid gap-2">
+                                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">
+                                                            {editingInstagramIndex !== null ? "Hashtag bearbeiten" : "Neuer Hashtag"}
+                                                        </label>
+                                                        <div className="relative">
+                                                            <span className="absolute left-4 top-1/2 -translate-y-1/2 font-black italic text-primary">#</span>
+                                                            <input
+                                                                value={instaHashtag}
+                                                                onChange={(e) => setInstaHashtag(e.target.value.replace('#', '').trim())}
+                                                                placeholder="skateboarding"
+                                                                className="w-full p-3 pl-8 bg-muted/30 border border-input rounded-xl text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all uppercase italic"
+                                                                onKeyDown={(e) => {
+                                                                    if (e.key === 'Enter' && instaHashtag) {
+                                                                        let newTags = [...(settings.instagramHashtags || [])];
+                                                                        if (editingInstagramIndex !== null) {
+                                                                            newTags[editingInstagramIndex] = instaHashtag;
+                                                                        } else {
+                                                                            newTags.push(instaHashtag);
+                                                                        }
+                                                                        saveSettings({ ...settings, instagramHashtags: newTags });
+                                                                        setInstaHashtag("");
+                                                                        setEditingInstagramIndex(null);
+                                                                    }
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex gap-2 w-full md:w-auto">
+                                                        {editingInstagramIndex !== null && (
+                                                            <button
+                                                                onClick={() => {
+                                                                    setEditingInstagramIndex(null);
+                                                                    setInstaHashtag("");
+                                                                }}
+                                                                className="flex-1 md:flex-none px-4 py-3 hover:bg-muted text-muted-foreground rounded-xl font-black uppercase italic text-xs tracking-widest"
+                                                            >
+                                                                Abbrechen
+                                                            </button>
+                                                        )}
                                                         <button
                                                             onClick={() => {
-                                                                const newTags = settings.instagramHashtags.filter((_: string, i: number) => i !== idx);
-                                                                saveSettings({ ...settings, instagramHashtags: newTags });
+                                                                if (instaHashtag) {
+                                                                    let newTags = [...(settings.instagramHashtags || [])];
+                                                                    if (editingInstagramIndex !== null) {
+                                                                        newTags[editingInstagramIndex] = instaHashtag;
+                                                                    } else {
+                                                                        newTags.push(instaHashtag);
+                                                                    }
+                                                                    saveSettings({ ...settings, instagramHashtags: newTags });
+                                                                    setInstaHashtag("");
+                                                                    setEditingInstagramIndex(null);
+                                                                }
                                                             }}
-                                                            className="hover:text-destructive transition-colors"
+                                                            className="flex-1 md:flex-none px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
                                                         >
-                                                            <X className="h-3 w-3" />
+                                                            {editingInstagramIndex !== null ? "Aktualisieren" : "Hinzufügen"}
                                                         </button>
                                                     </div>
-                                                ))}
-                                            </div>
-                                            <div className="flex gap-2 max-w-sm">
-                                                <input id="new-hashtag" placeholder="Hashtag (without #)" className="flex-1 p-2 bg-muted/50 border border-input rounded" />
-                                                <button
-                                                    onClick={() => {
-                                                        const tagInput = document.getElementById('new-hashtag') as HTMLInputElement;
-                                                        if (tagInput.value) {
-                                                            const newTags = [...(settings.instagramHashtags || []), tagInput.value.replace(/^#/, '')];
-                                                            saveSettings({ ...settings, instagramHashtags: newTags });
-                                                            tagInput.value = "";
-                                                        }
-                                                    }}
-                                                    className="px-4 py-2 bg-primary text-primary-foreground rounded hover:opacity-90 font-bold text-sm"
-                                                >
-                                                    Add
-                                                </button>
-                                            </div>
-                                        </div>
+                                                </div>
 
+                                                {/* Collapsible List of Existing Items */}
+                                                <div className="border border-border rounded-2xl overflow-hidden">
+                                                    <div
+                                                        onClick={() => setShowExistingInstagram(!showExistingInstagram)}
+                                                        className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
+                                                    >
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Hashtags</span>
+                                                            <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{settings.instagramHashtags?.length || 0}</span>
+                                                        </div>
+                                                        <div className={cn("transition-transform duration-200", showExistingInstagram && "rotate-180")}>
+                                                            <ChevronDown size={16} />
+                                                        </div>
+                                                    </div>
+                                                    <AnimatePresence>
+                                                        {showExistingInstagram && (
+                                                            <motion.div
+                                                                initial={{ height: 0, opacity: 0 }}
+                                                                animate={{ height: "auto", opacity: 1 }}
+                                                                exit={{ height: 0, opacity: 0 }}
+                                                                className="overflow-hidden bg-background/50 border-t border-border"
+                                                            >
+                                                                <div className="p-4 grid gap-3">
+                                                                    {settings.instagramHashtags?.map((tag: string, idx: number) => (
+                                                                        <div key={idx} className={cn(
+                                                                            "flex items-center justify-between bg-muted/20 p-4 rounded-xl border transition-all",
+                                                                            editingInstagramIndex === idx ? "border-primary bg-primary/5" : "border-border hover:border-primary/20"
+                                                                        )}>
+                                                                            <div className="flex-1">
+                                                                                <div className="font-black uppercase italic text-lg tracking-widest">#{tag}</div>
+                                                                            </div>
+                                                                            <div className="flex gap-2">
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        setEditingInstagramIndex(idx);
+                                                                                        setInstaHashtag(tag);
+                                                                                        document.getElementById('insta-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-primary/10 text-primary rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Edit className="h-5 w-5" />
+                                                                                </button>
+                                                                                <button
+                                                                                    onClick={() => {
+                                                                                        if (confirm(`#${tag} wirklich löschen?`)) {
+                                                                                            const newTags = settings.instagramHashtags.filter((_: string, i: number) => i !== idx);
+                                                                                            saveSettings({ ...settings, instagramHashtags: newTags });
+                                                                                            if (editingInstagramIndex === idx) {
+                                                                                                setEditingInstagramIndex(null);
+                                                                                                setInstaHashtag("");
+                                                                                            }
+                                                                                        }
+                                                                                    }}
+                                                                                    className="p-2 hover:bg-destructive/10 text-destructive rounded-xl transition-colors"
+                                                                                >
+                                                                                    <Trash2 className="h-5 w-5" />
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    ))}
+                                                                    {(!settings.instagramHashtags || settings.instagramHashtags.length === 0) && (
+                                                                        <div className="text-center py-4 text-[10px] font-black uppercase text-muted-foreground italic">Keine Hashtags hinterlegt</div>
+                                                                    )}
+                                                                </div>
+                                                            </motion.div>
+                                                        )}
+                                                    </AnimatePresence>
+                                                </div>
+                                            </div>
+                                        </CollapsibleSection>
+
+                                        {/* Scanner Keywords Integration (Hidden/Managed via categories logic if needed) */}
                                     </div>
                                 </motion.div>
                             )}
@@ -952,6 +1208,12 @@ function AdminDashboardContent() {
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
+                                </motion.div>
+                            )}
+
+                            {activeTab === "messages" && (
+                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                                    <ManageMessages keyStr={key || ''} />
                                 </motion.div>
                             )}
 
@@ -2296,6 +2558,14 @@ function ManageLearn({ keyStr }: { keyStr: string }) {
     const { t } = useLanguage();
     const [data, setData] = useState<any>({ basics: [], coaches: [], randomizer: { beginner: [], intermediate: [], pro: [] }, channels: [] });
     const [loading, setLoading] = useState(false);
+    const [expandedSections, setExpandedSections] = useState<string[]>(["basics"]);
+    const [showExistingBasics, setShowExistingBasics] = useState(false);
+    const [showExistingCoaches, setShowExistingCoaches] = useState(false);
+    const [showExistingChannels, setShowExistingChannels] = useState(false);
+
+    const toggleSection = (id: string) => {
+        setExpandedSections(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+    };
 
     const fetchData = async () => {
         setLoading(true);
@@ -2367,92 +2637,444 @@ function ManageLearn({ keyStr }: { keyStr: string }) {
         setData(newData);
     };
 
-    if (loading) return <div>Loading Learn Data...</div>;
+    if (loading) return <div className="p-8 text-center text-muted-foreground uppercase font-black italic">Lade Lern-Daten...</div>;
 
     return (
-        <div className="space-y-12">
+        <div className="space-y-6">
             {/* Basics Section */}
-            <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 flex justify-between">Basics (Videos) <button onClick={() => addItem('basics', { title: 'New', description: '', videoUrl: '' })} className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs">+ Add</button></h3>
-                <div className="space-y-4">
-                    {data.basics.map((b: any, idx: number) => (
-                        <div key={b.id} className="p-4 border rounded bg-muted/20 flex flex-col gap-2 relative">
-                            <button onClick={() => deleteItem('basics', idx)} className="absolute top-2 right-2 text-destructive text-xs">Delete</button>
-                            <input className="w-full p-2 border rounded font-bold" value={b.title} onChange={e => updateItem('basics', idx, 'title', e.target.value)} placeholder="Title" />
-                            <input className="w-full p-2 border rounded text-xs" value={b.videoUrl} onChange={e => updateItem('basics', idx, 'videoUrl', e.target.value)} placeholder="Video URL" />
-                            <textarea className="w-full p-2 border rounded text-sm" value={b.description} onChange={e => updateItem('basics', idx, 'description', e.target.value)} placeholder="Description" />
+            <CollapsibleSection
+                title="Basics (Videos)"
+                icon={Youtube}
+                isOpen={expandedSections.includes("basics")}
+                onToggle={() => toggleSection("basics")}
+                badge={data.basics?.length}
+            >
+                <div className="space-y-6">
+                    {/* Add Form First */}
+                    <div className="bg-card p-6 rounded-2xl border-2 border-border bg-muted/5 shadow-sm space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-2">
+                                <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Video Titel</label>
+                                <input
+                                    id="new-basic-title"
+                                    className="w-full p-3 bg-muted/30 border border-input rounded-xl font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    placeholder="z.B. Ollie Grundkurs"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">YouTube URL</label>
+                                <input
+                                    id="new-basic-url"
+                                    className="w-full p-3 bg-muted/30 border border-input rounded-xl text-xs font-mono focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    placeholder="https://youtube.com/..."
+                                />
+                            </div>
                         </div>
-                    ))}
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Beschreibung</label>
+                            <textarea
+                                id="new-basic-desc"
+                                className="w-full p-3 bg-muted/30 border border-input rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all h-20 resize-none"
+                                placeholder="Kurze Info zum Video..."
+                            />
+                        </div>
+                        <div className="flex justify-end pt-2 border-t border-border/50">
+                            <button
+                                onClick={() => {
+                                    const title = (document.getElementById('new-basic-title') as HTMLInputElement).value;
+                                    const videoUrl = (document.getElementById('new-basic-url') as HTMLInputElement).value;
+                                    const description = (document.getElementById('new-basic-desc') as HTMLTextAreaElement).value;
+                                    if (title && videoUrl) {
+                                        addItem('basics', { title, videoUrl, description });
+                                        (document.getElementById('new-basic-title') as HTMLInputElement).value = '';
+                                        (document.getElementById('new-basic-url') as HTMLInputElement).value = '';
+                                        (document.getElementById('new-basic-desc') as HTMLTextAreaElement).value = '';
+                                    }
+                                }}
+                                className="px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
+                            >
+                                Video hinzufügen
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Collapsible List of Existing Items */}
+                    <div className="border border-border rounded-2xl overflow-hidden">
+                        <div
+                            onClick={() => setShowExistingBasics(!showExistingBasics)}
+                            className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Videos</span>
+                                <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{data.basics?.length || 0}</span>
+                            </div>
+                            <div className={cn("transition-transform duration-200", showExistingBasics && "rotate-180")}>
+                                <ChevronDown size={16} />
+                            </div>
+                        </div>
+                        <AnimatePresence>
+                            {showExistingBasics && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden bg-background/50 border-t border-border"
+                                >
+                                    <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {data.basics.map((b: any, idx: number) => (
+                                            <div key={b.id} className="p-5 border border-border rounded-2xl bg-muted/10 relative group hover:border-primary/20 transition-all space-y-3">
+                                                <button
+                                                    onClick={() => deleteItem('basics', idx)}
+                                                    className="absolute top-4 right-4 p-2 text-destructive opacity-0 group-hover:opacity-100 hover:bg-destructive/10 rounded-lg transition-all"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
+                                                </button>
+                                                <input
+                                                    className="w-full p-2 bg-transparent border-b border-border font-bold focus:border-primary outline-none transition-all"
+                                                    value={b.title}
+                                                    onChange={e => updateItem('basics', idx, 'title', e.target.value)}
+                                                />
+                                                <input
+                                                    className="w-full p-2 bg-transparent border-b border-border text-xs font-mono focus:border-primary outline-none transition-all"
+                                                    value={b.videoUrl}
+                                                    onChange={e => updateItem('basics', idx, 'videoUrl', e.target.value)}
+                                                />
+                                                <textarea
+                                                    className="w-full p-2 bg-transparent border-b border-border text-sm focus:border-primary outline-none transition-all h-16 resize-none"
+                                                    value={b.description}
+                                                    onChange={e => updateItem('basics', idx, 'description', e.target.value)}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
-            </div>
+            </CollapsibleSection>
 
             {/* Coaches Section */}
-            <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 flex justify-between">Skateboard Coaches <button onClick={() => addItem('coaches', { name: 'Coach Name', location: '', state: '', contact: '', description: '' })} className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs">+ Add</button></h3>
-                <div className="space-y-4">
-                    {data.coaches.map((c: any, idx: number) => (
-                        <div key={c.id} className="p-4 border rounded bg-muted/20 relative grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <button onClick={() => deleteItem('coaches', idx)} className="absolute top-2 right-2 text-destructive text-xs">Delete</button>
-                            <div className="space-y-2">
-                                <input className="w-full p-2 border rounded font-bold" value={c.name} onChange={e => updateItem('coaches', idx, 'name', e.target.value)} placeholder="Name" />
-                                <input className="w-full p-2 border rounded text-sm" value={c.location} onChange={e => updateItem('coaches', idx, 'location', e.target.value)} placeholder="City / Location" />
-                                <input className="w-full p-2 border rounded text-sm" value={c.state} onChange={e => updateItem('coaches', idx, 'state', e.target.value)} placeholder="Bundesland" />
+            <CollapsibleSection
+                title="Skateboard Coaches"
+                icon={MapPin}
+                isOpen={expandedSections.includes("coaches")}
+                onToggle={() => toggleSection("coaches")}
+                badge={data.coaches?.length}
+            >
+                <div className="space-y-6">
+                    {/* Add Form First */}
+                    <div className="bg-card p-6 rounded-2xl border-2 border-border bg-muted/5 shadow-sm space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="space-y-3">
+                                <div>
+                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Name</label>
+                                    <input
+                                        id="new-coach-name"
+                                        className="w-full p-2.5 bg-muted/30 border border-border rounded-xl font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="Coach Name"
+                                    />
+                                </div>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Stadt</label>
+                                        <input
+                                            id="new-coach-loc"
+                                            className="w-full p-2.5 bg-muted/30 border border-border rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                            placeholder="Ort"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Bundesland</label>
+                                        <input
+                                            id="new-coach-state"
+                                            className="w-full p-2.5 bg-muted/30 border border-border rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                            placeholder="z.B. NRW"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="space-y-2">
-                                <input className="w-full p-2 border rounded text-sm" value={c.contact} onChange={e => updateItem('coaches', idx, 'contact', e.target.value)} placeholder="Contact (Email/Link)" />
-                                <textarea className="w-full p-2 border rounded text-sm h-20" value={c.description} onChange={e => updateItem('coaches', idx, 'description', e.target.value)} placeholder="Description" />
+                            <div className="space-y-3">
+                                <div>
+                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Kontakt / Website</label>
+                                    <input
+                                        id="new-coach-contact"
+                                        className="w-full p-2.5 bg-muted/30 border border-border rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all font-mono"
+                                        placeholder="Email oder Instagram Link"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Beschreibung</label>
+                                    <textarea
+                                        id="new-coach-desc"
+                                        className="w-full p-2.5 bg-muted/30 border border-border rounded-xl text-sm h-[74px] resize-none focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                        placeholder="Kurze Info zum Coach..."
+                                    />
+                                </div>
                             </div>
                         </div>
-                    ))}
+                        <div className="flex justify-end pt-2 border-t border-border/50">
+                            <button
+                                onClick={() => {
+                                    const name = (document.getElementById('new-coach-name') as HTMLInputElement).value;
+                                    const location = (document.getElementById('new-coach-loc') as HTMLInputElement).value;
+                                    const state = (document.getElementById('new-coach-state') as HTMLInputElement).value;
+                                    const contact = (document.getElementById('new-coach-contact') as HTMLInputElement).value;
+                                    const description = (document.getElementById('new-coach-desc') as HTMLTextAreaElement).value;
+                                    if (name) {
+                                        addItem('coaches', { name, location, state, contact, description });
+                                        ['new-coach-name', 'new-coach-loc', 'new-coach-state', 'new-coach-contact', 'new-coach-desc'].forEach(id => {
+                                            const el = document.getElementById(id) as any;
+                                            if (el) el.value = '';
+                                        });
+                                    }
+                                }}
+                                className="px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
+                            >
+                                Coach hinzufügen
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Collapsible List of Existing Items */}
+                    <div className="border border-border rounded-2xl overflow-hidden">
+                        <div
+                            onClick={() => setShowExistingCoaches(!showExistingCoaches)}
+                            className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Coaches</span>
+                                <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{data.coaches?.length || 0}</span>
+                            </div>
+                            <div className={cn("transition-transform duration-200", showExistingCoaches && "rotate-180")}>
+                                <ChevronDown size={16} />
+                            </div>
+                        </div>
+                        <AnimatePresence>
+                            {showExistingCoaches && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden bg-background/50 border-t border-border"
+                                >
+                                    <div className="p-4 space-y-4">
+                                        {data.coaches.map((c: any, idx: number) => (
+                                            <div key={c.id} className="p-6 border border-border rounded-3xl bg-muted/10 relative group hover:border-primary/20 transition-all grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <button
+                                                    onClick={() => deleteItem('coaches', idx)}
+                                                    className="absolute top-4 right-4 p-2 text-destructive opacity-0 group-hover:opacity-100 hover:bg-destructive/10 rounded-lg transition-all"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
+                                                </button>
+                                                <div className="space-y-2">
+                                                    <input
+                                                        className="w-full p-2 bg-transparent border-b border-border font-bold focus:border-primary outline-none transition-all"
+                                                        value={c.name}
+                                                        onChange={e => updateItem('coaches', idx, 'name', e.target.value)}
+                                                    />
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        <input
+                                                            className="p-2 bg-transparent border-b border-border text-sm focus:border-primary outline-none transition-all"
+                                                            value={c.location}
+                                                            onChange={e => updateItem('coaches', idx, 'location', e.target.value)}
+                                                        />
+                                                        <input
+                                                            className="p-2 bg-transparent border-b border-border text-sm focus:border-primary outline-none transition-all"
+                                                            value={c.state}
+                                                            onChange={e => updateItem('coaches', idx, 'state', e.target.value)}
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <input
+                                                        className="w-full p-2 bg-transparent border-b border-border text-sm font-mono focus:border-primary outline-none transition-all"
+                                                        value={c.contact}
+                                                        onChange={e => updateItem('coaches', idx, 'contact', e.target.value)}
+                                                    />
+                                                    <textarea
+                                                        className="w-full p-2 bg-transparent border-b border-border text-sm h-12 resize-none focus:border-primary outline-none transition-all"
+                                                        value={c.description}
+                                                        onChange={e => updateItem('coaches', idx, 'description', e.target.value)}
+                                                    />
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
                 </div>
-            </div>
+            </CollapsibleSection>
 
             {/* Randomizer Section */}
-            <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 uppercase italic">Trick Randomizer Lists</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <CollapsibleSection
+                title="Trick Randomizer Listen"
+                icon={RefreshCw}
+                isOpen={expandedSections.includes("randomizer")}
+                onToggle={() => toggleSection("randomizer")}
+            >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {(['beginner', 'intermediate', 'pro'] as const).map(lvl => (
-                        <div key={lvl} className="space-y-2">
-                            <h4 className="font-bold uppercase text-muted-foreground border-b pb-1 flex justify-between items-center">
-                                {lvl} <Plus size={16} className="cursor-pointer hover:text-foreground" onClick={() => addTrick(lvl)} />
-                            </h4>
-                            {data.randomizer[lvl].map((trick: string, idx: number) => (
-                                <div key={idx} className="flex gap-2 items-center group">
-                                    <input
-                                        className="flex-1 p-1 bg-background border rounded text-xs"
-                                        value={trick}
-                                        onChange={e => updateTrick(lvl, idx, e.target.value)}
-                                    />
-                                    <X size={14} className="cursor-pointer text-destructive opacity-0 group-hover:opacity-100" onClick={() => deleteTrick(lvl, idx)} />
-                                </div>
-                            ))}
+                        <div key={lvl} className="bg-muted/10 border-2 border-border rounded-[2rem] p-6 space-y-4">
+                            <header className="flex justify-between items-center border-b-2 border-border pb-3">
+                                <h4 className="font-black uppercase italic tracking-tighter text-lg text-primary">{lvl}</h4>
+                                <button
+                                    onClick={() => addTrick(lvl)}
+                                    className="p-1.5 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-all"
+                                >
+                                    <Plus size={16} />
+                                </button>
+                            </header>
+                            <div className="space-y-2 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                                {data.randomizer[lvl].map((trick: string, idx: number) => (
+                                    <div key={idx} className="flex gap-2 items-center group bg-background border border-border rounded-xl p-1 shadow-sm hover:border-primary/30 transition-all">
+                                        <input
+                                            className="flex-1 px-3 py-1.5 bg-transparent text-[11px] font-bold uppercase outline-none"
+                                            value={trick}
+                                            onChange={e => updateTrick(lvl, idx, e.target.value)}
+                                        />
+                                        <button
+                                            onClick={() => deleteTrick(lvl, idx)}
+                                            className="p-1 px-2 text-destructive opacity-0 group-hover:opacity-100 hover:bg-destructive/10 rounded-lg transition-all"
+                                        >
+                                            <X size={14} />
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="text-[10px] font-black uppercase text-muted-foreground text-center tracking-widest">
+                                {data.randomizer[lvl].length} Tricks
+                            </div>
                         </div>
                     ))}
                 </div>
-            </div>
+            </CollapsibleSection>
 
             {/* Channels Section */}
-            <div className="bg-card border border-border p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 flex justify-between">Learning Channels <button onClick={() => addItem('channels', { name: 'Channel', description: '', url: '' })} className="bg-primary text-primary-foreground px-2 py-1 rounded text-xs">+ Add</button></h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {data.channels.map((ch: any, idx: number) => (
-                        <div key={ch.id} className="p-4 border rounded bg-muted/20 relative">
-                            <button onClick={() => deleteItem('channels', idx)} className="absolute top-2 right-2 text-destructive text-xs">Delete</button>
-                            <input className="w-full p-2 border rounded font-bold mb-2" value={ch.name} onChange={e => updateItem('channels', idx, 'name', e.target.value)} placeholder="Name" />
-                            <input className="w-full p-2 border rounded text-xs mb-2" value={ch.url} onChange={e => updateItem('channels', idx, 'url', e.target.value)} placeholder="URL" />
-                            <input className="w-full p-2 border rounded text-sm" value={ch.description} onChange={e => updateItem('channels', idx, 'description', e.target.value)} placeholder="Short Info" />
+            <CollapsibleSection
+                title="Learning Channels"
+                icon={Globe}
+                isOpen={expandedSections.includes("channels")}
+                onToggle={() => toggleSection("channels")}
+                badge={data.channels?.length}
+            >
+                <div className="space-y-6">
+                    {/* Add Form First */}
+                    <div className="bg-card p-6 rounded-2xl border-2 border-border bg-muted/5 shadow-sm space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="space-y-2">
+                                <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Kanal Name</label>
+                                <input
+                                    id="new-channel-name"
+                                    className="w-full p-3 bg-muted/30 border border-border rounded-xl font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    placeholder="Name"
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">YouTube URL</label>
+                                <input
+                                    id="new-channel-url"
+                                    className="w-full p-3 bg-muted/30 border border-border rounded-xl text-xs font-mono focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                    placeholder="YouTube URL"
+                                />
+                            </div>
                         </div>
-                    ))}
-                </div>
-            </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">Kurz-Info</label>
+                            <input
+                                id="new-channel-desc"
+                                className="w-full p-3 bg-muted/30 border border-border rounded-xl text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                                placeholder="Z.B. English Trick Tips"
+                            />
+                        </div>
+                        <div className="flex justify-end pt-2 border-t border-border/50">
+                            <button
+                                onClick={() => {
+                                    const name = (document.getElementById('new-channel-name') as HTMLInputElement).value;
+                                    const url = (document.getElementById('new-channel-url') as HTMLInputElement).value;
+                                    const description = (document.getElementById('new-channel-desc') as HTMLInputElement).value;
+                                    if (name && url) {
+                                        addItem('channels', { name, url, description });
+                                        ['new-channel-name', 'new-channel-url', 'new-channel-desc'].forEach(id => {
+                                            const el = document.getElementById(id) as any;
+                                            if (el) el.value = '';
+                                        });
+                                    }
+                                }}
+                                className="px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
+                            >
+                                Kanal hinzufügen
+                            </button>
+                        </div>
+                    </div>
 
-            <div className="sticky bottom-6 z-50">
+                    {/* Collapsible List of Existing Items */}
+                    <div className="border border-border rounded-2xl overflow-hidden">
+                        <div
+                            onClick={() => setShowExistingChannels(!showExistingChannels)}
+                            className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Kanäle</span>
+                                <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{data.channels?.length || 0}</span>
+                            </div>
+                            <div className={cn("transition-transform duration-200", showExistingChannels && "rotate-180")}>
+                                <ChevronDown size={16} />
+                            </div>
+                        </div>
+                        <AnimatePresence>
+                            {showExistingChannels && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden bg-background/50 border-t border-border"
+                                >
+                                    <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {data.channels.map((ch: any, idx: number) => (
+                                            <div key={ch.id} className="p-6 border border-border rounded-3xl bg-muted/10 relative group hover:border-primary/20 transition-all space-y-3">
+                                                <button
+                                                    onClick={() => deleteItem('channels', idx)}
+                                                    className="absolute top-4 right-4 p-2 text-destructive opacity-0 group-hover:opacity-100 hover:bg-destructive/10 rounded-lg transition-all"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
+                                                </button>
+                                                <input
+                                                    className="w-full p-2 bg-transparent border-b border-border font-bold focus:border-primary outline-none transition-all"
+                                                    value={ch.name}
+                                                    onChange={e => updateItem('channels', idx, 'name', e.target.value)}
+                                                />
+                                                <input
+                                                    className="w-full p-2 bg-transparent border-b border-border text-xs font-mono focus:border-primary outline-none transition-all"
+                                                    value={ch.url}
+                                                    onChange={e => updateItem('channels', idx, 'url', e.target.value)}
+                                                />
+                                                <input
+                                                    className="w-full p-2 bg-transparent border-b border-border text-sm focus:border-primary outline-none transition-all"
+                                                    value={ch.description}
+                                                    onChange={e => updateItem('channels', idx, 'description', e.target.value)}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </CollapsibleSection>
+
+            <div className="sticky bottom-6 z-50 mt-12">
                 <button
                     onClick={() => authenticatedSave(data)}
-                    className="w-full py-4 bg-primary text-primary-foreground font-black uppercase italic rounded-2xl flex items-center justify-center gap-2 hover:scale-[1.02] transition-all shadow-2xl shadow-primary/20 border-2 border-primary/20 backdrop-blur-sm"
+                    className="w-full py-5 bg-primary text-primary-foreground font-black uppercase italic rounded-2xl flex items-center justify-center gap-3 hover:scale-[1.02] transition-all shadow-2xl shadow-primary/30 border-4 border-background group"
                 >
-                    <Save className="h-5 w-5" />
-                    {t("buttons.save")} ALL LEARN CHANGES
+                    <div className="bg-background/20 p-2 rounded-xl group-hover:bg-background/30 transition-colors">
+                        <Save className="h-5 w-5" />
+                    </div>
+                    <span className="tracking-tighter text-lg">Änderungen im Lern-Center speichern</span>
                 </button>
             </div>
         </div>
@@ -2652,6 +3274,88 @@ function ManageSubmissions({ keyStr, onCountUpdate }: { keyStr: string; onCountU
                     <div className="text-center py-20 bg-muted/10 border-2 border-dashed border-border rounded-[2.5rem]">
                         <MapPin className="h-16 w-16 mx-auto mb-4 text-muted-foreground/30" />
                         <p className="text-muted-foreground font-black uppercase italic tracking-widest">Keine neuen Einsendungen</p>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
+function ManageMessages({ keyStr }: { keyStr: string }) {
+    const [messages, setMessages] = useState<any[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    const fetchMessages = async () => {
+        setLoading(true);
+        try {
+            const res = await fetch(`/api/messages?key=${keyStr}`);
+            const data = await res.json();
+            if (data.messages) {
+                setMessages(data.messages.reverse());
+            }
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchMessages();
+    }, []);
+
+    const deleteMessage = async (id: string) => {
+        if (!confirm("Nachricht löschen?")) return;
+        try {
+            const res = await fetch(`/api/messages?key=${keyStr}&id=${id}`, { method: 'DELETE' });
+            if (res.ok) fetchMessages();
+        } catch (e) { console.error(e); }
+    };
+
+    if (loading) return <div className="text-center py-20 font-black uppercase italic">Lade Nachrichten...</div>;
+
+    return (
+        <div className="space-y-6">
+            <div className="flex justify-between items-center mb-8">
+                <div>
+                    <h2 className="text-3xl font-black uppercase italic tracking-tighter">Community Nachrichten</h2>
+                    <p className="text-muted-foreground">Vorschläge für Vereine, News und Feedback.</p>
+                </div>
+                <button onClick={fetchMessages} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
+                    <RefreshCw size={20} />
+                </button>
+            </div>
+
+            <div className="grid gap-4">
+                {messages.map((msg) => (
+                    <div key={msg.id} className="bg-card border-2 border-border rounded-2xl p-6 hover:border-primary/30 transition-all">
+                        <div className="flex justify-between items-start mb-4">
+                            <div>
+                                <span className="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-primary/10 text-primary rounded-md mb-2 inline-block">
+                                    {msg.subject}
+                                </span>
+                                <h3 className="text-xl font-bold">{msg.name}</h3>
+                                <p className="text-xs text-muted-foreground font-mono">{msg.email} • {new Date(msg.timestamp).toLocaleString()}</p>
+                            </div>
+                            <button onClick={() => deleteMessage(msg.id)} className="p-2 text-destructive hover:bg-destructive/10 rounded-lg">
+                                <Trash2 size={18} />
+                            </button>
+                        </div>
+                        <div className="bg-muted/30 p-4 rounded-xl text-sm leading-relaxed border border-border">
+                            {msg.message}
+                        </div>
+                        <div className="mt-4 flex gap-2">
+                            <a href={`mailto:${msg.email}?subject=Re: ${msg.subject}`} className="text-[10px] font-black uppercase italic bg-foreground text-background px-4 py-2 rounded-lg hover:scale-105 transition-all">
+                                Antworten
+                            </a>
+                        </div>
+                    </div>
+                ))}
+
+                {messages.length === 0 && (
+                    <div className="text-center py-20 bg-muted/10 border-2 border-dashed border-border rounded-[2.5rem]">
+                        <MessageSquare className="h-16 w-16 mx-auto mb-4 text-muted-foreground/30" />
+                        <p className="text-muted-foreground font-black uppercase italic tracking-widest">Keine Nachrichten</p>
                     </div>
                 )}
             </div>

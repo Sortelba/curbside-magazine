@@ -1,8 +1,10 @@
+export const dynamic = 'force-static';
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
 export async function GET(req: NextRequest) {
+    if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json([]);
     try {
         const { searchParams } = new URL(req.url);
         const key = searchParams.get('key');

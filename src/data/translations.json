@@ -34,12 +34,17 @@
             "follow": "Folge uns",
             "learn": "Skaten lernen mit Curbside",
             "archive": "Archiv",
+            "impressum": "Impressum",
+            "agb": "AGB & Haftung",
+            "faq": "FAQ",
+            "contact": "Kontakt & Vorschläge",
             "rights": "Alle Rechte vorbehalten."
         },
         "community": {
             "shops": "Support Skate Shops",
             "projects": "Unterstützenswerte Projekte",
             "youtube": "YouTube Skateboarding",
+            "clubs": "Deutsche Skateboard Vereine",
             "find_shop": "Finde deinen Shop",
             "search_placeholder": "Suche nach PLZ oder Stadt...",
             "all_states": "Alle Bundesländer",
@@ -62,6 +67,11 @@
             "close_calendar": "Kalender schließen",
             "prev_month": "Vorheriger Monat",
             "next_month": "Nächster Monat"
+        },
+        "news": {
+            "showMore": "Mehr News anzeigen",
+            "page": "Seite",
+            "of": "von"
         }
     },
     "en": {
@@ -99,12 +109,17 @@
             "follow": "Follow Us",
             "learn": "Learn to skate with Curbside",
             "archive": "Archive",
+            "impressum": "Legal Notice",
+            "agb": "Terms & Liability",
+            "faq": "FAQ",
+            "contact": "Contact & Suggestions",
             "rights": "All rights reserved."
         },
         "community": {
             "shops": "Support Skate Shops",
             "projects": "Projects to Support",
             "youtube": "YouTube Skateboarding",
+            "clubs": "German Skateboard Clubs",
             "find_shop": "Find your Shop",
             "search_placeholder": "Search by PLZ or City...",
             "all_states": "All States",
@@ -123,6 +138,11 @@
             "title": "Upcoming Events",
             "location": "Location",
             "no_events": "No upcoming events."
+        },
+        "news": {
+            "showMore": "Show More News",
+            "page": "Page",
+            "of": "of"
         }
     }
 }
