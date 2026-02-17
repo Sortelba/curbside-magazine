@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -83,11 +83,37 @@ function AdminDashboardContent() {
     const [activeTab, setActiveTab] = useState<string>("news");
     const [skatemapSub, setSkatemapSub] = useState<"pending" | "remove">("pending");
     const [pendingCount, setPendingCount] = useState(0);
+    const [activeDraftIndex, setActiveDraftIndex] = useState<number | null>(null);
 
     // Collapsible Categories State
     const [expandedSettings, setExpandedSettings] = useState<string[]>(["youtube"]);
     const toggleSetting = (id: string) => {
         setExpandedSettings(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+    };
+
+    const [publishLoading, setPublishLoading] = useState(false);
+    const triggerPublish = async () => {
+        if (!confirm("Alle Änderungen jetzt veröffentlichen? Dies überträgt die Daten zu GitHub (Commit & Push).")) return;
+
+        setPublishLoading(true);
+        try {
+            const res = await fetch(`/api/admin/publish`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ key })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                alert("Veröffentlichung erfolgreich gestartet! In ca. 2 Minuten sind die Änderungen live.");
+            } else {
+                alert("Fehler bei der Veröffentlichung: " + (data.error || "Unbekannter Fehler"));
+            }
+        } catch (e) {
+            console.error("Publish failed", e);
+            alert("Fehler bei der Veröffentlichung. Bitte prüfe die Internetverbindung.");
+        } finally {
+            setPublishLoading(false);
+        }
     };
 
     // Settings State
@@ -223,6 +249,7 @@ function AdminDashboardContent() {
                 const newDrafts = [...drafts];
                 newDrafts.splice(index, 1);
                 setDrafts(newDrafts);
+                setActiveDraftIndex(null);
                 alert("Post published successfully!");
             } else {
                 alert("Failed to save post.");
@@ -324,9 +351,22 @@ function AdminDashboardContent() {
                                             <h2 className="text-3xl font-black uppercase italic tracking-tighter">Einstellungen</h2>
                                             <p className="text-muted-foreground">Konfiguration der News-Scraper und YouTube-Kanäle.</p>
                                         </div>
-                                        <button onClick={loadSettings} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
-                                            <RefreshCw size={20} className={cn(settingsLoading && "animate-spin")} />
-                                        </button>
+                                        <div className="flex items-end gap-2">
+                                            <button
+                                                onClick={triggerPublish}
+                                                disabled={publishLoading}
+                                                className={cn(
+                                                    "flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground font-black uppercase italic text-xs tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-primary/20",
+                                                    publishLoading && "opacity-50 cursor-not-allowed"
+                                                )}
+                                            >
+                                                {publishLoading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
+                                                <span>Website Veröffentlichen</span>
+                                            </button>
+                                            <button onClick={loadSettings} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors h-[40px] w-[40px] flex items-center justify-center">
+                                                <RefreshCw size={20} className={cn(settingsLoading && "animate-spin")} />
+                                            </button>
+                                        </div>
                                     </header>
 
 
@@ -808,189 +848,263 @@ function AdminDashboardContent() {
 
                             {activeTab === "news" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
-                                    <div className="flex flex-wrap gap-4 p-6 bg-muted/30 rounded-2xl border border-border items-center justify-between">
-                                        <div className="space-y-1">
-                                            <h2 className="text-xl font-bold uppercase italic tracking-tight">Content Scraper</h2>
-                                            <p className="text-sm text-muted-foreground">{status || "Ready to scan for new content."}</p>
+                                    <div className="flex flex-wrap gap-4 p-6 bg-card border-2 border-border rounded-[2rem] shadow-xl items-center justify-between mb-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="bg-primary/10 p-3 rounded-2xl">
+                                                <Newspaper className="h-6 w-6 text-primary" />
+                                            </div>
+                                            <div>
+                                                <h2 className="text-2xl font-black uppercase italic tracking-tighter">Content Scraper</h2>
+                                                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{status || "Bereit für neue Inhalte"}</p>
+                                            </div>
                                         </div>
                                         <div className="flex gap-4 flex-wrap">
                                             <button
                                                 onClick={scanNews}
                                                 disabled={loading}
-                                                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-bold rounded-lg hover:opacity-90 disabled:opacity-50 transition-all shadow-lg shadow-primary/20"
+                                                className="flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground font-black uppercase italic text-[10px] tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-primary/20 disabled:opacity-50"
                                             >
                                                 {loading && status.includes('news') ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}
-                                                {loading && status.includes('news') ? "Scanning..." : "Scan News"}
+                                                <span>Scan News</span>
                                             </button>
                                             <button
                                                 onClick={async () => {
                                                     setLoading(true);
-                                                    setStatus("Scanning YouTube channels...");
+                                                    setStatus("Scanne YouTube Kanäle...");
                                                     try {
                                                         const res = await fetch(`/api/cron/youtube?key=${key}`);
                                                         const data = await res.json();
                                                         if (data.articles) {
                                                             setDrafts(prev => [...data.articles, ...prev]);
-                                                            setStatus(`Found ${data.articles.length} videos!`);
+                                                            setStatus(`${data.articles.length} Videos gefunden!`);
                                                         } else {
-                                                            setStatus("No videos found.");
+                                                            setStatus("Keine neuen Videos.");
                                                         }
                                                     } catch (e) {
                                                         console.error(e);
-                                                        setStatus("Error scanning YouTube.");
+                                                        setStatus("Fehler beim YouTube Scan.");
                                                     } finally {
                                                         setLoading(false);
                                                     }
                                                 }}
                                                 disabled={loading}
-                                                className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 disabled:opacity-50 transition-all shadow-lg shadow-red-600/20"
+                                                className="flex items-center gap-2 px-5 py-3 bg-red-600 text-white font-black uppercase italic text-[10px] tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-red-600/20 disabled:opacity-50"
                                             >
                                                 {loading && status.includes('YouTube') ? <Loader2 className="h-4 w-4 animate-spin" /> : <Youtube className="h-4 w-4" />}
-                                                {loading && status.includes('YouTube') ? "Scanning..." : "Scan YouTube"}
+                                                <span>Scan YouTube</span>
                                             </button>
                                             <button
                                                 onClick={async () => {
-                                                    const hashtag = prompt("Enter Hashtag (without #):", "skateboarding");
+                                                    const hashtag = prompt("Hashtag (ohne #):", "skateboarding");
                                                     if (!hashtag) return;
-
                                                     setLoading(true);
-                                                    setStatus(`Scanning Instagram for #${hashtag}...`);
+                                                    setStatus(`Scanne Instagram für #${hashtag}...`);
                                                     try {
                                                         const res = await fetch(`/api/instagram/scan?key=${key}&hashtag=${hashtag}`);
                                                         const data = await res.json();
                                                         if (data.articles) {
                                                             setDrafts(prev => [...data.articles, ...prev]);
-                                                            setStatus(`Found Top 3 Bangers for #${hashtag}!`);
+                                                            setStatus(`Top 3 für #${hashtag} gefunden!`);
                                                         } else {
-                                                            setStatus(data.message || "No posts found.");
+                                                            setStatus(data.message || "Nichts gefunden.");
                                                         }
                                                     } catch (e) {
                                                         console.error(e);
-                                                        setStatus("Error scanning Instagram.");
+                                                        setStatus("Fehler beim Insta Scan.");
                                                     } finally {
                                                         setLoading(false);
                                                     }
                                                 }}
                                                 disabled={loading}
-                                                className="flex items-center gap-2 px-4 py-2 bg-pink-600 text-white font-bold rounded-lg hover:bg-pink-700 disabled:opacity-50 transition-all shadow-lg shadow-pink-600/20"
+                                                className="flex items-center gap-2 px-5 py-3 bg-pink-600 text-white font-black uppercase italic text-[10px] tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-pink-600/20 disabled:opacity-50"
                                             >
                                                 {loading && status.includes('Instagram') ? <Loader2 className="h-4 w-4 animate-spin" /> : <Instagram className="h-4 w-4" />}
-                                                {loading && status.includes('Instagram') ? "Scanning..." : "Scan Insta"}
+                                                <span>Scan Insta</span>
                                             </button>
+                                            {drafts.length > 0 && (
+                                                <button
+                                                    onClick={() => { if (confirm("Alle Entwürfe löschen?")) setDrafts([]); }}
+                                                    className="flex items-center gap-2 px-4 py-3 bg-muted text-muted-foreground hover:text-destructive hover:bg-destructive/10 font-black uppercase italic text-[10px] tracking-widest rounded-xl transition-all"
+                                                >
+                                                    <Trash2 className="h-4 w-4" />
+                                                    <span>Alle löschen</span>
+                                                </button>
+                                            )}
                                         </div>
                                     </div>
 
-                                    <div className="space-y-8">
-                                        {drafts.map((draft, index) => (
-                                            <div key={index} className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm hover:border-primary/50 transition-colors">
-                                                <div className="grid gap-6">
-                                                    <div>
-                                                        <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Title</label>
-                                                        <input
-                                                            type="text"
-                                                            value={draft.title}
-                                                            onChange={(e) => updateDraft(index, 'title', e.target.value)}
-                                                            className="w-full p-3 bg-muted/20 border border-input rounded-xl font-bold text-lg focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                                        />
-                                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <AnimatePresence mode="popLayout">
+                                            {drafts.map((draft, index) => {
+                                                const isEditing = activeDraftIndex === index;
+                                                const Icon = draft.type === 'youtube' ? Youtube : (draft.type === 'instagram-mix' ? Instagram : Newspaper);
+                                                const iconColor = draft.type === 'youtube' ? 'text-red-500' : (draft.type === 'instagram-mix' ? 'text-pink-500' : 'text-blue-500');
 
-                                                    <div>
-                                                        <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Description</label>
-                                                        <textarea
-                                                            value={draft.description}
-                                                            onChange={(e) => updateDraft(index, 'description', e.target.value)}
-                                                            className="w-full p-3 bg-muted/20 border border-input rounded-xl h-24 focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                                        />
-                                                    </div>
+                                                return (
+                                                    <motion.div
+                                                        key={`${index}-${draft.title}`}
+                                                        layout
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        animate={{ opacity: 1, y: 0 }}
+                                                        exit={{ opacity: 0, scale: 0.95 }}
+                                                        className={cn(
+                                                            "group bg-card border-2 transition-all overflow-hidden rounded-[2rem]",
+                                                            isEditing ? "col-span-1 md:col-span-2 lg:col-span-3 border-primary ring-8 ring-primary/5 shadow-2xl" : "border-border hover:border-primary shadow-sm hover:shadow-xl"
+                                                        )}
+                                                    >
+                                                        {/* Header / Summary View */}
+                                                        <div
+                                                            className={cn(
+                                                                "p-6 flex items-center justify-between gap-4 cursor-pointer",
+                                                                isEditing && "bg-primary/5 border-b-2 border-border"
+                                                            )}
+                                                            onClick={() => setActiveDraftIndex(isEditing ? null : index)}
+                                                        >
+                                                            <div className="flex items-center gap-4 flex-1 min-w-0">
+                                                                <div className={cn("p-3 rounded-2xl bg-muted group-hover:bg-primary/10 transition-colors shrink-0", isEditing && "bg-primary/20 shadow-inner")}>
+                                                                    <Icon className={cn("h-6 w-6", iconColor)} />
+                                                                </div>
+                                                                <div className="min-w-0">
+                                                                    <h3 className="font-black uppercase italic tracking-tighter truncate leading-tight group-hover:text-primary transition-colors text-lg">
+                                                                        {draft.title || "Unbenannter Entwurf"}
+                                                                    </h3>
+                                                                    <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest truncate">
+                                                                        {draft.source?.replace('https://', '').replace('www.', '') || draft.type}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div className="flex items-center gap-2 shrink-0">
+                                                                {!isEditing && (
+                                                                    <button
+                                                                        onClick={(e) => {
+                                                                            e.stopPropagation();
+                                                                            const newDrafts = drafts.filter((_, i) => i !== index);
+                                                                            setDrafts(newDrafts);
+                                                                        }}
+                                                                        className="p-2 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl transition-all"
+                                                                    >
+                                                                        <X className="h-5 w-5" />
+                                                                    </button>
+                                                                )}
+                                                                <div className={cn("p-2 transition-transform duration-500 ease-in-out", isEditing && "rotate-180")}>
+                                                                    {isEditing ? <X className="h-5 w-5 text-primary" /> : <Edit className="h-4 w-4 text-muted-foreground group-hover:text-primary" />}
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                    <div>
-                                                        <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Media Content</label>
-                                                        {draft.type === 'instagram-mix' ? (
-                                                            <div className="space-y-4 bg-muted/20 p-4 rounded-xl border border-input">
-                                                                {(() => {
-                                                                    let items = [];
-                                                                    try {
-                                                                        items = draft.content.trim().startsWith('[') ? JSON.parse(draft.content) : [];
-                                                                    } catch (e) { items = []; }
-                                                                    // Default to 3 empty items if parsing fails or empty
-                                                                    if (items.length === 0) items = [{}, {}, {}];
-
-                                                                    return items.map((item: any, i: number) => (
-                                                                        <div key={i} className="p-3 bg-background border border-border rounded-lg shadow-sm">
-                                                                            <div className="text-[10px] font-bold uppercase text-muted-foreground mb-2 flex items-center gap-2">
-                                                                                <Instagram className="h-3 w-3" /> Video {i + 1}
+                                                        {/* Edit Form */}
+                                                        <AnimatePresence>
+                                                            {isEditing && (
+                                                                <motion.div
+                                                                    initial={{ height: 0, opacity: 0 }}
+                                                                    animate={{ height: "auto", opacity: 1 }}
+                                                                    exit={{ height: 0, opacity: 0 }}
+                                                                    className="overflow-hidden"
+                                                                >
+                                                                    <div className="p-8 space-y-8 bg-background/50 backdrop-blur-sm border-t border-border/50">
+                                                                        <div className="grid md:grid-cols-2 gap-8">
+                                                                            <div className="space-y-6">
+                                                                                <div>
+                                                                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-2 block pl-1">Titel</label>
+                                                                                    <input
+                                                                                        value={draft.title}
+                                                                                        onChange={(e) => updateDraft(index, 'title', e.target.value)}
+                                                                                        className="w-full p-4 bg-card border-2 border-border rounded-2xl font-black uppercase italic tracking-tighter text-xl focus:border-primary outline-none transition-all shadow-inner"
+                                                                                    />
+                                                                                </div>
+                                                                                <div>
+                                                                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-2 block pl-1">Beschreibung</label>
+                                                                                    <textarea
+                                                                                        value={draft.description}
+                                                                                        onChange={(e) => updateDraft(index, 'description', e.target.value)}
+                                                                                        className="w-full p-4 bg-card border-2 border-border rounded-2xl h-40 text-sm font-bold focus:border-primary outline-none transition-all resize-none shadow-inner"
+                                                                                    />
+                                                                                </div>
                                                                             </div>
-                                                                            <input
-                                                                                type="text"
-                                                                                placeholder="Instagram Video URL"
-                                                                                value={item.url || ''}
-                                                                                onChange={(e) => {
-                                                                                    const newItems = [...items];
-                                                                                    newItems[i] = { ...newItems[i], url: e.target.value };
-                                                                                    updateDraft(index, 'content', JSON.stringify(newItems));
-                                                                                }}
-                                                                                className="w-full p-2 mb-2 bg-muted/30 border border-input rounded text-sm font-mono"
-                                                                            />
-                                                                            <div className="grid grid-cols-2 gap-2">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    placeholder="@username"
-                                                                                    value={item.author || ''}
-                                                                                    onChange={(e) => {
-                                                                                        const newItems = [...items];
-                                                                                        newItems[i] = { ...newItems[i], author: e.target.value };
-                                                                                        updateDraft(index, 'content', JSON.stringify(newItems));
-                                                                                    }}
-                                                                                    className="w-full p-2 bg-muted/30 border border-input rounded text-sm"
-                                                                                />
-                                                                                <input
-                                                                                    type="text"
-                                                                                    placeholder="Profile URL"
-                                                                                    value={item.authorUrl || ''}
-                                                                                    onChange={(e) => {
-                                                                                        const newItems = [...items];
-                                                                                        newItems[i] = { ...newItems[i], authorUrl: e.target.value };
-                                                                                        updateDraft(index, 'content', JSON.stringify(newItems));
-                                                                                    }}
-                                                                                    className="w-full p-2 bg-muted/30 border border-input rounded text-sm font-mono"
-                                                                                />
+
+                                                                            <div className="space-y-6">
+                                                                                <div>
+                                                                                    <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-2 block pl-1">Media / Content</label>
+                                                                                    {draft.type === 'instagram-mix' ? (
+                                                                                        <div className="space-y-4">
+                                                                                            {(() => {
+                                                                                                let items = [];
+                                                                                                try { items = JSON.parse(draft.content); } catch (e) { items = [{}, {}, {}]; }
+                                                                                                return items.map((item: any, i: number) => (
+                                                                                                    <div key={i} className="p-4 bg-card border-2 border-border rounded-2xl space-y-3 shadow-inner">
+                                                                                                        <div className="flex items-center gap-2 text-[10px] font-black uppercase italic text-pink-500">
+                                                                                                            <Instagram size={12} /> Post {i + 1}
+                                                                                                        </div>
+                                                                                                        <input
+                                                                                                            placeholder="Insta URL"
+                                                                                                            value={item.url || ''}
+                                                                                                            onChange={(e) => {
+                                                                                                                const newItems = [...items];
+                                                                                                                newItems[i] = { ...newItems[i], url: e.target.value };
+                                                                                                                updateDraft(index, 'content', JSON.stringify(newItems));
+                                                                                                            }}
+                                                                                                            className="w-full bg-muted/40 p-2 rounded-lg text-xs font-mono"
+                                                                                                        />
+                                                                                                        <input
+                                                                                                            placeholder="@username"
+                                                                                                            value={item.author || ''}
+                                                                                                            onChange={(e) => {
+                                                                                                                const newItems = [...items];
+                                                                                                                newItems[i] = { ...newItems[i], author: e.target.value };
+                                                                                                                updateDraft(index, 'content', JSON.stringify(newItems));
+                                                                                                            }}
+                                                                                                            className="w-full bg-muted/40 p-2 rounded-lg text-xs font-bold"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                ));
+                                                                                            })()}
+                                                                                        </div>
+                                                                                    ) : (
+                                                                                        <input
+                                                                                            value={draft.content}
+                                                                                            onChange={(e) => updateDraft(index, 'content', e.target.value)}
+                                                                                            className="w-full p-4 bg-card border-2 border-border rounded-2xl font-mono text-xs focus:border-primary outline-none transition-all shadow-inner"
+                                                                                            placeholder="URL oder Content"
+                                                                                        />
+                                                                                    )}
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    ));
-                                                                })()}
-                                                                <p className="text-[10px] text-muted-foreground text-center">Auto-saved as JSON</p>
-                                                            </div>
-                                                        ) : (
-                                                            <input
-                                                                type="text"
-                                                                value={draft.content.startsWith('http') && draft.type === 'link' ? '' : draft.content}
-                                                                onChange={(e) => updateDraft(index, 'content', e.target.value)}
-                                                                className="w-full p-3 bg-muted/20 border border-input rounded-xl text-sm font-mono text-muted-foreground"
-                                                            />
-                                                        )}
-                                                    </div>
 
-                                                    <div className="flex justify-between items-center pt-4 border-t border-border">
-                                                        <span className="text-xs font-bold px-3 py-1 bg-muted rounded-full uppercase">{draft.type}</span>
-                                                        <button
-                                                            onClick={() => savePost(draft, index)}
-                                                            className="flex items-center gap-2 px-6 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-600/20"
-                                                        >
-                                                            <CheckCircle className="h-4 w-4" />
-                                                            Publish Post
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-
-                                        {drafts.length === 0 && !loading && (
-                                            <div className="text-center py-20 bg-muted/10 border-2 border-dashed border-border rounded-3xl">
-                                                <Newspaper className="h-16 w-16 mx-auto mb-4 text-muted-foreground/30" />
-                                                <p className="text-muted-foreground font-bold italic uppercase">Keine Entwürfe vorhanden. Scan starten!</p>
-                                            </div>
-                                        )}
+                                                                        <div className="flex flex-col md:flex-row gap-4 pt-6 border-t-2 border-border">
+                                                                            <button
+                                                                                onClick={() => savePost(draft, index)}
+                                                                                className="flex-1 flex items-center justify-center gap-3 py-5 bg-primary text-primary-foreground rounded-2xl font-black uppercase italic tracking-widest hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/30"
+                                                                            >
+                                                                                <Send size={20} />
+                                                                                <span>Post Veröffentlichen</span>
+                                                                            </button>
+                                                                            <button
+                                                                                onClick={() => setActiveDraftIndex(null)}
+                                                                                className="px-8 py-5 bg-muted hover:bg-muted/80 rounded-2xl font-black uppercase italic tracking-widest text-xs transition-all"
+                                                                            >
+                                                                                Schließen
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </motion.div>
+                                                            )}
+                                                        </AnimatePresence>
+                                                    </motion.div>
+                                                );
+                                            })}
+                                        </AnimatePresence>
                                     </div>
+
+                                    {drafts.length === 0 && !loading && (
+                                        <div className="flex flex-col items-center justify-center py-20 bg-muted/20 border-2 border-dashed border-border rounded-[3rem]">
+                                            <div className="p-6 bg-muted rounded-full mb-6">
+                                                <Search className="h-10 w-10 text-muted-foreground opacity-20" />
+                                            </div>
+                                            <p className="text-xl font-black uppercase italic tracking-tighter text-muted-foreground opacity-30">Keine Entwürfe gefunden</p>
+                                            <p className="text-xs font-mono text-muted-foreground/40 mt-2 uppercase tracking-widest">Starte einen Scan um Inhalte zu laden</p>
+                                        </div>
+                                    )}
                                 </motion.div>
                             )}
 

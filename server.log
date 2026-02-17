@@ -1,0 +1,185 @@
+
+> homepage-sortelba-com@0.1.0 dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 767ms
+ GET /admin?key=skatelife-secret 200 in 715ms (compile: 527ms, render: 188ms)
+ GET /admin?key=skatelife-secret 200 in 59ms (compile: 2ms, render: 57ms)
+ GET / 200 in 493ms (compile: 222ms, render: 271ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 152ms (compile: 133ms, render: 19ms)
+ GET /api/events 200 in 1377ms (compile: 1369ms, render: 8ms)
+ GET /api/settings?key=skatelife-secret&t=1771286197354 200 in 1455ms (compile: 1451ms, render: 4ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 3 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+RSS fetch failed for Thrasher News: 404
+Failed to scrape detail: https://irregular-magazin.de/we-still-live-here/ TypeError: fetch failed
+    at async scrapeDetail (src/lib/scraper.ts:75:26)
+    at async (src/lib/scraper.ts:221:29)
+    at async scrapeRssSource (src/lib/scraper.ts:242:25)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  73 | async function scrapeDetail(url: string, selector: string): Promise<{ text: string; video?: string; image?: string; images: string[] }> {
+  74 |     try {
+> 75 |         const response = await fetchWithHeaders(url);
+     |                          ^
+  76 |         if (!response.ok) {
+  77 |             console.warn(`Fetch failed for ${url}: ${response.status} ${response.statusText}`);
+  78 |             return { text: "", images: [] }; {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '192.168.178.32',
+      localPort: 59831,
+      remoteAddress: '217.160.0.46',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 426,
+      bytesRead: 0
+    }
+  }
+}
+Failed to scrape detail: https://irregular-magazin.de/loop-stfu/ TypeError: fetch failed
+    at async scrapeDetail (src/lib/scraper.ts:75:26)
+    at async (src/lib/scraper.ts:221:29)
+    at async scrapeRssSource (src/lib/scraper.ts:242:25)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  73 | async function scrapeDetail(url: string, selector: string): Promise<{ text: string; video?: string; image?: string; images: string[] }> {
+  74 |     try {
+> 75 |         const response = await fetchWithHeaders(url);
+     |                          ^
+  76 |         if (!response.ok) {
+  77 |             console.warn(`Fetch failed for ${url}: ${response.status} ${response.statusText}`);
+  78 |             return { text: "", images: [] }; {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '192.168.178.32',
+      localPort: 59830,
+      remoteAddress: '217.160.0.46',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 417,
+      bytesRead: 0
+    }
+  }
+}
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+ GET /api/messages?key=skatelife-secret 401 in 2.0s (compile: 2.0s, render: 43ms)
+ GET /api/settings?key=skatelife-secret&t=1771286424595 200 in 4.7s (compile: 4.6s, render: 7ms)
+ GET /api/messages?key=skatelife-secret 401 in 1661ms (compile: 1655ms, render: 6ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 2.7min (compile: 1607ms, render: 2.7min)
+Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/chima-ferguson-real-skateboards-highlight-real: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skateboards-decks/look-chocolate-unearths-rare-evan-hecox-sketch-for-limited-erik-herrera-graphic: 403 Forbidden
+⚠ Server is approaching the used memory threshold, restarting...
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 926ms
+ GET / 200 in 723ms (compile: 564ms, render: 159ms)
+ GET /api/events 200 in 59ms (compile: 48ms, render: 11ms)
+✓ Compiled in 645.8s
+
+<--- Last few GCs --->
+
+[35285:0xabd424000]  1277463 ms: Mark-Compact 3700.1 (4232.9) -> 3699.4 (4221.9) MB, pooled: 21 MB, 6977.21 / 0.00 ms  (average mu = 0.136, current mu = 0.021) allocation failure; scavenge might not succeed
+[35285:0xabd424000]  1283459 ms: Mark-Compact 3732.9 (4255.6) -> 3732.5 (4244.8) MB, pooled: 32 MB, 5906.58 / 0.00 ms  (average mu = 0.075, current mu = 0.015) allocation failure; scavenge might not succeed
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0x102d5d630 node::OOMErrorHandler(char const*, v8::OOMDetails const&) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 2: 0x102e8b584 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 3: 0x102e8b53c v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 4: 0x1030684fc v8::internal::Heap::stack() [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 5: 0x10306ac3c v8::internal::Heap::OldGenerationConsumedBytes() const [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 6: 0x10306aadc v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector, v8::base::TimeTicks) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 7: 0x103078468 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1::operator()() const [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 8: 0x10307810c void heap::base::Stack::SetMarkerAndCallbackImpl<v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags)::$_1>(heap::base::Stack*, void*, void const*) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+ 9: 0x1037c0980 PushAllRegistersAndIterateStack [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+10: 0x103066abc v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+11: 0x10305e6c4 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+12: 0x103036bc0 v8::internal::MaybeHandle<v8::internal::SeqTwoByteString> v8::internal::FactoryBase<v8::internal::Factory>::NewRawStringWithMap<v8::internal::SeqTwoByteString>(int, v8::internal::Tagged<v8::internal::Map>, v8::internal::AllocationType) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+13: 0x103047b08 v8::internal::Factory::NewStringFromUtf8(v8::base::Vector<unsigned char const>, unibrow::Utf8Variant, v8::internal::AllocationType) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+14: 0x102ea16c8 v8::String::NewFromUtf8(v8::Isolate*, char const*, v8::NewStringType, int) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+15: 0x102d2170c napi_create_string_utf8 [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+16: 0x1472cc41c blake3_compress_in_place_portable [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+17: 0x143330af4  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+18: 0x1434c05a0  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+19: 0x1434c0210  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+20: 0x143330c30  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+21: 0x14356b1ec  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+22: 0x1434bfa9c  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+23: 0x14356aa04  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+24: 0x1434e76e4  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+25: 0x14356b874  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+26: 0x1434becb4  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+27: 0x143504ef4  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+28: 0x143534ad4  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+29: 0x1434e4670  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+30: 0x1434ff5ac  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+31: 0x14342be74  [/Users/steffenortelbach/Documents/Homepage sortelba.com/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node]
+32: 0x102d383a8 v8impl::(anonymous namespace)::ThreadSafeFunction::AsyncCb(uv_async_s*) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+33: 0x1081b66bc uv__async_io [/opt/homebrew/Cellar/libuv/1.51.0/lib/libuv.1.dylib]
+34: 0x1081c6bd0 uv__io_poll [/opt/homebrew/Cellar/libuv/1.51.0/lib/libuv.1.dylib]
+35: 0x1081b6b58 uv_run [/opt/homebrew/Cellar/libuv/1.51.0/lib/libuv.1.dylib]
+36: 0x102cb13ec node::SpinEventLoopInternal(node::Environment*) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+37: 0x102d86044 node::NodeMainInstance::Run(node::ExitCode*, node::Environment*) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+38: 0x102d85dd8 node::NodeMainInstance::Run() [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+39: 0x102d33354 node::Start(int, char**) [/opt/homebrew/Cellar/node/24.1.0/bin/node]
+40: 0x18d041d54 start [/usr/lib/dyld]
