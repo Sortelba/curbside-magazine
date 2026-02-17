@@ -15,11 +15,9 @@
 - Environments: .env.local
 
 ✓ Starting...
-✓ Ready in 1191ms
- GET /admin?key=skatelife-secret 200 in 629ms (compile: 415ms, render: 213ms)
- GET /api/map/pending?key=skatelife-secret 401 in 107ms (compile: 95ms, render: 12ms)
- GET / 200 in 160ms (compile: 79ms, render: 81ms)
- GET /api/events 200 in 613ms (compile: 606ms, render: 8ms)
+✓ Ready in 903ms
+ GET /admin?key=skatelife-secret 200 in 590ms (compile: 411ms, render: 179ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 68ms (compile: 59ms, render: 9ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 3 Instagram tags...
 Fetching RSS for Boardstation...
@@ -35,8 +33,58 @@ Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 404
 Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skateboards-decks/look-chocolate-unearths-rare-evan-hecox-sketch-for-limited-erik-herrera-graphic: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/chima-ferguson-real-skateboards-highlight-real: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+Searching for #skateboarding on Instagram via DuckDuckGo...
+Searching for #berics on Instagram via DuckDuckGo...
+Searching for #thrasher on Instagram via DuckDuckGo...
+Found 6 real posts via DDG.
+Found 6 real posts via DDG.
+Found 6 real posts via DDG.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 15.3s (compile: 159ms, render: 15.1s)
+ POST /api/posts/create 200 in 69ms (compile: 62ms, render: 7ms)
+ GET / 200 in 161ms (compile: 61ms, render: 100ms)
+ GET /api/events 200 in 385ms (compile: 381ms, render: 5ms)
+ POST /api/posts/create 200 in 11ms (compile: 6ms, render: 4ms)
+ GET /api/settings?key=skatelife-secret&t=1771348483179 200 in 103ms (compile: 100ms, render: 3ms)
+ POST /api/settings?key=skatelife-secret 200 in 58ms (compile: 16ms, render: 43ms)
+ GET /admin?key=skatelife-secret 200 in 99ms (compile: 19ms, render: 80ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 7ms (compile: 4ms, render: 3ms)
+ GET /api/settings?key=skatelife-secret&t=1771348631146 200 in 9ms (compile: 3ms, render: 5ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 3 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skateboards-decks/look-chocolate-unearths-rare-evan-hecox-sketch-for-limited-erik-herrera-graphic: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/chima-ferguson-real-skateboards-highlight-real: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
@@ -57,33 +105,59 @@ Error scraping RSS Solo Skate Mag: TypeError: fetch failed
 Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 16.3s (compile: 326ms, render: 15.9s)
- GET / 200 in 116ms (compile: 33ms, render: 83ms)
- GET /api/events 200 in 398ms (compile: 393ms, render: 6ms)
- POST /api/posts/create 200 in 1442ms (compile: 1426ms, render: 16ms)
-✓ Compiled in 29.7s
- GET / 200 in 29.3s (compile: 1292ms, render: 28.0s)
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 767ms
- GET /admin?key=skatelife-secret 200 in 469ms (compile: 321ms, render: 149ms)
- GET /api/map/pending?key=skatelife-secret 401 in 51ms (compile: 44ms, render: 7ms)
- GET / 200 in 105ms (compile: 51ms, render: 53ms)
- GET /api/events 200 in 204ms (compile: 199ms, render: 5ms)
+Found 6 real posts via DDG.
+Found 6 real posts via DDG.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 13.5s (compile: 5ms, render: 13.5s)
+ GET /api/settings?key=skatelife-secret&t=1771348718052 200 in 22ms (compile: 10ms, render: 12ms)
+ POST /api/settings?key=skatelife-secret 200 in 18ms (compile: 6ms, render: 12ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 4 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
+RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/news/chima-ferguson-real-skateboards-highlight-real: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skateboards-decks/look-chocolate-unearths-rare-evan-hecox-sketch-for-limited-erik-herrera-graphic: 403 Forbidden
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+Searching for #skateboarding on Instagram via DuckDuckGo...
+Searching for #berics on Instagram via DuckDuckGo...
+Searching for #thrasher on Instagram via DuckDuckGo...
+Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.3s (compile: 6ms, render: 11.3s)
+ POST /api/posts/create 200 in 24ms (compile: 10ms, render: 14ms)
+ GET / 200 in 79ms (compile: 11ms, render: 68ms)
+ GET /api/events 200 in 23ms (compile: 17ms, render: 6ms)

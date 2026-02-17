@@ -32,7 +32,7 @@
     },
     {
       "name": "Irregular Magazin",
-      "url": "https://irregular-magazin.de/feed/",
+      "url": "https://irregular-magazin.de/news/",
       "selector": "article",
       "type": "rss"
     },
@@ -82,7 +82,8 @@
   "instagramHashtags": [
     "skateboarding",
     "berics",
-    "thrasher"
+    "thrasher",
+    "skateboardingisfun"
   ],
   "showLearnCenter": true
 }

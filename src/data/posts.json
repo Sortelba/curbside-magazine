@@ -1,5 +1,102 @@
 [
   {
+    "id": "post_1771348760012_456",
+    "title": "[News] Wtf is Happening with Cariuma",
+    "description": "Neues Video von The Nine Club auf YouTube!... (Originalquelle: The Nine Club)...",
+    "translations": {
+      "de": {
+        "title": "[News] Wtf is Happening with Cariuma",
+        "content": "Neues Video von The Nine Club auf YouTube!... (Originalquelle: The Nine Club)"
+      },
+      "en": {
+        "title": "Wtf is Happening with Cariuma",
+        "content": "Neues Video von The Nine Club auf YouTube!..."
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/mEjZFMYAb1Y",
+    "media": {
+      "images": [
+        "https://img.youtube.com/vi/mEjZFMYAb1Y/maxresdefault.jpg"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/mEjZFMYAb1Y",
+      "externalLink": "https://www.youtube.com/watch?v=mEjZFMYAb1Y"
+    },
+    "source": "The Nine Club",
+    "originalUrl": "https://www.youtube.com/watch?v=mEjZFMYAb1Y",
+    "date": "Feb 17, 2026",
+    "tags": [
+      "news",
+      "the nine club"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1771348418740_522",
+    "title": "[News] TJ Rogers Gets Special Edition Bronzed Pro Shoe for Lifelong Loyalty to Core Brand éS",
+    "description": "éS Skateboarding got some of TJ Rogers’ closest friends together to celebrate a big moment in his career\n\nThey hooked him up with a special bronzed version of his pro shoe to honor decades of dedicati...",
+    "translations": {
+      "de": {
+        "title": "[News] TJ Rogers Gets Special Edition Bronzed Pro Shoe for Lifelong Loyalty to Core Brand éS",
+        "content": "éS Skateboarding got some of TJ Rogers’ closest friends together to celebrate a big moment in his career\n\nThey hooked him up with a special bronzed version of his pro shoe to honor decades of dedication and love for skateboarding.\n\nTJ has been grinding in the scene for years and it shows. Few skaters show the kind of passion and care he puts into everything he does. The bronzed shoe celebrates that commitment and locks in his spot in the éS Footwear Hall of Fame.\n\nDon Brown from éS said congratu... (Originalquelle: Shredder News)"
+      },
+      "en": {
+        "title": "TJ Rogers Gets Special Edition Bronzed Pro Shoe for Lifelong Loyalty to Core Brand éS",
+        "content": "éS Skateboarding got some of TJ Rogers’ closest friends together to celebrate a big moment in his career\n\nThey hooked him up with a special bronzed version of his pro shoe to honor decades of dedication and love for skateboarding.\n\nTJ has been grinding in the scene for years and it shows. Few skaters show the kind of passion and care he puts into everything he does. The bronzed shoe celebrates that commitment and locks in his spot in the éS Footwear Hall of Fame.\n\nDon Brown from éS said congratu..."
+      }
+    },
+    "type": "image",
+    "content": "https://shredder.news/wp-content/uploads/TJ-Rogers-Gets-Special-Edition-Bronzed-Pro-Shoe-for-Lifelong-Loyalty-to-Core-Brand-eS-.jpg",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/TJ-Rogers-Gets-Special-Edition-Bronzed-Pro-Shoe-for-Lifelong-Loyalty-to-Core-Brand-eS-.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://shredder.news/tj-rogers-bronzed-pro-es-shoe/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/tj-rogers-bronzed-pro-es-shoe/",
+    "date": "Feb 17, 2026",
+    "tags": [
+      "news",
+      "shredder news"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1771348418603_751",
+    "title": "[News] Terry Kennedy Back on Board and Still Got Mad Steeze with Switch God Stance",
+    "description": "Professional skateboarder Terry Kennedy is back on the streets and showing everyone that he still got that mad steezy in him.\n\nAfter his legal troubles, which ended with an acquittal for the murder of...",
+    "translations": {
+      "de": {
+        "title": "[News] Terry Kennedy Back on Board and Still Got Mad Steeze with Switch God Stance",
+        "content": "Professional skateboarder Terry Kennedy is back on the streets and showing everyone that he still got that mad steezy in him.\n\nAfter his legal troubles, which ended with an acquittal for the murder of fellow skater Josiah Kassahun but a conviction for battery, TK is stepping back into the skate scene with a new chapter in his life.\n\nHe’s launched his own skateboard brand, TK Skate Co, and it looks like he’s ready to let everyone know why he’s such a standout skater.\n\nHis latest clips on Instagra... (Originalquelle: Shredder News)"
+      },
+      "en": {
+        "title": "Terry Kennedy Back on Board and Still Got Mad Steeze with Switch God Stance",
+        "content": "Professional skateboarder Terry Kennedy is back on the streets and showing everyone that he still got that mad steezy in him.\n\nAfter his legal troubles, which ended with an acquittal for the murder of fellow skater Josiah Kassahun but a conviction for battery, TK is stepping back into the skate scene with a new chapter in his life.\n\nHe’s launched his own skateboard brand, TK Skate Co, and it looks like he’s ready to let everyone know why he’s such a standout skater.\n\nHis latest clips on Instagra..."
+      }
+    },
+    "type": "image",
+    "content": "https://shredder.news/wp-content/uploads/Terry-Kennedy-Back-on-Board-Skating.jpg",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/Terry-Kennedy-Back-on-Board-Skating.jpg",
+        "https://shredder.news/wp-content/uploads/Sammy-Baca-Still-Watchin.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://shredder.news/terry-kennedy-back-on-board/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/terry-kennedy-back-on-board/",
+    "date": "Feb 17, 2026",
+    "tags": [
+      "news",
+      "shredder news"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1771346421692_142",
     "title": "enjoi Press Release Video – Steht ein Comeback von Enjoi Skateboards bevor?",
     "description": "enjoi Press Release Video – Steht ein Comeback von Enjoi Skateboards bevor?\n\n17. Februar 2026  \n\t\t\t06:28  -  Johannes Gausepohl\n\nÜberraschend meldet sich Louie Barletta im Namen von Enjoi Skateboards ...",
