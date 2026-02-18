@@ -15,9 +15,9 @@
 - Environments: .env.local
 
 ✓ Starting...
-✓ Ready in 925ms
- GET /admin?key=skatelife-secret 200 in 741ms (compile: 479ms, render: 262ms)
- GET /api/map/pending?key=skatelife-secret 401 in 119ms (compile: 112ms, render: 8ms)
+✓ Ready in 1754ms
+ GET /admin?key=skatelife-secret 200 in 496ms (compile: 352ms, render: 144ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 99ms (compile: 91ms, render: 8ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -34,8 +34,8 @@ RSS fetch failed for Thrasher News: 404
 Fetch failed for https://www.skateboarding.com/news/skateshop-day-coming-this-saturday-february-21: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/enjoi-back-in-louie-barlettas-hands: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -60,192 +60,9 @@ Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 14.9s (compile: 187ms, render: 14.7s)
- POST /api/posts/create 200 in 87ms (compile: 76ms, render: 11ms)
- GET /api/cron/youtube?key=skatelife-secret 401 in 106ms (compile: 74ms, render: 32ms)
- GET /api/cron/youtube?key=skatelife-secret 401 in 12ms (compile: 4ms, render: 7ms)
- GET /api/instagram/scan?key=skatelife-secret&hashtag=skateboarding 401 in 147ms (compile: 144ms, render: 3ms)
- GET /api/learn 200 in 462ms (compile: 431ms, render: 31ms)
- GET /api/learn 200 in 6ms (compile: 2ms, render: 4ms)
- GET /api/community 200 in 94ms (compile: 84ms, render: 10ms)
- GET /api/community 200 in 3ms (compile: 1026µs, render: 2ms)
- GET /api/settings?key=skatelife-secret&t=1771369566260 200 in 65ms (compile: 61ms, render: 4ms)
- GET / 200 in 333ms (compile: 144ms, render: 189ms)
- GET /api/events 200 in 367ms (compile: 362ms, render: 5ms)
- GET /api/events 200 in 1648ms (compile: 1612ms, render: 35ms)
- GET /api/events 200 in 1534ms (compile: 1527ms, render: 7ms)
- POST /api/events 200 in 7.3s (compile: 1618ms, render: 5.7s)
- POST /api/events 200 in 8.5s (compile: 4.2s, render: 4.3s)
- POST /api/events 200 in 13.2s (compile: 1965ms, render: 11.2s)
- POST /api/events 200 in 20.0s (compile: 7.9s, render: 12.1s)
- POST /api/events 200 in 20.4s (compile: 7.1s, render: 13.3s)
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 1159ms
- GET /admin?key=skatelife-secret 200 in 860ms (compile: 693ms, render: 167ms)
- GET / 200 in 852ms (compile: 624ms, render: 228ms)
- GET /api/map/pending?key=skatelife-secret 401 in 100ms (compile: 92ms, render: 7ms)
- GET /api/events 200 in 1623ms (compile: 1618ms, render: 6ms)
- GET /api/events 200 in 1601ms (compile: 1596ms, render: 5ms)
- GET /api/events 200 in 1529ms (compile: 1525ms, render: 4ms)
- GET /api/events 200 in 1752ms (compile: 1714ms, render: 38ms)
- GET /api/events 200 in 2.3s (compile: 2.2s, render: 8ms)
- POST /api/events 200 in 8.6s (compile: 1724ms, render: 6.9s)
- POST /api/events 200 in 11.5s (compile: 6.7s, render: 4.8s)
- POST /api/events 200 in 11.1s (compile: 2.4s, render: 8.7s)
- POST /api/events 200 in 15.3s (compile: 6.6s, render: 8.8s)
- POST /api/events 200 in 14.9s (compile: 2.0s, render: 12.9s)
- GET / 200 in 93s (compile: 6.6s, render: 86s)
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 839ms
- GET /admin?key=skatelife-secret 200 in 490ms (compile: 319ms, render: 171ms)
-Starting scrape job...
-Scraping 10 news sources, YouTube, and 4 Instagram tags...
-Fetching RSS for Boardstation...
-Fetching RSS for Limited Skateboarding...
-Fetching RSS for Irregular Magazin...
-Fetching RSS for Shredder News...
-Fetching RSS for Jenkem Mag...
-Fetching RSS for Thrasher News...
-Fetching RSS for Transworld...
-Fetching RSS for Solo Skate Mag...
-Fetching RSS for Pocket Skate Mag...
-Fetching RSS for Place Magazine...
- GET /api/map/pending?key=skatelife-secret 401 in 30ms (compile: 25ms, render: 5ms)
-RSS fetch failed for Thrasher News: 404
-Fetch failed for https://www.skateboarding.com/news/skateshop-day-coming-this-saturday-february-21: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/enjoi-back-in-louie-barlettas-hands: 403 Forbidden
-Starting scrape job...
-Scraping 10 news sources, YouTube, and 4 Instagram tags...
-Fetching RSS for Boardstation...
-Fetching RSS for Limited Skateboarding...
-Fetching RSS for Irregular Magazin...
-Fetching RSS for Shredder News...
-Fetching RSS for Jenkem Mag...
-Fetching RSS for Thrasher News...
-Fetching RSS for Transworld...
-Fetching RSS for Solo Skate Mag...
-Fetching RSS for Pocket Skate Mag...
-Fetching RSS for Place Magazine...
-RSS fetch failed for Thrasher News: 404
-Fetch failed for https://www.skateboarding.com/news/skateshop-day-coming-this-saturday-february-21: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/enjoi-back-in-louie-barlettas-hands: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
-Error scraping RSS Solo Skate Mag: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
-      at ignore-listed frames {
-    code: 'UND_ERR_CONNECT_TIMEOUT'
-  }
-}
-Searching for #skateboarding on Instagram via DuckDuckGo...
-Searching for #berics on Instagram via DuckDuckGo...
-Searching for #thrasher on Instagram via DuckDuckGo...
-Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Error scraping RSS Solo Skate Mag: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
-      at ignore-listed frames {
-    code: 'UND_ERR_CONNECT_TIMEOUT'
-  }
-}
-Searching for #skateboarding on Instagram via DuckDuckGo...
-Searching for #berics on Instagram via DuckDuckGo...
-Searching for #thrasher on Instagram via DuckDuckGo...
-Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.1s (compile: 5ms, render: 11.0s)
- POST /api/posts/create 200 in 58ms (compile: 51ms, render: 6ms)
- GET / 200 in 244ms (compile: 45ms, render: 199ms)
- GET /api/events 200 in 1504ms (compile: 1499ms, render: 5ms)
- GET /api/events 200 in 1709ms (compile: 1697ms, render: 13ms)
- GET /api/events 200 in 1928ms (compile: 1921ms, render: 7ms)
- POST /api/events 200 in 4.6s (compile: 1510ms, render: 3.1s)
- POST /api/events 200 in 5.6s (compile: 1863ms, render: 3.7s)
-✓ Compiled in 168.7s
- POST /api/events 200 in 8.1s (compile: 1748ms, render: 6.4s)
- POST /api/events 200 in 8.2s (compile: 4.2s, render: 4.0s)
- POST /api/events 200 in 9.8s (compile: 2.3s, render: 7.5s)
-✓ Compiled in 349.2s
-○ Compiling /map ...
- GET /map 200 in 55s (compile: 6.8s, render: 49s)
- GET / 200 in 58s (compile: 2.3s, render: 56s)
-✓ Compiled in 579.1s
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 964ms
- GET / 200 in 534ms (compile: 362ms, render: 172ms)
- GET /admin?key=skatelife-secret 200 in 153ms (compile: 63ms, render: 89ms)
- GET /api/events 200 in 103ms (compile: 90ms, render: 13ms)
- GET /api/map/pending?key=skatelife-secret 401 in 1588ms (compile: 1582ms, render: 6ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 16.3s (compile: 159ms, render: 16.1s)
+ POST /api/posts/create 200 in 66ms (compile: 55ms, render: 11ms)
+ POST /api/posts/create 200 in 22ms (compile: 7ms, render: 15ms)
+ POST /api/posts/create 200 in 20ms (compile: 7ms, render: 13ms)
+ GET / 200 in 212ms (compile: 64ms, render: 148ms)
+ GET /api/events 200 in 961ms (compile: 954ms, render: 7ms)
