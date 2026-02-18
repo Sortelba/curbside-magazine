@@ -1,5 +1,135 @@
 [
   {
+    "id": "event_1771372350658",
+    "title": "Jungle Jibfest (Skate & Snow)",
+    "date": "27.02.2026 - 01.03.2026",
+    "startDateUtc": "2026-02-26",
+    "location": "Heubach (Thüringen)",
+    "link": "https://www.junglejibfest26.de/",
+    "description": "",
+    "flyerUrl": "https://static.wixstatic.com/media/6f0806_ceda8c7aac604a87b7daa45097d8ab96~mv2.png/v1/fill/w_600,h_297,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6f0806_ceda8c7aac604a87b7daa45097d8ab96~mv2.png"
+  },
+  {
+    "id": "event_1771372188338",
+    "title": "World Freestyle Championships",
+    "date": "16.08.2026",
+    "startDateUtc": "2026-08-15",
+    "location": "Kassel",
+    "link": "https://www.world-freestyle.com/world-freestyle-global-jam-2026-das-naechste-level/",
+    "description": "Messe, Kassel",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771372091640",
+    "title": "The Hungry Dogs",
+    "date": "11.04.2026",
+    "startDateUtc": "2026-04-11",
+    "location": "Oldenburg",
+    "link": "https://thehungrydogs.de/#contest",
+    "description": "Alexanderstraße 488\n(Einfahrt über Alexandersfeld)\n26127 Oldenburg",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771371966629",
+    "title": "Munich Mash",
+    "date": "26.06.2026",
+    "startDateUtc": "2026-06-25",
+    "location": "München Olympiapark",
+    "link": "https://www.muenchen.de/veranstaltungen/sport/munich-mash",
+    "description": "26.06. – 28.06.\tMünchen (Olympiapark)",
+    "flyerUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.redbull.com%2Fimages%2Fc_fill%2Cg_auto%2Cw_1200%2Ch_630%2Ff_auto%2Cq_auto%2Fredbullcom%2F2014%2F03%2F06%2F1331637596860_2%2Fmunich-mash&f=1&nofb=1&ipt=45fb1097008c9589354093c886ba0a85b02b7f93ee7f1bccfe0e6400a08be525"
+  },
+  {
+    "id": "event_1771371863284",
+    "title": "Skatefest Heidelberg",
+    "date": "30.05.2026",
+    "startDateUtc": "2026-05-29",
+    "location": "Heidelberg",
+    "link": "",
+    "description": "",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771371546917",
+    "title": "GO SKATEBOARDING DAY ",
+    "date": "21.06.2026",
+    "startDateUtc": "2026-06-20",
+    "location": "WORLDWIDE",
+    "link": "",
+    "description": "",
+    "flyerUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.onlymelbourne.com.au%2Fimage%2Fico-skatboardday.jpg&f=1&nofb=1&ipt=6420fc44ac61abe237cbfe3bc0c7564e25b47edd77bf3297eba3b87d7780c296"
+  },
+  {
+    "id": "event_1771371459803",
+    "title": "Norddeutsche Meisterschaft",
+    "date": "17.10.2026",
+    "startDateUtc": "2026-10-16",
+    "location": "Hamburg",
+    "link": "",
+    "description": "Ipunkt skate halle",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771371413548",
+    "title": "Ostdeutsche Meisterschaft",
+    "date": "29.08.2026",
+    "startDateUtc": "2026-08-28",
+    "location": "Dessau",
+    "link": "",
+    "description": "Andes Skatepark (Finale COS Cup Serie)",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771371337198",
+    "title": "Südwestdeutsche Meisterschaft",
+    "date": "07.08.2026",
+    "startDateUtc": "2026-08-07",
+    "location": "Bürgerpark Saarbrücken",
+    "link": "",
+    "description": "Bürgerpark (COS Cup Stop)",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771371200032",
+    "title": "Westdeutsche Meisterschaft",
+    "date": "06.07.2026",
+    "startDateUtc": "2026-07-05",
+    "location": "Skatepark Hombruch",
+    "link": "",
+    "description": "Skatepark Hombruch COS CUP",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771370534757",
+    "title": "Bayerische Landesmeisterschaft-Street",
+    "date": "25.04.2026",
+    "startDateUtc": "2026-04-24",
+    "location": "München",
+    "link": "https://skateboarddeutschland.de/event/muenchen-landesmeisterschaft-street-25-04-2026/",
+    "description": "",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1771370162015",
+    "title": "Start World Skate Games Event",
+    "date": "02.10.2026",
+    "startDateUtc": "2026-10-01",
+    "location": "Asunción, Paraguay",
+    "link": "https://www.worldskate.org/events/upcoming-events/event/427.html",
+    "description": "Das größte Multi-Sport-Event für Rollsportarten findet in Asunción, Paraguay statt. Hier werden Weltmeisterschaften in fast allen Rollsport-Disziplinen (inkl. Skateboarding) ausgetragen.",
+    "flyerUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.worldskate.org%2Fimages%2FWSK_logo_web.jpg&f=1&nofb=1&ipt=11ef219c107e25a73762412c1f455a6bb0b9a59912aa24a01d63d3bcd2e55a18"
+  },
+  {
+    "id": "event_1771369856983",
+    "title": "SLS Downtown Los Angeles Takeover (USA)",
+    "date": "04.04.2026",
+    "startDateUtc": "2026-04-03",
+    "location": "Los Angeles",
+    "link": "https://www.streetleague.com/",
+    "description": "",
+    "flyerUrl": "https://static.wixstatic.com/media/541236_22cf4729ae464bf69a148931ccb74b8c~mv2.jpg/v1/fill/w_1553,h_836,q_90,enc_avif,quality_auto/541236_22cf4729ae464bf69a148931ccb74b8c~mv2.jpg"
+  },
+  {
     "id": "event_1771024939753",
     "title": "Tampa Pro",
     "date": "9. - 12. 04. 2026",
@@ -42,7 +172,7 @@
     "id": "event_import_2",
     "title": "Offene Landesmeisterschaft Niedersachsen “Street”",
     "date": "11.04.2026",
-    "startDateUtc": "2026-04-11",
+    "startDateUtc": "2026-04-10",
     "location": "Backyard e.V. Skatehalle Oldenburg, Oldenburg",
     "link": "https://skateboarddeutschland.de/event/offene-landesmeisterschaft-niedersachsen/",
     "description": "Regional Street Championship in Lower Saxony."
