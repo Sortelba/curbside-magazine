@@ -15,9 +15,9 @@
 - Environments: .env.local
 
 ✓ Starting...
-✓ Ready in 1754ms
- GET /admin?key=skatelife-secret 200 in 496ms (compile: 352ms, render: 144ms)
- GET /api/map/pending?key=skatelife-secret 401 in 99ms (compile: 91ms, render: 8ms)
+✓ Ready in 1123ms
+ GET /admin?key=skatelife-secret 200 in 799ms (compile: 567ms, render: 233ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 86ms (compile: 77ms, render: 9ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -30,12 +30,12 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
-RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/news/elsewhere-the-story-of-uk-skateboarding-1987-2002-book-out-in-may: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/skateshop-day-coming-this-saturday-february-21: 403 Forbidden
+RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/news/etnies-es-and-emerica-shut-down-online-stores-to-support-skate-shop-day: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/krooked-skateboards-jump-platform-video: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/enjoi-back-in-louie-barlettas-hands: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/guillotine-by-cameron-youngman: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skateboards-decks/krooked-skateboards-beamer-skateshop-day-2026: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/the-true-dynamics-of-skateboarding-trips: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -60,9 +60,11 @@ Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 16.3s (compile: 159ms, render: 16.1s)
- POST /api/posts/create 200 in 66ms (compile: 55ms, render: 11ms)
- POST /api/posts/create 200 in 22ms (compile: 7ms, render: 15ms)
- POST /api/posts/create 200 in 20ms (compile: 7ms, render: 13ms)
- GET / 200 in 212ms (compile: 64ms, render: 148ms)
- GET /api/events 200 in 961ms (compile: 954ms, render: 7ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 16.9s (compile: 184ms, render: 16.7s)
+ POST /api/posts/create 200 in 78ms (compile: 68ms, render: 10ms)
+ POST /api/posts/create 200 in 25ms (compile: 10ms, render: 14ms)
+ POST /api/posts/create 200 in 22ms (compile: 4ms, render: 18ms)
+ POST /api/posts/create 200 in 23ms (compile: 7ms, render: 16ms)
+ POST /api/posts/create 200 in 19ms (compile: 6ms, render: 13ms)
+ GET / 200 in 205ms (compile: 81ms, render: 124ms)
+ GET /api/events 200 in 798ms (compile: 793ms, render: 5ms)
