@@ -2,12 +2,22 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, User, Mail, MessageSquare, Info } from "lucide-react";
+import { X, Send, User, Mail, MessageSquare, Info, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import emailjs from "@emailjs/browser";
+
+// ─── EmailJS Config ──────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID = "service_sxq9s8g";
+const EMAILJS_TEMPLATE_ID = "template_1jcqhx3"; // ← ersetze mit deiner Template-ID
+const EMAILJS_PUBLIC_KEY = "VXhP2N2ZcXkMG6-WC";  // ← ersetze mit deinem Public Key
+// ─────────────────────────────────────────────────────────────────────────────
+
+type SendStatus = "idle" | "loading" | "success" | "error";
 
 export default function ContactModal() {
     const { t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
+    const [status, setStatus] = useState<SendStatus>("idle");
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -21,30 +31,36 @@ export default function ContactModal() {
         return () => window.removeEventListener('open-contact-modal', handleOpen);
     }, []);
 
+    const handleClose = () => {
+        setIsOpen(false);
+        setStatus("idle");
+        setFormData({ name: "", email: "", subject: "Vorschlag Verein", message: "" });
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setStatus("loading");
 
         try {
-            const res = await fetch("/api/contact/submit", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            });
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: "hallosprungbrett@gmail.com",
+                },
+                EMAILJS_PUBLIC_KEY
+            );
 
-            if (res.ok) {
-                alert("Nachricht gesendet! Danke für deinen Support.");
-                setIsOpen(false);
-                return;
-            }
+            setStatus("success");
+            setTimeout(() => handleClose(), 2500);
         } catch (err) {
-            console.error("API failed, falling back to mailto");
+            console.error("EmailJS error:", err);
+            setStatus("error");
         }
-
-        // Mailto fallback for static hosting
-        const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-        window.location.href = `mailto:sortelba@online.de?subject=${formData.subject}&body=${body}`;
-
-        setIsOpen(false);
     };
 
     return (
@@ -55,7 +71,7 @@ export default function ContactModal() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleClose}
                         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
                     />
 
@@ -76,7 +92,7 @@ export default function ContactModal() {
                                 </p>
                             </div>
                             <button
-                                onClick={() => setIsOpen(false)}
+                                onClick={handleClose}
                                 className="p-3 hover:bg-background rounded-2xl transition-colors group"
                             >
                                 <X className="h-6 w-6 group-hover:rotate-90 transition-transform" />
@@ -148,14 +164,27 @@ export default function ContactModal() {
 
                             <button
                                 type="submit"
-                                className="w-full bg-primary text-primary-foreground py-5 rounded-3xl font-black uppercase italic tracking-wider flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                                disabled={status === "loading" || status === "success"}
+                                className="w-full bg-primary text-primary-foreground py-5 rounded-3xl font-black uppercase italic tracking-wider flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
                             >
-                                <Send className="h-5 w-5" />
-                                Nachricht senden
+                                {status === "loading" ? (
+                                    <><Loader2 className="h-5 w-5 animate-spin" /> Wird gesendet...</>
+                                ) : status === "success" ? (
+                                    <><CheckCircle className="h-5 w-5" /> Gesendet! ✓</>
+                                ) : (
+                                    <><Send className="h-5 w-5" /> Nachricht senden</>
+                                )}
                             </button>
 
+                            {status === "error" && (
+                                <div className="flex items-center gap-2 text-red-500 bg-red-500/10 rounded-2xl px-4 py-3">
+                                    <AlertCircle className="h-4 w-4 shrink-0" />
+                                    <p className="text-xs font-bold">Fehler beim Senden. Bitte versuche es erneut.</p>
+                                </div>
+                            )}
+
                             <p className="text-[10px] text-center text-muted-foreground font-medium px-4">
-                                Durch das Absenden öffnet sich dein E-Mail Programm. Wir speichern keine Daten direkt auf dem Server.
+                                Deine Nachricht wird direkt an uns weitergeleitet. Wir melden uns so schnell wie möglich.
                             </p>
                         </form>
                     </motion.div>
