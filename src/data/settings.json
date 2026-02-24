@@ -85,5 +85,6 @@
     "thrasher",
     "skateboardingisfun"
   ],
-  "showLearnCenter": true
+  "showLearnCenter": true,
+  "showCommunity": false
 }
