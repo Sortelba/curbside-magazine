@@ -4,6 +4,13 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Upload, MapPin, Youtube, Link as LinkIcon, Info } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+// ─── EmailJS Config ──────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID = "service_sxq9s8g";
+const EMAILJS_TEMPLATE_ID = "template_xgvny18"; // ← ersetze mit deiner Spot-Template-ID
+const EMAILJS_PUBLIC_KEY = "VXhP2N2ZcXkMG6-WC";
+// ─────────────────────────────────────────────────────────────────────────────
 
 export function SpotContributeForm() {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,25 +59,26 @@ export function SpotContributeForm() {
         setIsSubmitting(true);
 
         try {
-            // Build the email body
-            const subject = `Spot Submission: ${formData.name}`;
-            const body = `
-Spot/Shop Name: ${formData.name}
-Contributor: ${formData.contributor}
-Category: ${formData.category}
-Location/Address: ${formData.location}
-Description: ${formData.description}
-Media URL: ${formData.mediaUrl}
-YouTube URL: ${formData.youtubeUrl}
-            `.trim();
-
-            const mailtoUrl = `mailto:sortelba@online.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoUrl;
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                {
+                    spot_name: formData.name,
+                    contributor: formData.contributor,
+                    category: formData.category,
+                    location: formData.location,
+                    description: formData.description,
+                    media_url: formData.mediaUrl || "(kein Link angegeben)",
+                    youtube_url: formData.youtubeUrl || "(kein Link angegeben)",
+                    to_email: "hallosprungbrett@gmail.com",
+                },
+                EMAILJS_PUBLIC_KEY
+            );
 
             setIsSuccess(true);
         } catch (error) {
-            console.error("Submission error:", error);
-            alert("Fehler beim Vorbereiten der E-Mail.");
+            console.error("EmailJS submission error:", error);
+            alert("Fehler beim Senden. Bitte versuche es erneut.");
         } finally {
             setIsSubmitting(false);
         }
@@ -112,8 +120,8 @@ YouTube URL: ${formData.youtubeUrl}
                                 <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <CheckCircle2 size={40} />
                                 </div>
-                                <h2 className="text-3xl font-black uppercase italic tracking-tighter mb-4">Fast geschafft!</h2>
-                                <p className="text-muted-foreground text-lg mb-8">Dein E-Mail Programm sollte sich nun öffnen. Sende die Mail einfach ab, damit wir deinen Spot prüfen können.</p>
+                                <h2 className="text-3xl font-black uppercase italic tracking-tighter mb-4">Danke! 🛹</h2>
+                                <p className="text-muted-foreground text-lg mb-8">Dein Spot wurde erfolgreich eingereicht! Wir prüfen ihn und melden uns bald.</p>
                                 <div className="flex flex-col gap-3">
                                     <button
                                         onClick={handleReset}
@@ -292,7 +300,7 @@ YouTube URL: ${formData.youtubeUrl}
                                     </div>
 
                                     <p className="text-[10px] text-center text-muted-foreground uppercase tracking-widest font-medium">
-                                        Durch das Absenden öffnet sich dein E-Mail Programm. Wir speichern keine Daten direkt auf dem Server.
+                                        Deine Einreichung wird direkt an uns weitergeleitet. Wir melden uns so schnell wie möglich.
                                     </p>
                                 </form>
                             </>
