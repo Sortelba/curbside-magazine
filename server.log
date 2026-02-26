@@ -15,9 +15,9 @@
 - Environments: .env.local
 
 ✓ Starting...
-✓ Ready in 1680ms
- GET /admin?key=skatelife-secret 200 in 912ms (compile: 607ms, render: 305ms)
- GET /api/map/pending?key=skatelife-secret 401 in 128ms (compile: 118ms, render: 10ms)
+✓ Ready in 1978ms
+ GET /admin?key=skatelife-secret 200 in 1270ms (compile: 1107ms, render: 163ms)
+ GET /api/map/pending?key=skatelife-secret 401 in 98ms (compile: 90ms, render: 9ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -31,11 +31,11 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/news/crabi-nyc-missions-with-victor-campillo-the-crew: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/former-myles-strampello-part: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/repent-by-baghead-crew: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/antihero-dumpster-dive-finn-pope-gus-gordon-crew: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skate-shoes/first-look-palace-vans-low-2: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/elsewhere-the-story-of-uk-skateboarding-1987-2002-book-out-in-may: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/krooked-skateboards-jump-platform-video: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -60,64 +60,10 @@ Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 18.8s (compile: 201ms, render: 18.6s)
- GET / 200 in 320ms (compile: 137ms, render: 183ms)
- GET /api/events 200 in 82ms (compile: 72ms, render: 10ms)
- GET /community 200 in 21.8s (compile: 1621ms, render: 20.2s)
- POST /api/posts/create 200 in 1490ms (compile: 1472ms, render: 18ms)
- POST /api/posts/create 200 in 2.2s (compile: 2.2s, render: 25ms)
- GET / 200 in 27.3s (compile: 1578ms, render: 25.7s)
- GET /api/events 200 in 1655ms (compile: 1640ms, render: 15ms)
- GET /api/events 200 in 1468ms (compile: 1462ms, render: 6ms)
- POST /api/posts/create 200 in 1457ms (compile: 1450ms, render: 6ms)
- POST /api/posts/create 200 in 1606ms (compile: 1596ms, render: 10ms)
- GET / 200 in 65s (compile: 1566ms, render: 63s)
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 872ms
- GET /admin?key=skatelife-secret 200 in 466ms (compile: 308ms, render: 158ms)
- GET /api/map/pending?key=skatelife-secret 401 in 71ms (compile: 63ms, render: 8ms)
- GET / 200 in 115ms (compile: 42ms, render: 73ms)
- GET /api/events 200 in 595ms (compile: 590ms, render: 5ms)
- GET / 200 in 18.4s (compile: 1256ms, render: 17.1s)
- GET /api/events 200 in 1419ms (compile: 1409ms, render: 10ms)
-✓ Compiled in 7.7s
-✓ Compiled in 3.3s
-○ Compiling /admin ...
- GET / 200 in 43s (compile: 4.8s, render: 38.5s)
- GET / 200 in 71s (compile: 5.8s, render: 65s)
- GET /admin?key=skatelife-secret 200 in 67s (compile: 15.9s, render: 51s)
- GET /admin?key=skatelife-secret 200 in 51s (compile: 2.9s, render: 48s)
-⚠ Server is approaching the used memory threshold, restarting...
-⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
- We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
- To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
-   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
- Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
-
-▲ Next.js 16.1.6 (Turbopack)
-- Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
-- Environments: .env.local
-
-✓ Starting...
-✓ Ready in 963ms
- GET /admin?key=skatelife-secret 200 in 498ms (compile: 281ms, render: 217ms)
- GET /api/map/pending?key=skatelife-secret 401 in 79ms (compile: 72ms, render: 7ms)
-✓ Compiled in 438ms
- GET / 200 in 346ms (compile: 161ms, render: 186ms)
- GET /api/events 200 in 68ms (compile: 52ms, render: 16ms)
-[?25h
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 18.7s (compile: 152ms, render: 18.5s)
+ POST /api/posts/create 200 in 66ms (compile: 56ms, render: 10ms)
+ POST /api/posts/create 200 in 20ms (compile: 9ms, render: 12ms)
+ POST /api/posts/create 200 in 19ms (compile: 6ms, render: 13ms)
+ POST /api/posts/create 200 in 32ms (compile: 10ms, render: 22ms)
+ GET / 200 in 338ms (compile: 169ms, render: 169ms)
+ GET /api/events 200 in 50ms (compile: 35ms, render: 15ms)
