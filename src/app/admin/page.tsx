@@ -303,11 +303,6 @@ function AdminDashboardContent() {
                             >
                                 <Icon className={cn("h-4 w-4", isActive ? "animate-pulse" : "group-hover:scale-110 transition-transform")} />
                                 <span>{tab.label}</span>
-                                {tab.badge !== undefined && tab.badge > 0 && (
-                                    <span className="absolute -top-1 -right-1 bg-destructive text-destructive-foreground text-[8px] font-black px-1.5 py-0.5 rounded-full ring-2 ring-background">
-                                        {tab.badge}
-                                    </span>
-                                )}
                             </button>
                         );
                     })}

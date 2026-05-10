@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
+import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function CommunityContent({ data }: { data: any }) {
