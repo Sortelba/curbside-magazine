@@ -11,6 +11,8 @@ interface Coach {
     state: string;
     contact: string;
     description: string;
+    instagram?: string;
+    website?: string;
 }
 
 export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
@@ -46,6 +48,18 @@ export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
                             <h3 className="text-2xl font-black uppercase italic tracking-tight">{coach.name}</h3>
                             <p className="text-muted-foreground font-medium">{coach.location}, {coach.state}</p>
                             <p className="mt-2 text-sm">{coach.description}</p>
+                            <div className="flex flex-wrap gap-4 mt-3">
+                                {coach.instagram && (
+                                    <a href={`https://instagram.com/${coach.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-primary hover:underline flex items-center gap-1">
+                                        📸 Instagram
+                                    </a>
+                                )}
+                                {coach.website && (
+                                    <a href={coach.website.startsWith('http') ? coach.website : `https://${coach.website}`} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-primary hover:underline flex items-center gap-1">
+                                        🌐 Website
+                                    </a>
+                                )}
+                            </div>
                         </div>
                         <a
                             href={`mailto:${coach.contact}`}

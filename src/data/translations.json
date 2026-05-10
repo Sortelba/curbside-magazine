@@ -37,7 +37,6 @@
             "agb": "AGB & Haftung",
             "faq": "FAQ",
             "contact": "Kontakt & Vorschläge",
-            "contribute_spot": "Spot eintragen",
             "rights": "Alle Rechte vorbehalten."
         },
         "community": {
@@ -45,7 +44,6 @@
             "projects": "Projekte",
             "clubs": "Deutsche Skateboard Vereine",
             "skaten_lernen": "Skaten lernen",
-            "map": "Skatemap",
             "find_shop": "Finde deinen Shop",
             "search_placeholder": "Suche nach PLZ oder Stadt...",
             "all_states": "Alle Bundesländer",
@@ -113,7 +111,6 @@
             "agb": "Terms & Liability",
             "faq": "FAQ",
             "contact": "Contact & Suggestions",
-            "contribute_spot": "Register Spot",
             "rights": "All rights reserved."
         },
         "community": {
@@ -121,7 +118,6 @@
             "projects": "Projects",
             "clubs": "German Skateboard Clubs",
             "skaten_lernen": "Learn to Skate",
-            "map": "Skatemap",
             "find_shop": "Find your Shop",
             "search_placeholder": "Search by PLZ or City...",
             "all_states": "All States",

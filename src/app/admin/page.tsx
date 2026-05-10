@@ -11,8 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 
-const SubmissionMapPreview = dynamic(() => import("@/components/SubmissionMapPreview"), { ssr: false });
-const MapPinManager = dynamic(() => import("@/components/MapPinManager"), { ssr: false });
+
 
 function CollapsibleSection({
     title,
@@ -81,8 +80,6 @@ function AdminDashboardContent() {
     const [drafts, setDrafts] = useState<any[]>([]);
     const [status, setStatus] = useState<string>("");
     const [activeTab, setActiveTab] = useState<string>("news");
-    const [skatemapSub, setSkatemapSub] = useState<"pending" | "remove">("pending");
-    const [pendingCount, setPendingCount] = useState(0);
     const [activeDraftIndex, setActiveDraftIndex] = useState<number | null>(null);
 
     // Collapsible Categories State
@@ -179,21 +176,7 @@ function AdminDashboardContent() {
         }
     };
 
-    const fetchPendingCount = async () => {
-        try {
-            const res = await fetch(`/api/map/pending?key=${key}`);
-            const data = await res.json();
-            if (Array.isArray(data)) {
-                setPendingCount(data.length);
-            }
-        } catch (e) {
-            console.error("Error fetching pending count:", e);
-        }
-    };
 
-    useEffect(() => {
-        if (key) fetchPendingCount();
-    }, [key]);
 
     if (!key) {
         return (
@@ -274,7 +257,7 @@ function AdminDashboardContent() {
         { id: "learn", label: "Lern-Center", icon: Lightbulb },
         { id: "community", label: "Community", icon: Globe },
         { id: "events", label: "Events", icon: Calendar },
-        { id: "submissions", label: "Skatemap", icon: MapPin, badge: pendingCount },
+
         { id: "messages", label: "Messages", icon: MessageSquare },
         { id: "settings", label: "Einstellungen", icon: Settings },
         { id: "about", label: "About", icon: FileText },
@@ -1289,44 +1272,6 @@ function AdminDashboardContent() {
                             {activeTab === "about" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                                     <ManageAbout keyStr={key || ''} />
-                                </motion.div>
-                            )}
-
-                            {activeTab === "submissions" && (
-                                <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="space-y-8">
-                                    {/* Sub Navigation */}
-                                    <div className="flex gap-2 p-1 bg-muted/30 border border-border rounded-2xl w-fit">
-                                        <button
-                                            onClick={() => setSkatemapSub("pending")}
-                                            className={cn(
-                                                "px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all",
-                                                skatemapSub === "pending" ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "text-muted-foreground hover:bg-muted"
-                                            )}
-                                        >
-                                            Neue Einsendungen ({pendingCount})
-                                        </button>
-                                        <button
-                                            onClick={() => setSkatemapSub("remove")}
-                                            className={cn(
-                                                "px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all",
-                                                skatemapSub === "remove" ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "text-muted-foreground hover:bg-muted"
-                                            )}
-                                        >
-                                            Pins entfernen
-                                        </button>
-                                    </div>
-
-                                    <AnimatePresence mode="wait">
-                                        {skatemapSub === "pending" ? (
-                                            <motion.div key="pending" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
-                                                <ManageSubmissions keyStr={key || ''} onCountUpdate={setPendingCount} />
-                                            </motion.div>
-                                        ) : (
-                                            <motion.div key="remove" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
-                                                <MapPinManager keyStr={key || ''} />
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
                                 </motion.div>
                             )}
 
@@ -3200,205 +3145,7 @@ function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; set
     );
 }
 
-function ManageSubmissions({ keyStr, onCountUpdate }: { keyStr: string; onCountUpdate: (count: number) => void }) {
-    const [submissions, setSubmissions] = useState<any[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [editingId, setEditingId] = useState<string | null>(null);
 
-
-    const fetchSubmissions = async () => {
-        setLoading(true);
-        try {
-            const res = await fetch(`/api/map/pending?key=${keyStr}`);
-            const data = await res.json();
-            if (Array.isArray(data)) {
-                setSubmissions(data);
-                onCountUpdate(data.length);
-            }
-        } catch (e) {
-            console.error(e);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchSubmissions();
-    }, []);
-
-    const handleAction = async (id: string, action: 'approve' | 'reject', updatedSpot?: any) => {
-        if (action === 'reject' && !confirm("Diesen Eintrag wirklich löschen?")) return;
-
-        try {
-            const res = await fetch(`/api/map/approve`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id, key: keyStr, action, updatedSpot })
-            });
-
-            if (res.ok) {
-                alert(`Spot ${action === 'approve' ? 'akzeptiert' : 'gelöscht'}!`);
-                fetchSubmissions();
-            } else {
-                alert("Fehler bei der Verarbeitung.");
-            }
-        } catch (e) {
-            console.error(e);
-            alert("Netzwerkfehler.");
-        }
-    };
-
-    if (loading) return <div className="p-8 text-center text-muted-foreground uppercase font-black italic">Warte auf Einsendungen...</div>;
-
-    return (
-        <div className="space-y-6">
-            <header className="flex justify-between items-end mb-8">
-                <div>
-                    <h2 className="text-3xl font-black uppercase italic tracking-tighter">Karteneinsendungen</h2>
-                    <p className="text-muted-foreground">Neue Spots von der Community prüfen.</p>
-                </div>
-                <button onClick={fetchSubmissions} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
-                    <RefreshCw size={20} />
-                </button>
-            </header>
-
-            <div className="grid gap-6">
-                {submissions.map((sub: any) => (
-                    <div key={sub.id} className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm hover:border-primary/30 transition-all">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            {/* Media Preview */}
-                            <div className="w-full md:w-48 h-48 bg-muted rounded-2xl overflow-hidden flex items-center justify-center relative group">
-                                {sub.mediaUrl ? (
-                                    <img src={sub.mediaUrl} className="w-full h-full object-cover" alt="Preview" />
-                                ) : (
-                                    <div className="text-muted-foreground/20 italic font-black uppercase text-xs">Kein Bild</div>
-                                )}
-                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4">
-                                    <p className="text-white text-[10px] uppercase font-bold text-center">Eingereicht am: <br />{new Date(sub.submittedAt).toLocaleDateString()}</p>
-                                </div>
-                            </div>
-
-                            {/* Map Preview */}
-                            <div className="w-full md:w-48 h-48 bg-muted rounded-2xl overflow-hidden relative group border-2 border-border">
-                                <SubmissionMapPreview location={sub.location} />
-                                <div className="absolute top-2 left-2 px-2 py-0.5 bg-background/80 backdrop-blur-md rounded-md text-[8px] font-bold uppercase z-[1000]">Live Preview</div>
-                            </div>
-
-                            {/* Details */}
-                            <div className="flex-1 space-y-4">
-                                <div className="flex justify-between items-start">
-                                    <div>
-                                        <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md mb-2 inline-block ${sub.category === 'shop' ? 'bg-blue-500/10 text-blue-500' : 'bg-emerald-500/10 text-emerald-500'
-                                            }`}>
-                                            {sub.category}
-                                        </span>
-                                        <input
-                                            className="block text-2xl font-black uppercase italic tracking-tighter bg-transparent border-none focus:outline-none w-full"
-                                            value={sub.name}
-                                            onChange={(e) => {
-                                                const newSubs = [...submissions];
-                                                const idx = newSubs.findIndex(s => s.id === sub.id);
-                                                newSubs[idx].name = e.target.value;
-                                                setSubmissions(newSubs);
-                                            }}
-                                        />
-                                        <div className="flex items-center gap-2 mt-2">
-                                            <span className="text-[10px] text-muted-foreground uppercase font-black tracking-widest">Eingereicht von:</span>
-                                            <span className="text-[10px] font-black uppercase italic text-primary bg-primary/5 px-2 py-0.5 rounded-md">{sub.contributor || 'Anonym'}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-2">
-                                        <button
-                                            onClick={() => handleAction(sub.id, 'reject')}
-                                            className="p-3 bg-destructive/10 text-destructive rounded-2xl hover:bg-destructive hover:text-white transition-all"
-                                            title="Ablehnen"
-                                        >
-                                            <Trash2 size={20} />
-                                        </button>
-                                        <button
-                                            onClick={() => handleAction(sub.id, 'approve', sub)}
-                                            className="flex items-center gap-3 px-6 py-3 bg-emerald-600 text-white font-black uppercase italic rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-emerald-600/20"
-                                        >
-                                            <CheckCircle size={20} />
-                                            Akzeptieren
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="space-y-1">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Standort / Maps Link</label>
-                                        <textarea
-                                            className="w-full p-4 bg-muted/30 border border-border rounded-xl text-sm font-medium focus:border-primary/40 outline-none transition-all resize-none"
-                                            rows={2}
-                                            value={sub.location}
-                                            onChange={(e) => {
-                                                const newSubs = [...submissions];
-                                                const idx = newSubs.findIndex(s => s.id === sub.id);
-                                                newSubs[idx].location = e.target.value;
-                                                setSubmissions(newSubs);
-                                            }}
-                                        />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Zusatzinfos / Beschreibung</label>
-                                        <textarea
-                                            className="w-full p-4 bg-muted/30 border border-border rounded-xl text-sm font-medium focus:border-primary/40 outline-none transition-all resize-none"
-                                            rows={2}
-                                            value={sub.description || ''}
-                                            onChange={(e) => {
-                                                const newSubs = [...submissions];
-                                                const idx = newSubs.findIndex(s => s.id === sub.id);
-                                                newSubs[idx].description = e.target.value;
-                                                setSubmissions(newSubs);
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="space-y-1">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Bild URL</label>
-                                        <input
-                                            className="w-full p-2 bg-muted/30 border border-border rounded-lg text-xs font-mono"
-                                            value={sub.mediaUrl || ''}
-                                            onChange={(e) => {
-                                                const newSubs = [...submissions];
-                                                const idx = newSubs.findIndex(s => s.id === sub.id);
-                                                newSubs[idx].mediaUrl = e.target.value;
-                                                setSubmissions(newSubs);
-                                            }}
-                                        />
-                                    </div>
-                                    <div className="space-y-1">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">YouTube / Video</label>
-                                        <input
-                                            className="w-full p-2 bg-muted/30 border border-border rounded-lg text-xs font-mono"
-                                            value={sub.youtubeUrl || ''}
-                                            onChange={(e) => {
-                                                const newSubs = [...submissions];
-                                                const idx = newSubs.findIndex(s => s.id === sub.id);
-                                                newSubs[idx].youtubeUrl = e.target.value;
-                                                setSubmissions(newSubs);
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-
-                {submissions.length === 0 && (
-                    <div className="text-center py-20 bg-muted/10 border-2 border-dashed border-border rounded-[2.5rem]">
-                        <MapPin className="h-16 w-16 mx-auto mb-4 text-muted-foreground/30" />
-                        <p className="text-muted-foreground font-black uppercase italic tracking-widest">Keine neuen Einsendungen</p>
-                    </div>
-                )}
-            </div>
-        </div>
-    );
-}
 
 function ManageMessages({ keyStr }: { keyStr: string }) {
     const [messages, setMessages] = useState<any[]>([]);
