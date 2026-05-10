@@ -2,15 +2,15 @@
   "basics": [
     {
       "id": "basic_1",
-      "title": "The Ollie",
-      "description": "The foundation of street skating. Pop, slide, level out.",
-      "videoUrl": "https://www.youtube.com/embed/j_kaUruD1zz"
+      "title": "Der Ollie! Grundlage für alles weitere!",
+      "description": "Die Grundlage für fast jeden Street-Trick. Pop, Slide, Level Out.",
+      "videoUrl": "https://www.youtube.com/embed/IgnMbmi5GxU"
     },
     {
-      "id": "basic_2",
-      "title": "Pushing",
-      "description": "Get comfortable on your board. Learn to push with your back foot.",
-      "videoUrl": "https://www.youtube.com/embed/pushing_placeholder"
+      "id": "basic_3",
+      "title": "3 Tricks ohne Ollie!",
+      "description": "Einfache Tricks für den Anfang, um die Boardkontrolle zu verbessern.",
+      "videoUrl": "https://www.youtube.com/embed/Dg3IAhrwx2Q"
     }
   ],
   "coaches": [

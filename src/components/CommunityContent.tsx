@@ -3,7 +3,17 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
+import { ShoppingBag, Heart, Youtube, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap, Map as MapIcon } from "lucide-react";
+import dynamic from 'next/dynamic';
+
+const LeafletMap = dynamic(() => import('@/components/LeafletMap'), { 
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-[75vh] rounded-3xl bg-muted animate-pulse flex items-center justify-center border-2 border-border">
+            <p className="text-muted-foreground font-black uppercase italic tracking-widest">Loading Map Engine...</p>
+        </div>
+    )
+});
 import { cn } from "@/lib/utils";
 
 export default function CommunityContent({ data }: { data: any }) {
@@ -15,16 +25,16 @@ export default function CommunityContent({ data }: { data: any }) {
     const sections = [
         { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
         { id: "sec_clubs", name: t("community.clubs"), icon: Users },
+        { id: "sec_map", name: t("community.map"), icon: MapIcon },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
-        { id: "youtubeskateboarding", name: t("community.youtube"), icon: Youtube },
         { id: "sec_learn", name: t("community.skaten_lernen"), icon: GraduationCap }
     ];
 
     const getTranslation = (id: string, defaultTitle: string) => {
         if (id === "sec_shops") return t("community.shops");
         if (id === "sec_clubs") return t("community.clubs");
+        if (id === "sec_map") return t("community.map");
         if (id === "sec_projects") return t("community.projects");
-        if (id === "youtubeskateboarding") return t("community.youtube");
         return defaultTitle;
     };
 
@@ -277,37 +287,19 @@ export default function CommunityContent({ data }: { data: any }) {
                                     </div>
                                 )}
 
-                                {activeSection === "youtubeskateboarding" && (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {activeSectionData?.items.map((chan: any) => (
-                                            <a
-                                                key={chan.id}
-                                                href={chan.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="group bg-muted p-6 rounded-3xl border border-border hover:border-foreground transition-all flex items-center justify-between shadow-sm hover:shadow-xl"
+
+                                {activeSection === "sec_map" && (
+                                    <div className="space-y-6">
+                                        <div className="flex justify-between items-center px-2">
+                                            <p className="text-sm text-muted-foreground italic max-w-xl">Entdecke die besten Spots und Shops in deiner Nähe. Hilf mit und trag neue Locations ein!</p>
+                                            <button
+                                                onClick={() => window.dispatchEvent(new CustomEvent('open-spot-contribute'))}
+                                                className="bg-primary text-primary-foreground px-6 py-2 rounded-xl text-xs font-black uppercase italic tracking-wider hover:scale-105 transition-all shadow-lg"
                                             >
-                                                <div className="flex items-center gap-6">
-                                                    <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden border-2 border-border shrink-0 bg-background relative flex items-center justify-center">
-                                                        {chan.image ? (
-                                                            <img
-                                                                src={chan.image}
-                                                                alt={chan.name}
-                                                                className="w-full h-full object-cover"
-                                                                referrerPolicy="no-referrer"
-                                                            />
-                                                        ) : (
-                                                            <span className="text-muted-foreground/30 text-2xl font-black italic uppercase">{chan.name.substring(0, 1)}</span>
-                                                        )}
-                                                    </div>
-                                                    <div>
-                                                        <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight group-hover:text-red-600 transition-colors">{chan.name}</h3>
-                                                        <p className="text-sm text-muted-foreground mt-1 line-clamp-1">{chan.description}</p>
-                                                    </div>
-                                                </div>
-                                                <ChevronRight className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all" size={32} />
-                                            </a>
-                                        ))}
+                                                {t("footer.contribute_spot") || "Spot eintragen"}
+                                            </button>
+                                        </div>
+                                        <LeafletMap />
                                     </div>
                                 )}
                             </div>

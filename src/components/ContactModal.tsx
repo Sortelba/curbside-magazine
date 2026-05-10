@@ -2,28 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, User, Mail, MessageSquare, Info, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
-import emailjs from "@emailjs/browser";
-
-// ─── EmailJS Config ──────────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID = "service_sxq9s8g";
-const EMAILJS_TEMPLATE_ID = "template_1jcqhx3"; // ← ersetze mit deiner Template-ID
-const EMAILJS_PUBLIC_KEY = "VXhP2N2ZcXkMG6-WC";  // ← ersetze mit deinem Public Key
-// ─────────────────────────────────────────────────────────────────────────────
-
-type SendStatus = "idle" | "loading" | "success" | "error";
+import { X, Mail, MessageSquare } from "lucide-react";
 
 export default function ContactModal() {
-    const { t } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
-    const [status, setStatus] = useState<SendStatus>("idle");
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        subject: "Vorschlag Verein",
-        message: ""
-    });
 
     useEffect(() => {
         const handleOpen = () => setIsOpen(true);
@@ -33,34 +15,6 @@ export default function ContactModal() {
 
     const handleClose = () => {
         setIsOpen(false);
-        setStatus("idle");
-        setFormData({ name: "", email: "", subject: "Vorschlag Verein", message: "" });
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("loading");
-
-        try {
-            await emailjs.send(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: "hallosprungbrett@gmail.com",
-                },
-                EMAILJS_PUBLIC_KEY
-            );
-
-            setStatus("success");
-            setTimeout(() => handleClose(), 2500);
-        } catch (err) {
-            console.error("EmailJS error:", err);
-            setStatus("error");
-        }
     };
 
     return (
@@ -99,94 +53,36 @@ export default function ContactModal() {
                             </button>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="p-8 space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Name</label>
-                                    <div className="relative">
-                                        <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                        <input
-                                            required
-                                            type="text"
-                                            value={formData.name}
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className="w-full bg-muted border-none rounded-2xl py-4 pl-12 pr-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all"
-                                            placeholder="Dein Name"
-                                        />
-                                    </div>
+                        <div className="p-10 space-y-8 text-center">
+                            <div className="space-y-6">
+                                <div className="mx-auto w-16 h-16 bg-primary/10 rounded-3xl flex items-center justify-center text-primary mb-2">
+                                    <MessageSquare size={32} />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Email</label>
-                                    <div className="relative">
-                                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                        <input
-                                            required
-                                            type="email"
-                                            value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            className="w-full bg-muted border-none rounded-2xl py-4 pl-12 pr-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all"
-                                            placeholder="deine@mail.de"
-                                        />
-                                    </div>
-                                </div>
+                                <p className="text-lg md:text-xl font-bold leading-relaxed text-foreground">
+                                    Du hast Verbesserungsvorschläge, ein Contest findet statt und du möchtest, dass er eingetragen und gepostet wird?
+                                </p>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Oder möchtest du einen Spot in die Map eintragen oder sonst etwas zur Homepage beitragen? Dann bist du hier genau richtig!
+                                </p>
+                                <p className="text-xl font-black uppercase italic tracking-tight text-primary">
+                                    Schreib mir einfach eine Mail!
+                                </p>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Anliegen</label>
-                                <div className="relative">
-                                    <Info className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                    <select
-                                        value={formData.subject}
-                                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                                        className="w-full bg-muted border-none rounded-2xl py-4 pl-12 pr-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all appearance-none"
-                                    >
-                                        <option value="Vorschlag Verein">Verein hinzufügen</option>
-                                        <option value="News Vorschlag">News teilen</option>
-                                        <option value="Feedback / Sonstiges">Feedback / Sonstiges</option>
-                                    </select>
-                                </div>
+                            <div className="pt-4">
+                                <a
+                                    href="mailto:steffen.or+curbside@gmail.com"
+                                    className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-5 rounded-3xl font-black uppercase italic tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-foreground/10 group"
+                                >
+                                    <Mail className="group-hover:rotate-12 transition-transform" />
+                                    Mail Senden
+                                </a>
                             </div>
 
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Nachricht</label>
-                                <div className="relative">
-                                    <MessageSquare className="absolute left-4 top-4 h-4 w-4 text-muted-foreground" />
-                                    <textarea
-                                        required
-                                        rows={4}
-                                        value={formData.message}
-                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                        className="w-full bg-muted border-none rounded-3xl py-4 pl-12 pr-4 text-sm font-bold focus:ring-2 focus:ring-primary transition-all resize-none"
-                                        placeholder="Deine Nachricht an uns..."
-                                    />
-                                </div>
-                            </div>
-
-                            <button
-                                type="submit"
-                                disabled={status === "loading" || status === "success"}
-                                className="w-full bg-primary text-primary-foreground py-5 rounded-3xl font-black uppercase italic tracking-wider flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
-                            >
-                                {status === "loading" ? (
-                                    <><Loader2 className="h-5 w-5 animate-spin" /> Wird gesendet...</>
-                                ) : status === "success" ? (
-                                    <><CheckCircle className="h-5 w-5" /> Gesendet! ✓</>
-                                ) : (
-                                    <><Send className="h-5 w-5" /> Nachricht senden</>
-                                )}
-                            </button>
-
-                            {status === "error" && (
-                                <div className="flex items-center gap-2 text-red-500 bg-red-500/10 rounded-2xl px-4 py-3">
-                                    <AlertCircle className="h-4 w-4 shrink-0" />
-                                    <p className="text-xs font-bold">Fehler beim Senden. Bitte versuche es erneut.</p>
-                                </div>
-                            )}
-
-                            <p className="text-[10px] text-center text-muted-foreground font-medium px-4">
-                                Deine Nachricht wird direkt an uns weitergeleitet. Wir melden uns so schnell wie möglich.
+                            <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-[0.2em] pt-4">
+                                steffen.or+curbside@gmail.com
                             </p>
-                        </form>
+                        </div>
                     </motion.div>
                 </div>
             )}

@@ -13,7 +13,6 @@ export default function Navbar() {
 
     const navLinks = [
         { name: t("nav.news"), href: "/" },
-        { name: t("nav.map"), href: "/map" },
         { name: t("nav.community"), href: "/community" },
     ];
 
