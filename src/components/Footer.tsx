@@ -1,6 +1,5 @@
 "use client";
 
-import { Github, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -16,7 +15,7 @@ export default function Footer() {
                             CURBSIDE
                         </Link>
                         <p className="text-muted-foreground text-sm mt-2">
-                            Keep pushing. Support local shops.
+                            Keep pushing. Support local shops and have fun!
                         </p>
                         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                             <Link href="/archive" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
@@ -37,20 +36,6 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex flex-col items-center md:items-end gap-6">
-                        <div className="flex space-x-6">
-                            <a href="https://www.instagram.com/sortelba" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                                <span className="sr-only">Instagram</span>
-                                <Instagram className="h-6 w-6" />
-                            </a>
-                            <a href="https://www.youtube.com/@sortelba" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                                <span className="sr-only">YouTube</span>
-                                <Youtube className="h-6 w-6" />
-                            </a>
-                            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                                <span className="sr-only">GitHub</span>
-                                <Github className="h-6 w-6" />
-                            </a>
-                        </div>
                         <div className="flex flex-wrap gap-3 justify-center md:justify-end">
 
                             <button
