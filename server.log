@@ -7,17 +7,16 @@
  To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
    See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
  Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/Homepage sortelba.com/package-lock.json
+   * /Users/steffenortelbach/Documents/CurbsideHomepage/curbside-magazine/package-lock.json
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.178.32:3000
-- Environments: .env.local
 
 ✓ Starting...
-✓ Ready in 1978ms
- GET /admin?key=skatelife-secret 200 in 1270ms (compile: 1107ms, render: 163ms)
- GET /api/map/pending?key=skatelife-secret 401 in 98ms (compile: 90ms, render: 9ms)
+✓ Ready in 6.8s
+○ Compiling /admin ...
+ GET /admin?key=skatelife-secret 200 in 4.1s (compile: 3.9s, render: 184ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -31,11 +30,36 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 404
-Fetch failed for https://www.skateboarding.com/news/crabi-nyc-missions-with-victor-campillo-the-crew: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/former-myles-strampello-part: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/repent-by-baghead-crew: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/antihero-dumpster-dive-finn-pope-gus-gordon-crew: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skate-shoes/first-look-palace-vans-low-2: 403 Forbidden
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '192.168.178.32',
+      localPort: 50475,
+      remoteAddress: '44.232.173.249',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 403,
+      bytesRead: 0
+    }
+  }
+}
+Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-talking-shop-with-bluetile-skateshop: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/digby-luxtons-fakename-video-part: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skate-shoes/otw-by-vans-x-julian-klincewicz: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/passport-presents-matthieu-lucas-dsouza: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -56,14 +80,40 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 18.7s (compile: 152ms, render: 18.5s)
- POST /api/posts/create 200 in 66ms (compile: 56ms, render: 10ms)
- POST /api/posts/create 200 in 20ms (compile: 9ms, render: 12ms)
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.6s (compile: 726ms, render: 11.8s)
+ POST /api/posts/create 200 in 160ms (compile: 149ms, render: 11ms)
+ POST /api/posts/create 200 in 27ms (compile: 11ms, render: 16ms)
+ POST /api/posts/create 200 in 18ms (compile: 7ms, render: 12ms)
+ POST /api/posts/create 200 in 15ms (compile: 4ms, render: 11ms)
+ POST /api/posts/create 200 in 16ms (compile: 3ms, render: 12ms)
+ POST /api/posts/create 200 in 16ms (compile: 4ms, render: 12ms)
  POST /api/posts/create 200 in 19ms (compile: 6ms, render: 13ms)
- POST /api/posts/create 200 in 32ms (compile: 10ms, render: 22ms)
- GET / 200 in 338ms (compile: 169ms, render: 169ms)
- GET /api/events 200 in 50ms (compile: 35ms, render: 15ms)
