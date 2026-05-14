@@ -283,3 +283,90 @@ GEMINI_API_KEY not found. Returning original content.
  POST /api/posts/create 200 in 18ms (compile: 7ms, render: 11ms)
  POST /api/posts/create 200 in 21ms (compile: 1564µs, render: 20ms)
  POST /api/posts/create 200 in 22ms (compile: 1207µs, render: 21ms)
+ GET /admin?key=skatelife-secret 200 in 246ms (compile: 110ms, render: 136ms)
+ GET /api/learn 200 in 21ms (compile: 8ms, render: 13ms)
+ GET /api/learn 200 in 7ms (compile: 3ms, render: 4ms)
+ POST /api/learn 200 in 73ms (compile: 32ms, render: 41ms)
+ GET /api/settings?key=skatelife-secret 200 in 20ms (compile: 8ms, render: 12ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 4 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+RSS fetch failed for Thrasher News: 404
+Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-talking-shop-with-bluetile-skateshop: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/digby-luxtons-fakename-video-part: 403 Forbidden
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '10.2.0.2',
+      localPort: 52430,
+      remoteAddress: '44.232.173.249',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 403,
+      bytesRead: 0
+    }
+  }
+}
+Fetch failed for https://www.skateboarding.com/skate-shoes/otw-by-vans-x-julian-klincewicz: 403 Forbidden
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+Searching for #skateboarding on Instagram via DuckDuckGo...
+Searching for #berics on Instagram via DuckDuckGo...
+Searching for #thrasher on Instagram via DuckDuckGo...
+Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 1 real posts via DDG.
+Found 6 real posts via DDG.
+Found 4 real posts via DDG.
+Found 4 real posts via DDG.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 2ms, render: 11.8s)
+ POST /api/posts/create 200 in 15ms (compile: 6ms, render: 10ms)
+ POST /api/posts/create 200 in 26ms (compile: 1464µs, render: 25ms)
+ POST /api/posts/create 200 in 39ms (compile: 1510µs, render: 37ms)

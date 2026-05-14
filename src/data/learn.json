@@ -23,6 +23,30 @@
       "description": "20+ Jahre Erfahrung. Fokus auf Flatground Tricks, Manuals & Ledges.",
       "instagram": "@sortelba",
       "website": "www.sortelba.de"
+    },
+    {
+      "name": "Julio",
+      "location": "Karlsruhe",
+      "state": "BW",
+      "contact": "https://www.julios-skate-schule.de/",
+      "description": "",
+      "id": "coaches_1778778291570"
+    },
+    {
+      "name": "Skate Coaches",
+      "location": "Köln",
+      "state": "",
+      "contact": "https://skate-coach.de/",
+      "description": "Verschiedene Standorte in Deutschland.",
+      "id": "coaches_1778778394632"
+    },
+    {
+      "name": "Superprof",
+      "location": "",
+      "state": "",
+      "contact": "https://www.superprof.de/unterrichtsangebot/skateboarden/deutschland/",
+      "description": "Finde deinen Privaten Skate Kurs!",
+      "id": "coaches_1778778468211"
     }
   ],
   "randomizer": {
