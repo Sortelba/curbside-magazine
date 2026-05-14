@@ -11,26 +11,25 @@ export default function ImpressumPage() {
                 <section>
                     <h2 className="text-2xl font-black uppercase italic tracking-tight text-primary">Angaben gemäß § 5 TMG</h2>
                     <p>
-                        [Vorname Nachname]<br />
-                        [Straße Hausnummer]<br />
-                        [PLZ Stadt]
+                        Steffen Ortelbach<br />
+                        Gaußstr. 8<br />
+                        76131 Karlsruhe
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-black uppercase italic tracking-tight text-primary">Kontakt</h2>
                     <p>
-                        Telefon: [Deine Telefonnummer]<br />
-                        E-Mail: [Deine E-Mail-Adresse]
+                        E-Mail: steffen.or@icloud.com
                     </p>
                 </section>
 
                 <section>
                     <h2 className="text-2xl font-black uppercase italic tracking-tight text-primary">Redaktionell verantwortlich</h2>
                     <p>
-                        [Vorname Nachname]<br />
-                        [Straße Hausnummer]<br />
-                        [PLZ Stadt]
+                        Steffen Ortelbach<br />
+                        Gaußstr. 8<br />
+                        76131 Karlsruhe
                     </p>
                 </section>
 

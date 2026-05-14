@@ -1,0 +1,15 @@
+{
+  "name": "curbside-news-automation",
+  "version": "1.0.0",
+  "description": "Automated news scanner and publisher for Curbside Magazine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "schedule": "node scheduler.js"
+  },
+  "dependencies": {
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  }
+}
