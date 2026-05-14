@@ -14,9 +14,8 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 6.8s
-○ Compiling /admin ...
- GET /admin?key=skatelife-secret 200 in 4.1s (compile: 3.9s, render: 184ms)
+✓ Ready in 5.1s
+ GET /api/settings?key=skatelife-secret 200 in 1552ms (compile: 1534ms, render: 18ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -45,9 +44,9 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
       at ignore-listed frames {
     code: 'UND_ERR_SOCKET',
     socket: {
-      localAddress: '192.168.178.32',
-      localPort: 50475,
-      remoteAddress: '44.232.173.249',
+      localAddress: '10.2.0.2',
+      localPort: 51391,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -56,10 +55,9 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-talking-shop-with-bluetile-skateshop: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/digby-luxtons-fakename-video-part: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-talking-shop-with-bluetile-skateshop: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skate-shoes/otw-by-vans-x-julian-klincewicz: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/passport-presents-matthieu-lucas-dsouza: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -80,12 +78,10 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
+Found 1 real posts via DDG.
+Found 3 real posts via DDG.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
+Found 4 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -106,14 +102,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.6s (compile: 726ms, render: 11.8s)
- POST /api/posts/create 200 in 160ms (compile: 149ms, render: 11ms)
- POST /api/posts/create 200 in 27ms (compile: 11ms, render: 16ms)
- POST /api/posts/create 200 in 18ms (compile: 7ms, render: 12ms)
- POST /api/posts/create 200 in 15ms (compile: 4ms, render: 11ms)
- POST /api/posts/create 200 in 16ms (compile: 3ms, render: 12ms)
- POST /api/posts/create 200 in 16ms (compile: 4ms, render: 12ms)
- POST /api/posts/create 200 in 19ms (compile: 6ms, render: 13ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.4s (compile: 485ms, render: 11.9s)
+ POST /api/posts/create 200 in 96ms (compile: 91ms, render: 5ms)
+ POST /api/posts/create 200 in 10ms (compile: 909µs, render: 9ms)
+ POST /api/posts/create 200 in 13ms (compile: 932µs, render: 12ms)
