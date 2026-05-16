@@ -14,8 +14,8 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 5.4s
- GET /api/settings?key=skatelife-secret 200 in 882ms (compile: 852ms, render: 30ms)
+✓ Ready in 5s
+ GET /api/settings?key=skatelife-secret 200 in 873ms (compile: 849ms, render: 24ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -45,8 +45,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '10.2.0.2',
-      localPort: 49416,
-      remoteAddress: '52.40.42.113',
+      localPort: 49709,
+      remoteAddress: '44.232.173.249',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -81,7 +81,7 @@ Searching for #skateboardingisfun on Instagram via DuckDuckGo...
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
-Found 5 real posts via DDG.
+Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -102,7 +102,10 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.4s (compile: 566ms, render: 11.8s)
- POST /api/posts/create 200 in 123ms (compile: 118ms, render: 5ms)
- POST /api/posts/create 200 in 11ms (compile: 984µs, render: 10ms)
- POST /api/posts/create 200 in 11ms (compile: 756µs, render: 10ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 13.8s (compile: 476ms, render: 13.3s)
+ POST /api/posts/create 200 in 111ms (compile: 106ms, render: 5ms)
+ POST /api/posts/create 200 in 10ms (compile: 908µs, render: 9ms)
+ POST /api/posts/create 200 in 11ms (compile: 958µs, render: 10ms)
