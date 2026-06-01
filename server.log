@@ -14,8 +14,9 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 5s
- GET /api/settings?key=skatelife-secret 200 in 873ms (compile: 849ms, render: 24ms)
+✓ Ready in 1588ms
+ GET /admin?key=skatelife-secret 200 in 865ms (compile: 725ms, render: 140ms)
+ GET /api/settings?key=skatelife-secret 200 in 69ms (compile: 61ms, render: 8ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,7 +29,12 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
-RSS fetch failed for Thrasher News: 404
+RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/video-qualifier-series-returns-for-2026-pdx-rockstar-energy-open: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/marc-johnson-1977-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/skate-shoes/vans-x-metagirl: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/treveon-wades-we-got-this-on-the-stove-video-part: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/jacob-rosenbergs-epicenter-hits-france: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -44,9 +50,9 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
       at ignore-listed frames {
     code: 'UND_ERR_SOCKET',
     socket: {
-      localAddress: '10.2.0.2',
-      localPort: 49709,
-      remoteAddress: '44.232.173.249',
+      localAddress: '192.168.178.32',
+      localPort: 49842,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -55,9 +61,6 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-talking-shop-with-bluetile-skateshop: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/digby-luxtons-fakename-video-part: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skate-shoes/otw-by-vans-x-julian-klincewicz: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -81,8 +84,8 @@ Searching for #skateboardingisfun on Instagram via DuckDuckGo...
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
+Found 3 real posts via DDG.
+Found 4 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -105,7 +108,13 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 13.8s (compile: 476ms, render: 13.3s)
- POST /api/posts/create 200 in 111ms (compile: 106ms, render: 5ms)
- POST /api/posts/create 200 in 10ms (compile: 908µs, render: 9ms)
- POST /api/posts/create 200 in 11ms (compile: 958µs, render: 10ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.4s (compile: 93ms, render: 12.3s)
+ POST /api/posts/create 200 in 34ms (compile: 29ms, render: 6ms)
+ POST /api/posts/create 200 in 4ms (compile: 1021µs, render: 3ms)
+ POST /api/posts/create 200 in 4ms (compile: 800µs, render: 3ms)
