@@ -11,11 +11,10 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 1457ms
- GET /api/settings?key=skatelife-secret 200 in 370ms (compile: 334ms, render: 36ms)
+✓ Ready in 1852ms
+ GET /api/settings?key=skatelife-secret 200 in 302ms (compile: 275ms, render: 27ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -29,11 +28,8 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
-Fetch failed for https://www.skateboarding.com/news/video-qualifier-series-returns-for-2026-pdx-rockstar-energy-open: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/late-nite-stars-in-japan-and-korea: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/treveon-wades-we-got-this-on-the-stove-video-part: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/marc-johnson-1977-2026: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/jacob-rosenbergs-epicenter-hits-france: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/andrew-x-spitfire-spitfye-video: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/former-welcomes-elijah-berle: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -50,7 +46,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49174,
+      localPort: 49173,
       remoteAddress: '44.232.173.249',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -60,6 +56,9 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
+Fetch failed for https://www.skateboarding.com/news/video-qualifier-series-returns-for-2026-pdx-rockstar-energy-open: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/marc-johnson-1977-2026: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/late-nite-stars-in-japan-and-korea: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -80,10 +79,11 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -113,8 +113,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.6s (compile: 290ms, render: 12.3s)
- POST /api/posts/create 200 in 28ms (compile: 23ms, render: 5ms)
- POST /api/posts/create 200 in 4ms (compile: 736µs, render: 3ms)
- POST /api/posts/create 200 in 4ms (compile: 719µs, render: 3ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.6s (compile: 207ms, render: 12.4s)
+ POST /api/posts/create 200 in 32ms (compile: 27ms, render: 5ms)
+ POST /api/posts/create 200 in 4ms (compile: 968µs, render: 3ms)
+ POST /api/posts/create 200 in 4ms (compile: 693µs, render: 3ms)
