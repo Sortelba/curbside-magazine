@@ -13,8 +13,8 @@
 - Local:         http://localhost:3000
 
 ✓ Starting...
-✓ Ready in 2.8s
- GET /api/settings?key=skatelife-secret 200 in 318ms (compile: 295ms, render: 23ms)
+✓ Ready in 1457ms
+ GET /api/settings?key=skatelife-secret 200 in 391ms (compile: 361ms, render: 30ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -44,7 +44,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49198,
+      localPort: 49206,
       remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -56,9 +56,9 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
 }
 Fetch failed for https://www.skateboarding.com/news/dead-air-radio-remembering-marc-johnson: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skate-shoes/introducing-vans-wafflecuptm-classics-for-fall-2026: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/help-tommy-sandoval-after-a-brutal-slam: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/skate-shoes/nikesb-air-force-1-flax-black-break-down: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/day-one-in-seoul-behind-the-scenes-of-our-south-korea-adventure: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/help-tommy-sandoval-after-a-brutal-slam: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -113,8 +113,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.0s (compile: 219ms, render: 11.8s)
- POST /api/posts/create 200 in 30ms (compile: 25ms, render: 5ms)
- POST /api/posts/create 200 in 4ms (compile: 800µs, render: 3ms)
- POST /api/posts/create 200 in 4ms (compile: 630µs, render: 3ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.0s (compile: 210ms, render: 11.8s)
+ POST /api/posts/create 200 in 30ms (compile: 24ms, render: 6ms)
+ POST /api/posts/create 200 in 5ms (compile: 873µs, render: 4ms)
+ POST /api/posts/create 200 in 4ms (compile: 685µs, render: 3ms)
