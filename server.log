@@ -14,8 +14,8 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 4.2s
- GET /api/settings?key=skatelife-secret 200 in 458ms (compile: 378ms, render: 80ms)
+✓ Ready in 1432ms
+ GET /api/settings?key=skatelife-secret 200 in 189ms (compile: 170ms, render: 18ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -29,6 +29,11 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/ye-olde-destruction-with-band-of-horses-live: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/squeaky-the-violet-video-by-bill-strobeck: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/dont-feed-the-birds-too-full-video: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/stevie-williams-is-back-with-weedmaps: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/reese-barton-a-life-after-ep-1-documentary: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -45,8 +50,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49327,
-      remoteAddress: '44.232.173.249',
+      localPort: 49252,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -55,11 +60,6 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/news/squeaky-the-violet-video-by-bill-strobeck: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/ye-olde-destruction-with-band-of-horses-live: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/dont-feed-the-birds-too-full-video: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/stevie-williams-is-back-with-weedmaps: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/reese-barton-a-life-after-ep-1-documentary: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -116,8 +116,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 14.9s (compile: 737ms, render: 14.1s)
- POST /api/posts/create 200 in 90ms (compile: 81ms, render: 9ms)
- POST /api/posts/create 200 in 5ms (compile: 841µs, render: 4ms)
- POST /api/posts/create 200 in 7ms (compile: 2ms, render: 5ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.9s (compile: 110ms, render: 12.8s)
+ POST /api/posts/create 200 in 74ms (compile: 66ms, render: 8ms)
+ POST /api/posts/create 200 in 7ms (compile: 1279µs, render: 6ms)
+ POST /api/posts/create 200 in 7ms (compile: 894µs, render: 6ms)
