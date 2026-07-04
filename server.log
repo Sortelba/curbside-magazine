@@ -11,10 +11,11 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 2.1s
- GET /api/settings?key=skatelife-secret 200 in 447ms (compile: 391ms, render: 57ms)
+✓ Ready in 1349ms
+ GET /api/settings?key=skatelife-secret 200 in 228ms (compile: 210ms, render: 19ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,11 +29,6 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
-Fetch failed for https://www.skateboarding.com/news/ophelia-by-theories-brand: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/trap-skateboards-in-argentina-video: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/zero-skateboards-sixes-sevens-skateshop-demo: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/dead-air-radio-dives-into-the-controversy-surrounding-lakai-2-0: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/rassvet-presents-tolya-titaev-dawn: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -49,8 +45,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49195,
-      remoteAddress: '44.232.173.249',
+      localPort: 49230,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -59,6 +55,11 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
+Fetch failed for https://www.skateboarding.com/news/trap-skateboards-in-argentina-video: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/ophelia-by-theories-brand: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/rassvet-presents-tolya-titaev-dawn: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/dead-air-radio-dives-into-the-controversy-surrounding-lakai-2-0: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/zero-skateboards-sixes-sevens-skateshop-demo: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -81,9 +82,9 @@ Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
-Found 4 real posts via DDG.
+Found 1 real posts via DDG.
+Found 3 real posts via DDG.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -100,16 +101,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.1s (compile: 271ms, render: 11.8s)
- POST /api/posts/create 200 in 37ms (compile: 28ms, render: 8ms)
- POST /api/posts/create 200 in 15ms (compile: 3ms, render: 13ms)
- POST /api/posts/create 200 in 23ms (compile: 746µs, render: 22ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.3s (compile: 114ms, render: 12.2s)
+ POST /api/posts/create 200 in 34ms (compile: 27ms, render: 7ms)
+ POST /api/posts/create 200 in 6ms (compile: 838µs, render: 5ms)
+ POST /api/posts/create 200 in 5ms (compile: 753µs, render: 4ms)
