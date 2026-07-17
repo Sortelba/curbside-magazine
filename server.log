@@ -15,7 +15,7 @@
 
 ✓ Starting...
 ✓ Ready in 3.8s
- GET /api/settings?key=skatelife-secret 200 in 1316ms (compile: 1163ms, render: 153ms)
+ GET /api/settings?key=skatelife-secret 200 in 300ms (compile: 207ms, render: 94ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -29,6 +29,10 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/pawnshop-built-on-family-and-skateboarding: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/nike-sb-72-hours-in-michigan-for-the-sb-tennis-classic: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/mantis-skateshop-welomes-martin-vega: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/super-skate-posse-giveback-34-new-brunswick-new-jersey: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -45,7 +49,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49302,
+      localPort: 49325,
       remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -55,10 +59,6 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/news/pawnshop-built-on-family-and-skateboarding: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/nike-sb-72-hours-in-michigan-for-the-sb-tennis-classic: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/super-skate-posse-giveback-34-new-brunswick-new-jersey: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/mantis-skateshop-welomes-martin-vega: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/dead-stock-with-skateboard-collector-bill-simpson: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
@@ -82,9 +82,9 @@ Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
-Found 6 real posts via DDG.
 Found 1 real posts via DDG.
 Found 6 real posts via DDG.
+Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -107,9 +107,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.5s (compile: 391ms, render: 12.1s)
- POST /api/posts/create 200 in 65ms (compile: 54ms, render: 11ms)
- POST /api/posts/create 200 in 8ms (compile: 876µs, render: 7ms)
- POST /api/posts/create 200 in 8ms (compile: 804µs, render: 7ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.8s (compile: 154ms, render: 12.6s)
+ POST /api/posts/create 200 in 176ms (compile: 161ms, render: 15ms)
+ POST /api/posts/create 200 in 24ms (compile: 2ms, render: 21ms)
+ POST /api/posts/create 200 in 10ms (compile: 1619µs, render: 8ms)
