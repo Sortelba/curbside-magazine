@@ -11,11 +11,10 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 4.3s
- GET /api/settings?key=skatelife-secret 200 in 1013ms (compile: 683ms, render: 330ms)
+✓ Ready in 2.1s
+ GET /api/settings?key=skatelife-secret 200 in 343ms (compile: 325ms, render: 18ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,10 +27,7 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
-RSS fetch failed for Thrasher News: 500
-Fetch failed for https://www.skateboarding.com/news/aerosol-skateboards-promo-video: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/nike-sb-72-hours-in-michigan-for-the-sb-tennis-classic: 403 Forbidden
-Error scraping RSS Place Magazine: TypeError: fetch failed
+Error scraping RSS Boardstation: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
     at async GET (src/app/api/cron/scrape/route.ts:24:25)
@@ -42,24 +38,115 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
   194 |
   195 |         if (!response.ok) {
   196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [SocketError]: other side closed
+  [cause]: Error: connect EHOSTUNREACH 85.13.149.113:80 - Local (192.168.178.32:49166)
       at ignore-listed frames {
-    code: 'UND_ERR_SOCKET',
-    socket: {
-      localAddress: '192.168.178.32',
-      localPort: 49475,
-      remoteAddress: '44.232.173.249',
-      remotePort: 443,
-      remoteFamily: 'IPv4',
-      timeout: undefined,
-      bytesWritten: 403,
-      bytesRead: 0
-    }
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '85.13.149.113',
+    port: 80
   }
 }
-Fetch failed for https://www.skateboarding.com/news/mantis-skateshop-welomes-martin-vega: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/pawnshop-built-on-family-and-skateboarding: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/super-skate-posse-giveback-34-new-brunswick-new-jersey: 403 Forbidden
+Error scraping RSS Limited Skateboarding: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: connect EHOSTUNREACH 213.216.0.21:443 - Local (192.168.178.32:49167)
+      at ignore-listed frames {
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '213.216.0.21',
+    port: 443
+  }
+}
+Error scraping RSS Irregular Magazin: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error scraping RSS Shredder News: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error scraping RSS Jenkem Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error scraping RSS Thrasher News: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error scraping RSS Transworld: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -71,42 +158,197 @@ Error scraping RSS Solo Skate Mag: TypeError: fetch failed
   194 |
   195 |         if (!response.ok) {
   196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+  [cause]: Error: connect EHOSTUNREACH 178.77.109.38:443 - Local (192.168.178.32:49186)
       at ignore-listed frames {
-    code: 'UND_ERR_CONNECT_TIMEOUT'
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '178.77.109.38',
+    port: 443
+  }
+}
+Error scraping RSS Pocket Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error fetching RSS for Red Bull Skateboarding: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error fetching RSS for The Nine Club: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error fetching RSS for Skate IQ: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
+  }
+}
+Error fetching RSS for Thrasher Magazine: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'EHOSTUNREACH'
   }
 }
 Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 1 real posts via DDG.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.7s (compile: 312ms, render: 12.4s)
- POST /api/posts/create 200 in 77ms (compile: 67ms, render: 10ms)
- POST /api/posts/create 200 in 7ms (compile: 1084µs, render: 6ms)
- POST /api/posts/create 200 in 7ms (compile: 806µs, render: 6ms)
+Scraping failed: TypeError: fetch failed
+    at async searchInstagramHashtag (src/lib/instagram.ts:58:26)
+    at async scrapeAllSources (src/lib/scraper.ts:354:30)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  56 |
+  57 |     try {
+> 58 |         const response = await fetch(url, {
+     |                          ^
+  59 |             headers: {
+  60 |                 // User-Agent is critical to avoid immediate bot detection
+  61 |                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' {
+  [cause]: Error: connect EHOSTUNREACH 40.114.177.156:443 - Local (192.168.178.32:49257)
+      at ignore-listed frames {
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '40.114.177.156',
+    port: 443
+  }
+}
+Scraping failed: TypeError: fetch failed
+    at async searchInstagramHashtag (src/lib/instagram.ts:58:26)
+    at async scrapeAllSources (src/lib/scraper.ts:354:30)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  56 |
+  57 |     try {
+> 58 |         const response = await fetch(url, {
+     |                          ^
+  59 |             headers: {
+  60 |                 // User-Agent is critical to avoid immediate bot detection
+  61 |                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' {
+  [cause]: Error: connect EHOSTUNREACH 40.114.177.156:443 - Local (192.168.178.32:49258)
+      at ignore-listed frames {
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '40.114.177.156',
+    port: 443
+  }
+}
+Scraping failed: TypeError: fetch failed
+    at async searchInstagramHashtag (src/lib/instagram.ts:58:26)
+    at async scrapeAllSources (src/lib/scraper.ts:354:30)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  56 |
+  57 |     try {
+> 58 |         const response = await fetch(url, {
+     |                          ^
+  59 |             headers: {
+  60 |                 // User-Agent is critical to avoid immediate bot detection
+  61 |                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' {
+  [cause]: Error: connect EHOSTUNREACH 40.114.177.156:443 - Local (192.168.178.32:49259)
+      at ignore-listed frames {
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '40.114.177.156',
+    port: 443
+  }
+}
+Scraping failed: TypeError: fetch failed
+    at async searchInstagramHashtag (src/lib/instagram.ts:58:26)
+    at async scrapeAllSources (src/lib/scraper.ts:354:30)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  56 |
+  57 |     try {
+> 58 |         const response = await fetch(url, {
+     |                          ^
+  59 |             headers: {
+  60 |                 // User-Agent is critical to avoid immediate bot detection
+  61 |                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36' {
+  [cause]: Error: connect EHOSTUNREACH 40.114.177.156:443 - Local (192.168.178.32:49260)
+      at ignore-listed frames {
+    errno: -65,
+    code: 'EHOSTUNREACH',
+    syscall: 'connect',
+    address: '40.114.177.156',
+    port: 443
+  }
+}
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 1522ms (compile: 181ms, render: 1340ms)
