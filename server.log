@@ -11,11 +11,10 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 2.2s
- GET /api/settings?key=skatelife-secret 200 in 232ms (compile: 217ms, render: 15ms)
+✓ Ready in 1427ms
+ GET /api/settings?key=skatelife-secret 200 in 578ms (compile: 484ms, render: 94ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -45,7 +44,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49283,
+      localPort: 49177,
       remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -55,11 +54,11 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/news/aerosol-skateboards-promo-video: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/nike-sb-72-hours-in-michigan-for-the-sb-tennis-classic: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/aerosol-skateboards-promo-video: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/pawnshop-built-on-family-and-skateboarding: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/super-skate-posse-giveback-34-new-brunswick-new-jersey: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/mantis-skateshop-welomes-martin-vega: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/super-skate-posse-giveback-34-new-brunswick-new-jersey: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -84,7 +83,7 @@ Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
-Found 4 real posts via DDG.
+Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -105,7 +104,11 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.1s (compile: 133ms, render: 11.9s)
- POST /api/posts/create 200 in 141ms (compile: 130ms, render: 11ms)
- POST /api/posts/create 200 in 7ms (compile: 832µs, render: 7ms)
- POST /api/posts/create 200 in 9ms (compile: 921µs, render: 8ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.0s (compile: 201ms, render: 11.8s)
+ POST /api/posts/create 200 in 32ms (compile: 24ms, render: 8ms)
+ POST /api/posts/create 200 in 9ms (compile: 1032µs, render: 8ms)
+ POST /api/posts/create 200 in 7ms (compile: 1024µs, render: 6ms)
