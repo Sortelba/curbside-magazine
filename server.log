@@ -13,8 +13,8 @@
 - Local:         http://localhost:3000
 
 ✓ Starting...
-✓ Ready in 1361ms
- GET /api/settings?key=skatelife-secret 200 in 286ms (compile: 257ms, render: 28ms)
+✓ Ready in 1654ms
+ GET /api/settings?key=skatelife-secret 200 in 312ms (compile: 296ms, render: 16ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -27,8 +27,7 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
-RSS fetch failed for Thrasher News: 500
-Error scraping RSS Place Magazine: TypeError: fetch failed
+Error scraping RSS Boardstation: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
     at async GET (src/app/api/cron/scrape/route.ts:24:25)
@@ -39,26 +38,109 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
   194 |
   195 |         if (!response.ok) {
   196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [SocketError]: other side closed
+  [cause]: Error: getaddrinfo ENOTFOUND www.boardstation.de
       at ignore-listed frames {
-    code: 'UND_ERR_SOCKET',
-    socket: {
-      localAddress: '192.168.178.32',
-      localPort: 49178,
-      remoteAddress: '52.40.42.113',
-      remotePort: 443,
-      remoteFamily: 'IPv4',
-      timeout: undefined,
-      bytesWritten: 403,
-      bytesRead: 0
-    }
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.boardstation.de'
   }
 }
-Fetch failed for https://www.skateboarding.com/news/rockstar-energy-open-free-waterfront-concert-series-lineup-announced: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/chris-chemalys-for-what-its-worth-part-for-slappys-garage: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/skate-shoes/nike-sb-x-beyond-store-dunk-hi: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/sucks-huh-by-neema-joorabchi: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/tristan-rennie-best-of-part: 403 Forbidden
+Error scraping RSS Limited Skateboarding: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND www.limitedmag.de
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.limitedmag.de'
+  }
+}
+Error scraping RSS Shredder News: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND shredder.news
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'shredder.news'
+  }
+}
+Error scraping RSS Irregular Magazin: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND irregular-magazin.de
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'irregular-magazin.de'
+  }
+}
+Error scraping RSS Thrasher News: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND www.thrashermagazine.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.thrashermagazine.com'
+  }
+}
+Error scraping RSS Jenkem Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND www.jenkemmag.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.jenkemmag.com'
+  }
+}
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -70,21 +152,160 @@ Error scraping RSS Solo Skate Mag: TypeError: fetch failed
   194 |
   195 |         if (!response.ok) {
   196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+  [cause]: Error: getaddrinfo ENOTFOUND soloskatemag.com
       at ignore-listed frames {
-    code: 'UND_ERR_CONNECT_TIMEOUT'
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'soloskatemag.com'
+  }
+}
+Error scraping RSS Transworld: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND skateboarding.transworld.net
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'skateboarding.transworld.net'
+  }
+}
+Error scraping RSS Pocket Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND pocketskatemag.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'pocketskatemag.com'
+  }
+}
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND placemag.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'placemag.com'
+  }
+}
+Error fetching RSS for Red Bull Skateboarding: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: Error: getaddrinfo ENOTFOUND www.youtube.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.youtube.com'
+  }
+}
+Error fetching RSS for The Nine Club: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: Error: getaddrinfo ENOTFOUND www.youtube.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.youtube.com'
+  }
+}
+Error fetching RSS for Thrasher Magazine: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: Error: getaddrinfo ENOTFOUND www.youtube.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.youtube.com'
+  }
+}
+Error fetching RSS for Skate IQ: TypeError: fetch failed
+    at async (src/lib/youtube.ts:40:25)
+    at async fetchLatestYoutubeVideos (src/lib/youtube.ts:37:5)
+    at async scrapeAllSources (src/lib/scraper.ts:334:24)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  38 |         try {
+  39 |             const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channel.id}`;
+> 40 |             const res = await fetch(rssUrl);
+     |                         ^
+  41 |             const xml = await res.text();
+  42 |
+  43 |             // simple regex parse to avoid heavyweight xml parser dependency if possible {
+  [cause]: Error: getaddrinfo ENOTFOUND www.youtube.com
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.youtube.com'
   }
 }
 Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
+Found 6 real posts via DDG.
+Found 2 real posts via DDG.
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -99,19 +320,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.9s (compile: 171ms, render: 12.7s)
- POST /api/posts/create 200 in 30ms (compile: 23ms, render: 8ms)
- POST /api/posts/create 200 in 7ms (compile: 1124µs, render: 6ms)
- POST /api/posts/create 200 in 7ms (compile: 691µs, render: 6ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 2.9s (compile: 122ms, render: 2.8s)
+ POST /api/posts/create 200 in 71ms (compile: 58ms, render: 13ms)
+ POST /api/posts/create 200 in 10ms (compile: 1325µs, render: 9ms)
+ POST /api/posts/create 200 in 8ms (compile: 901µs, render: 7ms)
