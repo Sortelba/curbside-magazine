@@ -13,8 +13,8 @@
 - Local:         http://localhost:3000
 
 ✓ Starting...
-✓ Ready in 1730ms
- GET /api/settings?key=skatelife-secret 200 in 282ms (compile: 258ms, render: 24ms)
+✓ Ready in 2.1s
+ GET /api/settings?key=skatelife-secret 200 in 243ms (compile: 225ms, render: 18ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -44,7 +44,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49175,
+      localPort: 49174,
       remoteAddress: '44.232.173.249',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -80,7 +80,7 @@ Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
-Found 2 real posts via DDG.
+Found 3 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
@@ -106,8 +106,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 13.0s (compile: 174ms, render: 12.8s)
- POST /api/posts/create 200 in 33ms (compile: 25ms, render: 8ms)
- POST /api/posts/create 200 in 7ms (compile: 739µs, render: 6ms)
- POST /api/posts/create 200 in 7ms (compile: 797µs, render: 6ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.1s (compile: 181ms, render: 12.0s)
+ POST /api/posts/create 200 in 47ms (compile: 36ms, render: 11ms)
+ POST /api/posts/create 200 in 11ms (compile: 1480µs, render: 9ms)
+ POST /api/posts/create 200 in 11ms (compile: 1559µs, render: 9ms)
