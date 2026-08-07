@@ -11,11 +11,10 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 2s
- GET /api/settings?key=skatelife-secret 200 in 500ms (compile: 467ms, render: 33ms)
+✓ Ready in 2.5s
+ GET /api/settings?key=skatelife-secret 200 in 208ms (compile: 185ms, render: 23ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -29,8 +28,6 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
-Fetch failed for https://www.skateboarding.com/news/handful-by-timber-skateshop: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/huf-x-spitfire-collab-skating-chicago: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -47,8 +44,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49187,
-      remoteAddress: '52.40.42.113',
+      localPort: 49211,
+      remoteAddress: '44.232.173.249',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -57,6 +54,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
+Fetch failed for https://www.skateboarding.com/news/huf-x-spitfire-collab-skating-chicago: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -77,11 +75,10 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
+Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -114,7 +111,10 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 223ms, render: 11.6s)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.1s (compile: 128ms, render: 12.0s)
  POST /api/posts/create 200 in 33ms (compile: 23ms, render: 10ms)
- POST /api/posts/create 200 in 7ms (compile: 838µs, render: 7ms)
- POST /api/posts/create 200 in 7ms (compile: 675µs, render: 6ms)
+ POST /api/posts/create 200 in 7ms (compile: 924µs, render: 7ms)
+ POST /api/posts/create 200 in 7ms (compile: 707µs, render: 6ms)
