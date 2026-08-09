@@ -14,8 +14,8 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 2.2s
- GET /api/settings?key=skatelife-secret 200 in 286ms (compile: 252ms, render: 34ms)
+✓ Ready in 1129ms
+ GET /api/settings?key=skatelife-secret 200 in 256ms (compile: 234ms, render: 22ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,7 +28,27 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
+Error scraping RSS Boardstation: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error: getaddrinfo ENOTFOUND www.boardstation.de
+      at ignore-listed frames {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'www.boardstation.de'
+  }
+}
 RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/huf-x-spitfire-collab-skating-chicago: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -45,7 +65,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49207,
+      localPort: 49245,
       remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -55,7 +75,6 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/news/huf-x-spitfire-collab-skating-chicago: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -76,11 +95,10 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
-Found 0 real posts via DDG.
-No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
 Found 6 real posts via DDG.
+Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -104,7 +122,13 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.2s (compile: 225ms, render: 12.0s)
- POST /api/posts/create 200 in 36ms (compile: 27ms, render: 9ms)
- POST /api/posts/create 200 in 7ms (compile: 815µs, render: 6ms)
- POST /api/posts/create 200 in 7ms (compile: 718µs, render: 6ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 139ms, render: 11.7s)
+ POST /api/posts/create 200 in 73ms (compile: 63ms, render: 10ms)
+ POST /api/posts/create 200 in 8ms (compile: 972µs, render: 7ms)
+ POST /api/posts/create 200 in 16ms (compile: 1910µs, render: 14ms)
