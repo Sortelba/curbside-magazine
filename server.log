@@ -114,3 +114,5 @@ GEMINI_API_KEY not found. Returning original content.
  POST /api/posts/create 200 in 33ms (compile: 24ms, render: 9ms)
  POST /api/posts/create 200 in 8ms (compile: 909µs, render: 7ms)
  POST /api/posts/create 200 in 7ms (compile: 640µs, render: 6ms)
+ GET /admin?key=skatelife-secret 200 in 1545ms (compile: 1320ms, render: 225ms)
+[?25h
