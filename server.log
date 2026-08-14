@@ -11,10 +11,11 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 4s
- GET /api/settings?key=skatelife-secret 200 in 277ms (compile: 263ms, render: 14ms)
+✓ Ready in 1632ms
+ GET /api/settings?key=skatelife-secret 200 in 253ms (compile: 236ms, render: 17ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -27,162 +28,12 @@ Fetching RSS for Transworld...
 Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
-Error scraping RSS Limited Skateboarding: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error: connect EHOSTUNREACH 213.216.0.21:443 - Local (192.168.178.32:49171)
-      at ignore-listed frames {
-    errno: -65,
-    code: 'EHOSTUNREACH',
-    syscall: 'connect',
-    address: '213.216.0.21',
-    port: 443
-  }
-}
-Error scraping RSS Boardstation: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error: connect EHOSTUNREACH 85.13.149.113:80 - Local (192.168.178.32:49172)
-      at ignore-listed frames {
-    errno: -65,
-    code: 'EHOSTUNREACH',
-    syscall: 'connect',
-    address: '85.13.149.113',
-    port: 80
-  }
-}
-Error scraping RSS Irregular Magazin: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
-Error scraping RSS Shredder News: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
-Error scraping RSS Jenkem Mag: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
-Error scraping RSS Thrasher News: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
-Error scraping RSS Transworld: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
-Error scraping RSS Solo Skate Mag: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: Error: connect EHOSTUNREACH 178.77.109.38:443 - Local (192.168.178.32:49196)
-      at ignore-listed frames {
-    errno: -65,
-    code: 'EHOSTUNREACH',
-    syscall: 'connect',
-    address: '178.77.109.38',
-    port: 443
-  }
-}
-Error scraping RSS Pocket Skate Mag: TypeError: fetch failed
-    at async scrapeRssSource (src/lib/scraper.ts:193:26)
-    at async scrapeAllSources (src/lib/scraper.ts:329:25)
-    at async GET (src/app/api/cron/scrape/route.ts:24:25)
-  191 |     try {
-  192 |         console.log(`Fetching RSS for ${source.name}...`);
-> 193 |         const response = await fetchWithHeaders(source.url);
-      |                          ^
-  194 |
-  195 |         if (!response.ok) {
-  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'EHOSTUNREACH'
-  }
-}
+RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-day-1-mens-vqs-street-womens-semi-finals-mens-park-qualifier: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/spanish-skater-danny-leon-nails-the-perfect-eclipse-trick: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/trailer-swatch-nines-surf-skate-returns-to-waco-surf-oct-8-10: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/venice-og-park-renovation-grand-opening-this-weekend: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/labros-seoul-squeeze-raw-clips: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -199,14 +50,30 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49201,
-      remoteAddress: '44.232.173.249',
+      localPort: 49207,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
       bytesWritten: 403,
       bytesRead: 0
     }
+  }
+}
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
   }
 }
 Searching for #skateboarding on Instagram via DuckDuckGo...
@@ -237,7 +104,13 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 3.4s (compile: 132ms, render: 3.3s)
- POST /api/posts/create 200 in 34ms (compile: 25ms, render: 9ms)
- POST /api/posts/create 200 in 8ms (compile: 778µs, render: 7ms)
- POST /api/posts/create 200 in 7ms (compile: 678µs, render: 7ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 200ms, render: 11.6s)
+ POST /api/posts/create 200 in 33ms (compile: 24ms, render: 9ms)
+ POST /api/posts/create 200 in 8ms (compile: 909µs, render: 7ms)
+ POST /api/posts/create 200 in 7ms (compile: 640µs, render: 6ms)
