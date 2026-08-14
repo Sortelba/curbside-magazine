@@ -14,8 +14,8 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 1632ms
- GET /api/settings?key=skatelife-secret 200 in 253ms (compile: 236ms, render: 17ms)
+✓ Ready in 869ms
+ GET /api/settings?key=skatelife-secret 200 in 180ms (compile: 168ms, render: 12ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -31,9 +31,9 @@ Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
 Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-day-1-mens-vqs-street-womens-semi-finals-mens-park-qualifier: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/spanish-skater-danny-leon-nails-the-perfect-eclipse-trick: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/trailer-swatch-nines-surf-skate-returns-to-waco-surf-oct-8-10: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/venice-og-park-renovation-grand-opening-this-weekend: 403 Forbidden
 Fetch failed for https://www.skateboarding.com/news/labros-seoul-squeeze-raw-clips: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/trailer-swatch-nines-surf-skate-returns-to-waco-surf-oct-8-10: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -50,7 +50,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49207,
+      localPort: 50341,
       remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -108,11 +108,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 200ms, render: 11.6s)
- POST /api/posts/create 200 in 33ms (compile: 24ms, render: 9ms)
- POST /api/posts/create 200 in 8ms (compile: 909µs, render: 7ms)
- POST /api/posts/create 200 in 7ms (compile: 640µs, render: 6ms)
- GET /admin?key=skatelife-secret 200 in 1545ms (compile: 1320ms, render: 225ms)
-[?25h
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 105ms, render: 11.7s)
+ POST /api/posts/create 200 in 34ms (compile: 26ms, render: 8ms)
+ POST /api/posts/create 200 in 8ms (compile: 853µs, render: 7ms)
+ POST /api/posts/create 200 in 7ms (compile: 664µs, render: 7ms)
