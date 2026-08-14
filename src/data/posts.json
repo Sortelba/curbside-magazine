@@ -1,5 +1,78 @@
 [
   {
+    "id": "post_1786714173104_477",
+    "title": "[News] Haters will say it Doesn’t count",
+    "description": "Neues Video von The Nine Club auf YouTube!... (Originalquelle: The Nine Club)...",
+    "translations": {
+      "de": {
+        "title": "[News] Haters will say it Doesn’t count",
+        "content": "Neues Video von The Nine Club auf YouTube!... (Originalquelle: The Nine Club)"
+      },
+      "en": {
+        "title": "Haters will say it Doesn’t count",
+        "content": "Neues Video von The Nine Club auf YouTube!..."
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/Q26lioC6rgk",
+    "media": {
+      "images": [
+        "https://img.youtube.com/vi/Q26lioC6rgk/maxresdefault.jpg"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/Q26lioC6rgk",
+      "externalLink": "https://www.youtube.com/shorts/Q26lioC6rgk"
+    },
+    "source": "The Nine Club",
+    "originalUrl": "https://www.youtube.com/shorts/Q26lioC6rgk",
+    "date": "Aug 14, 2026",
+    "tags": [
+      "news",
+      "the nine club"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1786714173096_207",
+    "title": "[News] WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?",
+    "description": "WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?\n\nAugust 10, 2026/\n        Zac Tait/        VIDEOS/\n                Comments: 3\n\nAnyone who’s skated a street spot knows that it can be sensory ove...",
+    "translations": {
+      "de": {
+        "title": "[News] WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?",
+        "content": "WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?\n\nAugust 10, 2026/\n        Zac Tait/        VIDEOS/\n                Comments: 3\n\nAnyone who’s skated a street spot knows that it can be sensory overload. Dogs barking, pedestrians rambling, cars honking. So consider this for a moment: What if you took away your hearing?\n\nWell, that’s exactly how Austin Oertel skates.\n\nAustin is a deaf skateboarder from Pennsylvania who just dropped an impressive part in Bill Simpson’s full-length Timewise, and... (Originalquelle: Jenkem Mag)"
+      },
+      "en": {
+        "title": "WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?",
+        "content": "WHAT’S IT LIKE FILMING A SKATE PART WHEN YOU’RE DEAF?\n\nAugust 10, 2026/\n        Zac Tait/        VIDEOS/\n                Comments: 3\n\nAnyone who’s skated a street spot knows that it can be sensory overload. Dogs barking, pedestrians rambling, cars honking. So consider this for a moment: What if you took away your hearing?\n\nWell, that’s exactly how Austin Oertel skates.\n\nAustin is a deaf skateboarder from Pennsylvania who just dropped an impressive part in Bill Simpson’s full-length Timewise, and..."
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/0GR2jOTAqGg",
+    "media": {
+      "images": [
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2026/08/deaffeat-1024x576.png",
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2022/10/red-black-banner.png",
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2026/08/Austin-SWcrook-Photo-by-Justin-Mondschein-scaled.jpg",
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2026/08/Austin-Portrait-Photo-by-Justin-Mondschein-scaled.jpg",
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2026/08/Austin-Switch-Fs-Flip-Photo-by-Justin-Mondschein-scaled.jpg",
+        "https://cdn.jenkemmag.com/mediaAssetsMaster/2026/08/Austin-BSflip-Photo-by-Justin-Mondschein-scaled.jpg",
+        "https://cdn.shopify.com/s/files/1/1364/2463/files/nokiahood2_large.png?v=1750953426",
+        "https://cdn.shopify.com/s/files/1/1364/2463/files/nokiahood_large.png?v=1750953426",
+        "https://cdn.shopify.com/s/files/1/1364/2463/files/catblack_large.png?v=1750950051",
+        "https://cdn.shopify.com/s/files/1/1364/2463/files/catblack_detail_large.png?v=1750950051"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/0GR2jOTAqGg",
+      "externalLink": "https://www.jenkemmag.com/home/2026/08/10/whats-it-like-filming-a-skate-part-when-youre-deaf/"
+    },
+    "source": "Jenkem Mag",
+    "originalUrl": "https://www.jenkemmag.com/home/2026/08/10/whats-it-like-filming-a-skate-part-when-youre-deaf/",
+    "date": "Aug 14, 2026",
+    "tags": [
+      "news",
+      "jenkem mag"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1786713895925_683",
     "title": "[News] YouTube Skater John Hill Shares His First Day Running His Skate Brand Progress Daily Skateboards",
     "description": "As we previously reported, YouTube skater John Hill has officially launched his new skateboard company, Progress Daily Skateboards.\n\nREAD MORE: YouTube Skater John Hill Launches His Skateboard Company...",
