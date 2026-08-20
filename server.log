@@ -11,10 +11,11 @@
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 1909ms
- GET /api/settings?key=skatelife-secret 200 in 715ms (compile: 690ms, render: 25ms)
+✓ Ready in 2.3s
+ GET /api/settings?key=skatelife-secret 200 in 237ms (compile: 212ms, render: 24ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,6 +29,8 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/ben-raemers-foundation-feeling-scene-cornwall-uk: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/grant-brittains-unseen-80s-skate-photos: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -44,7 +47,7 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49203,
+      localPort: 49384,
       remoteAddress: '44.232.173.249',
       remotePort: 443,
       remoteFamily: 'IPv4',
@@ -55,10 +58,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
   }
 }
 Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-finals-womens-street-mens-park-mens-street: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/april-skateboards-x-spitfire-wheels-collab-video: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-day-1-mens-vqs-street-womens-semi-finals-mens-park-qualifier: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-day-2-womens-park-final-mens-street-semi-final-dickies-best-trick-cash-jam: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/spanish-skater-danny-leon-nails-the-perfect-eclipse-trick: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/rockstar-energy-open-2026-final-results: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/photo-blowout-rockstar-energy-open-in-portland: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -79,11 +80,11 @@ Searching for #skateboarding on Instagram via DuckDuckGo...
 Searching for #berics on Instagram via DuckDuckGo...
 Searching for #thrasher on Instagram via DuckDuckGo...
 Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 5 real posts via DDG.
+Found 6 real posts via DDG.
 Found 0 real posts via DDG.
 No results from DDG, returning empty array to force user to check input.
 Found 6 real posts via DDG.
-Found 6 real posts via DDG.
-Found 6 real posts via DDG.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
@@ -104,7 +105,18 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.0s (compile: 238ms, render: 11.8s)
- POST /api/posts/create 200 in 34ms (compile: 24ms, render: 9ms)
- POST /api/posts/create 200 in 9ms (compile: 910µs, render: 8ms)
- POST /api/posts/create 200 in 8ms (compile: 847µs, render: 7ms)
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.8s (compile: 125ms, render: 11.7s)
+ POST /api/posts/create 200 in 64ms (compile: 53ms, render: 11ms)
+ POST /api/posts/create 200 in 15ms (compile: 1828µs, render: 13ms)
+ POST /api/posts/create 200 in 16ms (compile: 7ms, render: 8ms)
