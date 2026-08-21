@@ -2,19 +2,22 @@
 > homepage-sortelba-com@0.1.0 dev
 > next dev
 
+  Using cached swc package @next/swc-darwin-arm64...
 ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
  We detected multiple lockfiles and selected the directory of /Users/steffenortelbach/package-lock.json as the root directory.
  To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
    See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
  Detected additional lockfiles: 
-   * /Users/steffenortelbach/Documents/CurbsideHomepage/curbside-magazine/package-lock.json
+   * /Users/steffenortelbach/Documents/Dokumente – MacBook Air von Steffen - 1/CurbsideHomepage/curbside-magazine/package-lock.json
 
 ▲ Next.js 16.1.6 (Turbopack)
 - Local:         http://localhost:3000
+- Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-✓ Ready in 1559ms
- GET /api/settings?key=skatelife-secret 200 in 295ms (compile: 269ms, render: 26ms)
+Failed to benchmark file I/O: No such file or directory (os error 2)
+✓ Ready in 3s
+ GET /api/settings?key=skatelife-secret 200 in 732ms (compile: 717ms, render: 14ms)
 Starting scrape job...
 Scraping 10 news sources, YouTube, and 4 Instagram tags...
 Fetching RSS for Boardstation...
@@ -28,6 +31,11 @@ Fetching RSS for Solo Skate Mag...
 Fetching RSS for Pocket Skate Mag...
 Fetching RSS for Place Magazine...
 RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/ben-raemers-foundation-feeling-scene-cornwall-uk: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/grant-brittains-unseen-80s-skate-photos: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/rockstar-energy-open-2026-final-results: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/photo-blowout-rockstar-energy-open-in-portland: 403 Forbidden
+Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-finals-womens-street-mens-park-mens-street: 403 Forbidden
 Error scraping RSS Place Magazine: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -44,8 +52,8 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     code: 'UND_ERR_SOCKET',
     socket: {
       localAddress: '192.168.178.32',
-      localPort: 49208,
-      remoteAddress: '44.232.173.249',
+      localPort: 49202,
+      remoteAddress: '52.40.42.113',
       remotePort: 443,
       remoteFamily: 'IPv4',
       timeout: undefined,
@@ -54,11 +62,6 @@ Error scraping RSS Place Magazine: TypeError: fetch failed
     }
   }
 }
-Fetch failed for https://www.skateboarding.com/news/ben-raemers-foundation-feeling-scene-cornwall-uk: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/grant-brittains-unseen-80s-skate-photos: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/rockstar-energy-open-2026-final-results: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/photo-blowout-rockstar-energy-open-in-portland: 403 Forbidden
-Fetch failed for https://www.skateboarding.com/news/watch-live-rockstar-energy-open-2026-finals-womens-street-mens-park-mens-street: 403 Forbidden
 Error scraping RSS Solo Skate Mag: TypeError: fetch failed
     at async scrapeRssSource (src/lib/scraper.ts:193:26)
     at async scrapeAllSources (src/lib/scraper.ts:329:25)
@@ -112,10 +115,7 @@ GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
 GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
-GEMINI_API_KEY not found. Returning original content.
- GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.7s (compile: 158ms, render: 12.5s)
- POST /api/posts/create 200 in 32ms (compile: 22ms, render: 10ms)
- POST /api/posts/create 200 in 8ms (compile: 908µs, render: 7ms)
- POST /api/posts/create 200 in 7ms (compile: 616µs, render: 7ms)
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 12.6s (compile: 668ms, render: 11.9s)
+ POST /api/posts/create 200 in 73ms (compile: 63ms, render: 9ms)
+ POST /api/posts/create 200 in 8ms (compile: 942µs, render: 7ms)
+ POST /api/posts/create 200 in 8ms (compile: 798µs, render: 7ms)
