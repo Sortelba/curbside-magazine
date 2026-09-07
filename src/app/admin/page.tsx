@@ -89,6 +89,33 @@ function AdminDashboardContent() {
     };
 
     const [publishLoading, setPublishLoading] = useState(false);
+    const [saveLoading, setSaveLoading] = useState(false);
+
+    const persistDrafts = async (nextDrafts: any[]) => {
+        const safeDrafts = Array.isArray(nextDrafts) ? nextDrafts : [];
+        setDrafts(safeDrafts);
+
+        try {
+            setSaveLoading(true);
+            const res = await fetch(`/api/drafts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ drafts: safeDrafts, key })
+            });
+
+            if (!res.ok) {
+                throw new Error('Failed to save drafts');
+            }
+
+            return true;
+        } catch (error) {
+            console.error('Failed to persist drafts', error);
+            return false;
+        } finally {
+            setSaveLoading(false);
+        }
+    };
+
     const triggerPublish = async () => {
         if (!confirm("Alle Änderungen jetzt veröffentlichen? Dies überträgt die Daten zu GitHub (Commit & Push).")) return;
 
@@ -97,7 +124,7 @@ function AdminDashboardContent() {
             const res = await fetch(`/api/admin/publish`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ key })
+                body: JSON.stringify({ key, drafts })
             });
             const data = await res.json();
             if (res.ok) {
@@ -307,6 +334,41 @@ function AdminDashboardContent() {
                         );
                     })}
                 </nav>
+
+                <div className="flex flex-wrap items-center gap-2">
+                    <button
+                        type="button"
+                        onClick={async () => {
+                            const ok = await persistDrafts(drafts);
+                            if (ok) {
+                                alert('Entwürfe lokal gespeichert.');
+                            } else {
+                                alert('Fehler beim Speichern der Entwürfe.');
+                            }
+                        }}
+                        disabled={saveLoading}
+                        className={cn(
+                            "flex items-center gap-2 px-4 py-3 rounded-2xl bg-muted text-foreground font-black uppercase italic text-[11px] tracking-widest transition-all hover:scale-[1.01]",
+                            saveLoading && "opacity-50 cursor-not-allowed"
+                        )}
+                    >
+                        {saveLoading ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+                        <span>Save Drafts</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        onClick={triggerPublish}
+                        disabled={publishLoading}
+                        className={cn(
+                            "flex items-center gap-2 px-4 py-3 rounded-2xl bg-primary text-primary-foreground font-black uppercase italic text-[11px] tracking-widest shadow-lg shadow-primary/20 transition-all hover:scale-[1.01]",
+                            publishLoading && "opacity-50 cursor-not-allowed"
+                        )}
+                    >
+                        {publishLoading ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+                        <span>Publish to Git</span>
+                    </button>
+                </div>
             </div>
 
             <div className="w-full">
