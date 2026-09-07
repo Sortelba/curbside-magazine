@@ -13,14 +13,10 @@ export async function POST(req: Request) {
 
         const scriptPath = path.join(process.cwd(), 'PUBLISH_MANUAL.command');
 
-        // Execute the script
-        // We pipe an empty string to it to satisfy the "read" prompt at the end
-        const result = await new Promise((resolve, reject) => {
-            exec(`echo "" | bash "${scriptPath}"`, (error, stdout, stderr) => {
+        const result = await new Promise((resolve) => {
+            exec(`bash "${scriptPath}"`, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`exec error: ${error}`);
-                    // We still resolve if it's just a git warning or something, 
-                    // but we'll include the error info.
                     resolve({ error: error.message, stdout, stderr });
                     return;
                 }

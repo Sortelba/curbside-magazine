@@ -1,15 +1,8 @@
 #!/bin/bash
 set -u
 
-BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
-SAFE_DIR="$HOME/curbside-magazine"
-
-if [ -d "$BASE_DIR" ] && [ "$BASE_DIR" != "$SAFE_DIR" ]; then
-  ln -sfn "$BASE_DIR" "$SAFE_DIR"
-fi
-
-DIR="$SAFE_DIR"
-cd "$DIR" || {
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR" || {
   echo "Fehler: Projektordner konnte nicht gefunden werden."
   exit 1
 }
@@ -20,21 +13,35 @@ echo "------------------------------------------------"
 
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "FEHLER: Das ist kein gültiges Git-Repository."
-  read -p "Drücke ENTER zum Beenden..."
   exit 1
 fi
 
-if [[ -z $(git status --porcelain) ]]; then
-  echo "Keine Änderungen zum Veröffentlichen."
-  read -p "Drücke ENTER zum Beenden..."
-  exit 0
+git fetch origin main >/dev/null 2>&1 || true
+
+if [ -n "$(git status --porcelain)" ]; then
+  echo "1. Speichere lokale Änderungen..."
+  git add .
+
+  if ! git diff --cached --quiet; then
+    git commit -m "Manuelles Update: $(date '+%Y-%m-%d %H:%M:%S')" || {
+      echo "Commit fehlgeschlagen. Bitte prüfe die Git-Config oder Konflikte."
+      exit 1
+    }
+  fi
+else
+  echo "Keine lokalen Änderungen zum Veröffentlichen."
 fi
 
-echo "1. Speichere lokale Änderungen..."
-git add .
-git commit -m "Manuelles Update: $(date '+%H:%M:%S')"
+REMOTE_AHEAD=$(git rev-list --left-right --count origin/main...HEAD 2>/dev/null | awk '{print $2}')
+if [ -n "$REMOTE_AHEAD" ] && [ "$REMOTE_AHEAD" -gt 0 ]; then
+  echo "2. Remote hat neue Commits. Rebase vor dem Push..."
+  git pull --rebase origin main || {
+    echo "Rebase fehlgeschlagen. Bitte Konflikte manuell lösen und erneut publizieren."
+    exit 1
+  }
+fi
 
-echo "2. Übertrage zu GitHub..."
+echo "3. Übertrage zu GitHub..."
 git push origin main
 
 if [ $? -eq 0 ]; then
@@ -47,6 +54,5 @@ else
   echo "FEHLER: Konnte nicht zu GitHub übertragen."
   echo "Bitte prüfe dein Internet oder melde dich beim Support."
   echo "------------------------------------------------"
+  exit 1
 fi
-
-read -p "Drücke ENTER zum Beenden..."

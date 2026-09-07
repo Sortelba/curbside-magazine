@@ -31,15 +31,14 @@ export default async function Home() {
   const allPosts = await getPosts();
   const learnData = await getLearnData();
 
-  // Filter for current month only
-  const currentDate = new Date();
-  const currentMonth = currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
-
-  const posts = allPosts.filter((post: any) => {
-    const postDate = new Date(post.date);
-    return postDate.getMonth() === currentMonth && postDate.getFullYear() === currentYear;
-  });
+  // Show newest posts first, independent of the current month. This keeps newly
+  // created or scanned posts visible immediately after a successful publish.
+  const posts = [...allPosts]
+    .filter((post: any) => {
+      const postDate = new Date(post.date);
+      return !isNaN(postDate.getTime());
+    })
+    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   // Read settings
   const settingsPath = path.join(process.cwd(), 'src', 'data', 'settings.json');
