@@ -64,9 +64,8 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          # Remove API routes to allow static export (Dashboard only runs locally)
-          rm -rf src/app/api
-          ${{ steps.detect-package-manager.outputs.runner }} next build
+          # Remove API routes only for static export; the dashboard stays local-only.
+          GITHUB_ACTIONS=true ${{ steps.detect-package-manager.outputs.runner }} npm run build:pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

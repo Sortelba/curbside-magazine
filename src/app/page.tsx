@@ -2,9 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import HomeContent from "@/components/HomeContent";
 
-export const dynamic = 'force-dynamic';
-
-// Static rendering is used for GitHub Pages
+// Static rendering is required for GitHub Pages export.
 
 async function getPosts() {
   const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');
