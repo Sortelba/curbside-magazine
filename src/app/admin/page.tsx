@@ -1980,12 +1980,42 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
         }
     };
 
+    const toLocalDateKey = (date: Date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    const normalizeDateKey = (value: string | undefined) => {
+        if (!value) return '';
+        const isoMatch = value.match(/^\d{4}-\d{2}-\d{2}$/);
+        if (isoMatch) return value;
+
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return '';
+        return toLocalDateKey(date);
+    };
+
+    const formatDisplayDate = (value: string | undefined) => {
+        if (!value) return 'Coming Soon';
+        const normalized = normalizeDateKey(value);
+        if (!normalized) return 'Coming Soon';
+        const [year, month, day] = normalized.split('-').map(Number);
+        return new Date(year, month - 1, day).toLocaleDateString('de-DE', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+    };
+
     const addEvent = () => {
+        const todayKey = toLocalDateKey(new Date());
         const newEvent = {
             id: `event_${Date.now()}`,
             title: "New Event",
-            date: "Coming Soon",
-            startDateUtc: new Date().toISOString().split('T')[0],
+            date: formatDisplayDate(todayKey),
+            startDateUtc: todayKey,
             location: "TBA",
             link: "",
             description: "",
@@ -1996,11 +2026,12 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
     };
 
     const addEventForDate = (date: Date) => {
+        const dateKey = toLocalDateKey(date);
         const newEvent = {
             id: `event_${Date.now()}`,
             title: "New Event",
-            date: date.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }),
-            startDateUtc: date.toISOString().split('T')[0],
+            date: formatDisplayDate(dateKey),
+            startDateUtc: dateKey,
             location: "TBA",
             link: "",
             description: "",
@@ -2012,21 +2043,32 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
 
     const updateEvent = (field: string, value: string) => {
         if (editingEvent) {
-            setEditingEvent({ ...editingEvent, [field]: value });
+            const nextEvent = { ...editingEvent, [field]: value };
+            if (field === 'startDateUtc' && value) {
+                nextEvent.date = formatDisplayDate(value);
+            }
+            setEditingEvent(nextEvent);
         }
     };
 
     const saveEditedEvent = () => {
         if (!editingEvent) return;
 
-        const existingIndex = events.findIndex(e => e.id === editingEvent.id);
+        const normalizedDate = normalizeDateKey(editingEvent.startDateUtc || editingEvent.date);
+        const finalEvent = {
+            ...editingEvent,
+            startDateUtc: normalizedDate || '',
+            date: normalizedDate ? formatDisplayDate(normalizedDate) : (editingEvent.date || 'Coming Soon')
+        };
+
+        const existingIndex = events.findIndex(e => e.id === finalEvent.id);
         let newEvents;
 
         if (existingIndex >= 0) {
             newEvents = [...events];
-            newEvents[existingIndex] = editingEvent;
+            newEvents[existingIndex] = finalEvent;
         } else {
-            newEvents = [editingEvent, ...events];
+            newEvents = [finalEvent, ...events];
         }
 
         saveEvents(newEvents);
@@ -2071,8 +2113,8 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
 
     const getEventsForDate = (date: Date | null) => {
         if (!date) return [];
-        const dateStr = date.toISOString().split('T')[0];
-        return events.filter(event => event.startDateUtc === dateStr);
+        const dateStr = toLocalDateKey(date);
+        return events.filter(event => normalizeDateKey(event.startDateUtc || event.date) === dateStr);
     };
 
     const monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
@@ -2229,25 +2271,16 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
                                 />
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Display Date</label>
-                                    <input
-                                        type="text"
-                                        value={editingEvent.date}
-                                        onChange={(e) => updateEvent('date', e.target.value)}
-                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
-                                        placeholder="z.B. 14-15. 02.2026"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Calendar Date</label>
-                                    <input
-                                        type="date"
-                                        value={editingEvent.startDateUtc || ''}
-                                        onChange={(e) => updateEvent('startDateUtc', e.target.value)}
-                                        className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
-                                    />
+                            <div>
+                                <label className="block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest">Event Date</label>
+                                <input
+                                    type="date"
+                                    value={editingEvent.startDateUtc || ''}
+                                    onChange={(e) => updateEvent('startDateUtc', e.target.value)}
+                                    className="w-full p-2 bg-muted/20 border border-input rounded-lg text-sm"
+                                />
+                                <div className="mt-2 text-xs text-muted-foreground">
+                                    Anzeige: {editingEvent.startDateUtc ? formatDisplayDate(editingEvent.startDateUtc) : 'Noch kein Datum'}
                                 </div>
                             </div>
 

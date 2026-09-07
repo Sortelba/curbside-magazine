@@ -19,6 +19,23 @@ interface Event {
 
 import eventsData from "@/data/events.json";
 
+const toLocalDateKey = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+
+const normalizeDateKey = (value?: string) => {
+    if (!value) return '';
+    const isoMatch = value.match(/^\d{4}-\d{2}-\d{2}$/);
+    if (isoMatch) return value;
+
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return '';
+    return toLocalDateKey(parsed);
+};
+
 export default function EventsSidebar() {
     const { t, locale } = useLanguage();
     const [events, setEvents] = useState<Event[]>([]);
@@ -34,9 +51,12 @@ export default function EventsSidebar() {
         const data = eventsData as Event[];
         if (Array.isArray(data)) {
             const sorted = [...data].sort((a, b) => {
-                if (!a.startDateUtc) return 1;
-                if (!b.startDateUtc) return -1;
-                return new Date(a.startDateUtc).getTime() - new Date(b.startDateUtc).getTime();
+                const aKey = normalizeDateKey(a.startDateUtc || a.date);
+                const bKey = normalizeDateKey(b.startDateUtc || b.date);
+                if (!aKey && !bKey) return 0;
+                if (!aKey) return 1;
+                if (!bKey) return -1;
+                return aKey.localeCompare(bKey);
             });
             setEvents(sorted);
             setLoading(false);
@@ -49,9 +69,12 @@ export default function EventsSidebar() {
                 .then(data => {
                     if (Array.isArray(data)) {
                         const sorted = [...data].sort((a, b) => {
-                            if (!a.startDateUtc) return 1;
-                            if (!b.startDateUtc) return -1;
-                            return new Date(a.startDateUtc).getTime() - new Date(b.startDateUtc).getTime();
+                            const aKey = normalizeDateKey(a.startDateUtc || a.date);
+                            const bKey = normalizeDateKey(b.startDateUtc || b.date);
+                            if (!aKey && !bKey) return 0;
+                            if (!aKey) return 1;
+                            if (!bKey) return -1;
+                            return aKey.localeCompare(bKey);
                         });
                         setEvents(sorted);
                     }
@@ -94,7 +117,7 @@ export default function EventsSidebar() {
 
         for (let day = 1; day <= daysInMonth; day++) {
             const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-            const dayEvents = events.filter(e => e.startDateUtc === dateStr);
+            const dayEvents = events.filter(e => normalizeDateKey(e.startDateUtc || e.date) === dateStr);
 
             days.push(
                 <div key={day} className="h-24 border border-border/50 p-2 relative bg-card overflow-hidden">
@@ -143,7 +166,7 @@ export default function EventsSidebar() {
         // Days
         for (let day = 1; day <= daysInMonth; day++) {
             const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-            const hasEvent = events.some(e => e.startDateUtc === dateStr);
+            const hasEvent = events.some(e => normalizeDateKey(e.startDateUtc || e.date) === dateStr);
             const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
 
             days.push(
