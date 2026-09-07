@@ -1,10 +1,19 @@
 #!/bin/bash
+set -u
 
-# Pfad zum Projektverzeichnis
-DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$DIR"
+BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
+SAFE_DIR="$HOME/curbside-magazine"
 
-# Ästhetischer Header
+if [ -d "$BASE_DIR" ] && [ "$BASE_DIR" != "$SAFE_DIR" ]; then
+  ln -sfn "$BASE_DIR" "$SAFE_DIR"
+fi
+
+DIR="$SAFE_DIR"
+cd "$DIR" || {
+  echo "Fehler: Projektordner konnte nicht gefunden werden."
+  exit 1
+}
+
 clear
 echo "================================================"
 echo "   CURBSIDE MAGAZINE - AUTOSCAN & PUBLISH       "
@@ -13,19 +22,21 @@ echo " Startet den automatisierten Workflow...        "
 echo "================================================"
 echo ""
 
-# 1. Server check/start (Port 3000)
 PORT=3000
-if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null ; then
+if lsof -Pi ":$PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
     echo "[1/3] Server läuft bereits auf Port $PORT."
 else
     echo "[1/3] Starte Server im Hintergrund..."
-    # Startet npm run dev im Hintergrund
     nohup npm run dev > "$DIR/server.log" 2>&1 &
     echo "      Warte auf Initialisierung..."
-    sleep 3
+    for i in {1..30}; do
+        if curl -fsS "http://localhost:$PORT" >/dev/null 2>&1; then
+            break
+        fi
+        sleep 1
+    done
 fi
 
-# 2. News Auto-Pump ausführen
 echo "[2/3] Starte News-Scanner & Auto-Publish (Top 3)..."
 node scripts/auto-publish.mjs
 
@@ -39,11 +50,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# 3. GitHub Push auslösen
 echo "[3/3] Übertrage Änderungen zu GitHub..."
-# Wir rufen das existierende Publish-Skript auf
-# Wir übergeben ein leeres Echo um den "read" Prompt am Ende zu überspringen
-echo "" | bash "PUBLISH_MANUAL.command"
+echo "" | bash "$DIR/PUBLISH_MANUAL.command"
 
 echo ""
 echo "================================================"
@@ -51,6 +59,5 @@ echo "   ALLES ERLEDIGT! DEINE NEWS SIND LIVE.        "
 echo "================================================"
 echo ""
 
-# Terminal offen lassen für Erfolgskontrolle
 read -p "Drücke ENTER zum Schließen..."
 exit 0
