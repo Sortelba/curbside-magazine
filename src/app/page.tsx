@@ -46,7 +46,8 @@ export default async function Home() {
     showLearnBasics: false,
     showLearnCoaches: false,
     showLearnRandomizer: false,
-    showLearnChannels: false
+    showLearnChannels: false,
+    showCommunity: false
   };
 
   try {

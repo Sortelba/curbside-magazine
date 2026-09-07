@@ -9,7 +9,8 @@ import CoachesSection from "@/components/learn/CoachesSection";
 import RandomizerSection from "@/components/learn/RandomizerSection";
 import ChannelsSection from "@/components/learn/ChannelsSection";
 import { useState, useMemo } from "react";
-import { MoveLeft, MoveRight, ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { MoveLeft, MoveRight, ChevronDown, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Settings {
@@ -17,6 +18,7 @@ interface Settings {
     showLearnCoaches?: boolean;
     showLearnRandomizer?: boolean;
     showLearnChannels?: boolean;
+    showCommunity?: boolean;
     [key: string]: any;
 }
 
@@ -124,6 +126,30 @@ export default function HomeContent({ posts, learnData, settings }: { posts: any
                     </div>
                 </div>
             </div>
+
+            {settings.showCommunity && (
+                <div className="mt-12">
+                    <Link href="/community" className="block">
+                        <div className="group border-2 border-border bg-card rounded-[2rem] p-6 md:p-8 shadow-sm hover:shadow-lg transition-all">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="bg-primary/10 p-3 rounded-2xl">
+                                        <Users className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <div>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">Community</p>
+                                        <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter">Skate Community</h2>
+                                    </div>
+                                </div>
+                                <div className="inline-flex items-center gap-2 text-sm font-black uppercase italic tracking-widest text-primary group-hover:translate-x-1 transition-transform">
+                                    <span>Zur Community</span>
+                                    <ChevronDown className="rotate-[-90deg]" size={16} />
+                                </div>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            )}
 
             {/* Modal for Details */}
             <NewsModal

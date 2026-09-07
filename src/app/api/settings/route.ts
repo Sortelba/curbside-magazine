@@ -32,7 +32,8 @@ export async function GET(request: Request) {
             youtubeChannels: [],
             newsSources: [],
             instagramHashtags: [],
-            showLearnCenter: false
+            showLearnCenter: false,
+            showCommunity: false
         };
         return NextResponse.json({ ...defaultSettings, ...loadedSettings });
     } catch (error) {

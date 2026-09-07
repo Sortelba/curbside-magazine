@@ -32,16 +32,22 @@ wait_for_server() {
   return 1
 }
 
+close_terminal_window() {
+  osascript -e 'tell application "Terminal" to close (every window whose frontmost is true)' >/dev/null 2>&1 || true
+}
+
 if ! lsof -Pi ":$PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
   echo "Starte Curbside Admin..."
   nohup npm run dev -- --hostname 127.0.0.1 > "$ROOT_DIR/server.log" 2>&1 &
   if ! wait_for_server; then
     echo "Server konnte nicht gestartet werden. Bitte server.log prüfen:"
     echo "$ROOT_DIR/server.log"
+    close_terminal_window
     exit 1
   fi
 fi
 
 echo "Öffne Admin Dashboard..."
 open "$URL"
+close_terminal_window
 exit 0

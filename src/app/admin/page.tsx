@@ -144,6 +144,12 @@ function AdminDashboardContent() {
     const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [], showLearnCenter: false });
     const [settingsLoading, setSettingsLoading] = useState(false);
 
+    const toggleCommunityOnHome = async () => {
+        const nextValue = !(settings.showCommunity ?? false);
+        const newSettings = { ...settings, showCommunity: nextValue };
+        await saveSettings(newSettings);
+    };
+
     // Edit State
     const [editingYoutubeIndex, setEditingYoutubeIndex] = useState<number | null>(null);
     const [ytName, setYtName] = useState("");
@@ -389,7 +395,7 @@ function AdminDashboardContent() {
                                     <header className="flex justify-between items-end mb-8">
                                         <div>
                                             <h2 className="text-3xl font-black uppercase italic tracking-tighter">Einstellungen</h2>
-                                            <p className="text-muted-foreground">Konfiguration der News-Scraper und YouTube-Kanäle.</p>
+                                            <p className="text-muted-foreground">Konfiguration der News-Scraper, YouTube-Kanäle und Homepage-Module.</p>
                                         </div>
                                         <div className="flex items-end gap-2">
                                             <button
@@ -411,6 +417,31 @@ function AdminDashboardContent() {
 
 
                                     <div className="space-y-6">
+                                        <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm">
+                                            <div className="flex items-center justify-between gap-4 flex-wrap">
+                                                <div>
+                                                    <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">Homepage</p>
+                                                    <h3 className="text-2xl font-black uppercase italic tracking-tighter">Community anzeigen</h3>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    aria-label="Community auf der Startseite umschalten"
+                                                    onClick={toggleCommunityOnHome}
+                                                    className={cn(
+                                                        "relative inline-flex h-7 w-14 items-center rounded-full border-2 transition-colors",
+                                                        settings.showCommunity ? "bg-primary border-primary" : "bg-muted border-border"
+                                                    )}
+                                                >
+                                                    <span
+                                                        className={cn(
+                                                            "inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform",
+                                                            settings.showCommunity ? "translate-x-7" : "translate-x-1"
+                                                        )}
+                                                    />
+                                                </button>
+                                            </div>
+                                        </div>
+
                                         {/* YouTube Channels */}
                                         <CollapsibleSection
                                             title="YouTube Kanäle"
