@@ -200,3 +200,174 @@ GEMINI_API_KEY not found. Returning original content.
  POST /api/posts/create 200 in 17ms (compile: 3ms, render: 14ms)
  POST /api/posts/create 200 in 10ms (compile: 1090µs, render: 9ms)
  POST /api/posts/create 200 in 19ms (compile: 1886µs, render: 17ms)
+✓ Compiled in 174ms
+ GET /admin?key=skatelife-secret 200 in 77ms (compile: 25ms, render: 52ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 4 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/skater-musician-friend-and-father-micah-mattson-gone-too-soon: 403 Forbidden
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '192.168.178.32',
+      localPort: 62640,
+      remoteAddress: '52.40.42.113',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 403,
+      bytesRead: 0
+    }
+  }
+}
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+Searching for #skateboarding on Instagram via DuckDuckGo...
+Searching for #berics on Instagram via DuckDuckGo...
+Searching for #thrasher on Instagram via DuckDuckGo...
+Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 2 real posts via DDG.
+Found 2 real posts via DDG.
+Found 6 real posts via DDG.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 11.3s (compile: 7ms, render: 11.3s)
+ POST /api/posts/create 200 in 47ms (compile: 13ms, render: 34ms)
+ GET / 200 in 108ms (compile: 19ms, render: 89ms)
+ GET /api/events 200 in 7ms (compile: 2ms, render: 5ms)
+ GET /api/settings?key=skatelife-secret 200 in 16ms (compile: 4ms, render: 12ms)
+Starting scrape job...
+Scraping 10 news sources, YouTube, and 4 Instagram tags...
+Fetching RSS for Boardstation...
+Fetching RSS for Limited Skateboarding...
+Fetching RSS for Irregular Magazin...
+Fetching RSS for Shredder News...
+Fetching RSS for Jenkem Mag...
+Fetching RSS for Thrasher News...
+Fetching RSS for Transworld...
+Fetching RSS for Solo Skate Mag...
+Fetching RSS for Pocket Skate Mag...
+Fetching RSS for Place Magazine...
+RSS fetch failed for Thrasher News: 500
+Fetch failed for https://www.skateboarding.com/news/skater-musician-friend-and-father-micah-mattson-gone-too-soon: 403 Forbidden
+Error scraping RSS Place Magazine: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [SocketError]: other side closed
+      at ignore-listed frames {
+    code: 'UND_ERR_SOCKET',
+    socket: {
+      localAddress: '192.168.178.32',
+      localPort: 62756,
+      remoteAddress: '52.40.42.113',
+      remotePort: 443,
+      remoteFamily: 'IPv4',
+      timeout: undefined,
+      bytesWritten: 403,
+      bytesRead: 0
+    }
+  }
+}
+Error scraping RSS Solo Skate Mag: TypeError: fetch failed
+    at async scrapeRssSource (src/lib/scraper.ts:193:26)
+    at async scrapeAllSources (src/lib/scraper.ts:329:25)
+    at async GET (src/app/api/cron/scrape/route.ts:24:25)
+  191 |     try {
+  192 |         console.log(`Fetching RSS for ${source.name}...`);
+> 193 |         const response = await fetchWithHeaders(source.url);
+      |                          ^
+  194 |
+  195 |         if (!response.ok) {
+  196 |             console.warn(`RSS fetch failed for ${source.name}: ${response.status}`); {
+  [cause]: Error [ConnectTimeoutError]: Connect Timeout Error (attempted address: soloskatemag.com:443, timeout: 10000ms)
+      at ignore-listed frames {
+    code: 'UND_ERR_CONNECT_TIMEOUT'
+  }
+}
+Searching for #skateboarding on Instagram via DuckDuckGo...
+Searching for #berics on Instagram via DuckDuckGo...
+Searching for #thrasher on Instagram via DuckDuckGo...
+Searching for #skateboardingisfun on Instagram via DuckDuckGo...
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+Found 0 real posts via DDG.
+No results from DDG, returning empty array to force user to check input.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+GEMINI_API_KEY not found. Returning original content.
+ GET /api/cron/scrape?mode=draft&key=skatelife-secret 200 in 10.9s (compile: 1197µs, render: 10.9s)
+ POST /api/posts/create 200 in 20ms (compile: 3ms, render: 17ms)
+ POST /api/posts/create 200 in 11ms (compile: 1116µs, render: 10ms)
+ POST /api/posts/create 200 in 10ms (compile: 790µs, render: 10ms)
