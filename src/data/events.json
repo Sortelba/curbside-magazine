@@ -1,15 +1,5 @@
 [
   {
-    "id": "event_1788823426095",
-    "title": "New Event",
-    "date": "26.09.2026",
-    "startDateUtc": "2026-09-26",
-    "location": "TBA",
-    "link": "",
-    "description": "test",
-    "flyerUrl": ""
-  },
-  {
     "id": "event_1788793746138",
     "title": "Bru Town Jam",
     "date": "19.09.2026",
