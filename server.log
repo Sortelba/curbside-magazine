@@ -7,59 +7,26 @@
 - Network:       http://192.168.178.32:3000
 
 ✓ Starting...
-⚠ Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
-✓ Ready in 854ms
+✓ Ready in 811ms
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 1265ms (compile: 1211ms, render: 54ms)
+ GET / 500 in 567ms (compile: 510ms, render: 56ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 13ms (compile: 5ms, render: 8ms)
+ GET / 500 in 12ms (compile: 5ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 11ms (compile: 3ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 12ms (compile: 4ms, render: 8ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 9ms (compile: 3ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 11ms (compile: 3ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
@@ -67,7 +34,63 @@ To help make Turbopack better, report this error by clicking here: https://githu
  GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 8ms (compile: 2ms, render: 6ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 12ms (compile: 5ms, render: 7ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 14ms (compile: 5ms, render: 9ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 16ms (compile: 6ms, render: 10ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
@@ -75,7 +98,24 @@ To help make Turbopack better, report this error by clicking here: https://githu
  GET / 500 in 11ms (compile: 4ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 14ms (compile: 5ms, render: 9ms)
+ GET /admin?key=skatelife-secret 500 in 26ms (compile: 7ms, render: 19ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 6ms (compile: 1823µs, render: 4ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
@@ -83,15 +123,47 @@ To help make Turbopack better, report this error by clicking here: https://githu
  GET / 500 in 10ms (compile: 4ms, render: 6ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 12ms (compile: 4ms, render: 8ms)
+ GET / 500 in 10ms (compile: 4ms, render: 6ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 10ms (compile: 4ms, render: 6ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 8ms (compile: 3ms, render: 5ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 8ms (compile: 3ms, render: 5ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
+
+To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
+-----
+
+ GET / 500 in 8ms (compile: 3ms, render: 5ms)
+
+-----
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
@@ -99,87 +171,63 @@ To help make Turbopack better, report this error by clicking here: https://githu
  GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 6ms (compile: 1949µs, render: 4ms)
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 9ms (compile: 3ms, render: 5ms)
+ GET / 500 in 11ms (compile: 4ms, render: 8ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 5ms (compile: 1816µs, render: 3ms)
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 8ms (compile: 3ms, render: 5ms)
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 7ms (compile: 3ms, render: 4ms)
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 8ms (compile: 3ms, render: 5ms)
+ GET / 500 in 9ms (compile: 3ms, render: 6ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 7ms (compile: 3ms, render: 4ms)
+ GET / 500 in 10ms (compile: 3ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 9ms (compile: 3ms, render: 5ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 5ms (compile: 1774µs, render: 4ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 8ms (compile: 3ms, render: 5ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
@@ -187,82 +235,26 @@ To help make Turbopack better, report this error by clicking here: https://githu
  GET / 500 in 8ms (compile: 3ms, render: 6ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET / 500 in 9ms (compile: 3ms, render: 6ms)
+ GET / 500 in 6ms (compile: 1774µs, render: 5ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 7ms (compile: 3ms, render: 5ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 10ms (compile: 4ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 9ms (compile: 3ms, render: 6ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 9ms (compile: 3ms, render: 6ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 10ms (compile: 3ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET / 500 in 10ms (compile: 3ms, render: 7ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET /admin?key=skatelife-secret 500 in 284ms (compile: 275ms, render: 9ms)
+ GET /admin?key=skatelife-secret 500 in 12ms (compile: 4ms, render: 7ms)
 
 -----
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-1001c2e26d4251c1d294ec4eacef0e9e.log.
 
 To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
 -----
 
- GET /admin?key=skatelife-secret 500 in 57ms (compile: 41ms, render: 16ms)
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /var/folders/d0/dfq9hgkd37ngyq73mky9sq4m0000gn/T/next-panic-ed4e5bdff36d09e4e2362f16ccf51ddb.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage&body=Turbopack%20version%3A%20%6023c464985%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Failed%20to%20write%20app%20endpoint%20%2Fadmin%2Fpage%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
- GET /admin?key=skatelife-secret 500 in 156ms (compile: 94ms, render: 62ms)
+ GET /admin?key=skatelife-secret 500 in 51ms (compile: 37ms, render: 14ms)
 [?25h
