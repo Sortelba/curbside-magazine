@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { unstable_noStore as noStore } from 'next/cache';
 import HomeContent from "@/components/HomeContent";
+
+export const dynamic = 'force-dynamic';
 
 // Static rendering is used for GitHub Pages
 

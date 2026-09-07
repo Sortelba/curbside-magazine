@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react";
 import dynamic from "next/dynamic";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
@@ -74,6 +74,7 @@ function CollapsibleSection({
 }
 
 function AdminDashboardContent() {
+    const router = useRouter();
     const searchParams = useSearchParams();
     const key = searchParams.get("key");
     const [loading, setLoading] = useState(false);
@@ -203,9 +204,14 @@ function AdminDashboardContent() {
                 body: JSON.stringify({ settings: newSettings, key })
             });
             if (!res.ok) throw new Error("Failed to save");
+
+            router.refresh();
+            window.location.reload();
+            return true;
         } catch (e) {
             alert("Failed to save settings");
             loadSettings(); // Revert
+            return false;
         }
     };
 
@@ -344,6 +350,7 @@ function AdminDashboardContent() {
                 <div className="flex flex-wrap items-center gap-2">
                     <button
                         type="button"
+                        title="Speichert nur die Entwürfe / News-Posts lokal. Die Homepage-Settings werden hier nicht gespeichert."
                         onClick={async () => {
                             const ok = await persistDrafts(drafts);
                             if (ok) {
@@ -423,23 +430,39 @@ function AdminDashboardContent() {
                                                     <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">Homepage</p>
                                                     <h3 className="text-2xl font-black uppercase italic tracking-tighter">Community anzeigen</h3>
                                                 </div>
-                                                <button
-                                                    type="button"
-                                                    aria-label="Community auf der Startseite umschalten"
-                                                    onClick={toggleCommunityOnHome}
-                                                    className={cn(
-                                                        "relative inline-flex h-7 w-14 items-center rounded-full border-2 transition-colors",
-                                                        settings.showCommunity ? "bg-primary border-primary" : "bg-muted border-border"
-                                                    )}
-                                                >
-                                                    <span
+                                                <div className="flex items-center gap-3">
+                                                    <button
+                                                        type="button"
+                                                        aria-label="Community auf der Startseite umschalten"
+                                                        onClick={toggleCommunityOnHome}
                                                         className={cn(
-                                                            "inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform",
-                                                            settings.showCommunity ? "translate-x-7" : "translate-x-1"
+                                                            "relative inline-flex h-7 w-14 items-center rounded-full border-2 transition-colors",
+                                                            settings.showCommunity ? "bg-primary border-primary" : "bg-muted border-border"
                                                         )}
-                                                    />
-                                                </button>
+                                                    >
+                                                        <span
+                                                            className={cn(
+                                                                "inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform",
+                                                                settings.showCommunity ? "translate-x-7" : "translate-x-1"
+                                                            )}
+                                                        />
+                                                    </button>
+                                                    <span className={cn(
+                                                        "text-xs font-black uppercase italic tracking-[0.2em]",
+                                                        settings.showCommunity ? "text-primary" : "text-muted-foreground"
+                                                    )}>
+                                                        {settings.showCommunity ? "AN" : "AUS"}
+                                                    </span>
+                                                </div>
                                             </div>
+                                            <p className="mt-4 text-sm text-muted-foreground">
+                                                {settings.showCommunity
+                                                    ? "Community ist aktuell auf der Startseite sichtbar."
+                                                    : "Community ist aktuell auf der Startseite ausgeblendet."}
+                                            </p>
+                                            <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground/80">
+                                                Toggle speichert sofort. Save Drafts speichert nur Entwürfe, nicht die Homepage-Einstellungen.
+                                            </p>
                                         </div>
 
                                         {/* YouTube Channels */}
