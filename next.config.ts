@@ -1,16 +1,10 @@
 import type { NextConfig } from "next";
 
-const safeProjectRoot = process.env.HOME
-  ? `${process.env.HOME}/curbside-magazine`
-  : process.cwd();
-
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: safeProjectRoot,
-  },
-  output: process.env.GITHUB_ACTIONS === 'true' ? "export" : undefined, // Only export on GitHub
+  output: process.env.GITHUB_ACTIONS === "true" ? "export" : undefined,
+  trailingSlash: process.env.GITHUB_ACTIONS === "true" ? true : undefined,
   images: {
-    unoptimized: true, // Required for next/image on static sites
+    unoptimized: true,
   },
 };
 
