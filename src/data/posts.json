@@ -1,5 +1,57 @@
 [
   {
+    "id": "post_1788865495831",
+    "title": "Überdachter Skatepark an der Willy‑Brandt‑Schule Norderstedt eröffnet",
+    "type": "image",
+    "content": "Ein starkes Signal für Skateboarding in der Bildung:\nDie Willy‑Brandt‑Schule Norderstedt hat einen komplett überdachten Skatepark eröffnet — ein Projekt, das viele Jahre als „unmöglich“ galt. Initiator Gerhard „Gerdo“ Freudenberg setzte sich mit seinem „Project for Skateboarding and School Education“ dafür ein, Skateboarding als pädagogisches Werkzeug in Schulen zu etablieren.\n\nGebaut wurde die Anlage von Yamato Living Ramps, geplant von Endboss.EU. Der neue Park befindet sich unter einem ehemaligen Werkzeugschuppen und Fahrradunterstand — ein kreativer Umbau, der zeigt, wie urbane Räume neu gedacht werden können.",
+    "description": "",
+    "tags": [],
+    "date": "8. Sept. 2026",
+    "status": "published",
+    "media": {
+      "images": [],
+      "videoUrl": "",
+      "externalLink": ""
+    },
+    "translations": {
+      "de": {
+        "title": "Überdachter Skatepark an der Willy‑Brandt‑Schule Norderstedt eröffnet",
+        "content": "Ein starkes Signal für Skateboarding in der Bildung:\nDie Willy‑Brandt‑Schule Norderstedt hat einen komplett überdachten Skatepark eröffnet — ein Projekt, das viele Jahre als „unmöglich“ galt. Initiator Gerhard „Gerdo“ Freudenberg setzte sich mit seinem „Project for Skateboarding and School Education“ dafür ein, Skateboarding als pädagogisches Werkzeug in Schulen zu etablieren.\n\nGebaut wurde die Anlage von Yamato Living Ramps, geplant von Endboss.EU. Der neue Park befindet sich unter einem ehemaligen Werkzeugschuppen und Fahrradunterstand — ein kreativer Umbau, der zeigt, wie urbane Räume neu gedacht werden können."
+      },
+      "en": {
+        "title": "Überdachter Skatepark an der Willy‑Brandt‑Schule Norderstedt eröffnet",
+        "content": "Ein starkes Signal für Skateboarding in der Bildung:\nDie Willy‑Brandt‑Schule Norderstedt hat einen komplett überdachten Skatepark eröffnet — ein Projekt, das viele Jahre als „unmöglich“ galt. Initiator Gerhard „Gerdo“ Freudenberg setzte sich mit seinem „Project for Skateboarding and School Education“ dafür ein, Skateboarding als pädagogisches Werkzeug in Schulen zu etablieren.\n\nGebaut wurde die Anlage von Yamato Living Ramps, geplant von Endboss.EU. Der neue Park befindet sich unter einem ehemaligen Werkzeugschuppen und Fahrradunterstand — ein kreativer Umbau, der zeigt, wie urbane Räume neu gedacht werden können."
+      }
+    }
+  },
+  {
+    "id": "post_1788865175244",
+    "title": "Nick Michel vermutlich neu bei HOCKEY Skateboards",
+    "type": "image",
+    "content": "Boardstation berichtet heute über ein starkes Gerücht: Nick Michel soll zu HOCKEY Skateboards wechseln.\nNoch nicht offiziell bestätigt, aber die Hinweise verdichten sich — u.a. durch Posts und Team-Interaktionen.",
+    "description": "Die Gerüchteküche brodelt: Laut aktuellen Beobachtungen aus der Szene fährt Nick Michel seit Wochen ausschließlich auf HOCKEY‑Decks. Offiziell bestätigt ist der Teamwechsel zwar noch nicht, doch die Indizien sind eindeutig — und die Community diskutiert bereits fleißig über die mögliche neue Teamkonstellation.\n\nMichel, der zuletzt mit Thunder Trucks in mehreren Clips zu sehen war, gilt als einer der technisch stärksten Street‑Skater seiner Generation. Ein Wechsel zu HOCKEY würde perfekt zu seinem rauen, präzisen Stil passen und könnte das Team weiter stärken.",
+    "tags": [
+      "hockey skateboards"
+    ],
+    "date": "8. Sept. 2026",
+    "status": "published",
+    "media": {
+      "images": [],
+      "videoUrl": "https://www.youtube.com/watch?v=hNsX8RIXRFk",
+      "externalLink": "ttps://www.boardstation.de/geruechte-thunder-trucks-nick-michel-neu-bei-hockey-skateboards/"
+    },
+    "translations": {
+      "de": {
+        "title": "Nick Michel vermutlich neu bei HOCKEY Skateboards",
+        "content": "Boardstation berichtet heute über ein starkes Gerücht: Nick Michel soll zu HOCKEY Skateboards wechseln.\nNoch nicht offiziell bestätigt, aber die Hinweise verdichten sich — u.a. durch Posts und Team-Interaktionen."
+      },
+      "en": {
+        "title": "Nick Michel vermutlich neu bei HOCKEY Skateboards",
+        "content": "Boardstation berichtet heute über ein starkes Gerücht: Nick Michel soll zu HOCKEY Skateboards wechseln.\nNoch nicht offiziell bestätigt, aber die Hinweise verdichten sich — u.a. durch Posts und Team-Interaktionen."
+      }
+    }
+  },
+  {
     "id": "post_1788826611472",
     "title": "COS Cup 2026 – Deutsche Meister stehen fest: Junkes, Tran & Schmidt holen die Titel",
     "type": "image",
