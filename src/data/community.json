@@ -423,6 +423,16 @@
           "hours": "Mo-Fr: 11:00–18:00, Sa: 10:00–19:00",
           "state": "Baden-Württemberg",
           "image": ""
+        },
+        {
+          "id": "shop_by_5",
+          "name": "Habit Company",
+          "url": "https://habitcompany.de/",
+          "description": "Bayern",
+          "address": "Online-Shop aus Wackersberg (Oberbayern)",
+          "hours": "Online-Shop – jederzeit bestellbar",
+          "state": "Bayern",
+          "image": ""
         }
       ]
     },
