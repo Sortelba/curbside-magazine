@@ -250,6 +250,13 @@ function AdminDashboardContent() {
         setStatus("Scanning for news... (this may take 20s)");
         try {
             const res = await fetch(`/api/cron/scrape?mode=draft&key=${key}`);
+            if (!res.ok) {
+                const hint = res.status === 404
+                    ? "API nicht gefunden – Server mit 'Stop Admin' + 'Start Admin' neu starten."
+                    : res.status === 401 ? "Falscher Key in der URL." : "Siehe server.log.";
+                setStatus(`Scan fehlgeschlagen (HTTP ${res.status}). ${hint}`);
+                return;
+            }
             const data = await res.json();
 
             if (data.articles) {
