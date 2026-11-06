@@ -11,7 +11,7 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
-        const scriptPath = path.join(process.cwd(), 'PUBLISH_MANUAL.command');
+        const scriptPath = path.join(process.cwd(), 'Publish.command');
 
         const result = await new Promise((resolve) => {
             exec(`bash "${scriptPath}"`, (error, stdout, stderr) => {

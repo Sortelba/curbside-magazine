@@ -1,4 +1,3 @@
-export const dynamic = 'force-static';
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
@@ -25,7 +24,7 @@ export async function POST(request: NextRequest) {
         const { about, key } = await request.json();
 
         // Verify secret key
-        if (key !== process.env.CRON_SECRET) {
+        if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

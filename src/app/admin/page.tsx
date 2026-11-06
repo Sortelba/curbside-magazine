@@ -170,11 +170,26 @@ function AdminDashboardContent() {
     const [instaHashtag, setInstaHashtag] = useState("");
     const [editingInstagramIndex, setEditingInstagramIndex] = useState<number | null>(null);
 
+    // Load settings on mount (not only on the settings tab): toggles like
+    // "Community on Home" or the Learn-Center switch save {...settings}, and
+    // with unloaded (empty) settings they would wipe all sources.
     useEffect(() => {
-        if (activeTab === 'settings') {
-            loadSettings();
-        }
-    }, [activeTab]);
+        if (key) loadSettings();
+    }, [activeTab, key]);
+
+    // Restore drafts saved via "Save Drafts"
+    useEffect(() => {
+        if (!key) return;
+        fetch(`/api/drafts?key=${key}`, { cache: 'no-store' })
+            .then(res => (res.ok ? res.json() : null))
+            .then(data => {
+                const saved = Array.isArray(data) ? data : data?.drafts;
+                if (Array.isArray(saved) && saved.length > 0) {
+                    setDrafts(prev => (prev.length > 0 ? prev : saved));
+                }
+            })
+            .catch(e => console.error("Failed to load drafts", e));
+    }, [key]);
 
     const loadSettings = async () => {
         try {
