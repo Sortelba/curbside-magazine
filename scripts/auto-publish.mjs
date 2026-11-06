@@ -42,22 +42,34 @@ async function run() {
 
         console.log(`[+] ${data.articles.length} neue Beiträge im Scan gefunden.`);
         
-        // Nehme die ersten 3
-        const toPublish = data.articles.slice(0, 3);
-        console.log(`[*] Veröffentliche die ersten ${toPublish.length} Beiträge automatisch...`);
+        // Bis zu 3 Beiträge veröffentlichen. Der Server lehnt Duplikate ab (409),
+        // dann wird einfach der nächste Kandidat genommen.
+        const MAX_POSTS = 3;
+        let published = 0;
+        let skipped = 0;
 
-        for (const post of toPublish) {
-            console.log(`    -> Publishing: ${post.title}`);
+        for (const post of data.articles) {
+            if (published >= MAX_POSTS) break;
+
             const saveRes = await fetch(`${BASE_URL}/api/posts/create`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ post, key: KEY })
             });
-            
-            if (!saveRes.ok) {
-                console.error(`       [!] Fehler beim Speichern von: ${post.title}`);
+
+            if (saveRes.status === 409) {
+                const info = await saveRes.json().catch(() => ({}));
+                console.log(`    [=] Übersprungen (schon vorhanden): ${post.title}${info.duplicateOf ? `  ->  ${info.duplicateOf}` : ''}`);
+                skipped++;
+            } else if (!saveRes.ok) {
+                console.error(`    [!] Fehler beim Speichern von: ${post.title}`);
+            } else {
+                console.log(`    -> Veröffentlicht: ${post.title}`);
+                published++;
             }
         }
+
+        console.log(`\n[*] ${published} veröffentlicht, ${skipped} Duplikate übersprungen.`);
 
         console.log("\n------------------------------------------------");
         console.log("NEWS-AUTO-PUMP ERFOLGREICH");

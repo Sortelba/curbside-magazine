@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { scrapeAllSources } from '@/lib/scraper';
 import { rewriteNews } from '@/lib/gemini';
+import { findDuplicate } from '@/lib/dedupe';
 import fs from 'fs';
 import path from 'path';
 
@@ -44,12 +45,22 @@ export async function GET(request: Request) {
         for (const article of articles) {
             if (!article) continue;
 
-            // Check if already scraped (by Title or URL)
-            const exists = existingPosts.some(
-                (p: any) => p.title === article.title || (p.originalUrl && p.originalUrl === article.url)
-            );
+            // Duplikat? (gleiche URL, gleiches Video oder sehr ähnlicher Titel –
+            // auch gegen Beiträge aus diesem Scan, z. B. gleiche Story von 2 Magazinen)
+            const candidate = {
+                title: article.title,
+                originalUrl: article.url,
+                mediaUrl: article.mediaUrl,
+                media: article.media,
+                source: article.source,
+            };
+            const duplicate = findDuplicate(candidate, [...existingPosts, ...newPosts]);
+            if (duplicate) {
+                console.log(`Skipping duplicate: ${article.title} (= ${duplicate.title})`);
+                continue;
+            }
 
-            if (!exists) {
+            {
                 // Validation: Skip if text is too short or looks like error/garbage
                 // Exception: allow short text for social media sources
                 const isSocial = article.source === 'Instagram' || article.source.includes('YouTube') || article.mediaType === 'video';

@@ -273,30 +273,46 @@ function AdminDashboardContent() {
         }
     };
 
+    // Speichert einen Post. Bei einem Duplikat (409) wird nachgefragt und
+    // nur auf ausdrücklichen Wunsch trotzdem veröffentlicht.
+    const createPost = async (post: any): Promise<boolean> => {
+        const send = (force: boolean) => fetch(`/api/posts/create`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ post, key, force })
+        });
+
+        let res = await send(false);
+        if (res.status === 409) {
+            const info = await res.json().catch(() => ({}));
+            const ok = confirm(
+                `Dieser Beitrag ist wahrscheinlich schon online:\n\n"${info.duplicateOf || 'unbekannt'}"\n\nTrotzdem veröffentlichen?`
+            );
+            if (!ok) return false;
+            res = await send(true);
+        }
+        if (!res.ok) {
+            alert("Fehler beim Veröffentlichen.");
+            return false;
+        }
+        return true;
+    };
+
     const savePost = async (post: any, index: number) => {
         try {
-            const res = await fetch(`/api/posts/create`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    post: {
-                        ...post,
-                        status: 'published',
-                        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-                    },
-                    key
-                })
+            const ok = await createPost({
+                ...post,
+                status: 'published',
+                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
             });
 
-            if (res.ok) {
+            if (ok) {
                 // Remove from drafts
                 const newDrafts = [...drafts];
                 newDrafts.splice(index, 1);
                 setDrafts(newDrafts);
                 setActiveDraftIndex(null);
                 alert("Post published successfully!");
-            } else {
-                alert("Failed to save post.");
             }
         } catch (error) {
             console.error(error);
@@ -1362,20 +1378,14 @@ function AdminDashboardContent() {
                                                             }
                                                         };
 
-                                                        fetch(`/api/posts/create`, {
-                                                            method: 'POST',
-                                                            headers: { 'Content-Type': 'application/json' },
-                                                            body: JSON.stringify({ post: newPost, key })
-                                                        }).then(res => {
-                                                            if (res.ok) {
+                                                        createPost(newPost).then(ok => {
+                                                            if (ok) {
                                                                 alert("Post wurde veröffentlicht! 🛹");
                                                                 // Clear fields
                                                                 ['new-post-title', 'new-post-content', 'new-post-description', 'new-post-tags', 'new-post-media-images', 'new-post-media-video', 'new-post-media-link'].forEach(id => {
                                                                     const el = document.getElementById(id) as HTMLInputElement | HTMLTextAreaElement;
                                                                     if (el) el.value = '';
                                                                 });
-                                                            } else {
-                                                                alert("Fehler beim Veröffentlichen.");
                                                             }
                                                         });
                                                     }}
