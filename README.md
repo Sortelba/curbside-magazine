@@ -23,6 +23,10 @@ swift scripts/set-command-icons.swift
 - `src/app/admin` – Admin Dashboard (nur lokal, `http://localhost:3000/admin?key=…`)
 - `src/app/api` – lokale API für das Dashboard (wird beim Pages-Build entfernt)
 - `src/data` – Posts, Events, Lern-Center, Community, Einstellungen
+- `src/lib/eventScanner.ts` – Event-Scanner (Admin → Events → „Events scannen“): sucht europaweit
+  auf The Boardr, Skateboard Germany, Blue Tomato, festen Kalender-Seiten und per Websuche.
+  Weitere Kalender-Seiten: in `src/data/settings.json` unter `"eventSources": ["https://…"]` eintragen.
+- `src/lib/dedupe.ts` – verhindert doppelte Beiträge
 - `scripts/auto-publish.mjs` – Logik hinter Autoscan
 - `scripts/prepare-static-export.mjs` – Build für GitHub Pages
 - `scripts/optimize-uploads.mjs` – verkleinert Bilder in `public/uploads`

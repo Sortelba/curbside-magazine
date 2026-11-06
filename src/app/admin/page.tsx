@@ -1976,6 +1976,11 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
     const [editingEvent, setEditingEvent] = useState<any | null>(null);
     const [showEditModal, setShowEditModal] = useState(false);
 
+    // Event-Scanner
+    const [scanLoading, setScanLoading] = useState(false);
+    const [scanStatus, setScanStatus] = useState("");
+    const [suggestions, setSuggestions] = useState<any[]>([]);
+
     const fetchEvents = async () => {
         setLoading(true);
         try {
@@ -1993,7 +1998,7 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
         fetchEvents();
     }, []);
 
-    const saveEvents = async (newEvents: any[]) => {
+    const saveEvents = async (newEvents: any[], silent = false) => {
         try {
             const res = await fetch('/api/events', {
                 method: 'POST',
@@ -2001,7 +2006,7 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
                 body: JSON.stringify({ events: newEvents, key: keyStr })
             });
             if (res.ok) {
-                alert("Events saved successfully!");
+                if (!silent) alert("Events saved successfully!");
                 setEvents(newEvents);
             } else {
                 alert("Failed to save events.");
@@ -2010,6 +2015,63 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
             console.error(e);
             alert("Error saving events.");
         }
+    };
+
+    // Sucht europaweit nach Skate-Events (The Boardr, Skateboard Germany, Blue Tomato,
+    // Kalender-Seiten, Websuche) – Ergebnisse sind nur Vorschläge.
+    const scanForEvents = async () => {
+        setScanLoading(true);
+        setScanStatus("Durchsuche Kalender & Web nach Skate-Events in Europa… (ca. 10–60 Sek.)");
+        try {
+            const res = await fetch(`/api/events/scan?key=${keyStr}`, { cache: 'no-store' });
+            if (!res.ok) {
+                setScanStatus(res.status === 404
+                    ? "Scan-API nicht gefunden – Server mit 'Stop Admin' + 'Start Admin' neu starten."
+                    : `Scan fehlgeschlagen (HTTP ${res.status}).`);
+                return;
+            }
+            const data = await res.json();
+            const found = Array.isArray(data.events) ? data.events : [];
+            setSuggestions(found);
+            const perSource = Object.entries(data.stats || {}).map(([k, v]) => `${k}: ${v}`).join(' · ');
+            setScanStatus(found.length > 0
+                ? `${found.length} neue Events gefunden${perSource ? ` (${perSource})` : ''}.`
+                : "Keine neuen Events gefunden – alles schon im Kalender oder gerade Nebensaison.");
+        } catch (e) {
+            console.error(e);
+            setScanStatus("Fehler beim Event-Scan. Siehe server.log.");
+        } finally {
+            setScanLoading(false);
+        }
+    };
+
+    const toCalendarEvent = (s: any) => ({
+        id: `event_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
+        title: s.title,
+        date: s.date,
+        startDateUtc: s.startDateUtc,
+        location: s.location || 'TBA',
+        link: s.link || '',
+        description: s.description || '',
+        flyerUrl: s.flyerUrl || ''
+    });
+
+    const acceptSuggestion = async (s: any) => {
+        await saveEvents([toCalendarEvent(s), ...events], true);
+        setSuggestions(prev => prev.filter(x => x.id !== s.id));
+    };
+
+    const acceptAllSuggestions = async () => {
+        if (!confirm(`Alle ${suggestions.length} Events in den Kalender übernehmen?`)) return;
+        await saveEvents([...suggestions.map(toCalendarEvent), ...events], true);
+        setSuggestions([]);
+        setScanStatus("Alle Vorschläge übernommen.");
+    };
+
+    const editSuggestion = (s: any) => {
+        setSuggestions(prev => prev.filter(x => x.id !== s.id));
+        setEditingEvent(toCalendarEvent(s));
+        setShowEditModal(true);
     };
 
     const toLocalDateKey = (date: Date) => {
@@ -2176,6 +2238,86 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
                 >
                     <Plus className="h-4 w-4" /> Neues Event
                 </button>
+            </div>
+
+            {/* Event-Scanner */}
+            <div className="bg-card border-2 border-border rounded-2xl p-5 space-y-4">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-primary/10 p-2 rounded-xl">
+                            <Globe className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="font-black uppercase italic tracking-tight">Event-Scanner · Europa</h3>
+                            <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
+                                {scanStatus || "The Boardr · Skateboard Germany · Blue Tomato · Kalender-Seiten · Websuche"}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                        <button
+                            onClick={scanForEvents}
+                            disabled={scanLoading}
+                            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-bold rounded-lg hover:opacity-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-50"
+                        >
+                            {scanLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
+                            Events scannen
+                        </button>
+                        {suggestions.length > 1 && (
+                            <button
+                                onClick={acceptAllSuggestions}
+                                className="flex items-center gap-2 px-4 py-2 bg-muted font-bold rounded-lg hover:bg-muted/70 transition-all"
+                            >
+                                <CheckCircle className="h-4 w-4" /> Alle übernehmen
+                            </button>
+                        )}
+                    </div>
+                </div>
+
+                {suggestions.length > 0 && (
+                    <div className="space-y-2 max-h-[520px] overflow-y-auto pr-1">
+                        {suggestions.map((s) => (
+                            <div key={s.id} className="flex flex-col md:flex-row md:items-center gap-3 p-3 bg-muted/20 border border-border rounded-xl hover:border-primary/30 transition-colors">
+                                {s.flyerUrl ? (
+                                    <img src={s.flyerUrl} alt="" className="h-14 w-14 object-cover rounded-lg border border-border flex-shrink-0" />
+                                ) : (
+                                    <div className="h-14 w-14 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                                        <Calendar className="h-5 w-5 text-muted-foreground" />
+                                    </div>
+                                )}
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        <span className="font-bold truncate">{s.title}</span>
+                                        <span className={cn(
+                                            "text-[9px] font-black uppercase px-1.5 py-0.5 rounded",
+                                            s.confidence === 'hoch' ? "bg-green-500/15 text-green-600" :
+                                                s.confidence === 'mittel' ? "bg-yellow-500/15 text-yellow-600" : "bg-orange-500/15 text-orange-600"
+                                        )} title="Wie sicher Datum/Ort erkannt wurden">
+                                            {s.confidence === 'niedrig' ? 'bitte prüfen' : s.confidence}
+                                        </span>
+                                    </div>
+                                    <div className="text-xs text-muted-foreground flex items-center gap-3 flex-wrap mt-0.5">
+                                        <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{s.date}</span>
+                                        {s.location && <span className="flex items-center gap-1"><MapPin className="h-3 w-3" />{s.location}</span>}
+                                        <span className="opacity-70">{s.source}</span>
+                                        {s.link && <a href={s.link} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Quelle öffnen</a>}
+                                    </div>
+                                </div>
+                                <div className="flex gap-1 flex-shrink-0">
+                                    <button onClick={() => acceptSuggestion(s)} title="In Kalender übernehmen" className="flex items-center gap-1 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-bold rounded-lg hover:opacity-90">
+                                        <Plus className="h-3 w-3" /> Übernehmen
+                                    </button>
+                                    <button onClick={() => editSuggestion(s)} title="Vor dem Übernehmen bearbeiten" className="p-1.5 bg-muted rounded-lg hover:bg-muted/70">
+                                        <Edit className="h-4 w-4" />
+                                    </button>
+                                    <button onClick={() => setSuggestions(prev => prev.filter(x => x.id !== s.id))} title="Ignorieren" className="p-1.5 bg-muted rounded-lg hover:bg-destructive/10 hover:text-destructive">
+                                        <X className="h-4 w-4" />
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {loading && <div className="text-sm">Loading events...</div>}
