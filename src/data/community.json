@@ -363,6 +363,46 @@
           "hours": "Di-Sa: 13:00–18:00",
           "state": "Rheinland-Pfalz",
           "image": ""
+        },
+        {
+          "id": "shop_hh_2",
+          "name": "Lobby Skateshop",
+          "url": "https://lobby-skateshop.de/",
+          "description": "Hamburg",
+          "address": "Marktstraße 28, 20357 Hamburg",
+          "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–19:00",
+          "state": "Hamburg",
+          "image": ""
+        },
+        {
+          "id": "shop_be_4",
+          "name": "Barrio Berlin",
+          "url": "http://www.barrio-berlin.de/",
+          "description": "Berlin",
+          "address": "Simon-Dach-Straße 23, 10245 Berlin",
+          "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–19:00",
+          "state": "Berlin",
+          "image": ""
+        },
+        {
+          "id": "shop_by_4",
+          "name": "Bretterbude Skateshop",
+          "url": "https://www.skateshop-erlangen.de/",
+          "description": "Bayern",
+          "address": "Obere Karlstraße 11, 91054 Erlangen",
+          "hours": "Mo-Fr: 10:00–18:30, Sa: 11:00–16:00",
+          "state": "Bayern",
+          "image": ""
+        },
+        {
+          "id": "shop_he_3",
+          "name": "Brettwerk",
+          "url": "https://www.brettwerk.com/",
+          "description": "Hessen",
+          "address": "Westerbachstraße 47 (Hinterhof, Haus 2), 60489 Frankfurt am Main",
+          "hours": "Mo-Fr: 13:00–18:00, Sa: 10:00–18:00",
+          "state": "Hessen",
+          "image": ""
         }
       ]
     },
