@@ -1,5 +1,15 @@
 [
   {
+    "id": "event_1794004816639_130",
+    "title": "CPH Open 20 Year Anniversary",
+    "date": "25.08.2027",
+    "startDateUtc": "2027-08-25",
+    "location": "Copenhagen, Denmark",
+    "link": "https://www.theboardr.com/events/4377/CPH_Open_20_Year_Anniversary",
+    "description": "The champagne of skateboarding turns 20. Join us to celebrate skateboarding throughout the city of Copenhagen.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4377hero600.jpg"
+  },
+  {
     "id": "event_1788882077317",
     "title": "Dirty South Summer BBQ",
     "date": "12.09.2026",
