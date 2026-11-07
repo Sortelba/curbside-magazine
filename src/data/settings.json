@@ -32,7 +32,7 @@
     },
     {
       "name": "Irregular Magazin",
-      "url": "https://irregular-magazin.de/news/",
+      "url": "https://irregular-magazin.de/feed/",
       "selector": "article",
       "type": "rss"
     },
@@ -50,19 +50,13 @@
     },
     {
       "name": "Thrasher News",
-      "url": "https://www.thrashermagazine.com/articles/rss/",
-      "selector": "article",
-      "type": "rss"
+      "url": "https://www.thrashermagazine.com/articles/",
+      "selector": "li.post-list-item",
+      "type": "html"
     },
     {
       "name": "Transworld",
       "url": "https://skateboarding.transworld.net/feed/",
-      "selector": "article",
-      "type": "rss"
-    },
-    {
-      "name": "Solo Skate Mag",
-      "url": "https://soloskatemag.com/feed",
       "selector": "article",
       "type": "rss"
     },
@@ -73,8 +67,38 @@
       "type": "rss"
     },
     {
-      "name": "Place Magazine",
-      "url": "https://placemag.com/feed",
+      "name": "Free Skate Mag",
+      "url": "https://www.freeskatemag.com/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Skate Jawn",
+      "url": "https://www.skatejawn.com/feed",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Confusion Magazine",
+      "url": "https://www.confuzine.com/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Closer Skateboarding",
+      "url": "https://closerskateboarding.com/feed/",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Skateboard Germany",
+      "url": "https://www.skateboard-germany.de/blog-feed.xml",
+      "selector": "article",
+      "type": "rss"
+    },
+    {
+      "name": "Skateboard MSM",
+      "url": "https://skateboardmsm.de/feed/",
       "selector": "article",
       "type": "rss"
     }
