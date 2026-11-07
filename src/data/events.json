@@ -1,5 +1,15 @@
 [
   {
+    "id": "event_1794092236692",
+    "title": "Vernissage „D. I. Y.“ – Robert Hak & Tom Grimm",
+    "date": "15.11.2026",
+    "startDateUtc": "2026-11-15",
+    "location": "Dominikanermuseum Rottweil (kunst raum rottweil)",
+    "link": "https://www.d-i-y.net",
+    "description": "Vernissage um 11 Uhr mit D.I.Y.-Druckstation – bring deine Klamotten mit! Die Ausstellung läuft bis 04.04.2027.",
+    "flyerUrl": "/uploads/diy-rottweil/diy-01.jpg"
+  },
+  {
     "id": "event_1794004816639_130",
     "title": "CPH Open 20 Year Anniversary",
     "date": "25.08.2027",
