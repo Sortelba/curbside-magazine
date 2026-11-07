@@ -220,8 +220,9 @@ function AdminDashboardContent() {
             });
             if (!res.ok) throw new Error("Failed to save");
 
+            // Kein window.location.reload(): das sprang zurück zum ersten Tab
+            // und sah aus, als hätte der Schalter nichts gemacht.
             router.refresh();
-            window.location.reload();
             return true;
         } catch (e) {
             alert("Failed to save settings");
@@ -495,11 +496,11 @@ function AdminDashboardContent() {
                                             </div>
                                             <p className="mt-4 text-sm text-muted-foreground">
                                                 {settings.showCommunity
-                                                    ? "Community ist aktuell auf der Startseite sichtbar."
-                                                    : "Community ist aktuell auf der Startseite ausgeblendet."}
+                                                    ? "Community ist sichtbar: Link im Menü und Karte auf der Startseite."
+                                                    : "Community ist ausgeblendet: kein Link im Menü, keine Karte auf der Startseite."}
                                             </p>
                                             <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground/80">
-                                                Toggle speichert sofort. Save Drafts speichert nur Entwürfe, nicht die Homepage-Einstellungen.
+                                                Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Website veröffentlichen“.
                                             </p>
                                         </div>
 

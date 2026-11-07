@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
-export default function Navbar() {
+export default function Navbar({ showCommunity = false }: { showCommunity?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useLanguage();
 
     const navLinks = [
         { name: t("nav.news"), href: "/" },
-        { name: t("nav.community"), href: "/community" },
+        ...(showCommunity ? [{ name: t("nav.community"), href: "/community" }] : []),
     ];
 
     return (

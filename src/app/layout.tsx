@@ -4,6 +4,18 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
+import fs from "fs";
+import path from "path";
+
+// "Community anzeigen" aus den Admin-Einstellungen (src/data/settings.json)
+function readShowCommunity(): boolean {
+  try {
+    const file = path.join(process.cwd(), "src", "data", "settings.json");
+    return JSON.parse(fs.readFileSync(file, "utf8")).showCommunity ?? false;
+  } catch {
+    return false;
+  }
+}
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -43,7 +55,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <LayoutContent>{children}</LayoutContent>
+            <LayoutContent showCommunity={readShowCommunity()}>{children}</LayoutContent>
           </LanguageProvider>
         </ThemeProvider>
       </body>

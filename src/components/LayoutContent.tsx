@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
 
-export default function LayoutContent({ children }: { children: React.ReactNode }) {
+export default function LayoutContent({ children, showCommunity = false }: { children: React.ReactNode; showCommunity?: boolean }) {
     const pathname = usePathname();
     const isAdminPage = pathname?.startsWith("/admin");
 
@@ -15,7 +15,7 @@ export default function LayoutContent({ children }: { children: React.ReactNode 
 
     return (
         <>
-            <Navbar />
+            <Navbar showCommunity={showCommunity} />
             <main className="flex-grow">{children}</main>
             <Footer />
             <ContactModal />
