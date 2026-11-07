@@ -44,6 +44,7 @@ export default function HomeContent({ posts, learnData, settings }: { posts: any
             <div className="mb-12 text-center">
                 <h1 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
                     {t("hero.title")}
+                    <span className="sr-only"> – CURBSIDE Skateboard Magazin</span>
                 </h1>
                 <p className="text-xl md:text-2xl font-light text-muted-foreground max-w-2xl mx-auto">
                     {t("hero.description")}

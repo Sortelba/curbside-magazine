@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { T } from "@/components/LanguageToggle";
 import PostCard from "@/components/PostCard";
 import fs from 'fs';
@@ -47,7 +48,17 @@ async function getPostsForMonth(slug: string) {
 function formatMonthSlug(slug: string) {
     const [year, month] = slug.split('-');
     const date = new Date(parseInt(year), parseInt(month) - 1, 1);
-    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    return date.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const month = formatMonthSlug(slug);
+    return {
+        title: `Skateboard News ${month}`,
+        description: `Alle Skateboard-News, Videoparts, Contests und Events aus dem ${month} auf CURBSIDE.`,
+        alternates: { canonical: `/archive/${slug}/` },
+    };
 }
 
 export default async function ArchiveMonthPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_TAGLINE } from "@/lib/site";
 import fs from "fs";
 import path from "path";
 
@@ -28,8 +29,36 @@ function readShowCommunity(): boolean {
 // });
 
 export const metadata: Metadata = {
-  title: "CURBSIDE - Support Your Local Scene",
-  description: "News, spots, and community for skateboarders.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} – Skateboard News, Events & Skateshops | ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "Skateboard", "Skateboarding", "Skate News", "Skateboard News Deutschland", "Skateboard Magazin",
+    "Skate Contest", "Skate Events", "Skateshop", "Skateshops Deutschland", "Skateboard Verein",
+    "Skaten lernen", "Skatepark", "Videopart",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    alternateLocale: ["en_US"],
+    url: "/",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} – Skateboard News, Events & Skateshops`,
+    description: SITE_DESCRIPTION,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${SITE_NAME} – ${SITE_TAGLINE}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} – Skateboard News, Events & Skateshops`,
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
 };
 
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -42,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="de" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased flex flex-col"

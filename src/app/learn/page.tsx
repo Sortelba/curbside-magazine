@@ -15,8 +15,9 @@ async function getLearnData() {
 }
 
 export const metadata: Metadata = {
-    title: 'Learn - CURBSIDE',
-    description: 'Skateboarding basics, trick tips, and coaching.',
+    title: 'Skaten lernen – Grundlagen, Tricks & Coaches',
+    description: 'Skateboard fahren lernen: Grundlagen für Anfänger, Trick-Randomizer, Skateboard-Coaches in deiner Nähe und die besten Lern-Kanäle.',
+    alternates: { canonical: '/learn/' },
 };
 
 export default async function LearnPage() {

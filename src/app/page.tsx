@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import HomeContent from "@/components/HomeContent";
+import StructuredData from "@/components/StructuredData";
 
 // Static rendering is required for GitHub Pages export.
 
@@ -58,5 +59,15 @@ export default async function Home() {
     console.error("Error reading settings", e);
   }
 
-  return <HomeContent posts={posts} learnData={learnData} settings={settings} />;
+  let events: any[] = [];
+  try {
+    events = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src', 'data', 'events.json'), 'utf8'));
+  } catch {}
+
+  return (
+    <>
+      <StructuredData posts={posts} events={events} />
+      <HomeContent posts={posts} learnData={learnData} settings={settings} />
+    </>
+  );
 }

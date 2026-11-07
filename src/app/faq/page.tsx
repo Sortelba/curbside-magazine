@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "FAQ",
+    description: "Häufige Fragen zu CURBSIDE: woher die Skate-News kommen, wie du Events, Vereine oder Shops eintragen lässt und wie du uns erreichst.",
+    alternates: { canonical: "/faq/" },
+};
+
 import Link from "next/link";
 
 export default function FAQPage() {

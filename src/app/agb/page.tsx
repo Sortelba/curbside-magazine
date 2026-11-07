@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "AGB & Haftung",
+    description: "Allgemeine Geschäftsbedingungen und Haftungshinweise von CURBSIDE.",
+    alternates: { canonical: "/agb/" },
+};
+
 import Link from "next/link";
 
 export default function AGBPage() {

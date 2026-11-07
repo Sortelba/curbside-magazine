@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "News-Archiv",
+    description: "Alle Skateboard-News von CURBSIDE nach Monaten sortiert – Videoparts, Contests, Szene-News und Events zum Nachlesen.",
+    alternates: { canonical: "/archive/" },
+};
+
 import { T } from "@/components/LanguageToggle";
 import Link from "next/link";
 import fs from 'fs';

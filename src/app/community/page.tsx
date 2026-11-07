@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Skateshops, Vereine & Projekte",
+    description: "Unterstütze deine lokale Szene: kleine Skateshops in ganz Deutschland mit Adresse und Öffnungszeiten, Skateboard-Vereine und soziale Skate-Projekte.",
+    alternates: { canonical: "/community/" },
+};
+
 import fs from 'fs';
 import path from 'path';
 import CommunityContent from '@/components/CommunityContent';

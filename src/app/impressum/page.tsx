@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Impressum",
+    description: "Impressum von CURBSIDE – Angaben gemäß § 5 TMG.",
+    alternates: { canonical: "/impressum/" },
+};
+
 import Link from "next/link";
 
 export default function ImpressumPage() {
