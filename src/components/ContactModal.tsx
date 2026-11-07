@@ -62,7 +62,7 @@ export default function ContactModal() {
                                     Du hast Verbesserungsvorschläge, ein Contest findet statt und du möchtest, dass er eingetragen und gepostet wird?
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Oder möchtest du einen Spot in die Map eintragen oder sonst etwas zur Homepage beitragen? Dann bist du hier genau richtig!
+                                    Dann bist du hier genau richtig!
                                 </p>
                                 <p className="text-xl font-black uppercase italic tracking-tight text-primary">
                                     Schreib mir einfach eine Mail!
