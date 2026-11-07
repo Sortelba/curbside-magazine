@@ -1,5 +1,98 @@
 [
   {
+    "title": "If you can do this, Try this #325",
+    "description": "New video from The Nine Club!",
+    "content": "https://www.youtube.com/shorts/HqX6v_QbhH8",
+    "type": "video",
+    "tags": [
+      "youtube",
+      "thenineclub"
+    ],
+    "source": "The Nine Club",
+    "date": "Nov 7, 2026",
+    "status": "published"
+  },
+  {
+    "id": "post_1794088935377_171",
+    "title": "[News] “OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER",
+    "description": "“OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER\n\nThe Monster Europe team had their best times on a sailboat tour through the Greek Islands from Athens to Crete. From time to time they ...",
+    "translations": {
+      "de": {
+        "title": "[News] “OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER",
+        "content": "“OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER\n\nThe Monster Europe team had their best times on a sailboat tour through the Greek Islands from Athens to Crete. From time to time they left the boat and killed every single spot on their way with hella gnarly skateboarding. Filmed by Bennet Rahm and Jack Thompson. Edited by Bennet Rahm .... (Originalquelle: Pocket Skate Mag)"
+      },
+      "en": {
+        "title": "“OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER",
+        "content": "“OVERBOARD” – A SAILBOAT SKATE TOUR THROUGH GREECE WITH MONSTER\n\nThe Monster Europe team had their best times on a sailboat tour through the Greek Islands from Athens to Crete. From time to time they left the boat and killed every single spot on their way with hella gnarly skateboarding. Filmed by Bennet Rahm and Jack Thompson. Edited by Bennet Rahm ...."
+      }
+    },
+    "type": "image",
+    "content": "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-03-um-17.16.18.jpg",
+    "media": {
+      "images": [
+        "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-03-um-17.16.18.jpg",
+        "https://pocketskatemag.com/wp-content/uploads/2017/09/psm_logo_whtite_regular.png"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://pocketskatemag.com/overboard-a-sailboat-skate-tour-through-greece-with-monster/"
+    },
+    "source": "Pocket Skate Mag",
+    "originalUrl": "https://pocketskatemag.com/overboard-a-sailboat-skate-tour-through-greece-with-monster/",
+    "date": "Nov 7, 2026",
+    "tags": [
+      "news",
+      "pocket skate mag"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1794088935372_926",
+    "title": "[News] SHAUN PAUL – “BUSINESS LOUNGE”",
+    "description": "SHAUN PAUL – “BUSINESS LOUNGE”\n\nQuartersnacks just published this ne Shaun Paul part by Majick Templeton and we had no other option than sharing it with you.... (Originalquelle: Pocket Skate Mag)...",
+    "translations": {
+      "de": {
+        "title": "[News] SHAUN PAUL – “BUSINESS LOUNGE”",
+        "content": "SHAUN PAUL – “BUSINESS LOUNGE”\n\nQuartersnacks just published this ne Shaun Paul part by Majick Templeton and we had no other option than sharing it with you.... (Originalquelle: Pocket Skate Mag)"
+      },
+      "en": {
+        "title": "SHAUN PAUL – “BUSINESS LOUNGE”",
+        "content": "SHAUN PAUL – “BUSINESS LOUNGE”\n\nQuartersnacks just published this ne Shaun Paul part by Majick Templeton and we had no other option than sharing it with you...."
+      }
+    },
+    "type": "image",
+    "content": "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-04-um-20.41.10.jpg",
+    "media": {
+      "images": [
+        "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-04-um-20.41.10.jpg",
+        "https://pocketskatemag.com/wp-content/uploads/2017/09/psm_logo_whtite_regular.png"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://pocketskatemag.com/shaun-paul-business-lounge/"
+    },
+    "source": "Pocket Skate Mag",
+    "originalUrl": "https://pocketskatemag.com/shaun-paul-business-lounge/",
+    "date": "Nov 7, 2026",
+    "tags": [
+      "news",
+      "pocket skate mag"
+    ],
+    "status": "published"
+  },
+  {
+    "title": "Top 3 Insta Bangers: #skateboarding",
+    "description": "Die besten Clips der Woche aus der Community für #skateboarding. Checkt die Moves!",
+    "type": "instagram-mix",
+    "content": "[{\"url\":\"https://www.instagram.com/reel/DfXhAQgNMo9/\",\"author\":\"cant_skateboard\",\"authorUrl\":\"https://www.instagram.com/cant_skateboard/\"},{\"url\":\"https://www.instagram.com/reel/DfSj6c3hcUt/\",\"author\":\"ke3f\",\"authorUrl\":\"https://www.instagram.com/ke3f/\"},{\"url\":\"https://www.instagram.com/reel/DfbcQW-k3Py/\",\"author\":\"nathanskates20k\",\"authorUrl\":\"https://www.instagram.com/nathanskates20k/\"}]",
+    "tags": [
+      "skateboarding",
+      "instagram",
+      "top3",
+      "bangers"
+    ],
+    "date": "Nov 7, 2026",
+    "status": "published"
+  },
+  {
     "id": "post_1794084599810",
     "title": "Kickflips für den guten Zweck: Rollsport e.V. Ebersberg sammelt Spenden",
     "description": "Für jeden eingeschickten Kickflip-Clip gehen 5 € an den Rollsport e.V. Ebersberg – Einsendeschluss ist der 20. November.",
