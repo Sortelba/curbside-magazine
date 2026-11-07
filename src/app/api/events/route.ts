@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 const eventsFilePath = path.join(process.cwd(), 'src', 'data', 'events.json');
 
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
         const { events, key } = await request.json();
 
         // Security check
-        if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
+        if (!isAdminKey(key)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

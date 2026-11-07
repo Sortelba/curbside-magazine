@@ -2,15 +2,15 @@ import { NextResponse } from 'next/server';
 import { fetchLatestYoutubeVideos } from '@/lib/youtube';
 import fs from 'fs';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
-const CRON_SECRET = process.env.CRON_SECRET || 'skatelife-secret';
 
 export async function GET(request: Request) {
     if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json({ articles: [] });
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
 
-    if (key !== CRON_SECRET) {
+    if (!isAdminKey(key)) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

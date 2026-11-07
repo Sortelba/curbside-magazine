@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 // export const dynamic = 'force-dynamic';
 
@@ -33,7 +34,7 @@ export async function DELETE(request: Request) {
         const { title, key } = body;
 
         // Security check
-        if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
+        if (!isAdminKey(key)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

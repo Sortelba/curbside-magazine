@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 const DRAFTS_PATH = path.join(process.cwd(), 'src', 'data', 'drafts.json');
 
@@ -14,9 +15,8 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const key = searchParams.get('key');
-    const secret = process.env.CRON_SECRET || 'skatelife-secret';
 
-    if (key !== secret && key !== 'skatelife-secret') {
+    if (!isAdminKey(key)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
@@ -33,9 +33,8 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { drafts, key } = body;
-    const secret = process.env.CRON_SECRET || 'skatelife-secret';
 
-    if (key !== secret && key !== 'skatelife-secret') {
+    if (!isAdminKey(key)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

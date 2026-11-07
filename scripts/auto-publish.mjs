@@ -1,4 +1,19 @@
-const KEY = 'skatelife-secret';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Admin-Passwort aus .env.local (ADMIN_KEY=...)
+function readEnvKey(name) {
+    try {
+        const env = fs.readFileSync(path.join(process.cwd(), '.env.local'), 'utf8');
+        const m = env.match(new RegExp(`^${name}=(.*)$`, 'm'));
+        return m ? m[1].trim().replace(/^["']|["']$/g, '') : '';
+    } catch { return ''; }
+}
+const KEY = process.env.ADMIN_KEY || readEnvKey('ADMIN_KEY');
+if (!KEY) {
+    console.error('[FEHLER] Kein ADMIN_KEY in .env.local gefunden.');
+    process.exit(1);
+}
 const BASE_URL = 'http://localhost:3000';
 
 async function waitForServer() {
@@ -15,6 +30,25 @@ async function waitForServer() {
         attempts++;
     }
     return false;
+}
+
+async function rewriteOld() {
+    // Rest des Gemini-Tageslimits nutzen: ein paar alte Rohtext-Posts umschreiben
+    try {
+        const rw = await fetch(`${BASE_URL}/api/posts/rewrite-old`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ key: KEY, limit: 10 })
+        });
+        const info = await rw.json().catch(() => ({}));
+        if (rw.ok && info.rewritten > 0) {
+            console.log(`[*] ${info.rewritten} ältere Beiträge umgeschrieben (noch ${info.remaining} übrig).`);
+        } else if (rw.ok && info.remaining != null) {
+            console.log(`[*] Ältere Beiträge: heute nichts mehr umgeschrieben (Gemini-Limit), noch ${info.remaining} übrig.`);
+        }
+    } catch (e) {
+        console.log('[*] Ältere Beiträge umschreiben übersprungen:', e.message);
+    }
 }
 
 async function run() {
@@ -37,6 +71,7 @@ async function run() {
 
         if (!data.articles || data.articles.length === 0) {
             console.log("[-] Keine neuen Beiträge gefunden.");
+            await rewriteOld();
             return;
         }
 
@@ -70,6 +105,8 @@ async function run() {
         }
 
         console.log(`\n[*] ${published} veröffentlicht, ${skipped} Duplikate übersprungen.`);
+
+        await rewriteOld();
 
         console.log("\n------------------------------------------------");
         console.log("NEWS-AUTO-PUMP ERFOLGREICH");

@@ -84,7 +84,10 @@
       "showMore": "Mehr News anzeigen",
       "page": "Seite",
       "of": "von",
-      "read_story": "Weiterlesen"
+      "read_story": "Weiterlesen",
+      "read_original": "Zum Original",
+      "open_page": "Beitrag öffnen",
+      "older_in_archive": "Ältere News im Archiv"
     },
     "home": {
       "community_label": "Community",
@@ -105,7 +108,8 @@
       "subtitle": "Wir graben in den alten Kisten.",
       "empty": "Noch keine Archive vorhanden.",
       "back": "Zurück zum Archiv",
-      "month_empty": "Für diesen Monat wurde nichts gefunden."
+      "month_empty": "Für diesen Monat wurde nichts gefunden.",
+      "count": "Beiträge"
     }
   },
   "en": {
@@ -193,7 +197,10 @@
       "showMore": "Show More News",
       "page": "Page",
       "of": "of",
-      "read_story": "Read Story"
+      "read_story": "Read Story",
+      "read_original": "Read original",
+      "open_page": "Open article",
+      "older_in_archive": "Older news in the archive"
     },
     "home": {
       "community_label": "Community",
@@ -214,7 +221,8 @@
       "subtitle": "Digging through the crates.",
       "empty": "No archives found yet.",
       "back": "Back to Archive",
-      "month_empty": "Nothing found for this month."
+      "month_empty": "Nothing found for this month.",
+      "count": "posts"
     }
   }
 }

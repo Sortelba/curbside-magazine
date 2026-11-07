@@ -18,8 +18,8 @@ const MODELS = [
 // Gratis-Stufe erlaubt nur wenige Anfragen pro Minute → kleine Pause zwischen Artikeln.
 const MIN_GAP_MS = 4500;
 let lastCall = 0;
-// Ist das Tageslimit erreicht, für den Rest des Laufs nicht weiter versuchen.
-let quotaExhausted = false;
+// Das Tageslimit gilt pro Modell: volle Modelle für den Rest des Laufs überspringen.
+const exhaustedModels = new Set<string>();
 
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
@@ -32,7 +32,7 @@ export async function rewriteNews(article: { title: string; text: string; source
     console.warn("GEMINI_API_KEY not found. Returning original content.");
     return fallbackResponse(article, "API Key missing.");
   }
-  if (quotaExhausted) {
+  if (MODELS.every(m => exhaustedModels.has(m))) {
     return fallbackResponse(article, "Gemini-Limit für heute erreicht.");
   }
 
@@ -60,6 +60,7 @@ Antworte nur mit JSON in genau dieser Form:
 
   const errors: string[] = [];
   for (const modelName of MODELS) {
+    if (exhaustedModels.has(modelName)) continue;
     try {
       const wait = lastCall + MIN_GAP_MS - Date.now();
       if (wait > 0) await sleep(wait);
@@ -81,16 +82,34 @@ Antworte nur mit JSON in genau dieser Form:
       errors.push(`${modelName}: ${msg}`);
       // Ungültiger Schlüssel → andere Modelle helfen auch nicht
       if (/API key not valid|API_KEY_INVALID|PERMISSION_DENIED/i.test(msg)) break;
-      // Tageslimit erreicht → für diesen Lauf aufhören
-      if (/429|quota|RESOURCE_EXHAUSTED/i.test(msg) && /per ?day|daily|PerDay/i.test(msg)) {
-        quotaExhausted = true;
-        break;
+      // Tageslimit dieses Modells erreicht → dieses Modell überspringen, nächstes probieren
+      if (/429|quota|RESOURCE_EXHAUSTED/i.test(msg)) {
+        exhaustedModels.add(modelName);
       }
     }
   }
 
   console.warn(`Gemini fehlgeschlagen für "${article.title}": ${errors.join(" | ")}`);
   return fallbackResponse(article, errors.join(" | "));
+}
+
+/** Rohfassung ohne Gemini (für Entwürfe, die evtl. nie veröffentlicht werden). */
+export function rawNews(article: { title: string; text: string; source: string }) {
+  return fallbackResponse(article, "");
+}
+
+/** True, wenn das Ergebnis eine echte Umschreibung ist (kein Rohtext-Fallback). */
+export function isRewritten(r: any) {
+  return Boolean(r && !r.error && r.de?.title && r.de?.content && r.en?.title && r.en?.content);
+}
+
+/** Übernimmt eine Gemini-Umschreibung in einen Post. */
+export function applyRewrite(post: any, r: any) {
+  post.title = r.de.title;
+  post.description = String(r.de.content).slice(0, 200) + "...";
+  post.translations = { de: r.de, en: r.en };
+  if (Array.isArray(r.tags) && r.tags.length) post.tags = r.tags.slice(0, 5);
+  return post;
 }
 
 function fallbackResponse(article: { title: string; text: string; source: string }, error: string) {

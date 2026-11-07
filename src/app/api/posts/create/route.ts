@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { findDuplicate } from '@/lib/dedupe';
+import { rewriteNews, isRewritten, applyRewrite } from '@/lib/gemini';
+import { localizePostImages } from '@/lib/localizeImages';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 export async function POST(request: Request) {
     try {
@@ -9,7 +12,7 @@ export async function POST(request: Request) {
         const { post, key, force } = body;
 
         // Security check
-        if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
+        if (!isAdminKey(key)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
@@ -28,6 +31,18 @@ export async function POST(request: Request) {
                 { status: 409 }
             );
         }
+
+        // Gescannte Entwürfe erst jetzt mit Gemini umschreiben – aber nur,
+        // wenn der Titel noch der automatische Rohtext ist (sonst wurde er von Hand bearbeitet).
+        const raw = post._raw;
+        delete post._raw;
+        if (raw?.title && raw?.text && post.title === `[News] ${raw.title}`) {
+            const r = await rewriteNews({ title: raw.title, text: raw.text, source: raw.source || post.source || '' });
+            if (isRewritten(r)) applyRewrite(post, r);
+        }
+
+        // Bilder von Instagram/Bing & Co. laufen ab → lokal speichern
+        await localizePostImages(post);
 
         // Append new post to the top
         const updatedPosts = [post, ...existingPosts];

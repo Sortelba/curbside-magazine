@@ -31,4 +31,15 @@ swift scripts/set-command-icons.swift
 - `scripts/prepare-static-export.mjs` – Build für GitHub Pages
 - `scripts/optimize-uploads.mjs` – verkleinert Bilder in `public/uploads`
 
-Optional: `GEMINI_API_KEY` in `.env.local` – dann werden gescannte News umgeschrieben und übersetzt.
+## `.env.local` (nicht im Repository)
+
+```
+ADMIN_KEY=…        # Passwort fürs Admin Dashboard (Start Admin und Autoscan lesen es von hier)
+GEMINI_API_KEY=…   # optional: News werden beim Veröffentlichen auf Deutsch/Englisch umgeschrieben
+```
+
+- Gemini schreibt nur Beiträge um, die wirklich veröffentlicht werden; Autoscan nutzt das restliche
+  Tageslimit für ältere Rohtext-Beiträge (`/api/posts/rewrite-old`). Test: `node scripts/test-gemini.mjs`
+- Ablaufende Bild-Links (Instagram, Bing) werden beim Veröffentlichen nach `public/uploads/posts/` kopiert.
+- Instagram: Admin → News → „Insta-Post übernehmen“ (Link + kopierter Text → Entwurf).
+- Jeder Beitrag hat eine eigene Seite unter `/news/<id>/`; die Startseite enthält nur die neuesten 60.

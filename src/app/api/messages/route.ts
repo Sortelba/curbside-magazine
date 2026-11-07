@@ -1,15 +1,15 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
-const ADMIN_KEY = "skatelife-secret";
 
 export async function GET(req: Request) {
     if (process.env.GITHUB_ACTIONS === 'true') return NextResponse.json({ messages: [] });
     const { searchParams } = new URL(req.url);
     const key = searchParams.get("key");
 
-    if (key !== ADMIN_KEY) {
+    if (!isAdminKey(key)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
@@ -27,7 +27,7 @@ export async function DELETE(req: Request) {
     const key = searchParams.get("key");
     const id = searchParams.get("id");
 
-    if (key !== ADMIN_KEY) {
+    if (!isAdminKey(key)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 

@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server';
 import { scrapeAllSources } from '@/lib/scraper';
-import { rewriteNews } from '@/lib/gemini';
+import { rawNews } from '@/lib/gemini';
 import { findDuplicate } from '@/lib/dedupe';
 import fs from 'fs';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 // Force dynamic rendering so env vars work at runtime
 export const dynamic = 'force-dynamic';
@@ -15,7 +16,7 @@ export async function GET(request: Request) {
         const key = searchParams.get('key');
 
         // Simple security check (optional, but good practice)
-        if (key !== process.env.CRON_SECRET && key !== 'skatelife-secret') {
+        if (!isAdminKey(key)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 
@@ -69,8 +70,10 @@ export async function GET(request: Request) {
                     continue;
                 }
 
-                // Rewrite with Gemini (now strictly bilingual)
-                const rewritten = await rewriteNews({
+                // Noch NICHT mit Gemini umschreiben: das Gratis-Limit ist klein und die
+                // meisten Entwürfe werden nie veröffentlicht. Umgeschrieben wird erst
+                // beim Veröffentlichen (api/posts/create), anhand von _raw.
+                const rewritten: any = rawNews({
                     title: article.title,
                     text: article.text,
                     source: article.source
@@ -111,7 +114,8 @@ export async function GET(request: Request) {
                     originalUrl: article.url,
                     date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
                     tags: rewritten.tags || [],
-                    status: "published"
+                    status: "published",
+                    _raw: { title: article.title, text: String(article.text || '').slice(0, 4000), source: article.source },
                 };
 
                 newPosts.push(post);

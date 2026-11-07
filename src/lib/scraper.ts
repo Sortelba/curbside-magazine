@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { Agent, fetch } from 'undici';
 import { fetchLatestYoutubeVideos } from './youtube';
-import { searchInstagramHashtag } from './instagram';
 
 // Create an agent that ignores SSL errors for Boardstation etc.
 const dispatcher = new Agent({
@@ -38,19 +37,6 @@ async function getNewsSources(): Promise<NewsSource[]> {
         if (fs.existsSync(filePath)) {
             const settings = JSON.parse(fs.readFileSync(filePath, 'utf8'));
             return settings.newsSources || [];
-        }
-    } catch (e) {
-        console.error("Error reading settings.json", e);
-    }
-    return [];
-}
-
-async function getInstagramHashtags(): Promise<string[]> {
-    try {
-        const filePath = path.join(process.cwd(), 'src', 'data', 'settings.json');
-        if (fs.existsSync(filePath)) {
-            const settings = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            return settings.instagramHashtags || [];
         }
     } catch (e) {
         console.error("Error reading settings.json", e);
@@ -321,9 +307,8 @@ export async function scrapeGenericSource(source: NewsSource): Promise<ScrapedAr
 
 export async function scrapeAllSources(): Promise<ScrapedArticle[]> {
     const sources = await getNewsSources();
-    const instaTags = await getInstagramHashtags();
 
-    console.log(`Scraping ${sources.length} news sources, YouTube, and ${instaTags.length} Instagram tags...`);
+    console.log(`Scraping ${sources.length} news sources and YouTube...`);
 
     // 1. News Sources (Parallel per source, and parallel within source)
     const newsResults = await Promise.all(sources.map((source: NewsSource) => scrapeGenericSource(source)));
@@ -348,27 +333,8 @@ export async function scrapeAllSources(): Promise<ScrapedArticle[]> {
         console.error("YouTube scraping failed:", e);
     }
 
-    // 3. Instagram Tags
-    let instaArticles: ScrapedArticle[] = [];
-    try {
-        const instaResults = await Promise.all(instaTags.map(tag => searchInstagramHashtag(tag)));
-        instaArticles = instaResults.flat().map(p => ({
-            title: `Insta Clip von ${p.author}`,
-            url: p.url,
-            mediaType: p.type as 'video' | 'image',
-            mediaUrl: p.url,
-            text: p.caption || "Instagram Post",
-            source: "Instagram",
-            media: {
-                images: p.thumbnail ? [p.thumbnail] : [],
-                videoUrl: p.type === 'video' ? p.url : ""
-            }
-        }));
-    } catch (e) {
-        console.error("Instagram scraping failed:", e);
-    }
 
-    const allArticles = [...newsResults.flat(), ...youtubeArticles, ...instaArticles];
+    const allArticles = [...newsResults.flat(), ...youtubeArticles];
 
     // Filter and unique check
     return allArticles.filter((article: ScrapedArticle) => article !== null);

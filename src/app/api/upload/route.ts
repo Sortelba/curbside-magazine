@@ -3,14 +3,14 @@ import path from 'path';
 import { writeFile } from 'fs/promises';
 import { mkdir } from 'fs/promises';
 import { existsSync } from 'fs';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
-const CRON_SECRET = process.env.CRON_SECRET || 'skatelife-secret';
 const UPLOAD_DIR = path.join(process.cwd(), 'public', 'uploads');
 
 export async function POST(request: Request) {
     try {
         const authHeader = request.headers.get('Authorization');
-        if (authHeader !== `Bearer ${CRON_SECRET}`) {
+        if (!ADMIN_KEY || authHeader !== `Bearer ${ADMIN_KEY}`) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

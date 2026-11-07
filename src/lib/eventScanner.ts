@@ -633,7 +633,7 @@ export type ScanResult = {
 
 export async function scanSkateEvents(
     existing: any[] = [],
-    options: { maxWebPages?: number; extraPages?: string[]; today?: string } = {}
+    options: { maxWebPages?: number; extraPages?: string[]; today?: string; international?: boolean } = {}
 ): Promise<ScanResult> {
     todayOverride = options.today && /^\d{4}-\d{2}-\d{2}$/.test(options.today) ? options.today : '';
     const errors: string[] = [];
@@ -662,8 +662,11 @@ export async function scanSkateEvents(
         if ((e.endDateUtc || e.startDateUtc) < today) continue;                  // vorbei
         // Erst Ort, dann Titel prüfen ("World Skate Tour, Japan" mit Ort "Kitakyushu")
         const europe = europeCheck(e.location) ?? (europeCheck(e.title) === false ? false : null);
-        if (europe === false) continue;                                           // außerhalb Europas
-        if (europe === null && !isEuropeanTld(e.link) && e.source !== 'Skateboard Germany') continue;
+        // International: große Contests außerhalb Europas nur aus verlässlichen Kalendern
+        // (Websuche-Treffer außerhalb Europas sind zu ungenau)
+        const trustedWorldwide = options.international && (e.source === 'The Boardr' || e.source === 'Skateboard Germany');
+        if (europe === false && !trustedWorldwide) continue;                      // außerhalb Europas
+        if (europe === null && !trustedWorldwide && !isEuropeanTld(e.link) && e.source !== 'Skateboard Germany') continue;
         if (!isSkateEvent(e.title, e.description) && e.confidence !== 'hoch') continue;
         if (existing.some(x => isDuplicateEvent(e, x))) continue;                // schon im Kalender
         if (result.some(x => isDuplicateEvent(e, x))) continue;                  // schon gefunden

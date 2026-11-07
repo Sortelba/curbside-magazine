@@ -3,8 +3,10 @@
 import { ExternalLink, Play, Image as ImageIcon, FileText, LayoutGrid } from "lucide-react";
 import { cn, getYoutubeEmbedUrl } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 interface PostCardProps {
+    id?: string;
     type: 'text' | 'image' | 'video' | 'link' | 'instagram-mix';
     title: string;
     content: string; // fallback URL for image/video/link
@@ -25,7 +27,7 @@ interface PostCardProps {
     onClick?: () => void;
 }
 
-export default function PostCard({ type, title, content, date, description, tags, originalUrl, translations, source, media, onClick }: PostCardProps) {
+export default function PostCard({ id, type, title, content, date, description, tags, originalUrl, translations, source, media, onClick }: PostCardProps) {
     const { locale, t } = useLanguage();
     const linkUrl = originalUrl || media?.externalLink || (type === 'link' ? content : undefined);
 
@@ -164,9 +166,20 @@ export default function PostCard({ type, title, content, date, description, tags
 
                 {/* Read More / Action */}
                 <div className="mt-auto pt-4 border-t border-border/50 flex justify-between items-center opacity-70 group-hover:opacity-100 transition-opacity">
-                    <button onClick={onClick} className="text-xs font-bold uppercase flex items-center gap-1 hover:gap-2 transition-all">
-                        {t("news.read_story")} <ExternalLink className="h-3 w-3" />
-                    </button>
+                    {id ? (
+                        // Echter Link zur Beitragsseite (für Google & zum Teilen); auf der Startseite öffnet er das Modal
+                        <Link
+                            href={`/news/${id}/`}
+                            onClick={(e) => { if (onClick) { e.preventDefault(); onClick(); } }}
+                            className="text-xs font-bold uppercase flex items-center gap-1 hover:gap-2 transition-all"
+                        >
+                            {t("news.read_story")} <ExternalLink className="h-3 w-3" />
+                        </Link>
+                    ) : (
+                        <button onClick={onClick} className="text-xs font-bold uppercase flex items-center gap-1 hover:gap-2 transition-all">
+                            {t("news.read_story")} <ExternalLink className="h-3 w-3" />
+                        </button>
+                    )}
                 </div>
             </div>
         </article>

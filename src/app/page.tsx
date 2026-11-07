@@ -5,6 +5,8 @@ import StructuredData from "@/components/StructuredData";
 
 // Static rendering is required for GitHub Pages export.
 
+const HOME_POST_LIMIT = 60;
+
 async function getPosts() {
   const filePath = path.join(process.cwd(), 'src', 'data', 'posts.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -38,7 +40,10 @@ export default async function Home() {
       const postDate = new Date(post.date);
       return !isNaN(postDate.getTime());
     })
-    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    // Nur die neuesten Beiträge in die Startseite packen (sonst ~1 MB HTML);
+    // ältere gibt es im Archiv und auf den eigenen Beitragsseiten.
+    .slice(0, HOME_POST_LIMIT);
 
   // Read settings
   const settingsPath = path.join(process.cwd(), 'src', 'data', 'settings.json');

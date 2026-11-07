@@ -117,6 +117,11 @@ export default function HomeContent({ posts, learnData, settings }: { posts: any
                                 </button>
                             </div>
                         )}
+                        {isExpanded && currentPage === totalPages && (
+                            <Link href="/archive" className="mt-6 text-sm font-black uppercase italic tracking-widest text-primary hover:underline">
+                                {t("news.older_in_archive")} →
+                            </Link>
+                        )}
                     </div>
                 </div>
 

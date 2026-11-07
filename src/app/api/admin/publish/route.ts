@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 import { exec } from 'child_process';
 import path from 'path';
+import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 export async function POST(req: Request) {
     try {
         const { key } = await req.json();
-        const secret = process.env.CRON_SECRET || 'skatelife-secret';
 
-        if (key !== secret) {
+        if (!isAdminKey(key)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

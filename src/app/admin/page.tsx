@@ -151,6 +151,38 @@ function AdminDashboardContent() {
         await saveSettings(newSettings);
     };
 
+    // Instagram-Import (Link + kopierter Text → Entwurf)
+    const [showInstaImport, setShowInstaImport] = useState(false);
+    const [instaUrl, setInstaUrl] = useState("");
+    const [instaAccount, setInstaAccount] = useState("");
+    const [instaCaption, setInstaCaption] = useState("");
+    const [instaError, setInstaError] = useState("");
+
+    const importInstagram = async () => {
+        setInstaError("");
+        if (!/instagram\.com\/(?:[\w.]+\/)?(p|reel|tv)\//i.test(instaUrl)) { setInstaError("Bitte einen Instagram-Beitragslink einfügen (…/p/… oder …/reel/…)."); return; }
+        if (instaCaption.trim().length < 10) { setInstaError("Bitte den Text des Beitrags einfügen."); return; }
+        setLoading(true);
+        setStatus("Erstelle Entwurf aus Instagram-Beitrag...");
+        try {
+            const res = await fetch(`/api/instagram/import`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ key, url: instaUrl, caption: instaCaption, account: instaAccount }),
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || `Fehler ${res.status}`);
+            setDrafts(prev => [data.article, ...prev]);
+            setStatus(data.rewritten ? "Instagram-Entwurf erstellt (DE/EN)." : "Instagram-Entwurf erstellt (Gemini-Limit erreicht, Originaltext übernommen).");
+            setInstaUrl(""); setInstaAccount(""); setInstaCaption(""); setShowInstaImport(false);
+        } catch (e: any) {
+            setInstaError(e.message || "Fehler beim Import.");
+            setStatus("Instagram-Import fehlgeschlagen.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     // Edit State
     const [editingYoutubeIndex, setEditingYoutubeIndex] = useState<number | null>(null);
     const [ytName, setYtName] = useState("");
@@ -165,10 +197,7 @@ function AdminDashboardContent() {
     // Nested Collapsible States for Settings
     const [showExistingYoutube, setShowExistingYoutube] = useState(false);
     const [showExistingNews, setShowExistingNews] = useState(false);
-    const [showExistingInstagram, setShowExistingInstagram] = useState(false);
 
-    const [instaHashtag, setInstaHashtag] = useState("");
-    const [editingInstagramIndex, setEditingInstagramIndex] = useState<number | null>(null);
 
     // Load settings on mount (not only on the settings tab): toggles like
     // "Community on Home" or the Learn-Center switch save {...settings}, and
@@ -829,150 +858,6 @@ function AdminDashboardContent() {
                                             </div>
                                         </CollapsibleSection>
 
-                                        {/* Instagram Hashtags */}
-                                        <CollapsibleSection
-                                            title="Instagram Hashtags"
-                                            icon={Instagram}
-                                            isOpen={expandedSettings.includes("instagram")}
-                                            onToggle={() => toggleSetting("instagram")}
-                                            badge={settings.instagramHashtags?.length}
-                                        >
-                                            <div className="space-y-6">
-                                                {/* Add Form First */}
-                                                <div id="insta-form-container" className={cn(
-                                                    "flex flex-col md:flex-row gap-4 items-end bg-card p-6 rounded-2xl border-2 transition-all shadow-sm",
-                                                    editingInstagramIndex !== null ? "border-primary ring-4 ring-primary/10" : "border-border bg-muted/5"
-                                                )}>
-                                                    <div className="flex-1 w-full grid gap-2">
-                                                        <label className="text-[10px] font-black uppercase text-muted-foreground tracking-widest pl-1">
-                                                            {editingInstagramIndex !== null ? "Hashtag bearbeiten" : "Neuer Hashtag"}
-                                                        </label>
-                                                        <div className="relative">
-                                                            <span className="absolute left-4 top-1/2 -translate-y-1/2 font-black italic text-primary">#</span>
-                                                            <input
-                                                                value={instaHashtag}
-                                                                onChange={(e) => setInstaHashtag(e.target.value.replace('#', '').trim())}
-                                                                placeholder="skateboarding"
-                                                                className="w-full p-3 pl-8 bg-muted/30 border border-input rounded-xl text-sm font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all uppercase italic"
-                                                                onKeyDown={(e) => {
-                                                                    if (e.key === 'Enter' && instaHashtag) {
-                                                                        let newTags = [...(settings.instagramHashtags || [])];
-                                                                        if (editingInstagramIndex !== null) {
-                                                                            newTags[editingInstagramIndex] = instaHashtag;
-                                                                        } else {
-                                                                            newTags.push(instaHashtag);
-                                                                        }
-                                                                        saveSettings({ ...settings, instagramHashtags: newTags });
-                                                                        setInstaHashtag("");
-                                                                        setEditingInstagramIndex(null);
-                                                                    }
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="flex gap-2 w-full md:w-auto">
-                                                        {editingInstagramIndex !== null && (
-                                                            <button
-                                                                onClick={() => {
-                                                                    setEditingInstagramIndex(null);
-                                                                    setInstaHashtag("");
-                                                                }}
-                                                                className="flex-1 md:flex-none px-4 py-3 hover:bg-muted text-muted-foreground rounded-xl font-black uppercase italic text-xs tracking-widest"
-                                                            >
-                                                                Abbrechen
-                                                            </button>
-                                                        )}
-                                                        <button
-                                                            onClick={() => {
-                                                                if (instaHashtag) {
-                                                                    let newTags = [...(settings.instagramHashtags || [])];
-                                                                    if (editingInstagramIndex !== null) {
-                                                                        newTags[editingInstagramIndex] = instaHashtag;
-                                                                    } else {
-                                                                        newTags.push(instaHashtag);
-                                                                    }
-                                                                    saveSettings({ ...settings, instagramHashtags: newTags });
-                                                                    setInstaHashtag("");
-                                                                    setEditingInstagramIndex(null);
-                                                                }
-                                                            }}
-                                                            className="flex-1 md:flex-none px-8 py-3 bg-primary text-primary-foreground rounded-xl hover:scale-105 transition-all font-black uppercase italic text-xs tracking-widest shadow-lg shadow-primary/20"
-                                                        >
-                                                            {editingInstagramIndex !== null ? "Aktualisieren" : "Hinzufügen"}
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-                                                {/* Collapsible List of Existing Items */}
-                                                <div className="border border-border rounded-2xl overflow-hidden">
-                                                    <div
-                                                        onClick={() => setShowExistingInstagram(!showExistingInstagram)}
-                                                        className="p-4 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors flex items-center justify-between"
-                                                    >
-                                                        <div className="flex items-center gap-2">
-                                                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Hinterlegte Hashtags</span>
-                                                            <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black rounded-md">{settings.instagramHashtags?.length || 0}</span>
-                                                        </div>
-                                                        <div className={cn("transition-transform duration-200", showExistingInstagram && "rotate-180")}>
-                                                            <ChevronDown size={16} />
-                                                        </div>
-                                                    </div>
-                                                    <AnimatePresence>
-                                                        {showExistingInstagram && (
-                                                            <motion.div
-                                                                initial={{ height: 0, opacity: 0 }}
-                                                                animate={{ height: "auto", opacity: 1 }}
-                                                                exit={{ height: 0, opacity: 0 }}
-                                                                className="overflow-hidden bg-background/50 border-t border-border"
-                                                            >
-                                                                <div className="p-4 grid gap-3">
-                                                                    {settings.instagramHashtags?.map((tag: string, idx: number) => (
-                                                                        <div key={idx} className={cn(
-                                                                            "flex items-center justify-between bg-muted/20 p-4 rounded-xl border transition-all",
-                                                                            editingInstagramIndex === idx ? "border-primary bg-primary/5" : "border-border hover:border-primary/20"
-                                                                        )}>
-                                                                            <div className="flex-1">
-                                                                                <div className="font-black uppercase italic text-lg tracking-widest">#{tag}</div>
-                                                                            </div>
-                                                                            <div className="flex gap-2">
-                                                                                <button
-                                                                                    onClick={() => {
-                                                                                        setEditingInstagramIndex(idx);
-                                                                                        setInstaHashtag(tag);
-                                                                                        document.getElementById('insta-form-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                                                    }}
-                                                                                    className="p-2 hover:bg-primary/10 text-primary rounded-xl transition-colors"
-                                                                                >
-                                                                                    <Edit className="h-5 w-5" />
-                                                                                </button>
-                                                                                <button
-                                                                                    onClick={() => {
-                                                                                        if (confirm(`#${tag} wirklich löschen?`)) {
-                                                                                            const newTags = settings.instagramHashtags.filter((_: string, i: number) => i !== idx);
-                                                                                            saveSettings({ ...settings, instagramHashtags: newTags });
-                                                                                            if (editingInstagramIndex === idx) {
-                                                                                                setEditingInstagramIndex(null);
-                                                                                                setInstaHashtag("");
-                                                                                            }
-                                                                                        }
-                                                                                    }}
-                                                                                    className="p-2 hover:bg-destructive/10 text-destructive rounded-xl transition-colors"
-                                                                                >
-                                                                                    <Trash2 className="h-5 w-5" />
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    ))}
-                                                                    {(!settings.instagramHashtags || settings.instagramHashtags.length === 0) && (
-                                                                        <div className="text-center py-4 text-[10px] font-black uppercase text-muted-foreground italic">Keine Hashtags hinterlegt</div>
-                                                                    )}
-                                                                </div>
-                                                            </motion.div>
-                                                        )}
-                                                    </AnimatePresence>
-                                                </div>
-                                            </div>
-                                        </CollapsibleSection>
 
                                         {/* Scanner Keywords Integration (Hidden/Managed via categories logic if needed) */}
                                     </div>
@@ -1027,32 +912,12 @@ function AdminDashboardContent() {
                                                 <span>Scan YouTube</span>
                                             </button>
                                             <button
-                                                onClick={async () => {
-                                                    const hashtag = prompt("Hashtag (ohne #):", "skateboarding");
-                                                    if (!hashtag) return;
-                                                    setLoading(true);
-                                                    setStatus(`Scanne Instagram für #${hashtag}...`);
-                                                    try {
-                                                        const res = await fetch(`/api/instagram/scan?key=${key}&hashtag=${hashtag}`);
-                                                        const data = await res.json();
-                                                        if (data.articles) {
-                                                            setDrafts(prev => [...data.articles, ...prev]);
-                                                            setStatus(`Top 3 für #${hashtag} gefunden!`);
-                                                        } else {
-                                                            setStatus(data.message || "Nichts gefunden.");
-                                                        }
-                                                    } catch (e) {
-                                                        console.error(e);
-                                                        setStatus("Fehler beim Insta Scan.");
-                                                    } finally {
-                                                        setLoading(false);
-                                                    }
-                                                }}
+                                                onClick={() => setShowInstaImport(v => !v)}
                                                 disabled={loading}
                                                 className="flex items-center gap-2 px-5 py-3 bg-pink-600 text-white font-black uppercase italic text-[10px] tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-pink-600/20 disabled:opacity-50"
                                             >
                                                 {loading && status.includes('Instagram') ? <Loader2 className="h-4 w-4 animate-spin" /> : <Instagram className="h-4 w-4" />}
-                                                <span>Scan Insta</span>
+                                                <span>Insta-Post übernehmen</span>
                                             </button>
                                             {drafts.length > 0 && (
                                                 <button
@@ -1065,6 +930,24 @@ function AdminDashboardContent() {
                                             )}
                                         </div>
                                     </div>
+                                    {showInstaImport && (
+                                        <div className="p-6 bg-card border-2 border-pink-600/40 rounded-[2rem] shadow-xl space-y-4 -mt-4 mb-8">
+                                            <div>
+                                                <h3 className="text-lg font-black uppercase italic tracking-tighter">Instagram-Beitrag übernehmen</h3>
+                                                <p className="text-xs text-muted-foreground mt-1">Instagram lässt keine automatischen Abrufe zu. Link einfügen, den Text des Beitrags kopieren und hier einfügen – daraus wird ein Entwurf auf Deutsch und Englisch, der Instagram-Post wird eingebettet.</p>
+                                            </div>
+                                            <input value={instaUrl} onChange={e => { setInstaUrl(e.target.value); setInstaError(""); }} placeholder="https://www.instagram.com/p/…" className="w-full bg-muted/40 border border-border rounded-xl px-4 py-3 text-sm" />
+                                            <input value={instaAccount} onChange={e => setInstaAccount(e.target.value)} placeholder="Account (optional), z. B. rollsport.e.v.ebersberg" className="w-full bg-muted/40 border border-border rounded-xl px-4 py-3 text-sm" />
+                                            <textarea value={instaCaption} onChange={e => { setInstaCaption(e.target.value); setInstaError(""); }} rows={6} placeholder="Text des Instagram-Beitrags hier einfügen…" className="w-full bg-muted/40 border border-border rounded-xl px-4 py-3 text-sm" />
+                                            {instaError && <p className="text-sm text-destructive">{instaError}</p>}
+                                            <div className="flex gap-3">
+                                                <button onClick={importInstagram} disabled={loading} className="px-5 py-3 bg-pink-600 text-white font-black uppercase italic text-[10px] tracking-widest rounded-xl disabled:opacity-50">
+                                                    {loading ? "Erstelle Entwurf…" : "Entwurf erstellen"}
+                                                </button>
+                                                <button onClick={() => setShowInstaImport(false)} className="px-5 py-3 bg-muted font-black uppercase italic text-[10px] tracking-widest rounded-xl">Abbrechen</button>
+                                            </div>
+                                        </div>
+                                    )}
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                         <AnimatePresence mode="popLayout">
@@ -1979,6 +1862,7 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
 
     // Event-Scanner
     const [scanLoading, setScanLoading] = useState(false);
+    const [scanInternational, setScanInternational] = useState(false);
     const [scanStatus, setScanStatus] = useState("");
     const [suggestions, setSuggestions] = useState<any[]>([]);
 
@@ -2022,9 +1906,9 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
     // Kalender-Seiten, Websuche) – Ergebnisse sind nur Vorschläge.
     const scanForEvents = async () => {
         setScanLoading(true);
-        setScanStatus("Durchsuche Kalender & Web nach Skate-Events in Europa… (ca. 10–60 Sek.)");
+        setScanStatus(scanInternational ? "Durchsuche Kalender & Web nach Skate-Events in Europa und große Contests weltweit… (ca. 10–60 Sek.)" : "Durchsuche Kalender & Web nach Skate-Events in Europa… (ca. 10–60 Sek.)");
         try {
-            const res = await fetch(`/api/events/scan?key=${keyStr}`, { cache: 'no-store' });
+            const res = await fetch(`/api/events/scan?key=${keyStr}${scanInternational ? '&international=1' : ''}`, { cache: 'no-store' });
             if (!res.ok) {
                 setScanStatus(res.status === 404
                     ? "Scan-API nicht gefunden – Server mit 'Stop Admin' + 'Start Admin' neu starten."
@@ -2256,6 +2140,10 @@ function ManageEvents({ keyStr }: { keyStr: string }) {
                         </div>
                     </div>
                     <div className="flex gap-2 flex-wrap">
+                        <label className="flex items-center gap-2 text-xs font-bold text-muted-foreground cursor-pointer select-none" title="Zusätzlich große Contests außerhalb Europas (The Boardr, Skateboard Germany), z. B. World Skate Tour oder Olympia-Qualis">
+                            <input type="checkbox" checked={scanInternational} onChange={e => setScanInternational(e.target.checked)} className="h-4 w-4 accent-primary" />
+                            Auch international
+                        </label>
                         <button
                             onClick={scanForEvents}
                             disabled={scanLoading}

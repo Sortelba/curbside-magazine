@@ -39,5 +39,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const [slug, last] of [...months].sort().reverse()) {
         pages.push({ url: `${SITE_URL}/archive/${slug}/`, lastModified: last, changeFrequency: "weekly", priority: 0.5 });
     }
+    // Eigene Seite pro Beitrag
+    for (const p of posts) {
+        const d = new Date(p.date);
+        if (!p.id || isNaN(d.getTime())) continue;
+        pages.push({ url: `${SITE_URL}/news/${p.id}/`, lastModified: d, changeFrequency: "monthly", priority: 0.6 });
+    }
     return pages;
 }

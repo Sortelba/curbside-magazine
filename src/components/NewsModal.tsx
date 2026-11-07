@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Calendar } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { X } from "lucide-react";
+import PostBody from "@/components/PostBody";
 import { useEffect } from "react";
 
 interface NewsModalProps {
@@ -12,7 +12,6 @@ interface NewsModalProps {
 }
 
 export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
-    const { locale, t } = useLanguage();
 
     // Prevent body scroll when modal is open
     useEffect(() => {
@@ -27,13 +26,6 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
     }, [isOpen]);
 
     if (!post) return null;
-
-    const displayTitle = post.translations?.[locale]?.title || post.title;
-    const displayContent = post.translations?.[locale]?.content || post.description || post.title;
-
-    // Naively parse "text" type content which might be markdown or just text
-    // For now we just render it, splitting by newlines for paragraphs
-    const paragraphs = displayContent.split('\n').filter((p: string) => p.trim().length > 0);
 
     return (
         <AnimatePresence>
@@ -63,80 +55,7 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
                             <X className="h-6 w-6" />
                         </button>
 
-                        {/* Header Media (Prioritize Video then Images) */}
-                        {(post.media?.videoUrl || (post.type === 'video' && post.content)) && (
-                            <div className="w-full aspect-video bg-black">
-                                <iframe
-                                    src={(post.media?.videoUrl || post.content).replace('watch?v=', 'embed/')}
-                                    className="w-full h-full"
-                                    allowFullScreen
-                                    title={displayTitle}
-                                />
-                            </div>
-                        )}
-
-                        {/* Multiple Images Support */}
-                        {post.media?.images?.length > 0 ? (
-                            <div className="flex flex-col gap-4 bg-muted/5 border-b border-border">
-                                {post.media.images.map((img: string, i: number) => (
-                                    <div key={i} className="w-full max-h-[500px] overflow-hidden">
-                                        <img src={img} alt={`${displayTitle} - ${i + 1}`} className="w-full h-full object-contain bg-black/5" />
-                                    </div>
-                                ))}
-                            </div>
-                        ) : post.type === 'image' && (
-                            <div className="w-full h-64 md:h-80 overflow-hidden relative">
-                                <img src={post.content} alt={displayTitle} className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                            </div>
-                        )}
-
-                        <div className="p-8 md:p-12">
-                            {/* Meta Info */}
-                            <div className="flex items-center gap-4 text-xs font-mono text-muted-foreground uppercase tracking-widest mb-6">
-                                <span className="flex items-center gap-1.5">
-                                    <Calendar className="h-3 w-3" /> {post.date}
-                                </span>
-                                <span>•</span>
-                                <span className="text-primary font-bold">{post.source || "News"}</span>
-                            </div>
-
-                            {/* Title */}
-                            <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-8 leading-none">
-                                {displayTitle}
-                            </h2>
-
-                            {/* Content */}
-                            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                                {paragraphs.map((para: string, i: number) => {
-                                    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-                                    return (
-                                        <p
-                                            key={i}
-                                            dangerouslySetInnerHTML={{
-                                                __html: para.replace(linkRegex, '<a href="$2" target="_blank" class="text-primary hover:underline font-bold">$1</a>')
-                                            }}
-                                        />
-                                    );
-                                })}
-                            </div>
-
-                            <div className="w-full h-px bg-border my-8 opacity-50" />
-
-                            {/* Footer / Original Link */}
-                            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                                <a
-                                    href={post.media?.externalLink || post.originalUrl || post.content}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold uppercase text-sm hover:opacity-90 transition-opacity"
-                                >
-                                    {post.type === 'link' || post.media?.externalLink ? 'Visit Link' : 'Read Original'} <ExternalLink className="h-4 w-4" />
-                                </a>
-
-                            </div>
-
-                        </div>
+                        <PostBody post={post} inModal />
                     </motion.div>
                 </div>
             )}

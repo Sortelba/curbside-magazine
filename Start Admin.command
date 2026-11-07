@@ -20,7 +20,14 @@ cd "$ROOT_DIR" || {
 }
 
 PORT=3000
-URL="http://localhost:$PORT/admin?key=skatelife-secret"
+# Admin-Passwort aus .env.local (ADMIN_KEY=...)
+ADMIN_KEY="$(grep -E '^ADMIN_KEY=' "$ROOT_DIR/.env.local" 2>/dev/null | tail -1 | cut -d= -f2- | tr -d '[:space:]"')"
+if [ -z "$ADMIN_KEY" ]; then
+  echo "Kein ADMIN_KEY in .env.local gefunden. Bitte eine Zeile ADMIN_KEY=dein-passwort eintragen."
+  read -r -p "Enter zum Schließen..." _
+  exit 1
+fi
+URL="http://localhost:$PORT/admin?key=$ADMIN_KEY"
 
 wait_for_server() {
   for i in {1..45}; do

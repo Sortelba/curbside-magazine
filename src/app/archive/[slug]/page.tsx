@@ -76,7 +76,7 @@ export default async function ArchiveMonthPage({ params }: { params: Promise<{ s
                     {formatMonthSlug(slug)}
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                    {posts.length} posts from the past.
+                    {posts.length} <T k="archive.count" />
                 </p>
             </div>
 
