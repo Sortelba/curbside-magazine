@@ -15,7 +15,7 @@ export default function Footer() {
                             CURBSIDE
                         </Link>
                         <p className="text-muted-foreground text-sm mt-2">
-                            Keep pushing. Support local shops and have fun!
+                            {t("footer.tagline")}
                         </p>
                         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                             <Link href="/archive" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export default function Navbar({ showCommunity = false }: { showCommunity?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,7 @@ export default function Navbar({ showCommunity = false }: { showCommunity?: bool
                         </div>
 
                         <div className="flex items-center gap-3">
+                            <LanguageToggle />
                             <ThemeToggle />
 
                         </div>
@@ -50,7 +52,7 @@ export default function Navbar({ showCommunity = false }: { showCommunity?: bool
                             onClick={() => setIsOpen(!isOpen)}
                             className="bg-muted inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                         >
-                            <span className="sr-only">Open main menu</span>
+                            <span className="sr-only">{t("nav.open_menu")}</span>
                             {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
                         </button>
                     </div>
@@ -74,7 +76,11 @@ export default function Navbar({ showCommunity = false }: { showCommunity?: bool
                         {/* Mobile Theme & Language Switcher */}
                         <div className="px-3 py-4 border-t border-border mt-2 space-y-4">
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-bold uppercase text-muted-foreground">Appearance:</span>
+                                <span className="text-xs font-bold uppercase text-muted-foreground">{t("nav.language")}</span>
+                                <LanguageToggle />
+                            </div>
+                            <div className="flex items-center justify-between">
+                                <span className="text-xs font-bold uppercase text-muted-foreground">{t("nav.appearance")}</span>
                                 <ThemeToggle />
                             </div>
                         </div>

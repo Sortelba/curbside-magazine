@@ -24,6 +24,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         }
     }, []);
 
+    // Sprache auch im <html lang> setzen (Screenreader, Browser-Übersetzung)
+    useEffect(() => {
+        document.documentElement.lang = locale;
+    }, [locale]);
+
     const handleSetLocale = (newLocale: Locale) => {
         setLocale(newLocale);
         localStorage.setItem("curbside_locale", newLocale);

@@ -270,9 +270,9 @@ export default function EventsSidebar() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-6">
                                         <div>
-                                            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mb-4">Details</h4>
+                                            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground mb-4">{t("events.details")}</h4>
                                             <p className="text-lg leading-relaxed whitespace-pre-wrap">
-                                                {selectedEvent.description || "Keine weitere Beschreibung vorhanden."}
+                                                {selectedEvent.description || t("events.no_description")}
                                             </p>
                                         </div>
 
@@ -283,7 +283,7 @@ export default function EventsSidebar() {
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-black uppercase italic tracking-widest rounded-xl hover:scale-105 transition-transform"
                                             >
-                                                Event Website <ExternalLink className="h-4 w-4" />
+                                                {t("events.website")} <ExternalLink className="h-4 w-4" />
                                             </a>
                                         )}
                                     </div>

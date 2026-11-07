@@ -26,7 +26,7 @@ interface PostCardProps {
 }
 
 export default function PostCard({ type, title, content, date, description, tags, originalUrl, translations, source, media, onClick }: PostCardProps) {
-    const { locale } = useLanguage();
+    const { locale, t } = useLanguage();
     const linkUrl = originalUrl || media?.externalLink || (type === 'link' ? content : undefined);
 
     // Dynamic content based on locale
@@ -165,7 +165,7 @@ export default function PostCard({ type, title, content, date, description, tags
                 {/* Read More / Action */}
                 <div className="mt-auto pt-4 border-t border-border/50 flex justify-between items-center opacity-70 group-hover:opacity-100 transition-opacity">
                     <button onClick={onClick} className="text-xs font-bold uppercase flex items-center gap-1 hover:gap-2 transition-all">
-                        Read Story <ExternalLink className="h-3 w-3" />
+                        {t("news.read_story")} <ExternalLink className="h-3 w-3" />
                     </button>
                 </div>
             </div>

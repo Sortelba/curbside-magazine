@@ -1,3 +1,4 @@
+import { T } from "@/components/LanguageToggle";
 import Link from "next/link";
 import fs from 'fs';
 import path from 'path';
@@ -39,15 +40,15 @@ export default async function ArchiveIndex() {
     return (
         <div className="container mx-auto py-8 px-4 max-w-3xl min-h-[60vh]">
             <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
-                <ArrowLeft className="h-4 w-4" /> Back to Home
+                <ArrowLeft className="h-4 w-4" /> <T k="archive.back_home" />
             </Link>
 
             <div className="mb-12 text-center">
                 <h1 className="text-5xl font-black uppercase italic tracking-tighter mb-4">
-                    Archive
+                    <T k="archive.title" />
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                    Digging through the crates.
+                    <T k="archive.subtitle" />
                 </p>
             </div>
 
@@ -65,7 +66,7 @@ export default async function ArchiveIndex() {
 
                 {months.length === 0 && (
                     <div className="text-center text-muted-foreground py-12">
-                        No archives found yet.
+                        <T k="archive.empty" />
                     </div>
                 )}
             </div>

@@ -137,12 +137,12 @@ export default function HomeContent({ posts, learnData, settings }: { posts: any
                                         <Users className="h-6 w-6 text-primary" />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">Community</p>
-                                        <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter">Skate Community</h2>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">{t("home.community_label")}</p>
+                                        <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter">{t("home.community_title")}</h2>
                                     </div>
                                 </div>
                                 <div className="inline-flex items-center gap-2 text-sm font-black uppercase italic tracking-widest text-primary group-hover:translate-x-1 transition-transform">
-                                    <span>Zur Community</span>
+                                    <span>{t("home.community_cta")}</span>
                                     <ChevronDown className="rotate-[-90deg]" size={16} />
                                 </div>
                             </div>

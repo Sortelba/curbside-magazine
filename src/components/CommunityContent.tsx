@@ -195,7 +195,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                             ))}
                                         </div>
                                         {filteredShops.length === 0 && (
-                                            <p className="text-center py-10 text-muted-foreground italic">Keine Shops in dieser Auswahl gefunden.</p>
+                                            <p className="text-center py-10 text-muted-foreground italic">{t("community.no_shops")}</p>
                                         )}
                                     </div>
                                 )}
@@ -203,7 +203,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                 {activeSection === "sec_projects" && (
                                     <div className="space-y-12">
                                         <div className="text-center max-w-2xl mx-auto mb-12">
-                                            <p className="text-lg text-muted-foreground italic">Diese Projekte nutzen Skateboarding, um die Welt ein Stück besser zu machen. Support is everything!</p>
+                                            <p className="text-lg text-muted-foreground italic">{t("community.projects_intro")}</p>
                                         </div>
                                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                             {activeSectionData?.items.map((item: any) => (
@@ -226,7 +226,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                                         {!item.image && <h3 className="text-2xl font-black uppercase italic tracking-tighter mb-4 group-hover:text-primary transition-colors">{item.name}</h3>}
                                                         <p className="text-muted-foreground mb-6 leading-relaxed text-sm flex-1">{item.description}</p>
                                                         <div className="flex items-center gap-2 text-xs font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform mt-auto">
-                                                            Mehr erfahren <ChevronRight size={16} />
+                                                            {t("community.learn_more")} <ChevronRight size={16} />
                                                         </div>
                                                     </div>
                                                 </a>
@@ -265,10 +265,10 @@ export default function CommunityContent({ data }: { data: any }) {
                                                         rel="noopener noreferrer"
                                                         className="mt-8 flex items-center gap-2 text-sm font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform"
                                                     >
-                                                        Zur Website <ChevronRight size={18} />
+                                                        {t("community.to_website")} <ChevronRight size={18} />
                                                     </a>
                                                 ) : (
-                                                    <p className="mt-8 text-sm italic text-muted-foreground">Keine offizielle Website bekannt</p>
+                                                    <p className="mt-8 text-sm italic text-muted-foreground">{t("community.no_website")}</p>
                                                 )}
                                             </div>
                                         ))}

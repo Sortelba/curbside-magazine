@@ -1,3 +1,4 @@
+import { T } from "@/components/LanguageToggle";
 import PostCard from "@/components/PostCard";
 import fs from 'fs';
 import path from 'path';
@@ -56,7 +57,7 @@ export default async function ArchiveMonthPage({ params }: { params: Promise<{ s
     return (
         <div className="container mx-auto py-8 px-4 max-w-3xl">
             <Link href="/archive" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
-                <ArrowLeft className="h-4 w-4" /> Back to Archive
+                <ArrowLeft className="h-4 w-4" /> <T k="archive.back" />
             </Link>
 
             <div className="mb-12 text-center">
@@ -75,7 +76,7 @@ export default async function ArchiveMonthPage({ params }: { params: Promise<{ s
 
                 {posts.length === 0 && (
                     <div className="text-center py-12 text-muted-foreground italic">
-                        Nothing found for this month.
+                        <T k="archive.month_empty" />
                     </div>
                 )}
             </div>

@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, MessageSquare } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactModal() {
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const handleOpen = () => setIsOpen(true);
@@ -39,10 +41,10 @@ export default function ContactModal() {
                         <div className="bg-muted p-8 flex justify-between items-center border-b border-border">
                             <div>
                                 <h2 className="text-3xl font-black uppercase italic tracking-tighter">
-                                    Kontakt & Vorschläge
+                                    {t("contact.title")}
                                 </h2>
                                 <p className="text-muted-foreground text-xs font-bold uppercase tracking-widest mt-1">
-                                    Vereine, News oder Feedback
+                                    {t("contact.subtitle")}
                                 </p>
                             </div>
                             <button
@@ -59,13 +61,13 @@ export default function ContactModal() {
                                     <MessageSquare size={32} />
                                 </div>
                                 <p className="text-lg md:text-xl font-bold leading-relaxed text-foreground">
-                                    Du hast Verbesserungsvorschläge, ein Contest findet statt und du möchtest, dass er eingetragen und gepostet wird?
+                                    {t("contact.question")}
                                 </p>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Dann bist du hier genau richtig!
+                                    {t("contact.right_place")}
                                 </p>
                                 <p className="text-xl font-black uppercase italic tracking-tight text-primary">
-                                    Schreib mir einfach eine Mail!
+                                    {t("contact.write_mail")}
                                 </p>
                             </div>
 
@@ -75,7 +77,7 @@ export default function ContactModal() {
                                     className="inline-flex items-center gap-4 bg-foreground text-background px-10 py-5 rounded-3xl font-black uppercase italic tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-foreground/10 group"
                                 >
                                     <Mail className="group-hover:rotate-12 transition-transform" />
-                                    Mail Senden
+                                    {t("contact.send")}
                                 </a>
                             </div>
 
