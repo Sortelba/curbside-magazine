@@ -21,6 +21,11 @@ let lastCall = 0;
 // Das Tageslimit gilt pro Modell: volle Modelle für den Rest des Laufs überspringen.
 const exhaustedModels = new Set<string>();
 
+// Ohne Zeitlimit kann eine einzelne Anfrage minutenlang hängen – dann bricht der
+// Auto-Scan ab und nichts wird veröffentlicht. Pro Modell max. 40 s, pro Artikel max. 90 s.
+const CALL_TIMEOUT_MS = 40_000;
+const ARTICLE_BUDGET_MS = 90_000;
+
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 export function geminiConfigured() {
@@ -59,8 +64,14 @@ Antworte nur mit JSON in genau dieser Form:
 `;
 
   const errors: string[] = [];
+  const deadline = Date.now() + ARTICLE_BUDGET_MS;
   for (const modelName of MODELS) {
     if (exhaustedModels.has(modelName)) continue;
+    const remaining = deadline - Date.now();
+    if (remaining < 5000) {
+      errors.push("Zeitlimit erreicht");
+      break;
+    }
     try {
       const wait = lastCall + MIN_GAP_MS - Date.now();
       if (wait > 0) await sleep(wait);
@@ -69,7 +80,7 @@ Antworte nur mit JSON in genau dieser Form:
       const model = genAI.getGenerativeModel({
         model: modelName,
         generationConfig: { responseMimeType: "application/json", temperature: 0.7 },
-      });
+      }, { timeout: Math.min(CALL_TIMEOUT_MS, remaining) });
       const result = await model.generateContent(prompt);
       const text = result.response.text().replace(/```json/g, "").replace(/```/g, "").trim();
       const data = JSON.parse(text);

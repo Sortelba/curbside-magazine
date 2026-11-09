@@ -38,7 +38,7 @@ async function rewriteOld() {
         const rw = await fetch(`${BASE_URL}/api/posts/rewrite-old`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ key: KEY, limit: 10 })
+            body: JSON.stringify({ key: KEY, limit: 3 })
         });
         const info = await rw.json().catch(() => ({}));
         if (rw.ok && info.rewritten > 0) {
@@ -86,21 +86,28 @@ async function run() {
         for (const post of data.articles) {
             if (published >= MAX_POSTS) break;
 
-            const saveRes = await fetch(`${BASE_URL}/api/posts/create`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ post, key: KEY })
-            });
+            // Ein hängender oder fehlerhafter Beitrag darf den Rest nicht blockieren –
+            // sonst wird am Ende auch nichts zu GitHub hochgeladen.
+            try {
+                const saveRes = await fetch(`${BASE_URL}/api/posts/create`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ post, key: KEY }),
+                    signal: AbortSignal.timeout(4 * 60 * 1000)
+                });
 
-            if (saveRes.status === 409) {
-                const info = await saveRes.json().catch(() => ({}));
-                console.log(`    [=] Übersprungen (schon vorhanden): ${post.title}${info.duplicateOf ? `  ->  ${info.duplicateOf}` : ''}`);
-                skipped++;
-            } else if (!saveRes.ok) {
-                console.error(`    [!] Fehler beim Speichern von: ${post.title}`);
-            } else {
-                console.log(`    -> Veröffentlicht: ${post.title}`);
-                published++;
+                if (saveRes.status === 409) {
+                    const info = await saveRes.json().catch(() => ({}));
+                    console.log(`    [=] Übersprungen (schon vorhanden): ${post.title}${info.duplicateOf ? `  ->  ${info.duplicateOf}` : ''}`);
+                    skipped++;
+                } else if (!saveRes.ok) {
+                    console.error(`    [!] Fehler beim Speichern von: ${post.title}`);
+                } else {
+                    console.log(`    -> Veröffentlicht: ${post.title}`);
+                    published++;
+                }
+            } catch (e) {
+                console.error(`    [!] Abgebrochen (${e.name === 'TimeoutError' ? 'dauerte zu lange' : e.message}): ${post.title}`);
             }
         }
 
