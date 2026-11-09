@@ -4,19 +4,24 @@
       "id": "basic_1",
       "title": "Der Ollie! Grundlage für alles weitere!",
       "description": "Die Grundlage für fast jeden Street-Trick. Pop, Slide, Level Out.",
-      "videoUrl": "https://www.youtube.com/embed/IgnMbmi5GxU"
+      "videoUrl": "https://www.youtube.com/embed/IgnMbmi5GxU",
+      "title_en": "The Ollie! The foundation for everything else!",
+      "description_en": "The foundation of almost every street trick. Pop, slide, level out."
     },
     {
       "id": "basic_3",
       "title": "3 Tricks ohne Ollie!",
       "description": "Einfache Tricks für den Anfang, um die Boardkontrolle zu verbessern.",
-      "videoUrl": "https://www.youtube.com/embed/Dg3IAhrwx2Q"
+      "videoUrl": "https://www.youtube.com/embed/Dg3IAhrwx2Q",
+      "title_en": "3 tricks without an ollie!",
+      "description_en": "Easy tricks for beginners to improve your board control."
     },
     {
       "title": "Wichtige Grundlagen",
       "videoUrl": "https://www.youtube.com/embed/j9mfBdXk_CA",
       "description": "",
-      "id": "basics_1788823874656"
+      "id": "basics_1788823874656",
+      "title_en": "Important basics"
     }
   ],
   "coaches": [
@@ -28,7 +33,8 @@
       "contact": "steffen.or@icloud.com",
       "description": "20+ Jahre Erfahrung. Fokus auf Flatground Tricks, Manuals & Ledges.",
       "instagram": "@sortelba",
-      "website": "www.sortelba.de"
+      "website": "www.sortelba.de",
+      "description_en": "20+ years of experience. Focus on flatground tricks, manuals & ledges."
     },
     {
       "name": "Julio",
@@ -44,7 +50,8 @@
       "state": "",
       "contact": "https://skate-coach.de/",
       "description": "Verschiedene Standorte in Deutschland.",
-      "id": "coaches_1778778394632"
+      "id": "coaches_1778778394632",
+      "description_en": "Various locations across Germany."
     },
     {
       "name": "Superprof",
@@ -52,7 +59,8 @@
       "state": "",
       "contact": "https://www.superprof.de/unterrichtsangebot/skateboarden/deutschland/",
       "description": "Finde deinen Privaten Skate Kurs!",
-      "id": "coaches_1778778468211"
+      "id": "coaches_1778778468211",
+      "description_en": "Find your private skate lesson!"
     }
   ],
   "randomizer": {
@@ -156,13 +164,15 @@
       "id": "chan_1",
       "name": "VLSkate",
       "description": "Best trick tips on YouTube.",
-      "url": "https://www.youtube.com/@vlskate"
+      "url": "https://www.youtube.com/@vlskate",
+      "description_de": "Die besten Trick-Tipps auf YouTube."
     },
     {
       "name": "Skate IQ",
       "url": "https://www.youtube.com/@Skateiq",
-      "description": "Founded by Mitchi Brusco (14x XGames Madalist) Mission/Ziel ist es Lebensverändernde Durchbrüche in skateboarding erleben zu können",
-      "id": "channels_1771259572678"
+      "description": "Gegründet von Mitchie Brusco (14-facher X-Games-Medaillengewinner). Ziel ist es, lebensverändernde Durchbrüche im Skateboarding zu ermöglichen.",
+      "id": "channels_1771259572678",
+      "description_en": "Founded by Mitchie Brusco (14x X Games medalist). The mission is to help skaters experience life-changing breakthroughs in skateboarding."
     }
   ]
 }

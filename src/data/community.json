@@ -445,42 +445,48 @@
           "name": "skate-aid e.V.",
           "url": "https://www.skate-aid.org",
           "description": "Deutschland / international: Sozialprojekt – nutzt Skateboarding in Jugendhilfe & Bildung",
-          "image": ""
+          "image": "",
+          "description_en": "Germany / international: social project – uses skateboarding in youth work & education"
         },
         {
           "id": "proj_2",
           "name": "Skateistan",
           "url": "https://www.skateistan.org",
           "description": "International (u.a. Berlin): Bildung & Empowerment für Kinder durch Skateboarding",
-          "image": ""
+          "image": "",
+          "description_en": "International (incl. Berlin): education & empowerment for kids through skateboarding"
         },
         {
           "id": "proj_3",
           "name": "Concrete Jungle Foundation",
           "url": "https://concretejunglefoundation.org",
           "description": "weltweit: Baut Skateparks & Jugendprogramme in benachteiligten Regionen",
-          "image": ""
+          "image": "",
+          "description_en": "Worldwide: builds skateparks & youth programs in disadvantaged regions"
         },
         {
           "id": "proj_4",
           "name": "Make Life Skate Life",
           "url": "https://makelifeskatelife.org",
           "description": "weltweit: Crowdfunding & Bau von DIY-Skateparks",
-          "image": ""
+          "image": "",
+          "description_en": "Worldwide: crowdfunding & building DIY skateparks"
         },
         {
           "id": "proj_5",
           "name": "Longboard Girls Crew",
           "url": "https://longboardgirlscrew.com",
           "description": "weltweit: Community & Empowerment-Projekt für Frauen im Skateboarding",
-          "image": ""
+          "image": "",
+          "description_en": "Worldwide: community & empowerment project for women in skateboarding"
         },
         {
           "id": "proj_6",
           "name": "Goodpush",
           "url": "https://goodpush.org",
           "description": "international: Netzwerk & Förderprogramm für soziale Skate-Projekte",
-          "image": ""
+          "image": "",
+          "description_en": "International: network & funding program for social skate projects"
         }
       ]
     },
@@ -493,35 +499,40 @@
           "name": "Freeling Kim",
           "url": "https://www.youtube.com/@FreelingSkateboard",
           "description": "Skateboard sessions and style.",
-          "image": "https://yt3.googleusercontent.com/WUZg8zrsPYJOn0IjaG0dUEPH94a1L371xQITcXnRUHL70MJyCMCPE2ElL1cQx22mepeNlvpS_zg=s240-c-k-c0x00ffffff-no-rj"
+          "image": "https://yt3.googleusercontent.com/WUZg8zrsPYJOn0IjaG0dUEPH94a1L371xQITcXnRUHL70MJyCMCPE2ElL1cQx22mepeNlvpS_zg=s240-c-k-c0x00ffffff-no-rj",
+          "description_de": "Skateboard-Sessions und Style."
         },
         {
           "id": "yt_2",
           "name": "De Brecher",
           "url": "https://www.youtube.com/@de_brecher",
           "description": "Skateboarding passion from Germany.",
-          "image": "https://yt3.googleusercontent.com/xb2CkkIujLSvhpG9RGZaDHZ8_Pd1ynaaQo-aad1QVnyJrUVkkRLS-xwxTYi9F_FsDvuoelZc=s800-c-k-c0x00ffffff-no-rj"
+          "image": "https://yt3.googleusercontent.com/xb2CkkIujLSvhpG9RGZaDHZ8_Pd1ynaaQo-aad1QVnyJrUVkkRLS-xwxTYi9F_FsDvuoelZc=s800-c-k-c0x00ffffff-no-rj",
+          "description_de": "Skateboard-Leidenschaft aus Deutschland."
         },
         {
           "id": "yt_3",
           "name": "TomCat Skateboards",
           "url": "https://www.youtube.com/@TomCatSkateboarding",
           "description": "Tutorials, reviews and travel.",
-          "image": "https://yt3.googleusercontent.com/j-kaUruD1zzaqcIkM0wMvKOZQLgnBAfA0PO-qNSlfPsiaSrIVPSfc8g_WALAe5AiyJCrMogfwmQ=s240-c-k-c0x00ffffff-no-rj"
+          "image": "https://yt3.googleusercontent.com/j-kaUruD1zzaqcIkM0wMvKOZQLgnBAfA0PO-qNSlfPsiaSrIVPSfc8g_WALAe5AiyJCrMogfwmQ=s240-c-k-c0x00ffffff-no-rj",
+          "description_de": "Tutorials, Reviews und Reisen."
         },
         {
           "id": "yt_4",
           "name": "Jason SkateHam",
           "url": "https://www.youtube.com/@Jasonskateham",
           "description": "Skate / Love / Life.",
-          "image": "https://yt3.googleusercontent.com/GYxj8-PbKcvJ2dNX2Ief7IF8K-j7eyvI2XmmNNVr2H7BxcV8EsRDUeJBZr_fY7-FiFELpum3kqA=s800-c-k-c0x00ffffff-no-rj"
+          "image": "https://yt3.googleusercontent.com/GYxj8-PbKcvJ2dNX2Ief7IF8K-j7eyvI2XmmNNVr2H7BxcV8EsRDUeJBZr_fY7-FiFELpum3kqA=s800-c-k-c0x00ffffff-no-rj",
+          "description_de": "Skate / Love / Life."
         },
         {
           "id": "yt_5",
           "name": "RedLuk",
           "url": "https://www.youtube.com/@RedLuk",
           "description": "Urban skating and sessions.",
-          "image": "https://yt3.googleusercontent.com/r3XMzM1lcL0GjT-h_k8bLd2xwH7KmH3xBng3HyJq22HzniygG_DbMQnVBNlrediAhfdfhxsH=s240-c-k-c0x00ffffff-no-rj"
+          "image": "https://yt3.googleusercontent.com/r3XMzM1lcL0GjT-h_k8bLd2xwH7KmH3xBng3HyJq22HzniygG_DbMQnVBNlrediAhfdfhxsH=s240-c-k-c0x00ffffff-no-rj",
+          "description_de": "Urbanes Skaten und Sessions."
         }
       ]
     },

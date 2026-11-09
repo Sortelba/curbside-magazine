@@ -53,7 +53,7 @@ export default function RandomizerSection({ randomizer }: { randomizer: Randomiz
                     </motion.div>
                 ) : (
                     <div className="text-muted-foreground italic text-xl">
-                        Select difficulty & click generate
+                        {t("learn.randomizer_hint")}
                     </div>
                 )}
 

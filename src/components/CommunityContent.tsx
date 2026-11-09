@@ -5,9 +5,10 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { loc } from "@/lib/localized";
 
 export default function CommunityContent({ data }: { data: any }) {
-    const { t } = useLanguage();
+    const { locale, t } = useLanguage();
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedState, setSelectedState] = useState("");
@@ -189,7 +190,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                                                 </div>
                                                             )}
                                                         </div>
-                                                        <p className="mt-4 text-sm text-muted-foreground line-clamp-2">{item.description}</p>
+                                                        <p className="mt-4 text-sm text-muted-foreground line-clamp-2">{loc(item, "description", locale)}</p>
                                                     </div>
                                                 </a>
                                             ))}
@@ -224,7 +225,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                                     )}
                                                     <div className="p-8 flex flex-col flex-1">
                                                         {!item.image && <h3 className="text-2xl font-black uppercase italic tracking-tighter mb-4 group-hover:text-primary transition-colors">{item.name}</h3>}
-                                                        <p className="text-muted-foreground mb-6 leading-relaxed text-sm flex-1">{item.description}</p>
+                                                        <p className="text-muted-foreground mb-6 leading-relaxed text-sm flex-1">{loc(item, "description", locale)}</p>
                                                         <div className="flex items-center gap-2 text-xs font-black uppercase italic text-primary group-hover:translate-x-2 transition-transform mt-auto">
                                                             {t("community.learn_more")} <ChevronRight size={16} />
                                                         </div>

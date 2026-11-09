@@ -110,6 +110,25 @@
       "back": "Zurück zum Archiv",
       "month_empty": "Für diesen Monat wurde nichts gefunden.",
       "count": "Beiträge"
+    },
+    "faq": {
+      "q1": "Was ist CURBSIDE?",
+      "a1": "CURBSIDE ist ein leidenschaftliches Projekt, das die deutsche Skate-Szene vernetzen möchte. Wir bieten News, eine Skatemap, Infos zu Shops und Vereinen sowie eine Lern-Sektion.",
+      "q2": "Woher kommen die News?",
+      "a2": "Wir nutzen automatisierte Scanner und manuelle Kuration, um die wichtigsten Updates von Skate-Magazinen, Brands und Pro-Skatern an einem Ort zu bündeln.",
+      "q3": "Kann ich meinen Verein hinzufügen?",
+      "a3": "Ja, unbedingt! Nutze dafür einfach das Kontaktformular im Footer. Wir prüfen die Infos und fügen deinen Verein dann zur Community-Sektion hinzu.",
+      "q4": "Ist Curbside kostenlos?",
+      "a4": "Ja, Curbside ist ein Non-Profit Projekt aus der Community für die Community.",
+      "q5": "Ich habe einen Fehler gefunden / möchte Feedback geben.",
+      "a5": "Wir freuen uns über jede Nachricht! Schreib uns einfach über das Kontakt-Symbol im Footer."
+    },
+    "learn": {
+      "contact": "Kontakt",
+      "no_coaches": "Keine Coaches in dieser Region gefunden.",
+      "no_basics": "Noch keine Basics-Videos vorhanden.",
+      "no_channels": "Noch keine Kanäle vorhanden.",
+      "randomizer_hint": "Schwierigkeit wählen & auf „Trick vorschlagen“ klicken"
     }
   },
   "en": {
@@ -223,6 +242,25 @@
       "back": "Back to Archive",
       "month_empty": "Nothing found for this month.",
       "count": "posts"
+    },
+    "faq": {
+      "q1": "What is CURBSIDE?",
+      "a1": "CURBSIDE is a passion project that wants to connect the German skate scene. We offer news, a skate map, info on shops and clubs, and a learning section.",
+      "q2": "Where does the news come from?",
+      "a2": "We use automated scanners and manual curation to bring together the most important updates from skate magazines, brands and pro skaters in one place.",
+      "q3": "Can I add my club?",
+      "a3": "Absolutely! Just use the contact form in the footer. We'll check the info and then add your club to the community section.",
+      "q4": "Is Curbside free?",
+      "a4": "Yes, Curbside is a non-profit project from the community, for the community.",
+      "q5": "I found a bug / want to give feedback.",
+      "a5": "We're happy about every message! Just write to us via the contact icon in the footer."
+    },
+    "learn": {
+      "contact": "Contact",
+      "no_coaches": "No coaches found in this area.",
+      "no_basics": "No basics videos available yet.",
+      "no_channels": "No channels available yet.",
+      "randomizer_hint": "Pick a difficulty & click “Suggest trick”"
     }
   }
 }

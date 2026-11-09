@@ -1,6 +1,8 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { loc } from "@/lib/localized";
 
 interface Channel {
     id: string;
@@ -10,6 +12,7 @@ interface Channel {
 }
 
 export default function ChannelsSection({ channels }: { channels: Channel[] }) {
+    const { locale, t } = useLanguage();
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {channels.map(chan => (
@@ -22,14 +25,14 @@ export default function ChannelsSection({ channels }: { channels: Channel[] }) {
                 >
                     <div>
                         <h3 className="text-2xl font-black uppercase italic tracking-tight group-hover:text-blue-500 transition-colors">{chan.name}</h3>
-                        <p className="text-muted-foreground mt-1">{chan.description}</p>
+                        <p className="text-muted-foreground mt-1">{loc(chan, "description", locale)}</p>
                     </div>
                     <ChevronRight className="text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all" size={32} />
                 </a>
             ))}
             {channels.length === 0 && (
                 <div className="col-span-full text-center py-10 text-muted-foreground italic">
-                    No channels available.
+                    {t("learn.no_channels")}
                 </div>
             )}
         </div>

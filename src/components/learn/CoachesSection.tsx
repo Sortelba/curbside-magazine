@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { loc } from "@/lib/localized";
 
 interface Coach {
     id: string;
@@ -16,7 +17,7 @@ interface Coach {
 }
 
 export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
-    const { t } = useLanguage();
+    const { locale, t } = useLanguage();
     const [coachSearch, setCoachSearch] = useState("");
 
     const filteredCoaches = useMemo(() => {
@@ -47,7 +48,7 @@ export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
                         <div>
                             <h3 className="text-2xl font-black uppercase italic tracking-tight">{coach.name}</h3>
                             <p className="text-muted-foreground font-medium">{coach.location}, {coach.state}</p>
-                            <p className="mt-2 text-sm">{coach.description}</p>
+                            <p className="mt-2 text-sm">{loc(coach, "description", locale)}</p>
                             <div className="flex flex-wrap gap-4 mt-3">
                                 {coach.instagram && (
                                     <a href={`https://instagram.com/${coach.instagram.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-primary hover:underline flex items-center gap-1">
@@ -62,15 +63,17 @@ export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
                             </div>
                         </div>
                         <a
-                            href={`mailto:${coach.contact}`}
+                            href={/^https?:\/\//.test(coach.contact) ? coach.contact : `mailto:${coach.contact}`}
+                            target={/^https?:\/\//.test(coach.contact) ? "_blank" : undefined}
+                            rel="noopener noreferrer"
                             className="bg-foreground text-background px-6 py-2 rounded-lg font-bold uppercase italic hover:scale-105 transition-transform text-center"
                         >
-                            Kontakt
+                            {t("learn.contact")}
                         </a>
                     </div>
                 ))}
                 {filteredCoaches.length === 0 && (
-                    <p className="text-center py-10 text-muted-foreground italic">Keine Coaches in dieser Region gefunden.</p>
+                    <p className="text-center py-10 text-muted-foreground italic">{t("learn.no_coaches")}</p>
                 )}
             </div>
         </div>
