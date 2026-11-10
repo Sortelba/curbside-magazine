@@ -1,5 +1,35 @@
 [
   {
+    "id": "event_1794360000003",
+    "title": "Morphium X-Mas Jam 2026 – Skateboard Team Contest",
+    "date": "05.12.2026",
+    "startDateUtc": "2026-12-05",
+    "location": "Playground Skatehalle Aurich, Finkenburgweg 9a, 26603 Aurich",
+    "link": "https://xmasjam.de/",
+    "description": "Team-Contest von Morphium Skateboards in der Playground Skatehalle Aurich – ab 12 Uhr.\n\n01 Team-Contest: bis zu 20 Teams mit je 5 Fahrern (mit 3 oder 4 seid ihr auch dabei). Jedes Team fährt eine Session, der beste Run zählt. Die drei besten Teams teilen sich 1.000 € Preisgeld.\n02 Best Trick: Cash for Tricks als Open Session für alle.\n03 Tombola: Lose gibt's den ganzen Tag, gezogen wird vor der Siegerehrung.\n\nStartgeld: 60 € pro Team, zu zahlen am Eventtag.\nAnmeldung: über das Formular auf xmasjam.de (Teams werden nach Prüfung freigeschaltet).\nZuschauer: ohne Board Eintritt frei, mit Board 10 €.",
+    "flyerUrl": "/uploads/events/morphium-xmas-jam-aurich-2026.jpg"
+  },
+  {
+    "id": "event_1794360000001",
+    "title": "Game of Skate Turnier – SVD × Elwood Skateboarding",
+    "date": "15.11.2026",
+    "startDateUtc": "2026-11-15",
+    "location": "SVDU Skatehalle, Düsseldorfer Straße 387, 47055 Duisburg",
+    "link": "https://www.instagram.com/p/De9lc6HtI4g/",
+    "description": "Game of Skate Battle vom Skateboard Verein Duisburg (@svdu2020) zusammen mit @elwoodskateboarding.de.\n\nEinlass / Warm-up: ab 12 Uhr\nBeginn: 14 Uhr (sobald genug Leute am Start sind)\nTeilnahme: alle Altersklassen willkommen\n\nZuschauer sind ausdrücklich erwünscht – kommt vorbei und feiert das Battle mit!",
+    "flyerUrl": "/uploads/events/game-of-skate-duisburg-2026.jpg"
+  },
+  {
+    "id": "event_1794360000002",
+    "title": "New Kids on the Block – Christmas Special",
+    "date": "29.11.2026",
+    "startDateUtc": "2026-11-29",
+    "location": "Skatehalle Berlin",
+    "link": "https://www.instagram.com/p/Dd_wQCIMOBJ/",
+    "description": "Der Kids-Contest vom Skateboard Verein Berlin (@skateboard_verein_berlin) ist zurück – als Christmas Special.\n\nDas Format: KIDS SKATE WITH PROS. Die Kids fahren ihren Run zusammen mit einem Pro – gewertet werden nur die Kids, die Pros sind zum Support da. Weniger Contest-Stress, mehr Spaß.\n\nStreet | bis 14 Jahre\nKids bis 11 · Juniors 12–14\n\nSave the Date – Anmeldung und weitere Infos folgen.",
+    "flyerUrl": "/uploads/events/new-kids-on-the-block-berlin-2026.jpg"
+  },
+  {
     "id": "event_1794092410417",
     "title": "World Skate Tour Japan – Street (Olympic Qualifier)",
     "date": "16.11.2026",
