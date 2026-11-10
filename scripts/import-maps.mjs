@@ -3,7 +3,7 @@
 //
 // Aufruf:  node scripts/import-maps.mjs
 //
-// Quellen stehen unten in SOURCES. Doppelte Einträge (gleicher Ort, auch aus
+// Quellen stehen in src/data/map-extra.json ("sources"). Doppelte Einträge (gleicher Ort, auch aus
 // verschiedenen Karten) werden zusammengefasst. Shops, die schon bei
 // "Support Skate Shops" (community.json) stehen, werden nicht doppelt eingetragen.
 // Im Admin ausgeblendete Punkte ("hidden": true) bleiben beim erneuten Import ausgeblendet.
@@ -14,11 +14,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const SOURCES = [
-    { kind: 'list', id: '1EKJdGpV8F6DnW9Sf74z-noKMgKi5w', type: 'spot', label: 'Google-Liste „Skate spots“' },
-    { kind: 'list', id: '_J-YbnN9Suuhkyd-H3VOCQ', type: 'park', label: 'Google-Liste „skateparks“' },
-    { kind: 'mymaps', id: '12o-_NyQri8gq0pW09KzETCsq1ETRAZ4', label: 'My Maps „Skate Spots und Shops“' },
-];
+// Die Quellen (Google-Listen und My-Maps-Karten) stehen in src/data/map-extra.json
+// unter "sources" und lassen sich im Admin-Dashboard (Community → Skatemap) bearbeiten.
 
 // Ordner in der My-Maps-Karte → Kategorie (null = überspringen)
 function folderType(name) {
@@ -34,6 +31,8 @@ const MAP_FILE = path.join(ROOT, 'src', 'data', 'map.json');
 const COMMUNITY_FILE = path.join(ROOT, 'src', 'data', 'community.json');
 const EXTRA_FILE = path.join(ROOT, 'src', 'data', 'map-extra.json');
 export const MANUAL_LABEL = 'Von dir geschickt';
+const EXTRA = fs.existsSync(EXTRA_FILE) ? JSON.parse(fs.readFileSync(EXTRA_FILE, 'utf8')) : {};
+const SOURCES = EXTRA.sources || [];
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -157,14 +156,14 @@ const prevById = new Map((previous.spots || []).map((p) => [p.id, p]));
 
 const raw = [];
 for (const src of SOURCES) {
-    const items = src.kind === 'list' ? (await loadList(src.id)).map((p) => ({ ...p, type: src.type })) : await loadMyMaps(src.id);
+    const items = src.kind === 'list' ? (await loadList(src.ref)).map((p) => ({ ...p, type: src.type })) : await loadMyMaps(src.ref);
     console.log(`${src.label}: ${items.length} Punkte`);
     raw.push(...items.map((p) => ({ ...p, source: src.label })));
 }
 
 // Von dir geschickte Spots (map-extra.json) zuletzt: ist derselbe Ort schon in einer
 // Google-Karte, wird er dort zusammengefasst (der Name aus der Google-Karte bleibt).
-const extra = fs.existsSync(EXTRA_FILE) ? JSON.parse(fs.readFileSync(EXTRA_FILE, 'utf8')).spots || [] : [];
+const extra = EXTRA.spots || [];
 console.log(`Von dir geschickt (map-extra.json): ${extra.length} Punkte`);
 raw.push(...extra
     .filter((p) => typeof p.lat === 'number' && typeof p.lng === 'number')

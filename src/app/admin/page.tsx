@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
+import ManageSkatemap from "@/components/admin/ManageSkatemap";
 
 
 
@@ -1569,6 +1570,9 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
                     })}
                 </div>
             </div>
+
+            {/* Skatemap: Karten scannen, Quellen und eigene Spots */}
+            <ManageSkatemap keyStr={keyStr} />
 
             {data.sections.map((section: any, sIdx: number) => {
                 const isExpanded = expandedSection === section.id;
