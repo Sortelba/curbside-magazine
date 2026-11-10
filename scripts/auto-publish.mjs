@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 // Admin-Passwort aus .env.local (ADMIN_KEY=...)
 function readEnvKey(name) {
@@ -51,6 +52,16 @@ async function rewriteOld() {
     }
 }
 
+// Skatemap aus den Google-Karten aktualisieren (neue/gelöschte Spots übernehmen).
+// Fehler hier stoppen den Autoscan nicht – dann bleibt einfach die alte Karte.
+function updateSkatemap() {
+    console.log('Aktualisiere Skatemap aus den Google-Karten...');
+    const res = spawnSync(process.execPath, ['scripts/import-maps.mjs'], { encoding: 'utf8', timeout: 5 * 60 * 1000 });
+    const lines = `${res.stdout || ''}`.trim().split('\n');
+    if (res.status === 0) console.log(`[*] Skatemap: ${lines.slice(-2).join(' ')}`);
+    else console.log(`[*] Skatemap nicht aktualisiert (alte Karte bleibt): ${(res.stderr || res.error?.message || '').trim().split('\n').pop()}`);
+}
+
 async function run() {
     console.log("Prüfe Server-Status...");
     if (!await waitForServer()) {
@@ -72,6 +83,7 @@ async function run() {
         if (!data.articles || data.articles.length === 0) {
             console.log("[-] Keine neuen Beiträge gefunden.");
             await rewriteOld();
+            updateSkatemap();
             return;
         }
 
@@ -114,6 +126,7 @@ async function run() {
         console.log(`\n[*] ${published} veröffentlicht, ${skipped} Duplikate übersprungen.`);
 
         await rewriteOld();
+        updateSkatemap();
 
         console.log("\n------------------------------------------------");
         console.log("NEWS-AUTO-PUMP ERFOLGREICH");

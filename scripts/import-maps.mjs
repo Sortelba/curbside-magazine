@@ -7,6 +7,10 @@
 // verschiedenen Karten) werden zusammengefasst. Shops, die schon bei
 // "Support Skate Shops" (community.json) stehen, werden nicht doppelt eingetragen.
 // Im Admin ausgeblendete Punkte ("hidden": true) bleiben beim erneuten Import ausgeblendet.
+//
+// Spots, die du Claude schickst, stehen in src/data/map-extra.json und kommen immer mit
+// auf die Karte. Sobald du sie auch in My Maps einträgst, erkennt der Import sie als
+// Dublette. Neue Spots für My Maps exportieren: node scripts/export-kml.mjs --neu
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -28,6 +32,8 @@ function folderType(name) {
 const ROOT = process.cwd();
 const MAP_FILE = path.join(ROOT, 'src', 'data', 'map.json');
 const COMMUNITY_FILE = path.join(ROOT, 'src', 'data', 'community.json');
+const EXTRA_FILE = path.join(ROOT, 'src', 'data', 'map-extra.json');
+export const MANUAL_LABEL = 'Von dir geschickt';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -155,6 +161,14 @@ for (const src of SOURCES) {
     console.log(`${src.label}: ${items.length} Punkte`);
     raw.push(...items.map((p) => ({ ...p, source: src.label })));
 }
+
+// Von dir geschickte Spots (map-extra.json) zuletzt: ist derselbe Ort schon in einer
+// Google-Karte, wird er dort zusammengefasst (der Name aus der Google-Karte bleibt).
+const extra = fs.existsSync(EXTRA_FILE) ? JSON.parse(fs.readFileSync(EXTRA_FILE, 'utf8')).spots || [] : [];
+console.log(`Von dir geschickt (map-extra.json): ${extra.length} Punkte`);
+raw.push(...extra
+    .filter((p) => typeof p.lat === 'number' && typeof p.lng === 'number')
+    .map((p) => ({ name: p.name || '', address: p.address || '', note: p.description || '', lat: p.lat, lng: p.lng, type: p.type || 'spot', source: MANUAL_LABEL })));
 
 // Zusammenführen
 const merged = [];

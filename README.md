@@ -43,3 +43,10 @@ GEMINI_API_KEY=…   # optional: News werden beim Veröffentlichen auf Deutsch/E
 - Ablaufende Bild-Links (Instagram, Bing) werden beim Veröffentlichen nach `public/uploads/posts/` kopiert.
 - Instagram: Admin → News → „Insta-Post übernehmen“ (Link + kopierter Text → Entwurf).
 - Jeder Beitrag hat eine eigene Seite unter `/news/<id>/`; die Startseite enthält nur die neuesten 60.
+
+## Skatemap (Community → Skatemap)
+
+- Quellen: Google-Karten in `scripts/import-maps.mjs` (SOURCES) plus `src/data/map-extra.json` (Spots, die du Claude schickst). Shops mit Position aus „Support Skate Shops“ kommen automatisch dazu.
+- `node scripts/import-maps.mjs` baut `src/data/map.json` neu (Dubletten werden zusammengefasst). Läuft automatisch bei jedem Autoscan.
+- `node scripts/export-kml.mjs` → `exports/curbside-skatemap.kml` (alles, für Google My Maps). Mit `--neu` → `exports/neue-spots.kml` (nur Spots aus `map-extra.json`, die noch in keiner Google-Karte stehen).
+- Google My Maps hat keine Schreib-Schnittstelle: neue Spots von Hand in My Maps importieren.

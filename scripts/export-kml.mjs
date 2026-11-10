@@ -1,8 +1,10 @@
 // Exportiert die komplette Skatemap (Spots, Skateparks, Shops) als KML-Datei,
 // die du in Google My Maps importieren kannst (Karte erstellen → Importieren).
 //
-// Aufruf:  node scripts/export-kml.mjs
-// Ergebnis: exports/curbside-skatemap.kml  (wird nicht zu GitHub hochgeladen)
+// Aufruf:  node scripts/export-kml.mjs        → exports/curbside-skatemap.kml (alles)
+//          node scripts/export-kml.mjs --neu  → exports/neue-spots.kml (nur Spots, die du
+//          Claude geschickt hast und die noch in keiner Google-Karte stehen)
+// Die Dateien werden nicht zu GitHub hochgeladen.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -17,7 +19,10 @@ const shops = (community.sections.find((s) => s.id === 'sec_shops')?.items || []
         description: [i.hours && `Öffnungszeiten: ${i.hours}`].filter(Boolean).join(' '),
         url: i.url,
     }));
-const points = [...(map.spots || []).filter((p) => !p.hidden), ...shops];
+const ONLY_NEW = process.argv.includes('--neu');
+const points = ONLY_NEW
+    ? (map.spots || []).filter((p) => p.source === 'Von dir geschickt')
+    : [...(map.spots || []).filter((p) => !p.hidden), ...shops];
 
 // Farben wie auf der Website. KML-Farben sind aabbggrr.
 const LAYERS = [
@@ -36,7 +41,7 @@ const styles = LAYERS.map((l) => `    <Style id="${l.style}">
       </IconStyle>
     </Style>`).join('\n');
 
-const folders = LAYERS.map((l) => {
+const folders = LAYERS.filter((l) => !ONLY_NEW || points.some((p) => p.type === l.type)).map((l) => {
     const items = points.filter((p) => p.type === l.type).sort((a, b) => a.name.localeCompare(b.name, 'de'));
     const placemarks = items.map((p) => {
         const desc = [p.address, p.description, p.url && !p.url.includes('google.com/maps') ? p.url : '']
@@ -56,7 +61,7 @@ ${placemarks}
 const kml = `<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>CURBSIDE Skatemap</name>
+    <name>${ONLY_NEW ? 'CURBSIDE – neue Spots' : 'CURBSIDE Skatemap'}</name>
     <description>Alle Spots, Skateparks und Skateshops von curbside.sortelba.com</description>
 ${styles}
 ${folders}
@@ -66,7 +71,7 @@ ${folders}
 
 const outDir = path.join(ROOT, 'exports');
 fs.mkdirSync(outDir, { recursive: true });
-const outFile = path.join(outDir, 'curbside-skatemap.kml');
+const outFile = path.join(outDir, ONLY_NEW ? 'neue-spots.kml' : 'curbside-skatemap.kml');
 fs.writeFileSync(outFile, kml);
 const count = (t) => points.filter((p) => p.type === t).length;
 console.log(`${outFile}\n${points.length} Punkte: ${count('park')} Skateparks, ${count('spot')} Spots, ${count('shop')} Shops`);
