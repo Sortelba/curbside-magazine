@@ -8,5 +8,19 @@
       "url": "https://www.google.com/maps/d/edit?mid=1FtaPkloZPeqY7XAiWhuMiWwGATPZiag&usp=sharing"
     }
   ],
-  "spots": []
+  "spots": [],
+  "closed": [
+    {
+      "name": "Pippos Vintage & Skateshop",
+      "lat": 49.31762,
+      "lng": 8.43696,
+      "note": "geschlossen (Info Nov. 2026)"
+    },
+    {
+      "name": "Arrow and Beast Skateshop",
+      "lat": 48.772421,
+      "lng": 9.174407,
+      "note": "geschlossen (Info Nov. 2026)"
+    }
+  ]
 }

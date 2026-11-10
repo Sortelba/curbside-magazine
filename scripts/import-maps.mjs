@@ -178,6 +178,14 @@ raw.push(...extra
     .filter((p) => typeof p.lat === 'number' && typeof p.lng === 'number')
     .map((p) => ({ name: p.name || '', address: p.address || '', note: p.description || '', lat: p.lat, lng: p.lng, type: p.type || 'spot', source: MANUAL_LABEL })));
 
+// Geschlossene Läden/abgerissene Spots (map-extra.json → "closed") nie übernehmen,
+// auch wenn sie noch in einer Google-Karte stehen
+const closed = EXTRA.closed || [];
+const isClosed = (p) => closed.some((c) => distanceM(c, p) < 60 && (!c.name || norm(c.name) === norm(p.name) || distanceM(c, p) < 10));
+const skippedClosed = raw.filter(isClosed).length;
+raw.splice(0, raw.length, ...raw.filter((p) => !isClosed(p)));
+if (skippedClosed) console.log(`${skippedClosed} geschlossene Einträge übersprungen`);
+
 // Zusammenführen
 const merged = [];
 let dupes = 0;

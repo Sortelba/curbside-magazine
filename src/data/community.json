@@ -425,18 +425,6 @@
           "lng": 11.02126
         },
         {
-          "id": "shop_rp_2",
-          "name": "Pippos Vintage & Skateshop",
-          "url": "https://www.pippos-shop.de/",
-          "description": "Rheinland-Pfalz",
-          "address": "Korngasse 4, 67346 Speyer",
-          "hours": "Di-Sa: 13:00–18:00",
-          "state": "Rheinland-Pfalz",
-          "image": "",
-          "lat": 49.31762,
-          "lng": 8.43696
-        },
-        {
           "id": "shop_hh_2",
           "name": "Lobby Skateshop",
           "url": "https://lobby-skateshop.de/",
