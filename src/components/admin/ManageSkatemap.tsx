@@ -17,6 +17,8 @@ export default function ManageSkatemap({ keyStr }: { keyStr: string }) {
     const [stats, setStats] = useState<any>(null);
     const [busy, setBusy] = useState<string | null>(null);
     const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+    // Was der letzte Scan geändert hat (neu, entfernt, verschoben, geändert)
+    const [changes, setChanges] = useState<any>(null);
 
     const [sourceUrl, setSourceUrl] = useState("");
     const [sourceType, setSourceType] = useState("spot");
@@ -43,12 +45,14 @@ export default function ManageSkatemap({ keyStr }: { keyStr: string }) {
     const run = async (id: string, body: any, success: (data: any) => string) => {
         setBusy(id);
         setMessage(null);
+        setChanges(null);
         try {
             const { res, data } = await call("POST", body);
             if (!res.ok || data.error) {
                 setMessage({ ok: false, text: data.error || data.summary || `Fehler (HTTP ${res.status})` });
                 return false;
             }
+            if (data.changes) setChanges(data.changes);
             setMessage({ ok: data.ok !== false, text: data.ok === false ? `Gespeichert, aber der Scan ist fehlgeschlagen: ${data.summary}` : success(data) });
             return true;
         } catch {
@@ -112,6 +116,8 @@ export default function ManageSkatemap({ keyStr }: { keyStr: string }) {
                     {message.text}
                 </p>
             )}
+
+            {changes && <ChangeList changes={changes} />}
 
             {/* Quellen */}
             <section className="space-y-3">
@@ -229,6 +235,49 @@ export default function ManageSkatemap({ keyStr }: { keyStr: string }) {
                 Änderungen sind nach dem nächsten Veröffentlichen (oder Autoscan) auf der Homepage.
                 Von Hand eingetragene Spots erscheinen nicht automatisch in My Maps – dafür gibt es die Datei „neue Spots“ (Claude fragen).
             </p>
+        </div>
+    );
+}
+
+// Liste der Änderungen nach einem Scan
+function ChangeList({ changes }: { changes: any }) {
+    const groups = [
+        { key: "added", title: "Neu", sign: "+", cls: "text-green-600" },
+        { key: "removed", title: "Entfernt", sign: "−", cls: "text-destructive" },
+        { key: "moved", title: "Verschoben", sign: "↔", cls: "text-blue-600" },
+        { key: "changed", title: "Geändert", sign: "✎", cls: "text-orange-500" },
+    ];
+    const total = groups.reduce((n, g) => n + (changes[g.key]?.length || 0), 0);
+    if (!total) {
+        return <p className="text-sm text-muted-foreground bg-muted/30 border border-border rounded-xl p-3">Keine Änderungen seit dem letzten Scan.</p>;
+    }
+    return (
+        <div className="bg-muted/30 border border-border rounded-xl p-4 space-y-4">
+            <p className="font-black uppercase tracking-tight text-sm">
+                Änderungen seit dem letzten Scan:{" "}
+                {groups.filter((g) => changes[g.key]?.length).map((g) => `${changes[g.key].length} ${g.title.toLowerCase()}`).join(", ")}
+            </p>
+            {groups.filter((g) => changes[g.key]?.length).map((g) => (
+                <div key={g.key}>
+                    <p className={cn("text-[10px] font-black uppercase tracking-widest mb-1", g.cls)}>{g.title} ({changes[g.key].length})</p>
+                    <ul className="space-y-1 max-h-60 overflow-y-auto pr-2">
+                        {changes[g.key].map((p: any, i: number) => (
+                            <li key={i} className="text-sm flex items-start gap-2">
+                                <span className={cn("font-black w-4 shrink-0", g.cls)}>{g.sign}</span>
+                                <span className="h-2.5 w-2.5 rounded-full shrink-0 mt-1.5" style={{ background: TYPE_COLOR[p.type] }} />
+                                <span className="min-w-0">
+                                    <a href={`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">
+                                        {p.name}
+                                    </a>{" "}
+                                    <span className="text-muted-foreground">({TYPE_LABEL[p.type] || p.type})</span>
+                                    {g.key === "moved" && <span className="text-muted-foreground"> – um {p.meters} m</span>}
+                                    {g.key === "changed" && <span className="block text-xs text-muted-foreground">{p.what.join(" · ")}</span>}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
         </div>
     );
 }

@@ -104,7 +104,7 @@ async function parseSource(url: string, type: string) {
 }
 
 /** Startet scripts/import-maps.mjs und gibt die Zusammenfassung zurück */
-function runImport(): Promise<{ ok: boolean; summary: string }> {
+function runImport(): Promise<{ ok: boolean; summary: string; changes?: any }> {
     return new Promise((resolve) => {
         const child = spawn(process.execPath, ['scripts/import-maps.mjs'], { cwd: ROOT });
         let out = '', err = '';
@@ -114,7 +114,14 @@ function runImport(): Promise<{ ok: boolean; summary: string }> {
         child.on('close', (code) => {
             clearTimeout(timer);
             const lines = (code === 0 ? out : err || out).trim().split('\n').filter(Boolean);
-            resolve({ ok: code === 0, summary: code === 0 ? lines.slice(-2).join(' ') : (lines.pop() || 'Import fehlgeschlagen') });
+            if (code !== 0) return resolve({ ok: false, summary: lines.pop() || 'Import fehlgeschlagen' });
+            // "Fertig: …" + Zeile danach als Zusammenfassung, Änderungen als JSON
+            const i = lines.findIndex((l) => l.startsWith('Fertig:'));
+            const summary = i >= 0 ? lines.slice(i, i + 2).join(' ') : lines.slice(-2).join(' ');
+            let changes = null;
+            const json = lines.find((l) => l.startsWith('CHANGES_JSON '));
+            try { if (json) changes = JSON.parse(json.slice('CHANGES_JSON '.length)); } catch { /* ohne Änderungsliste */ }
+            resolve({ ok: true, summary, changes });
         });
     });
 }

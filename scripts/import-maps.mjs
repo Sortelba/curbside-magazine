@@ -256,6 +256,49 @@ for (const sp of spots) {
 }
 fs.writeFileSync(MAP_FILE, JSON.stringify({ updated: new Date().toISOString().slice(0, 10), spots }, null, 2) + '\n');
 
+// ---------- Änderungen gegenüber dem letzten Scan ----------
+const oldSpots = previous.spots || [];
+const newById = new Map(spots.map((p) => [p.id, p]));
+const short = (p) => ({ name: p.name, type: p.type, lat: p.lat, lng: p.lng });
+let added = spots.filter((p) => !prevById.has(p.id));
+let removed = oldSpots.filter((p) => !newById.has(p.id));
+// Gleicher Name, nur ein Stück versetzt → "verschoben" statt neu + entfernt
+const moved = [];
+for (const p of [...added]) {
+    const o = removed.find((r) => r.type === p.type && norm(r.name) === norm(p.name) && distanceM(r, p) < 2000);
+    if (o) {
+        moved.push({ ...short(p), meters: Math.round(distanceM(o, p)) });
+        added = added.filter((x) => x !== p);
+        removed = removed.filter((x) => x !== o);
+    }
+}
+const changed = [];
+for (const p of spots) {
+    const o = prevById.get(p.id);
+    if (!o) continue;
+    const what = [];
+    if (o.name !== p.name) what.push(`Name: „${o.name}“ → „${p.name}“`);
+    if (o.type !== p.type) what.push(`Kategorie: ${o.type} → ${p.type}`);
+    if ((o.description || '') !== (p.description || '')) what.push('Beschreibung geändert');
+    if (what.length) changed.push({ ...short(p), what });
+}
+const changes = {
+    added: added.map(short),
+    removed: removed.map(short),
+    moved,
+    changed,
+};
+
 const count = (t) => spots.filter((s) => s.type === t).length;
 console.log(`\nFertig: ${spots.length} Punkte (${count('park')} Skateparks, ${count('spot')} Spots, ${count('shop')} Shops).`);
 console.log(`${dupes} Doppelte zusammengefasst, ${knownShopDupes} Shops waren schon bei „Support Skate Shops“, ${lookups} Ortsnamen ergänzt.`);
+const nChanges = changes.added.length + changes.removed.length + changes.moved.length + changes.changed.length;
+console.log(nChanges
+    ? `Änderungen: ${changes.added.length} neu, ${changes.removed.length} entfernt, ${changes.moved.length} verschoben, ${changes.changed.length} geändert.`
+    : 'Keine Änderungen seit dem letzten Scan.');
+for (const p of changes.added) console.log(`  + ${p.name} (${p.type})`);
+for (const p of changes.removed) console.log(`  - ${p.name} (${p.type})`);
+for (const p of changes.moved) console.log(`  ~ ${p.name} um ${p.meters} m verschoben`);
+for (const p of changes.changed) console.log(`  * ${p.name}: ${p.what.join(', ')}`);
+// Maschinenlesbar für das Admin-Dashboard
+console.log(`CHANGES_JSON ${JSON.stringify(changes)}`);
