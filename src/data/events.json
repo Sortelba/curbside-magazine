@@ -1,5 +1,15 @@
 [
   {
+    "id": "event_1794360000005",
+    "title": "SLS Super Crown World Championship 2026",
+    "date": "12.12.2026 - 13.12.2026",
+    "startDateUtc": "2026-12-12",
+    "location": "Ginásio do Ibirapuera, São Paulo, Brasilien",
+    "link": "https://www.streetleague.com/supercrownwc2026",
+    "description": "Das große Finale der Street League Skateboarding (SLS) Saison 2026: Beim Super Crown in São Paulo wird entschieden, wer Street-Weltmeister wird. Präsentiert von BB Seguros.\n\nNeu am 12.12.: der SLS Nations Cup – ein Team-Contest mit vier Teams (Brasilien, USA, Japan und „World“), die um 100.000 $ fahren. Pro Team zählt der beste Einzeltrick jedes der vier Fahrer, jeder 9 Club im Finale bringt einen Bonuspunkt.\n\nTickets gibt's über Ticketmaster Brasil. Infos zum Livestream folgen auf streetleague.com.",
+    "flyerUrl": "/uploads/events/sls-super-crown-sao-paulo-2026.jpg"
+  },
+  {
     "id": "event_1794360000004",
     "title": "Österreichische Staatsmeisterschaft Skateboarding Park 2026",
     "date": "12.12.2026",
