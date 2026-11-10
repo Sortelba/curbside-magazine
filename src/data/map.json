@@ -1,3 +1,4340 @@
 {
-  "spots": []
+  "updated": "2026-11-10",
+  "spots": [
+    {
+      "id": "park_48d51545_9d04580",
+      "name": "3-in-One",
+      "type": "park",
+      "lat": 48.515448,
+      "lng": 9.045798,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.515448,9.045798",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_44d76234_m1d07804",
+      "name": "Andernos Skatepark",
+      "type": "park",
+      "lat": 44.762341,
+      "lng": -1.078039,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.762341,-1.078039",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d95539_8d23535",
+      "name": "Au am Rhein Skatepark",
+      "type": "park",
+      "lat": 48.955392,
+      "lng": 8.235347,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.955392,8.235347",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d34390_6d34898",
+      "name": "Baume-les-dames Skatepark",
+      "type": "park",
+      "lat": 47.343901,
+      "lng": 6.348982,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.343901,6.348982",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d65657_6d85551",
+      "name": "Belfort Skatepark",
+      "type": "park",
+      "lat": 47.656572,
+      "lng": 6.855512,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.656572,6.855512",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d23152_6d01797",
+      "name": "Besançon Skatepark",
+      "type": "park",
+      "lat": 47.231525,
+      "lng": 6.017965,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.231525,6.017965",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d96937_7d88446",
+      "name": "BMX- & Skateanlage im Mäuseturmpark",
+      "type": "park",
+      "lat": 49.969372,
+      "lng": 7.884462,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.969372,7.884462",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d52077_6d93062",
+      "name": "Bottrop Skatepark",
+      "type": "park",
+      "lat": 51.520775,
+      "lng": 6.930618,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.520775,6.930618",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_43d25187_5d37463",
+      "name": "Bowl de Marseille",
+      "type": "park",
+      "lat": 43.251866,
+      "lng": 5.374627,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.251866,5.374627",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_52d47207_13d41660",
+      "name": "Bucht DIY Skatepark",
+      "type": "park",
+      "lat": 52.472067,
+      "lng": 13.416596,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.472067,13.416596",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d70502_8d12683",
+      "name": "Bühl Skatepark",
+      "type": "park",
+      "lat": 48.705025,
+      "lng": 8.126828,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.705025,8.126828",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_39d36659_3d21837",
+      "name": "Cala d'Or Skatepark",
+      "type": "park",
+      "lat": 39.366592,
+      "lng": 3.218375,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.366592,3.218375",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d05153_m0d87741",
+      "name": "Cholet Skatepark",
+      "type": "park",
+      "lat": 47.051528,
+      "lng": -0.877415,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.051528,-0.877415",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d88707_2d59020",
+      "name": "Cosanostra Skatepark",
+      "type": "park",
+      "lat": 48.887072,
+      "lng": 2.590196,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.887072,2.590196",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d78276_9d17415",
+      "name": "curb to gap",
+      "type": "park",
+      "lat": 48.782761,
+      "lng": 9.174153,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782761,9.174153",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d84903_m0d55933",
+      "name": "Darwin",
+      "type": "park",
+      "lat": 44.849031,
+      "lng": -0.559326,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.849031,-0.559326",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d46119_2d25127",
+      "name": "De Pomar Skatepark",
+      "type": "park",
+      "lat": 41.461194,
+      "lng": 2.251266,
+      "description": "B4 | B7 | B25 | B27 -> Riera de Canyadó - Bronze",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.461194,2.251266",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d16703_m8d64406",
+      "name": "DIY Porto",
+      "type": "park",
+      "lat": 41.167026,
+      "lng": -8.644064,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.167026,-8.644064",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d51579_2d11363",
+      "name": "DIY Spotters",
+      "type": "park",
+      "lat": 41.515786,
+      "lng": 2.113632,
+      "description": "R4 -> Barberà del Vallès",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.515786,2.113632",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_28d04634_m16d54056",
+      "name": "El Médano Skatepark",
+      "type": "park",
+      "lat": 28.046337,
+      "lng": -16.540555,
+      "url": "https://www.google.com/maps/search/?api=1&query=28.046337,-16.540555",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d80867_9d26849",
+      "name": "Fellbach Schwimmbad",
+      "type": "park",
+      "lat": 48.808672,
+      "lng": 9.268486,
+      "description": "Super Big street place with big red sculpture u can skate. plus more curbs.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.808672,9.268486",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d40731_2d22042",
+      "name": "Fòrum Skate Park",
+      "type": "park",
+      "lat": 41.40731,
+      "lng": 2.220418,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.407310,2.220418",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d95482_8d47195",
+      "name": "Freizeitfläche Berzallee im Regionalpark RheinMain",
+      "type": "park",
+      "lat": 49.954816,
+      "lng": 8.47195,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.954816,8.471950",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d44370_8d69451",
+      "name": "Funpark Marmorwerk",
+      "type": "park",
+      "lat": 48.443699,
+      "lng": 8.694512,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.443699,8.694512",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d49555_13d37341",
+      "name": "Gleisdreieck - Skatepark",
+      "type": "park",
+      "lat": 52.495553,
+      "lng": 13.373408,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.495553,13.373408",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_44d76763_m0d60794",
+      "name": "Gradignan Skatepark",
+      "type": "park",
+      "lat": 44.767631,
+      "lng": -0.607945,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.767631,-0.607945",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d61746_m1d09744",
+      "name": "Gujan-Mestras Skatepark",
+      "type": "park",
+      "lat": 44.617463,
+      "lng": -1.097444,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.617463,-1.097444",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d91737_6d97042",
+      "name": "KAP686 Skateplaza",
+      "type": "park",
+      "lat": 50.917375,
+      "lng": 6.970418,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.917375,6.970418",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d93550_5d34898",
+      "name": "Kapermolen Skatepark",
+      "type": "park",
+      "lat": 50.935495,
+      "lng": 5.348985,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.935495,5.348985",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d83398_3d27026",
+      "name": "Kortrijk Skatepark",
+      "type": "park",
+      "lat": 50.83398,
+      "lng": 3.270262,
+      "description": "Bowl",
+      "url": "https://www.google.com/maps/search/?api=1&query=50.833980,3.270262",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d45830_2d24540",
+      "name": "La Bòbila DIY",
+      "type": "park",
+      "lat": 41.458301,
+      "lng": 2.245397,
+      "description": "L2 -> Badalona Pompeu Fabra",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.458301,2.245397",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_28d05892_m16d72881",
+      "name": "Las Américas Skatepark",
+      "type": "park",
+      "lat": 28.058916,
+      "lng": -16.728814,
+      "url": "https://www.google.com/maps/search/?api=1&query=28.058916,-16.728814",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_28d01456_m16d64882",
+      "name": "Las Galletas Plaza",
+      "type": "park",
+      "lat": 28.014558,
+      "lng": -16.648817,
+      "url": "https://www.google.com/maps/search/?api=1&query=28.014558,-16.648817",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d60097_m0d75993",
+      "name": "Le Barp Skatepark",
+      "type": "park",
+      "lat": 44.600972,
+      "lng": -0.759934,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.600972,-0.759934",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d80040_7d76043",
+      "name": "Le Bowl d'Hag Skatepark",
+      "type": "park",
+      "lat": 48.800398,
+      "lng": 7.76043,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.800398,7.760430",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d21983_m1d51349",
+      "name": "Le Hangar Skatepark",
+      "type": "park",
+      "lat": 47.219832,
+      "lng": -1.513488,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.219832,-1.513488",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_51d34339_12d37190",
+      "name": "Leipzig City Park (Skatepark)",
+      "type": "park",
+      "lat": 51.343391,
+      "lng": 12.371897,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.343391,12.371897",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_44d85366_m0d56592",
+      "name": "Les Chartrons Skatepark",
+      "type": "park",
+      "lat": 44.853659,
+      "lng": -0.565924,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.853659,-0.565924",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d90714_m0d24063",
+      "name": "Libourne Skatepark",
+      "type": "park",
+      "lat": 44.907142,
+      "lng": -0.240634,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.907142,-0.240634",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d39796_2d21042",
+      "name": "Marbella Skatepark",
+      "type": "park",
+      "lat": 41.397964,
+      "lng": 2.210424,
+      "description": "L4 -> Poblenou",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.397964,2.210424",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d21426_m1d28221",
+      "name": "Mimizan Skatepark",
+      "type": "park",
+      "lat": 44.214264,
+      "lng": -1.282209,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.214264,-1.282209",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_52d42541_9d71996",
+      "name": "Miniramp Langenhagen",
+      "type": "park",
+      "lat": 52.425412,
+      "lng": 9.719956,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.425412,9.719956",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_46d84269_m0d48629",
+      "name": "Mogwaï Skatepark",
+      "type": "park",
+      "lat": 46.842691,
+      "lng": -0.486295,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.842691,-0.486295",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d99432_2d73995",
+      "name": "Montargis Skatepark",
+      "type": "park",
+      "lat": 47.994316,
+      "lng": 2.739952,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.994316,2.739952",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_47d05324_6d60753",
+      "name": "Morteau Skatepark",
+      "type": "park",
+      "lat": 47.053235,
+      "lng": 6.607528,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.053235,6.607528",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d09551_14d44171",
+      "name": "Mystic Skatepark Štvanice",
+      "type": "park",
+      "lat": 50.095505,
+      "lng": 14.441714,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.095505,14.441714",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d44001_4d86337",
+      "name": "Namur Skatepark",
+      "type": "park",
+      "lat": 50.440009,
+      "lng": 4.863366,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.440009,4.863366",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d38506_2d16642",
+      "name": "Nevermind Bowl",
+      "type": "park",
+      "lat": 41.385064,
+      "lng": 2.166415,
+      "description": "L1 | L2 -> Universitat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.385064,2.166415",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d72944_9d32130",
+      "name": "Oberesslingen Skatepark",
+      "type": "park",
+      "lat": 48.729445,
+      "lng": 9.321299,
+      "description": "Der einzige Park hier in der Gegend der auch bei Regen Fahrbar ist. Beton Bowl, Minirampe, Streetfläche aus Holz. Lohnt sich...",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.729445,9.321299",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d41999_2d20782",
+      "name": "Olas",
+      "type": "park",
+      "lat": 41.419988,
+      "lng": 2.207816,
+      "description": "L4 -> Besòs",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.419988,2.207816",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d22220_2d92454",
+      "name": "Ostende Skatepark",
+      "type": "park",
+      "lat": 51.222198,
+      "lng": 2.924541,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.222198,2.924541",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d72235_9d26358",
+      "name": "Ostfildern Skate Park",
+      "type": "park",
+      "lat": 48.722354,
+      "lng": 9.263575,
+      "description": "Ziemlich guter Betonskatepark mit halbem Bowl und so weiter, sieht man ja hier. Meistens viele Skateboarder da. Ansonsten noch ein Beachvolleyballfeld, Fussballplatz und so weiter, man kann auf jeden Fall angenehm seien Zeit hier verbringen. Angeblich gibt es in dem neu gebauten Stadtteil im Anschlu",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.722354,9.263575",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_42d67741_2d90296",
+      "name": "Perpignan Skatepark",
+      "type": "park",
+      "lat": 42.677409,
+      "lng": 2.902956,
+      "url": "https://www.google.com/maps/search/?api=1&query=42.677409,2.902956",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_42d70026_2d90430",
+      "name": "Perpignan Skatepark #2",
+      "type": "park",
+      "lat": 42.700264,
+      "lng": 2.904302,
+      "url": "https://www.google.com/maps/search/?api=1&query=42.700264,2.904302",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d45351_11d11438",
+      "name": "POPULÄR Handcrafted Skateparks e.K.",
+      "type": "park",
+      "lat": 49.45351,
+      "lng": 11.114381,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.453510,11.114381",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_28d40584_m16d55055",
+      "name": "Puerto de la Cruz Skatepark",
+      "type": "park",
+      "lat": 28.40584,
+      "lng": -16.550549,
+      "description": "Bus 101 -> Escuela de Turismo",
+      "url": "https://www.google.com/maps/search/?api=1&query=28.405840,-16.550549",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d37557_2d16993",
+      "name": "Pump track del Paral·lel",
+      "type": "park",
+      "lat": 41.37557,
+      "lng": 2.16993,
+      "description": "L2 | L3 -> Paral-lel",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.375570,2.169930",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d18841_10d06906",
+      "name": "Pumptrack Eschwege",
+      "type": "park",
+      "lat": 51.18841,
+      "lng": 10.069062,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.188410,10.069062",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d85179_8d21519",
+      "name": "Rastatt Skatepark",
+      "type": "park",
+      "lat": 48.851794,
+      "lng": 8.215193,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.851794,8.215193",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d51170_6d01849",
+      "name": "Red Rock Skatepark",
+      "type": "park",
+      "lat": 49.511701,
+      "lng": 6.018488,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.511701,6.018488",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_51d33505_12d40245",
+      "name": "Reudnitz Skatepark",
+      "type": "park",
+      "lat": 51.335047,
+      "lng": 12.402445,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.335047,12.402445",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d01994_8d35411",
+      "name": "Rollbrett e.V. Skatehalle",
+      "type": "park",
+      "lat": 49.019939,
+      "lng": 8.354107,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.019939,8.354107",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d00227_8d42741",
+      "name": "Rollbrett_e.V. Skatehalle",
+      "type": "park",
+      "lat": 49.002266,
+      "lng": 8.427408,
+      "description": "Mittwoch bist sonntag 16-22 Uhr skaten. 3 verschieden hohe miniramp sections, ledges und manni pads. eintritt 2€ für mitglieder und 5€ für nicht mitglieder. mehr infos: https://rollbrett-ev.de/",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.002266,8.427408",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d50087_7d47938",
+      "name": "Rosheim Skatepark",
+      "type": "park",
+      "lat": 48.500871,
+      "lng": 7.479383,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.500871,7.479383",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d58916_7d72435",
+      "name": "Rotonde | Cronenbourg Skatepark",
+      "type": "park",
+      "lat": 48.589157,
+      "lng": 7.724346,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.589157,7.724346",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_45d62054_m1d00093",
+      "name": "Royan Skatepark",
+      "type": "park",
+      "lat": 45.620539,
+      "lng": -1.000926,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.620539,-1.000926",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_39d58540_2d63939",
+      "name": "Sa Riera Skatepark",
+      "type": "park",
+      "lat": 39.585404,
+      "lng": 2.63939,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.585404,2.639390",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_45d00893_m0d44446",
+      "name": "Saint André de Cubzac Skatepark",
+      "type": "park",
+      "lat": 45.008934,
+      "lng": -0.444464,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.008934,-0.444464",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d46965_7d14009",
+      "name": "Saint Wendel Skatepark",
+      "type": "park",
+      "lat": 49.469646,
+      "lng": 7.140091,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.469646,7.140091",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_45d74274_m0d62773",
+      "name": "Saintes Skatepark",
+      "type": "park",
+      "lat": 45.742745,
+      "lng": -0.627728,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.742745,-0.627728",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d61023_6d21041",
+      "name": "Sandweiler Skatepark",
+      "type": "park",
+      "lat": 49.610229,
+      "lng": 6.210412,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.610229,6.210412",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d42231_2d23104",
+      "name": "Sant Andrià del Besòs Skatepark",
+      "type": "park",
+      "lat": 41.422315,
+      "lng": 2.231045,
+      "description": "T5 -> Sant Joan Baptista",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.422315,2.231045",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d73036_7d35291",
+      "name": "Saverne Skatepark",
+      "type": "park",
+      "lat": 48.730362,
+      "lng": 7.352911,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.730362,7.352911",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d23495_m8d61468",
+      "name": "Skate Park da Maia",
+      "type": "park",
+      "lat": 41.234952,
+      "lng": -8.614684,
+      "description": "Métro C Forum Maia",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.234952,-8.614684",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d27978_8d85524",
+      "name": "Skate Park Hindenburgstraße",
+      "type": "park",
+      "lat": 48.279781,
+      "lng": 8.855244,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.279781,8.855244",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d24004_8d87175",
+      "name": "Skate Park Hurdnagelstraße",
+      "type": "park",
+      "lat": 48.240039,
+      "lng": 8.871754,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.240039,8.871754",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d86653_9d22166",
+      "name": "Skate- und BMX Park Pattonville",
+      "type": "park",
+      "lat": 48.866532,
+      "lng": 9.221664,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.866532,9.221664",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d20035_8d21269",
+      "name": "Skateanlage Offenbach",
+      "type": "park",
+      "lat": 49.200349,
+      "lng": 8.212687,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.200349,8.212687",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d31466_9d49763",
+      "name": "Skateanlage Untere Karlsstraße",
+      "type": "park",
+      "lat": 51.314656,
+      "lng": 9.497632,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.314656,9.497632",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d07957_12d88865",
+      "name": "Skateanlage Viechtach",
+      "type": "park",
+      "lat": 49.079569,
+      "lng": 12.888649,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.079569,12.888649",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d27220_12d37064",
+      "name": "Skatepark - Multisportanlage Städtelner Strasse",
+      "type": "park",
+      "lat": 51.272204,
+      "lng": 12.370643,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.272204,12.370643",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d11095_6d18473",
+      "name": "Skatepark / Bowl de Metz",
+      "type": "park",
+      "lat": 49.110953,
+      "lng": 6.184726,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.110953,6.184726",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d81256_9d23653",
+      "name": "Skatepark + Racestrecke?",
+      "type": "park",
+      "lat": 48.812562,
+      "lng": 9.236525,
+      "description": "Keine Ahnung was das genau ist, habs nur mal kurz aus dem Auto gesehen, aber scheint mit ne RaceStrecke mit nem kleinen Betonskatepark zu sein.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.812562,9.236525",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_52d36746_9d69653",
+      "name": "Skatepark 2er Skateboarding e. V.",
+      "type": "park",
+      "lat": 52.367455,
+      "lng": 9.696527,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.367455,9.696527",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d72909_9d32144",
+      "name": "Skatepark Adenauer Brücke",
+      "type": "park",
+      "lat": 48.729089,
+      "lng": 9.321439,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.729089,9.321439",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d35542_7d59992",
+      "name": "Skatepark am Schloss",
+      "type": "park",
+      "lat": 50.355418,
+      "lng": 7.599918,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.355418,7.599918",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d42492_7d42355",
+      "name": "Skatepark Andernach",
+      "type": "park",
+      "lat": 50.424921,
+      "lng": 7.423555,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.424921,7.423555",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d23151_4d41927",
+      "name": "Skatepark Antwerpen",
+      "type": "park",
+      "lat": 51.231508,
+      "lng": 4.419268,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.231508,4.419268",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d81173_9d21184",
+      "name": "Skatepark Bad Cannstatt",
+      "type": "park",
+      "lat": 48.811732,
+      "lng": 9.211843,
+      "description": "Kleiner Skatepark, war noch nie dort, soll aber laut aussage meiner Freunde, ( die Skateboard fahren) ganz lustig sein.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.811732,9.211843",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_38d73468_m9d12581",
+      "name": "Skatepark Bairro Horizonte",
+      "type": "park",
+      "lat": 38.734682,
+      "lng": -9.125806,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.734682,-9.125806",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d93024_4d04427",
+      "name": "Skatepark Betong",
+      "type": "park",
+      "lat": 50.930243,
+      "lng": 4.044273,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.930243,4.044273",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d77580_9d13373",
+      "name": "Skatepark Botnang",
+      "type": "park",
+      "lat": 48.775797,
+      "lng": 9.133726,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.775797,9.133726",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_53d10062_8d76223",
+      "name": "Skatepark Bremen Überseepark",
+      "type": "park",
+      "lat": 53.100619,
+      "lng": 8.762232,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.100619,8.762232",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d19101_12d04163",
+      "name": "Skatepark Burglengenfeld",
+      "type": "park",
+      "lat": 49.191009,
+      "lng": 12.041633,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.191009,12.041633",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d44986_2d19970",
+      "name": "Skatepark de Baró de Viver",
+      "type": "park",
+      "lat": 41.449859,
+      "lng": 2.199702,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.449859,2.199702",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d35751_2d07161",
+      "name": "Skatepark de L'Estació (Cornellà)",
+      "type": "park",
+      "lat": 41.35751,
+      "lng": 2.071611,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.357510,2.071611",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d37708_2d10923",
+      "name": "Skatepark de Les Corts",
+      "type": "park",
+      "lat": 41.377079,
+      "lng": 2.109232,
+      "description": "L5 -> Pubilla Cases",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.377079,2.109232",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d35945_2d11672",
+      "name": "Skatepark del Gornal",
+      "type": "park",
+      "lat": 41.359453,
+      "lng": 2.116722,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.359453,2.116722",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d84184_4d35024",
+      "name": "Skatepark des Ursulines",
+      "type": "park",
+      "lat": 50.841841,
+      "lng": 4.350236,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.841841,4.350236",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d52164_9d35474",
+      "name": "Skatepark Dettingen an der Erms",
+      "type": "park",
+      "lat": 48.521639,
+      "lng": 9.35474,
+      "description": "Ziemlich guter Holz-Skatepark auf 2 Ebenen, mit dem BMX wie ich finde allerdings etwas stressig weil die Rampen recht nahe beieinander Stehen.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.521639,9.354740",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d36654_8d02434",
+      "name": "Skatepark Diez",
+      "type": "park",
+      "lat": 50.366544,
+      "lng": 8.024336,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.366544,8.024336",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d17482_m8d64325",
+      "name": "Skatepark do Viso",
+      "type": "park",
+      "lat": 41.17482,
+      "lng": -8.643253,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.174820,-8.643253",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_51d02467_4d49261",
+      "name": "Skatepark Douaneplein",
+      "type": "park",
+      "lat": 51.024667,
+      "lng": 4.49261,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.024667,4.492610",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d29047_9d72735",
+      "name": "Skatepark Ehingen",
+      "type": "park",
+      "lat": 48.290475,
+      "lng": 9.727355,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.290475,9.727355",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d67301_8d53244",
+      "name": "Skatepark Einhausen",
+      "type": "park",
+      "lat": 49.673007,
+      "lng": 8.532442,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.673007,8.532442",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d10724_8d62311",
+      "name": "Skatepark Europaviertel",
+      "type": "park",
+      "lat": 50.107237,
+      "lng": 8.62311,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.107237,8.623110",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d44326_2d17102",
+      "name": "Skatepark Favència",
+      "type": "park",
+      "lat": 41.443258,
+      "lng": 2.171022,
+      "description": "L3 -> Canyelles",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.443258,2.171022",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d10198_8d66617",
+      "name": "Skatepark Friedensbrücke",
+      "type": "park",
+      "lat": 50.101982,
+      "lng": 8.66617,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.101982,8.666170",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d21954_8d35921",
+      "name": "Skatepark Germersheim",
+      "type": "park",
+      "lat": 49.219536,
+      "lng": 8.359208,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.219536,8.359208",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d48075_13d41627",
+      "name": "Skatepark Hasenheide",
+      "type": "park",
+      "lat": 52.480746,
+      "lng": 13.416266,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.480746,13.416266",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d81380_9d08146",
+      "name": "Skatepark Hausen",
+      "type": "park",
+      "lat": 48.813802,
+      "lng": 9.081459,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.813802,9.081459",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d41499_8d64685",
+      "name": "Skatepark Heidelberg Wieblingen",
+      "type": "park",
+      "lat": 49.414993,
+      "lng": 8.646849,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.414993,8.646849",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d09546_8d54435",
+      "name": "Skatepark Höchst",
+      "type": "park",
+      "lat": 50.095464,
+      "lng": 8.544355,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.095464,8.544355",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d60101_6d11514",
+      "name": "Skatepark Hollerich",
+      "type": "park",
+      "lat": 49.601013,
+      "lng": 6.115137,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.601013,6.115137",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d52863_13d43212",
+      "name": "Skatepark im Volkspark Friedrichshain",
+      "type": "park",
+      "lat": 52.528634,
+      "lng": 13.432116,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.528634,13.432116",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d18333_9d08802",
+      "name": "Skatepark Kaiseringen",
+      "type": "park",
+      "lat": 48.183329,
+      "lng": 9.088015,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.183329,9.088015",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d19453_8d64968",
+      "name": "Skatepark Kalbach",
+      "type": "park",
+      "lat": 50.19453,
+      "lng": 8.649684,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.194530,8.649684",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d27634_14d09545",
+      "name": "Skatepark Kamenz",
+      "type": "park",
+      "lat": 51.276338,
+      "lng": 14.095448,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.276338,14.095448",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d07554_8d19060",
+      "name": "Skatepark Kandel",
+      "type": "park",
+      "lat": 49.075542,
+      "lng": 8.190598,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.075542,8.190598",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d00299_8d43133",
+      "name": "Skatepark Karlsruhe, Otto-Dullenkopf-Anlage Ostring",
+      "type": "park",
+      "lat": 49.002989,
+      "lng": 8.431331,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.002989,8.431331",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d18667_8d12953",
+      "name": "Skatepark Kernstadt",
+      "type": "park",
+      "lat": 49.186668,
+      "lng": 8.12953,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.186668,8.129530",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d48752_9d00647",
+      "name": "Skatepark Kilchberg-Tübingen",
+      "type": "park",
+      "lat": 48.48752,
+      "lng": 9.006465,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.487520,9.006465",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d83924_12d90867",
+      "name": "Skatepark Konkordiapark",
+      "type": "park",
+      "lat": 50.839236,
+      "lng": 12.908669,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.839236,12.908669",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d37935_2d08324",
+      "name": "Skatepark La Mallola",
+      "type": "park",
+      "lat": 41.379353,
+      "lng": 2.083235,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.379353,2.083235",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d35654_2d14079",
+      "name": "Skatepark la Marina",
+      "type": "park",
+      "lat": 41.356537,
+      "lng": 2.140786,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.356537,2.140786",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d05052_12d09289",
+      "name": "Skatepark Lappersdorf",
+      "type": "park",
+      "lat": 49.050524,
+      "lng": 12.092885,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.050524,12.092885",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d54246_9d92039",
+      "name": "Skatepark Leineufer Göttingen",
+      "type": "park",
+      "lat": 51.542459,
+      "lng": 9.92039,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.542459,9.920390",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d36386_9d72155",
+      "name": "Skatepark Linden-Süd",
+      "type": "park",
+      "lat": 52.363859,
+      "lng": 9.721547,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.363859,9.721547",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d13362_9d54426",
+      "name": "Skatepark Melsungen",
+      "type": "park",
+      "lat": 51.133618,
+      "lng": 9.544257,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.133618,9.544257",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_38d72127_m9d18962",
+      "name": "Skatepark Monsanto",
+      "type": "park",
+      "lat": 38.721274,
+      "lng": -9.189618,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.721274,-9.189618",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_51d19678_6d70394",
+      "name": "Skatepark Neuss",
+      "type": "park",
+      "lat": 51.196778,
+      "lng": 6.703941,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.196778,6.703941",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d34532_12d17969",
+      "name": "Skatepark Nova Eventis",
+      "type": "park",
+      "lat": 51.345316,
+      "lng": 12.179692,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.345316,12.179692",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d62951_9d32798",
+      "name": "Skatepark Nürtingen",
+      "type": "park",
+      "lat": 48.629512,
+      "lng": 9.327983,
+      "description": "Kleiner Skatepark mit einer Metallquarter, einer Betonfunbox mit curb, zwei Grindboxen und einer verdammt steieln Bank. Klingt nach nix besonderem, aber wo kann man schon wenn man grade nicht fährt Mädels beim Beachvolleyballspielen zuschauen? :-)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.629512,9.327983",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_52d13333_9d95117",
+      "name": "Skatepark Ochtersum",
+      "type": "park",
+      "lat": 52.133328,
+      "lng": 9.951167,
+      "address": "Skatepark, 31139 Hildesheim",
+      "url": "https://www.google.com/maps/search/?api=1&query=52.133328,9.951167",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d71400_7d38773",
+      "name": "Skatepark Olfen",
+      "type": "park",
+      "lat": 51.713997,
+      "lng": 7.387731,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.713997,7.387731",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d28026_8d05672",
+      "name": "Skatepark Osna",
+      "type": "park",
+      "lat": 52.280263,
+      "lng": 8.056717,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.280263,8.056717",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d89060_9d21700",
+      "name": "Skatepark Oßweil",
+      "type": "park",
+      "lat": 48.890603,
+      "lng": 9.216998,
+      "description": "Schmale minirampe, Quarter mit 90° Kurve und jumpbox mit sinnlosen ca 10 cm hohen rails.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.890603,9.216998",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_50d10858_8d70833",
+      "name": "Skatepark Osthafen Frankfurt",
+      "type": "park",
+      "lat": 50.10858,
+      "lng": 8.708327,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.108580,8.708327",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d29754_2d00207",
+      "name": "Skatepark Parc del Calamot",
+      "type": "park",
+      "lat": 41.297543,
+      "lng": 2.002072,
+      "description": "R2 -> Gavà",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.297543,2.002072",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_49d60662_6d13290",
+      "name": "Skatepark Péitruss",
+      "type": "park",
+      "lat": 49.606625,
+      "lng": 6.132902,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.606625,6.132902",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d53019_13d36151",
+      "name": "Skatepark Poststadion",
+      "type": "park",
+      "lat": 52.530192,
+      "lng": 13.361509,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.530192,13.361509",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d79287_9d18714",
+      "name": "Skatepark Pragfriedhof",
+      "type": "park",
+      "lat": 48.792874,
+      "lng": 9.187145,
+      "description": "Indoor Skateplaza with big bowl area and good flat plus crubs, rail, 2 block gap.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.792874,9.187145",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_38d81693_m9d16642",
+      "name": "Skatepark Redondo Do SAC",
+      "type": "park",
+      "lat": 38.816931,
+      "lng": -9.166422,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.816931,-9.166422",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d49255_9d20709",
+      "name": "Skatepark Reutlingen",
+      "type": "park",
+      "lat": 48.492546,
+      "lng": 9.207094,
+      "description": "Good Skatepark With big bowl to snakerun with spin situation. also 3 solid curbs. some lil Bump to rail in the park. and sometimes a lot of peaple sitting on the curbs... it in the middle of the city. but cool!.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.492546,9.207094",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d33876_9d67725",
+      "name": "Skatepark Ronnenberg",
+      "type": "park",
+      "lat": 52.338757,
+      "lng": 9.677248,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.338757,9.677248",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d38883_2d04247",
+      "name": "Skatepark Sant Feliu De Llobregat",
+      "type": "park",
+      "lat": 41.388834,
+      "lng": 2.042466,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.388834,2.042466",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_41d36411_2d11568",
+      "name": "Skatepark Sant Josep",
+      "type": "park",
+      "lat": 41.364106,
+      "lng": 2.115677,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.364106,2.115677",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_50d65182_8d32606",
+      "name": "Skatepark Sinn",
+      "type": "park",
+      "lat": 50.651818,
+      "lng": 8.326064,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.651818,8.326064",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d48343_10d98833",
+      "name": "Skatepark Sportanlage Charly-Mai",
+      "type": "park",
+      "lat": 49.48343,
+      "lng": 10.988329,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.483430,10.988329",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d45140_11d06778",
+      "name": "Skatepark STG Nürnberg Burggraben",
+      "type": "park",
+      "lat": 49.451397,
+      "lng": 11.067775,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.451397,11.067775",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d61551_6d07012",
+      "name": "Skatepark Stroossen",
+      "type": "park",
+      "lat": 49.615507,
+      "lng": 6.070122,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.615507,6.070122",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d77314_9d18176",
+      "name": "Skatepark Stuttgart-Mitte",
+      "type": "park",
+      "lat": 48.77314,
+      "lng": 9.181759,
+      "description": "leicht abschüssiger Skatepark mit einer großen Quarter am unteren Ende, einer Bank und einer Funbox, ner halben Pyra, und einigen Curbs mit Stahlrohrkante und Lowrails.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.773140,9.181759",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d78004_9d16413",
+      "name": "Skatepark Stuttgart-West",
+      "type": "park",
+      "lat": 48.780044,
+      "lng": 9.164132,
+      "description": "Gurkiger kleiner Concrete Rudolph Skatepark mit Minirampe, Quarter und anderem (meiner meinung nicht wirklich fahrbarem) Gedöns.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.780044,9.164132",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d52253_9d03768",
+      "name": "Skatepark Tübingen-West",
+      "type": "park",
+      "lat": 48.522528,
+      "lng": 9.037682,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.522528,9.037682",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_47d76383_9d19939",
+      "name": "Skatepark Überlingen-Nußdorf",
+      "type": "park",
+      "lat": 47.763832,
+      "lng": 9.199388,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.763832,9.199388",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d46827_13d41205",
+      "name": "Skatepark Vogelfreiheit",
+      "type": "park",
+      "lat": 52.468273,
+      "lng": 13.412045,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.468273,13.412045",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d84912_9d18151",
+      "name": "Skatepark Zuffenhausen",
+      "type": "park",
+      "lat": 48.849118,
+      "lng": 9.181507,
+      "description": "War noch nie da, sieht aber von hier oben nicht schlecht aus :-)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.849118,9.181507",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d95209_8d48157",
+      "name": "Skateranlage",
+      "type": "park",
+      "lat": 48.952086,
+      "lng": 8.48157,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.952086,8.481570",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d10228_8d38629",
+      "name": "Skateranlage Leopoldshafen",
+      "type": "park",
+      "lat": 49.10228,
+      "lng": 8.386292,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.102280,8.386292",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d99876_8d37607",
+      "name": "Skaterpark Günther-Klotz-Anlage",
+      "type": "park",
+      "lat": 48.998756,
+      "lng": 8.376069,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.998756,8.376069",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_51d35927_9d46753",
+      "name": "Skaterpark Vellmar",
+      "type": "park",
+      "lat": 51.359266,
+      "lng": 9.467533,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.359266,9.467533",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d45809_7d93738",
+      "name": "Skaterplatz am Gifizsee",
+      "type": "park",
+      "lat": 48.45809,
+      "lng": 7.937375,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.458090,7.937375",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d02038_9d24947",
+      "name": "Skaterplatz Krauchenwies",
+      "type": "park",
+      "lat": 48.020384,
+      "lng": 9.249468,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.020384,9.249468",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_38d74420_m9d22938",
+      "name": "Ski Skate Amadora Parque",
+      "type": "park",
+      "lat": 38.744204,
+      "lng": -9.22938,
+      "description": "Park couvert",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.744204,-9.229380",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_41d45666_2d26201",
+      "name": "SLS Skatepark",
+      "type": "park",
+      "lat": 41.456658,
+      "lng": 2.262014,
+      "description": "L2 -> Badalona Pompeu Fabra, R1 -> Montgat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.456658,2.262014",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_39d58898_2d62819",
+      "name": "Son Moix Skatepark",
+      "type": "park",
+      "lat": 39.588982,
+      "lng": 2.628193,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.588982,2.628193",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_45d50376_m1d13661",
+      "name": "Soulac Skatepark",
+      "type": "park",
+      "lat": 45.503761,
+      "lng": -1.136613,
+      "description": "Pass your way, to bad skatepark ��",
+      "url": "https://www.google.com/maps/search/?api=1&query=45.503761,-1.136613",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_44d85704_m0d62287",
+      "name": "Stéhelin | Cauderan Skatepark",
+      "type": "park",
+      "lat": 44.857036,
+      "lng": -0.622871,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.857036,-0.622871",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d62721_9d33945",
+      "name": "straight ledge to stair tap",
+      "type": "park",
+      "lat": 48.627213,
+      "lng": 9.339451,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.627213,9.339451",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_48d80071_9d21784",
+      "name": "STUTTPARK",
+      "type": "park",
+      "lat": 48.800705,
+      "lng": 9.217842,
+      "description": "super perfect 750m2 indoor park!! check out www.stuttpark.net",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.800705,9.217842",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d97400_8d02775",
+      "name": "Sunnyvale Skatepark und Pumptrack Ingelheim",
+      "type": "park",
+      "lat": 49.973999,
+      "lng": 8.027753,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.973999,8.027753",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_49d51411_8d55377",
+      "name": "Taylor Skatepark",
+      "type": "park",
+      "lat": 49.514107,
+      "lng": 8.553774,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.514107,8.553774",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_52d15624_10d53931",
+      "name": "Trashpark",
+      "type": "park",
+      "lat": 52.156244,
+      "lng": 10.539308,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.156244,10.539308",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "park_48d66576_7d70726",
+      "name": "Vendenheim Skatepark",
+      "type": "park",
+      "lat": 48.665762,
+      "lng": 7.707263,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.665762,7.707263",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "park_52d38475_9d74265",
+      "name": "Welfen Plaza",
+      "type": "park",
+      "lat": 52.38475,
+      "lng": 9.742653,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.384750,9.742653",
+      "source": "Google-Liste „skateparks“"
+    },
+    {
+      "id": "shop_48d81591_7d79297",
+      "name": "All Rider",
+      "type": "shop",
+      "lat": 48.815911,
+      "lng": 7.792971,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.815911,7.792971",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_48d77242_9d17441",
+      "name": "Arrow and Beast Skateshop",
+      "type": "shop",
+      "lat": 48.772421,
+      "lng": 9.174407,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.772421,9.174407",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_48d52132_9d05545",
+      "name": "brett-à-porter",
+      "type": "shop",
+      "lat": 48.521315,
+      "lng": 9.055447,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.521315,9.055447",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_39d57137_2d65118",
+      "name": "Devil",
+      "type": "shop",
+      "lat": 39.571367,
+      "lng": 2.651185,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.571367,2.651185",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_47d90081_1d90538",
+      "name": "Digital Skateshop",
+      "type": "shop",
+      "lat": 47.90081,
+      "lng": 1.905376,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.900810,1.905376",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_41d14616_m8d60580",
+      "name": "Kate Skateshop",
+      "type": "shop",
+      "lat": 41.146159,
+      "lng": -8.605795,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.146159,-8.605795",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_39d56930_2d64793",
+      "name": "Kingdom",
+      "type": "shop",
+      "lat": 39.569301,
+      "lng": 2.647929,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.569301,2.647929",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_44d85329_m0d56725",
+      "name": "Riot Skateshop",
+      "type": "shop",
+      "lat": 44.85329,
+      "lng": -0.567247,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.853290,-0.567247",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_41d38249_2d16631",
+      "name": "Rufus Macba",
+      "type": "shop",
+      "lat": 41.382485,
+      "lng": 2.166313,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.382485,2.166313",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_39d57508_2d65045",
+      "name": "Shine",
+      "type": "shop",
+      "lat": 39.575078,
+      "lng": 2.65045,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.575078,2.650450",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_44d83780_m0d57158",
+      "name": "Sirop d'érable skateshop",
+      "type": "shop",
+      "lat": 44.837801,
+      "lng": -0.571583,
+      "description": "New petit shop d'un ami.",
+      "url": "https://www.google.com/maps/search/?api=1&query=44.837801,-0.571583",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_48d77508_9d17710",
+      "name": "Titus Stuttgart - Skateshop und Streetwear",
+      "type": "shop",
+      "lat": 48.775081,
+      "lng": 9.177105,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.775081,9.177105",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "shop_44d84514_m0d58217",
+      "name": "Transfert Skateshop",
+      "type": "shop",
+      "lat": 44.845139,
+      "lng": -0.582165,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.845139,-0.582165",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d49112_9d21083",
+      "name": "10Stair",
+      "type": "spot",
+      "lat": 48.491125,
+      "lng": 9.210833,
+      "description": "little hubba",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.491125,9.210833",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d49094_9d24013",
+      "name": "Achalm-Curb",
+      "type": "spot",
+      "lat": 48.490944,
+      "lng": 9.240126,
+      "description": "Thin Pop Out Rail, Plus nearby is a Stairs to Downhill.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.490944,9.240126",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78295_9d17915",
+      "name": "Amici Watergap",
+      "type": "spot",
+      "lat": 48.782952,
+      "lng": 9.17915,
+      "description": "Big Watergap.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782952,9.179150",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d51723_9d05536",
+      "name": "Anlagenpark",
+      "type": "spot",
+      "lat": 48.51723,
+      "lng": 9.055358,
+      "description": "somewhere around this area is asick gap over stair and rail. or u can use the rail. its at a parking lot.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.517230,9.055358",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d74202_m9d13384",
+      "name": "Areeiro",
+      "type": "spot",
+      "lat": 38.742024,
+      "lng": -9.133837,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.742024,-9.133837",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38443_2d16591",
+      "name": "Auditori Bank",
+      "type": "spot",
+      "lat": 41.384431,
+      "lng": 2.165909,
+      "description": "L1 | L2 -> Universitat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.384431,2.165909",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d84179_2d36752",
+      "name": "Austerlitz",
+      "type": "spot",
+      "lat": 48.841793,
+      "lng": 2.367518,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.841793,2.367518",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d70670_m9d14817",
+      "name": "Avenue de Julho",
+      "type": "spot",
+      "lat": 38.706695,
+      "lng": -9.148166,
+      "description": "Grey double benches",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.706695,-9.148166",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38162_2d18474",
+      "name": "Barceloneta Big Wallride",
+      "type": "spot",
+      "lat": 41.38162,
+      "lng": 2.184745,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.381620,2.184745",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37866_2d18406",
+      "name": "Barceloneta Rail to Drop",
+      "type": "spot",
+      "lat": 41.378655,
+      "lng": 2.184063,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.378655,2.184063",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37969_2d18370",
+      "name": "Barceloneta Red Brick Banks",
+      "type": "spot",
+      "lat": 41.379689,
+      "lng": 2.1837,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.379689,2.183700",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38057_2d18676",
+      "name": "Barceloneta Small Wallride",
+      "type": "spot",
+      "lat": 41.380572,
+      "lng": 2.186762,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.380572,2.186762",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37571_2d18368",
+      "name": "Barceloneta Volcano Land",
+      "type": "spot",
+      "lat": 41.375706,
+      "lng": 2.18368,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.375706,2.183680",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38407_2d17536",
+      "name": "Bari Gothica Rail Bank",
+      "type": "spot",
+      "lat": 41.384066,
+      "lng": 2.17536,
+      "description": "L4 -> Jaume I",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.384066,2.175360",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d39091_2d20142",
+      "name": "Beach Flatbars",
+      "type": "spot",
+      "lat": 41.390906,
+      "lng": 2.20142,
+      "description": "L4 -> Ciutadella | Vila Olímpica",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.390906,2.201420",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37959_2d18158",
+      "name": "Beach Ledge",
+      "type": "spot",
+      "lat": 41.379588,
+      "lng": 2.181578,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.379588,2.181578",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d45703_2d19675",
+      "name": "Beer Banks",
+      "type": "spot",
+      "lat": 41.45703,
+      "lng": 2.196753,
+      "description": "L9 -> Can Zam",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.457030,2.196753",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d82401_m0d57961",
+      "name": "Bergonier",
+      "type": "spot",
+      "lat": 44.824008,
+      "lng": -0.579615,
+      "description": "Flat barre, flat dans parking sousterrain. Spot de repli quand il pleut. On est toléré mais à partir de 20h.",
+      "url": "https://www.google.com/maps/search/?api=1&query=44.824008,-0.579615",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41846_2d20635",
+      "name": "Besòs Banks",
+      "type": "spot",
+      "lat": 41.418463,
+      "lng": 2.206353,
+      "description": "L4 -> Besòs",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.418463,2.206353",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41708_2d20512",
+      "name": "Besòs Flatbars",
+      "type": "spot",
+      "lat": 41.41708,
+      "lng": 2.205122,
+      "description": "L4 -> Besòs",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.417080,2.205122",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37527_2d11347",
+      "name": "Big 4",
+      "type": "spot",
+      "lat": 41.375273,
+      "lng": 2.113467,
+      "description": "L5 -> Collblanc | Pubilla Cases",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.375273,2.113467",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d81404_9d21099",
+      "name": "big flat + lil manipad",
+      "type": "spot",
+      "lat": 48.814039,
+      "lng": 9.210985,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.814039,9.210985",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44429_2d22942",
+      "name": "Blue Bench",
+      "type": "spot",
+      "lat": 41.444295,
+      "lng": 2.22942,
+      "description": "L2 | L10 -> Gorg",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.444295,2.229420",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78320_9d17683",
+      "name": "Blumenbeet",
+      "type": "spot",
+      "lat": 48.783196,
+      "lng": 9.176829,
+      "description": "Kleine Transition aus Pflastersteinen ca 40 cm hoch",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.783196,9.176829",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77735_9d17235",
+      "name": "bump to gap",
+      "type": "spot",
+      "lat": 48.777353,
+      "lng": 9.172349,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.777353,9.172349",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d36856_2d10251",
+      "name": "Can Serra Ledges",
+      "type": "spot",
+      "lat": 41.368564,
+      "lng": 2.102514,
+      "description": "L1 -> Can Serra",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.368564,2.102514",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d15860_m8d63035",
+      "name": "Casa da Mùsica",
+      "type": "spot",
+      "lat": 41.1586,
+      "lng": -8.63035,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.158600,-8.630350",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37148_2d11679",
+      "name": "Centre d'Atenció Primària Collblanc",
+      "type": "spot",
+      "lat": 41.371482,
+      "lng": 2.116792,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.371482,2.116792",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d12952_m8d60741",
+      "name": "Centro Civico de Gaia",
+      "type": "spot",
+      "lat": 41.129524,
+      "lng": -8.607414,
+      "description": "Metro D Station Camara de Gaia",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.129524,-8.607414",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d39014_2d11828",
+      "name": "check it out",
+      "type": "spot",
+      "lat": 41.390136,
+      "lng": 2.11828,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.390136,2.118280",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38542_2d18641",
+      "name": "Ciutat Vella",
+      "type": "spot",
+      "lat": 41.385417,
+      "lng": 2.186406,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.385417,2.186406",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37071_2d18759",
+      "name": "Club Natacio Flatbars",
+      "type": "spot",
+      "lat": 41.370712,
+      "lng": 2.187592,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.370712,2.187592",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d45317_2d23670",
+      "name": "Coll i Pujol",
+      "type": "spot",
+      "lat": 41.453168,
+      "lng": 2.236695,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.453168,2.236695",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d36078_2d06308",
+      "name": "Cornella Fat White Rail",
+      "type": "spot",
+      "lat": 41.360781,
+      "lng": 2.06308,
+      "description": "T1 | T2 -> Fontsanta | Fatjó",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.360781,2.063080",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01194_8d41361",
+      "name": "Criegée-Hörsaal",
+      "type": "spot",
+      "lat": 49.011937,
+      "lng": 8.413609,
+      "address": "Criegée-Hörsaal, Fritz-Haber-Weg 4, 76131 Karlsruhe-Innenstadt-Ost",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.011937,8.413609",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d51737_9d05296",
+      "name": "Curborama",
+      "type": "spot",
+      "lat": 48.517369,
+      "lng": 9.052959,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.517369,9.052959",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d80168_m0d60564",
+      "name": "Curbs CREPS",
+      "type": "spot",
+      "lat": 44.801685,
+      "lng": -0.605643,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.801685,-0.605643",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d82618_m0d55750",
+      "name": "Curbs Gare Saint Jean",
+      "type": "spot",
+      "lat": 44.826184,
+      "lng": -0.557502,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.826184,-0.557502",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d82378_m0d55488",
+      "name": "Curbs Gare St jean",
+      "type": "spot",
+      "lat": 44.823776,
+      "lng": -0.554885,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.823776,-0.554885",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78504_9d17959",
+      "name": "DB",
+      "type": "spot",
+      "lat": 48.785042,
+      "lng": 9.179587,
+      "description": "Hier gibt es ne Steincurb, abschüssig ein 5er Set runter für Leute die auf der linken Seite grinden, ums Eck noch einige kleinere Curbs und kurze Handrails die allerdings glaube ich eher was für Skateboarder sind.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.785042,9.179587",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41626_2d21170",
+      "name": "de Prim Flatbars",
+      "type": "spot",
+      "lat": 41.416262,
+      "lng": 2.211696,
+      "description": "L4 -> Besòs | Besòs Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.416262,2.211696",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d02660_8d38526",
+      "name": "DHBW Karlsruhe",
+      "type": "spot",
+      "lat": 49.026598,
+      "lng": 8.385259,
+      "description": "unterdacht und manny pad",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.026598,8.385259",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d85397_m0d54302",
+      "name": "Didge",
+      "type": "spot",
+      "lat": 44.853967,
+      "lng": -0.543019,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.853967,-0.543019",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d89261_9d18326",
+      "name": "double set",
+      "type": "spot",
+      "lat": 48.892613,
+      "lng": 9.18326,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.892613,9.183260",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01464_8d36671",
+      "name": "Draisschule",
+      "type": "spot",
+      "lat": 49.01464,
+      "lng": 8.366711,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.014640,8.366711",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_41d45991_2d24679",
+      "name": "Einatec",
+      "type": "spot",
+      "lat": 41.459906,
+      "lng": 2.246787,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.459906,2.246787",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77856_9d18544",
+      "name": "Flatland",
+      "type": "spot",
+      "lat": 48.778556,
+      "lng": 9.185445,
+      "description": "Soweit ich informiert bin fahren hier die Flatlander, allerdings kenn ich mich da nicht wirklich aus.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.778556,9.185445",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d45378_2d22450",
+      "name": "Fondo Plaza",
+      "type": "spot",
+      "lat": 41.45378,
+      "lng": 2.224501,
+      "description": "L1 | L9 -> Fondo",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.453780,2.224501",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d45289_2d22235",
+      "name": "Fondo Wall Ride",
+      "type": "spot",
+      "lat": 41.452885,
+      "lng": 2.222355,
+      "description": "L1 | L9 -> Fondo",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.452885,2.222355",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d14714_m8d61568",
+      "name": "Fonte dos Leoes",
+      "type": "spot",
+      "lat": 41.147141,
+      "lng": -8.615681,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.147141,-8.615681",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40984_2d22650",
+      "name": "Forum Brick Waves",
+      "type": "spot",
+      "lat": 41.409844,
+      "lng": 2.226496,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.409844,2.226496",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d23378_m8d62228",
+      "name": "Forum da Maia",
+      "type": "spot",
+      "lat": 41.233779,
+      "lng": -8.62228,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.233779,-8.622280",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40948_2d22629",
+      "name": "Forum Double Flatbar Heaven",
+      "type": "spot",
+      "lat": 41.409478,
+      "lng": 2.226292,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.409478,2.226292",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41435_2d22593",
+      "name": "Forum Metal Out Ledges",
+      "type": "spot",
+      "lat": 41.414346,
+      "lng": 2.225928,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.414346,2.225928",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41158_2d22110",
+      "name": "Forum Silver Wall",
+      "type": "spot",
+      "lat": 41.411578,
+      "lng": 2.2211,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.411578,2.221100",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40936_2d22158",
+      "name": "Forum Snake Ledge",
+      "type": "spot",
+      "lat": 41.409361,
+      "lng": 2.221577,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.409361,2.221577",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41263_2d22378",
+      "name": "Forum Stepped Ledges",
+      "type": "spot",
+      "lat": 41.412626,
+      "lng": 2.223777,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.412626,2.223777",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40963_2d22113",
+      "name": "Forum Up Ledge",
+      "type": "spot",
+      "lat": 41.409633,
+      "lng": 2.221132,
+      "description": "L4 -> El Maresme Forum",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.409633,2.221132",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d84020_m0d58261",
+      "name": "Gambetta",
+      "type": "spot",
+      "lat": 44.840195,
+      "lng": -0.582607,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.840195,-0.582607",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d54201_9d05765",
+      "name": "Geschwister-Scholl-Schule Tübingen",
+      "type": "spot",
+      "lat": 48.542015,
+      "lng": 9.057651,
+      "description": "WHO Banks Steep and Rough. Asphalt banks with gib steal railing on top. There are also Some fun lil donwhills. only skate on Sat/Son.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.542015,9.057651",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40721_2d21379",
+      "name": "Giant Fun Slide",
+      "type": "spot",
+      "lat": 41.407208,
+      "lng": 2.213788,
+      "description": "L4 -> Selva de Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.407208,2.213788",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d86272_m0d57556",
+      "name": "Grand Parc",
+      "type": "spot",
+      "lat": 44.862719,
+      "lng": -0.575564,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.862719,-0.575564",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d86128_m0d55903",
+      "name": "Green Wallride",
+      "type": "spot",
+      "lat": 44.861277,
+      "lng": -0.559026,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.861277,-0.559026",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d70633_m9d13909",
+      "name": "Grey bank",
+      "type": "spot",
+      "lat": 38.706334,
+      "lng": -9.139087,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.706334,-9.139087",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d04826_8d25063",
+      "name": "Grundschule Dorschberg",
+      "type": "spot",
+      "lat": 49.048257,
+      "lng": 8.250628,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.048257,8.250628",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d98881_8d24518",
+      "name": "Grundschule Neuburg am Rhein",
+      "type": "spot",
+      "lat": 48.98881,
+      "lng": 8.24518,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.988810,8.245180",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_41d38244_2d19188",
+      "name": "Guano Banks",
+      "type": "spot",
+      "lat": 41.382444,
+      "lng": 2.191877,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.382444,2.191877",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d79731_9d22700",
+      "name": "Hall Eleven",
+      "type": "spot",
+      "lat": 48.797309,
+      "lng": 9.226997,
+      "description": "Die einzige überdachte Minirampe die ich kenne in Stuttgart. Es gibt auch noch einen Indoor Skatepark hier, allerdings nur für Skateboard, kein BMX",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.797309,9.226997",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d86268_m0d55484",
+      "name": "Hangar G2",
+      "type": "spot",
+      "lat": 44.862679,
+      "lng": -0.55484,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.862679,-0.554840",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01354_8d38133",
+      "name": "Haydnplatz",
+      "type": "spot",
+      "lat": 49.013537,
+      "lng": 8.381328,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.013537,8.381328",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01091_8d38390",
+      "name": "Helmholtz-Gymnasium Karlsruhe",
+      "type": "spot",
+      "lat": 49.010912,
+      "lng": 8.383902,
+      "address": "Helmholtz-Gymnasium Karlsruhe, Kaiserallee 6, 76133 Karlsruhe",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.010912,8.383902",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01382_8d40799",
+      "name": "Hirschbrunnen",
+      "type": "spot",
+      "lat": 49.013819,
+      "lng": 8.407991,
+      "address": "Hirschbrunnen, Engesserstraße 3, 76131 Karlsruhe",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.013819,8.407991",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00025_8d38427",
+      "name": "Holzinsel am ZKM",
+      "type": "spot",
+      "lat": 49.000248,
+      "lng": 8.384268,
+      "address": "Holzinsel am ZKM, 76135 Karlsruhe",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.000248,8.384268",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d51038_9d04274",
+      "name": "horns curb",
+      "type": "spot",
+      "lat": 48.510376,
+      "lng": 9.042744,
+      "description": "dis is a super fun street curb. its already been used really good. when u roll on the big flat its so cool! so have fun!",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.510376,9.042744",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44063_2d16377",
+      "name": "Horta Plaza",
+      "type": "spot",
+      "lat": 41.440631,
+      "lng": 2.163765,
+      "description": "L3 -> Canyelles",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.440631,2.163765",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d99793_8d37688",
+      "name": "Inlineskateplatz",
+      "type": "spot",
+      "lat": 48.99793,
+      "lng": 8.376877,
+      "address": "Inlineskateplatz, 76135 Karlsruhe",
+      "description": "Günter glotz",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.997930,8.376877",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d82850_m0d55731",
+      "name": "INSEE Rail",
+      "type": "spot",
+      "lat": 44.828503,
+      "lng": -0.557306,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.828503,-0.557306",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78820_9d18299",
+      "name": "irgendwas Platz",
+      "type": "spot",
+      "lat": 48.788195,
+      "lng": 9.182988,
+      "description": "Hab den Namen von diesem Platz hier vergessen, allerdings gibt es hier eineige verschieden hohe Stufensets, Bänke mit Metallkanten und dieses komische schwarze Ding auf dem Foto ist mittlerweile auch weg...",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.788195,9.182988",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01243_8d41539",
+      "name": "Jens Wittenburg - Triade",
+      "type": "spot",
+      "lat": 49.01243,
+      "lng": 8.415394,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.012430,8.415394",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00909_8d35552",
+      "name": "Karlsruhe Vogesenbrücke",
+      "type": "spot",
+      "lat": 49.00909,
+      "lng": 8.355518,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.009090,8.355518",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00923_8d40391",
+      "name": "Karlsruher Pyramide",
+      "type": "spot",
+      "lat": 49.009226,
+      "lng": 8.403906,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.009226,8.403906",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d79645_m0d60218",
+      "name": "Kedge",
+      "type": "spot",
+      "lat": 44.796447,
+      "lng": -0.602183,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.796447,-0.602183",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01434_8d36166",
+      "name": "Kinder- und Jugendhaus Mühlburg",
+      "type": "spot",
+      "lat": 49.014342,
+      "lng": 8.361655,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.014342,8.361655",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01097_8d41846",
+      "name": "KIT Center for Technology-Enhanced Learning",
+      "type": "spot",
+      "lat": 49.010967,
+      "lng": 8.41846,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.010967,8.418460",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01407_8d41985",
+      "name": "KIT Informatics Innovation Center (IIC)",
+      "type": "spot",
+      "lat": 49.01407,
+      "lng": 8.419854,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.014070,8.419854",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d78266_9d17393",
+      "name": "Kriegsberg",
+      "type": "spot",
+      "lat": 48.782656,
+      "lng": 9.173932,
+      "description": "Bit a rougher flat. with round manual pads. plus one slappy thing.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782656,9.173932",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77922_9d17465",
+      "name": "Kunstwerk",
+      "type": "spot",
+      "lat": 48.779221,
+      "lng": 9.174646,
+      "description": "Marmorcurb, von beiden Seiten fahrbar, wird nach hinten hin höher.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.779221,9.174646",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d94880_9d13702",
+      "name": "Kunstwerk vor dem Bahnhof",
+      "type": "spot",
+      "lat": 48.948802,
+      "lng": 9.137023,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.948802,9.137023",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d36169_2d13236",
+      "name": "L'Hospital Double Set",
+      "type": "spot",
+      "lat": 41.361688,
+      "lng": 2.132356,
+      "description": "L8 -> Ildefons Cerdà",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.361688,2.132356",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d98034_8d37361",
+      "name": "L605",
+      "type": "spot",
+      "lat": 48.980342,
+      "lng": 8.373608,
+      "address": "L605, 76135 Karlsruhe",
+      "description": "DiY unter brücke",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.980342,8.373608",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d98931_8d37564",
+      "name": "L605",
+      "type": "spot",
+      "lat": 48.989314,
+      "lng": 8.375638,
+      "address": "L605, 76135 Karlsruhe",
+      "description": "Unter der brücke ist eine bank und gutes flat",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.989314,8.375638",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_47d90179_1d90935",
+      "name": "La KT",
+      "type": "spot",
+      "lat": 47.901793,
+      "lng": 1.909347,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.901793,1.909347",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37726_2d18046",
+      "name": "La Parella",
+      "type": "spot",
+      "lat": 41.37726,
+      "lng": 2.18046,
+      "description": "L3 -> Drassanes",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.377260,2.180460",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d70992_m9d14182",
+      "name": "Largo de Sao Carlos",
+      "type": "spot",
+      "lat": 38.70992,
+      "lng": -9.141817,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.709920,-9.141817",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d84505_m0d57019",
+      "name": "Le carré",
+      "type": "spot",
+      "lat": 44.845053,
+      "lng": -0.570194,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.845053,-0.570194",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d86422_2d29734",
+      "name": "Le Dome ou Palais de Tokyo",
+      "type": "spot",
+      "lat": 48.864222,
+      "lng": 2.297337,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.864222,2.297337",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d84269_m0d57451",
+      "name": "Le grand théâtre",
+      "type": "spot",
+      "lat": 44.842689,
+      "lng": -0.574513,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.842689,-0.574513",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d84181_m0d56912",
+      "name": "Le miroir d'eau",
+      "type": "spot",
+      "lat": 44.841812,
+      "lng": -0.569122,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.841812,-0.569122",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d57993_7d73680",
+      "name": "Le Musée",
+      "type": "spot",
+      "lat": 48.579933,
+      "lng": 7.736798,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.579933,7.736798",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83504_m0d56266",
+      "name": "Le terrain de Hockey",
+      "type": "spot",
+      "lat": 44.835041,
+      "lng": -0.562663,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.835041,-0.562663",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37520_2d11283",
+      "name": "Ledge to Bank Heaven",
+      "type": "spot",
+      "lat": 41.375203,
+      "lng": 2.112834,
+      "description": "L5 -> Collblanc | Pubilla Cases",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.375203,2.112834",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01530_8d42000",
+      "name": "Ledges",
+      "type": "spot",
+      "lat": 49.015302,
+      "lng": 8.419997,
+      "description": "unter so großem rundem ding",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.015302,8.419997",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d84538_m0d57499",
+      "name": "Les Quinconces",
+      "type": "spot",
+      "lat": 44.845382,
+      "lng": -0.57499,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.845382,-0.574990",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77921_9d16846",
+      "name": "Liederhalle",
+      "type": "spot",
+      "lat": 48.77921,
+      "lng": 9.168464,
+      "description": "verschiedene Curbs die Treppen runter, bin aber nicht sicher ob Die noch fahrbar sind, da (zumindest eine Zeit lang) Skatestopper dran waren...",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.779210,9.168464",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d87764_m0d53445",
+      "name": "Lormont",
+      "type": "spot",
+      "lat": 44.877639,
+      "lng": -0.534446,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.877639,-0.534446",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d00800_8d42354",
+      "name": "Lutherana Karlsruhe",
+      "type": "spot",
+      "lat": 49.008001,
+      "lng": 8.423541,
+      "description": "gap über kugel",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.008001,8.423541",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_41d38298_2d16702",
+      "name": "Macba",
+      "type": "spot",
+      "lat": 41.382983,
+      "lng": 2.167019,
+      "description": "L1 | L2 -> Universitat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.382983,2.167019",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83167_m0d55976",
+      "name": "Malraux Banks",
+      "type": "spot",
+      "lat": 44.831665,
+      "lng": -0.559761,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.831665,-0.559761",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83047_m0d56099",
+      "name": "Malraux Manual Pad",
+      "type": "spot",
+      "lat": 44.830472,
+      "lng": -0.56099,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.830472,-0.560990",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83090_m0d55967",
+      "name": "Malraux Stairs",
+      "type": "spot",
+      "lat": 44.830898,
+      "lng": -0.55967,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.830898,-0.559670",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d49429_9d22221",
+      "name": "manny pad",
+      "type": "spot",
+      "lat": 48.494287,
+      "lng": 9.222207,
+      "description": "there is a 2 stair up and 3strai down mann pad or u can up down from the top.. i hope its there :P",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.494287,9.222207",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d51108_9d04659",
+      "name": "Manny pad undercover",
+      "type": "spot",
+      "lat": 48.511084,
+      "lng": 9.046589,
+      "description": "somewhere around this area is a big (45cm) and long (dunno maybe 5m) manny pad check it out.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.511084,9.046589",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83758_m0d58359",
+      "name": "Mariadeck",
+      "type": "spot",
+      "lat": 44.837575,
+      "lng": -0.583595,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.837575,-0.583595",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d76407_9d16854",
+      "name": "Marienplatz",
+      "type": "spot",
+      "lat": 48.764068,
+      "lng": 9.168541,
+      "description": "Verschiedene Stufensets",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.764068,9.168541",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d00873_8d40374",
+      "name": "Marktplatz (Pyramide U)",
+      "type": "spot",
+      "lat": 49.008731,
+      "lng": 8.40374,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.008731,8.403740",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_38d71596_m9d13631",
+      "name": "Martin Moniz",
+      "type": "spot",
+      "lat": 38.715961,
+      "lng": -9.136308,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.715961,-9.136308",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78288_9d17470",
+      "name": "massive stairs",
+      "type": "spot",
+      "lat": 48.78288,
+      "lng": 9.174701,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782880,9.174701",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d82842_m0d55220",
+      "name": "Méca",
+      "type": "spot",
+      "lat": 44.828418,
+      "lng": -0.552202,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.828418,-0.552202",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d51737_9d05174",
+      "name": "Mensa Hubba",
+      "type": "spot",
+      "lat": 48.517367,
+      "lng": 9.051744,
+      "description": "7stair with two hubbas. (just go in satilite mode :P )",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.517367,9.051744",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37094_2d15745",
+      "name": "Mercat de las Flores",
+      "type": "spot",
+      "lat": 41.370935,
+      "lng": 2.157446,
+      "description": "L3 -> Poble Sec",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.370935,2.157446",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41807_2d19943",
+      "name": "Metal Bump",
+      "type": "spot",
+      "lat": 41.418071,
+      "lng": 2.199428,
+      "description": "L2 -> Sant Martí",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.418071,2.199428",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d79071_9d18328",
+      "name": "Milaneo",
+      "type": "spot",
+      "lat": 48.790712,
+      "lng": 9.183284,
+      "description": "Around this spot there are many more.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.790712,9.183284",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d51029_9d04247",
+      "name": "MiniRamp/Vert",
+      "type": "spot",
+      "lat": 48.510292,
+      "lng": 9.042469,
+      "description": "There is a little mini like 2.5m high and also a big vert ramp like 5 m high. i dont remember. but both got strange surface. its bending when um ride ^^but some can master it. so can u?",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.510292,9.042469",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d51782_9d05834",
+      "name": "Modehaus ZINSER Tübingen",
+      "type": "spot",
+      "lat": 48.517818,
+      "lng": 9.058345,
+      "description": "wooden curbs.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.517818,9.058345",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40647_2d02288",
+      "name": "Molins de Rei",
+      "type": "spot",
+      "lat": 41.406469,
+      "lng": 2.022882,
+      "description": "R1 | R4 -> Molins de Rei",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.406469,2.022882",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43024_2d14543",
+      "name": "Montbau Bank wallride & Wheeling pad",
+      "type": "spot",
+      "lat": 41.430235,
+      "lng": 2.145435,
+      "description": "L3 -> Montbau",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.430235,2.145435",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43160_2d14772",
+      "name": "Montbau Metal Ledge",
+      "type": "spot",
+      "lat": 41.431595,
+      "lng": 2.14772,
+      "description": "L3 -> Montbau",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.431595,2.147720",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43009_2d15067",
+      "name": "Montbau Sculpture",
+      "type": "spot",
+      "lat": 41.43009,
+      "lng": 2.15067,
+      "description": "L3 -> Montbau",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.430090,2.150670",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38744_2d17433",
+      "name": "Monument Wallride",
+      "type": "spot",
+      "lat": 41.387435,
+      "lng": 2.17433,
+      "description": "L1 | L4 -> Urquinaona",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.387435,2.174330",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d00573_8d39917",
+      "name": "Nymphengruppe",
+      "type": "spot",
+      "lat": 49.005734,
+      "lng": 8.399173,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005734,8.399173",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d83039_9d32173",
+      "name": "Ortsmarke 21",
+      "type": "spot",
+      "lat": 48.830388,
+      "lng": 9.321728,
+      "description": "Skatepark",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.830388,9.321728",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d03254_8d44364",
+      "name": "Otto-Hahn-Gymnasium",
+      "type": "spot",
+      "lat": 49.032537,
+      "lng": 8.443635,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.032537,8.443635",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d83649_m0d57992",
+      "name": "Palais de Justice",
+      "type": "spot",
+      "lat": 44.836487,
+      "lng": -0.57992,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.836487,-0.579920",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78051_9d17736",
+      "name": "Palast",
+      "type": "spot",
+      "lat": 48.780507,
+      "lng": 9.177355,
+      "description": "Der beste Platz um Bier zu trinken im Sommer :-)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.780507,9.177355",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37392_2d17164",
+      "name": "Paral-lel Stage Ledge",
+      "type": "spot",
+      "lat": 41.37392,
+      "lng": 2.17164,
+      "description": "Metro: L2/L3 Paral-lel Spot: Slight incline up to a ledge with metal coping.",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.373920,2.171640",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d01024_8d38466",
+      "name": "Parkhaus Magdeburger Haus APCOA",
+      "type": "spot",
+      "lat": 49.010243,
+      "lng": 8.384659,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.010243,8.384659",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_41d43736_2d16481",
+      "name": "Passeig de Fabra Banks",
+      "type": "spot",
+      "lat": 41.437362,
+      "lng": 2.164811,
+      "description": "L4 -> Llucmajor",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.437362,2.164811",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43621_2d16898",
+      "name": "PCNB Platform Gap",
+      "type": "spot",
+      "lat": 41.436212,
+      "lng": 2.168984,
+      "description": "L4 -> Llucmajor",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.436212,2.168984",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43702_2d16377",
+      "name": "PCNB Wooden Triangles",
+      "type": "spot",
+      "lat": 41.43702,
+      "lng": 2.16377,
+      "description": "L4 -> Llucmajor",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.437020,2.163770",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43875_2d16235",
+      "name": "PCNB Yellow Brick Hip",
+      "type": "spot",
+      "lat": 41.438753,
+      "lng": 2.162354,
+      "description": "L3 -> Canyelles",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.438753,2.162354",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83758_m0d57870",
+      "name": "Pey-Berland",
+      "type": "spot",
+      "lat": 44.837583,
+      "lng": -0.578703,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.837583,-0.578703",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78263_9d18192",
+      "name": "Pflastersteintransition",
+      "type": "spot",
+      "lat": 48.782632,
+      "lng": 9.18192,
+      "description": "Transition aus (wie gesagt :-) Pflastersteinen ca. 50 cm hoch, war hier noch nie mit dem Rad, daher kann ich nichts zur Fahrbarkeit sagen.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782632,9.181920",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d46657_2d24005",
+      "name": "Plaça Modest Urgell",
+      "type": "spot",
+      "lat": 41.466572,
+      "lng": 2.240052,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.466572,2.240052",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d16534_m8d64142",
+      "name": "Place curb et marches",
+      "type": "spot",
+      "lat": 41.165342,
+      "lng": -8.641419,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.165342,-8.641419",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_47d90702_1d90541",
+      "name": "Place d'Arc",
+      "type": "spot",
+      "lat": 47.907015,
+      "lng": 1.905409,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.907015,1.905409",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_47d90248_1d90379",
+      "name": "Place du Martroi",
+      "type": "spot",
+      "lat": 47.902477,
+      "lng": 1.903789,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.902477,1.903789",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83849_m0d56932",
+      "name": "Place du Palais",
+      "type": "spot",
+      "lat": 44.838493,
+      "lng": -0.569317,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.838493,-0.569317",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d85296_m0d53866",
+      "name": "Plan incliné",
+      "type": "spot",
+      "lat": 44.852956,
+      "lng": -0.538663,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.852956,-0.538663",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38299_2d11817",
+      "name": "plaza life",
+      "type": "spot",
+      "lat": 41.382992,
+      "lng": 2.118175,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.382992,2.118175",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38202_2d19668",
+      "name": "Point 42",
+      "type": "spot",
+      "lat": 41.382025,
+      "lng": 2.196676,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.382025,2.196676",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44857_2d24293",
+      "name": "Pompeu Fabra",
+      "type": "spot",
+      "lat": 41.448568,
+      "lng": 2.24293,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.448568,2.242930",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37879_2d18116",
+      "name": "Port Vell Benches",
+      "type": "spot",
+      "lat": 41.378785,
+      "lng": 2.18116,
+      "description": "L4 -> Barceloneta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.378785,2.181160",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d71357_m9d13792",
+      "name": "Praça da Figueira",
+      "type": "spot",
+      "lat": 38.713567,
+      "lng": -9.137918,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.713567,-9.137918",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d70724_m9d13745",
+      "name": "Praça do Comércio",
+      "type": "spot",
+      "lat": 38.707238,
+      "lng": -9.137446,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.707238,-9.137446",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d68885_9d00228",
+      "name": "propeller curbs",
+      "type": "spot",
+      "lat": 48.68885,
+      "lng": 9.002277,
+      "description": "infront of lambo",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.688850,9.002277",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37242_2d09316",
+      "name": "Quarter Wall Ride",
+      "type": "spot",
+      "lat": 41.372417,
+      "lng": 2.093162,
+      "description": "L5 -> Can Vidalet",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.372417,2.093162",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44185_2d18761",
+      "name": "Rail to Bank",
+      "type": "spot",
+      "lat": 41.441848,
+      "lng": 2.18761,
+      "description": "L1 -> Torras i Bages",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.441848,2.187610",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77500_9d17833",
+      "name": "Rathaus",
+      "type": "spot",
+      "lat": 48.775,
+      "lng": 9.178331,
+      "description": "3er Stufenset und ne kleine gewachste Curb.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.775000,9.178331",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d86654_m0d57541",
+      "name": "Ravezies Stairs",
+      "type": "spot",
+      "lat": 44.866536,
+      "lng": -0.575413,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.866536,-0.575413",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d02481_8d36133",
+      "name": "Realschule am Rennbuckel",
+      "type": "spot",
+      "lat": 49.024806,
+      "lng": 8.361327,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.024806,8.361327",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d78150_9d17834",
+      "name": "Red Banks",
+      "type": "spot",
+      "lat": 48.781502,
+      "lng": 9.178337,
+      "description": "Rote runde Backsteinbanks ca. 1.50 m hoch, Bänke usw.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.781502,9.178337",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40269_2d21300",
+      "name": "Red Flat + Up and Over Ledge",
+      "type": "spot",
+      "lat": 41.402686,
+      "lng": 2.213005,
+      "description": "L4 -> Selva de Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.402686,2.213005",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44341_2d22927",
+      "name": "Red Triangle Hips",
+      "type": "spot",
+      "lat": 41.44341,
+      "lng": 2.22927,
+      "description": "L2 | L10 -> Gorg",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.443410,2.229270",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40341_2d21399",
+      "name": "Red Up and Over Ledge",
+      "type": "spot",
+      "lat": 41.403413,
+      "lng": 2.213989,
+      "description": "L4 -> Selva de Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.403413,2.213989",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40481_2d21585",
+      "name": "Red Up Ledge",
+      "type": "spot",
+      "lat": 41.404811,
+      "lng": 2.215853,
+      "description": "L4 -> Selva de Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.404811,2.215853",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d86759_2d36423",
+      "name": "République",
+      "type": "spot",
+      "lat": 48.867589,
+      "lng": 2.364233,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.867589,2.364233",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d57351_7d75588",
+      "name": "Rivetoile",
+      "type": "spot",
+      "lat": 48.573512,
+      "lng": 7.755876,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.573512,7.755876",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d57400_7d76723",
+      "name": "Rivetoile Banks",
+      "type": "spot",
+      "lat": 48.573996,
+      "lng": 7.767232,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.573996,7.767232",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d73666_m9d14052",
+      "name": "Rond Point",
+      "type": "spot",
+      "lat": 38.736657,
+      "lng": -9.140515,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.736657,-9.140515",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d44364_2d17194",
+      "name": "Ronda de Dalt Curbs",
+      "type": "spot",
+      "lat": 41.443635,
+      "lng": 2.171942,
+      "description": "L3 -> Canyelles",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.443635,2.171942",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d35677_2d09678",
+      "name": "Round Plaza",
+      "type": "spot",
+      "lat": 41.356767,
+      "lng": 2.096782,
+      "description": "R5 | R6 | L1 | L8 -> L'Hospitalet-Av. Carrilet",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.356767,2.096782",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d35807_2d13120",
+      "name": "round wheelie pad",
+      "type": "spot",
+      "lat": 41.358065,
+      "lng": 2.131197,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.358065,2.131197",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d27423_1d97424",
+      "name": "Rust Bank",
+      "type": "spot",
+      "lat": 41.274232,
+      "lng": 1.974241,
+      "description": "R2 -> Castelldefels",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.274232,1.974241",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40416_2d16873",
+      "name": "Sagrada Hubba",
+      "type": "spot",
+      "lat": 41.404157,
+      "lng": 2.168727,
+      "description": "L2 | L5 -> Sagrada Familia, L4 | L5 -> Verdaguer",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.404157,2.168727",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83384_m0d56098",
+      "name": "Saint-Michel Manual Pad",
+      "type": "spot",
+      "lat": 44.833844,
+      "lng": -0.56098,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.833844,-0.560980",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d41809_2d19457",
+      "name": "Sant Martí Handrail",
+      "type": "spot",
+      "lat": 41.418092,
+      "lng": 2.19457,
+      "description": "L2 -> Sant Martí",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.418092,2.194570",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43057_2d23875",
+      "name": "Sant Roc Garbage Gap",
+      "type": "spot",
+      "lat": 41.430574,
+      "lng": 2.238753,
+      "description": "L2 -> Sant Roc",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.430574,2.238753",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37847_2d14121",
+      "name": "Sants Ledges",
+      "type": "spot",
+      "lat": 41.378473,
+      "lng": 2.141213,
+      "description": "L3 | L5 -> Sants Estació",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.378473,2.141213",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38039_2d14244",
+      "name": "Sants Out Ledges",
+      "type": "spot",
+      "lat": 41.380387,
+      "lng": 2.142441,
+      "description": "L3 | L5 -> Sants Estació",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.380387,2.142441",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37878_2d14164",
+      "name": "Sants Sculpture Bank",
+      "type": "spot",
+      "lat": 41.378776,
+      "lng": 2.141637,
+      "description": "L3 | L5 -> Sants Estació",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.378776,2.141637",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37833_2d14174",
+      "name": "Sants Water Gap",
+      "type": "spot",
+      "lat": 41.378331,
+      "lng": 2.141744,
+      "description": "L3 | L5 -> Sants Estació",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.378331,2.141744",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d73512_m9d15436",
+      "name": "São Sebastião",
+      "type": "spot",
+      "lat": 38.735122,
+      "lng": -9.154356,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.735122,-9.154356",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77848_9d17723",
+      "name": "Schlossplatz",
+      "type": "spot",
+      "lat": 48.778478,
+      "lng": 9.177226,
+      "description": "Lange gewachste Beton(?)curb ca. 30-40 cm hoch. Meistens ist hier tagsüber ziemlich viel los (sprich: Fußgänger im Weg.)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.778478,9.177226",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77471_9d17934",
+      "name": "Schräglage",
+      "type": "spot",
+      "lat": 48.774713,
+      "lng": 9.17934,
+      "description": "Die beste (weil einizige) Surferbar auf einer Dachterrasse im 5 Stock, im Sommer gibts gegrilltes, sehr angenehm dort...",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.774713,9.179340",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d80812_9d27308",
+      "name": "Schwabenlandhalle",
+      "type": "spot",
+      "lat": 48.808117,
+      "lng": 9.273082,
+      "description": "Big place good flat and long perfect crubs.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.808117,9.273082",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40921_2d20942",
+      "name": "Selva de Mar Banks",
+      "type": "spot",
+      "lat": 41.409208,
+      "lng": 2.209416,
+      "description": "L4 -> Selva de Mar",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.409208,2.209416",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43214_2d14843",
+      "name": "Sibiles-les Banks",
+      "type": "spot",
+      "lat": 41.43214,
+      "lng": 2.148428,
+      "description": "L3 -> Montbau",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.432140,2.148428",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d43105_2d16058",
+      "name": "Silver Rail",
+      "type": "spot",
+      "lat": 41.431052,
+      "lng": 2.16058,
+      "description": "L5 -> Horta",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.431052,2.160580",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d45807_2d20869",
+      "name": "Singuerlin Brick Banks",
+      "type": "spot",
+      "lat": 41.45807,
+      "lng": 2.208692,
+      "description": "L9 -> Singuerlin",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.458070,2.208692",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d02244_12d04635",
+      "name": "Skatepark Donaupark",
+      "type": "spot",
+      "lat": 49.022437,
+      "lng": 12.046349,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.022437,12.046349",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d54470_7d68229",
+      "name": "Skatepark du parc Zimmer",
+      "type": "spot",
+      "lat": 48.544698,
+      "lng": 7.68229,
+      "address": "Skatepark du parc Zimmer, Rue de Graffenstaden, 67380 Lingolsheim, Frankreich",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.544698,7.682290",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99478_8d40122",
+      "name": "Skulptur \"Stadtzeichen 69/9\"",
+      "type": "spot",
+      "lat": 48.994775,
+      "lng": 8.401222,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.994775,8.401222",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99536_8d38871",
+      "name": "Sparkasse Karlsruhe - Filiale",
+      "type": "spot",
+      "lat": 48.995357,
+      "lng": 8.38871,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.995357,8.388710",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d51230_9d04771",
+      "name": "Sparkassen Carré",
+      "type": "spot",
+      "lat": 48.512297,
+      "lng": 9.04771,
+      "description": "super big flat. big wheelie/curb square also some lill botanic gap ^^peace",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.512297,9.047710",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77000_9d17202",
+      "name": "St. Maria Kirche",
+      "type": "spot",
+      "lat": 48.770004,
+      "lng": 9.172018,
+      "description": "curbs sponsored by NewBalance and Adidas.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.770004,9.172018",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78015_9d18659",
+      "name": "Staatsgalerie Stuttgart",
+      "type": "spot",
+      "lat": 48.780151,
+      "lng": 9.186588,
+      "description": "Warning. U get Kicked out fast. But give it a try if u down for stairs, rails..",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.780151,9.186588",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d62735_9d33924",
+      "name": "Stadthalle",
+      "type": "spot",
+      "lat": 48.627349,
+      "lng": 9.339237,
+      "description": "mehrere Metalcurbs, von beiden Seiten fahrbar, und ein paar lange flache stufensets. DerHausmeister wird euch hassen...",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.627349,9.339237",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_50d09483_14d41592",
+      "name": "Stalin Plaza",
+      "type": "spot",
+      "lat": 50.09483,
+      "lng": 14.415917,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.094830,14.415917",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_44d84053_m0d55967",
+      "name": "Stalingrad",
+      "type": "spot",
+      "lat": 44.840526,
+      "lng": -0.55967,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.840526,-0.559670",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d81371_9d20434",
+      "name": "steigkirche",
+      "type": "spot",
+      "lat": 48.81371,
+      "lng": 9.204344,
+      "description": "big flat with 3 stairs and small curb. kickout 9/10",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.813710,9.204344",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d95335_8d47751",
+      "name": "Street-Spot",
+      "type": "spot",
+      "lat": 48.953352,
+      "lng": 8.477509,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.953352,8.477509",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99504_8d38566",
+      "name": "Street-Spot Beiertheim-Bulach",
+      "type": "spot",
+      "lat": 48.995042,
+      "lng": 8.385656,
+      "description": "Brückenpfeiler als bank/wallride",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.995042,8.385656",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99152_8d37654",
+      "name": "Street-Spot Beiertheim-Bulach 2",
+      "type": "spot",
+      "lat": 48.991521,
+      "lng": 8.37654,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.991521,8.376540",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00299_8d45545",
+      "name": "Street-Spot Durlach",
+      "type": "spot",
+      "lat": 49.002993,
+      "lng": 8.455452,
+      "description": "dm zentrale gap und langes manual pad",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.002993,8.455452",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00733_8d35923",
+      "name": "Street-Spot Grünwinkel",
+      "type": "spot",
+      "lat": 49.007331,
+      "lng": 8.359235,
+      "description": "manual pads",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.007331,8.359235",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00954_8d35246",
+      "name": "Street-Spot Grünwinkel 2",
+      "type": "spot",
+      "lat": 49.009544,
+      "lng": 8.352457,
+      "description": "ledge",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.009544,8.352457",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d02575_8d44515",
+      "name": "Street-Spot Hagsfeld",
+      "type": "spot",
+      "lat": 49.025748,
+      "lng": 8.445151,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.025748,8.445151",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00706_8d41314",
+      "name": "Street-Spot Innenstadt-Ost",
+      "type": "spot",
+      "lat": 49.007055,
+      "lng": 8.413142,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.007055,8.413142",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d02114_8d41343",
+      "name": "Street-Spot Innenstadt-Ost 2",
+      "type": "spot",
+      "lat": 49.02114,
+      "lng": 8.413431,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.021140,8.413431",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01128_8d41460",
+      "name": "Street-Spot Innenstadt-Ost 3",
+      "type": "spot",
+      "lat": 49.01128,
+      "lng": 8.414603,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.011280,8.414603",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00728_8d40746",
+      "name": "Street-Spot Innenstadt-Ost 4",
+      "type": "spot",
+      "lat": 49.00728,
+      "lng": 8.407457,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.007280,8.407457",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00835_8d39422",
+      "name": "Street-Spot Innenstadt-West",
+      "type": "spot",
+      "lat": 49.008354,
+      "lng": 8.394223,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.008354,8.394223",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01397_8d39497",
+      "name": "Street-Spot Innenstadt-West 2",
+      "type": "spot",
+      "lat": 49.013972,
+      "lng": 8.394972,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.013972,8.394972",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01206_8d39986",
+      "name": "Street-Spot Innenstadt-West 3",
+      "type": "spot",
+      "lat": 49.012059,
+      "lng": 8.399857,
+      "address": "Hans-Thoma-Straße 2, 76133 Karlsruhe-Innenstadt-West",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.012059,8.399857",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d01718_8d47528",
+      "name": "Street-Spot Kirchdorf",
+      "type": "spot",
+      "lat": 48.017184,
+      "lng": 8.475281,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.017184,8.475281",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d04340_8d36487",
+      "name": "Street-Spot Knielingen",
+      "type": "spot",
+      "lat": 49.043403,
+      "lng": 8.364871,
+      "description": "große fläche unter brücke und banks",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.043403,8.364871",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d04899_8d25002",
+      "name": "Street-Spot Maximiliansau",
+      "type": "spot",
+      "lat": 49.048993,
+      "lng": 8.250025,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.048993,8.250025",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d04994_8d25079",
+      "name": "Street-Spot Maximiliansau 2",
+      "type": "spot",
+      "lat": 49.04994,
+      "lng": 8.250794,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.049940,8.250794",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d05139_8d25096",
+      "name": "Street-Spot Maximiliansau 3",
+      "type": "spot",
+      "lat": 49.051388,
+      "lng": 8.250961,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.051388,8.250961",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d02892_8d38252",
+      "name": "Street-Spot Nordstadt",
+      "type": "spot",
+      "lat": 49.028918,
+      "lng": 8.382518,
+      "description": "bank",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.028918,8.382518",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d02723_8d38572",
+      "name": "Street-Spot Nordstadt 2",
+      "type": "spot",
+      "lat": 49.027232,
+      "lng": 8.385716,
+      "address": "BBBank eG Geldautomat, Erzbergerstraße 123, 76133 Karlsruhe",
+      "description": "Duale hs manni pad überdacht",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.027232,8.385716",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d02227_8d37118",
+      "name": "Street-Spot Nordweststadt",
+      "type": "spot",
+      "lat": 49.022274,
+      "lng": 8.371185,
+      "address": "49.0222740,8.3711850",
+      "description": "Diy curb",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.022274,8.371185",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00372_8d43420",
+      "name": "Street-Spot Oststadt",
+      "type": "spot",
+      "lat": 49.003718,
+      "lng": 8.434198,
+      "description": "gras gap",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.003718,8.434198",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00894_8d41923",
+      "name": "Street-Spot Oststadt 2",
+      "type": "spot",
+      "lat": 49.008939,
+      "lng": 8.419231,
+      "description": "stairs double set",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.008939,8.419231",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00799_8d42529",
+      "name": "Street-Spot Oststadt 3",
+      "type": "spot",
+      "lat": 49.007987,
+      "lng": 8.425287,
+      "description": "london gap auf gitter (fahrbar)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.007987,8.425287",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00739_8d43229",
+      "name": "Street-Spot Oststadt 4",
+      "type": "spot",
+      "lat": 49.007386,
+      "lng": 8.432285,
+      "description": "gap",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.007386,8.432285",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00620_8d43365",
+      "name": "Street-Spot Oststadt 5",
+      "type": "spot",
+      "lat": 49.006197,
+      "lng": 8.433648,
+      "description": "manual pad",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.006197,8.433648",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00582_8d43276",
+      "name": "Street-Spot Oststadt 6",
+      "type": "spot",
+      "lat": 49.005824,
+      "lng": 8.432755,
+      "description": "schneller bump/kicker",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005824,8.432755",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00554_8d43113",
+      "name": "Street-Spot Oststadt 7",
+      "type": "spot",
+      "lat": 49.00554,
+      "lng": 8.431133,
+      "description": "kleine gelbe kicker",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005540,8.431133",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00422_8d43057",
+      "name": "Street-Spot Oststadt 8",
+      "type": "spot",
+      "lat": 49.004217,
+      "lng": 8.430568,
+      "address": "49.0042169,8.4305682",
+      "description": "treppen",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.004217,8.430568",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01089_8d42355",
+      "name": "Street-Spot Oststadt 9",
+      "type": "spot",
+      "lat": 49.010886,
+      "lng": 8.423546,
+      "description": "Bump",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.010886,8.423546",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d92228_8d48515",
+      "name": "Street-Spot Reichenbach",
+      "type": "spot",
+      "lat": 48.922281,
+      "lng": 8.485151,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.922281,8.485151",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00423_8d44505",
+      "name": "Street-Spot Rintheim",
+      "type": "spot",
+      "lat": 49.004228,
+      "lng": 8.44505,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.004228,8.445050",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00523_8d44241",
+      "name": "Street-Spot Rintheim 2",
+      "type": "spot",
+      "lat": 49.005235,
+      "lng": 8.442412,
+      "description": "3er treppen",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005235,8.442412",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d01312_8d44074",
+      "name": "Street-Spot Rintheim 3",
+      "type": "spot",
+      "lat": 49.013123,
+      "lng": 8.440735,
+      "description": "dicke weiche rollen needed",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.013123,8.440735",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d83370_9d26940",
+      "name": "Street-Spot Schmiden",
+      "type": "spot",
+      "lat": 48.833701,
+      "lng": 9.269403,
+      "address": "Hofäckerstraße 6",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.833701,9.269403",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_49d00122_8d42137",
+      "name": "Street-Spot Südstadt",
+      "type": "spot",
+      "lat": 49.001216,
+      "lng": 8.421373,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.001216,8.421373",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00558_8d41094",
+      "name": "Street-Spot Südstadt 2",
+      "type": "spot",
+      "lat": 49.005584,
+      "lng": 8.410938,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005584,8.410938",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00370_8d41960",
+      "name": "Street-Spot Südstadt 3",
+      "type": "spot",
+      "lat": 49.003702,
+      "lng": 8.419602,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.003702,8.419602",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00459_8d41496",
+      "name": "Street-Spot Südstadt 4",
+      "type": "spot",
+      "lat": 49.004593,
+      "lng": 8.414963,
+      "description": "low to high manny pad quick small",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.004593,8.414963",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00498_8d41253",
+      "name": "Street-Spot Südstadt 5",
+      "type": "spot",
+      "lat": 49.004979,
+      "lng": 8.41253,
+      "description": "HKA",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.004979,8.412530",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00305_8d42166",
+      "name": "Street-Spot Südstadt 6",
+      "type": "spot",
+      "lat": 49.003046,
+      "lng": 8.421659,
+      "description": "city park downhill",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.003046,8.421659",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99810_8d38365",
+      "name": "Street-Spot Südweststadt",
+      "type": "spot",
+      "lat": 48.998097,
+      "lng": 8.383652,
+      "address": "Südendstraße 51, 76135 Karlsruhe-Südweststadt",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.998097,8.383652",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00331_8d40264",
+      "name": "Street-Spot Südweststadt 2",
+      "type": "spot",
+      "lat": 49.003309,
+      "lng": 8.402637,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.003309,8.402637",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99699_8d38316",
+      "name": "Street-Spot Südweststadt 3",
+      "type": "spot",
+      "lat": 48.996987,
+      "lng": 8.383156,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.996987,8.383156",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_49d00564_8d38665",
+      "name": "Street-Spot Weststadt",
+      "type": "spot",
+      "lat": 49.005642,
+      "lng": 8.386651,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.005642,8.386651",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d99841_8d38811",
+      "name": "Südendschule",
+      "type": "spot",
+      "lat": 48.998409,
+      "lng": 8.388111,
+      "address": "Südendschule, Südendstraße 35, 76137 Karlsruhe",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.998409,8.388111",
+      "source": "Google-Liste „Skate spots“"
+    },
+    {
+      "id": "spot_48d75649_9d14433",
+      "name": "Südheimer Platz",
+      "type": "spot",
+      "lat": 48.756493,
+      "lng": 9.144332,
+      "description": "Hier gibts eine Menge Schräg in den Boden eingelassene Marmorplatten (sollen normalerweise die Straße vom Platz abtrennen) die man als Jumpramp verwenden kann, allerdings nur ca 20 cm hoch.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.756493,9.144332",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d49543_9d21520",
+      "name": "Südwest Flatrails",
+      "type": "spot",
+      "lat": 48.49543,
+      "lng": 9.215197,
+      "description": "about 3 lil flatrails with good ground. And a Short lil Ledge/Curb/u can use it as a liil manny thing check it out :)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.495430,9.215197",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_44d83487_m0d57393",
+      "name": "Tati's Curbs",
+      "type": "spot",
+      "lat": 44.834875,
+      "lng": -0.573932,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.834875,-0.573932",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d49632_9d21628",
+      "name": "Theodor-Heuss-Schule",
+      "type": "spot",
+      "lat": 48.496316,
+      "lng": 9.216281,
+      "description": "good curbs somewhere undercover there but its a really hit and run game here u never know .... watch out and only skate on sunday. enjoy.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.496316,9.216281",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40316_2d18919",
+      "name": "Torre Agbar Hips",
+      "type": "spot",
+      "lat": 41.403161,
+      "lng": 2.189187,
+      "description": "L1 -> Glòries",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.403161,2.189187",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40331_2d19006",
+      "name": "Torre Gloriès",
+      "type": "spot",
+      "lat": 41.403312,
+      "lng": 2.190061,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.403312,2.190061",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d46148_2d23366",
+      "name": "Toys'R'Us",
+      "type": "spot",
+      "lat": 41.461479,
+      "lng": 2.23366,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.461479,2.233660",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38696_2d19690",
+      "name": "Trash Wall Ride",
+      "type": "spot",
+      "lat": 41.38696,
+      "lng": 2.196897,
+      "description": "L4 -> Ciutadella | Vila Olímpica",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.386960,2.196897",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40074_2d17886",
+      "name": "U Ledge",
+      "type": "spot",
+      "lat": 41.400742,
+      "lng": 2.17886,
+      "description": "L2 -> Monumental",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.400742,2.178860",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d40203_2d18469",
+      "name": "U Ledge",
+      "type": "spot",
+      "lat": 41.402029,
+      "lng": 2.184692,
+      "description": "Metro: L2 Monumental Spot: Well waxed U ledge worth checking out.",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.402029,2.184692",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d39271_2d19010",
+      "name": "U Sculpture",
+      "type": "spot",
+      "lat": 41.392709,
+      "lng": 2.190099,
+      "description": "L4 -> Ciutadella | Vila Olímpica",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.392709,2.190099",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78154_9d18164",
+      "name": "überdachter Flatlandspot",
+      "type": "spot",
+      "lat": 48.78154,
+      "lng": 9.181641,
+      "description": "Eine Passage, hier fahren die Flatlander wenns regnet manchmal.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.781540,9.181641",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d38561_2d16396",
+      "name": "Universitat",
+      "type": "spot",
+      "lat": 41.385608,
+      "lng": 2.163963,
+      "description": "L1 | L2 -> Universitat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.385608,2.163963",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d42709_2d14603",
+      "name": "Vall d'Hebron Sand Ledge",
+      "type": "spot",
+      "lat": 41.427087,
+      "lng": 2.14603,
+      "description": "L3 -> Vall d'Hebron",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.427087,2.146030",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d42946_2d17181",
+      "name": "Virrei Amat Banks",
+      "type": "spot",
+      "lat": 41.429459,
+      "lng": 2.171814,
+      "description": "L5 -> Virrei Amat",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.429459,2.171814",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d77567_9d18517",
+      "name": "Wallride",
+      "type": "spot",
+      "lat": 48.775671,
+      "lng": 9.185171,
+      "description": "ziemlich Steiler Wallride mit etwas stressiger Anfahrt (Fahnenmasten im Weg) ...ja, genau da unter den Bäumen :-)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.775671,9.185171",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d78282_9d17903",
+      "name": "Wassergap",
+      "type": "spot",
+      "lat": 48.782819,
+      "lng": 9.179029,
+      "description": "ziemlich weites gap von einer Erhöhung über ein Wasserbecken, weiß gar nicht ob das überhaupt noch fahrbar ist, da hier früher andauernd securities da waren.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.782819,9.179029",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_38d73075_m9d15054",
+      "name": "White small hubba",
+      "type": "spot",
+      "lat": 38.730746,
+      "lng": -9.150541,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.730746,-9.150541",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37318_2d17747",
+      "name": "WTC Bumps",
+      "type": "spot",
+      "lat": 41.373182,
+      "lng": 2.177465,
+      "description": "L3 -> Drassanes",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.373182,2.177465",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37256_2d17862",
+      "name": "WTC Ledge",
+      "type": "spot",
+      "lat": 41.372558,
+      "lng": 2.178624,
+      "description": "L3 -> Drassanes",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.372558,2.178624",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d37381_2d17743",
+      "name": "WTC Mini Lauches",
+      "type": "spot",
+      "lat": 41.373807,
+      "lng": 2.177426,
+      "description": "L3 -> Drassanes",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.373807,2.177426",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d35031_2d09128",
+      "name": "Yellow Rail Road",
+      "type": "spot",
+      "lat": 41.35031,
+      "lng": 2.091277,
+      "description": "R5 | R6 | L8 -> Almeda",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.350310,2.091277",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_48d53066_9d04102",
+      "name": "Zentrum für Klinische Transfusionsmedizin",
+      "type": "spot",
+      "lat": 48.53066,
+      "lng": 9.041018,
+      "description": "Curbs flatgap and perfect flat.",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.530660,9.041018",
+      "source": "My Maps „Skate Spots und Shops“"
+    },
+    {
+      "id": "spot_41d36450_2d13936",
+      "name": "Zona Franca Handrail",
+      "type": "spot",
+      "lat": 41.364502,
+      "lng": 2.139362,
+      "description": "L8 -> Magòria-La Campana",
+      "url": "https://www.google.com/maps/search/?api=1&query=41.364502,2.139362",
+      "source": "My Maps „Skate Spots und Shops“"
+    }
+  ]
 }

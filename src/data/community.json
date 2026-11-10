@@ -689,5 +689,11 @@
         }
       ]
     }
-  ]
+  ],
+  "visibility": {
+    "sec_projects": false,
+    "sec_learn": false,
+    "sec_shops": false,
+    "sec_clubs": false
+  }
 }

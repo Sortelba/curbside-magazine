@@ -95,7 +95,7 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                                         {p.description && <p className="text-sm">{p.description}</p>}
                                         {p.url && p.url !== "#" && (
                                             <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-sm font-bold">
-                                                {t("map.open_link")} →
+                                                {t(p.url.includes("google.com/maps") ? "map.open_maps" : "map.open_link")} →
                                             </a>
                                         )}
                                     </div>

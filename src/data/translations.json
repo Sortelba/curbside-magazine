@@ -136,7 +136,8 @@
       "type_park": "Skateparks",
       "type_shop": "Shops",
       "open_link": "Mehr Infos",
-      "empty": "Noch keine Einträge auf der Karte."
+      "empty": "Noch keine Einträge auf der Karte.",
+      "open_maps": "In Google Maps öffnen"
     }
   },
   "en": {
@@ -276,7 +277,8 @@
       "type_park": "Skateparks",
       "type_shop": "Shops",
       "open_link": "More info",
-      "empty": "No entries on the map yet."
+      "empty": "No entries on the map yet.",
+      "open_maps": "Open in Google Maps"
     }
   }
 }
