@@ -1548,7 +1548,7 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
             {/* Welche Bereiche auf der Community-Seite erscheinen */}
             <div className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm">
                 <h3 className="text-xl font-black uppercase italic tracking-tight">Bereiche auf der Community-Seite</h3>
-                <p className="text-xs text-muted-foreground mt-1 mb-4">Antippen zum Ein- oder Ausblenden. Wird sofort gespeichert und ist nach dem nächsten Veröffentlichen live.</p>
+                <p className="text-xs text-muted-foreground mt-1 mb-4">Antippen zum Ein- oder Ausblenden. Wird sofort gespeichert und ist nach dem nächsten Veröffentlichen live. Ist mindestens ein Bereich an, wird „Community anzeigen“ in den Einstellungen automatisch eingeschaltet – sind alle aus, automatisch ausgeschaltet.</p>
                 <div className="flex flex-wrap gap-2">
                     {PAGE_SECTIONS.map((sec) => {
                         const on = isSectionVisible(sec.id);

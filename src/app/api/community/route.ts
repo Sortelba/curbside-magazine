@@ -4,6 +4,7 @@ import path from 'path';
 import { ADMIN_KEY, isAdminKey } from "@/lib/adminAuth";
 
 const DATA_FILE = path.join(process.cwd(), 'src', 'data', 'community.json');
+const SETTINGS_FILE = path.join(process.cwd(), 'src', 'data', 'settings.json');
 
 export async function GET() {
     try {
@@ -35,6 +36,20 @@ export async function POST(request: Request) {
         }
 
         fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+
+        // "Community anzeigen" (Einstellungen) folgt den Bereichen: ist mindestens
+        // ein Bereich sichtbar, wird die Community gezeigt, sonst ausgeblendet.
+        const SECTIONS = ['sec_map', 'sec_shops', 'sec_clubs', 'sec_projects', 'sec_learn'];
+        const anyVisible = SECTIONS.some(id => data.visibility?.[id] !== false);
+        try {
+            const settings = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf8'));
+            if (settings.showCommunity !== anyVisible) {
+                settings.showCommunity = anyVisible;
+                fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
+            }
+        } catch (e) {
+            console.error('Could not sync showCommunity:', e);
+        }
 
         return NextResponse.json({ success: true });
     } catch (error) {
