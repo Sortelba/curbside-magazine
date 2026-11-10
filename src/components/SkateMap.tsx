@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { MapContainer, TileLayer, CircleMarker, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useLanguage } from "@/context/LanguageContext";
@@ -49,6 +49,13 @@ const SHOP_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" wi
   <rect x="11.6" y="16.5" width="3.8" height="3.2" fill="#fff"/>
 </svg>`;
 
+// Eigenes Skatepark-Symbol: blaue Runde, Halfpipe mit Plattformen und Coping
+const PARK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100%" height="100%">
+  <circle cx="16" cy="16" r="14.5" fill="#2563eb" stroke="#fff" stroke-width="2.5"/>
+  <path d="M6.5 11.5 H10 Q10 20.5 16 20.5 Q22 20.5 22 11.5 H25.5 V23 H6.5 Z" fill="#fff"/>
+  <path d="M5.8 11.5 H10.4 M21.6 11.5 H26.2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+</svg>`;
+
 const makeIcon = (html: string, className: string) => L.divIcon({
     html,
     className,
@@ -58,6 +65,12 @@ const makeIcon = (html: string, className: string) => L.divIcon({
 });
 const spotIcon = makeIcon(ROAD_SVG, "curbside-spot-icon");
 const shopIcon = makeIcon(SHOP_SVG, "curbside-shop-icon");
+const parkIcon = makeIcon(PARK_SVG, "curbside-park-icon");
+const ICONS: Record<string, { svg: string; icon: L.DivIcon }> = {
+    spot: { svg: ROAD_SVG, icon: spotIcon },
+    shop: { svg: SHOP_SVG, icon: shopIcon },
+    park: { svg: PARK_SVG, icon: parkIcon },
+};
 
 // Die Karte sitzt in einem animierten Fenster: Größe nachmessen, sobald es fertig aufgeklappt ist
 function FixSize() {
@@ -104,11 +117,7 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                             active.includes(type.id) ? "border-foreground bg-foreground text-background" : "border-border text-muted-foreground"
                         )}
                     >
-                        {type.id === "spot" || type.id === "shop" ? (
-                            <span className="h-4 w-4" dangerouslySetInnerHTML={{ __html: type.id === "spot" ? ROAD_SVG : SHOP_SVG }} />
-                        ) : (
-                            <span className="h-3 w-3 rounded-full" style={{ background: type.color }} />
-                        )}
+                        <span className="h-4 w-4" dangerouslySetInnerHTML={{ __html: ICONS[type.id].svg }} />
                         {t(`map.type_${type.id}`)} ({counts[type.id] || 0})
                     </button>
                 ))}
@@ -145,20 +154,11 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                                 </div>
                             </Popup>
                         );
-                        // Spots mit Straßen-Symbol, Shops mit Laden-Symbol, Parks als blaue Punkte
-                        return p.type === "spot" || p.type === "shop" ? (
-                            <Marker key={`${p.type}-${p.id}`} position={[p.lat, p.lng]} icon={p.type === "spot" ? spotIcon : shopIcon}>
+                        // Jede Kategorie mit eigenem Symbol (Straße, Laden, Halfpipe)
+                        return (
+                            <Marker key={`${p.type}-${p.id}`} position={[p.lat, p.lng]} icon={ICONS[p.type]?.icon || spotIcon}>
                                 {popup}
                             </Marker>
-                        ) : (
-                            <CircleMarker
-                                key={`${p.type}-${p.id}`}
-                                center={[p.lat, p.lng]}
-                                radius={8}
-                                pathOptions={{ color: "#fff", weight: 2, fillColor: color, fillOpacity: 0.9 }}
-                            >
-                                {popup}
-                            </CircleMarker>
                         );
                     })}
                 </MapContainer>
