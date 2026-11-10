@@ -145,7 +145,7 @@ export default function ManageAnalytics({ keyStr }: { keyStr: string }) {
             </div>
             <ol className="text-sm space-y-2 list-decimal pl-5 leading-relaxed">
                 <li>Auf <a href="https://www.goatcounter.com/signup" target="_blank" rel="noopener noreferrer" className="font-bold underline">goatcounter.com/signup</a> ein Konto anlegen. Als <i>Code</i> z. B. <code className="bg-muted px-1 rounded">curbside</code> wählen → deine Seite heißt dann curbside.goatcounter.com.</li>
-                <li>Dort oben rechts <b>Settings → API</b> → „New API token“ mit dem Haken <b>Read statistics</b> erstellen.</li>
+                <li>Oben im Menü auf <b>deinen Benutzernamen → API</b> klicken (direkt: <code className="bg-muted px-1 rounded">https://DEINCODE.goatcounter.com/user/api</code>), dort einen neuen Schlüssel mit dem Haken <b>Read statistics</b> erstellen und kopieren.</li>
                 <li>Code und Schlüssel hier eintragen und speichern.</li>
                 <li>Einmal <b>Manuelles Update</b> machen – ab dann zählt die Website mit.</li>
             </ol>
