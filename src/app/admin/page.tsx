@@ -78,6 +78,8 @@ function AdminDashboardContent() {
     const searchParams = useSearchParams();
     const key = searchParams.get("key");
     const [loading, setLoading] = useState(false);
+    // Passwort in der Adresse falsch/veraltet (z. B. alter Link aus dem Browser-Verlauf)
+    const [keyInvalid, setKeyInvalid] = useState(false);
     const [drafts, setDrafts] = useState<any[]>([]);
     const [status, setStatus] = useState<string>("");
     const [activeTab, setActiveTab] = useState<string>("news");
@@ -228,6 +230,7 @@ function AdminDashboardContent() {
                 cache: 'no-store',
                 headers: { 'Pragma': 'no-cache' }
             });
+            if (res.status === 401) setKeyInvalid(true);
             if (res.ok) {
                 const data = await res.json();
                 setSettings(data);
@@ -262,14 +265,22 @@ function AdminDashboardContent() {
 
 
 
-    if (!key) {
+    if (!key || keyInvalid) {
         return (
-            <div className="flex items-center justify-center min-h-screen bg-background">
-                <div className="text-center p-8 border border-destructive rounded-lg bg-destructive/10">
+            <div className="flex items-center justify-center min-h-screen bg-background px-4">
+                <div className="max-w-lg text-center p-8 border border-destructive rounded-lg bg-destructive/10">
                     <AlertCircle className="h-12 w-12 text-destructive mx-auto mb-4" />
-                    <h1 className="text-2xl font-bold text-destructive mb-2">Access Denied</h1>
-                    <p className="text-muted-foreground">Please provide a valid secret key in the URL.</p>
-                    <code className="block mt-4 bg-black/10 p-2 rounded text-sm">?key=YOUR_SECRET</code>
+                    <h1 className="text-2xl font-bold text-destructive mb-2">
+                        {key ? "Altes oder falsches Passwort im Link" : "Kein Passwort im Link"}
+                    </h1>
+                    <p className="text-muted-foreground">
+                        Dieser Tab kann nichts scannen oder speichern. Schließ ihn und öffne das Dashboard
+                        per Doppelklick auf <strong>„Start Admin“</strong> im Projektordner – das setzt das richtige Passwort automatisch ein.
+                    </p>
+                    <p className="text-muted-foreground mt-4 text-sm">
+                        Tipp: Schlägt dir der Browser beim Tippen von „localhost“ noch den alten Link vor, markier den
+                        Vorschlag und lösch ihn mit <strong>Shift + Entf</strong> (Mac: <strong>Shift + Fn + Backspace</strong>).
+                    </p>
                 </div>
             </div>
         );
