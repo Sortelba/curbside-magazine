@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap, Map as MapIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -16,6 +16,13 @@ export default function CommunityContent({ data }: { data: any }) {
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedState, setSelectedState] = useState("");
+
+    // Direktlink: /community/?bereich=skatemap öffnet gleich die Karte (z. B. aus einem Post)
+    useEffect(() => {
+        const map: Record<string, string> = { skatemap: "sec_map", shops: "sec_shops", vereine: "sec_clubs", projekte: "sec_projects", lernen: "sec_learn" };
+        const id = map[new URLSearchParams(window.location.search).get("bereich") || ""];
+        if (id && (data.visibility || {})[id] !== false) setActiveSection(id);
+    }, [data.visibility]);
 
     const visibility = data.visibility || {};
     const sections = [
