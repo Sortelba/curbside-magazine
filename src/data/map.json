@@ -2197,6 +2197,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_38d99409_m1d85695",
+      "name": "Asako Moda",
+      "type": "shop",
+      "lat": 38.994086,
+      "lng": -1.856947,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.994086,-1.856947",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_48d00610_0d19801",
       "name": "Bamboo Skateshop",
       "type": "shop",
@@ -2440,6 +2449,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_38d33963_m0d49005",
+      "name": "Picnic Genuine Skateshop",
+      "type": "shop",
+      "lat": 38.339628,
+      "lng": -0.490053,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.339628,-0.490053",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_44d85329_m0d56725",
       "name": "Riot Skateshop",
       "type": "shop",
@@ -2549,6 +2567,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_39d47407_m0d34655",
+      "name": "SKATESPAIN SHOP",
+      "type": "shop",
+      "lat": 39.474074,
+      "lng": -0.346546,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.474074,-0.346546",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_39d47349_m0d37342",
+      "name": "SKATEWORLD",
+      "type": "shop",
+      "lat": 39.473489,
+      "lng": -0.373421,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.473489,-0.373421",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_52d67341_m2d44620",
       "name": "Sliders Skate Shop",
       "type": "shop",
@@ -2582,6 +2618,15 @@
       "lat": 49.128294,
       "lng": 8.592287,
       "url": "https://www.google.com/maps/search/?api=1&query=49.128294,8.592287",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d41900_m3d70115",
+      "name": "Stance Skateboard Shop",
+      "type": "shop",
+      "lat": 40.419002,
+      "lng": -3.701147,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.419002,-3.701147",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2654,6 +2699,15 @@
       "lat": 40.425346,
       "lng": -3.70181,
       "url": "https://www.google.com/maps/search/?api=1&query=40.425346,-3.701810",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_39d46946_m0d38254",
+      "name": "Willshop",
+      "type": "shop",
+      "lat": 39.469458,
+      "lng": -0.382541,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.469458,-0.382541",
       "source": "My Maps „Skatemap2026“"
     },
     {
