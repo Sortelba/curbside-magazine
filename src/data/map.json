@@ -344,6 +344,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m38d32643_144d31698",
+      "name": "Blunt Skateboarding & Snow Co",
+      "type": "park",
+      "lat": -38.326427,
+      "lng": 144.316979,
+      "url": "https://www.google.com/maps/search/?api=1&query=-38.326427,144.316979",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d96937_7d88446",
       "name": "BMX- & Skateanlage im Mäuseturmpark",
       "type": "park",
@@ -823,6 +832,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m33d88043_18d54147",
+      "name": "Edgemead Skate Park",
+      "type": "park",
+      "lat": -33.880435,
+      "lng": 18.54147,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.880435,18.541470",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d56410_m105d04917",
       "name": "Edora Park",
       "type": "park",
@@ -865,6 +883,15 @@
       "lat": -32.94097,
       "lng": 151.765599,
       "url": "https://www.google.com/maps/search/?api=1&query=-32.940970,151.765599",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m37d85095_144d99361",
+      "name": "Evolve Skate Store",
+      "type": "park",
+      "lat": -37.850954,
+      "lng": 144.99361,
+      "url": "https://www.google.com/maps/search/?api=1&query=-37.850954,144.993610",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1230,6 +1257,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m37d79955_144d97803",
+      "name": "Hemley Skateboarding",
+      "type": "park",
+      "lat": -37.799546,
+      "lng": 144.978034,
+      "url": "https://www.google.com/maps/search/?api=1&query=-37.799546,144.978034",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d46739_26d08371",
       "name": "Herăstrău Skatepark",
       "type": "park",
@@ -1281,6 +1317,15 @@
       "lat": 35.089299,
       "lng": -89.736801,
       "url": "https://www.google.com/maps/search/?api=1&query=35.089299,-89.736801",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m34d03035_18d35510",
+      "name": "Hout Bay Eyethu Skatepark",
+      "type": "park",
+      "lat": -34.030349,
+      "lng": 18.3551,
+      "url": "https://www.google.com/maps/search/?api=1&query=-34.030349,18.355100",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1497,6 +1542,15 @@
       "lat": 40.699854,
       "lng": -73.61273,
       "url": "https://www.google.com/maps/search/?api=1&query=40.699854,-73.612730",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m33d97242_18d47922",
+      "name": "Keurboom Park Skateboard Park Basketball Court",
+      "type": "park",
+      "lat": -33.972419,
+      "lng": 18.479218,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.972419,18.479218",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1881,6 +1935,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m33d93426_18d41987",
+      "name": "Mill Street Bridge Skatepark",
+      "type": "park",
+      "lat": -33.934256,
+      "lng": 18.419873,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.934256,18.419873",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d21426_m1d28221",
       "name": "Mimizan Skatepark",
       "type": "park",
@@ -1995,6 +2058,15 @@
       "lat": 50.440009,
       "lng": 4.863366,
       "url": "https://www.google.com/maps/search/?api=1&query=50.440009,4.863366",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m33d95920_18d52467",
+      "name": "Nantes Skatepark",
+      "type": "park",
+      "lat": -33.959197,
+      "lng": 18.524669,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.959197,18.524669",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2563,6 +2635,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m33d97484_18d48101",
+      "name": "Rondebosch Bowl",
+      "type": "park",
+      "lat": -33.97484,
+      "lng": 18.481011,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.974840,18.481011",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d50087_7d47938",
       "name": "Rosheim Skatepark",
       "type": "park",
@@ -2750,6 +2831,15 @@
       "lat": 43.856364,
       "lng": 10.528721,
       "url": "https://www.google.com/maps/search/?api=1&query=43.856364,10.528721",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m33d91323_18d42189",
+      "name": "Skate Park @ Battery Park",
+      "type": "park",
+      "lat": -33.913233,
+      "lng": 18.421889,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.913233,18.421889",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5437,6 +5527,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m33d90428_18d47809",
+      "name": "The Shred Skatepark",
+      "type": "park",
+      "lat": -33.904283,
+      "lng": 18.478091,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.904283,18.478091",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_59d28185_18d01518",
       "name": "The Sun Burns Skateboard Park",
       "type": "park",
@@ -5653,6 +5752,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m34d04488_18d60103",
+      "name": "Westridge Skatepark",
+      "type": "park",
+      "lat": -34.044878,
+      "lng": 18.601034,
+      "url": "https://www.google.com/maps/search/?api=1&query=-34.044878,18.601034",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_54d69358_25d27433",
       "name": "White Bridge Skatepark",
       "type": "park",
@@ -5797,6 +5905,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m33d92705_18d42142",
+      "name": "Alpha Longboards",
+      "type": "shop",
+      "lat": -33.92705,
+      "lng": 18.42142,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.927050,18.421420",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38307_2d16848",
       "name": "AMIGOS SKATESHOP",
       "type": "shop",
@@ -5815,12 +5932,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m34d08053_18d45581",
+      "name": "Baboon Boards",
+      "type": "shop",
+      "lat": -34.080526,
+      "lng": 18.455806,
+      "url": "https://www.google.com/maps/search/?api=1&query=-34.080526,18.455806",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_48d00610_0d19801",
       "name": "Bamboo Skateshop",
       "type": "shop",
       "lat": 48.006097,
       "lng": 0.19801,
       "url": "https://www.google.com/maps/search/?api=1&query=48.006097,0.198010",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m33d92721_18d41346",
+      "name": "Baseline Skate Shop",
+      "type": "shop",
+      "lat": -33.927207,
+      "lng": 18.41346,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.927207,18.413460",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5848,6 +5983,15 @@
       "lat": 49.006715,
       "lng": 8.402821,
       "url": "https://www.google.com/maps/search/?api=1&query=49.006715,8.402821",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m33d91258_18d42189",
+      "name": "Boardhub",
+      "type": "shop",
+      "lat": -33.912576,
+      "lng": 18.421895,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.912576,18.421895",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6049,6 +6193,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m33d89728_18d48235",
+      "name": "LINO SKATE SHOP",
+      "type": "shop",
+      "lat": -33.897277,
+      "lng": 18.482346,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.897277,18.482346",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m27d48089_153d01237",
       "name": "Middle Store",
       "type": "shop",
@@ -6136,6 +6289,15 @@
       "lat": 46.325779,
       "lng": -0.463308,
       "url": "https://www.google.com/maps/search/?api=1&query=46.325779,-0.463308",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m33d92781_18d41364",
+      "name": "Rollers Skateboarding Store",
+      "type": "shop",
+      "lat": -33.927811,
+      "lng": 18.413636,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.927811,18.413636",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6326,6 +6488,24 @@
       "lat": 49.40889,
       "lng": 8.697277,
       "url": "https://www.google.com/maps/search/?api=1&query=49.408890,8.697277",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m33d90428_18d47809",
+      "name": "The Shred Skatepark",
+      "type": "shop",
+      "lat": -33.904283,
+      "lng": 18.478091,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.904283,18.478091",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m33d98018_18d46385",
+      "name": "The Store Cavendish - Surf Fashion Lifestyle",
+      "type": "shop",
+      "lat": -33.980181,
+      "lng": 18.463847,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.980181,18.463847",
       "source": "My Maps „Skatemap2026“"
     },
     {
