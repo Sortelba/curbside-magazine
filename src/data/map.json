@@ -2,6 +2,15 @@
   "updated": "2026-11-10",
   "spots": [
     {
+      "id": "park_50d95970_6d90891",
+      "name": "„Salatschüssel“ (Skatepark)",
+      "type": "park",
+      "lat": 50.959697,
+      "lng": 6.908914,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.959697,6.908914",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d51545_9d04580",
       "name": "3-in-One",
       "type": "park",
@@ -29,6 +38,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d12241_7d75455",
+      "name": "Bahlingen Skatepark",
+      "type": "park",
+      "lat": 48.122406,
+      "lng": 7.754548,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.122406,7.754548",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d34390_6d34898",
       "name": "Baume-les-dames Skatepark",
       "type": "park",
@@ -53,6 +71,15 @@
       "lat": 47.231525,
       "lng": 6.017965,
       "url": "https://www.google.com/maps/search/?api=1&query=47.231525,6.017965",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d26553_11d23475",
+      "name": "Big Berta Skateplaza Zirl",
+      "type": "park",
+      "lat": 47.265531,
+      "lng": 11.234746,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.265531,11.234746",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -156,6 +183,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d48197_11d11980",
+      "name": "Der Streifen - Skatepark Garmisch-Partenkirchen",
+      "type": "park",
+      "lat": 47.481975,
+      "lng": 11.119803,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.481975,11.119803",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d16703_m8d64406",
       "name": "DIY Porto",
       "type": "park",
@@ -204,6 +240,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d81077_8d92841",
+      "name": "Freestyle Academy Stuttgart",
+      "type": "park",
+      "lat": 48.810767,
+      "lng": 8.928411,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.810767,8.928411",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d95482_8d47195",
       "name": "Freizeitfläche Berzallee im Regionalpark RheinMain",
       "type": "park",
@@ -231,6 +276,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d21833_11d56195",
+      "name": "Goldschmiedplatz Skatepark",
+      "type": "park",
+      "lat": 48.218331,
+      "lng": 11.56195,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.218331,11.561950",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d76763_m0d60794",
       "name": "Gradignan Skatepark",
       "type": "park",
@@ -246,6 +300,42 @@
       "lat": 44.617463,
       "lng": -1.097444,
       "url": "https://www.google.com/maps/search/?api=1&query=44.617463,-1.097444",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d12208_7d81823",
+      "name": "Half-Pipe",
+      "type": "park",
+      "lat": 48.122083,
+      "lng": 7.818225,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.122083,7.818225",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d03233_7d80372",
+      "name": "Halfpipe Moosweiher",
+      "type": "park",
+      "lat": 48.032328,
+      "lng": 7.803724,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.032328,7.803724",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d14559_11d50980",
+      "name": "Hirschgarten Skatepark",
+      "type": "park",
+      "lat": 48.145592,
+      "lng": 11.509797,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.145592,11.509797",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d25898_11d40729",
+      "name": "Innsbruck Skatepark Tivoli",
+      "type": "park",
+      "lat": 47.258979,
+      "lng": 11.407292,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.258979,11.407292",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -359,6 +449,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d95778_6d95409",
+      "name": "Lohserampe",
+      "type": "park",
+      "lat": 50.95778,
+      "lng": 6.954094,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.957780,6.954094",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d39796_2d21042",
       "name": "Marbella Skatepark",
       "type": "park",
@@ -405,6 +504,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d18788_11d52537",
+      "name": "Moosacher Skatepark/skater",
+      "type": "park",
+      "lat": 48.187877,
+      "lng": 11.525365,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.187877,11.525365",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d05324_6d60753",
       "name": "Morteau Skatepark",
       "type": "park",
@@ -439,6 +547,15 @@
       "lng": 2.166415,
       "description": "L1 | L2 -> Universitat",
       "url": "https://www.google.com/maps/search/?api=1&query=41.385064,2.166415",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d98736_6d94972",
+      "name": "North Brigade e.V. Skatepark",
+      "type": "park",
+      "lat": 50.987363,
+      "lng": 6.949721,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.987363,6.949721",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -534,6 +651,15 @@
       "lat": 51.18841,
       "lng": 10.069062,
       "url": "https://www.google.com/maps/search/?api=1&query=51.188410,10.069062",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d02350_10d02148",
+      "name": "Pumptrack Rosenberg",
+      "type": "park",
+      "lat": 49.0235,
+      "lng": 10.021483,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.023500,10.021483",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -702,12 +828,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d56788_10d70640",
+      "name": "Skate- und Bikepark Füssen",
+      "type": "park",
+      "lat": 47.567876,
+      "lng": 10.706401,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.567876,10.706401",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d86653_9d22166",
       "name": "Skate- und BMX Park Pattonville",
       "type": "park",
       "lat": 48.866532,
       "lng": 9.221664,
       "url": "https://www.google.com/maps/search/?api=1&query=48.866532,9.221664",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d51188_7d94084",
+      "name": "Skate- und BMX-Park Nord",
+      "type": "park",
+      "lat": 48.511885,
+      "lng": 7.940842,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.511885,7.940842",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -738,6 +882,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d88403_10d90523",
+      "name": "Skateisland",
+      "type": "park",
+      "lat": 49.884028,
+      "lng": 10.905226,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.884028,10.905226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d27220_12d37064",
       "name": "Skatepark - Multisportanlage Städtelner Strasse",
       "type": "park",
@@ -753,6 +906,15 @@
       "lat": 49.110953,
       "lng": 6.184726,
       "url": "https://www.google.com/maps/search/?api=1&query=49.110953,6.184726",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d10555_10d75593",
+      "name": "Skatepark / Pumptrack Gunzenhausen",
+      "type": "park",
+      "lat": 49.105551,
+      "lng": 10.755927,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.105551,10.755927",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -775,12 +937,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d83647_10d09787",
+      "name": "Skatepark Aalen",
+      "type": "park",
+      "lat": 48.83647,
+      "lng": 10.097867,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.836470,10.097867",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d72909_9d32144",
       "name": "Skatepark Adenauer Brücke",
       "type": "park",
       "lat": 48.729089,
       "lng": 9.321439,
       "url": "https://www.google.com/maps/search/?api=1&query=48.729089,9.321439",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d07508_8d49239",
+      "name": "Skatepark am Kulturzentrum Klosterhof",
+      "type": "park",
+      "lat": 48.075078,
+      "lng": 8.492394,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.075078,8.492394",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -821,6 +1001,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d32132_10d21995",
+      "name": "Skatepark Bad Neustadt",
+      "type": "park",
+      "lat": 50.321323,
+      "lng": 10.219949,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.321323,10.219949",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_38d73468_m9d12581",
       "name": "Skatepark Bairro Horizonte",
       "type": "park",
@@ -836,6 +1025,15 @@
       "lat": 50.930243,
       "lng": 4.044273,
       "url": "https://www.google.com/maps/search/?api=1&query=50.930243,4.044273",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d82225_10d63908",
+      "name": "Skatepark Biessenhofen",
+      "type": "park",
+      "lat": 47.822252,
+      "lng": 10.639077,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.822252,10.639077",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -866,6 +1064,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d13746_10d03733",
+      "name": "Skatepark Crailsheim",
+      "type": "park",
+      "lat": 49.137456,
+      "lng": 10.037334,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.137456,10.037334",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d44986_2d19970",
       "name": "Skatepark de Baró de Viver",
       "type": "park",
@@ -884,6 +1091,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d58924_7d72472",
+      "name": "Skatepark de la Rotonde",
+      "type": "park",
+      "lat": 48.589238,
+      "lng": 7.724717,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.589238,7.724717",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d37708_2d10923",
       "name": "Skatepark de Les Corts",
       "type": "park",
@@ -891,6 +1107,15 @@
       "lng": 2.109232,
       "description": "L5 -> Pubilla Cases",
       "url": "https://www.google.com/maps/search/?api=1&query=41.377079,2.109232",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d39271_7d62624",
+      "name": "Skatepark de Matzenheim",
+      "type": "park",
+      "lat": 48.392709,
+      "lng": 7.626239,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.392709,7.626239",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -919,6 +1144,15 @@
       "lng": 9.35474,
       "description": "Ziemlich guter Holz-Skatepark auf 2 Ebenen, mit dem BMX wie ich finde allerdings etwas stressig weil die Rampen recht nahe beieinander Stehen.",
       "url": "https://www.google.com/maps/search/?api=1&query=48.521639,9.354740",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d00291_7d80435",
+      "name": "Skatepark Dietenbachpark",
+      "type": "park",
+      "lat": 48.002913,
+      "lng": 7.804349,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.002913,7.804349",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -986,12 +1220,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d41714_10d90043",
+      "name": "Skatepark Eisfeld",
+      "type": "park",
+      "lat": 50.417138,
+      "lng": 10.900435,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.417138,10.900435",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d19607_6d84642",
+      "name": "Skatepark Eller",
+      "type": "park",
+      "lat": 51.196074,
+      "lng": 6.846423,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.196074,6.846423",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d10724_8d62311",
       "name": "Skatepark Europaviertel",
       "type": "park",
       "lat": 50.107237,
       "lng": 8.62311,
       "url": "https://www.google.com/maps/search/?api=1&query=50.107237,8.623110",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d20627_11d52812",
+      "name": "Skatepark Fasanerie Feldmoching",
+      "type": "park",
+      "lat": 48.206271,
+      "lng": 11.52812,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.206271,11.528120",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1005,12 +1266,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d14125_11d40290",
+      "name": "Skatepark Freiham",
+      "type": "park",
+      "lat": 48.141248,
+      "lng": 11.4029,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.141248,11.402900",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d10198_8d66617",
       "name": "Skatepark Friedensbrücke",
       "type": "park",
       "lat": 50.101982,
       "lng": 8.66617,
       "url": "https://www.google.com/maps/search/?api=1&query=50.101982,8.666170",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d62415_9d81978",
+      "name": "Skatepark Geislingen an der Steige",
+      "type": "park",
+      "lat": 48.624152,
+      "lng": 9.819778,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.624152,9.819778",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1041,12 +1320,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d98985_7d85231",
+      "name": "Skatepark HDJ",
+      "type": "park",
+      "lat": 47.989846,
+      "lng": 7.852313,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.989846,7.852313",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d41499_8d64685",
       "name": "Skatepark Heidelberg Wieblingen",
       "type": "park",
       "lat": 49.414993,
       "lng": 8.646849,
       "url": "https://www.google.com/maps/search/?api=1&query=49.414993,8.646849",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d14788_11d51636",
+      "name": "Skatepark Hirschgarten",
+      "type": "park",
+      "lat": 48.147883,
+      "lng": 11.516365,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.147883,11.516365",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1059,12 +1356,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d94261_7d02913",
+      "name": "Skatepark Höhenberg",
+      "type": "park",
+      "lat": 50.942614,
+      "lng": 7.029126,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.942614,7.029126",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d60101_6d11514",
       "name": "Skatepark Hollerich",
       "type": "park",
       "lat": 49.601013,
       "lng": 6.115137,
       "url": "https://www.google.com/maps/search/?api=1&query=49.601013,6.115137",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d73172_10d31920",
+      "name": "Skatepark Illerdamm",
+      "type": "park",
+      "lat": 47.731716,
+      "lng": 10.319199,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.731716,10.319199",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d53008_7d72825",
+      "name": "Skatepark Illkirch-Grafenstaden",
+      "type": "park",
+      "lat": 48.530079,
+      "lng": 7.72825,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.530079,7.728250",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d09120_11d65880",
+      "name": "Skatepark Im Gefilde",
+      "type": "park",
+      "lat": 48.091199,
+      "lng": 11.658801,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.091199,11.658801",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1140,12 +1473,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d98594_10d54859",
+      "name": "Skatepark Knetzgau",
+      "type": "park",
+      "lat": 49.985939,
+      "lng": 10.548591,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.985939,10.548591",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d83924_12d90867",
       "name": "Skatepark Konkordiapark",
       "type": "park",
       "lat": 50.839236,
       "lng": 12.908669,
       "url": "https://www.google.com/maps/search/?api=1&query=50.839236,12.908669",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d24678_11d45855",
+      "name": "Skatepark Kufsteiner Straße",
+      "type": "park",
+      "lat": 48.246784,
+      "lng": 11.458549,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.246784,11.458549",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1185,12 +1536,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d95840_6d96301",
+      "name": "Skatepark Lentpark",
+      "type": "park",
+      "lat": 50.958397,
+      "lng": 6.96301,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.958397,6.963010",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d36386_9d72155",
       "name": "Skatepark Linden-Süd",
       "type": "park",
       "lat": 52.363859,
       "lng": 9.721547,
       "url": "https://www.google.com/maps/search/?api=1&query=52.363859,9.721547",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d77363_10d60899",
+      "name": "Skatepark Marktoberdorf",
+      "type": "park",
+      "lat": 47.773631,
+      "lng": 10.608992,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.773631,10.608992",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1237,6 +1606,24 @@
       "lng": 9.327983,
       "description": "Kleiner Skatepark mit einer Metallquarter, einer Betonfunbox mit curb, zwei Grindboxen und einer verdammt steieln Bank. Klingt nach nix besonderem, aber wo kann man schon wenn man grade nicht fährt Mädels beim Beachvolleyballspielen zuschauen? :-)",
       "url": "https://www.google.com/maps/search/?api=1&query=48.629512,9.327983",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d76602_11d53979",
+      "name": "Skatepark Oberfischbach",
+      "type": "park",
+      "lat": 47.766022,
+      "lng": 11.539787,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.766022,11.539787",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d53575_8d05669",
+      "name": "Skatepark Oberkirch",
+      "type": "park",
+      "lat": 48.535746,
+      "lng": 8.056687,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.535746,8.056687",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1344,6 +1731,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d49128_10d72426",
+      "name": "Skatepark Reutte",
+      "type": "park",
+      "lat": 47.491279,
+      "lng": 10.724259,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.491279,10.724259",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d15135_7d75310",
+      "name": "Skatepark Riegel",
+      "type": "park",
+      "lat": 48.151346,
+      "lng": 7.753105,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.151346,7.753105",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d99598_7d78478",
+      "name": "Skatepark Rieselfeld",
+      "type": "park",
+      "lat": 47.99598,
+      "lng": 7.784784,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.995980,7.784784",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d33876_9d67725",
       "name": "Skatepark Ronnenberg",
       "type": "park",
@@ -1371,6 +1785,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d78544_9d82727",
+      "name": "Skatepark Schwäbisch Gmünd",
+      "type": "park",
+      "lat": 48.785441,
+      "lng": 9.827271,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.785441,9.827271",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d65182_8d32606",
       "name": "Skatepark Sinn",
       "type": "park",
@@ -1386,6 +1809,15 @@
       "lat": 49.48343,
       "lng": 10.988329,
       "url": "https://www.google.com/maps/search/?api=1&query=49.483430,10.988329",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d03753_6d98909",
+      "name": "Skatepark Stelzenbrücke",
+      "type": "park",
+      "lat": 51.03753,
+      "lng": 6.989093,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.037530,6.989093",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1445,12 +1877,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d95260_6d97803",
+      "name": "Skatepark unter der Zoobrücke",
+      "type": "park",
+      "lat": 50.952598,
+      "lng": 6.978026,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.952598,6.978026",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d46827_13d41205",
       "name": "Skatepark Vogelfreiheit",
       "type": "park",
       "lat": 52.468273,
       "lng": 13.412045,
       "url": "https://www.google.com/maps/search/?api=1&query=52.468273,13.412045",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d09737_7d96030",
+      "name": "Skatepark Waldkirch",
+      "type": "park",
+      "lat": 48.097367,
+      "lng": 7.960303,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.097367,7.960303",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d58810_7d61578",
+      "name": "Skatepark Weil am Rhein",
+      "type": "park",
+      "lat": 47.588098,
+      "lng": 7.615784,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.588098,7.615784",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d80013_9d90118",
+      "name": "Skatepark Würzburg",
+      "type": "park",
+      "lat": 49.800128,
+      "lng": 9.901181,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.800128,9.901181",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1461,6 +1929,33 @@
       "lng": 9.181507,
       "description": "War noch nie da, sieht aber von hier oben nicht schlecht aus :-)",
       "url": "https://www.google.com/maps/search/?api=1&query=48.849118,9.181507",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d84668_11d16080",
+      "name": "Skateplatz",
+      "type": "park",
+      "lat": 47.846676,
+      "lng": 11.1608,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.846676,11.160800",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d04474_10d23896",
+      "name": "Skateplatz Paul-Rummert-Ring",
+      "type": "park",
+      "lat": 50.044742,
+      "lng": 10.238964,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.044742,10.238964",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d20636_10d08384",
+      "name": "Skater Square Bad Kissingen",
+      "type": "park",
+      "lat": 50.20636,
+      "lng": 10.083843,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.206360,10.083843",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1479,6 +1974,15 @@
       "lat": 49.10228,
       "lng": 8.386292,
       "url": "https://www.google.com/maps/search/?api=1&query=49.102280,8.386292",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d51448_7d83251",
+      "name": "Skaterpark",
+      "type": "park",
+      "lat": 48.514483,
+      "lng": 7.832512,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.514483,7.832512",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1506,6 +2010,15 @@
       "lat": 48.45809,
       "lng": 7.937375,
       "url": "https://www.google.com/maps/search/?api=1&query=48.458090,7.937375",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d68150_10d15658",
+      "name": "Skaterplatz beim Brenzpark",
+      "type": "park",
+      "lat": 48.681497,
+      "lng": 10.156579,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.681497,10.156579",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1566,12 +2079,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_48d17834_11d55419",
+      "name": "Stoner (Steinpark) Skatepark Olympiazentrum",
+      "type": "park",
+      "lat": 48.178338,
+      "lng": 11.554187,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.178338,11.554187",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d62721_9d33945",
       "name": "straight ledge to stair tap",
       "type": "park",
       "lat": 48.627213,
       "lng": 9.339451,
       "url": "https://www.google.com/maps/search/?api=1&query=48.627213,9.339451",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d49472_8d71859",
+      "name": "Stricker Freestyle Sports GmbH Winterthur",
+      "type": "park",
+      "lat": 47.494725,
+      "lng": 8.718593,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.494725,8.718593",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1630,6 +2161,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d27944_7d22424",
+      "name": "Wicked Woods",
+      "type": "park",
+      "lat": 51.279443,
+      "lng": 7.224244,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.279443,7.224244",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38757_2d18073",
       "name": "AL CARRER SKATE SHOP",
       "type": "shop",
@@ -1657,12 +2197,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_48d00610_0d19801",
+      "name": "Bamboo Skateshop",
+      "type": "shop",
+      "lat": 48.006097,
+      "lng": 0.19801,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.006097,0.198010",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_51d04919_13d73556",
+      "name": "Blue Tomato Shop Dresden",
+      "type": "shop",
+      "lat": 51.049185,
+      "lng": 13.735563,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.049185,13.735563",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_49d00672_8d40282",
       "name": "Blue Tomato Shop Karlsruhe",
       "type": "shop",
       "lat": 49.006715,
       "lng": 8.402821,
       "url": "https://www.google.com/maps/search/?api=1&query=49.006715,8.402821",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_45d77830_3d07997",
+      "name": "Boulbag-Shop",
+      "type": "shop",
+      "lat": 45.778301,
+      "lng": 3.079973,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.778301,3.079973",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_43d67062_m1d38992",
+      "name": "Buzzz Skate Shop",
+      "type": "shop",
+      "lat": 43.670617,
+      "lng": -1.38992,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.670617,-1.389920",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1711,6 +2287,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_43d23298_0d07478",
+      "name": "Evol skateshop",
+      "type": "shop",
+      "lat": 43.232978,
+      "lng": 0.074775,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.232978,0.074775",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_48d89648_9d19179",
       "name": "Funbox Store",
       "type": "shop",
@@ -1756,6 +2341,51 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_43d67192_m1d38915",
+      "name": "Le Park - Skateshop",
+      "type": "shop",
+      "lat": 43.671924,
+      "lng": -1.389147,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.671924,-1.389147",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_46d64807_m0d24943",
+      "name": "Le Spot Skate-Shop",
+      "type": "shop",
+      "lat": 46.648068,
+      "lng": -0.249432,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.648068,-0.249432",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_43d48134_m1d55816",
+      "name": "Mum Said Skateshop",
+      "type": "shop",
+      "lat": 43.481344,
+      "lng": -1.558159,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.481344,-1.558159",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_43d60184_1d44443",
+      "name": "OKLA Skate Shop (E.T Alternative)",
+      "type": "shop",
+      "lat": 43.601837,
+      "lng": 1.44443,
+      "url": "https://www.google.com/maps/search/?api=1&query=43.601837,1.444430",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_45d83089_1d25615",
+      "name": "Petit Plateau skateshop",
+      "type": "shop",
+      "lat": 45.830888,
+      "lng": 1.256151,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.830888,1.256151",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d37449_2d15936",
       "name": "Petshop Skateboards",
       "type": "shop",
@@ -1774,6 +2404,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_46d32578_m0d46331",
+      "name": "ROCKSLIDE Skateshop",
+      "type": "shop",
+      "lat": 46.325779,
+      "lng": -0.463308,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.325779,-0.463308",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38513_2d18458",
       "name": "Roots Barcelona - Skate Shop",
       "type": "shop",
@@ -1789,6 +2428,15 @@
       "lat": 41.382485,
       "lng": 2.166313,
       "url": "https://www.google.com/maps/search/?api=1&query=41.382485,2.166313",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d50000_13d42350",
+      "name": "Search & Destroy Skateshop",
+      "type": "shop",
+      "lat": 52.499996,
+      "lng": 13.423504,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.499996,13.423504",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1871,6 +2519,15 @@
       "lat": 44.845139,
       "lng": -0.582165,
       "url": "https://www.google.com/maps/search/?api=1&query=44.845139,-0.582165",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_48d88029_2d36692",
+      "name": "VEGA Skateshop - Magasin de skateboard",
+      "type": "shop",
+      "lat": 48.880291,
+      "lng": 2.366918,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.880291,2.366918",
       "source": "My Maps „Skatemap2026“"
     },
     {

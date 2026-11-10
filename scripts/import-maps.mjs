@@ -112,8 +112,7 @@ const norm = (s) => String(s || '').toLowerCase()
     .replace(/[^a-z0-9äöüß ]/g, ' ').replace(/\s+/g, ' ').trim();
 
 // Kein echter Spot-Name: gesetzte Markierung, nur "Skatepark" oder eine Firma/Praxis in der Nähe
-const looksGeneric = (s) => /^(gesetzte markierung|dropped pin|skate ?park|spot|unbenannt|untitled)$/i.test(String(s).trim())
-    || /\b(gmbh|kg|ag|eg|e\.k\.|ug)\b|geldautomat|krankengymnastik|physiotherap|praxis|reparaturstation|baufinanzierung/i.test(s);
+const looksGeneric = (s) => /^(gesetzte markierung|dropped pin|skate ?park|spot|unbenannt|untitled)$/i.test(String(s).trim());
 const looksLikeCoords = (s) => /^\s*\d+°\d+'|^\s*-?\d+\.\d+\s*,\s*-?\d+\.\d+\s*$/.test(s);
 const looksLikeAddress = (s) => /\d{5}|stra(ss|ß)e\s*\d|str\.\s*\d|weg\s*\d|platz\s*\d/i.test(s) || /^\S+(straße|str\.|weg|allee|platz|ring|gasse)\s*\d/i.test(s);
 
