@@ -101,7 +101,55 @@
       "question": "Du hast Verbesserungsvorschläge, ein Contest findet statt und du möchtest, dass er eingetragen und gepostet wird?",
       "right_place": "Dann bist du hier genau richtig!",
       "write_mail": "Schreib mir einfach eine Mail!",
-      "send": "Mail senden"
+      "send": "Mail senden",
+      "back": "Zurück",
+      "choose_title": "Worum geht's?",
+      "choose_subtitle": "Wähle dein Anliegen",
+      "choose_note": "Dein Mailprogramm öffnet sich mit einer Vorlage – einfach ausfüllen und abschicken. Fotos kannst du gern anhängen.",
+      "topics": {
+        "spot": {
+          "label": "Skatespot eintragen",
+          "hint": "Street-Spot für die Skatemap",
+          "subject": "Skatemap: Neuer Spot",
+          "body": "Hi CURBSIDE,\n\nich hab einen Spot für die Skatemap:\n\nName des Spots: \nOrt / Adresse oder Google-Maps-Link: \nWas gibt's da? (z. B. Ledge, Stairs, Handrail, Manual Pad): \nBoden / Zustand: \nBeste Zeit zum Skaten / Security?: \n\nFotos gern im Anhang.\n\nDanke!"
+        },
+        "park": {
+          "label": "Skatepark eintragen",
+          "hint": "Skatepark oder Skatehalle",
+          "subject": "Skatemap: Neuer Skatepark",
+          "body": "Hi CURBSIDE,\n\nbitte tragt diesen Skatepark ein:\n\nName: \nOrt / Adresse oder Google-Maps-Link: \nDraußen oder Halle?: \nWas gibt's da? (z. B. Bowl, Miniramp, Street-Area): \nÖffnungszeiten / Eintritt (falls Halle): \nWebsite / Instagram: \n\nFotos gern im Anhang.\n\nDanke!"
+        },
+        "shop": {
+          "label": "Shop eintragen",
+          "hint": "Deinen oder einen anderen Skateshop",
+          "subject": "Skatemap: Shop eintragen",
+          "body": "Hi CURBSIDE,\n\nbitte tragt diesen Skateshop ein:\n\nName des Shops: \nAdresse: \nÖffnungszeiten: \nWebsite / Online-Shop: \nInstagram: \nKurze Beschreibung (was gibt's bei euch?): \n\nIst das dein eigener Shop? (ja / nein): \n\nDanke!"
+        },
+        "news": {
+          "label": "News teilen",
+          "hint": "Video, Part, Artikel oder Neuigkeit",
+          "subject": "News für CURBSIDE",
+          "body": "Hi CURBSIDE,\n\nich hab eine News für euch:\n\nWorum geht's?: \nLink (Video / Artikel / Instagram): \nWer ist dabei? (Fahrer, Crew, Brand): \nKurz in eigenen Worten: \n\nDanke!"
+        },
+        "event": {
+          "label": "Event oder Contest",
+          "hint": "Für den Kalender auf der Startseite",
+          "subject": "Event für den Kalender",
+          "body": "Hi CURBSIDE,\n\nbitte tragt dieses Event ein:\n\nName des Events: \nDatum und Uhrzeit: \nOrt / Adresse: \nWas passiert? (Contest, Jam, Premiere, Ausstellung …): \nAnmeldung / Startgeld: \nLink (Website / Instagram): \n\nFlyer gern im Anhang.\n\nDanke!"
+        },
+        "club": {
+          "label": "Verein eintragen",
+          "hint": "Skateboard-Verein für die Community",
+          "subject": "Verein für die Community",
+          "body": "Hi CURBSIDE,\n\nbitte tragt unseren Verein ein:\n\nName des Vereins: \nStadt / Bundesland: \nWebsite: \nInstagram: \nWas macht ihr? (Trainings, Halle, Projekte …): \n\nDanke!"
+        },
+        "other": {
+          "label": "Einfach Hallo sagen",
+          "hint": "Feedback, Fragen oder sonstiges",
+          "subject": "Hallo CURBSIDE",
+          "body": "Hi CURBSIDE,\n\n"
+        }
+      }
     },
     "archive": {
       "back_home": "Zurück zur Startseite",
@@ -245,7 +293,55 @@
       "question": "Got ideas for improvements, or is there a contest coming up that you'd like us to list and post?",
       "right_place": "Then you're in the right place!",
       "write_mail": "Just drop me an email!",
-      "send": "Send email"
+      "send": "Send email",
+      "back": "Back",
+      "choose_title": "What's it about?",
+      "choose_subtitle": "Pick your topic",
+      "choose_note": "Your mail app opens with a template – just fill it in and send. Feel free to attach photos.",
+      "topics": {
+        "spot": {
+          "label": "Add a skate spot",
+          "hint": "Street spot for the skate map",
+          "subject": "Skate map: new spot",
+          "body": "Hi CURBSIDE,\n\nI've got a spot for the skate map:\n\nSpot name: \nLocation / address or Google Maps link: \nWhat's there? (e.g. ledge, stairs, handrail, manual pad): \nGround / condition: \nBest time to skate / security?: \n\nPhotos attached if you like.\n\nThanks!"
+        },
+        "park": {
+          "label": "Add a skatepark",
+          "hint": "Skatepark or indoor park",
+          "subject": "Skate map: new skatepark",
+          "body": "Hi CURBSIDE,\n\nplease add this skatepark:\n\nName: \nLocation / address or Google Maps link: \nOutdoor or indoor?: \nWhat's there? (e.g. bowl, mini ramp, street area): \nOpening hours / entry fee (if indoor): \nWebsite / Instagram: \n\nPhotos attached if you like.\n\nThanks!"
+        },
+        "shop": {
+          "label": "Add a shop",
+          "hint": "Your own or another skate shop",
+          "subject": "Skate map: add a shop",
+          "body": "Hi CURBSIDE,\n\nplease add this skate shop:\n\nShop name: \nAddress: \nOpening hours: \nWebsite / online shop: \nInstagram: \nShort description (what do you offer?): \n\nIs this your own shop? (yes / no): \n\nThanks!"
+        },
+        "news": {
+          "label": "Share news",
+          "hint": "Video, part, article or news",
+          "subject": "News for CURBSIDE",
+          "body": "Hi CURBSIDE,\n\nI've got some news for you:\n\nWhat's it about?: \nLink (video / article / Instagram): \nWho's involved? (skaters, crew, brand): \nIn your own words: \n\nThanks!"
+        },
+        "event": {
+          "label": "Event or contest",
+          "hint": "For the calendar on the homepage",
+          "subject": "Event for the calendar",
+          "body": "Hi CURBSIDE,\n\nplease add this event:\n\nEvent name: \nDate and time: \nLocation / address: \nWhat's happening? (contest, jam, premiere, exhibition …): \nSign-up / entry fee: \nLink (website / Instagram): \n\nFlyer attached if you like.\n\nThanks!"
+        },
+        "club": {
+          "label": "Add a club",
+          "hint": "Skateboard club for the community",
+          "subject": "Club for the community",
+          "body": "Hi CURBSIDE,\n\nplease add our club:\n\nClub name: \nCity / state: \nWebsite: \nInstagram: \nWhat do you do? (training, indoor park, projects …): \n\nThanks!"
+        },
+        "other": {
+          "label": "Just say hi",
+          "hint": "Feedback, questions or anything else",
+          "subject": "Hi CURBSIDE",
+          "body": "Hi CURBSIDE,\n\n"
+        }
+      }
     },
     "archive": {
       "back_home": "Back to Home",
