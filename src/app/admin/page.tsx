@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import ManageSkatemap from "@/components/admin/ManageSkatemap";
 import ManageAnalytics from "@/components/admin/ManageAnalytics";
+import AnalyticsBadge from "@/components/admin/AnalyticsBadge";
 
 
 
@@ -400,6 +401,7 @@ function AdminDashboardContent() {
                             <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{key.substring(0, 4)}**** active</p>
                         </div>
                     </div>
+                    <AnalyticsBadge keyStr={key || ''} onOpen={() => { setActiveTab("analytics"); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />
                 </div>
 
 

@@ -63,10 +63,12 @@ export async function GET(request: Request) {
     const configured = { code, hasToken: Boolean(token) };
     if (!code || !token) return NextResponse.json({ configured });
 
-    const days = Math.min(365, Math.max(1, Number(new URL(request.url).searchParams.get('days')) || 30));
+    const params = new URL(request.url).searchParams;
+    const days = Math.min(365, Math.max(1, Number(params.get('days')) || 30));
+    const fresh = params.get('fresh') === '1'; // beim Öffnen des Dashboards immer neu holen
     const key = `${code}:${days}`;
     const hit = cache.get(key);
-    if (hit && Date.now() - hit.at < 5 * 60 * 1000) return NextResponse.json({ configured, ...hit.data, cached: true });
+    if (!fresh && hit && Date.now() - hit.at < 5 * 60 * 1000) return NextResponse.json({ configured, ...hit.data, cached: true });
 
     try {
         const now = new Date();

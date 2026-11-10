@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Loader2, RefreshCw, ExternalLink, TrendingUp, TrendingDown, Users, CalendarDays, MousePointerClick, Sun, Settings2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -98,7 +98,7 @@ export default function ManageAnalytics({ keyStr }: { keyStr: string }) {
         setLoading(true);
         setError(null);
         try {
-            const res = await fetch(`/api/analytics?days=${d}${fresh ? `&t=${Date.now()}` : ""}`, { headers: { Authorization: `Bearer ${keyStr}` } });
+            const res = await fetch(`/api/analytics?days=${d}${fresh ? "&fresh=1" : ""}`, { headers: { Authorization: `Bearer ${keyStr}` } });
             const json = await res.json().catch(() => ({}));
             setData(json);
             if (json.configured?.code) setCode((c) => c || json.configured.code);
@@ -110,7 +110,9 @@ export default function ManageAnalytics({ keyStr }: { keyStr: string }) {
         }
     };
 
-    useEffect(() => { load(days); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [keyStr, days]);
+    // Beim Öffnen immer frische Zahlen holen; beim Umschalten des Zeitraums reicht der Zwischenspeicher
+    const firstLoad = useRef(true);
+    useEffect(() => { load(days, firstLoad.current); firstLoad.current = false; /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [keyStr, days]);
 
     const save = async () => {
         setSaving(true);
