@@ -1,27 +1,11 @@
 {
   "sources": [
     {
-      "id": "src_spots",
-      "kind": "list",
-      "ref": "1EKJdGpV8F6DnW9Sf74z-noKMgKi5w",
-      "type": "spot",
-      "label": "Google-Liste „Skate spots“",
-      "url": "https://maps.app.goo.gl/cgPghuv8V38MxYnx6"
-    },
-    {
-      "id": "src_parks",
-      "kind": "list",
-      "ref": "_J-YbnN9Suuhkyd-H3VOCQ",
-      "type": "park",
-      "label": "Google-Liste „skateparks“",
-      "url": "https://maps.app.goo.gl/JjLVV3nAz7RtWHKG6"
-    },
-    {
-      "id": "src_mymaps",
+      "id": "src_skatemap2026",
       "kind": "mymaps",
-      "ref": "12o-_NyQri8gq0pW09KzETCsq1ETRAZ4",
-      "label": "My Maps „Skate Spots und Shops“",
-      "url": "https://www.google.com/maps/d/edit?mid=12o-_NyQri8gq0pW09KzETCsq1ETRAZ4"
+      "ref": "1FtaPkloZPeqY7XAiWhuMiWwGATPZiag",
+      "label": "My Maps „Skatemap2026“",
+      "url": "https://www.google.com/maps/d/edit?mid=1FtaPkloZPeqY7XAiWhuMiWwGATPZiag&usp=sharing"
     }
   ],
   "spots": []

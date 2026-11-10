@@ -127,6 +127,9 @@ function isSamePlace(a, b) {
     if (d < 15) return true; // praktisch derselbe Punkt
     const weak = (s) => !s || looksLikeCoords(s) || looksLikeAddress(s) || looksGeneric(s);
     if (d < 60 && (weak(a.name) || weak(b.name))) return true; // gleicher Ort, einmal ohne richtigen Namen
+    // Automatisch vergebene Namen ("Street-Spot Oststadt 3") sagen nichts über den Ort aus
+    const auto = (n) => /^(Street-Spot|Skatepark|Skateshop) /.test(String(n));
+    if (auto(a.name) || auto(b.name)) return false;
     const na = norm(a.name), nb = norm(b.name);
     if (d < 400 && na && nb && na.length > 3 && (na === nb || na.includes(nb) || nb.includes(na))) return true;
     if (d < 3000 && na.length > 8 && na === nb) return true; // gleicher langer Name, leicht versetzt eingetragen
