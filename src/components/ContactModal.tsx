@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, MessageSquare, ArrowLeft, Newspaper, CalendarDays, Users, Hand } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { ROAD_SVG, SHOP_SVG, PARK_SVG } from "@/lib/mapIcons";
+import { trackEvent } from "@/lib/analytics";
 
 const MAIL = "steffen.or+curbside@gmail.com";
 
@@ -129,7 +130,7 @@ export default function ContactModal() {
                                         <a
                                             key={id}
                                             href={mailHref(id)}
-                                            onClick={() => setTimeout(handleClose, 300)}
+                                            onClick={() => { trackEvent(`kontakt-${id}`, `Kontakt: ${id}`); setTimeout(handleClose, 300); }}
                                             className="flex items-center gap-4 p-4 rounded-2xl border-2 border-border bg-muted/40 hover:border-foreground hover:bg-muted transition-all group"
                                         >
                                             <span className="h-11 w-11 shrink-0 rounded-full flex items-center justify-center bg-foreground text-background overflow-hidden">

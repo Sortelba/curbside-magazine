@@ -18,6 +18,16 @@ function readShowCommunity(): boolean {
   }
 }
 
+// GoatCounter-Code für die Besucherzählung (Admin → Analytics)
+function readAnalyticsCode(): string {
+  try {
+    const file = path.join(process.cwd(), "src", "data", "settings.json");
+    return String(JSON.parse(fs.readFileSync(file, "utf8")).analytics?.goatcounter || "").trim();
+  } catch {
+    return "";
+  }
+}
+
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -84,7 +94,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <LayoutContent showCommunity={readShowCommunity()}>{children}</LayoutContent>
+            <LayoutContent showCommunity={readShowCommunity()} analyticsCode={readAnalyticsCode()}>{children}</LayoutContent>
           </LanguageProvider>
         </ThemeProvider>
       </body>

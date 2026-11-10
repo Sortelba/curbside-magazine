@@ -6,11 +6,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import ManageSkatemap from "@/components/admin/ManageSkatemap";
+import ManageAnalytics from "@/components/admin/ManageAnalytics";
 
 
 
@@ -376,6 +377,7 @@ function AdminDashboardContent() {
         { id: "learn", label: "Lern-Center", icon: Lightbulb },
         { id: "community", label: "Community", icon: Globe },
         { id: "events", label: "Events", icon: Calendar },
+        { id: "analytics", label: "Analytics", icon: BarChart3 },
 
         { id: "messages", label: "Messages", icon: MessageSquare },
         { id: "settings", label: "Einstellungen", icon: Settings },
@@ -1323,6 +1325,12 @@ function AdminDashboardContent() {
                             {activeTab === "events" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                                     <ManageEvents keyStr={key || ''} />
+                                </motion.div>
+                            )}
+
+                            {activeTab === "analytics" && (
+                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                                    <ManageAnalytics keyStr={key || ''} />
                                 </motion.div>
                             )}
 

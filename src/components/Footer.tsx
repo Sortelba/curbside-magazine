@@ -30,6 +30,9 @@ export default function Footer() {
                             <Link href="/agb" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
                                 {t("footer.agb")}
                             </Link>
+                            <Link href="/datenschutz" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
+                                {t("footer.datenschutz")}
+                            </Link>
                             <Link href="/about" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
                                 {t("nav.about")}
                             </Link>

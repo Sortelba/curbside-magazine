@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import PostBody from "@/components/PostBody";
 import { useEffect } from "react";
+import { trackView } from "@/lib/analytics";
 
 interface NewsModalProps {
     isOpen: boolean;
@@ -24,6 +25,11 @@ export default function NewsModal({ isOpen, onClose, post }: NewsModalProps) {
             document.body.style.overflow = "unset";
         };
     }, [isOpen]);
+
+    // Beitrag im Fenster geöffnet → wie ein Aufruf der Beitragsseite zählen
+    useEffect(() => {
+        if (isOpen && post?.id) trackView(`/news/${post.id}/`, post.title);
+    }, [isOpen, post?.id, post?.title]);
 
     if (!post) return null;
 

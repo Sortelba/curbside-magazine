@@ -64,7 +64,9 @@ export async function POST(request: Request) {
         }
 
         // Merge incoming settings with current (incoming wins)
-        const finalSettings = { ...currentSettings, ...settings };
+        // Analytics wird im eigenen Bereich gespeichert (/api/analytics) – hier nicht überschreiben
+        const { analytics: _ignored, ...incoming } = settings || {};
+        const finalSettings = { ...currentSettings, ...incoming };
 
         fs.writeFileSync(filePath, JSON.stringify(finalSettings, null, 2));
 

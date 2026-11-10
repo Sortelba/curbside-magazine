@@ -41,7 +41,8 @@
       "faq": "FAQ",
       "contact": "Kontakt & Vorschläge",
       "rights": "Alle Rechte vorbehalten.",
-      "tagline": "Keep pushing. Unterstütz deine lokalen Shops und hab Spaß!"
+      "tagline": "Keep pushing. Unterstütz deine lokalen Shops und hab Spaß!",
+      "datenschutz": "Datenschutz"
     },
     "community": {
       "shops": "Support Skate Shops",
@@ -233,7 +234,8 @@
       "faq": "FAQ",
       "contact": "Contact & Suggestions",
       "rights": "All rights reserved.",
-      "tagline": "Keep pushing. Support local shops and have fun!"
+      "tagline": "Keep pushing. Support local shops and have fun!",
+      "datenschutz": "Privacy"
     },
     "community": {
       "shops": "Support Skate Shops",

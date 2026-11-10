@@ -8,6 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
 import { ROAD_SVG, SHOP_SVG, PARK_SVG } from "@/lib/mapIcons";
+import { trackEvent } from "@/lib/analytics";
 
 const SUGGEST_MAIL = "steffen.or+curbside@gmail.com";
 
@@ -61,6 +62,7 @@ function FixSize() {
 export default function SkateMap({ points }: { points: MapPoint[] }) {
     const { t } = useLanguage();
     const [active, setActive] = useState<string[]>(TYPES.map((x) => x.id));
+    useEffect(() => { trackEvent("skatemap-geoeffnet", "Skatemap geöffnet"); }, []);
 
     const counts = useMemo(() => {
         const c: Record<string, number> = {};
@@ -95,6 +97,7 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                 ))}
                 <a
                     href={suggestHref}
+                    onClick={() => trackEvent("skatemap-eintragen", "Skatemap: Shop/Spot eintragen")}
                     className="ml-auto flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-black uppercase italic hover:opacity-90 transition-opacity"
                 >
                     <Plus className="h-4 w-4" />
