@@ -5,6 +5,9 @@ import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaf
 import "leaflet/dist/leaflet.css";
 import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
+import { Plus } from "lucide-react";
+
+const SUGGEST_MAIL = "steffen.or+curbside@gmail.com";
 
 export type MapPoint = {
     id: string;
@@ -51,9 +54,12 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
     const toggle = (id: string) =>
         setActive((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
 
+    // Öffnet das Mailprogramm mit einer Vorlage (wie "Kontakt & Vorschläge" im Footer)
+    const suggestHref = `mailto:${SUGGEST_MAIL}?subject=${encodeURIComponent(t("map.suggest_subject"))}&body=${encodeURIComponent(t("map.suggest_body"))}`;
+
     return (
         <div className="space-y-4">
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap items-center gap-2">
                 {TYPES.map((type) => (
                     <button
                         key={type.id}
@@ -69,6 +75,13 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                         {t(`map.type_${type.id}`)} ({counts[type.id] || 0})
                     </button>
                 ))}
+                <a
+                    href={suggestHref}
+                    className="ml-auto flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-black uppercase italic hover:opacity-90 transition-opacity"
+                >
+                    <Plus className="h-4 w-4" />
+                    {t("map.suggest")}
+                </a>
             </div>
 
             <div className="h-[60vh] min-h-[360px] w-full overflow-hidden rounded-2xl border-2 border-border">

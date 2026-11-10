@@ -137,7 +137,10 @@
       "type_shop": "Shops",
       "open_link": "Mehr Infos",
       "empty": "Noch keine Einträge auf der Karte.",
-      "open_maps": "In Google Maps öffnen"
+      "open_maps": "In Google Maps öffnen",
+      "suggest": "Shop oder Spot eintragen",
+      "suggest_subject": "Skatemap: Neuer Eintrag",
+      "suggest_body": "Hi CURBSIDE,\n\nbitte tragt das auf der Skatemap ein:\n\nArt (Skateshop / Skatepark / Spot): \nName: \nAdresse oder Google-Maps-Link: \nWebsite / Instagram: \nÖffnungszeiten (bei Shops): \nKurze Beschreibung: \n\nDanke!"
     }
   },
   "en": {
@@ -278,7 +281,10 @@
       "type_shop": "Shops",
       "open_link": "More info",
       "empty": "No entries on the map yet.",
-      "open_maps": "Open in Google Maps"
+      "open_maps": "Open in Google Maps",
+      "suggest": "Add a shop or spot",
+      "suggest_subject": "Skate map: new entry",
+      "suggest_body": "Hi CURBSIDE,\n\nplease add this to the skate map:\n\nType (skate shop / skatepark / spot): \nName: \nAddress or Google Maps link: \nWebsite / Instagram: \nOpening hours (for shops): \nShort description: \n\nThanks!"
     }
   }
 }
