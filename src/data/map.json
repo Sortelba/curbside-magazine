@@ -1847,6 +1847,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_41d37451_2d15920",
+      "name": "Sour Solution",
+      "type": "shop",
+      "lat": 41.37451,
+      "lng": 2.159202,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.374510,2.159202",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_49d12829_8d59229",
       "name": "Sport-Fabrik Bruchsal",
       "type": "shop",

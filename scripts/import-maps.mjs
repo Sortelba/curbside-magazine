@@ -124,6 +124,12 @@ function isSamePlace(a, b) {
     // Shops nie mit Spots/Parks zusammenlegen (z. B. Shop neben einer Plaza)
     if ((a.type === 'shop') !== (b.type === 'shop')) return false;
     const d = distanceM(a, b);
+    // Zwei Läden können direkt nebeneinander liegen: Shops nur bei (fast) gleichem Punkt
+    // oder gleichem Namen zusammenlegen
+    if (a.type === 'shop' && b.type === 'shop' && d >= 3) {
+        const na = norm(a.name), nb = norm(b.name);
+        return d < 400 && na.length > 3 && nb.length > 3 && (na === nb || na.includes(nb) || nb.includes(na));
+    }
     if (d < 15) return true; // praktisch derselbe Punkt
     const weak = (s) => !s || looksLikeCoords(s) || looksLikeAddress(s) || looksGeneric(s);
     if (d < 60 && (weak(a.name) || weak(b.name))) return true; // gleicher Ort, einmal ohne richtigen Namen
