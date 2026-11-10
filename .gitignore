@@ -42,3 +42,6 @@ yarn-error.log*
 next-env.d.ts
 /curbside-magazine
 .tmp-api-backup/
+
+# Export-Dateien (z. B. Skatemap für Google My Maps)
+exports/
