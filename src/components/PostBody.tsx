@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Calendar, Link2 } from "lucide-react";
+import { ExternalLink, Calendar, Link2, Map as MapIcon } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Inhalt eines Beitrags – im Modal auf der Startseite und auf der eigenen Beitragsseite (/news/[id]/)
@@ -58,9 +58,11 @@ export default function PostBody({ post, inModal = false }: { post: any; inModal
                         <p
                             key={i}
                             dangerouslySetInnerHTML={{
+                                // [Text](Link) wird klickbar; Links innerhalb der Seite öffnen im selben Fenster
                                 __html: para.replace(
                                     /\[([^\]]+)\]\(([^)]+)\)/g,
-                                    '<a href="$2" target="_blank" class="text-primary hover:underline font-bold">$1</a>'
+                                    (_m: string, text: string, href: string) =>
+                                        `<a href="${href}"${href.startsWith("/") ? "" : ' target="_blank" rel="noopener noreferrer"'} class="text-primary hover:underline font-bold">${text}</a>`
                                 ),
                             }}
                         />
@@ -78,14 +80,21 @@ export default function PostBody({ post, inModal = false }: { post: any; inModal
                             {t("news.open_page")} <Link2 className="h-4 w-4" />
                         </Link>
                     )}
-                    <a
-                        href={post.media?.externalLink || post.originalUrl || post.content}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold uppercase text-sm hover:opacity-90 transition-opacity"
-                    >
-                        {t("news.read_original")} <ExternalLink className="h-4 w-4" />
-                    </a>
+                    {/* Eigene Beiträge können mit "linkLabel" einen eigenen Knopftext und einen Link innerhalb der Seite haben */}
+                    {(() => {
+                        const href = post.media?.externalLink || post.originalUrl || post.content;
+                        const label = post.translations?.[locale]?.linkLabel;
+                        const internal = String(href).startsWith("/");
+                        return (
+                            <a
+                                href={href}
+                                {...(internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+                                className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold uppercase text-sm hover:opacity-90 transition-opacity"
+                            >
+                                {label || t("news.read_original")} {internal ? <MapIcon className="h-4 w-4" /> : <ExternalLink className="h-4 w-4" />}
+                            </a>
+                        );
+                    })()}
                 </div>
             </div>
         </>

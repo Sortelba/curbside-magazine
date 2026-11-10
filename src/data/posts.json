@@ -6,11 +6,13 @@
     "translations": {
       "de": {
         "title": "Die CURBSIDE Skatemap ist da: über 1.000 Skateparks, Spots und Shops",
-        "content": "Moin! Ab sofort gibt's auf CURBSIDE eine eigene Skatemap. Über 1.000 Orte auf einer Karte: mehr als 600 Skateparks, fast 270 Street-Spots und über 100 Skateshops. Der Schwerpunkt liegt in Deutschland, aber auch Spots in Frankreich, der Schweiz, Österreich und darüber hinaus sind schon drin.\n\nSo findest du sie: Community → Skatemap. Oben kannst du Skateparks, Spots und Shops einzeln an- und ausschalten. Jeder Ort hat sein eigenes Symbol – die Halfpipe für Parks, die Straße für Street-Spots und den Laden für Shops. Ein Klick auf einen Punkt zeigt dir Name, Adresse und einen Link direkt zu Google Maps, damit du sofort hinfahren kannst.\n\nDein Spot fehlt? Dein Shop ist noch nicht drauf? Über den Knopf „Shop oder Spot eintragen“ auf der Karte – oder unten über „Kontakt & Vorschläge“ – schickst du uns mit einer fertigen Vorlage alle Infos. Wir tragen das dann ein. Je mehr ihr mitmacht, desto besser wird die Karte für alle.\n\nViel Spaß beim Entdecken und wir sehen uns im Park!\n\nZur Skatemap: https://curbside.sortelba.com/community/?bereich=skatemap"
+        "content": "Moin! Ab sofort gibt's auf CURBSIDE eine eigene Skatemap. Über 1.000 Orte auf einer Karte: mehr als 600 Skateparks, fast 270 Street-Spots und über 100 Skateshops. Der Schwerpunkt liegt in Deutschland, aber auch Spots in Frankreich, der Schweiz, Österreich und darüber hinaus sind schon drin.\n\nSo findest du sie: Community → Skatemap. Oben kannst du Skateparks, Spots und Shops einzeln an- und ausschalten. Jeder Ort hat sein eigenes Symbol – die Halfpipe für Parks, die Straße für Street-Spots und den Laden für Shops. Ein Klick auf einen Punkt zeigt dir Name, Adresse und einen Link direkt zu Google Maps, damit du sofort hinfahren kannst.\n\nDein Spot fehlt? Dein Shop ist noch nicht drauf? Über den Knopf „Shop oder Spot eintragen“ auf der Karte – oder unten über „Kontakt & Vorschläge“ – schickst du uns mit einer fertigen Vorlage alle Infos. Wir tragen das dann ein. Je mehr ihr mitmacht, desto besser wird die Karte für alle.\n\nViel Spaß beim Entdecken und wir sehen uns im Park!\n\n[👉 Zur Skatemap →](/community/?bereich=skatemap)",
+        "linkLabel": "Zur Skatemap"
       },
       "en": {
         "title": "The CURBSIDE Skatemap Is Live: Over 1,000 Skateparks, Spots and Shops",
-        "content": "CURBSIDE now has its own skatemap. Over 1,000 places on one map: more than 600 skateparks, almost 270 street spots and over 100 skate shops. The focus is on Germany, but spots in France, Switzerland, Austria and beyond are already on it too.\n\nHere's where to find it: Community → Skatemap. At the top you can switch skateparks, spots and shops on and off. Every place has its own icon – a halfpipe for parks, a road for street spots and a storefront for shops. Click a pin to see the name, address and a direct link to Google Maps, so you can head straight there.\n\nIs your spot missing? Your shop not on the map yet? Use the \"Add a shop or spot\" button on the map – or \"Contact & Suggestions\" at the bottom of the page – to send us all the details with a ready-made template. We'll add it. The more of you join in, the better the map gets for everyone.\n\nHave fun exploring – see you at the park!\n\nTo the Skatemap: https://curbside.sortelba.com/community/?bereich=skatemap"
+        "content": "CURBSIDE now has its own skatemap. Over 1,000 places on one map: more than 600 skateparks, almost 270 street spots and over 100 skate shops. The focus is on Germany, but spots in France, Switzerland, Austria and beyond are already on it too.\n\nHere's where to find it: Community → Skatemap. At the top you can switch skateparks, spots and shops on and off. Every place has its own icon – a halfpipe for parks, a road for street spots and a storefront for shops. Click a pin to see the name, address and a direct link to Google Maps, so you can head straight there.\n\nIs your spot missing? Your shop not on the map yet? Use the \"Add a shop or spot\" button on the map – or \"Contact & Suggestions\" at the bottom of the page – to send us all the details with a ready-made template. We'll add it. The more of you join in, the better the map gets for everyone.\n\nHave fun exploring – see you at the park!\n\n[👉 Open the Skatemap →](/community/?bereich=skatemap)",
+        "linkLabel": "Open the Skatemap"
       }
     },
     "type": "image",
@@ -20,10 +22,10 @@
         "/uploads/posts/curbside-skatemap.jpg"
       ],
       "videoUrl": "",
-      "externalLink": "https://curbside.sortelba.com/community/?bereich=skatemap"
+      "externalLink": "/community/?bereich=skatemap"
     },
     "source": "CURBSIDE",
-    "originalUrl": "https://curbside.sortelba.com/community/?bereich=skatemap",
+    "originalUrl": "/community/?bereich=skatemap",
     "date": "Nov 10, 2026",
     "tags": [
       "Skatemap",
