@@ -59,7 +59,7 @@ function FixSize() {
 }
 
 // Karte mit allen Spots, Skateparks und Shops (OpenStreetMap)
-export default function SkateMap({ points }: { points: MapPoint[] }) {
+export default function SkateMap({ points, tall = false }: { points: MapPoint[]; tall?: boolean }) {
     const { t } = useLanguage();
     const [active, setActive] = useState<string[]>(TYPES.map((x) => x.id));
     useEffect(() => { trackEvent("skatemap-geoeffnet", "Skatemap geöffnet"); }, []);
@@ -105,7 +105,7 @@ export default function SkateMap({ points }: { points: MapPoint[] }) {
                 </a>
             </div>
 
-            <div className="h-[60vh] min-h-[360px] w-full overflow-hidden rounded-2xl border-2 border-border">
+            <div className={cn("w-full overflow-hidden rounded-2xl border-2 border-border", tall ? "h-[70vh] min-h-[420px]" : "h-[60vh] min-h-[360px]")}>
                 <MapContainer center={[51.2, 10.4]} zoom={6} scrollWheelZoom className="h-full w-full">
                     <FixSize />
                     <TileLayer

@@ -16,7 +16,8 @@
       "difficulty_pro": "Profi",
       "appearance": "Darstellung:",
       "language": "Sprache:",
-      "open_menu": "Menü öffnen"
+      "open_menu": "Menü öffnen",
+      "skatemap": "Skatemap"
     },
     "about": {
       "title": "About",
@@ -189,7 +190,8 @@
       "open_maps": "In Google Maps öffnen",
       "suggest": "Shop oder Spot eintragen",
       "suggest_subject": "Skatemap: Neuer Eintrag",
-      "suggest_body": "Hi CURBSIDE,\n\nbitte tragt das auf der Skatemap ein:\n\nArt (Skateshop / Skatepark / Spot): \nName: \nAdresse oder Google-Maps-Link: \nWebsite / Instagram: \nÖffnungszeiten (bei Shops): \nKurze Beschreibung: \n\nDanke!"
+      "suggest_body": "Hi CURBSIDE,\n\nbitte tragt das auf der Skatemap ein:\n\nArt (Skateshop / Skatepark / Spot): \nName: \nAdresse oder Google-Maps-Link: \nWebsite / Instagram: \nÖffnungszeiten (bei Shops): \nKurze Beschreibung: \n\nDanke!",
+      "subtitle": "Skateparks, Street-Spots und Skateshops – alles auf einer Karte."
     }
   },
   "en": {
@@ -209,7 +211,8 @@
       "difficulty_pro": "Pro",
       "appearance": "Appearance:",
       "language": "Language:",
-      "open_menu": "Open main menu"
+      "open_menu": "Open main menu",
+      "skatemap": "Skatemap"
     },
     "about": {
       "title": "About",
@@ -382,7 +385,8 @@
       "open_maps": "Open in Google Maps",
       "suggest": "Add a shop or spot",
       "suggest_subject": "Skate map: new entry",
-      "suggest_body": "Hi CURBSIDE,\n\nplease add this to the skate map:\n\nType (skate shop / skatepark / spot): \nName: \nAddress or Google Maps link: \nWebsite / Instagram: \nOpening hours (for shops): \nShort description: \n\nThanks!"
+      "suggest_body": "Hi CURBSIDE,\n\nplease add this to the skate map:\n\nType (skate shop / skatepark / spot): \nName: \nAddress or Google Maps link: \nWebsite / Instagram: \nOpening hours (for shops): \nShort description: \n\nThanks!",
+      "subtitle": "Skateparks, street spots and skate shops – all on one map."
     }
   }
 }

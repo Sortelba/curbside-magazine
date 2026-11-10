@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import ContactModal from "@/components/ContactModal";
 import Analytics from "@/components/Analytics";
 
-export default function LayoutContent({ children, showCommunity = false, analyticsCode = "" }: { children: React.ReactNode; showCommunity?: boolean; analyticsCode?: string }) {
+export default function LayoutContent({ children, showCommunity = false, showSkatemap = true, analyticsCode = "" }: { children: React.ReactNode; showCommunity?: boolean; showSkatemap?: boolean; analyticsCode?: string }) {
     const pathname = usePathname();
     const isAdminPage = pathname?.startsWith("/admin");
 
@@ -16,7 +16,7 @@ export default function LayoutContent({ children, showCommunity = false, analyti
 
     return (
         <>
-            <Navbar showCommunity={showCommunity} />
+            <Navbar showCommunity={showCommunity} showSkatemap={showSkatemap} />
             <main className="flex-grow">{children}</main>
             <Footer />
             <ContactModal />

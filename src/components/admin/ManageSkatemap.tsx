@@ -10,7 +10,7 @@ const TYPE_COLOR: Record<string, string> = { park: "#2563eb", spot: "#f97316", s
 const input = "w-full p-2 bg-background border border-input rounded-lg text-sm focus:ring-2 focus:ring-primary/20 outline-none transition-all";
 const label = "block text-[10px] font-black uppercase mb-1 text-muted-foreground tracking-widest";
 
-// Admin-Dashboard → Community → Skatemap
+// Admin-Dashboard → Skatemap
 export default function ManageSkatemap({ keyStr }: { keyStr: string }) {
     const [sources, setSources] = useState<any[]>([]);
     const [spots, setSpots] = useState<any[]>([]);

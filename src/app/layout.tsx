@@ -18,6 +18,16 @@ function readShowCommunity(): boolean {
   }
 }
 
+// Skatemap im Menü zeigen (Admin → Skatemap → „Skatemap anzeigen“)
+function readShowSkatemap(): boolean {
+  try {
+    const file = path.join(process.cwd(), "src", "data", "settings.json");
+    return JSON.parse(fs.readFileSync(file, "utf8")).showSkatemap ?? true;
+  } catch {
+    return true;
+  }
+}
+
 // GoatCounter-Code für die Besucherzählung (Admin → Analytics)
 function readAnalyticsCode(): string {
   try {
@@ -94,7 +104,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <LayoutContent showCommunity={readShowCommunity()} analyticsCode={readAnalyticsCode()}>{children}</LayoutContent>
+            <LayoutContent showCommunity={readShowCommunity()} showSkatemap={readShowSkatemap()} analyticsCode={readAnalyticsCode()}>{children}</LayoutContent>
           </LanguageProvider>
         </ThemeProvider>
       </body>

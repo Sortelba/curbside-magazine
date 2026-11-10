@@ -8,12 +8,13 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageToggle } from "@/components/LanguageToggle";
 
-export default function Navbar({ showCommunity = false }: { showCommunity?: boolean }) {
+export default function Navbar({ showCommunity = false, showSkatemap = true }: { showCommunity?: boolean; showSkatemap?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useLanguage();
 
     const navLinks = [
         { name: t("nav.news"), href: "/" },
+        ...(showSkatemap ? [{ name: t("nav.skatemap"), href: "/skatemap" }] : []),
         ...(showCommunity ? [{ name: t("nav.community"), href: "/community" }] : []),
     ];
 

@@ -1,4 +1,4 @@
-// Skatemap im Admin-Dashboard (Community → Skatemap):
+// Skatemap im Admin-Dashboard (Reiter Skatemap):
 // Karten-Quellen verwalten, eigene Spots eintragen und den Import ("Scan") starten.
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';

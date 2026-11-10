@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
         // "Community anzeigen" (Einstellungen) folgt den Bereichen: ist mindestens
         // ein Bereich sichtbar, wird die Community gezeigt, sonst ausgeblendet.
-        const SECTIONS = ['sec_map', 'sec_shops', 'sec_clubs', 'sec_projects', 'sec_learn'];
+        const SECTIONS = ['sec_shops', 'sec_clubs', 'sec_projects', 'sec_learn'];
         const anyVisible = SECTIONS.some(id => data.visibility?.[id] !== false);
         try {
             const settings = JSON.parse(fs.readFileSync(SETTINGS_FILE, 'utf8'));

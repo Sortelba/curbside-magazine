@@ -111,7 +111,7 @@
     "sk8"
   ],
   "showLearnCenter": true,
-  "showCommunity": true,
+  "showCommunity": false,
   "analytics": {
     "goatcounter": "curbside"
   }

@@ -150,6 +150,11 @@ function AdminDashboardContent() {
     const [settings, setSettings] = useState<any>({ youtubeChannels: [], newsSources: [], instagramHashtags: [], showLearnCenter: false });
     const [settingsLoading, setSettingsLoading] = useState(false);
 
+    // Skatemap im Menü der Website zeigen (Standard: an)
+    const toggleSkatemap = async () => {
+        await saveSettings({ ...settings, showSkatemap: !(settings.showSkatemap ?? true) });
+    };
+
     const toggleCommunityOnHome = async () => {
         const nextValue = !(settings.showCommunity ?? false);
         const newSettings = { ...settings, showCommunity: nextValue };
@@ -376,6 +381,7 @@ function AdminDashboardContent() {
         { id: "news", label: "News & Scraper", icon: Newspaper },
         { id: "custom", label: "Neuer Post", icon: PlusCircle },
         { id: "learn", label: "Lern-Center", icon: Lightbulb },
+        { id: "skatemap", label: "Skatemap", icon: MapPin },
         { id: "community", label: "Community", icon: Globe },
         { id: "events", label: "Events", icon: Calendar },
         { id: "analytics", label: "Analytics", icon: BarChart3 },
@@ -1306,6 +1312,44 @@ function AdminDashboardContent() {
                                 </motion.div>
                             )}
 
+                            {activeTab === "skatemap" && (
+                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
+                                    <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm">
+                                        <div className="flex items-center justify-between gap-4 flex-wrap">
+                                            <div>
+                                                <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">Menü</p>
+                                                <h3 className="text-2xl font-black uppercase italic tracking-tighter">Skatemap anzeigen</h3>
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <button
+                                                    type="button"
+                                                    aria-label="Skatemap im Menü umschalten"
+                                                    onClick={toggleSkatemap}
+                                                    className={cn(
+                                                        "relative inline-flex h-7 w-14 items-center rounded-full border-2 transition-colors",
+                                                        (settings.showSkatemap ?? true) ? "bg-primary border-primary" : "bg-muted border-border"
+                                                    )}
+                                                >
+                                                    <span className={cn("inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform", (settings.showSkatemap ?? true) ? "translate-x-7" : "translate-x-1")} />
+                                                </button>
+                                                <span className={cn("text-xs font-black uppercase italic tracking-[0.2em]", (settings.showSkatemap ?? true) ? "text-primary" : "text-muted-foreground")}>
+                                                    {(settings.showSkatemap ?? true) ? "AN" : "AUS"}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p className="mt-4 text-sm text-muted-foreground">
+                                            {(settings.showSkatemap ?? true)
+                                                ? "Die Skatemap hat einen eigenen Menüpunkt und ist unter /skatemap/ zu finden."
+                                                : "Die Skatemap ist aus dem Menü genommen (die Seite /skatemap/ gibt es aber weiterhin)."}
+                                        </p>
+                                        <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground/80">
+                                            Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Website veröffentlichen“.
+                                        </p>
+                                    </div>
+                                    <ManageSkatemap keyStr={key || ''} />
+                                </motion.div>
+                            )}
+
                             {activeTab === "community" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                                     <ManageCommunity keyStr={key || ''} />
@@ -1521,7 +1565,6 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
 
     // Bereiche der Community-Seite (Kreise) ein-/ausblenden – sofort speichern
     const PAGE_SECTIONS = [
-        { id: "sec_map", label: "Skatemap" },
         { id: "sec_shops", label: "Support Skate Shops" },
         { id: "sec_clubs", label: "Skateboard-Vereine" },
         { id: "sec_projects", label: "Projekte" },
@@ -1580,9 +1623,6 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
                     })}
                 </div>
             </div>
-
-            {/* Skatemap: Karten scannen, Quellen und eigene Spots */}
-            <ManageSkatemap keyStr={keyStr} />
 
             {data.sections.map((section: any, sIdx: number) => {
                 const isExpanded = expandedSection === section.id;

@@ -3,11 +3,8 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap, Map as MapIcon } from "lucide-react";
-import dynamic from "next/dynamic";
+import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
 
-// Leaflet braucht das Browser-Fenster → nur im Browser laden
-const SkateMap = dynamic(() => import("@/components/SkateMap"), { ssr: false });
 import { cn } from "@/lib/utils";
 import { loc } from "@/lib/localized";
 
@@ -17,16 +14,18 @@ export default function CommunityContent({ data }: { data: any }) {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedState, setSelectedState] = useState("");
 
-    // Direktlink: /community/?bereich=skatemap öffnet gleich die Karte (z. B. aus einem Post)
+    // Direktlink: /community/?bereich=shops öffnet gleich den Bereich.
+    // Die Skatemap hat jetzt eine eigene Seite – alte Links dorthin weiterleiten.
     useEffect(() => {
-        const map: Record<string, string> = { skatemap: "sec_map", shops: "sec_shops", vereine: "sec_clubs", projekte: "sec_projects", lernen: "sec_learn" };
-        const id = map[new URLSearchParams(window.location.search).get("bereich") || ""];
+        const bereich = new URLSearchParams(window.location.search).get("bereich") || "";
+        if (bereich === "skatemap") { window.location.replace("/skatemap/"); return; }
+        const map: Record<string, string> = { shops: "sec_shops", vereine: "sec_clubs", projekte: "sec_projects", lernen: "sec_learn" };
+        const id = map[bereich];
         if (id && (data.visibility || {})[id] !== false) setActiveSection(id);
     }, [data.visibility]);
 
     const visibility = data.visibility || {};
     const sections = [
-        { id: "sec_map", name: t("community.skatemap"), icon: MapIcon },
         { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
         { id: "sec_clubs", name: t("community.clubs"), icon: Users },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
@@ -37,7 +36,6 @@ export default function CommunityContent({ data }: { data: any }) {
         if (id === "sec_shops") return t("community.shops");
         if (id === "sec_clubs") return t("community.clubs");
         if (id === "sec_projects") return t("community.projects");
-        if (id === "sec_map") return t("community.skatemap");
         return defaultTitle;
     };
 
@@ -150,10 +148,6 @@ export default function CommunityContent({ data }: { data: any }) {
 
                             {/* Content */}
                             <div className="flex-1 overflow-y-auto p-6 md:p-10 scrollbar-thin scrollbar-thumb-foreground/20">
-                                {activeSection === "sec_map" && (
-                                    <SkateMap points={data.mapPoints || []} />
-                                )}
-
                                 {activeSection === "sec_shops" && (
                                     <div className="space-y-8">
                                         <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">

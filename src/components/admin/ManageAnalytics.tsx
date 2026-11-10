@@ -34,7 +34,7 @@ const SIZE_LABEL: Record<string, string> = {
     "Computer monitors larger than HD": "Großer Bildschirm", "(unknown)": "Unbekannt",
 };
 const PAGE_LABEL: Record<string, string> = {
-    "/": "Startseite (News)", "/community/": "Community", "/community/?bereich=skatemap": "Skatemap (Direktlink)",
+    "/": "Startseite (News)", "/community/": "Community", "/community/?bereich=skatemap": "Skatemap (alter Link)", "/skatemap/": "Skatemap",
     "/about/": "About", "/archive/": "Archiv", "/learn/": "Skaten lernen", "/faq/": "FAQ",
     "/impressum/": "Impressum", "/agb/": "AGB", "/datenschutz/": "Datenschutz",
 };
