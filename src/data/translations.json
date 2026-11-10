@@ -60,7 +60,8 @@
       "projects_intro": "Diese Projekte nutzen Skateboarding, um die Welt ein Stück besser zu machen. Support is everything!",
       "learn_more": "Mehr erfahren",
       "to_website": "Zur Website",
-      "no_website": "Keine offizielle Website bekannt"
+      "no_website": "Keine offizielle Website bekannt",
+      "skatemap": "Skatemap"
     },
     "buttons": {
       "load_more": "Mehr laden",
@@ -129,6 +130,13 @@
       "no_basics": "Noch keine Basics-Videos vorhanden.",
       "no_channels": "Noch keine Kanäle vorhanden.",
       "randomizer_hint": "Schwierigkeit wählen & auf „Trick vorschlagen“ klicken"
+    },
+    "map": {
+      "type_spot": "Spots",
+      "type_park": "Skateparks",
+      "type_shop": "Shops",
+      "open_link": "Mehr Infos",
+      "empty": "Noch keine Einträge auf der Karte."
     }
   },
   "en": {
@@ -192,7 +200,8 @@
       "projects_intro": "These projects use skateboarding to make the world a little better. Support is everything!",
       "learn_more": "Learn more",
       "to_website": "Visit website",
-      "no_website": "No official website known"
+      "no_website": "No official website known",
+      "skatemap": "Skate Map"
     },
     "buttons": {
       "load_more": "Load More",
@@ -261,6 +270,13 @@
       "no_basics": "No basics videos available yet.",
       "no_channels": "No channels available yet.",
       "randomizer_hint": "Pick a difficulty & click “Suggest trick”"
+    },
+    "map": {
+      "type_spot": "Spots",
+      "type_park": "Skateparks",
+      "type_shop": "Shops",
+      "open_link": "More info",
+      "empty": "No entries on the map yet."
     }
   }
 }

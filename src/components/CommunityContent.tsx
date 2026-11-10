@@ -3,7 +3,11 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
+import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap, Map as MapIcon } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Leaflet braucht das Browser-Fenster → nur im Browser laden
+const SkateMap = dynamic(() => import("@/components/SkateMap"), { ssr: false });
 import { cn } from "@/lib/utils";
 import { loc } from "@/lib/localized";
 
@@ -13,17 +17,20 @@ export default function CommunityContent({ data }: { data: any }) {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedState, setSelectedState] = useState("");
 
+    const visibility = data.visibility || {};
     const sections = [
+        { id: "sec_map", name: t("community.skatemap"), icon: MapIcon },
         { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
         { id: "sec_clubs", name: t("community.clubs"), icon: Users },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
         { id: "sec_learn", name: t("community.skaten_lernen"), icon: GraduationCap }
-    ];
+    ].filter((s) => visibility[s.id] !== false); // im Admin ausgeblendete Bereiche weglassen
 
     const getTranslation = (id: string, defaultTitle: string) => {
         if (id === "sec_shops") return t("community.shops");
         if (id === "sec_clubs") return t("community.clubs");
         if (id === "sec_projects") return t("community.projects");
+        if (id === "sec_map") return t("community.skatemap");
         return defaultTitle;
     };
 
@@ -136,6 +143,10 @@ export default function CommunityContent({ data }: { data: any }) {
 
                             {/* Content */}
                             <div className="flex-1 overflow-y-auto p-6 md:p-10 scrollbar-thin scrollbar-thumb-foreground/20">
+                                {activeSection === "sec_map" && (
+                                    <SkateMap points={data.mapPoints || []} />
+                                )}
+
                                 {activeSection === "sec_shops" && (
                                     <div className="space-y-8">
                                         <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">

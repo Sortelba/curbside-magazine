@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -1364,7 +1364,7 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
         }
     };
 
-    const authenticatedSave = (newData: any) => {
+    const authenticatedSave = (newData: any, silent = false) => {
         fetch('/api/community', {
             method: 'POST',
             headers: {
@@ -1374,10 +1374,11 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
             body: JSON.stringify(newData)
         }).then(res => {
             if (res.ok) {
-                alert("Saved!");
+                if (!silent) alert("Saved!");
                 setData(newData);
             } else {
                 alert("Failed to save. Check your secret key.");
+                if (silent) fetchData();
             }
         });
     }
@@ -1507,6 +1508,33 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
         setData(newData);
     };
 
+    // Bereiche der Community-Seite (Kreise) ein-/ausblenden – sofort speichern
+    const PAGE_SECTIONS = [
+        { id: "sec_map", label: "Skatemap" },
+        { id: "sec_shops", label: "Support Skate Shops" },
+        { id: "sec_clubs", label: "Skateboard-Vereine" },
+        { id: "sec_projects", label: "Projekte" },
+        { id: "sec_learn", label: "Skaten lernen (Link)" },
+    ];
+    const isSectionVisible = (id: string) => data.visibility?.[id] !== false;
+    const toggleSectionVisible = (id: string) => {
+        const newData = { ...data, visibility: { ...(data.visibility || {}), [id]: !isSectionVisible(id) } };
+        setData(newData);
+        authenticatedSave(newData, true);
+    };
+
+    // Einzelnen Eintrag ein-/ausblenden – sofort speichern
+    const toggleItemHidden = (sectionIndex: number, itemIndex: number) => {
+        const newData = { ...data, sections: [...data.sections] };
+        const section = { ...newData.sections[sectionIndex], items: [...newData.sections[sectionIndex].items] };
+        const item = { ...section.items[itemIndex] };
+        if (item.hidden) delete item.hidden; else item.hidden = true;
+        section.items[itemIndex] = item;
+        newData.sections[sectionIndex] = section;
+        setData(newData);
+        authenticatedSave(newData, true);
+    };
+
     const updateSectionTitle = (sectionIndex: number, title: string) => {
         const newData = { ...data };
         newData.sections[sectionIndex].title = title;
@@ -1516,6 +1544,31 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
     return (
         <div className="space-y-6">
             {loading && <div className="text-center py-8">Loading...</div>}
+
+            {/* Welche Bereiche auf der Community-Seite erscheinen */}
+            <div className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm">
+                <h3 className="text-xl font-black uppercase italic tracking-tight">Bereiche auf der Community-Seite</h3>
+                <p className="text-xs text-muted-foreground mt-1 mb-4">Antippen zum Ein- oder Ausblenden. Wird sofort gespeichert und ist nach dem nächsten Veröffentlichen live.</p>
+                <div className="flex flex-wrap gap-2">
+                    {PAGE_SECTIONS.map((sec) => {
+                        const on = isSectionVisible(sec.id);
+                        return (
+                            <button
+                                key={sec.id}
+                                type="button"
+                                onClick={() => toggleSectionVisible(sec.id)}
+                                className={cn(
+                                    "flex items-center gap-2 px-4 py-2 rounded-full border-2 text-sm font-bold transition-all",
+                                    on ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground line-through"
+                                )}
+                            >
+                                {on ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+                                {sec.label}
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
 
             {data.sections.map((section: any, sIdx: number) => {
                 const isExpanded = expandedSection === section.id;
@@ -1544,6 +1597,7 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
                                         </h3>
                                         <p className="text-xs text-muted-foreground font-mono mt-1">
                                             {section.items.length} {section.items.length === 1 ? 'Item' : 'Items'}
+                                            {section.items.some((i: any) => i.hidden) && ` · ${section.items.filter((i: any) => i.hidden).length} ausgeblendet`}
                                         </p>
                                     </div>
                                 </div>
@@ -1597,7 +1651,7 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
                                 >
                                     <div className="p-6 space-y-4">
                                         {section.items.map((item: any, iIdx: number) => (
-                                            <div key={item.id} className="bg-muted/20 border-2 border-border rounded-xl p-4 hover:border-primary/30 transition-colors">
+                                            <div key={item.id} className={cn("bg-muted/20 border-2 border-border rounded-xl p-4 hover:border-primary/30 transition-colors", item.hidden && "opacity-50 border-dashed")}>
                                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                                     {/* Left Column - Main Info */}
                                                     <div className="space-y-3">
@@ -1691,6 +1745,17 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
 
                                                 {/* Item Actions */}
                                                 <div className="flex justify-end gap-2 mt-4 pt-4 border-t border-border">
+                                                    <button
+                                                        onClick={() => toggleItemHidden(sIdx, iIdx)}
+                                                        className={cn(
+                                                            "mr-auto px-3 py-1.5 text-xs font-bold rounded-lg border-2 transition-colors flex items-center gap-1",
+                                                            item.hidden ? "border-border text-muted-foreground" : "border-primary text-primary"
+                                                        )}
+                                                        title="Auf der Website anzeigen oder ausblenden"
+                                                    >
+                                                        {item.hidden ? <EyeOff className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
+                                                        {item.hidden ? "Ausgeblendet" : "Wird angezeigt"}
+                                                    </button>
                                                     <button
                                                         onClick={() => deleteItem(sIdx, iIdx)}
                                                         className="px-3 py-1.5 text-xs font-bold text-destructive hover:bg-destructive/10 rounded-lg transition-colors"

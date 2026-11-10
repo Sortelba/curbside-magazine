@@ -12,7 +12,9 @@
           "address": "Ritterstraße 5, 76133 Karlsruhe",
           "hours": "Mo-Sa: 11:00–19:00",
           "state": "Baden-Württemberg",
-          "image": ""
+          "image": "",
+          "lat": 49.00929,
+          "lng": 8.40109
         },
         {
           "id": "shop_by_2",
@@ -22,7 +24,9 @@
           "address": "Luitpoldstraße 20, 96052 Bamberg",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Bayern",
-          "image": ""
+          "image": "",
+          "lat": 49.89729,
+          "lng": 10.8946
         },
         {
           "id": "shop_be_2",
@@ -32,7 +36,9 @@
           "address": "Karl-Liebknecht-Straße 9, 10178 Berlin",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Berlin",
-          "image": ""
+          "image": "",
+          "lat": 52.52151,
+          "lng": 13.40691
         },
         {
           "id": "shop_be_3",
@@ -42,7 +48,9 @@
           "address": "Meinekestraße 2, 10719 Berlin",
           "hours": "Mo-Sa: 10:00–20:00",
           "state": "Berlin",
-          "image": ""
+          "image": "",
+          "lat": 52.50265,
+          "lng": 13.32898
         },
         {
           "id": "shop_nw_3",
@@ -52,7 +60,9 @@
           "address": "Acherstraße 26-28, 53111 Bonn",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 50.73539,
+          "lng": 7.10011
         },
         {
           "id": "shop_hb_2",
@@ -62,7 +72,9 @@
           "address": "Ostertorsteinweg 1, 28203 Bremen",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Bremen",
-          "image": ""
+          "image": "",
+          "lat": 53.07313,
+          "lng": 8.82276
         },
         {
           "id": "shop_sn_2",
@@ -72,7 +84,9 @@
           "address": "Ringstraße 5, 01067 Dresden",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Sachsen",
-          "image": ""
+          "image": "",
+          "lat": 51.04881,
+          "lng": 13.74271
         },
         {
           "id": "shop_nw_4",
@@ -82,7 +96,9 @@
           "address": "Benrather Str. 7B, 40213 Düsseldorf",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:30–19:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.22286,
+          "lng": 6.77366
         },
         {
           "id": "shop_ni_2",
@@ -92,7 +108,9 @@
           "address": "Goseriede 13a, 30159 Hannover",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Niedersachsen",
-          "image": ""
+          "image": "",
+          "lat": 52.37775,
+          "lng": 9.73156
         },
         {
           "id": "shop_he_2",
@@ -102,7 +120,9 @@
           "address": "Treppenstraße 8, 34117 Kassel",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Hessen",
-          "image": ""
+          "image": "",
+          "lat": 51.31564,
+          "lng": 9.49424
         },
         {
           "id": "shop_nw_5",
@@ -112,7 +132,9 @@
           "address": "Cäcilienstraße 30, 50667 Köln",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 50.93565,
+          "lng": 6.95181
         },
         {
           "id": "shop_sn_3",
@@ -122,7 +144,9 @@
           "address": "Hainstraße 10, 04109 Leipzig",
           "hours": "Mo-Fr: 10:00–20:00, Sa: 10:00–19:00",
           "state": "Sachsen",
-          "image": ""
+          "image": "",
+          "lat": 51.34199,
+          "lng": 12.3738
         },
         {
           "id": "shop_nw_6",
@@ -132,7 +156,9 @@
           "address": "Hindenburgstraße 60, 41061 Mönchengladbach",
           "hours": "Mo-Sa: 10:00–19:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.1939,
+          "lng": 6.43607
         },
         {
           "id": "shop_by_3",
@@ -142,7 +168,9 @@
           "address": "Färbergraben 20, 80331 München",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
           "state": "Bayern",
-          "image": ""
+          "image": "",
+          "lat": 48.13652,
+          "lng": 11.57228
         },
         {
           "id": "shop_nw_7",
@@ -152,7 +180,9 @@
           "address": "Königsstraße 32-33, 48143 Münster",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.95732,
+          "lng": 7.62642
         },
         {
           "id": "shop_nw_8",
@@ -162,7 +192,9 @@
           "address": "Hammer Str. 453, 48153 Münster",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.92292,
+          "lng": 7.63143
         },
         {
           "id": "shop_ni_3",
@@ -172,7 +204,9 @@
           "address": "Große Hamkenstraße 32, 49074 Osnabrück",
           "hours": "Mo-Sa: 10:00–18:00",
           "state": "Niedersachsen",
-          "image": ""
+          "image": "",
+          "lat": 52.27386,
+          "lng": 8.04719
         },
         {
           "id": "shop_nw_9",
@@ -182,7 +216,9 @@
           "address": "Westernstraße 34, 33098 Paderborn",
           "hours": "Mo-Sa: 10:00–19:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.71627,
+          "lng": 8.74827
         },
         {
           "id": "shop_st_1",
@@ -192,7 +228,9 @@
           "address": "Breiter Weg 175, 39104 Magdeburg",
           "hours": "Mo-Sa: 10:00–19:00",
           "state": "Sachsen-Anhalt",
-          "image": ""
+          "image": "",
+          "lat": 52.12955,
+          "lng": 11.63509
         },
         {
           "id": "shop_by_1",
@@ -202,7 +240,9 @@
           "address": "Baaderstr. 66, 80469 München",
           "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–18:00",
           "state": "Bayern",
-          "image": ""
+          "image": "",
+          "lat": 48.12911,
+          "lng": 11.57661
         },
         {
           "id": "shop_be_1",
@@ -212,7 +252,9 @@
           "address": "Brunnenstraße 13, 10119 Berlin",
           "hours": "Mo-Sa: 12:00–19:00",
           "state": "Berlin",
-          "image": ""
+          "image": "",
+          "lat": 52.53153,
+          "lng": 13.40021
         },
         {
           "id": "shop_nw_2",
@@ -222,7 +264,9 @@
           "address": "Wolbecker Str. 38, 48155 Münster",
           "hours": "Mo-Fr: 11:00–18:00, Sa: 11:00–15:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 51.95753,
+          "lng": 7.63995
         },
         {
           "id": "shop_bw_2",
@@ -232,7 +276,9 @@
           "address": "Flöttlinstorstraße 9-11, 78628 Rottweil",
           "hours": "Mo-Fr: 08:00–17:00, Sa: 10:00–14:00",
           "state": "Baden-Württemberg",
-          "image": ""
+          "image": "",
+          "lat": 48.1678,
+          "lng": 8.62187
         },
         {
           "id": "shop_bw_3",
@@ -242,7 +288,9 @@
           "address": "Am Gemeindegarten, 79359 Riegel",
           "hours": "Mo-Fr: 14:00–17:00, Sa: 10:00–14:00",
           "state": "Baden-Württemberg",
-          "image": ""
+          "image": "",
+          "lat": 48.15134,
+          "lng": 7.75271
         },
         {
           "id": "shop_hb_1",
@@ -252,7 +300,9 @@
           "address": "Waller Heerstr. 293a, 28219 Bremen",
           "hours": "variierend (nach Vereinbarung)",
           "state": "Bremen",
-          "image": ""
+          "image": "",
+          "lat": 53.1095,
+          "lng": 8.7738
         },
         {
           "id": "shop_hh_1",
@@ -262,7 +312,9 @@
           "address": "Große Theaterstraße 42, 20354 Hamburg",
           "hours": "Mo-Sa: 11:00–19:00",
           "state": "Hamburg",
-          "image": ""
+          "image": "",
+          "lat": 53.55671,
+          "lng": 9.99112
         },
         {
           "id": "shop_he_1",
@@ -272,7 +324,9 @@
           "address": "Sandgasse 4, 60311 Frankfurt am Main",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–19:00",
           "state": "Hessen",
-          "image": ""
+          "image": "",
+          "lat": 50.11213,
+          "lng": 8.68058
         },
         {
           "id": "shop_mv_1",
@@ -282,7 +336,9 @@
           "address": "Am Strande 2e, 18055 Rostock",
           "hours": "Mo-Sa: 10:00–19:00",
           "state": "Meckl.-Vorpommern",
-          "image": ""
+          "image": "",
+          "lat": 54.09149,
+          "lng": 12.14908
         },
         {
           "id": "shop_ni_1",
@@ -292,7 +348,9 @@
           "address": "Obernstraße 30, 33602 Bielefeld*",
           "hours": "Mo-Sa: 11:00–19:00",
           "state": "Niedersachsen",
-          "image": ""
+          "image": "",
+          "lat": 52.02018,
+          "lng": 8.52942
         },
         {
           "id": "shop_nw_1",
@@ -302,7 +360,9 @@
           "address": "Brückstraße 20-22, 50667 Köln",
           "hours": "Mo-Sa: 11:00–19:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 50.93864,
+          "lng": 6.95503
         },
         {
           "id": "shop_rp_1",
@@ -312,7 +372,9 @@
           "address": "Casinostraße 41, 56068 Koblenz",
           "hours": "Do-Fr: 13-18, Sa: 12-17",
           "state": "Rheinland-Pfalz",
-          "image": ""
+          "image": "",
+          "lat": 50.35906,
+          "lng": 7.59761
         },
         {
           "id": "shop_sl_1",
@@ -322,7 +384,9 @@
           "address": "Poststraße 60, 66663 Merzig",
           "hours": "Mo-Fr: 10:00–18:30, Sa: 10:00–14:00",
           "state": "Saarland",
-          "image": ""
+          "image": "",
+          "lat": 49.44388,
+          "lng": 6.63977
         },
         {
           "id": "shop_sn_1",
@@ -332,7 +396,9 @@
           "address": "Karl-Liebknecht-Str. 12, 04107 Leipzig",
           "hours": "Mo-Sa: 12:00–19:00",
           "state": "Sachsen",
-          "image": ""
+          "image": "",
+          "lat": 51.33032,
+          "lng": 12.37319
         },
         {
           "id": "shop_sh_1",
@@ -342,7 +408,9 @@
           "address": "Fleischhauer Straße 31, 23552 Lübeck",
           "hours": "Mo-Fr: 10:00–18:00, Sa: 10:00–16:00",
           "state": "Schleswig-Holstein",
-          "image": ""
+          "image": "",
+          "lat": 53.86692,
+          "lng": 10.6883
         },
         {
           "id": "shop_th_1",
@@ -352,7 +420,9 @@
           "address": "Peterstraße 3, 99084 Erfurt",
           "hours": "Mo-Fr: 11:00–19:00, Sa: 10:00–18:00",
           "state": "Thüringen",
-          "image": ""
+          "image": "",
+          "lat": 50.97583,
+          "lng": 11.02126
         },
         {
           "id": "shop_rp_2",
@@ -362,7 +432,9 @@
           "address": "Korngasse 4, 67346 Speyer",
           "hours": "Di-Sa: 13:00–18:00",
           "state": "Rheinland-Pfalz",
-          "image": ""
+          "image": "",
+          "lat": 49.31762,
+          "lng": 8.43696
         },
         {
           "id": "shop_hh_2",
@@ -372,7 +444,9 @@
           "address": "Marktstraße 28, 20357 Hamburg",
           "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–19:00",
           "state": "Hamburg",
-          "image": ""
+          "image": "",
+          "lat": 53.55825,
+          "lng": 9.97159
         },
         {
           "id": "shop_be_4",
@@ -382,7 +456,9 @@
           "address": "Simon-Dach-Straße 23, 10245 Berlin",
           "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–19:00",
           "state": "Berlin",
-          "image": ""
+          "image": "",
+          "lat": 52.50828,
+          "lng": 13.4552
         },
         {
           "id": "shop_by_4",
@@ -392,7 +468,9 @@
           "address": "Obere Karlstraße 11, 91054 Erlangen",
           "hours": "Mo-Fr: 10:00–18:30, Sa: 11:00–16:00",
           "state": "Bayern",
-          "image": ""
+          "image": "",
+          "lat": 49.59643,
+          "lng": 11.00838
         },
         {
           "id": "shop_he_3",
@@ -402,7 +480,9 @@
           "address": "Westerbachstraße 47 (Hinterhof, Haus 2), 60489 Frankfurt am Main",
           "hours": "Mo-Fr: 13:00–18:00, Sa: 10:00–18:00",
           "state": "Hessen",
-          "image": ""
+          "image": "",
+          "lat": 50.1257,
+          "lng": 8.605
         },
         {
           "id": "shop_nw_10",
@@ -412,7 +492,9 @@
           "address": "Subbelrather Str. 140, 50823 Köln",
           "hours": "Mo-Fr: 12:00–19:00, Sa: 11:00–16:00",
           "state": "NRW",
-          "image": ""
+          "image": "",
+          "lat": 50.95114,
+          "lng": 6.92693
         },
         {
           "id": "shop_bw_4",
@@ -422,7 +504,9 @@
           "address": "Salzstraße 26, 79098 Freiburg im Breisgau",
           "hours": "Mo-Fr: 11:00–18:00, Sa: 10:00–19:00",
           "state": "Baden-Württemberg",
-          "image": ""
+          "image": "",
+          "lat": 47.99425,
+          "lng": 7.85152
         },
         {
           "id": "shop_by_5",
