@@ -6,6 +6,18 @@
       "ref": "1FtaPkloZPeqY7XAiWhuMiWwGATPZiag",
       "label": "My Maps „Skatemap2026“",
       "url": "https://www.google.com/maps/d/edit?mid=1FtaPkloZPeqY7XAiWhuMiWwGATPZiag&usp=sharing"
+    },
+    {
+      "id": "src_skatehive",
+      "kind": "mymaps",
+      "ref": "1iiXzotKL-uJ3l7USddpTDvadGII",
+      "label": "Skatehive-Karte",
+      "url": "https://skatehive.app/map",
+      "iconTypes": {
+        "22": "spot",
+        "169": "park"
+      },
+      "mergeWithin": 25
     }
   ],
   "spots": [],

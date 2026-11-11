@@ -33,6 +33,7 @@ const EXTRA_FILE = path.join(ROOT, 'src', 'data', 'map-extra.json');
 export const MANUAL_LABEL = 'Von dir geschickt';
 const EXTRA = fs.existsSync(EXTRA_FILE) ? JSON.parse(fs.readFileSync(EXTRA_FILE, 'utf8')) : {};
 const SOURCES = EXTRA.sources || [];
+const MERGE_WITHIN = Object.fromEntries(SOURCES.filter((s) => s.mergeWithin).map((s) => [s.label, s.mergeWithin]));
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -76,7 +77,9 @@ function cleanDescription(html) {
         .trim();
 }
 
-async function loadMyMaps(id) {
+// iconTypes (optional, pro Quelle): Kategorie nach Punktfarbe statt nach Ebene,
+// z. B. { "169": "park", "22": "spot" } → hellblaue Punkte (#icon-169) sind Skateparks
+async function loadMyMaps(id, iconTypes = null) {
     const res = await fetch(`https://www.google.com/maps/d/kml?mid=${id}&forcekml=1`, { headers: { 'User-Agent': UA } });
     if (!res.ok) throw new Error(`My Maps ${id}: HTTP ${res.status}`);
     const kml = await res.text();
@@ -91,6 +94,8 @@ async function loadMyMaps(id) {
             const name = decode(pm.match(/<name>([\s\S]*?)<\/name>/)?.[1] || '').trim();
             const note = cleanDescription(pm.match(/<description>([\s\S]*?)<\/description>/)?.[1]);
             let t = type;
+            const icon = pm.match(/<styleUrl>#icon-(\d+)/)?.[1];
+            if (iconTypes && icon && iconTypes[icon]) t = iconTypes[icon];
             if (t === 'spot' && /skate ?park|skaterpark|skateanlage|bowl/i.test(name)) t = 'park';
             out.push({ name, address: '', note, lng: Number(pt[1]), lat: Number(pt[2]), type: t, folder: folderName });
         }
@@ -130,6 +135,11 @@ function isSamePlace(a, b) {
         return d < 400 && na.length > 3 && nb.length > 3 && (na === nb || na.includes(nb) || nb.includes(na));
     }
     if (d < 15) return true; // praktisch derselbe Punkt
+    // Aus verschiedenen Karten: dort wird derselbe Ort oft etwas versetzt gesetzt
+    if (a.source !== b.source && d < 80) return true;
+    // Fremde Karten (Quelle mit "mergeWithin") haben selbst Doppelte dicht nebeneinander
+    const within = Math.max(MERGE_WITHIN[a.source] || 0, MERGE_WITHIN[b.source] || 0);
+    if (a.source === b.source && d < within) return true;
     const weak = (s) => !s || looksLikeCoords(s) || looksLikeAddress(s) || looksGeneric(s);
     if (d < 60 && (weak(a.name) || weak(b.name))) return true; // gleicher Ort, einmal ohne richtigen Namen
     // Automatisch vergebene Namen ("Street-Spot Oststadt 3") sagen nichts über den Ort aus
@@ -164,7 +174,7 @@ const prevById = new Map((previous.spots || []).map((p) => [p.id, p]));
 
 const raw = [];
 for (const src of SOURCES) {
-    const items = src.kind === 'list' ? (await loadList(src.ref)).map((p) => ({ ...p, type: src.type })) : await loadMyMaps(src.ref);
+    const items = src.kind === 'list' ? (await loadList(src.ref)).map((p) => ({ ...p, type: src.type })) : await loadMyMaps(src.ref, src.iconTypes);
     console.log(`${src.label}: ${items.length} Punkte`);
     raw.push(...items.map((p) => ({ ...p, source: src.label })));
 }
