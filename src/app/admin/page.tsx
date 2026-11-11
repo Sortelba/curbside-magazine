@@ -1674,7 +1674,7 @@ function ManageCommunity({ keyStr, only }: { keyStr: string; only?: string[] }) 
     const PAGE_SECTIONS = [
         { id: "sec_clubs", label: "Skateboard-Vereine" },
         { id: "sec_projects", label: "Projekte" },
-        { id: "sec_learn", label: "Skaten lernen (Link)" },
+        { id: "sec_learn", label: "Lern-Center" },
     ];
     const isSectionVisible = (id: string) => data.visibility?.[id] !== false;
     const toggleSectionVisible = (id: string) => {
@@ -3090,6 +3090,48 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
 }
 
 
+// Lern-Center auf der Community-Seite ein-/ausblenden (gleiche Einstellung wie unter Vereine & Projekte)
+function LearnVisibilityToggle({ keyStr }: { keyStr: string }) {
+    const [community, setCommunity] = useState<any>(null);
+    const [saving, setSaving] = useState(false);
+    useEffect(() => {
+        fetch('/api/community').then((r) => r.json()).then(setCommunity).catch(() => setCommunity(null));
+    }, []);
+    if (!community) return null;
+    const on = community.visibility?.sec_learn !== false;
+    const toggle = async () => {
+        const newData = { ...community, visibility: { ...(community.visibility || {}), sec_learn: !on } };
+        setSaving(true);
+        const res = await fetch('/api/community', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${keyStr}` },
+            body: JSON.stringify(newData),
+        });
+        setSaving(false);
+        if (res.ok) setCommunity(newData); else alert("Speichern fehlgeschlagen.");
+    };
+    return (
+        <div className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm flex flex-wrap items-center justify-between gap-4">
+            <div>
+                <h3 className="text-xl font-black uppercase italic tracking-tight">Auf der Community-Seite</h3>
+                <p className="text-xs text-muted-foreground mt-1">Zeigt oder versteckt den Kreis „Skaten lernen“. Live nach „Publish to Git“.</p>
+            </div>
+            <button
+                type="button"
+                onClick={toggle}
+                disabled={saving}
+                className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full border-2 text-sm font-bold transition-all disabled:opacity-60",
+                    on ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground line-through"
+                )}
+            >
+                {on ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+                Lern-Center {on ? "sichtbar" : "ausgeblendet"}
+            </button>
+        </div>
+    );
+}
+
 function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; settings?: any; onSaveSettings?: (newSettings: any) => void }) {
     const { t } = useLanguage();
     const [data, setData] = useState<any>({ basics: [], coaches: [], randomizer: { beginner: [], intermediate: [], pro: [] }, channels: [] });
@@ -3177,6 +3219,7 @@ function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; set
 
     return (
         <div className="space-y-6">
+            <LearnVisibilityToggle keyStr={keyStr} />
             {/* Basics Section */}
             <CollapsibleSection
                 title="Basics (Videos)"
