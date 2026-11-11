@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -11,6 +11,14 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 export default function Navbar({ showCommunity = false, showSkatemap = true }: { showCommunity?: boolean; showSkatemap?: boolean }) {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useLanguage();
+    // Oben ganz durchsichtig; erst beim Scrollen leicht milchig, damit das Menü lesbar bleibt
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 8);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     const navLinks = [
         { name: t("nav.news"), href: "/" },
@@ -19,7 +27,10 @@ export default function Navbar({ showCommunity = false, showSkatemap = true }: {
     ];
 
     return (
-        <nav className="bg-background border-b border-border sticky top-0 z-50">
+        <nav className={cn(
+            "sticky top-0 z-50 transition-colors duration-300",
+            scrolled || isOpen ? "bg-background/35 backdrop-blur-sm" : "bg-transparent"
+        )}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -34,7 +45,7 @@ export default function Navbar({ showCommunity = false, showSkatemap = true }: {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-muted-foreground hover:text-foreground hover:bg-muted px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide"
+                                    className="text-foreground hover:opacity-60 px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide"
                                 >
                                     {link.name}
                                 </Link>
@@ -67,7 +78,7 @@ export default function Navbar({ showCommunity = false, showSkatemap = true }: {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-foreground hover:bg-muted block px-3 py-2 rounded-md text-base font-medium uppercase tracking-wide"
+                                className="text-foreground hover:opacity-60 block px-3 py-2 rounded-md text-base font-medium uppercase tracking-wide"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}

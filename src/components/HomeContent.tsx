@@ -42,6 +42,8 @@ export default function HomeContent({ posts, learnData, settings, pick }: { post
 
     return (
         <div className="container mx-auto py-8 px-4 max-w-7xl">
+            {/* Hintergrund nur auf der Startseite, nur im hellen Modus */}
+            <div aria-hidden className="home-pattern fixed inset-0 -z-10" />
             <div className="mb-12 text-center">
                 <h1 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
                     {t("hero.title")}
