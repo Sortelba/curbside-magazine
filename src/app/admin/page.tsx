@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -2661,6 +2661,26 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
         }
     };
 
+    const repostPost = async (post: any) => {
+        if (!confirm(`„${post.title}“ wieder posten?\n\nDer Beitrag bekommt das heutige Datum und steht wieder ganz oben. Live geht er mit „Publish to Git“.`)) return;
+        try {
+            const res = await fetch('/api/posts/repost', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: post.id, key: keyStr })
+            });
+            if (res.ok) {
+                alert("Beitrag steht wieder oben. Zum Veröffentlichen „Publish to Git“ klicken.");
+                fetchPosts();
+            } else {
+                alert("Wieder posten hat nicht geklappt.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Fehler beim Wieder-Posten.");
+        }
+    };
+
     const handleEditPost = (post: any) => {
         // Ensure post has the new media structure for editing convenience
         const postToEdit = {
@@ -2794,11 +2814,19 @@ function ManagePosts({ keyStr }: { keyStr: string }) {
                                 <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
                                     <span className="uppercase font-bold bg-muted px-1.5 py-0.5 rounded">{post.type}</span>
                                     <span>{post.date}</span>
+                                    {post.originalDate && post.originalDate !== post.date && <span className="text-green-500">• wieder gepostet (zuerst {post.originalDate})</span>}
                                     {post.source && <span className="truncate max-w-[100px]">• {post.source}</span>}
                                 </div>
                             </div>
                         </div>
                         <div className="flex items-center gap-2 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                onClick={() => repostPost(post)}
+                                className="p-2 text-green-500 hover:bg-green-500/10 rounded-lg transition-colors"
+                                title="Wieder posten (Datum auf heute, nach oben)"
+                            >
+                                <Repeat className="h-4 w-4" />
+                            </button>
                             <button
                                 onClick={() => handleEditPost(post)}
                                 className="p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors"
