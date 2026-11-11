@@ -19,6 +19,7 @@ interface LearnData {
         pro: string[];
     };
     channels: Array<{ id: string; name: string; description: string; url: string }>;
+    hiddenSections?: string[]; // im Admin ausgeblendete Bereiche (z. B. "randomizer")
 }
 
 export default function LearnContent({ data }: { data: LearnData }) {
@@ -30,7 +31,7 @@ export default function LearnContent({ data }: { data: LearnData }) {
         { id: "coach", name: t("nav.learn_coach"), icon: Users, color: "bg-emerald-500" },
         { id: "randomizer", name: t("nav.learn_randomizer"), icon: Dices, color: "bg-purple-500" },
         { id: "channels", name: t("nav.learn_channels"), icon: LinkIcon, color: "bg-orange-500" }
-    ];
+    ].filter((s) => !(data.hiddenSections || []).includes(s.id));
 
     return (
         <div className="container mx-auto pt-24 pb-12 px-4 min-h-[80vh] flex flex-col items-center justify-start relative overflow-hidden">

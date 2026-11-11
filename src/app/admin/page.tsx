@@ -3426,6 +3426,21 @@ function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; set
                 isOpen={expandedSections.includes("randomizer")}
                 onToggle={() => toggleSection("randomizer")}
             >
+                <label className="flex items-center gap-3 mb-6 cursor-pointer select-none">
+                    <input
+                        type="checkbox"
+                        className="h-5 w-5 accent-current"
+                        checked={!(data.hiddenSections || []).includes('randomizer')}
+                        onChange={(e) => {
+                            const hidden = (data.hiddenSections || []).filter((x: string) => x !== 'randomizer');
+                            const newData = { ...data, hiddenSections: e.target.checked ? hidden : [...hidden, 'randomizer'] };
+                            setData(newData);
+                            authenticatedSave(newData);
+                        }}
+                    />
+                    <span className="font-bold">Trick Randomizer auf der Lern-Seite anzeigen</span>
+                    <span className="text-xs text-muted-foreground">(live erst nach „Publish to Git“)</span>
+                </label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {(['beginner', 'intermediate', 'pro'] as const).map(lvl => (
                         <div key={lvl} className="bg-muted/10 border-2 border-border rounded-[2rem] p-6 space-y-4">

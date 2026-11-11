@@ -182,7 +182,19 @@
       "no_coaches": "Keine Coaches in dieser Region gefunden.",
       "no_basics": "Noch keine Basics-Videos vorhanden.",
       "no_channels": "Noch keine Kanäle vorhanden.",
-      "randomizer_hint": "Schwierigkeit wählen & auf „Trick vorschlagen“ klicken"
+      "randomizer_hint": "Schwierigkeit wählen & auf „Trick vorschlagen“ klicken",
+      "rand_all": "Alle Level",
+      "rand_terrain_all": "Überall",
+      "rand_terrain_flat": "Flat",
+      "rand_terrain_obstacle": "Curbs & Rails",
+      "rand_terrain_ramp": "Rampe",
+      "rand_stance": "Zufällige Stance",
+      "rand_stance_hint": "Fakie, Switch oder Nollie dazu",
+      "rand_history": "Deine Session",
+      "rand_landed": "gestanden",
+      "rand_landed_q": "Gestanden?",
+      "rand_reset": "Neu starten",
+      "rand_none": "Keine Tricks für diese Auswahl."
     },
     "map": {
       "type_spot": "Spots",
@@ -393,7 +405,19 @@
       "no_coaches": "No coaches found in this area.",
       "no_basics": "No basics videos available yet.",
       "no_channels": "No channels available yet.",
-      "randomizer_hint": "Pick a difficulty & click “Suggest trick”"
+      "randomizer_hint": "Pick a difficulty & click “Suggest trick”",
+      "rand_all": "All levels",
+      "rand_terrain_all": "Anywhere",
+      "rand_terrain_flat": "Flat",
+      "rand_terrain_obstacle": "Curbs & rails",
+      "rand_terrain_ramp": "Ramp",
+      "rand_stance": "Random stance",
+      "rand_stance_hint": "Adds fakie, switch or nollie",
+      "rand_history": "Your session",
+      "rand_landed": "landed",
+      "rand_landed_q": "Landed?",
+      "rand_reset": "Reset",
+      "rand_none": "No tricks for this selection."
     },
     "map": {
       "type_spot": "Spots",
