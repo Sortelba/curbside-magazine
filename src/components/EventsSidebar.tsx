@@ -42,6 +42,9 @@ export default function EventsSidebar() {
     const [loading, setLoading] = useState(true);
     const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
     const [showCalendar, setShowCalendar] = useState(false);
+    // Tag mit mehreren Terminen: Liste aller Termine dieses Tages
+    const [selectedDay, setSelectedDay] = useState<{ date: Date; events: Event[] } | null>(null);
+    const MAX_PER_DAY = 2;
 
     // Calendar State
     const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -119,19 +122,38 @@ export default function EventsSidebar() {
             const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
             const dayEvents = events.filter(e => normalizeDateKey(e.startDateUtc || e.date) === dateStr);
 
+            const hidden = dayEvents.length - MAX_PER_DAY;
+            const openDay = () => setSelectedDay({ date: new Date(year, month, day), events: dayEvents });
+
             days.push(
-                <div key={day} className="h-24 border border-border/50 p-2 relative bg-card overflow-hidden">
+                <div
+                    key={day}
+                    onClick={dayEvents.length > 0 ? openDay : undefined}
+                    className={cn(
+                        "h-24 border border-border/50 p-1 md:p-2 relative bg-card overflow-hidden",
+                        dayEvents.length > 0 && "cursor-pointer hover:bg-muted/30 transition-colors"
+                    )}
+                >
                     <span className="text-[10px] font-black text-muted-foreground/50">{day}</span>
-                    <div className="flex flex-col gap-1 mt-1 overflow-y-auto max-h-[calc(100%-1rem)]">
-                        {dayEvents.map(event => (
+                    <div className="flex flex-col gap-1 mt-1">
+                        {dayEvents.slice(0, hidden > 0 ? MAX_PER_DAY - 1 : MAX_PER_DAY).map(event => (
                             <button
                                 key={event.id}
-                                onClick={() => setSelectedEvent(event)}
+                                onClick={(e) => { e.stopPropagation(); setSelectedEvent(event); }}
+                                title={event.title}
                                 className="text-[8px] md:text-[10px] p-1 bg-primary/10 text-primary border border-primary/20 rounded font-bold uppercase tracking-tighter truncate text-left hover:bg-primary hover:text-primary-foreground transition-all"
                             >
                                 {event.title}
                             </button>
                         ))}
+                        {hidden > 0 && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); openDay(); }}
+                                className="text-[8px] md:text-[10px] p-1 bg-primary text-primary-foreground rounded font-black uppercase tracking-tighter text-left hover:opacity-80 transition-all"
+                            >
+                                +{hidden + 1} {locale === 'de' ? 'Termine' : 'events'}
+                            </button>
+                        )}
                     </div>
                 </div>
             );
@@ -230,6 +252,45 @@ export default function EventsSidebar() {
                     <ExternalLink size={8} />
                 </div>
             </motion.div>
+
+            {/* Day List Modal */}
+            <AnimatePresence>
+                {selectedDay && (
+                    <div className="fixed inset-0 z-[105] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedDay(null)}>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="bg-card border-2 border-border rounded-[2rem] w-full max-w-lg max-h-[80vh] overflow-hidden flex flex-col shadow-2xl"
+                        >
+                            <div className="p-6 border-b border-border flex items-center justify-between gap-4">
+                                <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tighter">
+                                    {selectedDay.date.toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-US', { weekday: 'long', day: 'numeric', month: 'long' })}
+                                </h3>
+                                <button onClick={() => setSelectedDay(null)} className="p-2 bg-muted hover:bg-muted-foreground/10 rounded-full transition-colors shrink-0">
+                                    <X className="h-5 w-5" />
+                                </button>
+                            </div>
+                            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
+                                {selectedDay.events.map(event => (
+                                    <button
+                                        key={event.id}
+                                        onClick={() => setSelectedEvent(event)}
+                                        className="text-left p-4 rounded-2xl border border-border bg-muted/20 hover:border-primary/60 hover:bg-primary/5 transition-all"
+                                    >
+                                        <div className="font-black uppercase italic tracking-tight leading-tight">{event.title}</div>
+                                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[11px] font-bold uppercase tracking-widest">
+                                            <span className="flex items-center gap-1 text-primary"><Calendar className="h-3 w-3" />{event.date}</span>
+                                            <span className="flex items-center gap-1 text-muted-foreground"><MapPin className="h-3 w-3" />{event.location}</span>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
 
             {/* Event Detail Modal */}
             <AnimatePresence>
