@@ -1,5 +1,167 @@
 [
   {
+    "id": "event_sec_1",
+    "title": "Downhill Challenger – Thailand Tropical Downhill Race",
+    "date": "13.11.2026 - 15.11.2026",
+    "startDateUtc": "2026-11-13",
+    "location": "Songkhla, Thailand",
+    "link": "https://www.worldskate.org/events/upcoming-events/event/501.html",
+    "description": "Offenes Downhill-Rennen der World Skate Downhill Challenger Series in Songkhla, Thailand.\n\nDisziplin: Downhill · offen für alle"
+  },
+  {
+    "id": "event_sec_2",
+    "title": "ISSA 25-Cone World Series – Session 5",
+    "date": "13.11.2026 - 16.11.2026",
+    "startDateUtc": "2026-11-13",
+    "location": "Weltweit (lokale Rennen)",
+    "link": "https://usaslalomskateboarding.com/event/issa-25-cone-world-series-session-5/",
+    "description": "Fünfte Runde der ISSA 25-Cone World Series im Slalom. Gefahren wird am selben Wochenende in vielen Städten weltweit, die Ergebnisse kommen in eine gemeinsame Wertung.\n\nDisziplin: Slalom · offen für alle"
+  },
+  {
+    "id": "event_sec_3",
+    "title": "SLS Tokyo",
+    "date": "14.11.2026",
+    "startDateUtc": "2026-11-14",
+    "location": "Ariake Arena, Tokio, Japan",
+    "link": "https://www.streetleague.com",
+    "description": "Die SLS Championship Tour ist zurück in Tokio – in der Ariake Arena, mit den großen japanischen Namen vor Heimpublikum.\n\nDisziplin: Street · Pro-Contest"
+  },
+  {
+    "id": "event_sec_4",
+    "title": "Skateboardcupen Street – Sundsvall",
+    "date": "14.11.2026",
+    "startDateUtc": "2026-11-14",
+    "location": "Åparken, Sundsvall, Schweden",
+    "link": "https://skateboardcupen.se/",
+    "description": "Stopp des schwedischen Skateboardcupen (Street). Die besten vier von fünf Ergebnissen zählen für die Gesamtwertung.\n\nDisziplin: Street · offen"
+  },
+  {
+    "id": "event_sec_5",
+    "title": "Norgescup Skateboard Kristiansand 2026",
+    "date": "14.11.2026",
+    "startDateUtc": "2026-11-14",
+    "location": "Blå Kors Aktivitetspark, Kristiansand, Norwegen",
+    "link": "https://www.brettforbundet.no/events/norgescup-skateboard-kristiansand-2026",
+    "description": "Norwegischer Cup in Street und Mini-Ramp in der Blå Kors Aktivitetspark (früher Vision Skatehall). Junior- und Senior-Klassen, Preisgeld bei den Senioren.\n\nDisziplin: Street, Mini-Ramp"
+  },
+  {
+    "id": "event_sec_6",
+    "title": "UK Independent Vert Series – Mount Hawke Vert Jam",
+    "date": "15.11.2026",
+    "startDateUtc": "2026-11-15",
+    "location": "Mount Hawke, bei Truro (Cornwall), England",
+    "link": "https://www.boardriding.com/events/uk-independent-vert-series-mount-hawke-vert-jam-truro-2026",
+    "description": "Entspannter, unabhängig organisierter Vert-Contest in Mount Hawke bei Truro, Cornwall.\n\nDisziplin: Vert · offen"
+  },
+  {
+    "id": "event_sec_7",
+    "title": "World Skate Vert Open 2026",
+    "date": "26.11.2026 - 29.11.2026",
+    "startDateUtc": "2026-11-26",
+    "location": "Shenzhen Universiade Sports Centre, Shenzhen, China",
+    "link": "https://www.worldskate.org",
+    "description": "Offizieller internationaler Vert-Contest von World Skate. 30.000 US-$ Preisgeld in den Open-Klassen (Männer/Frauen), dazu eine Junior-Klasse (unter 16) ohne Preisgeld.\n\nDisziplin: Vert · Pro-Contest"
+  },
+  {
+    "id": "event_sec_8",
+    "title": "Skate SM Street – Finnische Meisterschaft",
+    "date": "27.11.2026 - 29.11.2026",
+    "startDateUtc": "2026-11-27",
+    "location": "Vipukulman skeittihalli, Lahti, Finnland",
+    "link": "https://www.rullalauta.fi/skatesm",
+    "description": "Finnische Street-Meisterschaft in der Vipukulma-Skatehalle in Lahti – das Finale der Skate-SM-Serie 2026.\n\nDisziplin: Street · offen"
+  },
+  {
+    "id": "event_sec_9",
+    "title": "Skateboardcupen Böj – Finale Malmö",
+    "date": "04.12.2026",
+    "startDateUtc": "2026-12-04",
+    "location": "Bryggeriet Skatepark, Malmö, Schweden",
+    "link": "https://skateboardcupen.se/",
+    "description": "Letzter Stopp der neuen Bowl-/Transition-Serie des Skateboardcupen beim Finalwochenende in Malmö. Die besten drei von vier Ergebnissen zählen.\n\nDisziplin: Bowl · offen"
+  },
+  {
+    "id": "event_sec_10",
+    "title": "WDSC Tamanique GP by Surf City",
+    "date": "04.12.2026 - 06.12.2026",
+    "startDateUtc": "2026-12-04",
+    "location": "Tamanique, El Salvador",
+    "link": "https://worlddownhillskateboardingchampionship.com/tamanique-gp-by-surfcity-el-salvador-registration-december-4-6-2026/",
+    "description": "Stopp der World Downhill Skateboarding Championship in Tamanique, El Salvador.\n\nDisziplin: Downhill · Pro"
+  },
+  {
+    "id": "event_sec_11",
+    "title": "Skateboardcupen Street – Finale Malmö",
+    "date": "05.12.2026",
+    "startDateUtc": "2026-12-05",
+    "location": "Bryggeriet Skatepark, Malmö, Schweden",
+    "link": "https://skateboardcupen.se/",
+    "description": "Finale der Street-Serie des schwedischen Skateboardcupen beim Finalwochenende in Malmö. Die besten vier von fünf Ergebnissen zählen.\n\nDisziplin: Street · offen"
+  },
+  {
+    "id": "event_sec_12",
+    "title": "Swiss Skateboard Cup Laax – Schweizer Meisterschaft Park",
+    "date": "05.12.2026",
+    "startDateUtc": "2026-12-05",
+    "location": "Freestyle Academy, Laax, Schweiz",
+    "link": "https://www.boardriding.com/events/swiss-skateboard-cup-laax-freestyle-academy-2026",
+    "description": "Schweizer Meisterschaft im Park – der letzte Stopp der Swiss Skateboard Open, in der Freestyle Academy in Laax.\n\nDisziplin: Park · offen"
+  },
+  {
+    "id": "event_sec_13",
+    "title": "Skateboard Classic 2027 – Fountain Hills",
+    "date": "30.01.2027",
+    "startDateUtc": "2027-01-30",
+    "location": "Desert Vista Skate Park, Fountain Hills (Arizona), USA",
+    "link": "https://www.experiencefountainhills.org/events/2026/skateboard-classic-2026",
+    "description": "Jährlicher Contest im Desert Vista Skate Park. Altersklassen von unter 8 bis 18+, dazu eine Sponsored-Klasse, 90-Sekunden-Runs.\n\nZeit: 14:00–17:30 Uhr (Ortszeit)\nDisziplin: Park · Amateure"
+  },
+  {
+    "id": "event_sec_14",
+    "title": "Swampfest presented by Monster Energy",
+    "date": "11.03.2027 - 13.03.2027",
+    "startDateUtc": "2027-03-11",
+    "location": "Waldo RV and Motorsports Park, Waldo (Florida), USA",
+    "link": "https://theboardr.com/events/4363/Swampfest_Presented_by_Monster_Energy",
+    "description": "BMX- und Skateboard-Festival von The Boardr im Waldo RV and Motorsports Park in Florida.\n\nDisziplin: Street · offen"
+  },
+  {
+    "id": "event_sec_15",
+    "title": "Lake Murray Country Open",
+    "date": "02.04.2027 - 04.04.2027",
+    "startDateUtc": "2027-04-02",
+    "location": "Irmo / Columbia (South Carolina), USA",
+    "link": "https://theboardr.com/events/4371/Lake_Murray_Country_Open",
+    "description": "Contest der Boardr Series. Weitere Details sind noch nicht veröffentlicht.\n\nDisziplin: Street · offen"
+  },
+  {
+    "id": "event_sec_16",
+    "title": "Jupiter Skateboard Competition",
+    "date": "24.04.2027",
+    "startDateUtc": "2027-04-24",
+    "location": "Jupiter Skate Park, Jupiter (Florida), USA",
+    "link": "https://www.jupiter.fl.us/1126/Jupiter-Skateboard-Competition",
+    "description": "Jährlicher Contest der Stadt Jupiter mit Bowl- und Mini-Ramp/Spine-Klassen. Altersklassen: bis 12, 13–15, ab 16. Startgeld 10 $ inkl. T-Shirt, Essen und Trinken.\n\nAnmeldung: 16 Uhr · Start: 18 Uhr (Ortszeit)"
+  },
+  {
+    "id": "event_sec_17",
+    "title": "WDSC Cumberland Valley",
+    "date": "14.05.2027 - 16.05.2027",
+    "startDateUtc": "2027-05-14",
+    "location": "Cumberland Valley (Pennsylvania), USA",
+    "link": "https://worlddownhillskateboardingchampionship.com/wdsc-cumberland-valley-event-rescheduled-to-may-2027/",
+    "description": "Neuer Stopp der World Downhill Skateboarding Championship. Von 2026 auf Mai 2027 verschoben, damit die Straßensperrungen genehmigt werden können.\n\nDisziplin: Downhill · Pro"
+  },
+  {
+    "id": "event_sec_18",
+    "title": "Mystic Sk8 Cup 2027",
+    "date": "25.06.2027 - 27.06.2027",
+    "startDateUtc": "2027-06-25",
+    "location": "Štvanice, Prag, Tschechien",
+    "link": "https://www.mysticsk8cup.cz/en",
+    "description": "Die 32. Ausgabe des Mystic Sk8 Cup auf der Insel Štvanice in Prag – einer der größten und legendärsten Contests Europas in Street, Bowl und Vert.\n\nDisziplin: Street, Bowl, Vert · Pro"
+  },
+  {
     "id": "event_1794360000005",
     "title": "SLS Super Crown World Championship 2026",
     "date": "12.12.2026 - 13.12.2026",
