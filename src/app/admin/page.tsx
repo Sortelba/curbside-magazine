@@ -378,66 +378,71 @@ function AdminDashboardContent() {
 
 
     const tabs = [
-        { id: "news", label: "News & Scraper", icon: Newspaper },
-        { id: "custom", label: "Neuer Post", icon: PlusCircle },
-        { id: "learn", label: "Lern-Center", icon: Lightbulb },
-        { id: "skatemap", label: "Skatemap", icon: MapPin },
-        { id: "community", label: "Community", icon: Globe },
-        { id: "events", label: "Events", icon: Calendar },
-        { id: "analytics", label: "Analytics", icon: BarChart3 },
-
-        { id: "messages", label: "Messages", icon: MessageSquare },
-        { id: "settings", label: "Einstellungen", icon: Settings },
-        { id: "about", label: "About", icon: FileText },
-        { id: "posts", label: "Live Posts", icon: FileText }
+        { id: "news", label: "News & Scraper", icon: Newspaper, group: "Inhalte" },
+        { id: "custom", label: "Neuer Post", icon: PlusCircle, group: "Inhalte" },
+        { id: "posts", label: "Live Posts", icon: FileText, group: "Inhalte" },
+        { id: "learn", label: "Lern-Center", icon: Lightbulb, group: "Inhalte" },
+        { id: "events", label: "Events", icon: Calendar, group: "Bereiche" },
+        { id: "skatemap", label: "Skatemap", icon: MapPin, group: "Bereiche" },
+        { id: "community", label: "Community", icon: Globe, group: "Bereiche" },
+        { id: "about", label: "About", icon: FileText, group: "Bereiche" },
+        { id: "analytics", label: "Analytics", icon: BarChart3, group: "Überblick" },
+        { id: "messages", label: "Messages", icon: MessageSquare, group: "Überblick" },
+        { id: "settings", label: "Einstellungen", icon: Settings, group: "Überblick" },
     ];
+    const tabGroups = [...new Set(tabs.map((t) => t.group))];
 
     return (
-        <div className="container mx-auto py-8 px-4 max-w-6xl relative">
-            {/* Top Navigation Header */}
-            <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-card border-2 border-border p-4 rounded-[2rem] shadow-xl">
-                <div className="flex items-center gap-3 px-4">
-                    <div className="bg-primary/10 p-2 rounded-xl">
-                        <LayoutDashboard className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                        <h1 className="text-xl font-black uppercase italic tracking-tighter leading-none">Admin</h1>
-                        <div className="flex items-center gap-1.5 mt-1">
-                            <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                            <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{key.substring(0, 4)}**** active</p>
+        <div className="min-h-screen md:flex">
+            {/* Seitenleiste */}
+            <aside className="md:w-64 md:shrink-0 md:h-screen md:sticky md:top-0 z-40 bg-card border-b-2 md:border-b-0 md:border-r-2 border-border flex flex-col">
+                <div className="flex items-center justify-between md:flex-col md:items-start gap-3 p-4 md:p-5 border-b-2 border-border">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-primary/10 p-2 rounded-xl">
+                            <LayoutDashboard className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                            <h1 className="text-xl font-black uppercase italic tracking-tighter leading-none">Admin</h1>
+                            <div className="flex items-center gap-1.5 mt-1">
+                                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{key.substring(0, 4)}**** active</p>
+                            </div>
                         </div>
                     </div>
                     <AnalyticsBadge keyStr={key || ''} onOpen={() => { setActiveTab("analytics"); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />
                 </div>
 
-
-
-                <nav className="flex flex-wrap gap-2">
-                    {tabs.map((tab) => {
-                        const Icon = tab.icon;
-                        const isActive = activeTab === tab.id;
-                        return (
-                            <button
-                                key={tab.id}
-                                onClick={() => {
-                                    setActiveTab(tab.id);
-                                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                                }}
-                                className={cn(
-                                    "flex items-center gap-2 px-4 py-3 rounded-2xl font-black uppercase italic text-[11px] transition-all group relative",
-                                    isActive
-                                        ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105"
-                                        : "hover:bg-muted text-muted-foreground hover:text-foreground"
-                                )}
-                            >
-                                <Icon className={cn("h-4 w-4", isActive ? "animate-pulse" : "group-hover:scale-110 transition-transform")} />
-                                <span>{tab.label}</span>
-                            </button>
-                        );
-                    })}
+                <nav className="flex md:flex-col gap-1 md:gap-4 overflow-x-auto md:overflow-x-visible md:overflow-y-auto flex-1 p-2 md:p-3">
+                    {tabGroups.map((group) => (
+                        <div key={group} className="flex md:flex-col gap-1 shrink-0">
+                            <div className="hidden md:block px-3 pb-1 text-[9px] font-black uppercase tracking-[0.2em] text-muted-foreground/60">{group}</div>
+                            {tabs.filter((t) => t.group === group).map((tab) => {
+                                const Icon = tab.icon;
+                                const isActive = activeTab === tab.id;
+                                return (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => {
+                                            setActiveTab(tab.id);
+                                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                                        }}
+                                        className={cn(
+                                            "flex items-center gap-3 px-3 py-2.5 rounded-xl font-black uppercase italic text-[11px] transition-all group whitespace-nowrap text-left",
+                                            isActive
+                                                ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                                                : "hover:bg-muted text-muted-foreground hover:text-foreground"
+                                        )}
+                                    >
+                                        <Icon className={cn("h-4 w-4 shrink-0", !isActive && "group-hover:scale-110 transition-transform")} />
+                                        <span>{tab.label}</span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    ))}
                 </nav>
 
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex md:flex-col gap-2 p-3 border-t-2 border-border">
                     <button
                         type="button"
                         title="Speichert nur die Entwürfe / News-Posts lokal. Die Homepage-Settings werden hier nicht gespeichert."
@@ -451,7 +456,7 @@ function AdminDashboardContent() {
                         }}
                         disabled={saveLoading}
                         className={cn(
-                            "flex items-center gap-2 px-4 py-3 rounded-2xl bg-muted text-foreground font-black uppercase italic text-[11px] tracking-widest transition-all hover:scale-[1.01]",
+                            "flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-muted text-foreground font-black uppercase italic text-[11px] tracking-widest transition-all hover:scale-[1.01]",
                             saveLoading && "opacity-50 cursor-not-allowed"
                         )}
                     >
@@ -464,7 +469,7 @@ function AdminDashboardContent() {
                         onClick={triggerPublish}
                         disabled={publishLoading}
                         className={cn(
-                            "flex items-center gap-2 px-4 py-3 rounded-2xl bg-primary text-primary-foreground font-black uppercase italic text-[11px] tracking-widest shadow-lg shadow-primary/20 transition-all hover:scale-[1.01]",
+                            "flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-primary text-primary-foreground font-black uppercase italic text-[11px] tracking-widest shadow-lg shadow-primary/20 transition-all hover:scale-[1.01]",
                             publishLoading && "opacity-50 cursor-not-allowed"
                         )}
                     >
@@ -472,8 +477,9 @@ function AdminDashboardContent() {
                         <span>Publish to Git</span>
                     </button>
                 </div>
-            </div>
+            </aside>
 
+            <div className="flex-1 min-w-0 container mx-auto py-8 px-4 md:px-8 max-w-6xl relative">
             <div className="w-full">
                 {/* Main Content Area */}
                 <div className="w-full min-w-0">
@@ -1389,6 +1395,7 @@ function AdminDashboardContent() {
                     </AnimatePresence>
                 </div>
 
+            </div>
             </div>
         </div>
     );
