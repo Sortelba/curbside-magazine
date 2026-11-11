@@ -65,7 +65,8 @@
       "no_website": "Keine offizielle Website bekannt",
       "skatemap": "Skatemap",
       "club_search": "Verein oder Stadt suchen …",
-      "no_clubs": "Keine Vereine in dieser Auswahl gefunden."
+      "no_clubs": "Keine Vereine in dieser Auswahl gefunden.",
+      "add_club": "Deinen Verein eintragen"
     },
     "buttons": {
       "load_more": "Mehr laden",
@@ -262,7 +263,8 @@
       "no_website": "No official website known",
       "skatemap": "Skate Map",
       "club_search": "Search club or city …",
-      "no_clubs": "No clubs found for this selection."
+      "no_clubs": "No clubs found for this selection.",
+      "add_club": "Add your club"
     },
     "buttons": {
       "load_more": "Load More",

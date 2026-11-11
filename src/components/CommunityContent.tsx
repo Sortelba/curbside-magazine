@@ -174,6 +174,13 @@ export default function CommunityContent({ data }: { data: any }) {
                                                 className="w-full bg-muted border-2 border-border rounded-xl py-3 pl-12 pr-4 focus:border-foreground outline-none transition-all"
                                             />
                                         </div>
+                                        <button
+                                            type="button"
+                                            onClick={() => window.dispatchEvent(new CustomEvent("open-contact-modal", { detail: { choose: true } }))}
+                                            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-primary-foreground text-xs font-black uppercase italic tracking-widest hover:opacity-90 transition-opacity"
+                                        >
+                                            <Users size={16} /> {t("community.add_club")}
+                                        </button>
                                         <div className="flex flex-wrap gap-2">
                                             {[["", clubs.length] as [string, number], ...states].map(([state, count]) => (
                                                 <button

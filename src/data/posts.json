@@ -1,5 +1,41 @@
 [
   {
+    "id": "post_1794410000000_clubs",
+    "title": "68 Skateboard-Vereine aus ganz Deutschland – jetzt auf CURBSIDE",
+    "description": "Moin! Auf CURBSIDE gibt's ab sofort eine Übersicht mit deutschen Skateboard-Vereinen. 68 Vereine sind schon drin – und zwar aus allen 16 Bundesländern, von SKATE KIEL bis RAZED in Augsburg, vom 1. Ber...",
+    "translations": {
+      "de": {
+        "title": "68 Skateboard-Vereine aus ganz Deutschland – jetzt auf CURBSIDE",
+        "content": "Moin! Auf CURBSIDE gibt's ab sofort eine Übersicht mit deutschen Skateboard-Vereinen. 68 Vereine sind schon drin – und zwar aus allen 16 Bundesländern, von SKATE KIEL bis RAZED in Augsburg, vom 1. Berliner Skateboardverein bis Rollbrett Rottweil.\n\nSo findest du sie: oben im Menü unter „Community“ und dann „Deutsche Skateboard Vereine“. Über die Knöpfe oben filterst du nach Bundesland, und mit der Suche findest du schnell einen Verein oder deine Stadt. Ein Klick auf „Zur Website“ bringt dich direkt zum Verein – zu Trainings, Kursen, Skatehallen und Mitgliedschaft.\n\nWarum Vereine? Viele Vereine bauen und betreiben Skatehallen, setzen sich bei der Stadt für neue Parks ein, geben Kurse für Kids und Anfänger und organisieren Contests und Jams. Wer seine Szene unterstützen will, ist dort genau richtig.\n\nDein Verein fehlt? Oder bei deinem Verein steht noch keine Website? Klick in der Vereinsliste auf „Deinen Verein eintragen“ – oder unten auf der Seite auf „Kontakt & Vorschläge“ und dann „Verein eintragen“. Da ist schon eine fertige Vorlage drin: Name, Stadt, Website, Instagram und was ihr so macht. Abschicken, wir tragen euch ein.\n\nWir sehen uns im Park!\n\n[👉 Zu den Skateboard-Vereinen →](/community/?bereich=vereine)",
+        "linkLabel": "Zu den Vereinen"
+      },
+      "en": {
+        "title": "68 Skateboard Clubs from All Over Germany – Now on CURBSIDE",
+        "content": "CURBSIDE now has an overview of German skateboard clubs. 68 clubs are already listed – from all 16 German states, from SKATE KIEL to RAZED in Augsburg, from the 1st Berlin Skateboard Club to Rollbrett Rottweil.\n\nHere's where to find them: \"Community\" in the menu at the top, then \"German Skateboard Clubs\". Use the buttons at the top to filter by state, or search for a club or your city. \"Visit website\" takes you straight to the club – trainings, courses, skate halls and membership.\n\nWhy clubs? Many clubs build and run skate halls, push their city for new parks, run courses for kids and beginners, and organise contests and jams. If you want to support your local scene, that's the place to be.\n\nYour club is missing? Or there's no website listed for it yet? Click \"Add your club\" in the club list – or \"Contact & Suggestions\" at the bottom of the page and then \"Add a club\". There's a ready-made template: name, city, website, Instagram and what you do. Send it and we'll add you.\n\nSee you at the park!\n\n[👉 Go to the skateboard clubs →](/community/?bereich=vereine)",
+        "linkLabel": "Go to the clubs"
+      }
+    },
+    "type": "image",
+    "content": "/uploads/posts/curbside-skateboard-vereine.jpg",
+    "media": {
+      "images": [
+        "/uploads/posts/curbside-skateboard-vereine.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "/community/?bereich=vereine"
+    },
+    "source": "CURBSIDE",
+    "originalUrl": "/community/?bereich=vereine",
+    "date": "Nov 11, 2026",
+    "tags": [
+      "Community",
+      "Skateboard-Vereine",
+      "Skatehallen",
+      "Support your local scene"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1794404136739_552",
     "title": "[News] HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026",
     "description": "HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026\n\nAvenue & Son invited us to experience Shanghai and the Adi Mission, where 11 crews take on mini-games and challenges all over the city. We ...",
