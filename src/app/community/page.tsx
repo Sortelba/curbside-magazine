@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Skateshops, Vereine & Projekte",
-    description: "Unterstütze deine lokale Szene: kleine Skateshops in ganz Deutschland, Skateboard-Vereine und soziale Skate-Projekte.",
+    title: "Vereine & Projekte",
+    description: "Unterstütze deine lokale Szene: Skateboard-Vereine und soziale Skate-Projekte. Skateshops findest du in der CURBSIDE Skatemap.",
     alternates: { canonical: "/community/" },
 };
 

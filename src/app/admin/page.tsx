@@ -1352,6 +1352,11 @@ function AdminDashboardContent() {
                                         </p>
                                     </div>
                                     <ManageSkatemap keyStr={key || ''} />
+                                    <div className="pt-4">
+                                        <h3 className="text-2xl font-black uppercase italic tracking-tighter">Skateshops auf der Karte</h3>
+                                        <p className="text-sm text-muted-foreground mb-4">Shops mit Position (lat/lng) erscheinen als Shop-Punkte in der Skatemap. Ausgeblendete Shops werden nicht angezeigt.</p>
+                                        <ManageCommunity keyStr={key || ''} only={["sec_shops"]} />
+                                    </div>
                                 </motion.div>
                             )}
 
@@ -1394,7 +1399,10 @@ function AdminDashboardContent() {
     );
 }
 
-function ManageCommunity({ keyStr }: { keyStr: string }) {
+// only: nur diese Bereiche zeigen (z. B. Skateshops im Skatemap-Reiter).
+// Ohne only: alle Community-Bereiche außer den Skateshops (die gehören zur Skatemap).
+function ManageCommunity({ keyStr, only }: { keyStr: string; only?: string[] }) {
+    const showSection = (id: string) => (only ? only.includes(id) : id !== "sec_shops");
     const { t } = useLanguage();
     const [data, setData] = useState<any>({ sections: [] });
     const [loading, setLoading] = useState(false);
@@ -1408,9 +1416,8 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
             const json = await res.json();
             setData(json);
             // Auto-expand first section
-            if (json.sections && json.sections.length > 0) {
-                setExpandedSection(json.sections[0].id);
-            }
+            const first = (json.sections || []).find((sec: any) => showSection(sec.id));
+            if (first) setExpandedSection(first.id);
         } catch (e) {
             console.error(e);
             alert("Failed to load community data.");
@@ -1565,7 +1572,6 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
 
     // Bereiche der Community-Seite (Kreise) ein-/ausblenden – sofort speichern
     const PAGE_SECTIONS = [
-        { id: "sec_shops", label: "Support Skate Shops" },
         { id: "sec_clubs", label: "Skateboard-Vereine" },
         { id: "sec_projects", label: "Projekte" },
         { id: "sec_learn", label: "Skaten lernen (Link)" },
@@ -1600,7 +1606,7 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
             {loading && <div className="text-center py-8">Loading...</div>}
 
             {/* Welche Bereiche auf der Community-Seite erscheinen */}
-            <div className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm">
+            {!only && <div className="bg-card border-2 border-border rounded-2xl p-6 shadow-sm">
                 <h3 className="text-xl font-black uppercase italic tracking-tight">Bereiche auf der Community-Seite</h3>
                 <p className="text-xs text-muted-foreground mt-1 mb-4">Antippen zum Ein- oder Ausblenden. Wird sofort gespeichert und ist nach dem nächsten Veröffentlichen live. Ist mindestens ein Bereich an, wird „Community anzeigen“ in den Einstellungen automatisch eingeschaltet – sind alle aus, automatisch ausgeschaltet.</p>
                 <div className="flex flex-wrap gap-2">
@@ -1622,9 +1628,10 @@ function ManageCommunity({ keyStr }: { keyStr: string }) {
                         );
                     })}
                 </div>
-            </div>
+            </div>}
 
             {data.sections.map((section: any, sIdx: number) => {
+                if (!showSection(section.id)) return null;
                 const isExpanded = expandedSection === section.id;
 
                 return (

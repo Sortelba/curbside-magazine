@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingBag, Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
+import { Heart, X, Search, MapPin, Clock, ChevronRight, ExternalLink, Users, GraduationCap } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { loc } from "@/lib/localized";
@@ -18,7 +18,8 @@ export default function CommunityContent({ data }: { data: any }) {
     // Die Skatemap hat jetzt eine eigene Seite – alte Links dorthin weiterleiten.
     useEffect(() => {
         const bereich = new URLSearchParams(window.location.search).get("bereich") || "";
-        if (bereich === "skatemap") { window.location.replace("/skatemap/"); return; }
+        // Skateshops stehen jetzt in der Skatemap
+        if (bereich === "skatemap" || bereich === "shops") { window.location.replace("/skatemap/"); return; }
         const map: Record<string, string> = { shops: "sec_shops", vereine: "sec_clubs", projekte: "sec_projects", lernen: "sec_learn" };
         const id = map[bereich];
         if (id && (data.visibility || {})[id] !== false) setActiveSection(id);
@@ -26,7 +27,6 @@ export default function CommunityContent({ data }: { data: any }) {
 
     const visibility = data.visibility || {};
     const sections = [
-        { id: "sec_shops", name: t("community.shops"), icon: ShoppingBag },
         { id: "sec_clubs", name: t("community.clubs"), icon: Users },
         { id: "sec_projects", name: t("community.projects"), icon: Heart },
         { id: "sec_learn", name: t("community.skaten_lernen"), icon: GraduationCap }
