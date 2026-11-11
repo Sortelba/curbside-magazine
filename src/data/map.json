@@ -7690,6 +7690,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_m33d86760_151d21070",
+      "name": "Martin Place",
+      "type": "spot",
+      "lat": -33.867598,
+      "lng": 151.210696,
+      "url": "https://www.google.com/maps/search/?api=1&query=-33.867598,151.210696",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "spot_48d78288_9d17470",
       "name": "massive stairs",
       "type": "spot",
