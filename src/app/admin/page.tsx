@@ -506,17 +506,6 @@ function AdminDashboardContent() {
                                             <p className="text-muted-foreground">Konfiguration der News-Scraper, YouTube-Kanäle und Homepage-Module.</p>
                                         </div>
                                         <div className="flex items-end gap-2">
-                                            <button
-                                                onClick={triggerPublish}
-                                                disabled={publishLoading}
-                                                className={cn(
-                                                    "flex items-center gap-2 px-6 py-2 bg-primary text-primary-foreground font-black uppercase italic text-xs tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg shadow-primary/20",
-                                                    publishLoading && "opacity-50 cursor-not-allowed"
-                                                )}
-                                            >
-                                                {publishLoading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
-                                                <span>Website Veröffentlichen</span>
-                                            </button>
                                             <button onClick={loadSettings} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors h-[40px] w-[40px] flex items-center justify-center">
                                                 <RefreshCw size={20} className={cn(settingsLoading && "animate-spin")} />
                                             </button>
@@ -562,7 +551,7 @@ function AdminDashboardContent() {
                                                     : "Community ist ausgeblendet: kein Link im Menü, keine Karte auf der Startseite."}
                                             </p>
                                             <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground/80">
-                                                Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Website veröffentlichen“.
+                                                Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Publish to Git“.
                                             </p>
                                         </div>
 
@@ -1394,7 +1383,7 @@ function AdminDashboardContent() {
                                                 : "Die Skatemap ist aus dem Menü genommen (die Seite /skatemap/ gibt es aber weiterhin)."}
                                         </p>
                                         <p className="mt-2 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground/80">
-                                            Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Website veröffentlichen“.
+                                            Speichert sofort und gilt lokal direkt. Auf der Live-Seite erst nach „Publish to Git“.
                                         </p>
                                     </div>
                                     <ManageSkatemap keyStr={key || ''} />
