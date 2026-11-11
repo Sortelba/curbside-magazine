@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat, Users
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -86,6 +86,7 @@ function AdminDashboardContent() {
     const [drafts, setDrafts] = useState<any[]>([]);
     const [status, setStatus] = useState<string>("");
     const [activeTab, setActiveTab] = useState<string>("news");
+    const [communityOpen, setCommunityOpen] = useState(false);
     const [newPostCategory, setNewPostCategory] = useState<string>("news");
     const [activeDraftIndex, setActiveDraftIndex] = useState<number | null>(null);
 
@@ -382,10 +383,11 @@ function AdminDashboardContent() {
         { id: "news", label: "News & Scraper", icon: Newspaper, group: "Inhalte" },
         { id: "custom", label: "Neuer Post", icon: PlusCircle, group: "Inhalte" },
         { id: "posts", label: "Live Posts", icon: FileText, group: "Inhalte" },
-        { id: "learn", label: "Lern-Center", icon: Lightbulb, group: "Inhalte" },
         { id: "events", label: "Events", icon: Calendar, group: "Bereiche" },
         { id: "skatemap", label: "Skatemap", icon: MapPin, group: "Bereiche" },
-        { id: "community", label: "Community", icon: Globe, group: "Bereiche" },
+        // Community ist ausklappbar: Vereine & Projekte und das Lern-Center (auf der Seite Teil der Community)
+        { id: "community", label: "Vereine & Projekte", icon: Users, group: "Bereiche", parent: "Community" },
+        { id: "learn", label: "Lern-Center", icon: Lightbulb, group: "Bereiche", parent: "Community" },
         { id: "about", label: "About", icon: FileText, group: "Bereiche" },
         { id: "analytics", label: "Analytics", icon: BarChart3, group: "Überblick" },
         { id: "settings", label: "Einstellungen", icon: Settings, group: "Überblick" },
@@ -416,10 +418,32 @@ function AdminDashboardContent() {
                     {tabGroups.map((group) => (
                         <div key={group} className="flex md:flex-col gap-1 shrink-0">
                             <div className="hidden md:block px-3 pb-1 text-[9px] font-black uppercase tracking-[0.2em] text-muted-foreground/60">{group}</div>
-                            {tabs.filter((t) => t.group === group).map((tab) => {
+                            {tabs.filter((t) => t.group === group).map((tab, i, list) => {
                                 const Icon = tab.icon;
                                 const isActive = activeTab === tab.id;
-                                return (
+                                const parent = (tab as any).parent as string | undefined;
+                                // Ausklappbarer Oberpunkt (z. B. „Community“) vor seinem ersten Unterpunkt
+                                const children = parent ? tabs.filter((t) => (t as any).parent === parent) : [];
+                                const isFirstChild = parent && list.findIndex((t) => (t as any).parent === parent) === i;
+                                const open = communityOpen || children.some((t) => t.id === activeTab);
+                                const header = isFirstChild ? (
+                                    <button
+                                        key={`parent-${parent}`}
+                                        type="button"
+                                        onClick={() => setCommunityOpen(!open)}
+                                        aria-expanded={open}
+                                        className={cn(
+                                            "flex items-center gap-3 px-3 py-2.5 rounded-xl font-black uppercase italic text-[11px] transition-all group whitespace-nowrap text-left",
+                                            children.some((t) => t.id === activeTab) ? "text-foreground" : "hover:bg-muted text-muted-foreground hover:text-foreground"
+                                        )}
+                                    >
+                                        <Globe className="h-4 w-4 shrink-0" />
+                                        <span className="flex-1">{parent}</span>
+                                        <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform", open && "rotate-180")} />
+                                    </button>
+                                ) : null;
+                                if (parent && !open) return header;
+                                return [header,
                                     <button
                                         key={tab.id}
                                         onClick={() => {
@@ -428,6 +452,7 @@ function AdminDashboardContent() {
                                         }}
                                         className={cn(
                                             "flex items-center gap-3 px-3 py-2.5 rounded-xl font-black uppercase italic text-[11px] transition-all group whitespace-nowrap text-left",
+                                            parent && "md:ml-5 md:py-2 md:text-[10px]",
                                             isActive
                                                 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
                                                 : "hover:bg-muted text-muted-foreground hover:text-foreground"
@@ -436,7 +461,7 @@ function AdminDashboardContent() {
                                         <Icon className={cn("h-4 w-4 shrink-0", !isActive && "group-hover:scale-110 transition-transform")} />
                                         <span>{tab.label}</span>
                                     </button>
-                                );
+                                ];
                             })}
                         </div>
                     ))}
