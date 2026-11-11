@@ -20,7 +20,127 @@
       "mergeWithin": 25
     }
   ],
-  "spots": [],
+  "spots": [
+    {
+      "name": "Herzogenaurach Gymnasium",
+      "lat": 49.5585,
+      "lng": 10.8788,
+      "type": "spot",
+      "description": "Street-Spot am Gymnasium: Treppen und Curbs. Auf den Hausmeister achten. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Broitzem Curbs",
+      "lat": 52.2358,
+      "lng": 10.4873,
+      "type": "spot",
+      "description": "Drei höhere Curbs auf einem Basketballplatz in Braunschweig-Broitzem. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Vilnius Vinco Kudirkos aikštė",
+      "lat": 54.6876,
+      "lng": 25.2806,
+      "type": "spot",
+      "description": "Platz in Vilnius mit Rails und Treppen zum Gap. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Vientiane Stairs and Curb",
+      "lat": 17.9573,
+      "lng": 102.618,
+      "type": "spot",
+      "description": "Kleiner, ruhiger Spot mit Treppe und Curb im Zentrum von Vientiane. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Rosenheim Busbahnhof",
+      "lat": 47.851,
+      "lng": 12.1181,
+      "type": "spot",
+      "description": "Street-Spot am Busbahnhof mit Manual Pad und Ledge. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Milano Forlanini",
+      "lat": 45.4656,
+      "lng": 9.23613,
+      "type": "spot",
+      "description": "Spot vor der Metro-Station Forlanini in Mailand. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Abstatt BüPa-Ledge",
+      "lat": 49.0668,
+      "lng": 9.29355,
+      "type": "spot",
+      "description": "Lange Down-Ledge mit Metallkante im Bürgerpark Abstatt. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Osthofen Wonnegaustraße",
+      "lat": 49.6985,
+      "lng": 8.32773,
+      "type": "spot",
+      "description": "Street-Spot neben der Basketballanlage, Wonnegaustraße 1. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Berlin 3er Stufen Sets",
+      "lat": 52.4481,
+      "lng": 13.3272,
+      "type": "spot",
+      "description": "Zwei kleine 3er-Stufensets in Berlin-Steglitz. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Mannheim Messplatz",
+      "lat": 49.4959,
+      "lng": 8.4725,
+      "type": "spot",
+      "description": "Großer Flatground mit gutem Boden und Curbs, bekannter Treffpunkt in Mannheim. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Düsseldorf Schauspielhaus",
+      "lat": 51.2278,
+      "lng": 6.78401,
+      "type": "spot",
+      "description": "Mehrere Street-Obstacles hinter dem Kö-Bogen II am Schauspielhaus. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Solingen Ohligs Verwaltungsgebäude",
+      "lat": 51.1553,
+      "lng": 6.99215,
+      "type": "spot",
+      "description": "Kleines Treppenset mit kurzer Anfahrt und viel Fläche. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Kulturforum Berlin",
+      "lat": 52.509,
+      "lng": 13.3668,
+      "type": "spot",
+      "description": "Berlins klassischer Street-Spot: Double Set, Ledges, Treppen und viel Flat. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Skatepark Großwallstadt",
+      "lat": 49.8836,
+      "lng": 9.14973,
+      "type": "park",
+      "description": "Skatepark in der Quellenstraße 45. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Bike- und Skatepark Meerbusch",
+      "lat": 51.2779,
+      "lng": 6.64346,
+      "type": "park",
+      "description": "Bike- und Skatepark im Landschaftspark Meerbusch. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Bellevue Skatepark Berlin",
+      "lat": 52.4538,
+      "lng": 13.5825,
+      "type": "park",
+      "description": "Skatepark an der Friedrichshagener Straße 49A in Berlin-Köpenick. (Quelle: skatemap.de)"
+    },
+    {
+      "name": "Skatepark Enrique Chacón Madrid",
+      "lat": 40.3637,
+      "lng": -3.62152,
+      "type": "park",
+      "description": "Skatepark in Madrid. (Quelle: skatemap.de)"
+    }
+  ],
   "closed": [
     {
       "name": "Pippos Vintage & Skateshop",

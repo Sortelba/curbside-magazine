@@ -358,6 +358,16 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d45380_13d58250",
+      "name": "Bellevue Skatepark Berlin",
+      "type": "park",
+      "lat": 52.4538,
+      "lng": 13.5825,
+      "description": "Skatepark an der Friedrichshagener Straße 49A in Berlin-Köpenick. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=52.453800,13.582500",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "park_40d71240_m74d06695",
       "name": "Berry Lane Skatepark",
       "type": "park",
@@ -410,6 +420,16 @@
       "lng": 11.234746,
       "url": "https://www.google.com/maps/search/?api=1&query=47.265531,11.234746",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d27790_6d64346",
+      "name": "Bike- und Skatepark Meerbusch",
+      "type": "park",
+      "lat": 51.2779,
+      "lng": 6.64346,
+      "description": "Bike- und Skatepark im Landschaftspark Meerbusch. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=51.277900,6.643460",
+      "source": "Von dir geschickt"
     },
     {
       "id": "park_m43d48811_172d58316",
@@ -4646,6 +4666,16 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d36370_m3d62152",
+      "name": "Skatepark Enrique Chacón Madrid",
+      "type": "park",
+      "lat": 40.3637,
+      "lng": -3.62152,
+      "description": "Skatepark in Madrid. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=40.363700,-3.621520",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "park_48d89517_8d72670",
       "name": "Skatepark Enzauenpark",
       "type": "park",
@@ -4753,6 +4783,16 @@
       "lng": -99.106846,
       "url": "https://www.google.com/maps/search/?api=1&query=19.437209,-99.106846",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_49d88360_9d14973",
+      "name": "Skatepark Großwallstadt",
+      "type": "park",
+      "lat": 49.8836,
+      "lng": 9.14973,
+      "description": "Skatepark in der Quellenstraße 45. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.883600,9.149730",
+      "source": "Von dir geschickt"
     },
     {
       "id": "park_39d56523_m0d51975",
@@ -8876,6 +8916,16 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "spot_49d06680_9d29355",
+      "name": "Abstatt BüPa-Ledge",
+      "type": "spot",
+      "lat": 49.0668,
+      "lng": 9.29355,
+      "description": "Lange Down-Ledge mit Metallkante im Bürgerpark Abstatt. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.066800,9.293550",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_48d49094_9d24013",
       "name": "Achalm-Curb",
       "type": "spot",
@@ -9395,6 +9445,16 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_52d44810_13d32720",
+      "name": "Berlin 3er Stufen Sets",
+      "type": "spot",
+      "lat": 52.4481,
+      "lng": 13.3272,
+      "description": "Zwei kleine 3er-Stufensets in Berlin-Steglitz. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=52.448100,13.327200",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_41d41846_2d20635",
       "name": "Besòs Banks",
       "type": "spot",
@@ -9647,6 +9707,16 @@
       "description": "grounds a little gnar. ledges are old",
       "url": "https://www.google.com/maps/search/?api=1&query=42.324440,-83.082040",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "spot_52d23580_10d48730",
+      "name": "Broitzem Curbs",
+      "type": "spot",
+      "lat": 52.2358,
+      "lng": 10.4873,
+      "description": "Drei höhere Curbs auf einem Basketballplatz in Braunschweig-Broitzem. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=52.235800,10.487300",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_44d85887_m93d13814",
@@ -10451,6 +10521,16 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "spot_51d22780_6d78401",
+      "name": "Düsseldorf Schauspielhaus",
+      "type": "spot",
+      "lat": 51.2278,
+      "lng": 6.78401,
+      "description": "Mehrere Street-Obstacles hinter dem Kö-Bogen II am Schauspielhaus. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=51.227800,6.784010",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_41d45991_2d24679",
       "name": "Einatec",
       "type": "spot",
@@ -11234,6 +11314,16 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "spot_49d55850_10d87880",
+      "name": "Herzogenaurach Gymnasium",
+      "type": "spot",
+      "lat": 49.5585,
+      "lng": 10.8788,
+      "description": "Street-Spot am Gymnasium: Treppen und Curbs. Auf den Hausmeister achten. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.558500,10.878800",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_34d11198_m118d01098",
       "name": "Hidden DIY",
       "type": "spot",
@@ -11627,6 +11717,16 @@
       "description": "Bit a rougher flat. with round manual pads. plus one slappy thing.",
       "url": "https://www.google.com/maps/search/?api=1&query=48.782656,9.173932",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_52d50900_13d36680",
+      "name": "Kulturforum Berlin",
+      "type": "spot",
+      "lat": 52.509,
+      "lng": 13.3668,
+      "description": "Berlins klassischer Street-Spot: Double Set, Ledges, Treppen und viel Flat. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=52.509000,13.366800",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_48d77922_9d17465",
@@ -12210,6 +12310,16 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "spot_49d49590_8d47250",
+      "name": "Mannheim Messplatz",
+      "type": "spot",
+      "lat": 49.4959,
+      "lng": 8.4725,
+      "description": "Großer Flatground mit gutem Boden und Curbs, bekannter Treffpunkt in Mannheim. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.495900,8.472500",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_48d49429_9d22221",
       "name": "manny pad",
       "type": "spot",
@@ -12508,6 +12618,16 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_45d46560_9d23613",
+      "name": "Milano Forlanini",
+      "type": "spot",
+      "lat": 45.4656,
+      "lng": 9.23613,
+      "description": "Spot vor der Metro-Station Forlanini in Mailand. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=45.465600,9.236130",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_m19d86447_m43d97079",
       "name": "Mineirão Kink Rail",
       "type": "spot",
@@ -12790,6 +12910,16 @@
       "description": "Skatepark",
       "url": "https://www.google.com/maps/search/?api=1&query=48.830388,9.321728",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_49d69850_8d32773",
+      "name": "Osthofen Wonnegaustraße",
+      "type": "spot",
+      "lat": 49.6985,
+      "lng": 8.32773,
+      "description": "Street-Spot neben der Basketballanlage, Wonnegaustraße 1. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.698500,8.327730",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_49d03254_8d44364",
@@ -13600,6 +13730,16 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_47d85100_12d11810",
+      "name": "Rosenheim Busbahnhof",
+      "type": "spot",
+      "lat": 47.851,
+      "lng": 12.1181,
+      "description": "Street-Spot am Busbahnhof mit Manual Pad und Ledge. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=47.851000,12.118100",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_39d77194_m105d00366",
       "name": "rough wallride",
       "type": "spot",
@@ -14052,6 +14192,16 @@
       "lng": 20.861301,
       "url": "https://www.google.com/maps/search/?api=1&query=39.634225,20.861301",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "spot_51d15530_6d99215",
+      "name": "Solingen Ohligs Verwaltungsgebäude",
+      "type": "spot",
+      "lat": 51.1553,
+      "lng": 6.99215,
+      "description": "Kleines Treppenset mit kurzer Anfahrt und viel Fläche. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=51.155300,6.992150",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_44d95182_m93d23673",
@@ -15098,6 +15248,26 @@
       "description": "L3 -> Vall d'Hebron",
       "url": "https://www.google.com/maps/search/?api=1&query=41.427087,2.146030",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_17d95730_102d61800",
+      "name": "Vientiane Stairs and Curb",
+      "type": "spot",
+      "lat": 17.9573,
+      "lng": 102.618,
+      "description": "Kleiner, ruhiger Spot mit Treppe und Curb im Zentrum von Vientiane. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=17.957300,102.618000",
+      "source": "Von dir geschickt"
+    },
+    {
+      "id": "spot_54d68760_25d28060",
+      "name": "Vilnius Vinco Kudirkos aikštė",
+      "type": "spot",
+      "lat": 54.6876,
+      "lng": 25.2806,
+      "description": "Platz in Vilnius mit Rails und Treppen zum Gap. (Quelle: skatemap.de)",
+      "url": "https://www.google.com/maps/search/?api=1&query=54.687600,25.280600",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_41d42946_2d17181",
