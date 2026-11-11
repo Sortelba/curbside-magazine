@@ -47,7 +47,7 @@ export default function CoachesSection({ coaches }: { coaches: Coach[] }) {
                     <div key={coach.id} className="bg-muted p-6 rounded-2xl border border-border flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h3 className="text-2xl font-black uppercase italic tracking-tight">{coach.name}</h3>
-                            <p className="text-muted-foreground font-medium">{coach.location}, {coach.state}</p>
+                            {(coach.location || coach.state) && <p className="text-muted-foreground font-medium">{[coach.location, coach.state].filter(Boolean).join(", ")}</p>}
                             <p className="mt-2 text-sm">{loc(coach, "description", locale)}</p>
                             <div className="flex flex-wrap gap-4 mt-3">
                                 {coach.instagram && (

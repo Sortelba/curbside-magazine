@@ -61,6 +61,17 @@
       "description": "Finde deinen Privaten Skate Kurs!",
       "id": "coaches_1778778468211",
       "description_en": "Find your private skate lesson!"
+    },
+    {
+      "id": "coaches_1794417000000",
+      "name": "Skateboard Boot Camp (John Hill)",
+      "location": "Online",
+      "state": "",
+      "contact": "https://skateboardbootcamp.com/",
+      "description": "Online-Videokurs von Revive-Profi John Hill: über 35 Lektionen von Ollie und Kickflip bis Grinds und Slides, dazu Tipps gegen Angst und für mehr Motivation. Auf Englisch.",
+      "description_en": "Online video course by Revive pro John Hill: 35+ lessons from ollies and kickflips to grinds and slides, plus tips on overcoming fear and staying motivated.",
+      "instagram": "@johnhill",
+      "website": "skateboardbootcamp.com"
     }
   ],
   "randomizer": {
