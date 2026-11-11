@@ -4,7 +4,9 @@
 //   1. The Boardr           – größter Contest-Kalender (nur europäische Events)
 //   2. Skateboard Germany   – offizieller Verband (Wix-Eventliste)
 //   3. Blue Tomato Events   – Shop-/Contest-Events in Europa
-//   4. Websuche (Bing)      – viele Suchbegriffe in mehreren Sprachen inkl.
+//   4. Skateboard Event Calendar (skateboardeventcalendar.com) – weltweiter, gepflegter
+//                             Kalender; alle Events stecken als Daten in einer Seite
+//   5. Websuche (Bing)      – viele Suchbegriffe in mehreren Sprachen inkl.
 //                             #skatecontest; gefundene Seiten werden geöffnet und
 //                             nach Event-Daten (schema.org) bzw. Datum + Ort durchsucht.
 //
@@ -518,6 +520,70 @@ async function scanBlueTomato(): Promise<EventSuggestion[]> {
     return results.flat().map(e => ({ ...e, confidence: e.confidence === 'niedrig' ? 'mittel' : e.confidence }));
 }
 
+// skateboardeventcalendar.com ist eine Next.js-Seite: Die Event-Liste steckt in den
+// eingebetteten Daten (self.__next_f). Objekte verweisen mit "$<id>" auf andere Zeilen.
+const COUNTRY_DE = (() => {
+    try { return new Intl.DisplayNames(['de'], { type: 'region' }); } catch { return null; }
+})();
+
+async function scanSkateboardEventCalendar(): Promise<EventSuggestion[]> {
+    const html = await fetchText('https://skateboardeventcalendar.com/de/', 15000);
+    let flight = '';
+    for (const m of html.matchAll(/self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)/g)) {
+        try { flight += JSON.parse(m[1]); } catch { /* Teil überspringen */ }
+    }
+    const rows = new Map<string, string>();
+    for (const line of flight.split('\n')) {
+        const m = line.match(/^([0-9a-f]+):(.*)$/);
+        if (m) rows.set(m[1], m[2]);
+    }
+    const val = (id: string): any => {
+        const r = rows.get(id);
+        if (r == null) return undefined;
+        if (r.startsWith('T')) return r.replace(/^T[0-9a-f]+,/, '');
+        try { return JSON.parse(r); } catch { return r; }
+    };
+    const resolve = (v: any, depth = 0): any => {
+        if (depth > 6) return v;
+        if (typeof v === 'string' && /^\$[0-9a-f]+$/.test(v)) return resolve(val(v.slice(1)), depth + 1);
+        if (Array.isArray(v)) return v.map(x => resolve(x, depth + 1));
+        if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, resolve(x, depth + 1)]));
+        return v;
+    };
+
+    const out: EventSuggestion[] = [];
+    const seen = new Set<string>();
+    for (const id of rows.keys()) {
+        const raw = val(id);
+        if (!raw || typeof raw !== 'object' || Array.isArray(raw) || !raw.slug || !raw.startDate || seen.has(raw.slug)) continue;
+        seen.add(raw.slug);
+        const e = resolve(raw);
+        const start = toIsoDate(e.startDate);
+        const end = toIsoDate(e.endDate);
+        if (!start) continue;
+        const loc = e.location && typeof e.location === 'object' ? e.location : {};
+        const country = (loc.countryCode && COUNTRY_DE?.of(String(loc.countryCode).toUpperCase())) || '';
+        const location = [loc.venue, loc.city, country].filter(x => typeof x === 'string' && x && x !== 'TBD').join(', ');
+        const desc = typeof e.description === 'string' ? e.description : (e.description?.de || e.description?.en || '');
+        const disciplines = Array.isArray(e.disciplines) ? e.disciplines.join(', ') : '';
+        const series = typeof e.series === 'string' && e.series !== e.name ? e.series : '';
+        out.push(makeSuggestion({
+            title: `${e.name || ''}${series && !String(e.name).includes(series) ? ` (${series})` : ''}`,
+            startDateUtc: start,
+            endDateUtc: end && end > start ? end : undefined,
+            location,
+            link: typeof e.officialUrl === 'string' && e.officialUrl ? e.officialUrl : `https://skateboardeventcalendar.com/de/events/${e.slug}/`,
+            description: [desc, disciplines && `Disziplin: ${disciplines}`].filter(Boolean).join(' · '),
+            flyerUrl: '',
+            source: 'Skateboard Event Calendar',
+            confidence: 'hoch',
+            // Europa-Angabe der Seite selbst, falls der Ort unbekannt ist
+            ...(loc.continent ? { continent: String(loc.continent) } : {}),
+        } as any));
+    }
+    return out;
+}
+
 /** Kalender-/Contest-Seiten, die bei jedem Scan direkt durchsucht werden. */
 export const DEFAULT_EVENT_PAGES = [
     'https://belgianskateleague.be/nl/belgian-skate-league',
@@ -584,7 +650,7 @@ async function scanWeb(maxPages: number): Promise<EventSuggestion[]> {
             seen.add(key);
             if (EXCLUDE_RE.test(`${h.title} ${h.link}`)) continue;
             if (!SKATE_RE.test(`${h.title} ${h.snippet} ${h.link}`)) continue;
-            if (/theboardr\.com|skateboard-germany\.de|blue-tomato\.com/.test(h.link)) continue; // eigene Quellen
+            if (/theboardr\.com|skateboard-germany\.de|blue-tomato\.com|skateboardeventcalendar\.com/.test(h.link)) continue; // eigene Quellen
             if (DEFAULT_EVENT_PAGES.some(p => normalizeUrl(p) === key)) continue;               // feste Kalender-Seiten
             hits.push(h);
         }
@@ -650,6 +716,7 @@ export async function scanSkateEvents(
         run('The Boardr', scanBoardr),
         run('Skateboard Germany', scanSkateboardGermany),
         run('Blue Tomato', scanBlueTomato),
+        run('Skateboard Event Calendar', scanSkateboardEventCalendar),
         run('Kalender-Seiten', () => scanPages([...new Set([...DEFAULT_EVENT_PAGES, ...(options.extraPages || [])])])),
         run('Websuche', () => scanWeb(options.maxWebPages ?? 70)),
     ])).flat();
@@ -661,10 +728,12 @@ export async function scanSkateEvents(
         if (EXCLUDE_RE.test(e.title)) continue;
         if ((e.endDateUtc || e.startDateUtc) < today) continue;                  // vorbei
         // Erst Ort, dann Titel prüfen ("World Skate Tour, Japan" mit Ort "Kitakyushu")
-        const europe = europeCheck(e.location) ?? (europeCheck(e.title) === false ? false : null);
+        const continent = (e as any).continent as string | undefined;
+        const europe = continent ? continent === 'europe' : (europeCheck(e.location) ?? (europeCheck(e.title) === false ? false : null));
         // International: große Contests außerhalb Europas nur aus verlässlichen Kalendern
         // (Websuche-Treffer außerhalb Europas sind zu ungenau)
-        const trustedWorldwide = options.international && (e.source === 'The Boardr' || e.source === 'Skateboard Germany');
+        const trustedWorldwide = options.international && (e.source === 'The Boardr' || e.source === 'Skateboard Germany' || e.source === 'Skateboard Event Calendar');
+        delete (e as any).continent;
         if (europe === false && !trustedWorldwide) continue;                      // außerhalb Europas
         if (europe === null && !trustedWorldwide && !isEuropeanTld(e.link) && e.source !== 'Skateboard Germany') continue;
         if (!isSkateEvent(e.title, e.description) && e.confidence !== 'hoch') continue;

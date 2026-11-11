@@ -254,13 +254,11 @@ async function scrapeHtmlSource(source: NewsSource): Promise<ScrapedArticle[]> {
         const articlePromises = items.toArray().map(async (el) => {
             const item = $(el);
             let title = cleanTitle(item.find('h1, h2, h3, h4').first().text().trim());
-            let url = item.find('a').attr('href');
+            // Karte kann selbst der Link sein (<a> mit Überschrift drin)
+            let url = item.is('a') ? item.attr('href') : item.find('a').attr('href');
 
-            if (!title || !url) {
-                if (item.is('a')) {
-                    url = item.attr('href');
-                    title = cleanTitle(item.text().trim());
-                }
+            if (!title && item.is('a')) {
+                title = cleanTitle(item.text().trim());
             }
 
             if (!url) return null;

@@ -101,6 +101,12 @@
       "url": "https://skateboardmsm.de/feed/",
       "selector": "article",
       "type": "rss"
+    },
+    {
+      "name": "Skateboard Event Calendar",
+      "url": "https://skateboardeventcalendar.com/de/articles/",
+      "selector": "a[href^=\"/de/articles/\"]:has(h2)",
+      "type": "html"
     }
   ],
   "instagramHashtags": [
