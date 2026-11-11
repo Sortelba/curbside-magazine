@@ -5887,6 +5887,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_53d24619_10d40312",
+      "name": "Aeroholix Lüneburg",
+      "type": "shop",
+      "lat": 53.246189,
+      "lng": 10.403121,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.246189,10.403121",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38757_2d18073",
       "name": "AL CARRER SKATE SHOP",
       "type": "shop",
@@ -5959,12 +5968,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_41d88796_12d56401",
+      "name": "BIMAR Skate Shop - Articoli per Pattinaggio, Skateboard e Monopattini",
+      "type": "shop",
+      "lat": 41.887963,
+      "lng": 12.56401,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.887963,12.564010",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_53d48106_m2d23330",
       "name": "Black Sheep Skateboard Shop",
       "type": "shop",
       "lat": 53.481062,
       "lng": -2.2333,
       "url": "https://www.google.com/maps/search/?api=1&query=53.481062,-2.233300",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_49d79698_9d92943",
+      "name": "Blowout Skateshop Würzburg",
+      "type": "shop",
+      "lat": 49.796981,
+      "lng": 9.929425,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.796981,9.929425",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5977,6 +6004,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_53d55026_9d99958",
+      "name": "Blue Tomato Shop Hamburg City",
+      "type": "shop",
+      "lat": 53.550261,
+      "lng": 9.999583,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.550261,9.999583",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_49d00672_8d40282",
       "name": "Blue Tomato Shop Karlsruhe",
       "type": "shop",
@@ -5986,12 +6022,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_48d39839_9d99025",
+      "name": "Blue Tomato Shop Ulm",
+      "type": "shop",
+      "lat": 48.398387,
+      "lng": 9.990251,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.398387,9.990251",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m33d91258_18d42189",
       "name": "Boardhub",
       "type": "shop",
       "lat": -33.912576,
       "lng": 18.421895,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.912576,18.421895",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d26241_10d52510",
+      "name": "boardjunkies",
+      "type": "shop",
+      "lat": 52.262407,
+      "lng": 10.525098,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.262407,10.525098",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6013,6 +6067,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_49d97814_9d56954",
+      "name": "Brettlhupfer Skateshop",
+      "type": "shop",
+      "lat": 49.978136,
+      "lng": 9.569537,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.978136,9.569537",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d67819_14d76728",
+      "name": "Bushwick Skateshop",
+      "type": "shop",
+      "lat": 40.678191,
+      "lng": 14.767281,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.678191,14.767281",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_43d67062_m1d38992",
       "name": "Buzzz Skate Shop",
       "type": "shop",
@@ -6031,12 +6103,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_40d85839_14d28363",
+      "name": "CD Skate Plaza",
+      "type": "shop",
+      "lat": 40.858395,
+      "lng": 14.283633,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.858395,14.283633",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_52d70069_m2d51940",
       "name": "Chill Out Skate Shop",
       "type": "shop",
       "lat": 52.700688,
       "lng": -2.519405,
       "url": "https://www.google.com/maps/search/?api=1&query=52.700688,-2.519405",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d85314_14d26634",
+      "name": "Chiummo Sport",
+      "type": "shop",
+      "lat": 40.853135,
+      "lng": 14.26634,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.853135,14.266340",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_41d91195_12d50046",
+      "name": "City Beach Outlet",
+      "type": "shop",
+      "lat": 41.911953,
+      "lng": 12.500455,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.911953,12.500455",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6049,12 +6148,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d48063_13d43303",
+      "name": "crazylegz Roller Skate Shop & Concept Store",
+      "type": "shop",
+      "lat": 52.480629,
+      "lng": 13.43303,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.480629,13.433030",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38595_2d16015",
       "name": "Culto Skateshop",
       "type": "shop",
       "lat": 41.385955,
       "lng": 2.160154,
       "url": "https://www.google.com/maps/search/?api=1&query=41.385955,2.160154",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d09680_14d40503",
+      "name": "Darkslide.cz skateshop",
+      "type": "shop",
+      "lat": 50.0968,
+      "lng": 14.405028,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.096800,14.405028",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6085,12 +6202,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_50d07349_14d41452",
+      "name": "El Nino",
+      "type": "shop",
+      "lat": 50.073489,
+      "lng": 14.41452,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.073489,14.414520",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_43d23298_0d07478",
       "name": "Evol skateshop",
       "type": "shop",
       "lat": 43.232978,
       "lng": 0.074775,
       "url": "https://www.google.com/maps/search/?api=1&query=43.232978,0.074775",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_51d06758_13d75221",
+      "name": "feedmysoul store - Streetwear & Skateshop",
+      "type": "shop",
+      "lat": 51.067583,
+      "lng": 13.752209,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.067583,13.752209",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_48d40336_10d01130",
+      "name": "Fifty-Eight | Snowboard - Ski - Stand Up Paddle Verleih",
+      "type": "shop",
+      "lat": 48.403358,
+      "lng": 10.011302,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.403358,10.011302",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6157,6 +6301,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_50d07195_14d41042",
+      "name": "Honzovy longboardy",
+      "type": "shop",
+      "lat": 50.071949,
+      "lng": 14.410417,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.071949,14.410417",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_41d90484_12d42658",
+      "name": "Kahuna",
+      "type": "shop",
+      "lat": 41.904845,
+      "lng": 12.426577,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.904845,12.426577",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_48d77617_11d38989",
+      "name": "Kaos",
+      "type": "shop",
+      "lat": 48.776172,
+      "lng": 11.389893,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.776172,11.389893",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d14616_m8d60580",
       "name": "Kate Skateshop",
       "type": "shop",
@@ -6202,12 +6373,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_40d84958_14d25553",
+      "name": "London Store",
+      "type": "shop",
+      "lat": 40.849579,
+      "lng": 14.255532,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.849579,14.255532",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d84284_14d23314",
+      "name": "London Vomero Outlet Store",
+      "type": "shop",
+      "lat": 40.842838,
+      "lng": 14.233137,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.842838,14.233137",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m27d48089_153d01237",
       "name": "Middle Store",
       "type": "shop",
       "lat": -27.480891,
       "lng": 153.012373,
       "url": "https://www.google.com/maps/search/?api=1&query=-27.480891,153.012373",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d10865_14d45268",
+      "name": "Misfit Shop",
+      "type": "shop",
+      "lat": 50.108649,
+      "lng": 14.452681,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.108649,14.452681",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6274,6 +6472,42 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_50d09974_14d42883",
+      "name": "Popcorn",
+      "type": "shop",
+      "lat": 50.099742,
+      "lng": 14.428827,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.099742,14.428827",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d09823_14d43209",
+      "name": "Popname Store",
+      "type": "shop",
+      "lat": 50.098228,
+      "lng": 14.432087,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.098228,14.432087",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_49d87052_8d65561",
+      "name": "RAILSLIDE",
+      "type": "shop",
+      "lat": 49.870516,
+      "lng": 8.655605,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.870516,8.655605",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d08965_14d42824",
+      "name": "Revolution",
+      "type": "shop",
+      "lat": 50.089652,
+      "lng": 14.42824,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.089652,14.428240",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_44d85329_m0d56725",
       "name": "Riot Skateshop",
       "type": "shop",
@@ -6337,6 +6571,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_51d75964_14d33338",
+      "name": "S18 - Cottbus",
+      "type": "shop",
+      "lat": 51.759637,
+      "lng": 14.333377,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.759637,14.333377",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_52d50000_13d42350",
       "name": "Search & Destroy Skateshop",
       "type": "shop",
@@ -6352,6 +6595,15 @@
       "lat": 39.575078,
       "lng": 2.65045,
       "url": "https://www.google.com/maps/search/?api=1&query=39.575078,2.650450",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_49d49026_11d76606",
+      "name": "Shredit-Skateshop",
+      "type": "shop",
+      "lat": 49.490262,
+      "lng": 11.766063,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.490262,11.766063",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6410,6 +6662,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_41d92933_12d51327",
+      "name": "SkateShop",
+      "type": "shop",
+      "lat": 41.929326,
+      "lng": 12.513269,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.929326,12.513269",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d49098_13d40418",
+      "name": "Skateshop24",
+      "type": "shop",
+      "lat": 52.490979,
+      "lng": 13.404183,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.490979,13.404183",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_39d47407_m0d34655",
       "name": "SKATESPAIN SHOP",
       "type": "shop",
@@ -6446,6 +6716,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_50d09835_14d43298",
+      "name": "Snowpanic - freeski & longboard shop Praha",
+      "type": "shop",
+      "lat": 50.098349,
+      "lng": 14.432981,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.098349,14.432981",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d37451_2d15920",
       "name": "Sour Solution",
       "type": "shop",
@@ -6470,6 +6749,15 @@
       "lat": 40.419002,
       "lng": -3.701147,
       "url": "https://www.google.com/maps/search/?api=1&query=40.419002,-3.701147",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d85874_14d26685",
+      "name": "Street Wear",
+      "type": "shop",
+      "lat": 40.858742,
+      "lng": 14.266853,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.858742,14.266853",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6509,6 +6797,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_50d08293_14d41920",
+      "name": "THE STREETS - Basketball and Streetwear",
+      "type": "shop",
+      "lat": 50.082933,
+      "lng": 14.419199,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.082933,14.419199",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_13d75516_100d50103",
       "name": "Tightland BKK",
       "type": "shop",
@@ -6524,6 +6821,15 @@
       "lat": 48.775081,
       "lng": 9.177105,
       "url": "https://www.google.com/maps/search/?api=1&query=48.775081,9.177105",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d10475_14d53773",
+      "name": "Total Board Shop.cz",
+      "type": "shop",
+      "lat": 50.104746,
+      "lng": 14.537727,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.104746,14.537727",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6572,12 +6878,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d96815_11d15586",
+      "name": "Wendland-Connection",
+      "type": "shop",
+      "lat": 52.968154,
+      "lng": 11.155855,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.968154,11.155855",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_39d46946_m0d38254",
       "name": "Willshop",
       "type": "shop",
       "lat": 39.469458,
       "lng": -0.382541,
       "url": "https://www.google.com/maps/search/?api=1&query=39.469458,-0.382541",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_49d45153_11d01169",
+      "name": "X-World skateshop",
+      "type": "shop",
+      "lat": 49.451529,
+      "lng": 11.011688,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.451529,11.011688",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_41d98238_12d51271",
+      "name": "Xtreme Skate Shop",
+      "type": "shop",
+      "lat": 41.982378,
+      "lng": 12.512713,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.982378,12.512713",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_50d04367_10d22900",
+      "name": "YO-C",
+      "type": "shop",
+      "lat": 50.043666,
+      "lng": 10.228995,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.043666,10.228995",
       "source": "My Maps „Skatemap2026“"
     },
     {
