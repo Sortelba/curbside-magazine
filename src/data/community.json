@@ -613,32 +613,18 @@
       "title": "Deutsche Skateboard Vereine",
       "items": [
         {
-          "id": "club_1",
-          "name": "1. Berliner Skateboardverein e.V.",
-          "city": "Berlin",
-          "state": "Berlin",
-          "url": "https://www.skateboardverein-berlin.de"
-        },
-        {
-          "id": "club_2",
-          "name": "Skateboard e.V.",
-          "city": "Hamburg",
-          "state": "Hamburg",
-          "url": "https://skateboardev.de"
-        },
-        {
-          "id": "club_3",
-          "name": "1. Skateboardverein Kassel e.V. („Mr. Wilson“)",
-          "city": "Kassel",
-          "state": "Hessen",
-          "url": "https://www.mister-wilson.de"
-        },
-        {
-          "id": "club_4",
-          "name": "OG Skateboard e.V.",
-          "city": "Offenburg",
+          "id": "club_38",
+          "name": "Adenauer Skatepark Esslingen",
+          "city": "Esslingen",
           "state": "Baden-Württemberg",
-          "url": "https://og-skateboard.de"
+          "url": ""
+        },
+        {
+          "id": "club_43",
+          "name": "Freiburger Longboardverein",
+          "city": "Freiburg",
+          "state": "Baden-Württemberg",
+          "url": ""
         },
         {
           "id": "club_5",
@@ -648,11 +634,67 @@
           "url": "https://knallbrett.de"
         },
         {
-          "id": "club_6",
-          "name": "spot Regensburg e.V.",
-          "city": "Regensburg",
+          "id": "club_4",
+          "name": "OG Skateboard e.V.",
+          "city": "Offenburg",
+          "state": "Baden-Württemberg",
+          "url": "https://og-skateboard.de"
+        },
+        {
+          "id": "club_44",
+          "name": "Pusher e.V.",
+          "city": "Bühl",
+          "state": "Baden-Württemberg",
+          "url": ""
+        },
+        {
+          "id": "club_42",
+          "name": "Rollbrett e.V. Karlsruhe",
+          "city": "Karlsruhe",
+          "state": "Baden-Württemberg",
+          "url": "https://rollbrett-ev.de/"
+        },
+        {
+          "id": "club_40",
+          "name": "Rollbrett Rottweil e.V.",
+          "city": "Rottweil",
+          "state": "Baden-Württemberg",
+          "url": "https://rollbrett-rottweil.de/"
+        },
+        {
+          "id": "club_41",
+          "name": "Stuttgarter Skateboard e.V.",
+          "city": "Stuttgart",
+          "state": "Baden-Württemberg",
+          "url": ""
+        },
+        {
+          "id": "club_39",
+          "name": "Trendsportclub Hohenstaufen e.V.",
+          "city": "Göppingen-Hohenstaufen",
+          "state": "Baden-Württemberg",
+          "url": ""
+        },
+        {
+          "id": "club_10",
+          "name": "Bredlsport Oberland e.V.",
+          "city": "Bayerisches Oberland",
           "state": "Bayern",
-          "url": "https://spot-ev.de"
+          "url": "https://bredlsport.de/"
+        },
+        {
+          "id": "club_11",
+          "name": "FSV Inningen e.V. – Skateboard",
+          "city": "Augsburg-Inningen",
+          "state": "Bayern",
+          "url": ""
+        },
+        {
+          "id": "club_12",
+          "name": "RAZED Skateboarding Club Schwaben e.V.",
+          "city": "Schwaben",
+          "state": "Bayern",
+          "url": "https://razed-ev.de/"
         },
         {
           "id": "club_7",
@@ -662,18 +704,347 @@
           "url": "https://www.skate-n-rock.com"
         },
         {
+          "id": "club_13",
+          "name": "Skateboarding München e.V.",
+          "city": "München",
+          "state": "Bayern",
+          "url": ""
+        },
+        {
+          "id": "club_14",
+          "name": "Skateclub Burgau e.V.",
+          "city": "Burgau",
+          "state": "Bayern",
+          "url": "https://www.skateclub-burgau.de/"
+        },
+        {
+          "id": "club_6",
+          "name": "spot Regensburg e.V.",
+          "city": "Regensburg",
+          "state": "Bayern",
+          "url": "https://spot-ev.de"
+        },
+        {
+          "id": "club_1",
+          "name": "1. Berliner Skateboardverein e.V.",
+          "city": "Berlin",
+          "state": "Berlin",
+          "url": "https://www.skateboardverein-berlin.de"
+        },
+        {
+          "id": "club_45",
+          "name": "Drop In Sport e.V.",
+          "city": "Berlin",
+          "state": "Berlin",
+          "url": "https://www.dropin-sport.de/"
+        },
+        {
+          "id": "club_15",
+          "name": "Sportgarten e.V.",
+          "city": "Bremen",
+          "state": "Bremen",
+          "url": "https://sportgarten.de/"
+        },
+        {
+          "id": "club_16",
+          "name": "FC St. Pauli – Skateboard-Abteilung",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "url": ""
+        },
+        {
+          "id": "club_17",
+          "name": "i-Punkt Skateland e.V.",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "url": ""
+        },
+        {
+          "id": "club_2",
+          "name": "Skateboard e.V.",
+          "city": "Hamburg",
+          "state": "Hamburg",
+          "url": "https://skateboardev.de"
+        },
+        {
+          "id": "club_18",
+          "name": "TSG Bergedorf von 1860 e.V. – Skateboard",
+          "city": "Hamburg-Bergedorf",
+          "state": "Hamburg",
+          "url": ""
+        },
+        {
+          "id": "club_19",
+          "name": "Concrete Skate Frankfurt e.V.",
+          "city": "Frankfurt am Main",
+          "state": "Hessen",
+          "url": "https://www.concrete-skate.org/"
+        },
+        {
+          "id": "club_20",
+          "name": "RollsportKultur Butzbach e.V.",
+          "city": "Butzbach",
+          "state": "Hessen",
+          "url": "https://www.rollsportkultur-butzbach.de/"
+        },
+        {
+          "id": "club_3",
+          "name": "1. Skateboardverein Kassel e.V. („Mr. Wilson“)",
+          "city": "Kassel",
+          "state": "Hessen",
+          "url": "https://www.mister-wilson.de"
+        },
+        {
+          "id": "club_21",
+          "name": "Skatelounge Gießen (1. Skateboardverein Gießen)",
+          "city": "Gießen",
+          "state": "Hessen",
+          "url": "https://www.skatelounge-giessen.de/"
+        },
+        {
+          "id": "club_63",
+          "name": "Rügen rollt!",
+          "city": "Rügen",
+          "state": "Mecklenburg-Vorpommern",
+          "url": "http://ruegenrollt.de/"
+        },
+        {
+          "id": "club_30",
+          "name": "2er Skateboarding e.V.",
+          "city": "Hannover",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_29",
+          "name": "Backyard e.V. (Skatehalle Oldenburg)",
+          "city": "Oldenburg",
+          "state": "Niedersachsen",
+          "url": "https://skatehalle-oldenburg.de/"
+        },
+        {
+          "id": "club_23",
+          "name": "COMMITRIX Endless Skating e.V.",
+          "city": "Seevetal",
+          "state": "Niedersachsen",
+          "url": "https://commitrix.de/"
+        },
+        {
+          "id": "club_24",
+          "name": "Four Wheels e.V.",
+          "city": "Papenburg",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_25",
+          "name": "Hamelner Trittbrettfahrer",
+          "city": "Hameln",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_26",
+          "name": "Lassmalrollen",
+          "city": "Brake",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_27",
+          "name": "Lingener Skateboard",
+          "city": "Lingen",
+          "state": "Niedersachsen",
+          "url": ""
+        },
+        {
+          "id": "club_28",
+          "name": "Nordhorn Skateboarding e.V.",
+          "city": "Nordhorn",
+          "state": "Niedersachsen",
+          "url": "https://www.nordhorn-skateboarding.de/"
+        },
+        {
           "id": "club_8",
           "name": "Peiner Skateboardverein e.V.",
           "city": "Peine",
           "state": "Niedersachsen",
+          "url": "https://www.instagram.com/peiner_skateboardverein/"
+        },
+        {
+          "id": "club_22",
+          "name": "Playground Skatehalle Aurich",
+          "city": "Aurich",
+          "state": "Niedersachsen",
+          "url": "https://www.skatehalle-aurich.de/"
+        },
+        {
+          "id": "club_50",
+          "name": "1. Aachener Skateboard Club e.V.",
+          "city": "Aachen",
+          "state": "Nordrhein-Westfalen",
           "url": ""
+        },
+        {
+          "id": "club_51",
+          "name": "LIPslide Skateboarding e.V.",
+          "city": "Kreis Lippe (Lemgo/Detmold)",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://lipslide.de/"
+        },
+        {
+          "id": "club_52",
+          "name": "Longboard Münsterland e.V.",
+          "city": "Münster",
+          "state": "Nordrhein-Westfalen",
+          "url": ""
+        },
+        {
+          "id": "club_53",
+          "name": "Münster Skateboarding e.V.",
+          "city": "Münster",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://ms-skateboarding.de/"
+        },
+        {
+          "id": "club_54",
+          "name": "North Brigade – 1. Skateboard Club Kölner Norden e.V.",
+          "city": "Köln",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://www.northbrigade.de/"
+        },
+        {
+          "id": "club_55",
+          "name": "Paderborner Asphaltsurfer e.V.",
+          "city": "Paderborn",
+          "state": "Nordrhein-Westfalen",
+          "url": ""
+        },
+        {
+          "id": "club_56",
+          "name": "Rollbrett Union e.V.",
+          "city": "Mönchengladbach",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://rollbrettunion.de/"
+        },
+        {
+          "id": "club_57",
+          "name": "Rollkultur Weserbergland e.V.",
+          "city": "Weserbergland",
+          "state": "Nordrhein-Westfalen",
+          "url": "http://rollkultur-weserbergland.de/"
+        },
+        {
+          "id": "club_58",
+          "name": "Skate Fabrik Wuppertal e.V.",
+          "city": "Wuppertal",
+          "state": "Nordrhein-Westfalen",
+          "url": "http://skate-fabrik.de/"
         },
         {
           "id": "club_9",
           "name": "Skate-Aid Kevelaer e.V.",
           "city": "Kevelaer",
           "state": "Nordrhein-Westfalen",
+          "url": "https://skateaidkevelaer.de/"
+        },
+        {
+          "id": "club_59",
+          "name": "Skateboard-Verein Duisburg e.V.",
+          "city": "Duisburg",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://svdu2020.de/"
+        },
+        {
+          "id": "club_61",
+          "name": "Skateboardinitiative Dortmund e.V.",
+          "city": "Dortmund",
+          "state": "Nordrhein-Westfalen",
           "url": ""
+        },
+        {
+          "id": "club_60",
+          "name": "SuBCulture Bonn e.V.",
+          "city": "Bonn",
+          "state": "Nordrhein-Westfalen",
+          "url": "https://www.subculture-bonn.de/"
+        },
+        {
+          "id": "club_62",
+          "name": "Vest Skateboarding",
+          "city": "Recklinghausen",
+          "state": "Nordrhein-Westfalen",
+          "url": ""
+        },
+        {
+          "id": "club_31",
+          "name": "Saar Skateboarding e.V.",
+          "city": "Saarbrücken",
+          "state": "Saarland",
+          "url": ""
+        },
+        {
+          "id": "club_34",
+          "name": "Skate Network Saar e.V.",
+          "city": "saarlandweit",
+          "state": "Saarland",
+          "url": "https://www.skate-network-saar.de/"
+        },
+        {
+          "id": "club_32",
+          "name": "Skate Wendel Rollbrett e.V.",
+          "city": "St. Wendel",
+          "state": "Saarland",
+          "url": ""
+        },
+        {
+          "id": "club_33",
+          "name": "Skateboarding Merzig-Wadern e.V.",
+          "city": "Merzig-Wadern",
+          "state": "Saarland",
+          "url": ""
+        },
+        {
+          "id": "club_35",
+          "name": "Dresden Rollt e.V.",
+          "city": "Dresden",
+          "state": "Sachsen",
+          "url": "https://dresdenrollt.de/"
+        },
+        {
+          "id": "club_36",
+          "name": "Heizhaus Leipzig",
+          "city": "Leipzig",
+          "state": "Sachsen",
+          "url": "https://heizhaus-leipzig.de/"
+        },
+        {
+          "id": "club_37",
+          "name": "Rollfieber e.V. (Skatehalle Chemnitz)",
+          "city": "Chemnitz",
+          "state": "Sachsen",
+          "url": ""
+        },
+        {
+          "id": "club_46",
+          "name": "congrav new sports e.V.",
+          "city": "Halle (Saale)",
+          "state": "Sachsen-Anhalt",
+          "url": ""
+        },
+        {
+          "id": "club_48",
+          "name": "Brettern e.V. – Skaten und Mukke aus Weimar",
+          "city": "Weimar",
+          "state": "Thüringen",
+          "url": ""
+        },
+        {
+          "id": "club_49",
+          "name": "Crossroads Jena e.V.",
+          "city": "Jena",
+          "state": "Thüringen",
+          "url": "https://www.crossroads-jena.de/"
         }
       ]
     }
@@ -682,6 +1053,6 @@
     "sec_projects": false,
     "sec_learn": false,
     "sec_shops": false,
-    "sec_clubs": false
+    "sec_clubs": true
   }
 }
