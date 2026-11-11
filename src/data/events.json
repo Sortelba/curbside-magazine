@@ -1,5 +1,85 @@
 [
   {
+    "id": "event_1794404293006_417",
+    "title": "`The Kona Show` Skateboarding Through History",
+    "date": "05.11.2026 - 15.11.2026",
+    "startDateUtc": "2026-11-05",
+    "location": "Jacksonville, Florida",
+    "link": "https://www.theboardr.com/events/4372/%60The_Kona_Show%60_Skateboarding_Through_History",
+    "description": "Our portable mini-ramp hosted by Kona at the Jacksonville Fair.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4372hero600.jpg"
+  },
+  {
+    "id": "event_1794404293006_239",
+    "title": "WST Utsunomiya Street (World Skateboarding Tour (WST))",
+    "date": "16.11.2026 - 23.11.2026",
+    "startDateUtc": "2026-11-16",
+    "location": "Utsunomiya, Japan",
+    "link": "https://skateboarding.worldskate.org",
+    "description": "Street contest on the World Skateboarding Tour, part of the Olympic ranking qualification pathway. · Disziplin: Street",
+    "flyerUrl": ""
+  },
+  {
+    "id": "event_1794404293006_463",
+    "title": "Duplex Video Premiere",
+    "date": "28.11.2026",
+    "startDateUtc": "2026-11-28",
+    "location": "Tampa, Florida",
+    "link": "https://www.theboardr.com/events/4392/Duplex_Video_Premiere",
+    "description": "We're showing the Duplex video with some open skating.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4392hero600.jpg"
+  },
+  {
+    "id": "event_1794404293006_87",
+    "title": "Lake Murray Country Open",
+    "date": "19.03.2027 - 21.03.2027",
+    "startDateUtc": "2027-03-19",
+    "location": "Irmo and Columbia, South Carolina",
+    "link": "https://www.theboardr.com/events/4371/Lake_Murray_Country_Open",
+    "description": "Lake Murray Country Open with The Boardr Series and More TBD.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4371hero600.jpg"
+  },
+  {
+    "id": "event_1794404293006_381",
+    "title": "Open House at The Boardr HQ",
+    "date": "02.04.2027",
+    "startDateUtc": "2027-04-02",
+    "location": "Tampa, Florida",
+    "link": "https://www.theboardr.com/events/4381/Open_House_at_The_Boardr_HQ",
+    "description": "An open and mellow session for all our friends in town for Tampa Pro.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4381hero600.jpg"
+  },
+  {
+    "id": "event_1794404293006_859",
+    "title": "Village Ramp Jam",
+    "date": "07.05.2027 - 08.05.2027",
+    "startDateUtc": "2027-05-07",
+    "location": "Raleigh, North Carolina",
+    "link": "https://www.theboardr.com/events/4368/Village_Ramp_Jam",
+    "description": "A good old fashioned mini-ramp jam with The Boardr's ramp at a bar.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4368hero600.jpg"
+  },
+  {
+    "id": "event_1794404283204_190",
+    "title": "Zumiez 100k",
+    "date": "11.01.2027 - 12.01.2027",
+    "startDateUtc": "2027-01-11",
+    "location": "Keystone, Colorado",
+    "link": "https://www.theboardr.com/events/4382/Zumiez_100k",
+    "description": "An invite only industry mixer on the slopes where we manage the mini-ramp build.",
+    "flyerUrl": "https://theboardr.blob.core.windows.net/eventsicons/4382hero600.jpg"
+  },
+  {
+    "id": "event_1794404273755_614",
+    "title": "SLS Super Crown World Championship (SLS Championship Tour)",
+    "date": "05.12.2026 - 06.12.2026",
+    "startDateUtc": "2026-12-05",
+    "location": "São Paulo, Brasilien",
+    "link": "https://www.streetleague.com",
+    "description": "Season finale of the 2026 SLS Championship Tour – the Super Crown World Championship in São Paulo, the fifth consecutive year the finale is held in Brazil. · Disziplin: Street",
+    "flyerUrl": ""
+  },
+  {
     "id": "event_sec_1",
     "title": "Downhill Challenger – Thailand Tropical Downhill Race",
     "date": "13.11.2026 - 15.11.2026",
