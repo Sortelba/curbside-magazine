@@ -25,5 +25,5 @@ export default function SkatemapPage() {
         .map((i: any) => ({ id: i.id, name: i.name, type: "shop", lat: i.lat, lng: i.lng, address: i.address, url: i.url }));
     const points = [...(map.spots || []).filter((p: any) => !p.hidden), ...shopPoints];
 
-    return <SkatemapContent points={points} />;
+    return <SkatemapContent points={points} updated={map.updated} />;
 }

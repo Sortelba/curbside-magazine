@@ -11,8 +11,12 @@ const SkateMap = dynamic(() => import("@/components/SkateMap"), {
 });
 
 // Eigene Seite /skatemap/
-export default function SkatemapContent({ points }: { points: MapPoint[] }) {
-    const { t } = useLanguage();
+export default function SkatemapContent({ points, updated }: { points: MapPoint[]; updated?: string }) {
+    const { t, locale } = useLanguage();
+    // "2026-11-11" → "11. November 2026" / "November 11, 2026"
+    const updatedLabel = updated && /^\d{4}-\d{2}-\d{2}$/.test(updated)
+        ? new Date(`${updated}T12:00:00`).toLocaleDateString(locale === "de" ? "de-DE" : "en-US", { day: "numeric", month: "long", year: "numeric" })
+        : "";
     return (
         <div className="container mx-auto pt-16 md:pt-24 pb-12 px-4">
             <div className="text-center mb-10 md:mb-14">
@@ -20,6 +24,11 @@ export default function SkatemapContent({ points }: { points: MapPoint[] }) {
                 <p className="text-muted-foreground mt-4 text-lg">{t("map.subtitle")}</p>
             </div>
             <SkateMap points={points} tall />
+            {updatedLabel && (
+                <p className="mt-3 text-right text-xs text-muted-foreground">
+                    {t("map.last_updated")}: {updatedLabel}
+                </p>
+            )}
         </div>
     );
 }

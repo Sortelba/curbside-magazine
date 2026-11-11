@@ -254,7 +254,10 @@ for (const sp of spots) {
     seen.set(sp.name, n);
     if (n > 1) sp.name = `${sp.name} ${n}`;
 }
-fs.writeFileSync(MAP_FILE, JSON.stringify({ updated: new Date().toISOString().slice(0, 10), spots }, null, 2) + '\n');
+// Datum nur ändern, wenn sich an den Spots wirklich etwas geändert hat
+const unchanged = previous.updated && JSON.stringify(previous.spots || []) === JSON.stringify(spots);
+const updated = unchanged ? previous.updated : new Date().toISOString().slice(0, 10);
+fs.writeFileSync(MAP_FILE, JSON.stringify({ updated, spots }, null, 2) + '\n');
 
 // ---------- Änderungen gegenüber dem letzten Scan ----------
 const oldSpots = previous.spots || [];
