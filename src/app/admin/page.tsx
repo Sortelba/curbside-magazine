@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, MessageSquare, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
@@ -387,7 +387,6 @@ function AdminDashboardContent() {
         { id: "community", label: "Community", icon: Globe, group: "Bereiche" },
         { id: "about", label: "About", icon: FileText, group: "Bereiche" },
         { id: "analytics", label: "Analytics", icon: BarChart3, group: "Überblick" },
-        { id: "messages", label: "Messages", icon: MessageSquare, group: "Überblick" },
         { id: "settings", label: "Einstellungen", icon: Settings, group: "Überblick" },
     ];
     const tabGroups = [...new Set(tabs.map((t) => t.group))];
@@ -1365,12 +1364,6 @@ function AdminDashboardContent() {
                             {activeTab === "about" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                                     <ManageAbout keyStr={key || ''} />
-                                </motion.div>
-                            )}
-
-                            {activeTab === "messages" && (
-                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                                    <ManageMessages keyStr={key || ''} />
                                 </motion.div>
                             )}
 
@@ -3519,87 +3512,6 @@ function ManageLearn({ keyStr, settings, onSaveSettings }: { keyStr: string; set
 
 
 
-function ManageMessages({ keyStr }: { keyStr: string }) {
-    const [messages, setMessages] = useState<any[]>([]);
-    const [loading, setLoading] = useState(false);
-
-    const fetchMessages = async () => {
-        setLoading(true);
-        try {
-            const res = await fetch(`/api/messages?key=${keyStr}`);
-            const data = await res.json();
-            if (data.messages) {
-                setMessages(data.messages.reverse());
-            }
-        } catch (e) {
-            console.error(e);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchMessages();
-    }, []);
-
-    const deleteMessage = async (id: string) => {
-        if (!confirm("Nachricht löschen?")) return;
-        try {
-            const res = await fetch(`/api/messages?key=${keyStr}&id=${id}`, { method: 'DELETE' });
-            if (res.ok) fetchMessages();
-        } catch (e) { console.error(e); }
-    };
-
-    if (loading) return <div className="text-center py-20 font-black uppercase italic">Lade Nachrichten...</div>;
-
-    return (
-        <div className="space-y-6">
-            <div className="flex justify-between items-center mb-8">
-                <div>
-                    <h2 className="text-3xl font-black uppercase italic tracking-tighter">Community Nachrichten</h2>
-                    <p className="text-muted-foreground">Vorschläge für Vereine, News und Feedback.</p>
-                </div>
-                <button onClick={fetchMessages} className="p-2 bg-muted rounded-xl hover:text-primary transition-colors">
-                    <RefreshCw size={20} />
-                </button>
-            </div>
-
-            <div className="grid gap-4">
-                {messages.map((msg) => (
-                    <div key={msg.id} className="bg-card border-2 border-border rounded-2xl p-6 hover:border-primary/30 transition-all">
-                        <div className="flex justify-between items-start mb-4">
-                            <div>
-                                <span className="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-primary/10 text-primary rounded-md mb-2 inline-block">
-                                    {msg.subject}
-                                </span>
-                                <h3 className="text-xl font-bold">{msg.name}</h3>
-                                <p className="text-xs text-muted-foreground font-mono">{msg.email} • {new Date(msg.timestamp).toLocaleString()}</p>
-                            </div>
-                            <button onClick={() => deleteMessage(msg.id)} className="p-2 text-destructive hover:bg-destructive/10 rounded-lg">
-                                <Trash2 size={18} />
-                            </button>
-                        </div>
-                        <div className="bg-muted/30 p-4 rounded-xl text-sm leading-relaxed border border-border">
-                            {msg.message}
-                        </div>
-                        <div className="mt-4 flex gap-2">
-                            <a href={`mailto:${msg.email}?subject=Re: ${msg.subject}`} className="text-[10px] font-black uppercase italic bg-foreground text-background px-4 py-2 rounded-lg hover:scale-105 transition-all">
-                                Antworten
-                            </a>
-                        </div>
-                    </div>
-                ))}
-
-                {messages.length === 0 && (
-                    <div className="text-center py-20 bg-muted/10 border-2 border-dashed border-border rounded-[2.5rem]">
-                        <MessageSquare className="h-16 w-16 mx-auto mb-4 text-muted-foreground/30" />
-                        <p className="text-muted-foreground font-black uppercase italic tracking-widest">Keine Nachrichten</p>
-                    </div>
-                )}
-            </div>
-        </div>
-    );
-}
 
 export default function AdminPage() {
     return (
