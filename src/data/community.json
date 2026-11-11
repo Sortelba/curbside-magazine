@@ -739,6 +739,20 @@
           "url": "https://www.dropin-sport.de/"
         },
         {
+          "id": "club_65",
+          "name": "Cottbus Wheel e.V.",
+          "city": "Cottbus",
+          "state": "Brandenburg",
+          "url": "https://cottbuswheel.de/"
+        },
+        {
+          "id": "club_64",
+          "name": "Impossible e.V.",
+          "city": "Bernau bei Berlin",
+          "state": "Brandenburg",
+          "url": "https://www.impossible-ev.de/"
+        },
+        {
           "id": "club_15",
           "name": "Sportgarten e.V.",
           "city": "Bremen",
@@ -977,6 +991,13 @@
           "url": ""
         },
         {
+          "id": "club_66",
+          "name": "Skate Rats Kaiserslautern e.V.",
+          "city": "Kaiserslautern",
+          "state": "Rheinland-Pfalz",
+          "url": ""
+        },
+        {
           "id": "club_31",
           "name": "Saar Skateboarding e.V.",
           "city": "Saarbrücken",
@@ -1031,6 +1052,20 @@
           "city": "Halle (Saale)",
           "state": "Sachsen-Anhalt",
           "url": ""
+        },
+        {
+          "id": "club_68",
+          "name": "Goodfoot Skateboarding e.V.",
+          "city": "",
+          "state": "Sachsen-Anhalt",
+          "url": ""
+        },
+        {
+          "id": "club_67",
+          "name": "Roter Stern Flensburg e.V. – Skateboard",
+          "city": "Flensburg",
+          "state": "Schleswig-Holstein",
+          "url": "https://rotersternflensburg.de/"
         },
         {
           "id": "club_48",
