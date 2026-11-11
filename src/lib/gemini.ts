@@ -5,14 +5,15 @@ const apiKey = (process.env.GEMINI_API_KEY || "").trim();
 const genAI = new GoogleGenerativeAI(apiKey);
 
 // Modelle, in dieser Reihenfolge probiert (Stand Nov. 2026, Gratis-Stufe).
-// "...-latest" zeigt immer auf das neueste Modell; ist eins überlastet (503) oder
-// abgeschaltet (404), wird das nächste genommen.
-const MODELS = [
-  "gemini-flash-latest",
-  "gemini-3.6-flash",
-  "gemini-3.5-flash",
-  "gemini-flash-lite-latest",
-  "gemini-3.5-flash-lite",
+// Ist eins überlastet (503), hängt es oder ist es abgeschaltet (404), wird das nächste genommen.
+// "thinking: false" schaltet das Nachdenken ab – fürs Umschreiben unnötig und macht es 3× schneller.
+// (Gemessen 11.11.2026: gemini-flash-latest hing >90 s, 3.5-flash ohne Nachdenken ~3 s.)
+const MODELS: { name: string; thinking?: false }[] = [
+  { name: "gemini-3.5-flash", thinking: false },
+  { name: "gemini-3.6-flash", thinking: false },
+  { name: "gemini-flash-latest", thinking: false },
+  { name: "gemini-flash-lite-latest" },
+  { name: "gemini-3.5-flash-lite" },
 ];
 
 // Gratis-Stufe erlaubt nur wenige Anfragen pro Minute → kleine Pause zwischen Artikeln.
@@ -20,10 +21,15 @@ const MIN_GAP_MS = 4500;
 let lastCall = 0;
 // Das Tageslimit gilt pro Modell: volle Modelle für den Rest des Laufs überspringen.
 const exhaustedModels = new Set<string>();
+// Überlastete oder hängende Modelle 10 Minuten lang überspringen,
+// damit nicht jeder Beitrag erneut auf dasselbe kaputte Modell wartet.
+const COOLDOWN_MS = 10 * 60_000;
+const coolingUntil = new Map<string, number>();
 
 // Ohne Zeitlimit kann eine einzelne Anfrage minutenlang hängen – dann bricht der
-// Auto-Scan ab und nichts wird veröffentlicht. Pro Modell max. 40 s, pro Artikel max. 90 s.
-const CALL_TIMEOUT_MS = 40_000;
+// Auto-Scan ab und nichts wird veröffentlicht. Pro Modell max. 25 s, pro Artikel max. 90 s.
+// (Eine normale Antwort dauert 3–10 s.)
+const CALL_TIMEOUT_MS = 25_000;
 const ARTICLE_BUDGET_MS = 90_000;
 
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
@@ -37,7 +43,7 @@ export async function rewriteNews(article: { title: string; text: string; source
     console.warn("GEMINI_API_KEY not found. Returning original content.");
     return fallbackResponse(article, "API Key missing.");
   }
-  if (MODELS.every(m => exhaustedModels.has(m))) {
+  if (MODELS.every(m => exhaustedModels.has(m.name))) {
     return fallbackResponse(article, "Gemini-Limit für heute erreicht.");
   }
 
@@ -65,8 +71,13 @@ Antworte nur mit JSON in genau dieser Form:
 
   const errors: string[] = [];
   const deadline = Date.now() + ARTICLE_BUDGET_MS;
-  for (const modelName of MODELS) {
-    if (exhaustedModels.has(modelName)) continue;
+  const usable = MODELS.filter(m => !exhaustedModels.has(m.name));
+  // Modelle in der Abkühlphase nach hinten – aber nicht ganz weglassen, falls alle betroffen sind
+  const ordered = [
+    ...usable.filter(m => (coolingUntil.get(m.name) || 0) < Date.now()),
+    ...usable.filter(m => (coolingUntil.get(m.name) || 0) >= Date.now()),
+  ];
+  for (const { name: modelName, thinking } of ordered) {
     const remaining = deadline - Date.now();
     if (remaining < 5000) {
       errors.push("Zeitlimit erreicht");
@@ -79,7 +90,11 @@ Antworte nur mit JSON in genau dieser Form:
 
       const model = genAI.getGenerativeModel({
         model: modelName,
-        generationConfig: { responseMimeType: "application/json", temperature: 0.7 },
+        generationConfig: {
+          responseMimeType: "application/json",
+          temperature: 0.7,
+          ...(thinking === false ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+        } as any,
       }, { timeout: Math.min(CALL_TIMEOUT_MS, remaining) });
       const result = await model.generateContent(prompt);
       const text = result.response.text().replace(/```json/g, "").replace(/```/g, "").trim();
@@ -96,6 +111,8 @@ Antworte nur mit JSON in genau dieser Form:
       // Tageslimit dieses Modells erreicht → dieses Modell überspringen, nächstes probieren
       if (/429|quota|RESOURCE_EXHAUSTED/i.test(msg)) {
         exhaustedModels.add(modelName);
+      } else if (/503|overloaded|high demand|UNAVAILABLE|timed? ?out|aborted|404|not found/i.test(msg)) {
+        coolingUntil.set(modelName, Date.now() + COOLDOWN_MS);
       }
     }
   }
