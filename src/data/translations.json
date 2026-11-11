@@ -196,6 +196,10 @@
       "suggest_body": "Hi CURBSIDE,\n\nbitte tragt das auf der Skatemap ein:\n\nArt (Skateshop / Skatepark / Spot): \nName: \nAdresse oder Google-Maps-Link: \nWebsite / Instagram: \nÖffnungszeiten (bei Shops): \nKurze Beschreibung: \n\nDanke!",
       "subtitle": "Skateparks, Street-Spots und Skateshops – alles auf einer Karte.",
       "last_updated": "Zuletzt aktualisiert"
+    },
+    "pick": {
+      "title": "Sortys Pick of the Week",
+      "open": "Ansehen"
     }
   },
   "en": {
@@ -395,6 +399,10 @@
       "suggest_body": "Hi CURBSIDE,\n\nplease add this to the skate map:\n\nType (skate shop / skatepark / spot): \nName: \nAddress or Google Maps link: \nWebsite / Instagram: \nOpening hours (for shops): \nShort description: \n\nThanks!",
       "subtitle": "Skateparks, street spots and skate shops – all on one map.",
       "last_updated": "Last updated"
+    },
+    "pick": {
+      "title": "Sorty's Pick of the Week",
+      "open": "Check it out"
     }
   }
 }

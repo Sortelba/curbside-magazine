@@ -86,6 +86,7 @@ function AdminDashboardContent() {
     const [drafts, setDrafts] = useState<any[]>([]);
     const [status, setStatus] = useState<string>("");
     const [activeTab, setActiveTab] = useState<string>("news");
+    const [newPostCategory, setNewPostCategory] = useState<string>("news");
     const [activeDraftIndex, setActiveDraftIndex] = useState<number | null>(null);
 
     // Collapsible Categories State
@@ -482,6 +483,11 @@ function AdminDashboardContent() {
             <div className="w-full">
                 {/* Main Content Area */}
                 <div className="w-full min-w-0">
+
+                    <PickReminder
+                        refreshKey={activeTab}
+                        onCreate={() => { setNewPostCategory('pick'); setActiveTab('custom'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                    />
 
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -1159,6 +1165,23 @@ function AdminDashboardContent() {
                                         </h2>
                                         <div className="grid gap-8">
                                             <div>
+                                                <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Was für ein Post?</label>
+                                                <select
+                                                    value={newPostCategory}
+                                                    onChange={(e) => setNewPostCategory(e.target.value)}
+                                                    className="w-full p-4 bg-muted/20 border-2 border-border rounded-xl font-bold outline-none cursor-pointer"
+                                                >
+                                                    <option value="news">Normaler Post auf der Homepage</option>
+                                                    <option value="pick">⭐ Sortys Pick of the Week</option>
+                                                </select>
+                                                <p className="text-xs text-muted-foreground mt-2">
+                                                    {newPostCategory === "pick"
+                                                        ? "Erscheint im Kasten „Sortys Pick of the Week“ unter „Anstehende Events“. Der neueste Pick ersetzt den alten."
+                                                        : "Erscheint ganz normal im News-Feed auf der Startseite."}
+                                                </p>
+                                            </div>
+
+                                            <div>
                                                 <label className="block text-xs font-black uppercase mb-2 text-muted-foreground tracking-widest">Post Titel</label>
                                                 <input
                                                     type="text"
@@ -1202,6 +1225,26 @@ function AdminDashboardContent() {
                                                             placeholder="https://... , https://..."
                                                             rows={2}
                                                         />
+                                                        <label className="mt-2 inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-muted text-xs font-black uppercase cursor-pointer hover:bg-muted/70">
+                                                            <UploadCloud className="h-4 w-4" /> Bild hochladen
+                                                            <input
+                                                                type="file"
+                                                                accept="image/*"
+                                                                className="hidden"
+                                                                onChange={async (e) => {
+                                                                    const file = e.target.files?.[0];
+                                                                    if (!file) return;
+                                                                    const fd = new FormData();
+                                                                    fd.append('file', file);
+                                                                    const res = await fetch('/api/upload', { method: 'POST', headers: { 'Authorization': `Bearer ${key}` }, body: fd });
+                                                                    const json = await res.json().catch(() => ({}));
+                                                                    if (!res.ok || !json.url) { alert('Upload fehlgeschlagen.'); return; }
+                                                                    const el = document.getElementById('new-post-media-images') as HTMLTextAreaElement;
+                                                                    el.value = [el.value.trim(), json.url].filter(Boolean).join(', ');
+                                                                    e.target.value = '';
+                                                                }}
+                                                            />
+                                                        </label>
                                                     </div>
                                                     <div className="space-y-4">
                                                         <div>
@@ -1275,8 +1318,10 @@ function AdminDashboardContent() {
                                                             type,
                                                             content: content || (images[0] || videoUrl || externalLink || ""),
                                                             description,
-                                                            tags: tagsStr.split(',').map(t => t.trim()).filter(t => t),
-                                                            date: new Date().toLocaleDateString('de-DE', { month: 'short', day: 'numeric', year: 'numeric' }),
+                                                            tags: [...(newPostCategory === 'pick' ? ['Pick of the Week'] : []), ...tagsStr.split(',').map(t => t.trim()).filter(t => t)],
+                                                            ...(newPostCategory === 'pick' ? { category: 'pick', source: 'CURBSIDE' } : {}),
+                                                            // Englisches Format – das kann die Startseite als Datum lesen
+                                                            date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
                                                             status: 'published',
                                                             media: {
                                                                 images,
@@ -1291,7 +1336,8 @@ function AdminDashboardContent() {
 
                                                         createPost(newPost).then(ok => {
                                                             if (ok) {
-                                                                alert("Post wurde veröffentlicht! 🛹");
+                                                                alert(newPostCategory === 'pick' ? "Pick of the Week ist gespeichert! ⭐ Live geht er mit „Publish to Git“." : "Post wurde veröffentlicht! 🛹");
+                                                                setNewPostCategory('news');
                                                                 // Clear fields
                                                                 ['new-post-title', 'new-post-content', 'new-post-description', 'new-post-tags', 'new-post-media-images', 'new-post-media-video', 'new-post-media-link'].forEach(id => {
                                                                     const el = document.getElementById(id) as HTMLInputElement | HTMLTextAreaElement;
@@ -1395,6 +1441,46 @@ function AdminDashboardContent() {
 
             </div>
             </div>
+        </div>
+    );
+}
+
+// Freitag bis Sonntag: Erinnerung, falls seit diesem Freitag noch kein
+// "Sortys Pick of the Week" gepostet wurde (auch wenn man erst Samstag reinschaut).
+function PickReminder({ onCreate, refreshKey }: { onCreate: () => void; refreshKey: string }) {
+    const [show, setShow] = useState(false);
+    useEffect(() => {
+        const today = new Date();
+        const day = today.getDay(); // 5 = Freitag, 6 = Samstag, 0 = Sonntag
+        if (![5, 6, 0].includes(day)) { setShow(false); return; }
+        const friday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - ((day + 2) % 7));
+        fetch('/api/posts')
+            .then((r) => r.json())
+            .then((posts) => {
+                const hasPick = Array.isArray(posts) && posts.some((p: any) => {
+                    if (p.category !== 'pick') return false;
+                    const d = new Date(p.date);
+                    return !isNaN(d.getTime()) && d >= friday;
+                });
+                setShow(!hasPick);
+            })
+            .catch(() => setShow(false));
+    }, [refreshKey]);
+
+    if (!show) return null;
+    return (
+        <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-2xl border-2 border-primary bg-primary/10">
+            <div>
+                <div className="font-black uppercase italic tracking-tight">⭐ Zeit für Sortys Pick of the Week!</div>
+                <p className="text-sm text-muted-foreground mt-1">Seit Freitag ist noch kein Pick gepostet. Such dir was aus, das dich diese Woche umgehauen hat.</p>
+            </div>
+            <button
+                type="button"
+                onClick={onCreate}
+                className="shrink-0 px-5 py-3 rounded-xl bg-primary text-primary-foreground font-black uppercase italic text-xs tracking-widest hover:opacity-90"
+            >
+                Pick jetzt erstellen
+            </button>
         </div>
     );
 }

@@ -35,7 +35,15 @@ export default async function Home() {
 
   // Show newest posts first, independent of the current month. This keeps newly
   // created or scanned posts visible immediately after a successful publish.
+  // Sortys Pick of the Week: der neueste Post mit category "pick" – steht im Kasten
+  // unter den Events und deshalb nicht noch einmal im News-Feed.
+  const byDate = (a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime();
+  const pick = allPosts
+    .filter((p: any) => p.category === 'pick' && p.status !== 'draft' && !isNaN(new Date(p.date).getTime()))
+    .sort(byDate)[0] || null;
+
   const posts = [...allPosts]
+    .filter((post: any) => post.id !== pick?.id)
     .filter((post: any) => {
       const postDate = new Date(post.date);
       return !isNaN(postDate.getTime());
@@ -72,7 +80,7 @@ export default async function Home() {
   return (
     <>
       <StructuredData posts={posts} events={events} />
-      <HomeContent posts={posts} learnData={learnData} settings={settings} />
+      <HomeContent posts={posts} learnData={learnData} settings={settings} pick={pick} />
     </>
   );
 }

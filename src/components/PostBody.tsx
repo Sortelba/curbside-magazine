@@ -46,7 +46,7 @@ export default function PostBody({ post, inModal = false }: { post: any; inModal
                         <Calendar className="h-3 w-3" /> {post.date}
                     </span>
                     <span>•</span>
-                    <span className="text-primary font-bold">{post.source || "News"}</span>
+                    <span className="text-primary font-bold">{post.category === "pick" ? "⭐ Sortys Pick of the Week" : (post.source || "News")}</span>
                 </div>
 
                 <Heading className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-8 leading-none">

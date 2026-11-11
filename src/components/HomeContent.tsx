@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import PostCard from "@/components/PostCard";
 import EventsSidebar from "@/components/EventsSidebar";
+import PickOfTheWeek from "@/components/PickOfTheWeek";
 import NewsModal from "@/components/NewsModal";
 import BasicsSection from "@/components/learn/BasicsSection";
 import CoachesSection from "@/components/learn/CoachesSection";
@@ -22,7 +23,7 @@ interface Settings {
     [key: string]: any;
 }
 
-export default function HomeContent({ posts, learnData, settings }: { posts: any[], learnData: any, settings: Settings }) {
+export default function HomeContent({ posts, learnData, settings, pick }: { posts: any[], learnData: any, settings: Settings, pick?: any }) {
     const { t } = useLanguage();
     const [selectedPost, setSelectedPost] = useState<any>(null);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -127,8 +128,9 @@ export default function HomeContent({ posts, learnData, settings }: { posts: any
 
                 {/* Events Sidebar - 1/4 of layout */}
                 <div className="lg:col-span-1">
-                    <div className="sticky top-24">
+                    <div className="sticky top-24 flex flex-col gap-6 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pb-2 [scrollbar-width:none]">
                         <EventsSidebar />
+                        {pick && <PickOfTheWeek post={pick} onOpen={() => setSelectedPost(pick)} />}
                     </div>
                 </div>
             </div>
