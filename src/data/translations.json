@@ -195,7 +195,15 @@
       "suggest_subject": "Skatemap: Neuer Eintrag",
       "suggest_body": "Hi CURBSIDE,\n\nbitte tragt das auf der Skatemap ein:\n\nArt (Skateshop / Skatepark / Spot): \nName: \nAdresse oder Google-Maps-Link: \nWebsite / Instagram: \nÖffnungszeiten (bei Shops): \nKurze Beschreibung: \n\nDanke!",
       "subtitle": "Skateparks, Street-Spots und Skateshops – alles auf einer Karte.",
-      "last_updated": "Zuletzt aktualisiert"
+      "last_updated": "Zuletzt aktualisiert",
+      "near_me": "In meiner Nähe",
+      "locating": "Suche Standort…",
+      "you_are_here": "Du bist hier",
+      "loc_denied": "Standort nicht freigegeben. Erlaube den Zugriff in den Browser-Einstellungen, um Spots in deiner Nähe zu sehen.",
+      "loc_error": "Standort konnte nicht ermittelt werden. Versuch es gleich noch mal.",
+      "loc_unsupported": "Dein Browser unterstützt keine Standortabfrage.",
+      "nearby_title": "In deiner Nähe",
+      "loc_privacy": "Dein Standort wird nur in deinem Browser verwendet und nicht gespeichert."
     },
     "pick": {
       "title": "Sortys Pick of the Week",
@@ -398,7 +406,15 @@
       "suggest_subject": "Skate map: new entry",
       "suggest_body": "Hi CURBSIDE,\n\nplease add this to the skate map:\n\nType (skate shop / skatepark / spot): \nName: \nAddress or Google Maps link: \nWebsite / Instagram: \nOpening hours (for shops): \nShort description: \n\nThanks!",
       "subtitle": "Skateparks, street spots and skate shops – all on one map.",
-      "last_updated": "Last updated"
+      "last_updated": "Last updated",
+      "near_me": "Near me",
+      "locating": "Locating…",
+      "you_are_here": "You are here",
+      "loc_denied": "Location access denied. Allow it in your browser settings to see spots near you.",
+      "loc_error": "Couldn't get your location. Please try again.",
+      "loc_unsupported": "Your browser doesn't support location.",
+      "nearby_title": "Near you",
+      "loc_privacy": "Your location is only used in your browser and never stored."
     },
     "pick": {
       "title": "Sorty's Pick of the Week",
