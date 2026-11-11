@@ -19,7 +19,8 @@ const MODELS: { name: string; thinking?: false }[] = [
 // Gratis-Stufe erlaubt nur wenige Anfragen pro Minute → kleine Pause zwischen Artikeln.
 const MIN_GAP_MS = 4500;
 let lastCall = 0;
-// Das Tageslimit gilt pro Modell: volle Modelle für den Rest des Laufs überspringen.
+// Das Tageslimit gilt pro Modell: volle Modelle für den Rest des Laufs überspringen
+// (das Minutenlimit dagegen nur kurz, siehe coolingUntil).
 const exhaustedModels = new Set<string>();
 // Überlastete oder hängende Modelle 10 Minuten lang überspringen,
 // damit nicht jeder Beitrag erneut auf dasselbe kaputte Modell wartet.
@@ -110,7 +111,9 @@ Antworte nur mit JSON in genau dieser Form:
       if (/API key not valid|API_KEY_INVALID|PERMISSION_DENIED/i.test(msg)) break;
       // Tageslimit dieses Modells erreicht → dieses Modell überspringen, nächstes probieren
       if (/429|quota|RESOURCE_EXHAUSTED/i.test(msg)) {
-        exhaustedModels.add(modelName);
+        // Tageslimit → für den Rest des Tages weg; Minutenlimit → nur kurz pausieren
+        if (/per ?day|PerDay|daily/i.test(msg)) exhaustedModels.add(modelName);
+        else coolingUntil.set(modelName, Date.now() + 60_000);
       } else if (/503|overloaded|high demand|UNAVAILABLE|timed? ?out|aborted|404|not found/i.test(msg)) {
         coolingUntil.set(modelName, Date.now() + COOLDOWN_MS);
       }
