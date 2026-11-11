@@ -39,42 +39,20 @@ export default function CommunityContent({ data }: { data: any }) {
         return defaultTitle;
     };
 
-    // Get unique states for the filter
+    // Vereine: Filter nach Bundesland + Suche nach Name oder Stadt
+    const clubs = useMemo(() => (data.sections.find((s: any) => s.id === "sec_clubs")?.items || []).filter((i: any) => !i.hidden), [data.sections]);
     const states = useMemo(() => {
-        const shopSection = data.sections.find((s: any) => s.id === "sec_shops");
-        if (!shopSection) return [];
-        const uniqueStates = new Set(shopSection.items.map((item: any) => item.state).filter(Boolean));
-        return Array.from(uniqueStates).sort() as string[];
-    }, [data.sections]);
-
-    const filteredShops = useMemo(() => {
-        const section = data.sections.find((s: any) => s.id === "sec_shops");
-        if (!section) return [];
-
-        return section.items.filter((item: any) => {
-            const query = searchQuery.trim().toLowerCase();
-            const isNumeric = /^\d+$/.test(query);
-
-            const nameMatch = item.name.toLowerCase().includes(query);
-            let addressMatch = false;
-            if (item.address) {
-                const addressLower = item.address.toLowerCase();
-                if (isNumeric) {
-                    const plzMatch = item.address.match(/\d{5}/);
-                    if (plzMatch && plzMatch[0].startsWith(query)) addressMatch = true;
-                } else {
-                    addressMatch = addressLower.includes(query);
-                }
-            }
-            const stateMatch = (item.state && item.state.toLowerCase().includes(query)) ||
-                (item.description && item.description.toLowerCase().includes(query));
-
-            const matchesSearch = nameMatch || addressMatch || stateMatch;
-            const matchesStateFilter = !selectedState || item.state === selectedState;
-
-            return matchesSearch && matchesStateFilter;
-        });
-    }, [data.sections, searchQuery, selectedState]);
+        const counts = new Map<string, number>();
+        for (const c of clubs) if (c.state) counts.set(c.state, (counts.get(c.state) || 0) + 1);
+        return [...counts.entries()].sort((x, y) => x[0].localeCompare(y[0], "de"));
+    }, [clubs]);
+    const filteredClubs = useMemo(() => {
+        const q = searchQuery.trim().toLowerCase();
+        return clubs.filter((c: any) =>
+            (!selectedState || c.state === selectedState) &&
+            (!q || `${c.name} ${c.city || ""} ${c.state || ""}`.toLowerCase().includes(q))
+        );
+    }, [clubs, searchQuery, selectedState]);
 
     const activeSectionData = useMemo(() => {
         return data.sections.find((s: any) => s.id === activeSection);
@@ -148,71 +126,6 @@ export default function CommunityContent({ data }: { data: any }) {
 
                             {/* Content */}
                             <div className="flex-1 overflow-y-auto p-6 md:p-10 scrollbar-thin scrollbar-thumb-foreground/20">
-                                {activeSection === "sec_shops" && (
-                                    <div className="space-y-8">
-                                        <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
-                                            <div className="relative flex-grow">
-                                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-                                                <input
-                                                    type="text"
-                                                    placeholder={t("community.search_placeholder")}
-                                                    value={searchQuery}
-                                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                                    className="w-full bg-muted border-2 border-border rounded-xl py-3 pl-12 pr-4 focus:border-foreground outline-none transition-all"
-                                                />
-                                            </div>
-                                            <select
-                                                value={selectedState}
-                                                onChange={(e) => setSelectedState(e.target.value)}
-                                                className="px-4 py-3 bg-muted border-2 border-border rounded-xl font-bold outline-none focus:border-foreground transition-all cursor-pointer"
-                                            >
-                                                <option value="">{t("community.all_states")}</option>
-                                                {states.map(state => (
-                                                    <option key={state} value={state}>{state}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                            {filteredShops.map((item: any) => (
-                                                <a
-                                                    key={item.id}
-                                                    href={item.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="group bg-muted p-6 rounded-3xl border border-border hover:border-foreground hover:shadow-xl transition-all flex flex-col justify-between"
-                                                >
-                                                    <div>
-                                                        <div className="flex justify-between items-start gap-4 mb-4">
-                                                            <h3 className="text-xl font-black uppercase italic tracking-tight group-hover:text-primary transition-colors">{item.name}</h3>
-                                                            <ExternalLink size={18} className="text-muted-foreground group-hover:text-foreground transition-colors shrink-0" />
-                                                        </div>
-                                                        <div className="space-y-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                                                            {item.state && <p className="text-primary">{item.state}</p>}
-                                                            {item.address && (
-                                                                <div className="flex items-start gap-2">
-                                                                    <MapPin size={14} className="shrink-0" />
-                                                                    <span className="normal-case tracking-normal font-medium">{item.address}</span>
-                                                                </div>
-                                                            )}
-                                                            {item.hours && (
-                                                                <div className="flex items-start gap-2">
-                                                                    <Clock size={14} className="shrink-0" />
-                                                                    <span className="normal-case tracking-normal font-medium">{item.hours}</span>
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                        <p className="mt-4 text-sm text-muted-foreground line-clamp-2">{loc(item, "description", locale)}</p>
-                                                    </div>
-                                                </a>
-                                            ))}
-                                        </div>
-                                        {filteredShops.length === 0 && (
-                                            <p className="text-center py-10 text-muted-foreground italic">{t("community.no_shops")}</p>
-                                        )}
-                                    </div>
-                                )}
-
                                 {activeSection === "sec_projects" && (
                                     <div className="space-y-12">
                                         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -249,8 +162,41 @@ export default function CommunityContent({ data }: { data: any }) {
                                 )}
 
                                 {activeSection === "sec_clubs" && (
+                                    <div className="space-y-6">
+                                    <div className="space-y-4">
+                                        <div className="relative max-w-xl">
+                                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
+                                            <input
+                                                type="text"
+                                                placeholder={t("community.club_search")}
+                                                value={searchQuery}
+                                                onChange={(e) => setSearchQuery(e.target.value)}
+                                                className="w-full bg-muted border-2 border-border rounded-xl py-3 pl-12 pr-4 focus:border-foreground outline-none transition-all"
+                                            />
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {[["", clubs.length] as [string, number], ...states].map(([state, count]) => (
+                                                <button
+                                                    key={state || "all"}
+                                                    type="button"
+                                                    onClick={() => setSelectedState(state)}
+                                                    className={cn(
+                                                        "px-3 py-1.5 rounded-full border-2 text-xs font-black uppercase tracking-wider transition-all",
+                                                        selectedState === state
+                                                            ? "border-primary bg-primary text-primary-foreground"
+                                                            : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"
+                                                    )}
+                                                >
+                                                    {state || t("community.all_states")} <span className="opacity-60">{count}</span>
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    {filteredClubs.length === 0 && (
+                                        <p className="text-center py-10 text-muted-foreground italic">{t("community.no_clubs")}</p>
+                                    )}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        {activeSectionData?.items.map((item: any) => (
+                                        {filteredClubs.map((item: any) => (
                                             <div
                                                 key={item.id}
                                                 className="group bg-muted p-8 rounded-3xl border border-border hover:border-foreground transition-all flex flex-col justify-between shadow-sm hover:shadow-xl"
@@ -267,7 +213,7 @@ export default function CommunityContent({ data }: { data: any }) {
                                                     <div className="space-y-3 font-bold uppercase tracking-widest text-muted-foreground text-sm">
                                                         <div className="flex items-center gap-2">
                                                             <MapPin size={16} className="text-primary" />
-                                                            <span>{item.city}, {item.state}</span>
+                                                            <span>{[item.city, item.state].filter(Boolean).join(", ")}</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -286,10 +232,8 @@ export default function CommunityContent({ data }: { data: any }) {
                                             </div>
                                         ))}
                                     </div>
+                                    </div>
                                 )}
-
-
-
                             </div>
                         </motion.div>
                     </motion.div>
