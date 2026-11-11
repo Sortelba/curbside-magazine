@@ -362,6 +362,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d41033_m3d88813",
+      "name": "Boadilla Skatepark Ignacio Echeverría",
+      "type": "park",
+      "lat": 40.410332,
+      "lng": -3.88813,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.410332,-3.888130",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_54d72608_25d34522",
       "name": "Boardsports Skatepark",
       "type": "park",
@@ -859,6 +868,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_41d66687_m0d86294",
+      "name": "El Nido Skate House",
+      "type": "park",
+      "lat": 41.66687,
+      "lng": -0.862945,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.666870,-0.862945",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d84427_m115d75724",
       "name": "Elko Skate Park",
       "type": "park",
@@ -883,6 +901,15 @@
       "lat": -32.94097,
       "lng": 151.765599,
       "url": "https://www.google.com/maps/search/?api=1&query=-32.940970,151.765599",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_40d39369_m3d77063",
+      "name": "Eskombro D.I.Y",
+      "type": "park",
+      "lat": 40.393687,
+      "lng": -3.770629,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.393687,-3.770629",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1029,6 +1056,15 @@
       "lat": 49.954816,
       "lng": 8.47195,
       "url": "https://www.google.com/maps/search/?api=1&query=49.954816,8.471950",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_33d95871_m6d87370",
+      "name": "FRMSU",
+      "type": "park",
+      "lat": 33.958711,
+      "lng": -6.873698,
+      "url": "https://www.google.com/maps/search/?api=1&query=33.958711,-6.873698",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1826,6 +1862,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d39282_m3d71238",
+      "name": "MadRamps Escuela de Skate Madrid, Skatepark Indoor, Skateshop y fingershop",
+      "type": "park",
+      "lat": 40.39282,
+      "lng": -3.712385,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.392820,-3.712385",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_37d85148_32d53416",
       "name": "Mahalle skate park",
       "type": "park",
@@ -2052,6 +2097,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_33d98228_m6d81119",
+      "name": "Nahda skatepark",
+      "type": "park",
+      "lat": 33.982281,
+      "lng": -6.81119,
+      "url": "https://www.google.com/maps/search/?api=1&query=33.982281,-6.811190",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d44001_4d86337",
       "name": "Namur Skatepark",
       "type": "park",
@@ -2263,6 +2317,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_39d47816_m0d44200",
+      "name": "Parc d'skate de Quart de Poblet",
+      "type": "park",
+      "lat": 39.478165,
+      "lng": -0.442004,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.478165,-0.442004",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d16116_m0d24327",
+      "name": "Parc de patinatge",
+      "type": "park",
+      "lat": 39.161159,
+      "lng": -0.243274,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.161159,-0.243274",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d02046_10d12404",
       "name": "Parco Comunale delle Villette Skatepark",
       "type": "park",
@@ -2278,6 +2350,15 @@
       "lat": -33.442121,
       "lng": -70.631646,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.442121,-70.631646",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d44852_m0d32989",
+      "name": "Parque de pumptrack Nazaret",
+      "type": "park",
+      "lat": 39.448516,
+      "lng": -0.329888,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.448516,-0.329888",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2499,6 +2580,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_41d55487_m0d96484",
+      "name": "PUMPTRACK PARK PREMIUM CADRETE",
+      "type": "park",
+      "lat": 41.554871,
+      "lng": -0.96484,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.554871,-0.964840",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d54672_m0d34224",
+      "name": "Pumptrack Parque Albalat de Sorells",
+      "type": "park",
+      "lat": 39.546717,
+      "lng": -0.342244,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.546717,-0.342244",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d02350_10d02148",
       "name": "Pumptrack Rosenberg",
       "type": "park",
@@ -2680,6 +2779,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d72627_m4d44696",
+      "name": "Ruben Alcantara Malaga Skatepark",
+      "type": "park",
+      "lat": 36.72627,
+      "lng": -4.446962,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.726270,-4.446962",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_42d51656_m70d91141",
       "name": "Ryan Brennan Memorial Skate Park",
       "type": "park",
@@ -2825,6 +2933,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_33d97851_m6d89013",
+      "name": "Skat Park Et MBX",
+      "type": "park",
+      "lat": 33.978505,
+      "lng": -6.890125,
+      "url": "https://www.google.com/maps/search/?api=1&query=33.978505,-6.890125",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_43d85636_10d52872",
       "name": "Skate Park (presso scuola media Chelini)",
       "type": "park",
@@ -2870,12 +2987,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_41d62421_m0d95850",
+      "name": "Skate Park Arcosur",
+      "type": "park",
+      "lat": 41.62421,
+      "lng": -0.958504,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.624210,-0.958504",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d63448_m122d50261",
       "name": "Skate Park At Pacific Community Park",
       "type": "park",
       "lat": 45.634485,
       "lng": -122.502615,
       "url": "https://www.google.com/maps/search/?api=1&query=45.634485,-122.502615",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_37d99619_m1d13655",
+      "name": "Skate park Barnés",
+      "type": "park",
+      "lat": 37.996189,
+      "lng": -1.136547,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.996189,-1.136547",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_38d07828_m0d84469",
+      "name": "Skate Park Benejúzar",
+      "type": "park",
+      "lat": 38.078284,
+      "lng": -0.844691,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.078284,-0.844691",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2906,6 +3050,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_41d58932_m0d92551",
+      "name": "Skate Park Cuarte de Huerva",
+      "type": "park",
+      "lat": 41.589321,
+      "lng": -0.925508,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.589321,-0.925508",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d23495_m8d61468",
       "name": "Skate Park da Maia",
       "type": "park",
@@ -2925,6 +3078,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_38d00271_m1d17356",
+      "name": "Skate Park Guadalupe",
+      "type": "park",
+      "lat": 38.002705,
+      "lng": -1.173557,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.002705,-1.173557",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d27978_8d85524",
       "name": "Skate Park Hindenburgstraße",
       "type": "park",
@@ -2940,6 +3102,15 @@
       "lat": 48.240039,
       "lng": 8.871754,
       "url": "https://www.google.com/maps/search/?api=1&query=48.240039,8.871754",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d63871_m0d91320",
+      "name": "Skate Park Ignacio Echeverría",
+      "type": "park",
+      "lat": 41.638706,
+      "lng": -0.913197,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.638706,-0.913197",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2970,6 +3141,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_37d94143_m1d13483",
+      "name": "Skate Park La Alberca",
+      "type": "park",
+      "lat": 37.941434,
+      "lng": -1.134832,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.941434,-1.134832",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d66550_m0d89944",
+      "name": "Skate Park La Almozara",
+      "type": "park",
+      "lat": 41.6655,
+      "lng": -0.899441,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.665500,-0.899441",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_43d85578_10d50611",
       "name": "Skate Park Lucca",
       "type": "park",
@@ -2988,12 +3177,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_38d04044_m1d47962",
+      "name": "Skate Park Mula",
+      "type": "park",
+      "lat": 38.040435,
+      "lng": -1.479623,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.040435,-1.479623",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d27599_36d36273",
       "name": "SKATE PARK PATEN PİSTİ",
       "type": "park",
       "lat": 41.275993,
       "lng": 36.362733,
       "url": "https://www.google.com/maps/search/?api=1&query=41.275993,36.362733",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d50548_m0d41161",
+      "name": "Skate park Pepperinos",
+      "type": "park",
+      "lat": 39.505482,
+      "lng": -0.411607,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.505482,-0.411607",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3012,6 +3219,33 @@
       "lat": 44.862023,
       "lng": 13.844239,
       "url": "https://www.google.com/maps/search/?api=1&query=44.862023,13.844239",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d57440_m0d95230",
+      "name": "Skate Park Santa Fe",
+      "type": "park",
+      "lat": 41.574399,
+      "lng": -0.952295,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.574399,-0.952295",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_37d75006_m0d94580",
+      "name": "Skate Park Torre-Pacheco",
+      "type": "park",
+      "lat": 37.750057,
+      "lng": -0.945803,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.750057,-0.945803",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_40d42138_m3d82049",
+      "name": "Skate park y Pump track Valle de las Cañas",
+      "type": "park",
+      "lat": 40.421382,
+      "lng": -3.820492,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.421382,-3.820492",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3114,6 +3348,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d78179_m5d76891",
+      "name": "Skateboard Park Malabata",
+      "type": "park",
+      "lat": 35.781785,
+      "lng": -5.76891,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.781785,-5.768910",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_54d80374_9d44082",
       "name": "Skatefläche (Harnisskatespitze)",
       "type": "park",
@@ -3174,6 +3417,15 @@
       "lat": 49.083902,
       "lng": 19.27293,
       "url": "https://www.google.com/maps/search/?api=1&query=49.083902,19.272930",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_40d39524_m3d70346",
+      "name": "Skatepark \"Ignacio Echeverría, skateboard hero\" - Madrid Río",
+      "type": "park",
+      "lat": 40.395244,
+      "lng": -3.703459,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.395244,-3.703459",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3265,6 +3517,51 @@
       "lat": 48.729089,
       "lng": 9.321439,
       "url": "https://www.google.com/maps/search/?api=1&query=48.729089,9.321439",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_33d97824_m6d88983",
+      "name": "Skatepark al manal",
+      "type": "park",
+      "lat": 33.978241,
+      "lng": -6.889826,
+      "url": "https://www.google.com/maps/search/?api=1&query=33.978241,-6.889826",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d44840_m0d47119",
+      "name": "Skatepark Alaquàs",
+      "type": "park",
+      "lat": 39.448399,
+      "lng": -0.471191,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.448399,-0.471191",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d43600_m1d24264",
+      "name": "Skatepark Alfamen",
+      "type": "park",
+      "lat": 41.436002,
+      "lng": -1.242642,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.436002,-1.242642",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d14578_m5d44800",
+      "name": "Skatepark Algeciras",
+      "type": "park",
+      "lat": 36.145776,
+      "lng": -5.448,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.145776,-5.448000",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_38d35403_m0d49096",
+      "name": "Skatepark Alicante",
+      "type": "park",
+      "lat": 38.354029,
+      "lng": -0.490964,
+      "url": "https://www.google.com/maps/search/?api=1&query=38.354029,-0.490964",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3458,6 +3755,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d67017_m4d74495",
+      "name": "Skatepark Coin",
+      "type": "park",
+      "lat": 36.670165,
+      "lng": -4.744949,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.670165,-4.744949",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d79594_1d23652",
       "name": "Skatepark condat sur Vienne",
       "type": "park",
@@ -3482,6 +3788,15 @@
       "lat": -33.39698,
       "lng": -71.12267,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.396980,-71.122670",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d66297_m4d55648",
+      "name": "Skatepark de Alhaurín de la Torre",
+      "type": "park",
+      "lat": 36.66297,
+      "lng": -4.556478,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.662970,-4.556478",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3741,6 +4056,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d52900_m4d63131",
+      "name": "Skatepark Fuengirola",
+      "type": "park",
+      "lat": 36.529003,
+      "lng": -4.631308,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.529003,-4.631308",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d63722_14d85859",
       "name": "Skatepark Gaj Kočevje",
       "type": "park",
@@ -3765,6 +4089,15 @@
       "lat": 49.219536,
       "lng": 8.359208,
       "url": "https://www.google.com/maps/search/?api=1&query=49.219536,8.359208",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d56523_m0d51975",
+      "name": "Skatepark GUSTAVO MARTÍNEZ DÍAZ ️",
+      "type": "park",
+      "lat": 39.565232,
+      "lng": -0.519752,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.565232,-0.519752",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3876,6 +4209,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d48853_m3d87731",
+      "name": "Skatepark Ignacio Echeverria",
+      "type": "park",
+      "lat": 40.488529,
+      "lng": -3.877308,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.488529,-3.877308",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d73172_10d31920",
       "name": "Skatepark Illerdamm",
       "type": "park",
@@ -3918,6 +4260,33 @@
       "lat": 52.528634,
       "lng": 13.432116,
       "url": "https://www.google.com/maps/search/?api=1&query=52.528634,13.432116",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d59575_m4d53023",
+      "name": "Skatepark Innova",
+      "type": "park",
+      "lat": 36.595751,
+      "lng": -4.530226,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.595751,-4.530226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d70500_m4d49119",
+      "name": "Skatepark Intelhorce",
+      "type": "park",
+      "lat": 36.704999,
+      "lng": -4.491191,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.704999,-4.491191",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d69251_m6d11512",
+      "name": "Skatepark Jerez de la Frontera",
+      "type": "park",
+      "lat": 36.692505,
+      "lng": -6.115116,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.692505,-6.115116",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4038,6 +4407,42 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d33950_m3d75649",
+      "name": "Skatepark La Chopera",
+      "type": "park",
+      "lat": 40.3395,
+      "lng": -3.75649,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.339500,-3.756490",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_37d77659_m1d50195",
+      "name": "Skatepark La Cruz. Urb. La Ramblica",
+      "type": "park",
+      "lat": 37.776594,
+      "lng": -1.501952,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.776594,-1.501952",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d51992_m4d88979",
+      "name": "Skatepark La Florida",
+      "type": "park",
+      "lat": 36.519924,
+      "lng": -4.889789,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.519924,-4.889789",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d15731_m5d35319",
+      "name": "Skatepark La Línea de la Concepción",
+      "type": "park",
+      "lat": 36.157312,
+      "lng": -5.353186,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.157312,-5.353186",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d37935_2d08324",
       "name": "Skatepark La Mallola",
       "type": "park",
@@ -4056,6 +4461,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_39d59209_m0d54258",
+      "name": "Skatepark la Pobla de Vallbona",
+      "type": "park",
+      "lat": 39.592086,
+      "lng": -0.542583,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.592086,-0.542583",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_46d23688_1d47954",
       "name": "Skatepark La Souterraine",
       "type": "park",
@@ -4071,6 +4485,15 @@
       "lat": 49.050524,
       "lng": 12.092885,
       "url": "https://www.google.com/maps/search/?api=1&query=49.050524,12.092885",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d42660_m6d15569",
+      "name": "Skatepark Las Albinas",
+      "type": "park",
+      "lat": 36.426597,
+      "lng": -6.155691,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.426597,-6.155691",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4125,6 +4548,15 @@
       "lat": 49.081087,
       "lng": 19.607317,
       "url": "https://www.google.com/maps/search/?api=1&query=49.081087,19.607317",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d17857_m5d48326",
+      "name": "Skatepark Los Barrios",
+      "type": "park",
+      "lat": 36.178566,
+      "lng": -5.483258,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.178566,-5.483258",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4188,6 +4620,15 @@
       "lat": 55.786893,
       "lng": 37.535842,
       "url": "https://www.google.com/maps/search/?api=1&query=55.786893,37.535842",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_40d30791_m3d85872",
+      "name": "Skatepark Móstoles",
+      "type": "park",
+      "lat": 40.307909,
+      "lng": -3.858725,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.307909,-3.858725",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4375,6 +4816,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_39d50993_m0d44466",
+      "name": "Skatepark Paterna",
+      "type": "park",
+      "lat": 39.509926,
+      "lng": -0.444661,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.509926,-0.444661",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d60663_6d13290",
       "name": "Skatepark Péitruss",
       "type": "park",
@@ -4411,6 +4861,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d71667_m4d45008",
+      "name": "Skatepark Portada Alta",
+      "type": "park",
+      "lat": 36.716672,
+      "lng": -4.450075,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.716672,-4.450075",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d53019_13d36151",
       "name": "Skatepark Poststadion",
       "type": "park",
@@ -4427,6 +4886,15 @@
       "lng": 9.187145,
       "description": "Indoor Skateplaza with big bowl area and good flat plus crubs, rail, 2 block gap.",
       "url": "https://www.google.com/maps/search/?api=1&query=48.792874,9.187145",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_40d38647_m3d63595",
+      "name": "Skatepark Puente de Vallecas",
+      "type": "park",
+      "lat": 40.386468,
+      "lng": -3.635947,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.386468,-3.635947",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4494,6 +4962,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d71557_m4d27048",
+      "name": "Skatepark Rincon de la Victoria",
+      "type": "park",
+      "lat": 36.71557,
+      "lng": -4.270476,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.715570,-4.270476",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d78695_m5d86655",
+      "name": "Skatepark Rmilat",
+      "type": "park",
+      "lat": 35.786948,
+      "lng": -5.866552,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.786948,-5.866552",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d33876_9d67725",
       "name": "Skatepark Ronnenberg",
       "type": "park",
@@ -4545,6 +5031,33 @@
       "lat": 55.666748,
       "lng": 37.658801,
       "url": "https://www.google.com/maps/search/?api=1&query=55.666748,37.658801",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d44717_m6d20920",
+      "name": "Skatepark San Fernando",
+      "type": "park",
+      "lat": 36.447165,
+      "lng": -6.209203,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.447165,-6.209203",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_37d82716_m0d79301",
+      "name": "Skatepark San Pedro del Pintar",
+      "type": "park",
+      "lat": 37.827156,
+      "lng": -0.793011,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.827156,-0.793011",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d70778_m4d45152",
+      "name": "Skatepark San Rafael",
+      "type": "park",
+      "lat": 36.707778,
+      "lng": -4.451523,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.707778,-4.451523",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4694,6 +5207,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_30d54816_m9d71327",
+      "name": "SkatePark Taghazout",
+      "type": "park",
+      "lat": 30.54816,
+      "lng": -9.713271,
+      "url": "https://www.google.com/maps/search/?api=1&query=30.548160,-9.713271",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m33d67273_m70d94585",
       "name": "Skatepark Talagante",
       "type": "park",
@@ -4703,12 +5225,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_36d01730_m5d61073",
+      "name": "Skatepark Tarifa",
+      "type": "park",
+      "lat": 36.017301,
+      "lng": -5.610726,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.017301,-5.610726",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m33d48846_m70d77300",
       "name": "Skatepark The Farfana",
       "type": "park",
       "lat": -33.488457,
       "lng": -70.773,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.488457,-70.773000",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_36d62464_m6d21968",
+      "name": "Skatepark The HOME INDOOR",
+      "type": "park",
+      "lat": 36.62464,
+      "lng": -6.219684,
+      "url": "https://www.google.com/maps/search/?api=1&query=36.624640,-6.219684",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4754,6 +5294,15 @@
       "lat": 50.952598,
       "lng": 6.978026,
       "url": "https://www.google.com/maps/search/?api=1&query=50.952598,6.978026",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d71358_m1d00411",
+      "name": "Skatepark Utebo",
+      "type": "park",
+      "lat": 41.713581,
+      "lng": -1.004109,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.713581,-1.004109",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4902,6 +5451,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_40d35728_m3d81369",
+      "name": "Skatepark, San Jose de Valderas",
+      "type": "park",
+      "lat": 40.357285,
+      "lng": -3.813686,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.357285,-3.813686",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d84668_11d16080",
       "name": "Skateplatz",
       "type": "park",
@@ -4926,6 +5484,15 @@
       "lat": 50.044742,
       "lng": 10.238964,
       "url": "https://www.google.com/maps/search/?api=1&query=50.044742,10.238964",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_39d48250_m0d37952",
+      "name": "Skateplaza",
+      "type": "park",
+      "lat": 39.482505,
+      "lng": -0.379523,
+      "url": "https://www.google.com/maps/search/?api=1&query=39.482505,-0.379523",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5626,6 +6193,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_37d60584_m0d97893",
+      "name": "Urban Sports Park",
+      "type": "park",
+      "lat": 37.605839,
+      "lng": -0.97893,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.605839,-0.978930",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_41d63066_m0d86507",
+      "name": "Vagapark",
+      "type": "park",
+      "lat": 41.630658,
+      "lng": -0.865074,
+      "url": "https://www.google.com/maps/search/?api=1&query=41.630658,-0.865074",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_33d73511_m117d99827",
       "name": "Vans Off The Wall Skatepark",
       "type": "park",
@@ -5767,6 +6352,15 @@
       "lat": 54.693581,
       "lng": 25.274327,
       "url": "https://www.google.com/maps/search/?api=1&query=54.693581,25.274327",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_33d95847_m6d86947",
+      "name": "White spot",
+      "type": "park",
+      "lat": 33.958467,
+      "lng": -6.869466,
+      "url": "https://www.google.com/maps/search/?api=1&query=33.958467,-6.869466",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6148,6 +6742,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_40d42307_m3d70017",
+      "name": "Conflict Skateboards",
+      "type": "shop",
+      "lat": 40.423069,
+      "lng": -3.700172,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.423069,-3.700172",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_52d48063_13d43303",
       "name": "crazylegz Roller Skate Shop & Concept Store",
       "type": "shop",
@@ -6208,6 +6811,15 @@
       "lat": 50.073489,
       "lng": 14.41452,
       "url": "https://www.google.com/maps/search/?api=1&query=50.073489,14.414520",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_31d51185_m9d76978",
+      "name": "Essaouira Skateboards Rental",
+      "type": "shop",
+      "lat": 31.511847,
+      "lng": -9.769782,
+      "url": "https://www.google.com/maps/search/?api=1&query=31.511847,-9.769782",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6391,6 +7003,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_40d39282_m3d71238",
+      "name": "MadRamps Escuela de Skate Madrid, Skatepark Indoor, Skateshop y fingershop",
+      "type": "shop",
+      "lat": 40.39282,
+      "lng": -3.712385,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.392820,-3.712385",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m27d48089_153d01237",
       "name": "Middle Store",
       "type": "shop",
@@ -6442,6 +7063,15 @@
       "lat": 13.882935,
       "lng": 100.411026,
       "url": "https://www.google.com/maps/search/?api=1&query=13.882935,100.411026",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_40d41403_m3d72753",
+      "name": "Paradis skateshop",
+      "type": "shop",
+      "lat": 40.414026,
+      "lng": -3.727529,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.414026,-3.727529",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6635,6 +7265,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_40d42214_m3d70182",
+      "name": "Sk8land",
+      "type": "shop",
+      "lat": 40.422145,
+      "lng": -3.701824,
+      "url": "https://www.google.com/maps/search/?api=1&query=40.422145,-3.701824",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m27d22632_153d00295",
       "name": "Skate Connection North Lakes Outlet",
       "type": "shop",
@@ -6767,6 +7406,15 @@
       "lat": 53.257142,
       "lng": -2.125939,
       "url": "https://www.google.com/maps/search/?api=1&query=53.257142,-2.125939",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_30d41082_m9d56664",
+      "name": "TAMARA SKATESHOP",
+      "type": "shop",
+      "lat": 30.410823,
+      "lng": -9.566643,
+      "url": "https://www.google.com/maps/search/?api=1&query=30.410823,-9.566643",
       "source": "My Maps „Skatemap2026“"
     },
     {
