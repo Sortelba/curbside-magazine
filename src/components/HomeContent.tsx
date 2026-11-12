@@ -11,7 +11,7 @@ import RandomizerSection from "@/components/learn/RandomizerSection";
 import ChannelsSection from "@/components/learn/ChannelsSection";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { MoveLeft, MoveRight, ChevronDown, Users, Rss } from "lucide-react";
+import { MoveLeft, MoveRight, ChevronDown, Rss } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Settings {
@@ -52,14 +52,6 @@ export default function HomeContent({ posts, learnData, settings, pick }: { post
                 <p className="text-xl md:text-2xl font-light text-muted-foreground max-w-2xl mx-auto">
                     {t("hero.description")}
                 </p>
-                {/* RSS-Feed: in einer Feed-App abonnieren → Benachrichtigung bei neuen Beiträgen */}
-                <a
-                    href="/rss/"
-                    className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-border text-xs font-black uppercase italic tracking-wider text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
-                >
-                    <Rss className="h-4 w-4" />
-                    {t("hero.subscribe")}
-                </a>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 relative">
@@ -139,35 +131,19 @@ export default function HomeContent({ posts, learnData, settings, pick }: { post
                 {/* Events Sidebar - 1/4 of layout */}
                 <div className="lg:col-span-1">
                     <div className="sticky top-24 flex flex-col gap-6 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pb-2 [scrollbar-width:none]">
+                        {/* RSS-Feed: klein über den Events – in einer Feed-App abonnieren → Benachrichtigung bei neuen Beiträgen */}
+                        <a
+                            href="/rss/"
+                            className="-mb-3 self-center inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-[10px] font-black uppercase italic tracking-wider text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
+                        >
+                            <Rss className="h-3.5 w-3.5" />
+                            {t("hero.subscribe")}
+                        </a>
                         <EventsSidebar />
                         {pick && <PickOfTheWeek post={pick} onOpen={() => setSelectedPost(pick)} />}
                     </div>
                 </div>
             </div>
-
-            {settings.showCommunity && (
-                <div className="mt-12">
-                    <Link href="/community" className="block">
-                        <div className="group border-2 border-border bg-card rounded-[2rem] p-6 md:p-8 shadow-sm hover:shadow-lg transition-all">
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="bg-primary/10 p-3 rounded-2xl">
-                                        <Users className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-[0.28em] text-muted-foreground">{t("home.community_label")}</p>
-                                        <h2 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter">{t("home.community_title")}</h2>
-                                    </div>
-                                </div>
-                                <div className="inline-flex items-center gap-2 text-sm font-black uppercase italic tracking-widest text-primary group-hover:translate-x-1 transition-transform">
-                                    <span>{t("home.community_cta")}</span>
-                                    <ChevronDown className="rotate-[-90deg]" size={16} />
-                                </div>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-            )}
 
             {/* Modal for Details */}
             <NewsModal
