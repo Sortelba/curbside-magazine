@@ -19,14 +19,71 @@ function published(p: any): Date {
     return exact && !isNaN(exact.getTime()) ? exact : new Date(p.date);
 }
 
-function itemHtml(p: any, title: string, text: string, image: string | null, link: string) {
-    const paragraphs = String(text || "")
+/** YouTube-ID aus watch-, embed-, youtu.be- oder shorts-Links */
+function youtubeId(url: string): string | null {
+    return String(url || "").match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/)?.[1] || null;
+}
+const isUrl = (s: unknown) => /^(https?:\/\/|\/)/.test(String(s || "").trim());
+
+/** Alles, was ein Feed-Eintrag braucht – so wie die Beitragsseite den Post zeigt */
+function feedEntry(p: any) {
+    const de = p.translations?.de;
+    let title = String(de?.title || p.title || "").replace(/^\[News\]\s*/, "").trim();
+    // Eigene Posts ohne Übersetzung (z. B. Pick of the Week): Untertitel steht in description, Text in content
+    const ownText = !de && p.content && !isUrl(p.content) && p.type !== "instagram-mix" ? String(p.content).trim() : "";
+    const subtitle = String(p.description || "").trim();
+    // „Video der Woche:“ + Untertitel → „Video der Woche: "Ultra Violence" von john dilo“
+    if (title.endsWith(":") && subtitle && !/^\[?News\]?/.test(subtitle)) title = `${title} ${subtitle}`;
+    const text = de?.content || [title.includes(subtitle) ? "" : subtitle, ownText].filter(Boolean).join("\n\n");
+
+    const videoUrl = String(p.media?.videoUrl || (p.type === "video" && isUrl(p.content) ? p.content : "") || "");
+    const yt = youtubeId(videoUrl);
+    const video = videoUrl
+        ? yt
+            ? { watch: `https://www.youtube.com/watch?v=${yt}`, embed: `https://www.youtube.com/embed/${yt}`, label: "YouTube", thumb: `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` }
+            : { watch: videoUrl, embed: "", label: /instagram\.com/.test(videoUrl) ? "Instagram" : "", thumb: "" }
+        : null;
+
+    // Insta-Mix: content ist eine Liste von Reels
+    let clips: { url: string; author?: string }[] = [];
+    if (p.type === "instagram-mix") {
+        try { clips = (JSON.parse(p.content) || []).filter((c: any) => c?.url); } catch { /* keine Liste */ }
+    }
+
+    const rawImage = p.media?.images?.[0] || (p.type === "image" && isUrl(p.content) ? p.content : "") || video?.thumb || "";
+    const image = rawImage ? abs(rawImage) : null;
+    // Ein externer Link, der nicht schon das Video ist (z. B. Artikel bei Shredder News)
+    const external = [p.originalUrl, p.media?.externalLink].find((u) => u && isUrl(u) && u !== videoUrl && !youtubeId(u)) || "";
+
+    return { title, text, image, video, clips, external };
+}
+
+function itemHtml(p: any, e: ReturnType<typeof feedEntry>, link: string) {
+    const paragraphs = String(e.text || "")
         .replace(/\(Originalquelle:[^)]*\)/, "")
         .split(/\n{2,}/)
+        .filter((b) => b.trim())
         .map((block) => `<p>${xml(block.trim()).replace(/\n/g, "<br/>")}</p>`)
         .join("");
-    const source = p.originalUrl ? `<p>Quelle: <a href="${xml(p.originalUrl)}">${xml(p.source || p.originalUrl)}</a></p>` : "";
-    return `${image ? `<p><img src="${xml(image)}" alt="${xml(title)}"/></p>` : ""}${paragraphs}${source}<p><a href="${xml(link)}">Weiterlesen auf ${SITE_NAME}</a></p>`;
+    const parts: string[] = [];
+    if (p.category === "pick") parts.push(`<p><strong>⭐ Sortys Pick of the Week</strong></p>`);
+    if (e.video?.embed) {
+        // Eingebettetes Video (Inoreader, Feedly & Co. zeigen es direkt an) + Link als Rückfall
+        parts.push(`<p><iframe width="560" height="315" src="${xml(e.video.embed)}" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>`);
+        parts.push(`<p><a href="${xml(e.video.watch)}"><strong>▶ Video auf ${e.video.label} ansehen</strong></a></p>`);
+        // Eigene Bilder des Beitrags (nicht das YouTube-Vorschaubild) zusätzlich zeigen
+        if (e.image && e.image !== e.video.thumb) parts.push(`<p><img src="${xml(e.image)}" alt="${xml(e.title)}"/></p>`);
+    } else {
+        if (e.image) parts.push(e.video ? `<p><a href="${xml(e.video.watch)}"><img src="${xml(e.image)}" alt="${xml(e.title)}"/></a></p>` : `<p><img src="${xml(e.image)}" alt="${xml(e.title)}"/></p>`);
+        if (e.video) parts.push(`<p><a href="${xml(e.video.watch)}"><strong>▶ Video${e.video.label ? ` auf ${e.video.label}` : ""} ansehen</strong></a></p>`);
+    }
+    parts.push(paragraphs);
+    if (e.clips.length) {
+        parts.push(`<ul>${e.clips.map((c) => `<li><a href="${xml(c.url)}">▶ Clip${c.author ? ` von @${xml(c.author)}` : ""} auf Instagram</a></li>`).join("")}</ul>`);
+    }
+    if (e.external) parts.push(`<p>Quelle: <a href="${xml(e.external)}">${xml(p.source && p.source !== SITE_NAME ? p.source : e.external.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></p>`);
+    parts.push(`<p><a href="${xml(link)}"><strong>Weiterlesen auf ${SITE_NAME} →</strong></a></p>`);
+    return parts.join("");
 }
 
 export function GET() {
@@ -36,21 +93,24 @@ export function GET() {
         .slice(0, FEED_SIZE);
 
     const items = posts.map((p: any) => {
-        const title = String(p.translations?.de?.title || p.title).replace(/^\[News\]\s*/, "");
-        const text = p.translations?.de?.content || p.description || "";
+        const e = feedEntry(p);
         const link = `${SITE_URL}/news/${p.id}/`;
-        const rawImage = p.media?.images?.[0] || (p.type === "image" ? p.content : "");
-        const image = rawImage ? abs(rawImage) : null;
         const categories = (p.tags || []).slice(0, 6).map((t: string) => `<category>${xml(t)}</category>`).join("");
+        const media = [
+            e.image ? `<enclosure url="${xml(e.image)}" type="${mime(e.image)}" length="0"/>` : "",
+            e.image ? `<media:thumbnail url="${xml(e.image)}"/>` : "",
+            e.video?.embed
+                ? `<media:content url="${xml(e.video.watch)}" medium="video"><media:player url="${xml(e.video.embed)}"/></media:content>`
+                : e.image ? `<media:content url="${xml(e.image)}" medium="image"/>` : "",
+        ].filter(Boolean).join("\n      ");
         return `    <item>
-      <title>${xml(title)}</title>
+      <title>${xml(e.title)}</title>
       <link>${xml(link)}</link>
       <guid isPermaLink="true">${xml(link)}</guid>
       <pubDate>${published(p).toUTCString()}</pubDate>
-      <description>${xml(plainExcerpt(text, 300))}</description>
-      <content:encoded>${cdata(itemHtml(p, title, text, image, link))}</content:encoded>
-      ${image ? `<enclosure url="${xml(image)}" type="${mime(image)}" length="0"/>
-      <media:content url="${xml(image)}" medium="image"/>` : ""}
+      <description>${xml(plainExcerpt(e.text || e.title, 300))}</description>
+      <content:encoded>${cdata(itemHtml(p, e, link))}</content:encoded>
+      ${media}
       ${categories}
     </item>`;
     }).join("\n");
