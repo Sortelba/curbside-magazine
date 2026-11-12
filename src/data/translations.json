@@ -105,6 +105,7 @@
       "of": "von",
       "read_story": "Weiterlesen",
       "read_original": "Zum Original",
+      "watch_video": "Video ansehen",
       "open_page": "Beitrag öffnen",
       "older_in_archive": "Ältere News im Archiv"
     },
@@ -341,6 +342,7 @@
       "of": "of",
       "read_story": "Read Story",
       "read_original": "Read original",
+      "watch_video": "Watch video",
       "open_page": "Open article",
       "older_in_archive": "Older news in the archive"
     },

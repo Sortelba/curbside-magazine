@@ -82,8 +82,14 @@ export default function PostBody({ post, inModal = false }: { post: any; inModal
                     )}
                     {/* Eigene Beiträge können mit "linkLabel" einen eigenen Knopftext und einen Link innerhalb der Seite haben */}
                     {(() => {
-                        const href = post.media?.externalLink || post.originalUrl || post.content;
-                        const label = post.translations?.[locale]?.linkLabel;
+                        // Nur echte Links nehmen: bei eigenen Posts (z. B. Pick of the Week) steht in content der Text.
+                        // Ohne Link, aber mit Video → Knopf zum Video auf YouTube; sonst gar kein Knopf.
+                        const isLink = (u: unknown) => /^(https?:\/\/|\/)/.test(String(u || "").trim());
+                        const yt = String(videoUrl || "").match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/)?.[1];
+                        const direct = [post.media?.externalLink, post.originalUrl, post.content].find(isLink);
+                        const href = direct || (yt ? `https://www.youtube.com/watch?v=${yt}` : isLink(videoUrl) ? videoUrl : "");
+                        if (!href) return null;
+                        const label = post.translations?.[locale]?.linkLabel || (!direct ? t("news.watch_video") : "");
                         const internal = String(href).startsWith("/");
                         return (
                             <a
