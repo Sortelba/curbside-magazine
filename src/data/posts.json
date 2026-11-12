@@ -1,5 +1,109 @@
 [
   {
+    "id": "post_1794487053651_744",
+    "title": "Respekt für die Skater in Uniform",
+    "description": "Am Veterans Day geht es darum, all den Leuten zu danken, die dem Land gedient haben – und da gehören natürlich auch Skater dazu. Viele Skateboarder haben ihren Dienst beim Militär geleistet und dabei ...",
+    "translations": {
+      "de": {
+        "title": "Respekt für die Skater in Uniform",
+        "content": "Am Veterans Day geht es darum, all den Leuten zu danken, die dem Land gedient haben – und da gehören natürlich auch Skater dazu. Viele Skateboarder haben ihren Dienst beim Militär geleistet und dabei versucht, ihre Liebe zum Board mit der Verantwortung zu vereinbaren. Egal ob auf der Straße oder auf Militärbasen, Skaten bringt einfach immer Leute aus den verschiedensten Ecken zusammen.\n\nWer in Uniform war, verdient nicht nur für diesen Einsatz Respekt, sondern auch für das, was für die Skate-Community geleistet wird. Zum Veterans Day geht ein fetter Shoutout vom ShreddER-Team raus an alle Veteranen da draußen, vor allem an die Skater unter ihnen. Danke für euren Einsatz und alles, was ihr gemacht habt. Much respect!"
+      },
+      "en": {
+        "title": "Honoring the Skaters Who Served",
+        "content": "Veterans Day is the moment to appreciate the men and women who have served our country, including the many skateboarders who balance their time on the board with military service. From the streets to military bases, skateboarding continues to bring people from different backgrounds together.\n\nThose who served deserve recognition for both their military duties and their ongoing contributions to the skate culture. The ShreddER team sends a special shoutout to all veterans, especially the skateboarders who have served. Thank you for your service, dedication, and everything you have done."
+      }
+    },
+    "type": "image",
+    "content": "https://shredder.news/wp-content/uploads/Veterans-Day-Salutes-the-Skateboarders-Who-Served-Our-Country.jpg",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/Veterans-Day-Salutes-the-Skateboarders-Who-Served-Our-Country.jpg",
+        "https://shredder.news/wp-content/uploads/Chunk-of-Chocolate-Costa-Rica.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://shredder.news/veterans-day-skateboarders-who-served/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/veterans-day-skateboarders-who-served/",
+    "date": "Nov 12, 2026",
+    "tags": [
+      "Veterans Day",
+      "Skate Community",
+      "Shredder News"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1794487053645_839",
+    "title": "Asics verklagt Amazon-Händler wegen gefälschter Skate Shoes",
+    "description": "Ey, hast du gehört? Asics zieht einen Amazon-Seller vor Gericht, weil die angeblich ihre Trademarks für unauthorized Sales missbraucht haben. Konkret geht es um die Firma Payment System Solutions and ...",
+    "translations": {
+      "de": {
+        "title": "Asics verklagt Amazon-Händler wegen gefälschter Skate Shoes",
+        "content": "Ey, hast du gehört? Asics zieht einen Amazon-Seller vor Gericht, weil die angeblich ihre Trademarks für unauthorized Sales missbraucht haben. Konkret geht es um die Firma Payment System Solutions and Services LLC mit ihrem Storefront Gem Trendz. Die Klage lief am 9. November 2026 beim U.S. District Court in Kalifornien ein.\n\nDie Sache kam ins Rollen, weil Kunden wohl gefälschte, gebrauchte, minderwertige oder unpacked Schuhe geschickt bekamen, die komplett außerhalb der offiziellen Quality-Control von Asics vertrieben wurden. Schon im Oktober gab es eine Cease-and-Desist-Letter von Amazon, aber der Seller hat sich scheinbar totgestellt. Jetzt fordert Asics ordentlich Kohoe, einen Stopp der Verkäufe, das Einfrieren der Amazon-Funds und die Übernahme der Lawyer-Kosten.\n\nFür uns Skater heißt das auf jeden Fall: Augen auf beim Online-Kauf. Nur weil Asics draufsteht und die Pics stimmen, muss der Shop nicht authorized sein. Quelle: Shredder News"
+      },
+      "en": {
+        "title": "Asics Takes Amazon Seller to Court Over Unauthorized Skate Shoe Sales",
+        "content": "Asics Skateboarding is taking legal action against an Amazon seller for allegedly selling sneakers featuring the brand's trademarks without authorization. Filed on November 9, 2026, in the U.S. District Court for the Central District of California, the lawsuit names Payment System Solutions and Services LLC and its storefront, Gem Trendz, as defendants.\n\nThe complaint states that customers received items that were counterfeit, used, poorly constructed, or lacking original packaging outside of Asics' authorized distribution network. Following an ignored cease-and-desist letter sent via Amazon in October, Asics is now seeking financial damages, an injunction on further sales, deletion of related reviews, a freeze on the defendant's funds, and legal fees.\n\nAsics operates as a challenger brand in skate footwear, making this case a notable reminder for consumers buying skate shoes online to verify third-party sellers before purchasing. Source: Shredder News"
+      }
+    },
+    "type": "image",
+    "content": "https://shredder.news/wp-content/uploads/Corporate-Skate-Shoes-Asics.jpg",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/Corporate-Skate-Shoes-Asics.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://shredder.news/asics-sues-gem-trendz-shoe-seller/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/asics-sues-gem-trendz-shoe-seller/",
+    "date": "Nov 12, 2026",
+    "tags": [
+      "Asics",
+      "Amazon",
+      "Skateboarding",
+      "Legal News"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1794487053608_67",
+    "title": "KI-Roboter lernt Skaten – und steht schon Kickflips",
+    "description": "KI-Roboter, die eher einen Kickflip stehen als GTA 6 rauskommt? Verrückte Zeiten! Forscher der TU Darmstadt und des DFKI haben einem humanoidem Roboter namens Unitree G1 tatsächlich das Skateboarden b...",
+    "translations": {
+      "de": {
+        "title": "KI-Roboter lernt Skaten – und steht schon Kickflips",
+        "content": "KI-Roboter, die eher einen Kickflip stehen als GTA 6 rauskommt? Verrückte Zeiten! Forscher der TU Darmstadt und des DFKI haben einem humanoidem Roboter namens Unitree G1 tatsächlich das Skateboarden beigebracht. Das Teil hat jetzt schon Tricks wie Ollies, Pop Shove-its und eben sogar Kickflips im Repertoire.\n\nDas Ganze läuft im Rahmen des Forschungsprojekts „The Blind Skateboarder“. Der Name ist Programm: Der Roboter nutzt für die Tricks ausschließlich Gelenksensoren und Bewegungssensoren. Er kommt komplett ohne Kameras, Board-Tracking oder Touch-Sensoren aus.\n\nEin kleiner Haken bleibt allerdings noch: Den Kickflip hat er bisher nur an einem Sicherheitsgurt gelandet. Bis der Roboter also komplett ohne Hilfe über die Streets rollt, müssen die Forscher noch ein bisschen Arbeit reinstecken. Aber mal ehrlich: Wer würde am Ende wohl ein Game of S.K.A.T.E. gewinnen – so ein humanoidem Roboter oder ein echter Skater?\n\nQuelle: Shredder News"
+      },
+      "en": {
+        "title": "Engineers Teach Humanoid AI Robot to Kickflip",
+        "content": "AI robots are now learning to skateboard. Researchers from DFKI and TU Darmstadt have trained a Unitree G1 humanoid robot to ride a board, and it is already pulling off tricks like ollies, pop shove-its, and kickflips.\n\nDetailed in a research paper titled “The Blind Skateboarder,” the project relies entirely on joint encoders and motion sensors. Remarkably, the robot performs these tricks without using cameras, board tracking, or touch sensors.\n\nWhile the robot recently managed to land a kickflip, it was still attached to a safety harness, meaning further development is required before it can skate autonomously. The progress raises an entertaining question for the future: who would win in a game of S.K.A.T.E., a humanoid robot or a real skateboarder?\n\nSource: Shredder News"
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/3uVJaj4gRow?feature=oembed",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/AI-Robot-Doing-Kickflip.jpg",
+        "https://shredder.news/wp-content/uploads/Screen-Shot-2021-10-07-at-11.40.46-AM.jpg",
+        "https://shredder.news/wp-content/uploads/Sean-Davis-Refusing-to-teach-Shaun-Hover.jpg"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/3uVJaj4gRow?feature=oembed",
+      "externalLink": "https://shredder.news/robot-kickflip/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/robot-kickflip/",
+    "date": "Nov 12, 2026",
+    "tags": [
+      "Unitree G1",
+      "AI",
+      "Robotics",
+      "Technology"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1794084599810",
     "title": "Kickflips für den guten Zweck: Rollsport e.V. Ebersberg sammelt Spenden",
     "description": "Für jeden eingeschickten Kickflip-Clip gehen 5 € an den Rollsport e.V. Ebersberg – Einsendeschluss ist der 20. November.",
@@ -71,16 +175,16 @@
   },
   {
     "id": "post_1794404136739_552",
-    "title": "[News] HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026",
-    "description": "HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026\n\nAvenue & Son invited us to experience Shanghai and the Adi Mission, where 11 crews take on mini-games and challenges all over the city. We ...",
+    "title": "Shaun Currie auf Shanghai Adi Mission",
+    "description": "Avenue & Son hat uns nach Shanghai zur Adi Mission eingeladen, bei der elf Crews in der ganzen Stadt Mini-Games und Challenges abziehen. Für Shaun Currie war es der erste Trip raus aus Europa, und wer...",
     "translations": {
       "de": {
-        "title": "[News] HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026",
-        "content": "HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026\n\nAvenue & Son invited us to experience Shanghai and the Adi Mission, where 11 crews take on mini-games and challenges all over the city. We thought, who better to bring along than the boss of good vibes: Shaun Currie! It was Shaun’s first time outside of Europe, so join us as we experience it all together.\n\nFilmed & edited by Dominik SchneiderPhotos by Kenji Haruta & Lawrence Fung\n\nFeat: Lil Dre, Kai Kishi, Kotora Mitani, Momiji Nishiya... (Originalquelle: Pocket Skate Mag)"
+        "title": "Shaun Currie auf Shanghai Adi Mission",
+        "content": "Avenue & Son hat uns nach Shanghai zur Adi Mission eingeladen, bei der elf Crews in der ganzen Stadt Mini-Games und Challenges abziehen. Für Shaun Currie war es der erste Trip raus aus Europa, und wer könnte für gute Vibes besser geeignet sein als er? Zusammen mit Lil Dre, Kai Kishi, Kotora Mitani und Momiji Nishiya ging es ab.\n\nDas Ganze wurde von Dominik Schneider gefilmt und geschnitten, während Kenji Haruta und Lawrence Fung die Fotos geschossen haben. Zieht euch rein, wie Shaun das Ganze zum ersten Mal erlebt.\n\nQuelle: Pocket Skate Mag"
       },
       "en": {
-        "title": "HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026",
-        "content": "HOW TO LOCAL: SHAUN CURRIE GOES ADI MISSION – SHANGHAI 2026\n\nAvenue & Son invited us to experience Shanghai and the Adi Mission, where 11 crews take on mini-games and challenges all over the city. We thought, who better to bring along than the boss of good vibes: Shaun Currie! It was Shaun’s first time outside of Europe, so join us as we experience it all together.\n\nFilmed & edited by Dominik SchneiderPhotos by Kenji Haruta & Lawrence Fung\n\nFeat: Lil Dre, Kai Kishi, Kotora Mitani, Momiji Nishiya..."
+        "title": "Shaun Currie Goes Adi Mission in Shanghai",
+        "content": "Avenue & Son invited everyone to experience Shanghai and the Adi Mission, featuring 11 crews tackling mini-games and challenges across the city. Bringing along Shaun Currie for his very first trip outside of Europe set the ultimate tone for good vibes alongside Lil Dre, Kai Kishi, Kotora Mitani, and Momiji Nishiya.\n\nFilmed and edited by Dominik Schneider with photography by Kenji Haruta and Lawrence Fung, this mission captures a unique journey through the city.\n\nSource: Pocket Skate Mag"
       }
     },
     "type": "video",
@@ -97,8 +201,10 @@
     "originalUrl": "https://pocketskatemag.com/how-to-local-shaun-currie-goes-adi-mission-shanghai-2026/",
     "date": "Nov 11, 2026",
     "tags": [
-      "news",
-      "pocket skate mag"
+      "Shaun Currie",
+      "Adi Mission",
+      "Shanghai",
+      "Avenue & Son"
     ],
     "status": "published"
   },
@@ -1933,16 +2039,16 @@
   },
   {
     "id": "post_1788794343273_516",
-    "title": "[News] Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps",
-    "description": "Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps\n\n3. September 2026  \n\t\t\t18:46  -  Johannes Gausepohl\n\nMan muss nicht ins Ausland fahren um Schulen mit Skateparks zu finden! G...",
+    "title": "Skatepark unter der Schule: Ding der Unmöglichkeit in Norderstedt wahr geworden",
+    "description": "Digga, für geile Spots an Schulen muss man gar nicht erst ins Ausland düsen. Gerhard „Gerdo“ Freudenberg hat zusammen mit Yamato Ramps und Endboss.EU ein echtes Brett gelandet und den „unmöglichen“ Tr...",
     "translations": {
       "de": {
-        "title": "[News] Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps",
-        "content": "Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps\n\n3. September 2026  \n\t\t\t18:46  -  Johannes Gausepohl\n\nMan muss nicht ins Ausland fahren um Schulen mit Skateparks zu finden! Gerhard „Gerdo“ Freudenberg  hat das „Unmögliche“ zusammen mit Yamato Ramps  und Endboss.EU möglich gemacht …\n\nGerhard „Gerdo“ Freudenberg gründete vor Jahren „Project for Skateboarding and School Education“ um Skateboarding in die Schule zu bringen. Hilfe kam dabei auch vom Bryggeriets Gymnasium aus... (Originalquelle: Boardstation)"
+        "title": "Skatepark unter der Schule: Ding der Unmöglichkeit in Norderstedt wahr geworden",
+        "content": "Digga, für geile Spots an Schulen muss man gar nicht erst ins Ausland düsen. Gerhard „Gerdo“ Freudenberg hat zusammen mit Yamato Ramps und Endboss.EU ein echtes Brett gelandet und den „unmöglichen“ Traum wahr gemacht!\n\nGerdo hat schon vor Jahren das „Project for Skateboarding and School Education“ ins Leben gerufen, um Skaten in die Schulen zu bringen. Support gab es dabei sogar vom Bryggeriets Gymnasium aus dem schwedischen Malmö.\n\nDas Resultat steht jetzt in Norderstedt unter der Willy-Brandt-Schule. Da, wo früher nur alte Werkzeugschuppen und Fahrradständer waren, wartet jetzt ein fresher, überdachter Skatepark auf euch.\n\nUmgesetzt wurde das Ding von Yamato Living Ramps, während Endboss.EU die Planung übernommen hat.\n\nQuelle: Boardstation"
       },
       "en": {
-        "title": "Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps",
-        "content": "Deutsche Schule mit überdachten Skatepark in Norderstedt von Yamato Ramps\n\n3. September 2026  \n\t\t\t18:46  -  Johannes Gausepohl\n\nMan muss nicht ins Ausland fahren um Schulen mit Skateparks zu finden! Gerhard „Gerdo“ Freudenberg  hat das „Unmögliche“ zusammen mit Yamato Ramps  und Endboss.EU möglich gemacht …\n\nGerhard „Gerdo“ Freudenberg gründete vor Jahren „Project for Skateboarding and School Education“ um Skateboarding in die Schule zu bringen. Hilfe kam dabei auch vom Bryggeriets Gymnasium aus..."
+        "title": "New Indoor Skatepark Built Under German School in Norderstedt",
+        "content": "Skateboarding continues to bridge the gap into the education system, proving that incredible school spots aren't just limited to foreign countries. Gerhard „Gerdo“ Freudenberg has achieved what once seemed impossible, teaming up with Yamato Ramps and Endboss.EU to make it happen.\n\nYears ago, Freudenberg founded the „Project for Skateboarding and School Education“ to integrate skateboarding into schools, receiving additional support from the renowned Bryggeriets Gymnasium in Malmö, Sweden.\n\nThe vision has now materialized beneath the Willy-Brandt-School in Norderstedt. What used to be a humble tool shed and bicycle shelter has been transformed into a brand new, covered skatepark.\n\nThe dream was brought to life by Yamato Living Ramps, who handled the construction, with Endboss.EU taking charge of the project planning.\n\nSource: Boardstation"
       }
     },
     "type": "image",
@@ -1967,23 +2073,25 @@
     "originalUrl": "http://www.boardstation.de/2026/09/03/deutsche-schule-mit-ueberdachten-skatepark-in-norderstedt-von-yamato-ramps/",
     "date": "Sep 7, 2026",
     "tags": [
-      "news",
-      "boardstation"
+      "Yamato Ramps",
+      "Endboss.EU",
+      "Norderstedt",
+      "Skateboarding and School Education"
     ],
     "status": "published"
   },
   {
     "id": "post_1788793667032_250",
-    "title": "[News] 20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards",
-    "description": "20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards\n\n2. September 2026  \n\t\t\t19:42  -  Johannes Gausepohl\n\nShopify hat ein Interview mit Paul Rodriguez über seine Karriere, Renten...",
+    "title": "20 Millionen Jahresumsatz: P-Rod quatscht über Primitive Skateboarding",
+    "description": "Shopify hat neulich ein dickes, knapp 30-minütiges Video-Interview mit Paul Rodriguez droppen lassen. Darin geht es um seine Karriere, seine Rentenpläne, Nike SB und natürlich um Primitive Skateboardi...",
     "translations": {
       "de": {
-        "title": "[News] 20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards",
-        "content": "20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards\n\n2. September 2026  \n\t\t\t19:42  -  Johannes Gausepohl\n\nShopify hat ein Interview mit Paul Rodriguez über seine Karriere, Rentenpläne, Nike SB und P-Rods Primitive Skateboards online gestellt. Dabei kommt auch der Jahresumsatz Pauls Skateboard Company zur Sprache!\n\nBereits im Intro des knapp 30 Minuten langen Video Interviews wird Rodrguezs Erfolg mit Primitiv angesprochen:\n\nRodriguez hat zwei Jahrzehnte damit verbracht, ein... (Originalquelle: Boardstation)"
+        "title": "20 Millionen Jahresumsatz: P-Rod quatscht über Primitive Skateboarding",
+        "content": "Shopify hat neulich ein dickes, knapp 30-minütiges Video-Interview mit Paul Rodriguez droppen lassen. Darin geht es um seine Karriere, seine Rentenpläne, Nike SB und natürlich um Primitive Skateboarding. Schon im Intro wird klar, was P-Rod in zwei Jahrzehnten abgerissen hat – von fetten X-Games-Medaillen über seinen ersten Nike-Signature-Skateschuh bis hin zu 30 Jahren auf dem Brett.\n\nEigentlich wollte er etwas aufbauen, das seine eigene Karriere überdauert. 2008 fing das Ganze als Sneaker-Shop an, entwickelte sich durch Ehrgeiz und ein bisschen Zufall aber zu einem echten Imperium für Boards und Apparel, das mittlerweile fette Collabs mit Namen wie Dragon Ball Z oder OutKast raushaut. Das krasse Highlight dabei: Primitive ballert einen fetten Jahresumsatz von 20 Millionen US-Dollar.\n\nIm Interview redet P-Rod außerdem über die legendären goldenen Boards. Das Ganze war eigentlich nur ein spontanes Experiment mit goldener Sprühfarbe, doch am Ende waren 500 limitierte Decks in gerade mal zwei Minuten komplett vergriffen.\n\nQuelle: Boardstation"
       },
       "en": {
-        "title": "20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards",
-        "content": "20 Millionen US-Dollar – Paul Rodriguez spricht über Primitve Skateboards\n\n2. September 2026  \n\t\t\t19:42  -  Johannes Gausepohl\n\nShopify hat ein Interview mit Paul Rodriguez über seine Karriere, Rentenpläne, Nike SB und P-Rods Primitive Skateboards online gestellt. Dabei kommt auch der Jahresumsatz Pauls Skateboard Company zur Sprache!\n\nBereits im Intro des knapp 30 Minuten langen Video Interviews wird Rodrguezs Erfolg mit Primitiv angesprochen:\n\nRodriguez hat zwei Jahrzehnte damit verbracht, ein..."
+        "title": "P-Rod Breaks Down Primitive's 20 Million Dollar Revenue in New Interview",
+        "content": "Shopify recently dropped an in-depth video interview with Paul Rodriguez, touching on his legendary career, retirement plans, Nike SB, and his brand Primitive Skateboarding. Clocking in at nearly 30 minutes, the interview kicks off by highlighting P-Rod's massive impact over the last two decades, featuring eight X-Games medals, Nike's first-ever signature skate shoe, and three decades on a board.\n\nLooking to build something that would outlast his competitive career, Rodriguez originally launched Primitive in 2008 as a sneaker boutique. Through a mix of ambition and serendipity, it evolved into a massive skate and apparel empire pulling in an annual revenue of 20 million US dollars, complete with high-profile collaborations ranging from Dragon Ball Z to OutKast.\n\nAlongside business talk, P-Rod also shares the story behind the famous gold boards. What started as a random experiment using gold spray paint turned into an instant sell-out success, with 500 limited boards flying off the shelves in just two minutes.\n\nSource: Boardstation"
       }
     },
     "type": "video",
@@ -2008,8 +2116,10 @@
     "originalUrl": "http://www.boardstation.de/2026/09/02/20-millionen-us-dollar-paul-rodriguez-spricht-ueber-primitve-skateboards/",
     "date": "Sep 7, 2026",
     "tags": [
-      "news",
-      "boardstation"
+      "Paul Rodriguez",
+      "Primitive Skateboarding",
+      "Nike SB",
+      "Business"
     ],
     "status": "published"
   },
