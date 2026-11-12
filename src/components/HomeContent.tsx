@@ -11,7 +11,7 @@ import RandomizerSection from "@/components/learn/RandomizerSection";
 import ChannelsSection from "@/components/learn/ChannelsSection";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { MoveLeft, MoveRight, ChevronDown, Users } from "lucide-react";
+import { MoveLeft, MoveRight, ChevronDown, Users, Rss } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Settings {
@@ -52,6 +52,14 @@ export default function HomeContent({ posts, learnData, settings, pick }: { post
                 <p className="text-xl md:text-2xl font-light text-muted-foreground max-w-2xl mx-auto">
                     {t("hero.description")}
                 </p>
+                {/* RSS-Feed: in einer Feed-App abonnieren → Benachrichtigung bei neuen Beiträgen */}
+                <a
+                    href="/rss/"
+                    className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-border text-xs font-black uppercase italic tracking-wider text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
+                >
+                    <Rss className="h-4 w-4" />
+                    {t("hero.subscribe")}
+                </a>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 relative">

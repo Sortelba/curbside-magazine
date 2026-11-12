@@ -31,7 +31,19 @@
     },
     "hero": {
       "title": "News",
-      "description": "Tägliche Updates rund um Skateboarding."
+      "description": "Tägliche Updates rund um Skateboarding.",
+      "subscribe": "News abonnieren (RSS)"
+    },
+    "rss": {
+      "title": "News abonnieren",
+      "intro": "Verpass keinen Beitrag mehr: Abonnier CURBSIDE in einer Feed-App. Jeder neue Post – News, neue Spots auf der Skatemap, Events – landet dann automatisch bei dir, auf Wunsch mit Benachrichtigung aufs Handy.",
+      "step1": "1. Feed-Adresse kopieren",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "step2": "2. In einer Feed-App einfügen",
+      "step3": "3. Benachrichtigungen einschalten",
+      "step3_text": "In der App bei CURBSIDE die Benachrichtigungen aktivieren – dann meldet sich dein Handy, sobald etwas Neues online ist.",
+      "what": "RSS ist ein offenes Format: kein Konto bei uns, keine E-Mail-Adresse, kein Tracking. Abbestellen geht jederzeit direkt in deiner App."
     },
     "footer": {
       "follow": "Folge uns",
@@ -43,7 +55,8 @@
       "contact": "Kontakt & Vorschläge",
       "rights": "Alle Rechte vorbehalten.",
       "tagline": "Keep pushing. Unterstütz deine lokalen Shops und hab Spaß!",
-      "datenschutz": "Datenschutz"
+      "datenschutz": "Datenschutz",
+      "rss": "RSS-Feed"
     },
     "community": {
       "shops": "Support Skate Shops",
@@ -254,7 +267,19 @@
     },
     "hero": {
       "title": "News",
-      "description": "Daily updates, clips, and thoughts from the underground."
+      "description": "Daily updates, clips, and thoughts from the underground.",
+      "subscribe": "Subscribe to news (RSS)"
+    },
+    "rss": {
+      "title": "Subscribe",
+      "intro": "Never miss a post: subscribe to CURBSIDE in a feed reader app. Every new post – news, new spots on the Skatemap, events – shows up automatically, with a notification on your phone if you like.",
+      "step1": "1. Copy the feed address",
+      "copy": "Copy",
+      "copied": "Copied",
+      "step2": "2. Paste it into a feed reader",
+      "step3": "3. Turn on notifications",
+      "step3_text": "Enable notifications for CURBSIDE in the app and your phone will ping you as soon as something new is online.",
+      "what": "RSS is an open format: no account with us, no email address, no tracking. Unsubscribe anytime right in your app."
     },
     "footer": {
       "follow": "Follow Us",
@@ -266,7 +291,8 @@
       "contact": "Contact & Suggestions",
       "rights": "All rights reserved.",
       "tagline": "Keep pushing. Support local shops and have fun!",
-      "datenschutz": "Privacy"
+      "datenschutz": "Privacy",
+      "rss": "RSS feed"
     },
     "community": {
       "shops": "Support Skate Shops",

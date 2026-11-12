@@ -61,7 +61,11 @@ export const metadata: Metadata = {
     "Skate Contest", "Skate Events", "Skateshop", "Skateshops Deutschland", "Skateboard Verein",
     "Skaten lernen", "Skatepark", "Videopart",
   ],
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    // RSS-Feed der News – Browser und Feed-Apps finden ihn darüber automatisch
+    types: { "application/rss+xml": [{ url: "/feed.xml", title: `${SITE_NAME} – Skateboard News` }] },
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",

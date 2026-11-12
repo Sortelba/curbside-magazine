@@ -36,6 +36,9 @@ export default function Footer() {
                             <Link href="/about" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
                                 {t("nav.about")}
                             </Link>
+                            <a href="/rss/" className="text-xs font-black uppercase italic tracking-wider hover:underline text-muted-foreground hover:text-foreground transition-colors">
+                                {t("footer.rss")}
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-col items-center md:items-end gap-6">

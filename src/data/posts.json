@@ -1,5 +1,38 @@
 [
   {
+    "id": "post_1794494004082",
+    "title": "Video der Woche:",
+    "type": "video",
+    "content": "Schau dir diesen neuen partjetzt live auf Thrasher!\nHammer Part! \nSo viele neue innovative manual combos. deine augen werden bluten xD.\n\nMein Video der woche!",
+    "description": " \"Ultra Violence\" von john dilo  ",
+    "tags": [
+      "Pick of the Week",
+      "john dilo",
+      "jacuzzi unlimited",
+      "skateboarding",
+      "thrasher"
+    ],
+    "category": "pick",
+    "source": "CURBSIDE",
+    "date": "Nov 12, 2026",
+    "status": "published",
+    "media": {
+      "images": [],
+      "videoUrl": "https://www.youtube.com/watch?v=9mrqRYBp_Qk",
+      "externalLink": ""
+    },
+    "translations": {
+      "de": {
+        "title": "Video der Woche:",
+        "content": "Schau dir diesen neuen partjetzt live auf Thrasher!\nHammer Part! \nSo viele neue innovative manual combos. deine augen werden bluten xD.\n\nMein Video der woche!"
+      },
+      "en": {
+        "title": "Video der Woche:",
+        "content": "Schau dir diesen neuen partjetzt live auf Thrasher!\nHammer Part! \nSo viele neue innovative manual combos. deine augen werden bluten xD.\n\nMein Video der woche!"
+      }
+    }
+  },
+  {
     "id": "post_1794493266541_73",
     "title": "Skatemap-Update: 19 neue Spots, Parks & Shops",
     "description": "Die CURBSIDE Skatemap ist gewachsen: 9 Skateparks und 10 Skateshops sind neu dazugekommen. • Cocota Landfill Skateboard track (Skatepark) • Maré Favela Skatepark (Skatepark) • Pista de skate Arthur D…",
