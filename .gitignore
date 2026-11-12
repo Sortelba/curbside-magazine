@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Export-Dateien (z. B. Skatemap für Google My Maps)
 exports/
+
+# Auto-Post-Vorschläge (nur lokal fürs Admin Dashboard)
+src/data/auto-candidates.json

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "spots": [
     {
       "id": "park_50d95970_6d90891",
@@ -723,6 +723,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d01238_m43d31772",
+      "name": "Cesinha Chaves Skateparks",
+      "type": "park",
+      "lat": -23.012377,
+      "lng": -43.317718,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.012377,-43.317718",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d16072_m93d38129",
       "name": "Champlin Skatepark",
       "type": "park",
@@ -822,6 +831,15 @@
       "lat": 33.875107,
       "lng": -117.553612,
       "url": "https://www.google.com/maps/search/?api=1&query=33.875107,-117.553612",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d80455_m43d17896",
+      "name": "Cocota Landfill Skateboard track",
+      "type": "park",
+      "lat": -22.804553,
+      "lng": -43.178959,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.804553,-43.178959",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1042,15 +1060,6 @@
       "lng": 151.139105,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.909479,151.139105",
       "source": "My Maps „Skatemap2026“"
-    },
-    {
-      "id": "park_m23d01238_m43d31772",
-      "name": "Duó skate park",
-      "type": "park",
-      "lat": -23.012377,
-      "lng": -43.317718,
-      "url": "https://www.google.com/maps/search/?api=1&query=-23.012377,-43.317718",
-      "source": "Skatehive-Karte"
     },
     {
       "id": "park_36d22416_m115d27945",
@@ -1699,13 +1708,13 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
-      "id": "park_m23d59062_m46d65840",
-      "name": "ibira skatepark",
+      "id": "park_m23d59042_m46d65761",
+      "name": "Ibira Skatepark",
       "type": "park",
-      "lat": -23.590622,
-      "lng": -46.658403,
-      "url": "https://www.google.com/maps/search/?api=1&query=-23.590622,-46.658403",
-      "source": "Skatehive-Karte"
+      "lat": -23.590418,
+      "lng": -46.657609,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.590418,-46.657609",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_36d54133_32d03477",
@@ -2062,15 +2071,6 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
-      "id": "park_m22d97931_m43d21668",
-      "name": "lagoa skatepark",
-      "type": "park",
-      "lat": -22.979312,
-      "lng": -43.216675,
-      "url": "https://www.google.com/maps/search/?api=1&query=-22.979312,-43.216675",
-      "source": "Skatehive-Karte"
-    },
-    {
       "id": "park_55d87008_12d82121",
       "name": "Lagunen - Landskrona Skatepark",
       "type": "park",
@@ -2343,6 +2343,15 @@
       "lng": 2.210424,
       "description": "L4 -> Poblenou",
       "url": "https://www.google.com/maps/search/?api=1&query=41.397964,2.210424",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d86270_m43d23880",
+      "name": "Maré Favela Skatepark",
+      "type": "park",
+      "lat": -22.862696,
+      "lng": -43.238803,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.862696,-43.238803",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3005,6 +3014,42 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d53743_m47d12797",
+      "name": "Pista de Skate",
+      "type": "park",
+      "lat": -23.537429,
+      "lng": -47.127974,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.537429,-47.127974",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m23d43995_m46d91075",
+      "name": "Pista de Skate \"Jorge Tebet\" (Skate Park)",
+      "type": "park",
+      "lat": -23.439948,
+      "lng": -46.910751,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.439948,-46.910751",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d69567_m43d28395",
+      "name": "Pista de skate Arthur Dias",
+      "type": "park",
+      "lat": -22.695674,
+      "lng": -43.283953,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.695674,-43.283953",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d97911_m43d21688",
+      "name": "Pista De Skate Da Lagoa",
+      "type": "park",
+      "lat": -22.979105,
+      "lng": -43.216877,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.979105,-43.216877",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m23d66009_m52d59502",
       "name": "Pista de Skate da Vila Olimpica",
       "type": "park",
@@ -3352,6 +3397,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m22d85461_m43d35304",
+      "name": "Rollerskating",
+      "type": "park",
+      "lat": -22.854608,
+      "lng": -43.353044,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.854608,-43.353044",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m33d97484_18d48101",
       "name": "Rondebosch Bowl",
       "type": "park",
@@ -3587,6 +3641,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d52398_m46d64641",
+      "name": "Skate City",
+      "type": "park",
+      "lat": -23.523978,
+      "lng": -46.646411,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.523978,-46.646411",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_43d85636_10d52872",
       "name": "Skate Park (presso scuola media Chelini)",
       "type": "park",
@@ -3733,6 +3796,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d65712_m46d85686",
+      "name": "Skate Park Embu das Artes",
+      "type": "park",
+      "lat": -23.657118,
+      "lng": -46.856858,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.657118,-46.856858",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_38d00271_m1d17356",
       "name": "Skate Park Guadalupe",
       "type": "park",
@@ -3778,6 +3850,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d54839_m46d93742",
+      "name": "Skate Park Itapevi",
+      "type": "park",
+      "lat": -23.548392,
+      "lng": -46.937422,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.548392,-46.937422",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d77956_15d91284",
       "name": "Skate Park Jarun",
       "type": "park",
@@ -3820,6 +3901,15 @@
       "lat": 43.855778,
       "lng": 10.506106,
       "url": "https://www.google.com/maps/search/?api=1&query=43.855778,10.506106",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d90929_m43d22724",
+      "name": "Skate Park Maracanã",
+      "type": "park",
+      "lat": -22.909292,
+      "lng": -43.227238,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.909292,-43.227238",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4009,6 +4099,15 @@
       "lat": 35.781785,
       "lng": -5.76891,
       "url": "https://www.google.com/maps/search/?api=1&query=35.781785,-5.768910",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d80304_m43d36544",
+      "name": "Skateboard Square",
+      "type": "park",
+      "lat": -22.803038,
+      "lng": -43.365439,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.803038,-43.365439",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4399,6 +4498,15 @@
       "lat": 50.432958,
       "lng": 8.683803,
       "url": "https://www.google.com/maps/search/?api=1&query=50.432958,8.683803",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m22d91451_m43d09660",
+      "name": "Skatepark Carlos Alberto Parizzi",
+      "type": "park",
+      "lat": -22.914513,
+      "lng": -43.096596,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.914513,-43.096596",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5529,6 +5637,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d73115_m46d69641",
+      "name": "SkatePark Parque das Árvores ZS",
+      "type": "park",
+      "lat": -23.731148,
+      "lng": -46.696406,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.731148,-46.696406",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m33d42867_m70d66894",
       "name": "Skatepark Parque Los Reyes",
       "type": "park",
@@ -6085,6 +6202,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m23d60112_m46d74361",
+      "name": "Skatepark Vila Sônia",
+      "type": "park",
+      "lat": -23.601118,
+      "lng": -46.743607,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.601118,-46.743607",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_28d70531_m100d55119",
       "name": "Skatepark Vizzio",
       "type": "park",
@@ -6493,15 +6619,6 @@
       "source": "Skatehive-Karte"
     },
     {
-      "id": "park_m22d90918_m43d22732",
-      "name": "snakeside",
-      "type": "park",
-      "lat": -22.909183,
-      "lng": -43.22732,
-      "url": "https://www.google.com/maps/search/?api=1&query=-22.909183,-43.227320",
-      "source": "Skatehive-Karte"
-    },
-    {
       "id": "park_35d14828_m89d96734",
       "name": "Society Memphis Skatepark and Coffee",
       "type": "park",
@@ -6857,6 +6974,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m22d86402_m43d34521",
+      "name": "Tatu skatepark",
+      "type": "park",
+      "lat": -22.864021,
+      "lng": -43.345215,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.864021,-43.345215",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d51411_8d55377",
       "name": "Taylor Skatepark",
       "type": "park",
@@ -7026,6 +7152,15 @@
       "lat": 35.130572,
       "lng": -89.972941,
       "url": "https://www.google.com/maps/search/?api=1&query=35.130572,-89.972941",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m23d68994_m47d12246",
+      "name": "Toobsranch Skatepark",
+      "type": "park",
+      "lat": -23.689938,
+      "lng": -47.122462,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.689938,-47.122462",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7356,6 +7491,15 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_m23d55237_m46d55057",
+      "name": "Zero11 Skate Park - Espaço Urbano",
+      "type": "park",
+      "lat": -23.552372,
+      "lng": -46.550574,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.552372,-46.550574",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_53d91648_27d55773",
       "name": "Скейт Парк",
       "type": "park",
@@ -7626,6 +7770,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m23d54778_m46d64441",
+      "name": "cb skate shop - consolação, são paulo",
+      "type": "shop",
+      "lat": -23.547782,
+      "lng": -46.644405,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.547782,-46.644405",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_40d85839_14d28363",
       "name": "CD Skate Plaza",
       "type": "shop",
@@ -7851,6 +8004,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m23d55865_m46d94800",
+      "name": "Inside Out Skate Garage",
+      "type": "shop",
+      "lat": -23.558653,
+      "lng": -46.948003,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.558653,-46.948003",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m22d92250_m43d23088",
+      "name": "IOX skateshop Tijuca",
+      "type": "shop",
+      "lat": -22.922503,
+      "lng": -43.230876,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.922503,-43.230876",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d55201_m46d54394",
+      "name": "Junkies Skate Shop",
+      "type": "shop",
+      "lat": -23.552009,
+      "lng": -46.543939,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.552009,-46.543939",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d90484_12d42658",
       "name": "Kahuna",
       "type": "shop",
@@ -7914,6 +8094,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d96457_m43d35280",
+      "name": "Loja Xskate",
+      "type": "shop",
+      "lat": -22.964572,
+      "lng": -43.3528,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.964572,-43.352800",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_40d84958_14d25553",
       "name": "London Store",
       "type": "shop",
@@ -7941,6 +8130,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m23d56252_m46d66496",
+      "name": "Matriz Skateshop",
+      "type": "shop",
+      "lat": -23.562518,
+      "lng": -46.664965,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.562518,-46.664965",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m22d90208_m43d17241",
+      "name": "Mauacba Skate Coffee & Skate Shop",
+      "type": "shop",
+      "lat": -22.902079,
+      "lng": -43.172412,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.902079,-43.172412",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m27d48089_153d01237",
       "name": "Middle Store",
       "type": "shop",
@@ -7959,12 +8166,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d96879_m43d36644",
+      "name": "Muiloko Skate Shop - Loja de Venda, Aluguel e Manutenção de Patins e Skates em Jacarepaguá - RJ",
+      "type": "shop",
+      "lat": -22.968795,
+      "lng": -43.366443,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.968795,-43.366443",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_43d48134_m1d55816",
       "name": "Mum Said Skateshop",
       "type": "shop",
       "lat": 43.481344,
       "lng": -1.558159,
       "url": "https://www.google.com/maps/search/?api=1&query=43.481344,-1.558159",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d54800_m46d40849",
+      "name": "NB SKATESHOP",
+      "type": "shop",
+      "lat": -23.547997,
+      "lng": -46.408491,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.547997,-46.408491",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7983,6 +8208,15 @@
       "lat": 43.601837,
       "lng": 1.44443,
       "url": "https://www.google.com/maps/search/?api=1&query=43.601837,1.444430",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d49619_m46d85252",
+      "name": "Ollie's Point Skate Shop",
+      "type": "shop",
+      "lat": -23.496188,
+      "lng": -46.852525,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.496188,-46.852525",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8049,6 +8283,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d98720_m43d19100",
+      "name": "Pressure Skate Shop -A melhor do Rio",
+      "type": "shop",
+      "lat": -22.987199,
+      "lng": -43.190998,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.987199,-43.190998",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m22d89673_m43d12696",
+      "name": "Pressure SkateShop & 46Inline",
+      "type": "shop",
+      "lat": -22.896727,
+      "lng": -43.126957,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.896727,-43.126957",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_49d87052_8d65561",
       "name": "RAILSLIDE",
       "type": "shop",
@@ -8103,6 +8355,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m23d54888_m46d64729",
+      "name": "Roosevelt Skate Shop",
+      "type": "shop",
+      "lat": -23.548876,
+      "lng": -46.64729,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.548876,-46.647290",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_41d38513_2d18458",
       "name": "Roots Barcelona - Skate Shop",
       "type": "shop",
@@ -8145,6 +8406,15 @@
       "lat": 52.499996,
       "lng": 13.423504,
       "url": "https://www.google.com/maps/search/?api=1&query=52.499996,13.423504",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d57997_m46d60858",
+      "name": "SECRET SPOT SKATEBOARD SHOP",
+      "type": "shop",
+      "lat": -23.57997,
+      "lng": -46.60858,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.579970,-46.608580",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8212,12 +8482,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d90380_m43d17877",
+      "name": "Skate Crime",
+      "type": "shop",
+      "lat": -22.903803,
+      "lng": -43.178769,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.903803,-43.178769",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_13d72091_100d55666",
       "name": "Skate Plus",
       "type": "shop",
       "lat": 13.720909,
       "lng": 100.556661,
       "url": "https://www.google.com/maps/search/?api=1&query=13.720909,100.556661",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m22d78816_m43d31179",
+      "name": "Skate Rock",
+      "type": "shop",
+      "lat": -22.788156,
+      "lng": -43.311788,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.788156,-43.311788",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8275,6 +8563,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d81070_m43d18361",
+      "name": "Sliver Skate Shop - Loja de Skate no RJ",
+      "type": "shop",
+      "lat": -22.810703,
+      "lng": -43.183608,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.810703,-43.183608",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_53d37956_m1d47603",
       "name": "Slugger Skate Store",
       "type": "shop",
@@ -8320,6 +8617,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_m22d98717_m43d19092",
+      "name": "Street Force Skate",
+      "type": "shop",
+      "lat": -22.987173,
+      "lng": -43.190917,
+      "url": "https://www.google.com/maps/search/?api=1&query=-22.987173,-43.190917",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_40d85874_14d26685",
       "name": "Street Wear",
       "type": "shop",
@@ -8353,6 +8659,15 @@
       "lat": 49.40889,
       "lng": 8.697277,
       "url": "https://www.google.com/maps/search/?api=1&query=49.408890,8.697277",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d70663_m46d55192",
+      "name": "The House Skate Shop",
+      "type": "shop",
+      "lat": -23.706629,
+      "lng": -46.551925,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.706629,-46.551925",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8470,6 +8785,15 @@
       "lat": 39.469458,
       "lng": -0.382541,
       "url": "https://www.google.com/maps/search/?api=1&query=39.469458,-0.382541",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_m23d12204_m47d24032",
+      "name": "World Skateshop",
+      "type": "shop",
+      "lat": -23.122037,
+      "lng": -47.24032,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.122037,-47.240320",
       "source": "My Maps „Skatemap2026“"
     },
     {

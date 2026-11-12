@@ -6,13 +6,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Loader2, Save, RefreshCw, CheckCircle, AlertCircle, Youtube, Plus, X,
-    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat, Users
+    LayoutDashboard, Lightbulb, Globe, FileText, PlusCircle, Newspaper, MapPin, Trash2, Calendar, Instagram, Settings, Search, Edit, ChevronDown, Send, UploadCloud, Eye, EyeOff, BarChart3, Repeat, Users, Sparkles
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 import ManageSkatemap from "@/components/admin/ManageSkatemap";
 import ManageAnalytics from "@/components/admin/ManageAnalytics";
 import AnalyticsBadge from "@/components/admin/AnalyticsBadge";
+import AutoPostsTab, { AutoPostsHint, useAutoPostCount } from "@/components/admin/AutoPostsPanel";
 
 
 
@@ -97,6 +98,8 @@ function AdminDashboardContent() {
     };
 
     const [publishLoading, setPublishLoading] = useState(false);
+    // Zahl am Reiter „Auto-Posts“: offene Vorschläge + noch nicht veröffentlichte Auto-Posts
+    const autoPostCount = useAutoPostCount(key || '', activeTab);
     const [saveLoading, setSaveLoading] = useState(false);
 
     const persistDrafts = async (nextDrafts: any[]) => {
@@ -124,8 +127,8 @@ function AdminDashboardContent() {
         }
     };
 
-    const triggerPublish = async () => {
-        if (!confirm("Alle Änderungen jetzt veröffentlichen? Dies überträgt die Daten zu GitHub (Commit & Push).")) return;
+    const triggerPublish = async (): Promise<boolean> => {
+        if (!confirm("Alle Änderungen jetzt veröffentlichen? Dies überträgt die Daten zu GitHub (Commit & Push).")) return false;
 
         setPublishLoading(true);
         try {
@@ -137,12 +140,14 @@ function AdminDashboardContent() {
             const data = await res.json();
             if (res.ok) {
                 alert("Veröffentlichung erfolgreich gestartet! In ca. 2 Minuten sind die Änderungen live.");
-            } else {
-                alert("Fehler bei der Veröffentlichung: " + (data.error || "Unbekannter Fehler"));
+                return true;
             }
+            alert("Fehler bei der Veröffentlichung: " + (data.error || "Unbekannter Fehler"));
+            return false;
         } catch (e) {
             console.error("Publish failed", e);
             alert("Fehler bei der Veröffentlichung. Bitte prüfe die Internetverbindung.");
+            return false;
         } finally {
             setPublishLoading(false);
         }
@@ -383,6 +388,7 @@ function AdminDashboardContent() {
         { id: "news", label: "News & Scraper", icon: Newspaper, group: "Inhalte" },
         { id: "custom", label: "Neuer Post", icon: PlusCircle, group: "Inhalte" },
         { id: "posts", label: "Live Posts", icon: FileText, group: "Inhalte" },
+        { id: "autoposts", label: "Auto-Posts", icon: Sparkles, group: "Inhalte" },
         { id: "events", label: "Events", icon: Calendar, group: "Bereiche" },
         { id: "skatemap", label: "Skatemap", icon: MapPin, group: "Bereiche" },
         // Community ist ausklappbar: Vereine & Projekte und das Lern-Center (auf der Seite Teil der Community)
@@ -393,6 +399,7 @@ function AdminDashboardContent() {
         { id: "settings", label: "Einstellungen", icon: Settings, group: "Überblick" },
     ];
     const tabGroups = [...new Set(tabs.map((t) => t.group))];
+    const openAutoPosts = () => { setActiveTab("autoposts"); window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
     return (
         <div className="min-h-screen md:flex">
@@ -460,6 +467,9 @@ function AdminDashboardContent() {
                                     >
                                         <Icon className={cn("h-4 w-4 shrink-0", !isActive && "group-hover:scale-110 transition-transform")} />
                                         <span>{tab.label}</span>
+                                        {tab.id === "autoposts" && autoPostCount > 0 && (
+                                            <span className={cn("ml-auto px-1.5 min-w-[1.25rem] text-center rounded-full text-[10px] not-italic", isActive ? "bg-primary-foreground text-primary" : "bg-primary text-primary-foreground")}>{autoPostCount}</span>
+                                        )}
                                     </button>
                                 ];
                             })}
@@ -513,6 +523,7 @@ function AdminDashboardContent() {
                         refreshKey={activeTab}
                         onCreate={() => { setNewPostCategory('pick'); setActiveTab('custom'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                     />
+
 
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -1379,6 +1390,7 @@ function AdminDashboardContent() {
 
                             {activeTab === "skatemap" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
+                                    <AutoPostsHint keyStr={key || ''} kind="map" refreshKey={activeTab} onOpen={openAutoPosts} />
                                     <div className="bg-card border-2 border-border rounded-3xl p-6 shadow-sm">
                                         <div className="flex items-center justify-between gap-4 flex-wrap">
                                             <div>
@@ -1432,8 +1444,15 @@ function AdminDashboardContent() {
                                 </motion.div>
                             )}
 
+                            {activeTab === "autoposts" && (
+                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                                    <AutoPostsTab keyStr={key || ''} onPublish={triggerPublish} />
+                                </motion.div>
+                            )}
+
                             {activeTab === "events" && (
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                                    <AutoPostsHint keyStr={key || ''} kind="events" refreshKey={activeTab} onOpen={openAutoPosts} />
                                     <ManageEvents keyStr={key || ''} />
                                 </motion.div>
                             )}

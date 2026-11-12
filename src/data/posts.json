@@ -1,5 +1,61 @@
 [
   {
+    "id": "post_1794493266541_73",
+    "title": "Skatemap-Update: 19 neue Spots, Parks & Shops",
+    "description": "Die CURBSIDE Skatemap ist gewachsen: 9 Skateparks und 10 Skateshops sind neu dazugekommen. • Cocota Landfill Skateboard track (Skatepark) • Maré Favela Skatepark (Skatepark) • Pista de skate Arthur D…",
+    "translations": {
+      "de": {
+        "title": "Skatemap-Update: 19 neue Spots, Parks & Shops",
+        "content": "Die CURBSIDE Skatemap ist gewachsen: 9 Skateparks und 10 Skateshops sind neu dazugekommen.\n\n• Cocota Landfill Skateboard track (Skatepark)\n• Maré Favela Skatepark (Skatepark)\n• Pista de skate Arthur Dias (Skatepark)\n• Pista De Skate Da Lagoa (Skatepark)\n• Rollerskating (Skatepark)\n• Skate Park Maracanã (Skatepark)\n• Skateboard Square (Skatepark)\n• Skatepark Carlos Alberto Parizzi (Skatepark)\n• Tatu skatepark (Skatepark)\n• IOX skateshop Tijuca (Skateshop)\n• Loja Xskate (Skateshop)\n• Mauacba Skate Coffee & Skate Shop (Skateshop)\n• Muiloko Skate Shop - Loja de Venda, Aluguel e Manutenção de Patins e Skates em Jacarepaguá - RJ (Skateshop)\n• Pressure Skate Shop -A melhor do Rio (Skateshop)\n• Pressure SkateShop & 46Inline (Skateshop)\n• Skate Crime (Skateshop)\n• Skate Rock (Skateshop)\n• Sliver Skate Shop - Loja de Skate no RJ (Skateshop)\n• Street Force Skate (Skateshop)\n\nÖffne die Skatemap und schau, was in deiner Nähe neu ist. Fehlt noch etwas? Über „Eintragen“ kannst du es uns schicken."
+      },
+      "en": {
+        "title": "Skatemap update: 19 new spots, parks & shops",
+        "content": "The CURBSIDE Skatemap just got bigger: 9 skateparks and 10 skate shops were added.\n\n• Cocota Landfill Skateboard track (skatepark)\n• Maré Favela Skatepark (skatepark)\n• Pista de skate Arthur Dias (skatepark)\n• Pista De Skate Da Lagoa (skatepark)\n• Rollerskating (skatepark)\n• Skate Park Maracanã (skatepark)\n• Skateboard Square (skatepark)\n• Skatepark Carlos Alberto Parizzi (skatepark)\n• Tatu skatepark (skatepark)\n• IOX skateshop Tijuca (skate shop)\n• Loja Xskate (skate shop)\n• Mauacba Skate Coffee & Skate Shop (skate shop)\n• Muiloko Skate Shop - Loja de Venda, Aluguel e Manutenção de Patins e Skates em Jacarepaguá - RJ (skate shop)\n• Pressure Skate Shop -A melhor do Rio (skate shop)\n• Pressure SkateShop & 46Inline (skate shop)\n• Skate Crime (skate shop)\n• Skate Rock (skate shop)\n• Sliver Skate Shop - Loja de Skate no RJ (skate shop)\n• Street Force Skate (skate shop)\n\nOpen the Skatemap and see what is new near you. Something missing? Send it to us via “Add”."
+      }
+    },
+    "type": "image",
+    "content": "/uploads/posts/auto/skatemap-update-541_73.jpg",
+    "media": {
+      "images": [
+        "/uploads/posts/auto/skatemap-update-541_73.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "/skatemap/"
+    },
+    "source": "CURBSIDE",
+    "date": "Nov 12, 2026",
+    "tags": [
+      "Skatemap",
+      "Update"
+    ],
+    "status": "published",
+    "auto": {
+      "kind": "map-summary",
+      "refs": [
+        "map:park:-22.8046,-43.1790",
+        "map:park:-22.8627,-43.2388",
+        "map:park:-22.6957,-43.2840",
+        "map:park:-22.9791,-43.2169",
+        "map:park:-22.8546,-43.3530",
+        "map:park:-22.9093,-43.2272",
+        "map:park:-22.8030,-43.3654",
+        "map:park:-22.9145,-43.0966",
+        "map:park:-22.8640,-43.3452",
+        "map:shop:-22.9225,-43.2309",
+        "map:shop:-22.9646,-43.3528",
+        "map:shop:-22.9021,-43.1724",
+        "map:shop:-22.9688,-43.3664",
+        "map:shop:-22.9872,-43.1910",
+        "map:shop:-22.8967,-43.1270",
+        "map:shop:-22.9038,-43.1788",
+        "map:shop:-22.7882,-43.3118",
+        "map:shop:-22.8107,-43.1836",
+        "map:shop:-22.9872,-43.1909"
+      ],
+      "created": "2026-11-12T14:21:06.757Z"
+    }
+  },
+  {
     "id": "post_1794487053651_744",
     "title": "Respekt für die Skater in Uniform",
     "description": "Am Veterans Day geht es darum, all den Leuten zu danken, die dem Land gedient haben – und da gehören natürlich auch Skater dazu. Viele Skateboarder haben ihren Dienst beim Militär geleistet und dabei ...",

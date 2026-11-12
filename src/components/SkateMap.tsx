@@ -103,6 +103,13 @@ export default function SkateMap({ points, tall = false }: { points: MapPoint[];
     const [locating, setLocating] = useState(false);
     const [locError, setLocError] = useState<string | null>(null);
     const [target, setTarget] = useState<{ lat: number; lng: number; zoom: number; n: number } | null>(null);
+    // Link aus einem News-Beitrag (/skatemap/?at=49.01,8.40&z=12) → direkt zur Stelle springen
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const m = params.get("at")?.match(/^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/);
+        const z = Number(params.get("z"));
+        if (m) setTarget({ lat: Number(m[1]), lng: Number(m[2]), zoom: z >= 3 && z <= 18 ? z : 16, n: Date.now() });
+    }, []);
     const locate = () => {
         setLocError(null);
         if (!("geolocation" in navigator)) { setLocError(t("map.loc_unsupported")); return; }

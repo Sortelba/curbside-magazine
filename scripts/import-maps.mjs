@@ -13,6 +13,7 @@
 // Dublette. Neue Spots für My Maps exportieren: node scripts/export-kml.mjs --neu
 import fs from 'node:fs';
 import path from 'node:path';
+import { queueMapItems } from '../src/lib/autoPosts.mjs';
 
 // Die Quellen (Google-Listen und My-Maps-Karten) stehen in src/data/map-extra.json
 // unter "sources" und lassen sich im Admin-Dashboard (Community → Skatemap) bearbeiten.
@@ -313,5 +314,16 @@ for (const p of changes.added) console.log(`  + ${p.name} (${p.type})`);
 for (const p of changes.removed) console.log(`  - ${p.name} (${p.type})`);
 for (const p of changes.moved) console.log(`  ~ ${p.name} um ${p.meters} m verschoben`);
 for (const p of changes.changed) console.log(`  * ${p.name}: ${p.what.join(', ')}`);
+// Neue Spots/Parks/Shops als Vorschläge für einen News-Beitrag merken (Admin → Auto-Posts).
+// Beim allerersten Import (noch keine alte Karte) nicht.
+if (oldSpots.length && added.length) {
+    try {
+        const addedIds = new Set(added.map((p) => p.id));
+        const n = queueMapItems(spots.filter((p) => addedIds.has(p.id) && !p.hidden), 'Skatemap-Scan');
+        if (n) console.log(`Auto-Posts: ${n} neue Einträge können im Admin unter „Auto-Posts“ gepostet werden.`);
+    } catch (e) {
+        console.log(`Auto-Posts übersprungen: ${e.message}`);
+    }
+}
 // Maschinenlesbar für das Admin-Dashboard
 console.log(`CHANGES_JSON ${JSON.stringify(changes)}`);
