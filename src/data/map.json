@@ -2,6 +2,15 @@
   "updated": "2026-11-12",
   "spots": [
     {
+      "id": "park_52d07620_5d42186",
+      "name": "'t Woudpark",
+      "type": "park",
+      "lat": 52.076201,
+      "lng": 5.42186,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.076201,5.421860",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d95970_6d90891",
       "name": "„Salatschüssel“ (Skatepark)",
       "type": "park",
@@ -26,6 +35,15 @@
       "lat": 48.515448,
       "lng": 9.045798,
       "url": "https://www.google.com/maps/search/?api=1&query=48.515448,9.045798",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m27d82344_m50d33676",
+      "name": "404diyspot",
+      "type": "park",
+      "lat": -27.823439,
+      "lng": -50.336762,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.823439,-50.336762",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -211,6 +229,15 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_52d19298_20d93474",
+      "name": "Ave Park",
+      "type": "park",
+      "lat": 52.192984,
+      "lng": 20.934743,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.192984,20.934743",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m23d51201_m46d62162",
       "name": "Avenida Moysés Roysen skatepark",
       "type": "park",
@@ -247,6 +274,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d77974_51d00251",
+      "name": "Banafsheh Skate Field",
+      "type": "park",
+      "lat": 35.779742,
+      "lng": 51.002509,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.779742,51.002509",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m32d94189_151d76562",
       "name": "Bar Beach Skate Park",
       "type": "park",
@@ -271,6 +307,15 @@
       "lat": 56.290516,
       "lng": 43.853282,
       "url": "https://www.google.com/maps/search/?api=1&query=56.290516,43.853282",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_46d07069_23d57573",
+      "name": "Bastion Skatepark",
+      "type": "park",
+      "lat": 46.070686,
+      "lng": 23.575728,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.070686,23.575728",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -422,6 +467,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_45d01702_38d95646",
+      "name": "Betonnyy Skeyt-Park",
+      "type": "park",
+      "lat": 45.017019,
+      "lng": 38.956458,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.017019,38.956458",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d26553_11d23475",
       "name": "Big Berta Skateplaza Zirl",
       "type": "park",
@@ -492,6 +546,15 @@
       "lat": -38.326427,
       "lng": 144.316979,
       "url": "https://www.google.com/maps/search/?api=1&query=-38.326427,144.316979",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d50961_23d18989",
+      "name": "BMX Dirt Park",
+      "type": "park",
+      "lat": 49.509611,
+      "lng": 23.189887,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.509611,23.189887",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -631,6 +694,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_45d80150_39d00437",
+      "name": "Bryukhovetskaya Skate Park",
+      "type": "park",
+      "lat": 45.801495,
+      "lng": 39.004375,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.801495,39.004375",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d47207_13d41660",
       "name": "Bucht DIY Skatepark",
       "type": "park",
@@ -692,6 +764,15 @@
       "lat": 39.366592,
       "lng": 3.218375,
       "url": "https://www.google.com/maps/search/?api=1&query=39.366592,3.218375",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d25983_21d16594",
+      "name": "CAŁOROCZNY KRYTY SKATEPARK WOODPARK",
+      "type": "park",
+      "lat": 52.259828,
+      "lng": 21.165939,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.259828,21.165939",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -987,6 +1068,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m25d43489_m49d26585",
+      "name": "Curitiba Skate Park",
+      "type": "park",
+      "lat": -25.434894,
+      "lng": -49.26585,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.434894,-49.265850",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d84903_m0d55933",
       "name": "Darwin",
       "type": "park",
@@ -1095,6 +1185,15 @@
       "lng": -46.61721,
       "url": "https://www.google.com/maps/search/?api=1&query=-23.491330,-46.617210",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_m26d88940_m49d24528",
+      "name": "Dovale Skatepark",
+      "type": "park",
+      "lat": -26.889396,
+      "lng": -49.245278,
+      "url": "https://www.google.com/maps/search/?api=1&query=-26.889396,-49.245278",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_36d03304_m115d14355",
@@ -1239,6 +1338,15 @@
       "lat": -32.94097,
       "lng": 151.765599,
       "url": "https://www.google.com/maps/search/?api=1&query=-32.940970,151.765599",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d18039_7d53789",
+      "name": "Emsdetten Skatepark",
+      "type": "park",
+      "lat": 52.180391,
+      "lng": 7.537888,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.180391,7.537888",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1525,6 +1633,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d84498_6d25145",
+      "name": "Gleggmires Skatepark",
+      "type": "park",
+      "lat": 51.844984,
+      "lng": 6.251448,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.844984,6.251448",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d49555_13d37341",
       "name": "Gleisdreieck - Skatepark",
       "type": "park",
@@ -1594,6 +1711,15 @@
       "lat": -33.840149,
       "lng": 150.998744,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.840149,150.998744",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m27d30009_m50d56446",
+      "name": "Greenfallskatepark",
+      "type": "park",
+      "lat": -27.300093,
+      "lng": -50.56446,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.300093,-50.564460",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1715,6 +1841,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d91443_4d45428",
+      "name": "Heemraadssingel skate pool",
+      "type": "park",
+      "lat": 51.914426,
+      "lng": 4.45428,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.914426,4.454280",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m37d79955_144d97803",
       "name": "Hemley Skateboarding",
       "type": "park",
@@ -1770,6 +1905,15 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_52d30807_4d63602",
+      "name": "Hoofddorp Skatepark",
+      "type": "park",
+      "lat": 52.308073,
+      "lng": 4.63602,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.308073,4.636020",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m43d56214_172d59465",
       "name": "Hoon Hay Park",
       "type": "park",
@@ -1813,6 +1957,15 @@
       "lat": 59.340161,
       "lng": 18.070989,
       "url": "https://www.google.com/maps/search/?api=1&query=59.340161,18.070989",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m30d01797_m51d17985",
+      "name": "Iapi Skate Park",
+      "type": "park",
+      "lat": -30.017971,
+      "lng": -51.179851,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.017971,-51.179851",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2059,6 +2212,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d12214_4d65110",
+      "name": "Kenzy Skatepark",
+      "type": "park",
+      "lat": 52.122141,
+      "lng": 4.651099,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.122141,4.651099",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m33d97242_18d47922",
       "name": "Keurboom Park Skateboard Park Basketball Court",
       "type": "park",
@@ -2206,6 +2368,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d56076_5d08976",
+      "name": "Ladybird Skatepark",
+      "type": "park",
+      "lat": 51.560761,
+      "lng": 5.089757,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.560761,5.089757",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_55d87008_12d82121",
       "name": "Lagunen - Landskrona Skatepark",
       "type": "park",
@@ -2332,6 +2503,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d75080_51d41768",
+      "name": "Lio Skate Park",
+      "type": "park",
+      "lat": 35.750797,
+      "lng": 51.417679,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.750797,51.417679",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d02048_m93d08251",
       "name": "Little Canada skatepark",
       "type": "park",
@@ -2361,6 +2541,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d76086_19d43543",
+      "name": "Łódź Skate Club",
+      "type": "park",
+      "lat": 51.760856,
+      "lng": 19.435429,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.760856,19.435429",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d95778_6d95409",
       "name": "Lohserampe",
       "type": "park",
@@ -2378,6 +2567,15 @@
       "description": "defiantly a bike park. the bowls are not smooth enough for skateboarding. the ledges are all rounded off from peg grinds.",
       "url": "https://www.google.com/maps/search/?api=1&query=35.086900,-106.534633",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_m25d42561_m49d26947",
+      "name": "Love City",
+      "type": "park",
+      "lat": -25.42561,
+      "lng": -49.269475,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.425610,-49.269475",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_43d95634_m86d45946",
@@ -2404,6 +2602,15 @@
       "lat": 45.550714,
       "lng": -122.528737,
       "url": "https://www.google.com/maps/search/?api=1&query=45.550714,-122.528737",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d81385_3d23632",
+      "name": "Luxaplast",
+      "type": "park",
+      "lat": 50.813848,
+      "lng": 3.236319,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.813848,3.236319",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2550,6 +2757,15 @@
       "lat": 40.419064,
       "lng": -105.123853,
       "url": "https://www.google.com/maps/search/?api=1&query=40.419064,-105.123853",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d80448_50d90389",
+      "name": "Mehrshahr Skate Academy",
+      "type": "park",
+      "lat": 35.804476,
+      "lng": 50.90389,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.804476,50.903890",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2791,6 +3007,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d76159_51d34290",
+      "name": "Nahjolbalagheh Skate Park",
+      "type": "park",
+      "lat": 35.761589,
+      "lng": 51.342898,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.761589,51.342898",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d44001_4d86337",
       "name": "Namur Skatepark",
       "type": "park",
@@ -2977,6 +3202,15 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_51d91378_4d35137",
+      "name": "Oranjepark Skatepark",
+      "type": "park",
+      "lat": 51.913779,
+      "lng": 4.351369,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.913779,4.351369",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_33d98054_m117d57655",
       "name": "Orchard Skatepark",
       "type": "park",
@@ -3095,12 +3329,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d03394_23d90243",
+      "name": "Parc skateboard",
+      "type": "park",
+      "lat": 47.033938,
+      "lng": 23.902431,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.033938,23.902431",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d02046_10d12404",
       "name": "Parco Comunale delle Villette Skatepark",
       "type": "park",
       "lat": 44.02046,
       "lng": 10.124037,
       "url": "https://www.google.com/maps/search/?api=1&query=44.020460,10.124037",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_46d76491_23d55270",
+      "name": "Parcul Rozelor",
+      "type": "park",
+      "lat": 46.764914,
+      "lng": 23.552695,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.764914,23.552695",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d38449_4d92897",
+      "name": "PARK AMSTERDAM",
+      "type": "park",
+      "lat": 52.384488,
+      "lng": 4.928968,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.384488,4.928968",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3149,6 +3410,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m25d47914_m49d19317",
+      "name": "Peladeiro Skate Park",
+      "type": "park",
+      "lat": -25.479144,
+      "lng": -49.193172,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.479144,-49.193172",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_42d67741_2d90296",
       "name": "Perpignan Skatepark",
       "type": "park",
@@ -3194,6 +3464,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d59943_4d76488",
+      "name": "Pier15 Skatepark",
+      "type": "park",
+      "lat": 51.599435,
+      "lng": 4.76488,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.599435,4.764880",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_43d96025_10d22506",
       "name": "Pietrasanta Skate Plaza",
       "type": "park",
@@ -3203,12 +3482,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m25d42410_m49d18308",
+      "name": "Pinhais Skate Park",
+      "type": "park",
+      "lat": -25.424098,
+      "lng": -49.183076,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.424098,-49.183076",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_35d83077_m96d40431",
       "name": "Pirate Action Sports Park",
       "type": "park",
       "lat": 35.830767,
       "lng": -96.404307,
       "url": "https://www.google.com/maps/search/?api=1&query=35.830767,-96.404307",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m25d50842_m49d18945",
+      "name": "Pista da Creche",
+      "type": "park",
+      "lat": -25.508421,
+      "lng": -49.189454,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.508421,-49.189454",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m25d56605_m49d33847",
+      "name": "Pista de skate",
+      "type": "park",
+      "lat": -25.566054,
+      "lng": -49.338467,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.566054,-49.338467",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m25d53840_m48d52705",
+      "name": "Pista de skate",
+      "type": "park",
+      "lat": -25.538398,
+      "lng": -48.527051,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.538398,-48.527051",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3257,6 +3572,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m27d11261_m50d00001",
+      "name": "Pista de Skate",
+      "type": "park",
+      "lat": -27.112611,
+      "lng": -50.000009,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.112611,-50.000009",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m24d70740_m47d55104",
+      "name": "Pista de Skate",
+      "type": "park",
+      "lat": -24.707398,
+      "lng": -47.55104,
+      "url": "https://www.google.com/maps/search/?api=1&query=-24.707398,-47.551040",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m26d77103_m51d01605",
+      "name": "Pista de Skate - Praça da Concórdia",
+      "type": "park",
+      "lat": -26.771026,
+      "lng": -51.016047,
+      "url": "https://www.google.com/maps/search/?api=1&query=-26.771026,-51.016047",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m12d72367_m38d33028",
       "name": "Pista de Skate - Praça das Flores (Gleba E)",
       "type": "park",
@@ -3293,6 +3635,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m27d30576_m50d57669",
+      "name": "Pista de Skate Altemir João Balbinotti - \"Macarrão\"",
+      "type": "park",
+      "lat": -27.305763,
+      "lng": -50.576693,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.305763,-50.576693",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m22d69567_m43d28395",
       "name": "Pista de skate Arthur Dias",
       "type": "park",
@@ -3308,6 +3659,15 @@
       "lat": -8.140552,
       "lng": -34.90369,
       "url": "https://www.google.com/maps/search/?api=1&query=-8.140552,-34.903690",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m27d82709_m50d31340",
+      "name": "Pista de Skate Buy Escarpa",
+      "type": "park",
+      "lat": -27.827091,
+      "lng": -50.313396,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.827091,-50.313396",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3357,6 +3717,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m24d38519_m47d93193",
+      "name": "Pista De Skate De Sete Barras",
+      "type": "park",
+      "lat": -24.38519,
+      "lng": -47.93193,
+      "url": "https://www.google.com/maps/search/?api=1&query=-24.385190,-47.931930",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m12d96919_m38d43170",
       "name": "Pista de Skate do Imbuí",
       "type": "park",
@@ -3366,12 +3735,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m25d01182_m47d92707",
+      "name": "Pista de Skate Isaque Reis Domingues Matias de Oliveira",
+      "type": "park",
+      "lat": -25.011823,
+      "lng": -47.927067,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.011823,-47.927067",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m26d99973_m51d15792",
+      "name": "Pista de skate municipal",
+      "type": "park",
+      "lat": -26.999729,
+      "lng": -51.157925,
+      "url": "https://www.google.com/maps/search/?api=1&query=-26.999729,-51.157925",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m24d72801_m48d11469",
+      "name": "Pista de Skate Municipal de Cajati",
+      "type": "park",
+      "lat": -24.728013,
+      "lng": -48.11469,
+      "url": "https://www.google.com/maps/search/?api=1&query=-24.728013,-48.114690",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m8d13027_m34d90912",
       "name": "Pista de Skate Parque Santos Dumont",
       "type": "park",
       "lat": -8.130266,
       "lng": -34.909118,
       "url": "https://www.google.com/maps/search/?api=1&query=-8.130266,-34.909118",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m25d42084_m49d27484",
+      "name": "Pista do Gaúcho",
+      "type": "park",
+      "lat": -25.420841,
+      "lng": -49.274841,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.420841,-49.274841",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m24d32200_m47d63626",
+      "name": "Pista para Skate Municipal",
+      "type": "park",
+      "lat": -24.321997,
+      "lng": -47.636265,
+      "url": "https://www.google.com/maps/search/?api=1&query=-24.321997,-47.636265",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3437,6 +3851,15 @@
       "lng": -93.462195,
       "url": "https://www.google.com/maps/search/?api=1&query=45.023665,-93.462195",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_53d41614_14d54710",
+      "name": "PNP ARENA SKATEPARK - KRYTY SKATEPARK SZCZECIN CENTRUM! SKLEP Z DESKOROLKAMI / SZKÓŁKA DESKOROLKI / DESKOROLKA SZCZECIN",
+      "type": "park",
+      "lat": 53.416137,
+      "lng": 14.547101,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.416137,14.547101",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_27d89239_m101d41306",
@@ -3531,6 +3954,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d43244_14d52239",
+      "name": "Pumptrack",
+      "type": "park",
+      "lat": 53.432441,
+      "lng": 14.522395,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.432441,14.522395",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d80034_19d63591",
       "name": "PUMPTRACK BREZNO",
       "type": "park",
@@ -3573,6 +4005,24 @@
       "lat": 49.0235,
       "lng": 10.021483,
       "url": "https://www.google.com/maps/search/?api=1&query=49.023500,10.021483",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d03976_21d95045",
+      "name": "Pumptrack Salca",
+      "type": "park",
+      "lat": 47.039759,
+      "lng": 21.950452,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.039759,21.950452",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d61104_5d13400",
+      "name": "Pumptrack Udenhout",
+      "type": "park",
+      "lat": 51.611045,
+      "lng": 5.134005,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.611045,5.134005",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3666,6 +4116,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d02991_18d61229",
+      "name": "RepublikaPark Skatepark Kryty tor OCR/Ninja",
+      "type": "park",
+      "lat": 53.029908,
+      "lng": 18.612289,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.029908,18.612289",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_42d24896_m71d12898",
       "name": "Reservation Skatepark",
       "type": "park",
@@ -3736,6 +4195,15 @@
       "lng": 8.427408,
       "description": "Mittwoch bist sonntag 16-22 Uhr skaten. 3 verschieden hohe miniramp sections, ledges und manni pads. eintritt 2€ für mitglieder und 5€ für nicht mitglieder. mehr infos: https://rollbrett-ev.de/",
       "url": "https://www.google.com/maps/search/?api=1&query=49.002266,8.427408",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d11992_18d04928",
+      "name": "Roller Park — wrotkarnia",
+      "type": "park",
+      "lat": 53.119925,
+      "lng": 18.049275,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.119925,18.049275",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3956,6 +4424,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d72779_51d28707",
+      "name": "Shetab Skating Club",
+      "type": "park",
+      "lat": 35.727793,
+      "lng": 51.287072,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.727793,51.287072",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_55d57475_12d90875",
       "name": "Sibbarp Skate & Activity Park",
       "type": "park",
@@ -4007,6 +4484,33 @@
       "lat": -23.523978,
       "lng": -46.646411,
       "url": "https://www.google.com/maps/search/?api=1&query=-23.523978,-46.646411",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m24d75024_m47d55299",
+      "name": "Skate lane",
+      "type": "park",
+      "lat": -24.750242,
+      "lng": -47.552988,
+      "url": "https://www.google.com/maps/search/?api=1&query=-24.750242,-47.552988",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m30d04973_m51d23323",
+      "name": "Skate Park - Megapista Orla do Guaíba",
+      "type": "park",
+      "lat": -30.049728,
+      "lng": -51.233226,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.049728,-51.233226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m30d05181_m51d23166",
+      "name": "Skate Park - Pista do Marinha",
+      "type": "park",
+      "lat": -30.05181,
+      "lng": -51.231661,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.051810,-51.231661",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4246,6 +4750,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d78925_6d15364",
+      "name": "Skate Park Kleve",
+      "type": "park",
+      "lat": 51.789248,
+      "lng": 6.153638,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.789248,6.153638",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d54261_13d72565",
       "name": "Skate Park Koper/Capodistria",
       "type": "park",
@@ -4408,6 +4921,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d54928_23d54066",
+      "name": "Skate Park Włodawa",
+      "type": "park",
+      "lat": 51.549283,
+      "lng": 23.540664,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.549283,23.540664",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d42138_m3d82049",
       "name": "Skate park y Pump track Valle de las Cañas",
       "type": "park",
@@ -4423,6 +4945,15 @@
       "lat": -5.87484,
       "lng": -35.181788,
       "url": "https://www.google.com/maps/search/?api=1&query=-5.874840,-35.181788",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_10d68647_m61d61712",
+      "name": "Skate Warehouse",
+      "type": "park",
+      "lat": 10.686472,
+      "lng": -61.617118,
+      "url": "https://www.google.com/maps/search/?api=1&query=10.686472,-61.617118",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4489,6 +5020,87 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d37417_5d25609",
+      "name": "Skatebaan Appelbrug Almere",
+      "type": "park",
+      "lat": 52.374168,
+      "lng": 5.256089,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.374168,5.256089",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d12466_6d24365",
+      "name": "Skatebaan canyon",
+      "type": "park",
+      "lat": 52.124665,
+      "lng": 6.243645,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.124665,6.243645",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d34128_5d62997",
+      "name": "Skatebaan Harderwijk",
+      "type": "park",
+      "lat": 52.341284,
+      "lng": 5.629969,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.341284,5.629969",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d14533_4d69207",
+      "name": "Skatebaan Heempark",
+      "type": "park",
+      "lat": 52.145334,
+      "lng": 4.692068,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.145334,4.692068",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d08894_5d10590",
+      "name": "Skatebaan Jaarbeursplein",
+      "type": "park",
+      "lat": 52.088938,
+      "lng": 5.105903,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.088938,5.105903",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d68729_5d33764",
+      "name": "Skatebaan Oosterplas 🛹",
+      "type": "park",
+      "lat": 51.687294,
+      "lng": 5.337638,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.687294,5.337638",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d16935_5d28466",
+      "name": "Skatebaan Soest 🛹",
+      "type": "park",
+      "lat": 52.169354,
+      "lng": 5.284655,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.169354,5.284655",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d09807_5d01518",
+      "name": "Skatebaan Vleuterweide🛹",
+      "type": "park",
+      "lat": 52.098068,
+      "lng": 5.015178,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.098068,5.015178",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d26884_5d17825",
+      "name": "Skatebaan, Skatepark Ceintuurbaan Bussum",
+      "type": "park",
+      "lat": 52.268841,
+      "lng": 5.178248,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.268841,5.178248",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_35d19708_m90d19259",
       "name": "Skateboard Park",
       "type": "park",
@@ -4552,6 +5164,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m27d20921_m49d65086",
+      "name": "Skateboards Lane",
+      "type": "park",
+      "lat": -27.209207,
+      "lng": -49.650859,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.209207,-49.650859",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_54d80374_9d44082",
       "name": "Skatefläche (Harnisskatespitze)",
       "type": "park",
@@ -4585,6 +5206,15 @@
       "lat": 49.884028,
       "lng": 10.905226,
       "url": "https://www.google.com/maps/search/?api=1&query=49.884028,10.905226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d90792_4d51202",
+      "name": "Skateland Rotterdam",
+      "type": "park",
+      "lat": 51.907916,
+      "lng": 4.512024,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.907916,4.512024",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4630,6 +5260,15 @@
       "lat": 46.068487,
       "lng": 14.52142,
       "url": "https://www.google.com/maps/search/?api=1&query=46.068487,14.521420",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d24145_22d56553",
+      "name": "Skatepark \"Rusałka\"",
+      "type": "park",
+      "lat": 51.241453,
+      "lng": 22.565527,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.241453,22.565527",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4706,6 +5345,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d25643_4d76653",
+      "name": "Skatepark Aalsmeer🛹",
+      "type": "park",
+      "lat": 52.256429,
+      "lng": 4.766529,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.256429,4.766529",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d72909_9d32144",
       "name": "Skatepark Adenauer Brücke",
       "type": "park",
@@ -4757,6 +5405,24 @@
       "lat": 38.354029,
       "lng": -0.490964,
       "url": "https://www.google.com/maps/search/?api=1&query=38.354029,-0.490964",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d40225_5d30304",
+      "name": "Skatepark Almere-Buiten",
+      "type": "park",
+      "lat": 52.402245,
+      "lng": 5.303039,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.402245,5.303039",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d40184_14d68244",
+      "name": "Skatepark Altdamm",
+      "type": "park",
+      "lat": 53.401843,
+      "lng": 14.682441,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.401843,14.682441",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4823,6 +5489,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d00380_6d52607",
+      "name": "Skatepark Assen Kloosterveen",
+      "type": "park",
+      "lat": 53.003799,
+      "lng": 6.526065,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.003799,6.526065",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_27d95787_m82d45481",
       "name": "Skatepark at Perry Harvey Sr. Park",
       "type": "park",
@@ -4860,6 +5535,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_47d66571_23d57864",
+      "name": "Skatepark Baia Mare",
+      "type": "park",
+      "lat": 47.665709,
+      "lng": 23.578643,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.665709,23.578643",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_38d73468_m9d12581",
       "name": "Skatepark Bairro Horizonte",
       "type": "park",
@@ -4885,6 +5569,15 @@
       "lat": -6.4816,
       "lng": -36.150625,
       "url": "https://www.google.com/maps/search/?api=1&query=-6.481600,-36.150625",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d18729_3d19826",
+      "name": "Skatepark Beastwood",
+      "type": "park",
+      "lat": 51.18729,
+      "lng": 3.19826,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.187290,3.198260",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4915,12 +5608,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d01250_23d09758",
+      "name": "Skatepark Biała Podlaska",
+      "type": "park",
+      "lat": 52.012497,
+      "lng": 23.097585,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.012497,23.097585",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d82225_10d63908",
       "name": "Skatepark Biessenhofen",
       "type": "park",
       "lat": 47.822252,
       "lng": 10.639077,
       "url": "https://www.google.com/maps/search/?api=1&query=47.822252,10.639077",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d04863_3d68756",
+      "name": "Skatepark Blaarmeersen",
+      "type": "park",
+      "lat": 51.048632,
+      "lng": 3.687558,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.048632,3.687558",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d31579_3d14448",
+      "name": "Skatepark Blankenberge",
+      "type": "park",
+      "lat": 51.315792,
+      "lng": 3.144477,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.315792,3.144477",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d11658_17d95532",
+      "name": "Skatepark Błonie",
+      "type": "park",
+      "lat": 53.116584,
+      "lng": 17.955323,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.116584,17.955323",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d15435_18d13876",
+      "name": "Skatepark Bohaterów",
+      "type": "park",
+      "lat": 53.154353,
+      "lng": 18.138757,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.154353,18.138757",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4951,6 +5689,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d13181_17d98785",
+      "name": "Skatepark Brenkenhof",
+      "type": "park",
+      "lat": 53.131808,
+      "lng": 17.987854,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.131808,17.987854",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d98363_3d52491",
+      "name": "Skatepark Briel",
+      "type": "park",
+      "lat": 50.983634,
+      "lng": 3.524907,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.983634,3.524907",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d03947_17d99250",
+      "name": "Skatepark Brzoza",
+      "type": "park",
+      "lat": 53.039468,
+      "lng": 17.992497,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.039468,17.992497",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d19101_12d04163",
       "name": "Skatepark Burglengenfeld",
       "type": "park",
@@ -4966,6 +5731,15 @@
       "lat": 50.432958,
       "lng": 8.683803,
       "url": "https://www.google.com/maps/search/?api=1&query=50.432958,8.683803",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_46d54641_23d89037",
+      "name": "Skatepark Campia Turzii",
+      "type": "park",
+      "lat": 46.546406,
+      "lng": 23.890366,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.546406,23.890366",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4996,6 +5770,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_50d24523_23d13184",
+      "name": "Skatepark Cieszanów",
+      "type": "park",
+      "lat": 50.245227,
+      "lng": 23.131839,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.245227,23.131839",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_10d45027_m66d87542",
       "name": "Skatepark Ciudadela",
       "type": "park",
@@ -5014,12 +5797,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d22710_6d60731",
+      "name": "skatepark Colosseum",
+      "type": "park",
+      "lat": 53.227096,
+      "lng": 6.607312,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.227096,6.607312",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d79594_1d23652",
       "name": "Skatepark condat sur Vienne",
       "type": "park",
       "lat": 45.795941,
       "lng": 1.236525,
       "url": "https://www.google.com/maps/search/?api=1&query=45.795941,1.236525",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d21682_5d45199",
+      "name": "Skatepark Corlaer",
+      "type": "park",
+      "lat": 52.216824,
+      "lng": 5.45199,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.216824,5.451990",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5059,12 +5860,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d21829_6d89212",
+      "name": "Skatepark De Boulevard",
+      "type": "park",
+      "lat": 52.218288,
+      "lng": 6.89212,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.218288,6.892120",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_46d78794_1d70462",
       "name": "Skatepark de Châteauroux, La Margotière",
       "type": "park",
       "lat": 46.787935,
       "lng": 1.704619,
       "url": "https://www.google.com/maps/search/?api=1&query=46.787935,1.704619",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d22301_6d90394",
+      "name": "Skatepark de Fabriek",
+      "type": "park",
+      "lat": 52.223014,
+      "lng": 6.903941,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.223014,6.903941",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d82811_5d83745",
+      "name": "Skatepark de Goffert",
+      "type": "park",
+      "lat": 51.828114,
+      "lng": 5.837453,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.828114,5.837453",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d13077_5d41440",
+      "name": "Skatepark De IJsbreker, Leusden",
+      "type": "park",
+      "lat": 52.130772,
+      "lng": 5.414397,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.130772,5.414397",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5102,6 +5939,24 @@
       "lat": 48.392709,
       "lng": 7.626239,
       "url": "https://www.google.com/maps/search/?api=1&query=48.392709,7.626239",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d20416_6d54783",
+      "name": "Skatepark De Paardenbak",
+      "type": "park",
+      "lat": 53.204159,
+      "lng": 6.547828,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.204159,6.547828",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d17487_5d38163",
+      "name": "skatepark De Pool Schothorst",
+      "type": "park",
+      "lat": 52.174865,
+      "lng": 5.381628,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.174865,5.381628",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5148,6 +6003,24 @@
       "lat": 48.549088,
       "lng": 19.412192,
       "url": "https://www.google.com/maps/search/?api=1&query=48.549088,19.412192",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d25954_6d19245",
+      "name": "Skatepark Deventer",
+      "type": "park",
+      "lat": 52.25954,
+      "lng": 6.192454,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.259540,6.192454",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d94494_6d12146",
+      "name": "Skatepark Didam🛹",
+      "type": "park",
+      "lat": 51.944941,
+      "lng": 6.12146,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.944941,6.121460",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5205,12 +6078,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d81036_4d65275",
+      "name": "Skatepark Dordrecht Maasplaza",
+      "type": "park",
+      "lat": 51.81036,
+      "lng": 4.652747,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.810360,4.652747",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d02467_4d49261",
       "name": "Skatepark Douaneplein",
       "type": "park",
       "lat": 51.024667,
       "lng": 4.49261,
       "url": "https://www.google.com/maps/search/?api=1&query=51.024667,4.492610",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d44575_23d41269",
+      "name": "Skatepark drzedzior",
+      "type": "park",
+      "lat": 50.445755,
+      "lng": 23.412686,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.445755,23.412686",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5269,6 +6160,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d36746_7d19402",
+      "name": "Skatepark Emden",
+      "type": "park",
+      "lat": 53.367463,
+      "lng": 7.194019,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.367463,7.194019",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d36370_m3d62152",
       "name": "Skatepark Enrique Chacón Madrid",
       "type": "park",
@@ -5277,6 +6177,15 @@
       "description": "Skatepark in Madrid. (Quelle: skatemap.de)",
       "url": "https://www.google.com/maps/search/?api=1&query=40.363700,-3.621520",
       "source": "Von dir geschickt"
+    },
+    {
+      "id": "park_51d22505_3d22599",
+      "name": "Skatepark entrepot",
+      "type": "park",
+      "lat": 51.225049,
+      "lng": 3.225986,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.225049,3.225986",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_48d89517_8d72670",
@@ -5361,12 +6270,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d05761_5d08189",
+      "name": "Skatepark Galecop",
+      "type": "park",
+      "lat": 52.05761,
+      "lng": 5.081892,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.057610,5.081892",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d62415_9d81978",
       "name": "Skatepark Geislingen an der Steige",
       "type": "park",
       "lat": 48.624152,
       "lng": 9.819778,
       "url": "https://www.google.com/maps/search/?api=1&query=48.624152,9.819778",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d51503_6d33179",
+      "name": "Skatepark Geldern",
+      "type": "park",
+      "lat": 51.515028,
+      "lng": 6.331788,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.515028,6.331788",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5379,6 +6306,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d11045_17d97505",
+      "name": "Skatepark Gorzyskowo",
+      "type": "park",
+      "lat": 53.110452,
+      "lng": 17.97505,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.110452,17.975050",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_19d43721_m99d10685",
       "name": "Skatepark Gran Canal",
       "type": "park",
@@ -5386,6 +6322,15 @@
       "lng": -99.106846,
       "url": "https://www.google.com/maps/search/?api=1&query=19.437209,-99.106846",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_52d09885_5d12773",
+      "name": "Skatepark Griftpark Utrecht🛹",
+      "type": "park",
+      "lat": 52.098851,
+      "lng": 5.127733,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.098851,5.127733",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_49d88360_9d14973",
@@ -5404,6 +6349,24 @@
       "lat": 39.565232,
       "lng": -0.519752,
       "url": "https://www.google.com/maps/search/?api=1&query=39.565232,-0.519752",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d38645_4d65406",
+      "name": "Skatepark Haarlem",
+      "type": "park",
+      "lat": 52.386449,
+      "lng": 4.654064,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.386449,4.654064",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d45159_21d40826",
+      "name": "Skatepark Hajdúszoboszló",
+      "type": "park",
+      "lat": 47.451585,
+      "lng": 21.408261,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.451585,21.408261",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5440,6 +6403,15 @@
       "lat": 47.989846,
       "lng": 7.852313,
       "url": "https://www.google.com/maps/search/?api=1&query=47.989846,7.852313",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d33631_4d62630",
+      "name": "Skatepark Heemstede",
+      "type": "park",
+      "lat": 52.336307,
+      "lng": 4.626295,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.336307,4.626295",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5516,12 +6488,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d18683_5d38369",
+      "name": "Skatepark Hoogland",
+      "type": "park",
+      "lat": 52.186831,
+      "lng": 5.383695,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.186831,5.383695",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d86119_4d35488",
+      "name": "Skatepark Hoogvliet",
+      "type": "park",
+      "lat": 51.861187,
+      "lng": 4.354876,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.861187,4.354876",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d10288_6d80436",
       "name": "Skatepark Horrem",
       "type": "park",
       "lat": 51.102877,
       "lng": 6.804362,
       "url": "https://www.google.com/maps/search/?api=1&query=51.102877,6.804362",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d19197_23d36175",
+      "name": "Skatepark Horyniec-Zdrój",
+      "type": "park",
+      "lat": 50.191975,
+      "lng": 23.361751,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.191975,23.361751",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5588,12 +6587,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d31227_21d05919",
+      "name": "Skatepark im. Władysławy Bąk w Parku Magiczna",
+      "type": "park",
+      "lat": 52.312268,
+      "lng": 21.059192,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.312268,21.059192",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d37412_14d47229",
+      "name": "Skatepark im.Igora kobyłki",
+      "type": "park",
+      "lat": 53.374116,
+      "lng": 14.472289,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.374116,14.472289",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d26111_6d79333",
+      "name": "Skatepark Industrieplein",
+      "type": "park",
+      "lat": 52.261108,
+      "lng": 6.79333,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.261108,6.793330",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_36d59575_m4d53023",
       "name": "Skatepark Innova",
       "type": "park",
       "lat": 36.595751,
       "lng": -4.530226,
       "url": "https://www.google.com/maps/search/?api=1&query=36.595751,-4.530226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d79085_18d25716",
+      "name": "Skatepark Inowrazlaw",
+      "type": "park",
+      "lat": 52.790849,
+      "lng": 18.257163,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.790849,18.257163",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5621,6 +6656,24 @@
       "lat": 36.692505,
       "lng": -6.115116,
       "url": "https://www.google.com/maps/search/?api=1&query=36.692505,-6.115116",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d26291_23d25958",
+      "name": "Skatepark Jibou",
+      "type": "park",
+      "lat": 47.262906,
+      "lng": 23.259584,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.262906,23.259584",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d22635_21d03270",
+      "name": "Skatepark Jutrzenka",
+      "type": "park",
+      "lat": 52.226354,
+      "lng": 21.032704,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.226354,21.032704",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5660,6 +6713,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d24027_6d59600",
+      "name": "Skatepark Kardinge",
+      "type": "park",
+      "lat": 53.240271,
+      "lng": 6.595996,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.240271,6.595996",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d00299_8d43133",
       "name": "Skatepark Karlsruhe, Otto-Dullenkopf-Anlage Ostring",
       "type": "park",
@@ -5675,6 +6737,15 @@
       "lat": 49.186668,
       "lng": 8.12953,
       "url": "https://www.google.com/maps/search/?api=1&query=49.186668,8.129530",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d58049_6d23680",
+      "name": "Skatepark Kevelaer",
+      "type": "park",
+      "lat": 51.580486,
+      "lng": 6.236804,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.580486,6.236804",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5696,12 +6767,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d45134_14d56428",
+      "name": "Skatepark komunyog im kawalera",
+      "type": "park",
+      "lat": 53.45134,
+      "lng": 14.564285,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.451340,14.564285",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d83924_12d90867",
       "name": "Skatepark Konkordiapark",
       "type": "park",
       "lat": 50.839236,
       "lng": 12.908669,
       "url": "https://www.google.com/maps/search/?api=1&query=50.839236,12.908669",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d74884_19d31242",
+      "name": "SkatePark Konstantynów Łódzki",
+      "type": "park",
+      "lat": 51.748843,
+      "lng": 19.312421,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.748843,19.312421",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5720,6 +6809,15 @@
       "lat": 48.246784,
       "lng": 11.458549,
       "url": "https://www.google.com/maps/search/?api=1&query=48.246784,11.458549",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d91664_14d24788",
+      "name": "Skatepark Kurviertel",
+      "type": "park",
+      "lat": 53.916639,
+      "lng": 14.24788,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.916639,14.247880",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5849,12 +6947,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d19374_5d78115",
+      "name": "Skatepark Leeuwarden",
+      "type": "park",
+      "lat": 53.193735,
+      "lng": 5.781153,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.193735,5.781153",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d09422_5d07085",
+      "name": "Skatepark Leidsche Rijn Utrecht",
+      "type": "park",
+      "lat": 52.09422,
+      "lng": 5.070847,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.094220,5.070847",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d54246_9d92039",
       "name": "Skatepark Leineufer Göttingen",
       "type": "park",
       "lat": 51.542459,
       "lng": 9.92039,
       "url": "https://www.google.com/maps/search/?api=1&query=51.542459,9.920390",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d84449_24d03502",
+      "name": "Skatepark Lemberg",
+      "type": "park",
+      "lat": 49.844489,
+      "lng": 24.035021,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.844489,24.035021",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5867,12 +6992,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d14707_5d38191",
+      "name": "skatepark leusderweg",
+      "type": "park",
+      "lat": 52.147075,
+      "lng": 5.381914,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.147075,5.381914",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_43d90472_10d22754",
       "name": "Skatepark Lido di Camaiore",
       "type": "park",
       "lat": 43.904721,
       "lng": 10.227545,
       "url": "https://www.google.com/maps/search/?api=1&query=43.904721,10.227545",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d16621_5d41239",
+      "name": "Skatepark Liendert",
+      "type": "park",
+      "lat": 52.166207,
+      "lng": 5.412394,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.166207,5.412394",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5894,12 +7037,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d12769_17d83177",
+      "name": "Skatepark lochowo",
+      "type": "park",
+      "lat": 53.127693,
+      "lng": 17.831772,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.127693,17.831772",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_36d17857_m5d48326",
       "name": "Skatepark Los Barrios",
       "type": "park",
       "lat": 36.178566,
       "lng": -5.483258,
       "url": "https://www.google.com/maps/search/?api=1&query=36.178566,-5.483258",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d21052_22d71319",
+      "name": "Skatepark Łosice",
+      "type": "park",
+      "lat": 52.210515,
+      "lng": 22.71319,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.210515,22.713190",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5945,6 +7106,33 @@
       "lat": 51.133618,
       "lng": 9.544257,
       "url": "https://www.google.com/maps/search/?api=1&query=51.133618,9.544257",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d42369_5d44571",
+      "name": "Skatepark Messiaenpark",
+      "type": "park",
+      "lat": 51.423692,
+      "lng": 5.445713,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.423692,5.445713",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d96842_22d79041",
+      "name": "Skatepark Międzyrzec Podlaski",
+      "type": "park",
+      "lat": 51.968419,
+      "lng": 22.790412,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.968419,22.790412",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d92380_14d43896",
+      "name": "Skatepark Międzyzdroje",
+      "type": "park",
+      "lat": 53.923796,
+      "lng": 14.438959,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.923796,14.438959",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6002,6 +7190,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d86114_19d42112",
+      "name": "Skatepark Nad Bzurą",
+      "type": "park",
+      "lat": 51.861138,
+      "lng": 19.421121,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.861138,19.421121",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d40526_19d48504",
       "name": "Skatepark Námestovo",
       "type": "park",
@@ -6011,12 +7208,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d97946_4d58061",
+      "name": "skatepark Nesselande",
+      "type": "park",
+      "lat": 51.979458,
+      "lng": 4.580605,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.979458,4.580605",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d19678_6d70394",
       "name": "Skatepark Neuss",
       "type": "park",
       "lat": 51.196778,
       "lng": 6.703941,
       "url": "https://www.google.com/maps/search/?api=1&query=51.196778,6.703941",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d60483_7d17093",
+      "name": "Skatepark Norden",
+      "type": "park",
+      "lat": 53.604834,
+      "lng": 7.170926,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.604834,7.170926",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6094,12 +7309,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d78926_6d13442",
+      "name": "Skatepark Oerthepad Steenwijk",
+      "type": "park",
+      "lat": 52.789257,
+      "lng": 6.134416,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.789257,6.134416",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d71400_7d38773",
       "name": "Skatepark Olfen",
       "type": "park",
       "lat": 51.713997,
       "lng": 7.387731,
       "url": "https://www.google.com/maps/search/?api=1&query=51.713997,7.387731",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d34672_4d86693",
+      "name": "Skatepark Olympiaplein",
+      "type": "park",
+      "lat": 52.34672,
+      "lng": 4.866926,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.346720,4.866926",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d11596_2d68797",
+      "name": "Skatepark OoDeeKay",
+      "type": "park",
+      "lat": 51.115963,
+      "lng": 2.687974,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.115963,2.687974",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d15709_3d24149",
+      "name": "Skatepark Oostkamp",
+      "type": "park",
+      "lat": 51.157094,
+      "lng": 3.241493,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.157094,3.241493",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d58570_19d09661",
+      "name": "Skatepark Orchów",
+      "type": "park",
+      "lat": 51.585697,
+      "lng": 19.096612,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.585697,19.096612",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6168,6 +7428,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_53d41226_18d42176",
+      "name": "Skatepark Park Art",
+      "type": "park",
+      "lat": 53.412264,
+      "lng": 18.421762,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.412264,18.421762",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d08940_5d05291",
+      "name": "Skatepark Parkwijk",
+      "type": "park",
+      "lat": 52.089398,
+      "lng": 5.052914,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.089398,5.052914",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m23d73115_m46d69641",
       "name": "SkatePark Parque das Árvores ZS",
       "type": "park",
@@ -6219,6 +7497,15 @@
       "lat": 49.606625,
       "lng": 6.132902,
       "url": "https://www.google.com/maps/search/?api=1&query=49.606625,6.132902",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d08062_21d02243",
+      "name": "Skatepark Piaseczno",
+      "type": "park",
+      "lat": 52.080619,
+      "lng": 21.022427,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.080619,21.022427",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6277,6 +7564,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d78596_22d78462",
+      "name": "Skatepark Przemyśl",
+      "type": "park",
+      "lat": 49.785959,
+      "lng": 22.784625,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.785959,22.784625",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d38647_m3d63595",
       "name": "Skatepark Puente de Vallecas",
       "type": "park",
@@ -6302,6 +7598,24 @@
       "lat": 38.816931,
       "lng": -9.166422,
       "url": "https://www.google.com/maps/search/?api=1&query=38.816931,-9.166422",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d23826_6d52130",
+      "name": "Skatepark Reitdiep",
+      "type": "park",
+      "lat": 53.238264,
+      "lng": 6.521299,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.238264,6.521299",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d75205_19d41606",
+      "name": "Skatepark Retkinia",
+      "type": "park",
+      "lat": 51.752053,
+      "lng": 19.416056,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.752053,19.416056",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6414,12 +7728,48 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d98922_5d88900",
+      "name": "Skatepark Rosorum 🛹",
+      "type": "park",
+      "lat": 51.989224,
+      "lng": 5.889002,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.989224,5.889002",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d12179_5d12800",
+      "name": "Skatepark Ruigenhoek",
+      "type": "park",
+      "lat": 52.121787,
+      "lng": 5.128004,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.121787,5.128004",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_39d65451_22d40748",
       "name": "Skatepark RunLAParko",
       "type": "park",
       "lat": 39.654512,
       "lng": 22.407475,
       "url": "https://www.google.com/maps/search/?api=1&query=39.654512,22.407475",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d02934_22d00247",
+      "name": "Skatepark Rzeszów",
+      "type": "park",
+      "lat": 50.029344,
+      "lng": 22.002467,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.029344,22.002467",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d66423_19d48929",
+      "name": "Skatepark Rzgów",
+      "type": "park",
+      "lat": 51.664229,
+      "lng": 19.489293,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.664229,19.489293",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6486,6 +7836,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d32040_22d89879",
+      "name": "Skatepark Sarnaki",
+      "type": "park",
+      "lat": 52.320401,
+      "lng": 22.898789,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.320401,22.898789",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_46d88385_8d24587",
       "name": "Skatepark Sarnen",
       "type": "park",
@@ -6501,6 +7860,15 @@
       "lat": -33.012456,
       "lng": -71.538059,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.012456,-71.538059",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d92293_4d40387",
+      "name": "Skatepark Schieplaza Schiedam",
+      "type": "park",
+      "lat": 51.922929,
+      "lng": 4.403867,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.922929,4.403867",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6531,6 +7899,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_45d81708_24d15110",
+      "name": "Skatepark Sibiu",
+      "type": "park",
+      "lat": 45.817081,
+      "lng": 24.151098,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.817081,24.151098",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d43334_22d86883",
+      "name": "Skatepark Siemiatycze",
+      "type": "park",
+      "lat": 52.433343,
+      "lng": 22.868825,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.433343,22.868825",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d80848_2d74071",
       "name": "SkatePark Sils",
       "type": "park",
@@ -6550,6 +7936,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d61078_6d37041",
+      "name": "Skatepark Sonsbeck",
+      "type": "park",
+      "lat": 51.610785,
+      "lng": 6.37041,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.610785,6.370410",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d48343_10d98833",
       "name": "Skatepark Sportanlage Charly-Mai",
       "type": "park",
@@ -6559,12 +7954,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d21523_7d40674",
+      "name": "Skatepark St. Arnold",
+      "type": "park",
+      "lat": 52.215234,
+      "lng": 7.406741,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.215234,7.406741",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d56277_22d07339",
+      "name": "Skatepark Stalowa Wola",
+      "type": "park",
+      "lat": 50.56277,
+      "lng": 22.073389,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.562770,22.073389",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d30528_20d68347",
       "name": "Skatepark Stará Ľubovňa",
       "type": "park",
       "lat": 49.305279,
       "lng": 20.683468,
       "url": "https://www.google.com/maps/search/?api=1&query=49.305279,20.683468",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d14764_7d35054",
+      "name": "Skatepark Steinfurt",
+      "type": "park",
+      "lat": 52.147643,
+      "lng": 7.350536,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.147643,7.350536",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6595,6 +8017,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d70232_19d62004",
+      "name": "Skatepark Stróża",
+      "type": "park",
+      "lat": 51.702321,
+      "lng": 19.62004,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.702321,19.620040",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d77314_9d18176",
       "name": "Skatepark Stuttgart-Mitte",
       "type": "park",
@@ -6612,6 +8043,15 @@
       "lng": 9.164132,
       "description": "Gurkiger kleiner Concrete Rudolph Skatepark mit Minirampe, Quarter und anderem (meiner meinung nicht wirklich fahrbarem) Gedöns.",
       "url": "https://www.google.com/maps/search/?api=1&query=48.780044,9.164132",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d06461_4d33981",
+      "name": "Skatepark Sweatshop",
+      "type": "park",
+      "lat": 52.064605,
+      "lng": 4.339806,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.064605,4.339806",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6642,6 +8082,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d32474_20d93949",
+      "name": "Skatepark tarchomin",
+      "type": "park",
+      "lat": 52.324743,
+      "lng": 20.939491,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.324743,20.939491",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d30659_21d07860",
+      "name": "Skatepark Targówek",
+      "type": "park",
+      "lat": 52.306589,
+      "lng": 21.078603,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.306589,21.078603",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_36d01730_m5d61073",
       "name": "Skatepark Tarifa",
       "type": "park",
@@ -6659,6 +8117,15 @@
       "description": "All the obstacles you can imagine",
       "url": "https://www.google.com/maps/search/?api=1&query=4.595936,-74.081569",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_52d07507_23d62530",
+      "name": "Skatepark Terespol",
+      "type": "park",
+      "lat": 52.075075,
+      "lng": 23.6253,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.075075,23.625300",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_m33d48846_m70d77300",
@@ -6679,12 +8146,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d58193_4d99536",
+      "name": "Skatepark Tilburg Reeshof",
+      "type": "park",
+      "lat": 51.581934,
+      "lng": 4.995357,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.581934,4.995357",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_44d42427_26d15153",
       "name": "Skatepark Titan",
       "type": "park",
       "lat": 44.424275,
       "lng": 26.151533,
       "url": "https://www.google.com/maps/search/?api=1&query=44.424275,26.151533",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m23d97128_m46d35038",
+      "name": "Skatepark Track - Chorão",
+      "type": "park",
+      "lat": -23.971283,
+      "lng": -46.350382,
+      "url": "https://www.google.com/maps/search/?api=1&query=-23.971283,-46.350382",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6715,6 +8200,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d23402_4d81492",
+      "name": "Skatepark uithoorn",
+      "type": "park",
+      "lat": 52.234018,
+      "lng": 4.814916,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.234018,4.814916",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d24067_21d03179",
+      "name": "Skatepark under the Świętokrzyski bridge",
+      "type": "park",
+      "lat": 52.240675,
+      "lng": 21.03179,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.240675,21.031790",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d95260_6d97803",
       "name": "Skatepark unter der Zoobrücke",
       "type": "park",
@@ -6730,6 +8233,24 @@
       "lat": 41.713581,
       "lng": -1.004109,
       "url": "https://www.google.com/maps/search/?api=1&query=41.713581,-1.004109",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d07545_5d10879",
+      "name": "Skatepark Utrecht",
+      "type": "park",
+      "lat": 52.075448,
+      "lng": 5.108789,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.075448,5.108789",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d18642_5d41893",
+      "name": "Skatepark Vathorst",
+      "type": "park",
+      "lat": 52.186422,
+      "lng": 5.418927,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.186422,5.418927",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6760,6 +8281,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d70283_5d20467",
+      "name": "SkatePark Vlijmen 🛹",
+      "type": "park",
+      "lat": 51.702831,
+      "lng": 5.204668,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.702831,5.204668",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d46827_13d41205",
       "name": "Skatepark Vogelfreiheit",
       "type": "park",
@@ -6787,6 +8317,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d30099_3d07594",
+      "name": "Skatepark Wenduine",
+      "type": "park",
+      "lat": 51.300993,
+      "lng": 3.075941,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.300993,3.075941",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d91682_4d47624",
+      "name": "Skatepark Westblaak",
+      "type": "park",
+      "lat": 51.916815,
+      "lng": 4.476244,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.916815,4.476244",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d75123_19d54433",
+      "name": "Skatepark Widzew im. Igora Kowalewskiego",
+      "type": "park",
+      "lat": 51.751233,
+      "lng": 19.544331,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.751233,19.544331",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_47d18792_8d70533",
       "name": "Skatepark Wollerau",
       "type": "park",
@@ -6805,6 +8362,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d46384_4d80848",
+      "name": "Skatepark Zaandam",
+      "type": "park",
+      "lat": 52.463842,
+      "lng": 4.808484,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.463842,4.808484",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d32882_5d53610",
+      "name": "Skatepark Zeewolde",
+      "type": "park",
+      "lat": 52.328821,
+      "lng": 5.536102,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.328821,5.536102",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d31006_21d16745",
+      "name": "Skatepark Zielonka",
+      "type": "park",
+      "lat": 52.310056,
+      "lng": 21.167451,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.310056,21.167451",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d84912_9d18151",
       "name": "Skatepark Zuffenhausen",
       "type": "park",
@@ -6812,6 +8396,15 @@
       "lng": 9.181507,
       "description": "War noch nie da, sieht aber von hier oben nicht schlecht aus :-)",
       "url": "https://www.google.com/maps/search/?api=1&query=48.849118,9.181507",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d07638_6d69989",
+      "name": "Skatepark Zuidlaren",
+      "type": "park",
+      "lat": 53.076378,
+      "lng": 6.699895,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.076378,6.699895",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6869,6 +8462,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_45d03883_39d02805",
+      "name": "Skatepark Прикубанский округ",
+      "type": "park",
+      "lat": 45.038834,
+      "lng": 39.028053,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.038834,39.028053",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d70085_44d80499",
       "name": "Skatepark მთაწმინდის რაიონი",
       "type": "park",
@@ -6893,6 +8495,24 @@
       "lat": 40.357285,
       "lng": -3.813686,
       "url": "https://www.google.com/maps/search/?api=1&query=40.357285,-3.813686",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d03147_5d15438",
+      "name": "Skatepark🛹",
+      "type": "park",
+      "lat": 52.031471,
+      "lng": 5.154378,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.031471,5.154378",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d22540_6d85895",
+      "name": "Skatepark🛹",
+      "type": "park",
+      "lat": 52.225395,
+      "lng": 6.858954,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.225395,6.858954",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6929,6 +8549,24 @@
       "lat": 39.482505,
       "lng": -0.379523,
       "url": "https://www.google.com/maps/search/?api=1&query=39.482505,-0.379523",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d37078_5d22458",
+      "name": "SkatePlaza Almere",
+      "type": "park",
+      "lat": 52.370778,
+      "lng": 5.224582,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.370778,5.224582",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d35410_19d38424",
+      "name": "SkatePlaza Bełchatów im Mateusz Kality",
+      "type": "park",
+      "lat": 51.354096,
+      "lng": 19.384242,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.354096,19.384242",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -6977,12 +8615,39 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_52d21449_7d02677",
+      "name": "Skaterpark",
+      "type": "park",
+      "lat": 52.214486,
+      "lng": 7.026774,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.214486,7.026774",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d31227_13d86596",
+      "name": "Skaterpark (im Park)",
+      "type": "park",
+      "lat": 53.312272,
+      "lng": 13.865959,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.312272,13.865959",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d99876_8d37607",
       "name": "Skaterpark Günther-Klotz-Anlage",
       "type": "park",
       "lat": 48.998756,
       "lng": 8.376069,
       "url": "https://www.google.com/maps/search/?api=1&query=48.998756,8.376069",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d73372_14d05596",
+      "name": "Skaterpark Ueckermünde",
+      "type": "park",
+      "lat": 53.733723,
+      "lng": 14.055958,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.733723,14.055958",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7046,6 +8711,33 @@
       "lat": 56.277845,
       "lng": 43.978226,
       "url": "https://www.google.com/maps/search/?api=1&query=56.277845,43.978226",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d92864_23d56969",
+      "name": "Skeyt Park",
+      "type": "park",
+      "lat": 49.928637,
+      "lng": 23.56969,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.928637,23.569690",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d02238_38d96714",
+      "name": "Skeyt Park",
+      "type": "park",
+      "lat": 45.022384,
+      "lng": 38.967144,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.022384,38.967144",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d09745_51d89629",
+      "name": "Skeyt Park",
+      "type": "park",
+      "lat": 47.097445,
+      "lng": 51.896291,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.097445,51.896291",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7166,6 +8858,15 @@
       "lng": -86.091816,
       "url": "https://www.google.com/maps/search/?api=1&query=42.783901,-86.091816",
       "source": "Skatehive-Karte"
+    },
+    {
+      "id": "park_52d30677_6d89042",
+      "name": "Snakerun Oldenzaal",
+      "type": "park",
+      "lat": 52.30677,
+      "lng": 6.890418,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.306770,6.890418",
+      "source": "My Maps „Skatemap2026“"
     },
     {
       "id": "park_35d14828_m89d96734",
@@ -7360,6 +9061,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d71195_19d48570",
+      "name": "Stawy Skateheadposse",
+      "type": "park",
+      "lat": 51.711947,
+      "lng": 19.485698,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.711947,19.485698",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_65d57587_22d20288",
       "name": "Steel Park Luleå",
       "type": "park",
@@ -7411,6 +9121,15 @@
       "lat": 55.251504,
       "lng": 9.505061,
       "url": "https://www.google.com/maps/search/?api=1&query=55.251504,9.505061",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_53d42596_14d53100",
+      "name": "Strefa Skate Turzyn",
+      "type": "park",
+      "lat": 53.425961,
+      "lng": 14.530995,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.425961,14.530995",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7704,6 +9423,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_35d81969_51d40790",
+      "name": "Tochal Skate Club",
+      "type": "park",
+      "lat": 35.819686,
+      "lng": 51.407903,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.819686,51.407903",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m23d68994_m47d12246",
       "name": "Toobsranch Skatepark",
       "type": "park",
@@ -7722,12 +9450,30 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_m25d42307_m49d24975",
+      "name": "Track Environmental Skateboard",
+      "type": "park",
+      "lat": -25.42307,
+      "lng": -49.249755,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.423070,-49.249755",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_52d15624_10d53931",
       "name": "Trashpark",
       "type": "park",
       "lat": 52.156244,
       "lng": 10.539308,
       "url": "https://www.google.com/maps/search/?api=1&query=52.156244,10.539308",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_50d95384_3d12974",
+      "name": "TRAX Skatepark",
+      "type": "park",
+      "lat": 50.953836,
+      "lng": 3.12974,
+      "url": "https://www.google.com/maps/search/?api=1&query=50.953836,3.129740",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7755,6 +9501,24 @@
       "lat": 33.716949,
       "lng": -117.829133,
       "url": "https://www.google.com/maps/search/?api=1&query=33.716949,-117.829133",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_47d78544_22d80153",
+      "name": "Two park",
+      "type": "park",
+      "lat": 47.785438,
+      "lng": 22.801525,
+      "url": "https://www.google.com/maps/search/?api=1&query=47.785438,22.801525",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_51d89282_4d47332",
+      "name": "Tyskie Skate Plaza",
+      "type": "park",
+      "lat": 51.892819,
+      "lng": 4.473321,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.892819,4.473321",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7849,12 +9613,39 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_m25d45802_m49d22933",
+      "name": "VISH SKATELAND J.A.",
+      "type": "park",
+      "lat": -25.458024,
+      "lng": -49.229332,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.458024,-49.229332",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_45d35195_14d32014",
       "name": "Volosko skatepark",
       "type": "park",
       "lat": 45.351947,
       "lng": 14.320139,
       "url": "https://www.google.com/maps/search/?api=1&query=45.351947,14.320139",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d27962_6d79525",
+      "name": "Voor Weus",
+      "type": "park",
+      "lat": 52.279618,
+      "lng": 6.795246,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.279618,6.795246",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d08260_23d74471",
+      "name": "Wakebrest - Василиск",
+      "type": "park",
+      "lat": 52.082597,
+      "lng": 23.744707,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.082597,23.744707",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7900,6 +9691,15 @@
       "lat": 40.704212,
       "lng": -105.003674,
       "url": "https://www.google.com/maps/search/?api=1&query=40.704212,-105.003674",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m25d47279_m49d26586",
+      "name": "WencesPlaza",
+      "type": "park",
+      "lat": -25.472793,
+      "lng": -49.265859,
+      "url": "https://www.google.com/maps/search/?api=1&query=-25.472793,-49.265859",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8004,12 +9804,30 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_51d69661_5d29849",
+      "name": "World Skate Center",
+      "type": "park",
+      "lat": 51.696613,
+      "lng": 5.29849,
+      "url": "https://www.google.com/maps/search/?api=1&query=51.696613,5.298490",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_55d77136_37d41354",
       "name": "XSA Skate Park Krilatskoye",
       "type": "park",
       "lat": 55.771357,
       "lng": 37.413543,
       "url": "https://www.google.com/maps/search/?api=1&query=55.771357,37.413543",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d01920_38d95306",
+      "name": "XSA Training park",
+      "type": "park",
+      "lat": 45.019199,
+      "lng": 38.95306,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.019199,38.953060",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8040,6 +9858,24 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_52d29120_21d12098",
+      "name": "Ząbki Skatepark",
+      "type": "park",
+      "lat": 52.291195,
+      "lng": 21.120979,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.291195,21.120979",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d37360_4d96508",
+      "name": "Zeeburgereiland Skate Park",
+      "type": "park",
+      "lat": 52.373596,
+      "lng": 4.965079,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.373596,4.965079",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m23d55237_m46d55057",
       "name": "Zero11 Skate Park - Espaço Urbano",
       "type": "park",
@@ -8058,12 +9894,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_44d64383_33d54045",
+      "name": "Памп трек FK-ramps в Учкуевке",
+      "type": "park",
+      "lat": 44.643826,
+      "lng": 33.540454,
+      "url": "https://www.google.com/maps/search/?api=1&query=44.643826,33.540454",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d86778_24d05506",
+      "name": "Скейт парк",
+      "type": "park",
+      "lat": 49.867779,
+      "lng": 24.055058,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.867779,24.055058",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_53d91648_27d55773",
       "name": "Скейт Парк",
       "type": "park",
       "lat": 53.916485,
       "lng": 27.557735,
       "url": "https://www.google.com/maps/search/?api=1&query=53.916485,27.557735",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d07242_39d03886",
+      "name": "Скейт парк \"Губернский\" #xsaramps",
+      "type": "park",
+      "lat": 45.072422,
+      "lng": 39.038857,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.072422,39.038857",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_52d09491_23d67964",
+      "name": "Скейт парк / skate park / skate plaza",
+      "type": "park",
+      "lat": 52.094911,
+      "lng": 23.679642,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.094911,23.679642",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d04932_39d03148",
+      "name": "Скейт парк #XSAramps \"Панорама\"",
+      "type": "park",
+      "lat": 45.049318,
+      "lng": 39.031476,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.049318,39.031476",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8085,6 +9966,33 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_37d93826_58d38983",
+      "name": "Скейт-парк",
+      "type": "park",
+      "lat": 37.938257,
+      "lng": 58.38983,
+      "url": "https://www.google.com/maps/search/?api=1&query=37.938257,58.389830",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d09382_38d90961",
+      "name": "Скейт-парк #XSAramps \"Спортивная деревня\"",
+      "type": "park",
+      "lat": 45.093819,
+      "lng": 38.909615,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.093819,38.909615",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_45d15713_39d01166",
+      "name": "Скейт-парк #XSAramps Южный",
+      "type": "park",
+      "lat": 45.157132,
+      "lng": 39.011656,
+      "url": "https://www.google.com/maps/search/?api=1&query=45.157132,39.011656",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_55d86127_37d48341",
       "name": "Скейт-Парк Bunny Hop",
       "type": "park",
@@ -8094,12 +10002,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_46d06823_38d98155",
+      "name": "Скейт-парк XSAramps | ст.Каневская",
+      "type": "park",
+      "lat": 46.068229,
+      "lng": 38.98155,
+      "url": "https://www.google.com/maps/search/?api=1&query=46.068229,38.981550",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_53d14772_26d06768",
       "name": "Скейт-парк Барановичи",
       "type": "park",
       "lat": 53.14772,
       "lng": 26.067683,
       "url": "https://www.google.com/maps/search/?api=1&query=53.147720,26.067683",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d80471_51d50199",
+      "name": "اسکیت پارک لیو",
+      "type": "park",
+      "lat": 35.804711,
+      "lng": 51.501993,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.804711,51.501993",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d71015_51d13268",
+      "name": "اسکیت صادقی",
+      "type": "park",
+      "lat": 35.71015,
+      "lng": 51.13268,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.710150,51.132680",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d81442_50d94714",
+      "name": "بوستان سپهر",
+      "type": "park",
+      "lat": 35.814421,
+      "lng": 50.947142,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.814421,50.947142",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_35d65835_51d47431",
+      "name": "پیست اسکیت فجر",
+      "type": "park",
+      "lat": 35.658351,
+      "lng": 51.474312,
+      "url": "https://www.google.com/maps/search/?api=1&query=35.658351,51.474312",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8199,6 +10152,15 @@
       "lat": -33.927207,
       "lng": 18.41346,
       "url": "https://www.google.com/maps/search/?api=1&query=-33.927207,18.413460",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d37494_4d89142",
+      "name": "Ben G - Amsterdam skate shop & streetwear store",
+      "type": "shop",
+      "lat": 52.374935,
+      "lng": 4.891415,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.374935,4.891415",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8463,6 +10425,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_53d14291_8d21255",
+      "name": "Dogtown GmbH & Co. KG",
+      "type": "shop",
+      "lat": 53.142907,
+      "lng": 8.212552,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.142907,8.212552",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_53d11537_7d46037",
+      "name": "East Frisian Skateboards",
+      "type": "shop",
+      "lat": 53.115374,
+      "lng": 7.460374,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.115374,7.460374",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_50d07349_14d41452",
       "name": "El Nino",
       "type": "shop",
@@ -8613,6 +10593,15 @@
       "lat": 50.071949,
       "lng": 14.410417,
       "url": "https://www.google.com/maps/search/?api=1&query=50.071949,14.410417",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d36446_4d89275",
+      "name": "Independent Outlet Skateboards Amsterdam",
+      "type": "shop",
+      "lat": 52.36446,
+      "lng": 4.892752,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.364460,4.892752",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -8976,6 +10965,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d37889_4d63639",
+      "name": "Revert 95",
+      "type": "shop",
+      "lat": 52.378889,
+      "lng": 4.636389,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.378889,4.636389",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_m11d00720_m37d09115",
       "name": "REVOL SKATE HOUSE",
       "type": "shop",
@@ -9111,6 +11109,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d06329_4d34480",
+      "name": "Sickboards Skateshop",
+      "type": "shop",
+      "lat": 52.06329,
+      "lng": 4.344801,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.063290,4.344801",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_48d39185_m4d48027",
       "name": "Side Shore Skate Shop",
       "type": "shop",
@@ -9166,6 +11173,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d37443_4d85761",
+      "name": "Skate Doctor",
+      "type": "shop",
+      "lat": 52.374426,
+      "lng": 4.857614,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.374426,4.857614",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_13d72091_100d55666",
       "name": "Skate Plus",
       "type": "shop",
@@ -9190,6 +11206,15 @@
       "lat": -9.661342,
       "lng": -35.700965,
       "url": "https://www.google.com/maps/search/?api=1&query=-9.661342,-35.700965",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_53d47527_7d46934",
+      "name": "Skatehalle Aurich Shop",
+      "type": "shop",
+      "lat": 53.475273,
+      "lng": 7.469337,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.475273,7.469337",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -9229,12 +11254,57 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d07837_4d30507",
+      "name": "Skatestore",
+      "type": "shop",
+      "lat": 52.078371,
+      "lng": 4.305071,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.078371,4.305071",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d37596_4d89534",
+      "name": "Skatestore Amsterdam",
+      "type": "shop",
+      "lat": 52.375962,
+      "lng": 4.895339,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.375962,4.895339",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d09136_5d11674",
+      "name": "Skatestore Utrecht",
+      "type": "shop",
+      "lat": 52.091362,
+      "lng": 5.116737,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.091362,5.116737",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_53d04753_8d63923",
+      "name": "Skatewerkstatt Mateo's Bretterbude",
+      "type": "shop",
+      "lat": 53.04753,
+      "lng": 8.639233,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.047530,8.639233",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_39d47349_m0d37342",
       "name": "SKATEWORLD",
       "type": "shop",
       "lat": 39.473489,
       "lng": -0.373421,
       "url": "https://www.google.com/maps/search/?api=1&query=39.473489,-0.373421",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_52d35280_4d88941",
+      "name": "Skatezone.nl",
+      "type": "shop",
+      "lat": 52.352801,
+      "lng": 4.88941,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.352801,4.889410",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -9391,6 +11461,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "shop_52d35990_4d86461",
+      "name": "This Is Soul - Inline Skates - Shop - Rental - Lessons",
+      "type": "shop",
+      "lat": 52.359903,
+      "lng": 4.864608,
+      "url": "https://www.google.com/maps/search/?api=1&query=52.359903,4.864608",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "shop_13d75516_100d50103",
       "name": "Tightland BKK",
       "type": "shop",
@@ -9460,6 +11539,15 @@
       "lat": -10.925506,
       "lng": -37.055278,
       "url": "https://www.google.com/maps/search/?api=1&query=-10.925506,-37.055278",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "shop_53d51431_8d09938",
+      "name": "Victim Brand",
+      "type": "shop",
+      "lat": 53.514306,
+      "lng": 8.099377,
+      "url": "https://www.google.com/maps/search/?api=1&query=53.514306,8.099377",
       "source": "My Maps „Skatemap2026“"
     },
     {
