@@ -640,6 +640,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m28d52818_m49d32387",
+      "name": "Bowl de Urussanga",
+      "type": "park",
+      "lat": -28.528176,
+      "lng": -49.32387,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.528176,-49.323870",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m5d79103_m35d20885",
       "name": "Bowl do Baldo",
       "type": "park",
@@ -978,6 +987,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m53d15220_m70d90497",
+      "name": "Construccion Parque para Skaters",
+      "type": "park",
+      "lat": -53.152196,
+      "lng": -70.904966,
+      "url": "https://www.google.com/maps/search/?api=1&query=-53.152196,-70.904966",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_41d70233_44d80680",
       "name": "Cool Skate School — extreme sports school, indoor skate park and skate shop",
       "type": "park",
@@ -1047,6 +1065,15 @@
       "lat": 46.48988,
       "lng": 1.941087,
       "url": "https://www.google.com/maps/search/?api=1&query=46.489880,1.941087",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d69194_m49d38398",
+      "name": "Criciúma Skate Park",
+      "type": "park",
+      "lat": -28.691944,
+      "lng": -49.383981,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.691944,-49.383981",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1147,6 +1174,15 @@
       "lat": 36.125355,
       "lng": -115.274377,
       "url": "https://www.google.com/maps/search/?api=1&query=36.125355,-115.274377",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m53d15556_m70d89275",
+      "name": "distrito 69 skatepark",
+      "type": "park",
+      "lat": -53.155559,
+      "lng": -70.892747,
+      "url": "https://www.google.com/maps/search/?api=1&query=-53.155559,-70.892747",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -1356,6 +1392,15 @@
       "lat": 40.393687,
       "lng": -3.770629,
       "url": "https://www.google.com/maps/search/?api=1&query=40.393687,-3.770629",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m30d03959_m51d17280",
+      "name": "Espartano Skatepark",
+      "type": "park",
+      "lat": -30.039593,
+      "lng": -51.1728,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.039593,-51.172800",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -2751,6 +2796,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m53d15192_m70d90463",
+      "name": "Media Park",
+      "type": "park",
+      "lat": -53.151918,
+      "lng": -70.904633,
+      "url": "https://www.google.com/maps/search/?api=1&query=-53.151918,-70.904633",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_40d41906_m105d12385",
       "name": "Mehaffey Park Skate Park",
       "type": "park",
@@ -3509,6 +3563,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m29d77823_m51d14334",
+      "name": "Pista de Pedra",
+      "type": "park",
+      "lat": -29.778229,
+      "lng": -51.143342,
+      "url": "https://www.google.com/maps/search/?api=1&query=-29.778229,-51.143342",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m25d56605_m49d33847",
       "name": "Pista de skate",
       "type": "park",
@@ -3587,6 +3650,15 @@
       "lat": -24.707398,
       "lng": -47.55104,
       "url": "https://www.google.com/maps/search/?api=1&query=-24.707398,-47.551040",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d93885_m49d48136",
+      "name": "Pista de Skate",
+      "type": "park",
+      "lat": -28.938845,
+      "lng": -49.481357,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.938845,-49.481357",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3735,6 +3807,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m29d82801_m51d15730",
+      "name": "Pista de Skate do Viaduto Sapucaia do Sul",
+      "type": "park",
+      "lat": -29.828005,
+      "lng": -51.157296,
+      "url": "https://www.google.com/maps/search/?api=1&query=-29.828005,-51.157296",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d10396_m48d68849",
+      "name": "Pista de Skate Fronteira",
+      "type": "park",
+      "lat": -28.103962,
+      "lng": -48.688486,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.103962,-48.688486",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_m25d01182_m47d92707",
       "name": "Pista de Skate Isaque Reis Domingues Matias de Oliveira",
       "type": "park",
@@ -3768,6 +3858,15 @@
       "lat": -8.130266,
       "lng": -34.909118,
       "url": "https://www.google.com/maps/search/?api=1&query=-8.130266,-34.909118",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d59750_m49d31774",
+      "name": "Pista De Skate Ramon Luciano Vieira",
+      "type": "park",
+      "lat": -28.597496,
+      "lng": -49.317744,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.597496,-49.317744",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3832,6 +3931,24 @@
       "lat": 33.590126,
       "lng": -7.621808,
       "url": "https://www.google.com/maps/search/?api=1&query=33.590126,-7.621808",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m51d63443_m69d22016",
+      "name": "Plaza de los poetas - Skatepark",
+      "type": "park",
+      "lat": -51.634431,
+      "lng": -69.220161,
+      "url": "https://www.google.com/maps/search/?api=1&query=-51.634431,-69.220161",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d47774_m48d99234",
+      "name": "Plaza Skate Park",
+      "type": "park",
+      "lat": -28.477744,
+      "lng": -48.992343,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.477744,-48.992343",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -3913,6 +4030,15 @@
       "lat": -6.070627,
       "lng": -37.513905,
       "url": "https://www.google.com/maps/search/?api=1&query=-6.070627,-37.513905",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m28d76057_m49d27110",
+      "name": "Pracinha (Vila Nova)",
+      "type": "park",
+      "lat": -28.760571,
+      "lng": -49.271098,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.760571,-49.271098",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -4442,6 +4568,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m28d59813_m49d42509",
+      "name": "Siderópolis Skatepark",
+      "type": "park",
+      "lat": -28.59813,
+      "lng": -49.425092,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.598130,-49.425092",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_67d13647_20d67041",
       "name": "Sjöparkens skatepark",
       "type": "park",
@@ -4577,6 +4712,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m28d98920_m49d41712",
+      "name": "Skate park Balneário Arroio do Silva",
+      "type": "park",
+      "lat": -28.989205,
+      "lng": -49.417121,
+      "url": "https://www.google.com/maps/search/?api=1&query=-28.989205,-49.417121",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_37d99619_m1d13655",
       "name": "Skate park Barnés",
       "type": "park",
@@ -4684,6 +4828,15 @@
       "lat": 38.002705,
       "lng": -1.173557,
       "url": "https://www.google.com/maps/search/?api=1&query=38.002705,-1.173557",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m30d11659_m51d31372",
+      "name": "Skate Park Guaíba .",
+      "type": "park",
+      "lat": -30.116585,
+      "lng": -51.31372,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.116585,-51.313720",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -5734,6 +5887,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m51d73615_m72d47857",
+      "name": "Skatepark calle 3",
+      "type": "park",
+      "lat": -51.736153,
+      "lng": -72.478566,
+      "url": "https://www.google.com/maps/search/?api=1&query=-51.736153,-72.478566",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_46d54641_23d89037",
       "name": "Skatepark Campia Turzii",
       "type": "park",
@@ -5875,6 +6037,15 @@
       "lat": 46.787935,
       "lng": 1.704619,
       "url": "https://www.google.com/maps/search/?api=1&query=46.787935,1.704619",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m29d65103_m51d15845",
+      "name": "Skatepark de Estância Velha",
+      "type": "park",
+      "lat": -29.651035,
+      "lng": -51.158448,
+      "url": "https://www.google.com/maps/search/?api=1&query=-29.651035,-51.158448",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7592,6 +7763,15 @@
       "source": "Skatehive-Karte"
     },
     {
+      "id": "park_m53d16153_m70d88900",
+      "name": "Skatepark Punta Arenas",
+      "type": "park",
+      "lat": -53.161532,
+      "lng": -70.889005,
+      "url": "https://www.google.com/maps/search/?api=1&query=-53.161532,-70.889005",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_38d81693_m9d16642",
       "name": "Skatepark Redondo Do SAC",
       "type": "park",
@@ -9206,6 +9386,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_m30d11871_m51d05687",
+      "name": "Swell Skate Park",
+      "type": "park",
+      "lat": -30.118711,
+      "lng": -51.056872,
+      "url": "https://www.google.com/maps/search/?api=1&query=-30.118711,-51.056872",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_39d14859_m86d53616",
       "name": "Switchyard Skatepark",
       "type": "park",
@@ -9519,6 +9708,15 @@
       "lat": 51.892819,
       "lng": 4.473321,
       "url": "https://www.google.com/maps/search/?api=1&query=51.892819,4.473321",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m51d72785_m72d51334",
+      "name": "Unlisted playground near skatepark",
+      "type": "park",
+      "lat": -51.727853,
+      "lng": -72.513344,
+      "url": "https://www.google.com/maps/search/?api=1&query=-51.727853,-72.513344",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -12245,6 +12443,17 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_48d52200_9d08385",
+      "name": "B12 Lustnau: Kinkrail & Transfer",
+      "type": "spot",
+      "lat": 48.522004,
+      "lng": 9.083854,
+      "address": "Bismarckstraße 142, 72072 Tübingen",
+      "description": "Niedriges Kinkrail vor dem B12 (Anfahrt um die Kurve). Am Parkplatz gibt es einen neuen Transfer, eventuell nur vorübergehend. (Quelle: @skatespots_tuebingen)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.522004,9.083854",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_30d46057_m97d63798",
       "name": "backyard ditch",
       "type": "spot",
@@ -14852,6 +15061,17 @@
       "source": "Von dir geschickt"
     },
     {
+      "id": "spot_48d54194_9d04782",
+      "name": "Kunsthalle Tübingen",
+      "type": "spot",
+      "lat": 48.541938,
+      "lng": 9.047816,
+      "address": "Philosophenweg 76, 72076 Tübingen",
+      "description": "Neue Kunsthalle mit Stairs und Metall-Rails, dazu ein Low-to-High-Steinrail. Das Gebäude ist noch neu, also bitte nicht einwachsen. (Quelle: @skatespots_tuebingen)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.541938,9.047816",
+      "source": "Von dir geschickt"
+    },
+    {
       "id": "spot_48d77922_9d17465",
       "name": "Kunstwerk",
       "type": "spot",
@@ -16599,6 +16819,17 @@
       "description": "L5 -> Can Vidalet",
       "url": "https://www.google.com/maps/search/?api=1&query=41.372417,2.093162",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_48d51655_9d06183",
+      "name": "Rail an der Blauen Brücke",
+      "type": "spot",
+      "lat": 48.516551,
+      "lng": 9.06183,
+      "address": "Friedrichstraße, 72072 Tübingen",
+      "description": "Fettes Rail bei der Blauen Brücke mit neuer, guter Anfahrt. Viele Versuche hat man da wohl nicht. (Quelle: @skatespots_tuebingen)",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.516551,9.061830",
+      "source": "Von dir geschickt"
     },
     {
       "id": "spot_41d44185_2d18761",

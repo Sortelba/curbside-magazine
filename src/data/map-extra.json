@@ -156,6 +156,36 @@
       "type": "park",
       "description": "Skatepark in Madrid. (Quelle: skatemap.de)",
       "id": "manual_1794415500016"
+    },
+    {
+      "id": "manual_1794501192070",
+      "name": "Kunsthalle Tübingen",
+      "type": "spot",
+      "lat": 48.541938,
+      "lng": 9.047816,
+      "address": "Philosophenweg 76, 72076 Tübingen",
+      "description": "Neue Kunsthalle mit Stairs und Metall-Rails, dazu ein Low-to-High-Steinrail. Das Gebäude ist noch neu, also bitte nicht einwachsen. (Quelle: @skatespots_tuebingen)",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "manual_1794501192071",
+      "name": "B12 Lustnau: Kinkrail & Transfer",
+      "type": "spot",
+      "lat": 48.522004,
+      "lng": 9.083854,
+      "address": "Bismarckstraße 142, 72072 Tübingen",
+      "description": "Niedriges Kinkrail vor dem B12 (Anfahrt um die Kurve). Am Parkplatz gibt es einen neuen Transfer, eventuell nur vorübergehend. (Quelle: @skatespots_tuebingen)",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "manual_1794501192072",
+      "name": "Rail an der Blauen Brücke",
+      "type": "spot",
+      "lat": 48.516551,
+      "lng": 9.06183,
+      "address": "Friedrichstraße, 72072 Tübingen",
+      "description": "Fettes Rail bei der Blauen Brücke mit neuer, guter Anfahrt. Viele Versuche hat man da wohl nicht. (Quelle: @skatespots_tuebingen)",
+      "added": "2026-11-12"
     }
   ],
   "closed": [
