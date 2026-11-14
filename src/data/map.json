@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-14",
   "spots": [
     {
       "id": "park_52d07620_5d42186",
@@ -6281,6 +6281,7 @@
       "type": "park",
       "lat": 48.544698,
       "lng": 7.68229,
+      "address": "Skatepark du parc Zimmer, Rue de Graffenstaden, 67380 Lingolsheim, Frankreich",
       "description": "Skatepark du parc Zimmer, Rue de Graffenstaden, 67380 Lingolsheim, Frankreich",
       "url": "https://www.google.com/maps/search/?api=1&query=48.544698,7.682290",
       "source": "My Maps „Skatemap2026“"
@@ -13459,6 +13460,7 @@
       "type": "spot",
       "lat": 49.011937,
       "lng": 8.413609,
+      "address": "Criegée-Hörsaal, Fritz-Haber-Weg 4, 76131 Karlsruhe-Innenstadt-Ost",
       "description": "Criegée-Hörsaal, Fritz-Haber-Weg 4, 76131 Karlsruhe-Innenstadt-Ost",
       "url": "https://www.google.com/maps/search/?api=1&query=49.011937,8.413609",
       "source": "My Maps „Skatemap2026“"
@@ -13658,6 +13660,7 @@
       "type": "spot",
       "lat": 49.026598,
       "lng": 8.385259,
+      "address": "BBBank eG Geldautomat, Erzbergerstraße 123, 76133 Karlsruhe",
       "description": "unterdacht und manny pad",
       "url": "https://www.google.com/maps/search/?api=1&query=49.026598,8.385259",
       "source": "My Maps „Skatemap2026“"
@@ -14631,6 +14634,7 @@
       "type": "spot",
       "lat": 49.010912,
       "lng": 8.383902,
+      "address": "Helmholtz-Gymnasium Karlsruhe, Kaiserallee 6, 76133 Karlsruhe",
       "description": "Helmholtz-Gymnasium Karlsruhe, Kaiserallee 6, 76133 Karlsruhe",
       "url": "https://www.google.com/maps/search/?api=1&query=49.010912,8.383902",
       "source": "My Maps „Skatemap2026“"
@@ -14711,6 +14715,7 @@
       "type": "spot",
       "lat": 49.013819,
       "lng": 8.407991,
+      "address": "Hirschbrunnen, Engesserstraße 3, 76131 Karlsruhe",
       "description": "Hirschbrunnen, Engesserstraße 3, 76131 Karlsruhe",
       "url": "https://www.google.com/maps/search/?api=1&query=49.013819,8.407991",
       "source": "My Maps „Skatemap2026“"
@@ -14731,6 +14736,7 @@
       "type": "spot",
       "lat": 49.000248,
       "lng": 8.384268,
+      "address": "Holzinsel am ZKM, 76135 Karlsruhe",
       "description": "Holzinsel am ZKM, 76135 Karlsruhe",
       "url": "https://www.google.com/maps/search/?api=1&query=49.000248,8.384268",
       "source": "My Maps „Skatemap2026“"
@@ -14819,6 +14825,7 @@
       "type": "spot",
       "lat": 48.99793,
       "lng": 8.376877,
+      "address": "Inlineskateplatz, 76135 Karlsruhe",
       "description": "Inlineskateplatz, 76135 Karlsruhe Günter glotz",
       "url": "https://www.google.com/maps/search/?api=1&query=48.997930,8.376877",
       "source": "My Maps „Skatemap2026“"
@@ -15106,6 +15113,7 @@
       "type": "spot",
       "lat": 48.980342,
       "lng": 8.373608,
+      "address": "L605, 76135 Karlsruhe",
       "description": "L605, 76135 Karlsruhe DiY unter brücke",
       "url": "https://www.google.com/maps/search/?api=1&query=48.980342,8.373608",
       "source": "My Maps „Skatemap2026“"
@@ -15116,6 +15124,7 @@
       "type": "spot",
       "lat": 48.989314,
       "lng": 8.375638,
+      "address": "L605, 76135 Karlsruhe",
       "description": "L605, 76135 Karlsruhe Unter der brücke ist eine bank und gutes flat",
       "url": "https://www.google.com/maps/search/?api=1&query=48.989314,8.375638",
       "source": "My Maps „Skatemap2026“"
@@ -17742,6 +17751,51 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_48d26356_8d84716",
+      "name": "Street-Spot Balingen",
+      "type": "spot",
+      "lat": 48.263564,
+      "lng": 8.847157,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.263564,8.847157",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d27623_8d85164",
+      "name": "Street-Spot Balingen 2",
+      "type": "spot",
+      "lat": 48.27623,
+      "lng": 8.851645,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.276230,8.851645",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d27794_8d85711",
+      "name": "Street-Spot Balingen 3",
+      "type": "spot",
+      "lat": 48.277936,
+      "lng": 8.85711,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.277936,8.857110",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d27568_8d85339",
+      "name": "Street-Spot Balingen 4",
+      "type": "spot",
+      "lat": 48.275684,
+      "lng": 8.853387,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.275684,8.853387",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d27817_8d85076",
+      "name": "Street-Spot Balingen 5",
+      "type": "spot",
+      "lat": 48.278175,
+      "lng": 8.850761,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.278175,8.850761",
+      "source": "Google-Liste (Spots)"
+    },
+    {
       "id": "spot_48d99504_8d38566",
       "name": "Street-Spot Beiertheim-Bulach",
       "type": "spot",
@@ -17769,6 +17823,42 @@
       "description": "dm zentrale gap und langes manual pad",
       "url": "https://www.google.com/maps/search/?api=1&query=49.002993,8.455452",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_48d26100_8d84856",
+      "name": "Street-Spot Endingen",
+      "type": "spot",
+      "lat": 48.260997,
+      "lng": 8.848558,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.260997,8.848558",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d26072_8d85010",
+      "name": "Street-Spot Endingen 2",
+      "type": "spot",
+      "lat": 48.260721,
+      "lng": 8.850102,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.260721,8.850102",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d25973_8d85117",
+      "name": "Street-Spot Endingen 3",
+      "type": "spot",
+      "lat": 48.25973,
+      "lng": 8.851172,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.259730,8.851172",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d26147_8d84658",
+      "name": "Street-Spot Endingen 4",
+      "type": "spot",
+      "lat": 48.261469,
+      "lng": 8.846581,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.261469,8.846581",
+      "source": "Google-Liste (Spots)"
     },
     {
       "id": "spot_49d00733_8d35923",
@@ -17854,11 +17944,22 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_49d01672_8d39075",
+      "name": "Street-Spot Innenstadt-West 2 2",
+      "type": "spot",
+      "lat": 49.016719,
+      "lng": 8.390748,
+      "description": "HKA",
+      "url": "https://www.google.com/maps/search/?api=1&query=49.016719,8.390748",
+      "source": "Google-Liste (Spots)"
+    },
+    {
       "id": "spot_49d01206_8d39986",
       "name": "Street-Spot Innenstadt-West 3",
       "type": "spot",
       "lat": 49.012059,
       "lng": 8.399857,
+      "address": "Hans-Thoma-Straße 2, 76133 Karlsruhe-Innenstadt-West",
       "description": "Hans-Thoma-Straße 2, 76133 Karlsruhe-Innenstadt-West",
       "url": "https://www.google.com/maps/search/?api=1&query=49.012059,8.399857",
       "source": "My Maps „Skatemap2026“"
@@ -17935,6 +18036,7 @@
       "type": "spot",
       "lat": 49.022274,
       "lng": 8.371185,
+      "address": "49.0222740,8.3711850",
       "description": "49.0222740,8.3711850 Diy curb",
       "url": "https://www.google.com/maps/search/?api=1&query=49.022274,8.371185",
       "source": "My Maps „Skatemap2026“"
@@ -17958,6 +18060,15 @@
       "description": "stairs double set",
       "url": "https://www.google.com/maps/search/?api=1&query=49.008939,8.419231",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_49d01080_8d43717",
+      "name": "Street-Spot Oststadt 2 2",
+      "type": "spot",
+      "lat": 49.010802,
+      "lng": 8.437165,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.010802,8.437165",
+      "source": "Google-Liste (Spots)"
     },
     {
       "id": "spot_49d00799_8d42529",
@@ -18015,6 +18126,7 @@
       "type": "spot",
       "lat": 49.004217,
       "lng": 8.430568,
+      "address": "49.0042169,8.4305682",
       "description": "49.0042169,8.4305682 treppen",
       "url": "https://www.google.com/maps/search/?api=1&query=49.004217,8.430568",
       "source": "My Maps „Skatemap2026“"
@@ -18068,6 +18180,24 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "spot_48d16074_8d62107",
+      "name": "Street-Spot Rottweil (Kernstadt)",
+      "type": "spot",
+      "lat": 48.160736,
+      "lng": 8.62107,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.160736,8.621070",
+      "source": "Google-Liste (Spots)"
+    },
+    {
+      "id": "spot_48d16148_8d61871",
+      "name": "Street-Spot Rottweil (Kernstadt) 2",
+      "type": "spot",
+      "lat": 48.161482,
+      "lng": 8.618713,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.161482,8.618713",
+      "source": "Google-Liste (Spots)"
+    },
+    {
       "id": "spot_48d83370_9d26940",
       "name": "Street-Spot Schmiden",
       "type": "spot",
@@ -18094,6 +18224,16 @@
       "lng": 8.410938,
       "url": "https://www.google.com/maps/search/?api=1&query=49.005584,8.410938",
       "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "spot_48d99156_8d40764",
+      "name": "Street-Spot Südstadt 2 2",
+      "type": "spot",
+      "lat": 48.991562,
+      "lng": 8.407638,
+      "description": "Verlassene halle oder so.  war noch nich da",
+      "url": "https://www.google.com/maps/search/?api=1&query=48.991562,8.407638",
+      "source": "Google-Liste (Spots)"
     },
     {
       "id": "spot_49d00370_8d41960",
@@ -18140,6 +18280,7 @@
       "type": "spot",
       "lat": 48.998097,
       "lng": 8.383652,
+      "address": "Südendstraße 51, 76135 Karlsruhe-Südweststadt",
       "description": "Südendstraße 51, 76135 Karlsruhe-Südweststadt",
       "url": "https://www.google.com/maps/search/?api=1&query=48.998097,8.383652",
       "source": "My Maps „Skatemap2026“"
@@ -18187,6 +18328,7 @@
       "type": "spot",
       "lat": 48.998409,
       "lng": 8.388111,
+      "address": "Südendschule, Südendstraße 35, 76137 Karlsruhe",
       "description": "Südendschule, Südendstraße 35, 76137 Karlsruhe",
       "url": "https://www.google.com/maps/search/?api=1&query=48.998409,8.388111",
       "source": "My Maps „Skatemap2026“"

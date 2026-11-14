@@ -18,6 +18,14 @@
         "169": "park"
       },
       "mergeWithin": 25
+    },
+    {
+      "id": "src_1794619243646",
+      "kind": "list",
+      "ref": "1EKJdGpV8F6DnW9Sf74z-noKMgKi5w",
+      "type": "spot",
+      "label": "Google-Liste (Spots)",
+      "url": "https://maps.app.goo.gl/6GhKgYzKVzQ6Gcwu8"
     }
   ],
   "spots": [
