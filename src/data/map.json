@@ -3357,6 +3357,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_58d87209_9d39492",
+      "name": "Kragerø Skatepark",
+      "type": "park",
+      "lat": 58.87209,
+      "lng": 9.394916,
+      "url": "https://www.google.com/maps/search/?api=1&query=58.872090,9.394916",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_50d96314_7d99285",
       "name": "Kreuztal Skateanlage",
       "type": "park",
@@ -4509,6 +4518,15 @@
       "lat": 41.088092,
       "lng": -73.915921,
       "url": "https://www.google.com/maps/search/?api=1&query=41.088092,-73.915921",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_58d71445_9d21792",
+      "name": "Nye Kjempesteinsmyra Skatepark",
+      "type": "park",
+      "lat": 58.714448,
+      "lng": 9.217917,
+      "url": "https://www.google.com/maps/search/?api=1&query=58.714448,9.217917",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -13030,6 +13048,15 @@
       "lat": 33.716949,
       "lng": -117.829133,
       "url": "https://www.google.com/maps/search/?api=1&query=33.716949,-117.829133",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_58d61553_8d92423",
+      "name": "Tvedestrand Skatepark",
+      "type": "park",
+      "lat": 58.615533,
+      "lng": 8.924225,
+      "url": "https://www.google.com/maps/search/?api=1&query=58.615533,8.924225",
       "source": "My Maps „Skatemap2026“"
     },
     {
