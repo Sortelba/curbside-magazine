@@ -49,6 +49,9 @@ if [ $? -eq 0 ]; then
   echo "ERFOLG! Deine Änderungen sind auf dem Weg."
   echo "In ca. 2 Minuten ist die Homepage aktualisiert."
   echo "------------------------------------------------"
+  # Instagram-Beiträge (10/16/19 Uhr) aus den neuen News erstellen.
+  # Fehler hier ändern nichts am erfolgreichen Publish.
+  node "$SCRIPT_DIR/scripts/make-insta-posts.mjs" 2>&1 | grep -v "^Fontconfig" || true
 else
   echo "------------------------------------------------"
   echo "FEHLER: Konnte nicht zu GitHub übertragen."

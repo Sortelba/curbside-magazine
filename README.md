@@ -28,6 +28,7 @@ swift scripts/set-command-icons.swift
   Weitere Kalender-Seiten: in `src/data/settings.json` unter `"eventSources": ["https://…"]` eintragen.
 - `src/lib/dedupe.ts` – verhindert doppelte Beiträge
 - `scripts/auto-publish.mjs` – Logik hinter Autoscan
+- `scripts/make-insta-posts.mjs` – läuft nach jedem erfolgreichen Publish: macht aus den neuen News bis zu 3 Instagram-Beiträge (Bild 1080×1350 + Text mit Hashtags/@Erwähnungen) für 10, 16 und 19 Uhr in `exports/instagram/beitraege/` (ersetzt jedes Mal die vorigen)
 - `scripts/prepare-static-export.mjs` – Build für GitHub Pages
 - `scripts/optimize-uploads.mjs` – verkleinert Bilder in `public/uploads`
 
