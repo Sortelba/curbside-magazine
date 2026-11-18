@@ -1,5 +1,38 @@
 [
   {
+    "id": "post_1795011728959_565",
+    "title": "[News] MAGENTA – LILLI WERNER “9 TO 5”",
+    "description": "MAGENTA – LILLI WERNER “9 TO 5”\n\nLilli Werner for Magenta in Paris and Bordeaux. Filmed by Stephane “Feugs” Feugas.... (Originalquelle: Pocket Skate Mag)...",
+    "translations": {
+      "de": {
+        "title": "[News] MAGENTA – LILLI WERNER “9 TO 5”",
+        "content": "MAGENTA – LILLI WERNER “9 TO 5”\n\nLilli Werner for Magenta in Paris and Bordeaux. Filmed by Stephane “Feugs” Feugas.... (Originalquelle: Pocket Skate Mag)"
+      },
+      "en": {
+        "title": "MAGENTA – LILLI WERNER “9 TO 5”",
+        "content": "MAGENTA – LILLI WERNER “9 TO 5”\n\nLilli Werner for Magenta in Paris and Bordeaux. Filmed by Stephane “Feugs” Feugas...."
+      }
+    },
+    "type": "image",
+    "content": "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-17-um-20.01.29.jpg",
+    "media": {
+      "images": [
+        "https://pocketskatemag.com/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-17-um-20.01.29.jpg",
+        "https://pocketskatemag.com/wp-content/uploads/2017/09/psm_logo_whtite_regular.png"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://pocketskatemag.com/magenta-lilli-werner-9-to-5/"
+    },
+    "source": "Pocket Skate Mag",
+    "originalUrl": "https://pocketskatemag.com/magenta-lilli-werner-9-to-5/",
+    "date": "Nov 18, 2026",
+    "tags": [
+      "news",
+      "pocket skate mag"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1795008812214_55",
     "title": "Vans x Dogtown: Neuer Old Skool Drop in Royal Blue",
     "description": "Vans und Dogtown Skateboards hauen zum Jahresende noch mal ein echtes Ding raus: Den limitierten Creeping Rat 50th Anniversary Old Skool in Royal Blue. Der Schuh basiert auf dem legendären Style 36 vo...",
