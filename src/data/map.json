@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-18",
   "spots": [
     {
       "id": "park_52d07620_5d42186",
@@ -71,6 +71,15 @@
       "lat": 45.880443,
       "lng": 1.263427,
       "url": "https://www.google.com/maps/search/?api=1&query=45.880443,1.263427",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d13513_9d37124",
+      "name": "Affaltracher Skatepark",
+      "type": "park",
+      "lat": 49.135133,
+      "lng": 9.371242,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.135133,9.371242",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -7876,6 +7885,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d03984_9d09043",
+      "name": "Skatepark Bönnigheim",
+      "type": "park",
+      "lat": 49.039845,
+      "lng": 9.090426,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.039845,9.090426",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d77580_9d13373",
       "name": "Skatepark Botnang",
       "type": "park",
@@ -9315,6 +9333,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d13261_9d20098",
+      "name": "Skatepark Kernstadt 2",
+      "type": "park",
+      "lat": 49.132613,
+      "lng": 9.20098,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.132613,9.200980",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_51d58049_6d23680",
       "name": "Skatepark Kevelaer",
       "type": "park",
@@ -10053,6 +10080,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d18845_9d23573",
+      "name": "Skatepark NSU",
+      "type": "park",
+      "lat": 49.18845,
+      "lng": 9.235726,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.188450,9.235726",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_48d62951_9d32798",
       "name": "Skatepark Nürtingen",
       "type": "park",
@@ -10424,6 +10460,15 @@
       "lng": 9.187145,
       "description": "Indoor Skateplaza with big bowl area and good flat plus crubs, rail, 2 block gap.",
       "url": "https://www.google.com/maps/search/?api=1&query=48.792874,9.187145",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_48d79276_9d18693",
+      "name": "Skatepark Pragfriedhof 2",
+      "type": "park",
+      "lat": 48.792759,
+      "lng": 9.186932,
+      "url": "https://www.google.com/maps/search/?api=1&query=48.792759,9.186932",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -10967,6 +11012,15 @@
       "lat": 50.651818,
       "lng": 8.326064,
       "url": "https://www.google.com/maps/search/?api=1&query=50.651818,8.326064",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d25070_8d88651",
+      "name": "Skatepark Sinsheim",
+      "type": "park",
+      "lat": 49.250701,
+      "lng": 8.886508,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.250701,8.886508",
       "source": "My Maps „Skatemap2026“"
     },
     {
@@ -11820,6 +11874,15 @@
       "source": "My Maps „Skatemap2026“"
     },
     {
+      "id": "park_49d16306_9d18028",
+      "name": "Skateranlage Frankenbach",
+      "type": "park",
+      "lat": 49.163056,
+      "lng": 9.180279,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.163056,9.180279",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
       "id": "park_49d10228_8d38629",
       "name": "Skateranlage Leopoldshafen",
       "type": "park",
@@ -11943,6 +12006,15 @@
       "lat": 52.169221,
       "lng": 8.865655,
       "url": "https://www.google.com/maps/search/?api=1&query=52.169221,8.865655",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_49d15516_9d29655",
+      "name": "Skaterplatz am Flürle",
+      "type": "park",
+      "lat": 49.155163,
+      "lng": 9.296554,
+      "url": "https://www.google.com/maps/search/?api=1&query=49.155163,9.296554",
       "source": "My Maps „Skatemap2026“"
     },
     {

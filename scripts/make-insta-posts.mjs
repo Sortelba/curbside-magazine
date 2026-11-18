@@ -74,6 +74,8 @@ function bodyText(p, max = 420) {
     .replace(/\(Originalquelle:[^)]*\)/gi, '')
     .split('\n').map((l) => l.trim())
     .filter((l) => l && !/^(quelle|source|originalquelle)\s*:/i.test(l) && !/^https?:\/\//.test(l))
+    .filter((l) => !/^(by|von)\s+\S.{0,40}(•|·|\|)/i.test(l)) // Autorenzeile „BY Arthur • 16. Nov“
+    .filter((l) => l.toLowerCase() !== cleanTitle(p.translations?.de?.title || p.title).toLowerCase())
     .join('\n\n');
   const title = cleanTitle(p.translations?.de?.title || p.title);
   if (t.startsWith(title)) t = t.slice(title.length).trim();
@@ -213,7 +215,8 @@ function caption(p) {
     '',
     body,
     '',
-    `👉 Die ganze Story auf ${SITE} (Link in Bio)`,
+    `👉 Die ganze Story: https://${SITE}/news/${p.id}/`,
+    '(Link auch in der Bio)',
     credit,
     ments.length ? `\n${ments.join(' ')}` : '',
     '',
