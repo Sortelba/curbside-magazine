@@ -1,5 +1,125 @@
 [
   {
+    "id": "post_1795686702196_131",
+    "title": "GoFundMe für Mitch Carey gestartet",
+    "description": "Ey, heftige News: Für die Familie von Mitch Carey wurde eine GoFundMe-Kampagne ins Leben gerufen, um sie nach seinem Tod bei den kommenden Kosten zu unterstützen. Die Skateboard-Community und alle, de...",
+    "translations": {
+      "de": {
+        "title": "GoFundMe für Mitch Carey gestartet",
+        "content": "Ey, heftige News: Für die Familie von Mitch Carey wurde eine GoFundMe-Kampagne ins Leben gerufen, um sie nach seinem Tod bei den kommenden Kosten zu unterstützen. Die Skateboard-Community und alle, deren Leben Mitch berührt hat, sind aufgerufen, zusammenzustehen und nach Möglichkeit etwas beizutragen.\n\nJede Spende hilft seiner Familie in dieser schweren Zeit, egal wie groß oder klein. Wer gerade nichts geben kann, wird gebeten, den Fundraiser wenigstens zu teilen, damit er mehr Leute erreicht.\n\nRest in peace, Mitch!\n\nQuelle: Shredder News",
+        "tags": [
+          "Mitch Carey",
+          "GoFundMe",
+          "Community"
+        ]
+      },
+      "en": {
+        "title": "GoFundMe Launched for Mitch Carey's Family",
+        "content": "A GoFundMe campaign has been established to support Mitch Carey's immediate family with upcoming expenses following his passing. The fundraiser calls on the skateboarding community and everyone impacted by Mitch's life to unite and contribute what they can.\n\nEvery donation will assist his family through this difficult period. Those unable to donate are encouraged to share the fundraiser to increase its reach.\n\nRest in peace, Mitch!\n\nSource: Shredder News",
+        "tags": [
+          "Mitch Carey",
+          "GoFundMe",
+          "Skateboarding"
+        ]
+      }
+    },
+    "type": "image",
+    "content": "https://shredder.news/wp-content/uploads/RIP-Mitch-Carey.jpg",
+    "media": {
+      "images": [
+        "https://shredder.news/wp-content/uploads/RIP-Mitch-Carey.jpg",
+        "https://shredder.news/wp-content/uploads/Nike-Skate.jpg"
+      ],
+      "videoUrl": "",
+      "externalLink": "https://shredder.news/gofundme-support-mitch-carey/"
+    },
+    "source": "Shredder News",
+    "originalUrl": "https://shredder.news/gofundme-support-mitch-carey/",
+    "date": "Nov 26, 2026",
+    "tags": [
+      "news",
+      "shredder news"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1795686702179_390",
+    "title": "Nettuno: Neues Full-Length aus Bologna",
+    "description": "Ey, hast du schon das neue Homie-Full-Length aus Bologna gesehen? Das Ding heißt \"Nettuno\" und bringt den rohen Vibe der italienischen Stadt direkt auf den Schirm. Mit dabei ist eine riesige Crew mit ...",
+    "translations": {
+      "de": {
+        "title": "Nettuno: Neues Full-Length aus Bologna",
+        "content": "Ey, hast du schon das neue Homie-Full-Length aus Bologna gesehen? Das Ding heißt \"Nettuno\" und bringt den rohen Vibe der italienischen Stadt direkt auf den Schirm. Mit dabei ist eine riesige Crew mit Fahrern wie Alex Borgatti, Mattia Restante, Dylan Gaggini, Fabrizio Martinena, Leonardo Boin, Filippo Coin, Sebastian Olivero, Alessio Giovannelli, Matteo Scaccio, Dario Federiconi, Rubens Pelliconi, Gianluca Nenno, Nicolas Lombardi, Ulisse Gorza, Stellar, Luca Marchioni und Saikou Dukuray.\n\nNeben der ganzen Skate-Action gibt es jede Menge Attitude, die typischen Ecken der Stadt und die Balotta-Crew. Hinter der Kamera stand Filmer Lorenzo Bacchini, der das Ganze trotz einer Knie-OP durchgezogen hat. Da ist ein richtig gutes Ding zusammengewachsen, das du dir auf jeden Fall reinziehen musst.\n\nQuelle: Irregular Magazin"
+      },
+      "en": {
+        "title": "Nettuno: A New Full-Length Video from Bologna",
+        "content": "\"Nettuno\" is a fresh homie full-length video coming straight out of Bologna, Italy. The project captures the gritty skate spots of the city combined with a solid dose of street attitude and heavy energy from the entire crew.\n\nThe video features an extensive rider lineup including Alex Borgatti, Mattia Restante, Dylan Gaggini, Fabrizio Martinena, Leonardo Boin, Filippo Coin, Sebastian Olivero, Alessio Giovannelli, Matteo Scaccio, Dario Federiconi, Rubens Pelliconi, Gianluca Nenno, Nicolas Lombardi, Ulisse Gorza, Stellar, Luca Marchioni, and Saikou Dukuray, alongside the Balotta. Despite needing knee surgery during the production, filmer Lorenzo Bacchini managed to put together a rad visual package.\n\nSource: Irregular Magazin"
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/7PG-fOmc_6k?feature=oembed",
+    "media": {
+      "images": [
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/nettuno-1100x619.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2015/09/FOLLOW-US.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/nettuno-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/quantiniumLastTrick-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/nikolavladimiriovITV-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/lucasInpeddo-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/lili9to5-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/freeslappy-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/patbrosnantimewise-600x400.jpg",
+        "https://irregular-magazin.de/wp-content/uploads/2026/11/stoleaglance-600x400.jpg"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/7PG-fOmc_6k?feature=oembed",
+      "externalLink": "https://irregular-magazin.de/nettuno/"
+    },
+    "source": "Irregular Magazin",
+    "originalUrl": "https://irregular-magazin.de/nettuno/",
+    "date": "Nov 26, 2026",
+    "tags": [
+      "Nettuno",
+      "Bologna",
+      "Full-Length",
+      "Skate Video"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "post_1795686702143_990",
+    "title": "Didrik Galasso – CAMONE",
+    "description": "Digga, Deedz haut mal wieder einen raus mit seinem neuen Part „CAMONE“. Auch wenn Crosslocks vielleicht bei manchen verschrien sind – Deedz hat die Dinger absolut locked-in und zeigt ganz genau, wie d...",
+    "translations": {
+      "de": {
+        "title": "Didrik Galasso – CAMONE",
+        "content": "Digga, Deedz haut mal wieder einen raus mit seinem neuen Part „CAMONE“. Auch wenn Crosslocks vielleicht bei manchen verschrien sind – Deedz hat die Dinger absolut locked-in und zeigt ganz genau, wie das geht.\n\nDazu knallt er noch den Bluntslide an der Cardiel-Ledge raus und geht mit dem ganzen Ding voll auf Attacke im Rennen um den S.OT.Y.-Titel.\n\nQuelle: Limited Skateboarding"
+      },
+      "en": {
+        "title": "Didrik Galasso – CAMONE",
+        "content": "Didrik Galasso is back with a brand new video part titled „CAMONE“, stepping up his game in the ongoing S.OT.Y. race.\n\nDespite any stigma attached to crosslocks, Deedz has them fully locked-in and makes no secret of it in this release, highlighted by a heavy bluntslide on the Cardiel-ledge.\n\nSource: Limited Skateboarding"
+      }
+    },
+    "type": "video",
+    "content": "https://www.youtube.com/embed/_CC6BYb5H40?wmode=transparent&autoplay=0",
+    "media": {
+      "images": [
+        "https://www.limitedmag.de/wp/wp-content/uploads/2026/11/Bildschirmfoto-2026-11-25-um-14.04.54.png"
+      ],
+      "videoUrl": "https://www.youtube.com/embed/_CC6BYb5H40?wmode=transparent&autoplay=0",
+      "externalLink": "https://www.limitedmag.de/didrik-galasso-camone/"
+    },
+    "source": "Limited Skateboarding",
+    "originalUrl": "https://www.limitedmag.de/didrik-galasso-camone/",
+    "date": "Nov 26, 2026",
+    "tags": [
+      "Didrik Galasso",
+      "Deedz",
+      "CAMONE",
+      "SOTY"
+    ],
+    "status": "published"
+  },
+  {
     "id": "post_1795605130412_567",
     "title": "Giovanni Vianna rockt das BAZAARMan-Cover im Rock",
     "description": "Primitive-Pro Giovanni Vianna bringt frischen Wind in die Fashion-Welt. Der 25-jährige Brasilianer ist auf dem Cover der neuen BAZAARMan zu sehen – und trägt dort ganz entspannt einen Rock. Neben den ...",
