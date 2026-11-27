@@ -1,5 +1,40 @@
 [
   {
+    "id": "post_1795766362446",
+    "title": "Video der Woche: Dashawn Jordans „Soul Food“ Part",
+    "type": "video",
+    "content": "Dashawn Jordan droppt mit „Soul Food“ schon seinen zweiten Part in diesem Jahr – und holt alles aus sich raus. Übermenschlicher Pop und eine brutale Machtdemonstration an Wallenberg.\n\nMein Video der Woche!\n\nQuelle: Thrasher Magazine",
+    "description": "Dashawn Jordan mit superhuman Pop und einer Machtdemonstration an Wallenberg.",
+    "tags": [
+      "Pick of the Week",
+      "Dashawn Jordan",
+      "Soul Food",
+      "skateboarding",
+      "thrasher"
+    ],
+    "category": "pick",
+    "source": "CURBSIDE",
+    "date": "Nov 27, 2026",
+    "status": "published",
+    "media": {
+      "images": [
+        "https://img.youtube.com/vi/ZQ2fCMnF_p8/maxresdefault.jpg"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=ZQ2fCMnF_p8",
+      "externalLink": "https://www.thrashermagazine.com/articles/videos/dashawn-jordan-s-soul-food-part/"
+    },
+    "translations": {
+      "de": {
+        "title": "Video der Woche: Dashawn Jordans „Soul Food“ Part",
+        "content": "Dashawn Jordan droppt mit „Soul Food“ schon seinen zweiten Part in diesem Jahr – und holt alles aus sich raus. Übermenschlicher Pop und eine brutale Machtdemonstration an Wallenberg.\n\nMein Video der Woche!\n\nQuelle: Thrasher Magazine"
+      },
+      "en": {
+        "title": "Video of the Week: Dashawn Jordan's \"Soul Food\" Part",
+        "content": "Dashawn Jordan's \"Soul Food\" is already his second part of the year – and he taps into his full potential with superhuman pop and a monumental display of power at Wallenberg.\n\nMy video of the week!\n\nSource: Thrasher Magazine"
+      }
+    }
+  },
+  {
     "id": "post_1795764468237_654",
     "title": "Ben Kadow sichert sich Guest Model bei PUBLIC Snowboards",
     "description": "PUBLIC Snowboards hat sich für das neueste Modell in der General Public Serie Verstärkung aus der Skate-Welt geholt: Pro-Skater Ben Kadow hat ab sofort ein eigenes Guest Board am Start.\n\nWenn du sowoh...",
