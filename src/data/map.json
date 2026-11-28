@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "spots": [
     {
       "id": "park_52d07620_5d42186",
@@ -3145,6 +3145,15 @@
       "lat": 39.700339,
       "lng": 21.61375,
       "url": "https://www.google.com/maps/search/?api=1&query=39.700339,21.613750",
+      "source": "My Maps „Skatemap2026“"
+    },
+    {
+      "id": "park_m27d71113_114d16720",
+      "name": "Kalbarri Skate Park",
+      "type": "park",
+      "lat": -27.711135,
+      "lng": 114.167196,
+      "url": "https://www.google.com/maps/search/?api=1&query=-27.711135,114.167196",
       "source": "My Maps „Skatemap2026“"
     },
     {
